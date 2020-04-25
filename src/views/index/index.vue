@@ -141,9 +141,9 @@
             </tr>
           </table>
           <div class="bottom-btn">
-            <a @click="handleChangeTheme">
+            <!--<a @click="handleChangeTheme">
               <el-button type="danger">修改主题和布局</el-button>
-            </a>
+            </a>-->
             <a
               target="_blank"
               href="https://github.com/chuzhixin/vue-element-admin-beautiful"
@@ -602,12 +602,12 @@ export default {
   .card {
     ::v-deep {
       .el-card__body {
-        min-height: 390px;
+        min-height: 340px;
         height: auto;
 
         .echarts {
           width: 100%;
-          height: 350px;
+          height: 300px;
         }
       }
     }
