@@ -6,6 +6,11 @@ const Mock = require("mockjs");
 
 const mockDir = path.join(process.cwd(), "mock");
 
+/**
+ *
+ * @param app
+ * @returns {{mockStartIndex: number, mockRoutesLength: number}}
+ */
 function registerRoutes(app) {
   let mockLastIndex;
   const { default: mocks } = require("./index.js");
@@ -23,14 +28,13 @@ function registerRoutes(app) {
   };
 }
 
-function unregisterRoutes() {
-  Object.keys(require.cache).forEach((i) => {
-    if (i.includes(mockDir)) {
-      delete require.cache[require.resolve(i)];
-    }
-  });
-}
-
+/**
+ *
+ * @param url
+ * @param type
+ * @param respond
+ * @returns {{response(*=, *=): void, type: (*|string), url: RegExp}}
+ */
 const responseFake = (url, type, respond) => {
   return {
     url: new RegExp(`${process.env.VUE_APP_BASE_API}${url}`),
@@ -43,7 +47,10 @@ const responseFake = (url, type, respond) => {
     },
   };
 };
-
+/**
+ *
+ * @param app
+ */
 module.exports = (app) => {
   require("@babel/register");
   app.use(bodyParser.json());
@@ -56,7 +63,6 @@ module.exports = (app) => {
   const mockRoutes = registerRoutes(app);
   let mockRoutesLength = mockRoutes.mockRoutesLength;
   let mockStartIndex = mockRoutes.mockStartIndex;
-
   chokidar
     .watch(mockDir, {
       ignored: /mock-server/,
@@ -67,7 +73,11 @@ module.exports = (app) => {
         try {
           app._router.stack.splice(mockStartIndex, mockRoutesLength);
 
-          unregisterRoutes();
+          Object.keys(require.cache).forEach((i) => {
+            if (i.includes(mockDir)) {
+              delete require.cache[require.resolve(i)];
+            }
+          });
 
           const mockRoutes = registerRoutes(app);
           mockRoutesLength = mockRoutes.mockRoutesLength;

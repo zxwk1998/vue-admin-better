@@ -25,6 +25,6 @@ module.exports = {
   shieldF12: false, //设置生产环境是否屏蔽f12等开发组工具快捷键
   loginInterception: true, //是否开启登录拦截
   loginRSA: false, //是否开启登录RSA加密
-  httpRequestFile: false, //是否依据mock数据生成webstorm HTTP Request请求文件
+  httpRequestFile: true, //是否依据mock数据生成webstorm HTTP Request请求文件
   authentication: "intelligence", //intelligence和all两种方式，前者后端权限只控制roles不控制view文件的import（前后端配合，减轻后端工作量），all方式完全交给后端前端只负责加载
 };
