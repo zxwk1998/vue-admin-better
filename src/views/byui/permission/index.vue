@@ -9,6 +9,7 @@
         <el-radio-group v-model="form.permission">
           <el-radio label="admin">超级管理员</el-radio>
           <el-radio label="editor">访客</el-radio>
+          <el-radio label="test">test</el-radio>
         </el-radio-group>
       </el-form-item>
 
