@@ -57,6 +57,10 @@ const data = [
     content: "修复全局axios拦截 加快动画展示效果 修改登录页样式",
     timestamp: "2020-04-24",
   },
+  {
+    content: "简化权限与登录逻辑 更新mock-server",
+    timestamp: "2020-04-25",
+  },
 ];
 
 export default [
