@@ -88,6 +88,7 @@ export default {
   overflow: hidden;
 
   .footer-copyright {
+    font-size: $base-font-size-small;
     height: 70px;
     line-height: 30px;
     text-align: center;
