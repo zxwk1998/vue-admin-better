@@ -1,0 +1,60 @@
+
+###
+POST http://localhost:80/mock-server/colorfulIcon/list
+Content-Type: application/x-www-form-urlencoded
+###
+
+###
+POST http://localhost:80/mock-server/face/list
+Content-Type: application/x-www-form-urlencoded
+###
+
+###
+POST http://localhost:80/mock-server/icon/list
+Content-Type: application/x-www-form-urlencoded
+###
+
+###
+POST http://localhost:80/mock-server/menu/navigate
+Content-Type: application/x-www-form-urlencoded
+###
+
+###
+POST http://localhost:80/mock-server/table/list
+Content-Type: application/x-www-form-urlencoded
+###
+
+###
+POST http://localhost:80/mock-server/upload
+Content-Type: application/x-www-form-urlencoded
+###
+
+###
+POST http://localhost:80/mock-server/tree/list
+Content-Type: application/x-www-form-urlencoded
+###
+
+###
+POST http://localhost:80/mock-server/login
+Content-Type: application/x-www-form-urlencoded
+###
+
+###
+POST http://localhost:80/mock-server/user/info
+Content-Type: application/x-www-form-urlencoded
+###
+
+###
+POST http://localhost:80/mock-server/waterfall/list
+Content-Type: application/x-www-form-urlencoded
+###
+
+###
+POST http://localhost:80/mock-server/logout
+Content-Type: application/x-www-form-urlencoded
+###
+
+###
+POST http://localhost:80/mock-server/publicKey
+Content-Type: application/x-www-form-urlencoded
+###

@@ -1,0 +1,28 @@
+const state = {
+{{  name }}List: []
+};
+
+const mutations = {
+SET_{{ constantCase name }}_LIST: (state, {{ name }}) => {
+if ({{ name }}) {
+state.{{ name }}List  = {{ name }};
+} else {
+state.{{  name }}List = [];
+}
+}
+};
+
+const actions = {
+set{{ properCase name }}({
+commit
+}, {{ name }}) {
+commit('SET_{{ constantCase name }}_LIST', {{ name }});
+}
+};
+
+export default {
+namespaced: true,
+state,
+mutations,
+actions
+};

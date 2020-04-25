@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* byui scss全局变量开始 */
+$base-color-default: #1890ff;
+
+$base-menu-background: #001529;
+$base-menu-children-background: #000c17;
+$base-menu-active-background: $base-color-default;
+$base-menu-text: hsla(0, 0%, 100%, 0.95);
+$base-menu-text-active: hsla(0, 0%, 100%, 0.95);
+$base-title: #ffffff;
+
+$base-font-size-small: 12px;
+$base-font-size-default: 14px;
+$base-font-size-big: 16px;
+$base-font-size-bigger: 18px;
+$base-font-size-max: 22px;
+$base-color-header: $base-menu-background;
+$base-color-blue: $base-color-default;
+$base-color-green: #13ce66;
+$base-color-white: #ffffff;
+$base-color-black: #000000;
+$base-color-yellow: #ffba00;
+$base-color-red: #ff4d4f;
+$base-color-gray: rgba(0, 0, 0, 0.65);
+$base-main-width: 1279px;
+$base-border-radius: 2px;
+$base-border-color: #ebeef5;
+$base-form-width: 600px;
+$base-input-height: 32px;
+$base-pagination-height: 28px;
+$base-dialog-title-height: 40px;
+$base-padding: 15px;
+$base-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+$base-font-color: #606266;
+$base-left-menu-width: 220px;
+$base-right-content-width: calc(100% - 220px);
+$base-left-menu-width-min: 65px;
+$base-right-content-width-min: calc(100% - 65px);
+/* byui scss全局变量结束 */
+:export {
+  menuText: $base-menu-text;
+  menuTextAcive: $base-menu-text-active;
+  menuBackground: $base-menu-background;
+  menuChildrenBackground: $base-menu-children-background;
+  menuActiveBackground: $base-menu-active-background;
+  tagViewsActiveBackground: $base-color-blue;
+  buttonBackground: $base-color-blue;
+  paginationActiveBackground: $base-color-blue;
+}

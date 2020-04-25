@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="<%= webpackConfig.name %>基于byui前端敏捷开发平台构建,作者:chuzhixin 1204505056@qq.com"
+    />
+    <meta
+      name="baidu_union_verify"
+      content="fa8e09115a3c57656a236061b10d98ee"
+    />
+    <link rel="shortcut icon" href="<%= BASE_URL %>favicon.png" />
+    <title>
+      <%= webpackConfig.name %>
+    </title>
+  </head>
+  <body>
+    <noscript>
+      非常抱歉鉴于安全考量,您无法查看<%= webpackConfig.name %> 源代码
+    </noscript>
+    <div id="BYUI_APP"></div>
+    <script>
+      /^http(s*):\/\//.test(location.href) ||
+        alert("基于byui前端敏捷开发平台开发的项目需要部署到服务器下访问");
+    </script>
+  </body>
+</html>

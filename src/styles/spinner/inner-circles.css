@@ -1,0 +1,49 @@
+.inner-circles-loader:not(:required) {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: rgba(25, 165, 152, 0.5);
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: -9999px;
+  margin-bottom: 10px;
+}
+
+.inner-circles-loader:not(:required):before,
+.inner-circles-loader:not(:required):after {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.inner-circles-loader:not(:required):before {
+  animation: inner-circles-loader 3s infinite;
+  transform-origin: 0 50%;
+  left: 0;
+  background: #c7efcf;
+}
+
+.inner-circles-loader:not(:required):after {
+  animation: inner-circles-loader 3s 0.2s reverse infinite;
+  transform-origin: 100% 50%;
+  right: 0;
+  background: #eef5db;
+}
+
+@keyframes inner-circles-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

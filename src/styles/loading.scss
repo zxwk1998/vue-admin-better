@@ -1,0 +1,334 @@
+@charset "utf-8";
+@import "./variables.scss";
+@import "./spinner/dots.css";
+@import "./spinner/gauge.css";
+@import "./spinner/inner-circles.css";
+@import "./spinner/plus.css";
+
+$base-loading: ".byui-loading-type";
+
+/* 自定义loading开始 */
+#{$base-loading}1 {
+  display: flex;
+  margin: 0 auto 15px;
+  width: 36px;
+  height: 36px;
+  border: 3px solid transparent;
+  border-top-color: $base-color-blue;
+  border-bottom-color: $base-color-blue;
+  border-radius: 50%;
+  animation: byuiLoading1-0 0.8s linear infinite;
+}
+
+#{$base-loading}1:before {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  border: 3px solid $base-color-blue;
+  border-radius: 50%;
+  animation: byuiLoading1 0.5s alternate ease-in infinite;
+}
+
+@keyframes byuiLoading1-0 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes byuiLoading1 {
+  from {
+    transform: scale(0.5);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+#{$base-loading}2 {
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -40px;
+  animation: byuiLoading2 1s linear reverse infinite;
+}
+
+#{$base-loading}2:before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin-left: -18px;
+  margin-top: -17px;
+  animation: byuiLoading2 0.4s linear infinite;
+}
+
+#{$base-loading}2:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  margin-top: -3px;
+  animation: byuiLoading2 0.4s linear infinite;
+}
+
+#{$base-loading}2:before,
+#{$base-loading}2,
+#{$base-loading}2:after {
+  border: 3px solid transparent;
+  border-top-color: $base-color-blue;
+  border-right-color: $base-color-blue;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+
+@keyframes byuiLoading2 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#{$base-loading}3 {
+  display: inline-block;
+  width: 2.5em;
+  height: 3em;
+  margin-bottom: 15px;
+  border: 3px solid transparent;
+  border-top-color: $base-color-blue;
+  border-bottom-color: $base-color-blue;
+  border-radius: 50%;
+  animation: byuiLoading3 2s ease infinite;
+}
+
+@keyframes byuiLoading3 {
+  50% {
+    transform: rotate(360deg) scale(0.4, 0.33);
+    border-width: 8px;
+  }
+
+  100% {
+    transform: rotate(720deg) scale(1, 1);
+    border-width: 3px;
+  }
+}
+
+#{$base-loading}4 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-bottom-color: $base-color-blue;
+  border-left-color: $base-color-blue;
+  animation: byuiLoading4 1s linear infinite normal;
+  margin: 0 auto 10px;
+}
+
+#{$base-loading}4:after {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  border: 6px solid $base-color-blue;
+  content: " ";
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+@keyframes byuiLoading4 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.2;
+  }
+}
+
+#{$base-loading}5 {
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0 auto 15px;
+  border: solid 1.5em $base-color-blue;
+  border-right: solid 1.5em transparent;
+  border-left: solid 1.5em transparent;
+  border-radius: 100%;
+  animation: byuiLoading5 1s linear infinite;
+}
+
+@keyframes byuiLoading5 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(60deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#{$base-loading}6 {
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0 auto 25px auto;
+  perspective: 200px;
+}
+
+#{$base-loading}6:before,
+#{$base-loading}6:after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  content: "";
+  animation: byuiLoading6 0.5s infinite alternate;
+  background: rgba(0, 0, 0, 0);
+}
+
+#{$base-loading}6:before {
+  left: 0;
+}
+
+#{$base-loading}6:after {
+  right: 0;
+  animation-delay: 0.15s;
+}
+
+@keyframes byuiLoading6 {
+  0% {
+    transform: scale(1) translateY(0) rotateX(0deg);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(1.2) translateY(-25px) rotateX(45deg);
+    background: $base-color-blue;
+    box-shadow: 0 25px 40px rgba($base-color-blue, 0.5);
+  }
+}
+
+#{$base-loading}7 {
+  display: block;
+  margin: 0 auto 15px auto;
+  width: 25px;
+  height: 25px;
+  animation: byuiLoading7 infinite 0.75s linear;
+  border: 2px solid $base-color-blue;
+  border-top-color: rgba($base-color-blue, 0.2);
+  border-right-color: rgba($base-color-blue, 0.2);
+  border-bottom-color: rgba($base-color-blue, 0.2);
+  border-radius: 100%;
+}
+
+@keyframes byuiLoading7 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#{$base-loading}8 {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: $base-color-blue;
+  border-radius: 50%;
+  box-shadow: 30px 0 0 0 $base-color-blue;
+  margin: 0 auto 15px auto;
+  box-sizing: border-box;
+  transform: translateX(-15px);
+}
+
+#{$base-loading}8:after {
+  background-color: $base-color-white;
+  width: 10px;
+  height: 10px;
+  box-shadow: 30px 0 0 0 $base-color-white;
+  border-radius: 50%;
+  left: 9px;
+  top: 8px;
+  position: absolute;
+  content: "";
+  animation: byuiLoading8 2s ease-in-out infinite alternate;
+}
+
+@keyframes byuiLoading8 {
+  0% {
+    left: 9px;
+  }
+  100% {
+    left: 1px;
+  }
+}
+
+#{$base-loading}9 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px $base-color-blue solid;
+  box-sizing: border-box;
+  margin: 0 auto 15px auto;
+  position: relative;
+  animation: byuiLoading9 5s linear infinite;
+}
+
+#{$base-loading}9:after {
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  content: "";
+  background-color: $base-color-blue;
+  top: -8px;
+  left: 0;
+  animation: byuiLoading9_check 1s ease-in-out infinite;
+}
+
+@keyframes byuiLoading9_check {
+  25% {
+    left: 22px;
+    top: -8px;
+  }
+  50% {
+    left: 22px;
+    top: 22px;
+  }
+  75% {
+    left: -9px;
+    top: 22px;
+  }
+  100% {
+    left: -9px;
+    top: -7px;
+  }
+}
+
+@keyframes byuiLoading9 {
+  0% {
+    box-shadow: inset 0 0 0 0 rgba($base-color-blue, 0.5);
+    opacity: 0.5;
+  }
+  100% {
+    box-shadow: inset 0 -20px 0 0 $base-color-blue;
+  }
+}
+
+/* 自定义loading结束 */

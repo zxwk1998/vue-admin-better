@@ -1,0 +1,155 @@
+import { mock } from "mockjs";
+
+const data = mock({
+  items: [
+    {
+      id: "1",
+      parentId: "0",
+      name: "考勤中心",
+      rank: 1,
+      children: [
+        {
+          id: "32816b88ff72423f960e7d492a386131",
+          parentId: "1",
+          name: "北京科技大学",
+          rank: 2,
+          children: [
+            {
+              id: "33f17361bd44415083ce18e219d4a2af",
+              parentId: "32816b88ff72423f960e7d492a386131",
+              name: "B座",
+              rank: 3,
+              children: [
+                {
+                  id: "dd1b7dcaf5164d589972e2a0771df0fd",
+                  parentId: "33f17361bd44415083ce18e219d4a2af",
+                  name: "test",
+                  rank: 4,
+                  children: [],
+                  title: "test",
+                  value: "dd1b7dcaf5164d589972e2a0771df0fd",
+                  text: "test",
+                },
+              ],
+              title: "B座",
+              value: "33f17361bd44415083ce18e219d4a2af",
+              text: "B座",
+            },
+            {
+              id: "9e11afc35d55475fb0bd3164b9684cbe",
+              parentId: "32816b88ff72423f960e7d492a386131",
+              name: "A座",
+              rank: 3,
+              children: [
+                {
+                  id: "0d7839eb2e774ccba2833af5ac9f43c7",
+                  parentId: "9e11afc35d55475fb0bd3164b9684cbe",
+                  name: "1307 寝室",
+                  rank: 4,
+                  children: [],
+                  title: "1307 寝室",
+                  value: "0d7839eb2e774ccba2833af5ac9f43c7",
+                  text: "1307 寝室",
+                },
+                {
+                  id: "102bfba171004de49affba341db2553b",
+                  parentId: "9e11afc35d55475fb0bd3164b9684cbe",
+                  name: "308寝室",
+                  rank: 4,
+                  children: [],
+                  title: "308寝室",
+                  value: "102bfba171004de49affba341db2553b",
+                  text: "308寝室",
+                },
+                {
+                  id: "3c662c7bc1e541c2a432301e74b7b69c",
+                  parentId: "9e11afc35d55475fb0bd3164b9684cbe",
+                  name: "309寝室",
+                  rank: 4,
+                  children: [],
+                  title: "309寝室",
+                  value: "3c662c7bc1e541c2a432301e74b7b69c",
+                  text: "309寝室",
+                },
+                {
+                  id: "4cc1b04635e4444292526c5391699077",
+                  parentId: "9e11afc35d55475fb0bd3164b9684cbe",
+                  name: "项目组",
+                  rank: 4,
+                  children: [],
+                  title: "项目组",
+                  value: "4cc1b04635e4444292526c5391699077",
+                  text: "项目组",
+                },
+                {
+                  id: "4e7347aff3094a8b9c034da3e6442bc4",
+                  parentId: "9e11afc35d55475fb0bd3164b9684cbe",
+                  name: "产品组",
+                  rank: 4,
+                  children: [],
+                  title: "产品组",
+                  value: "4e7347aff3094a8b9c034da3e6442bc4",
+                  text: "产品组",
+                },
+                {
+                  id: "7688b8254fdf43649e7bf082f69cea39",
+                  parentId: "9e11afc35d55475fb0bd3164b9684cbe",
+                  name: "管理组",
+                  rank: 4,
+                  children: [],
+                  title: "管理组",
+                  value: "7688b8254fdf43649e7bf082f69cea39",
+                  text: "管理组",
+                },
+                {
+                  id: "b43211772de54635917ddedf4c786c5d",
+                  parentId: "9e11afc35d55475fb0bd3164b9684cbe",
+                  name: "后端开发",
+                  rank: 4,
+                  children: [],
+                  title: "后端开发",
+                  value: "b43211772de54635917ddedf4c786c5d",
+                  text: "后端开发",
+                },
+                {
+                  id: "bd8bbba0e71340a2aaa6bec61bb59885",
+                  parentId: "9e11afc35d55475fb0bd3164b9684cbe",
+                  name: "算法组",
+                  rank: 4,
+                  children: [],
+                  title: "算法组",
+                  value: "bd8bbba0e71340a2aaa6bec61bb59885",
+                  text: "算法组",
+                },
+              ],
+              title: "A座",
+              value: "9e11afc35d55475fb0bd3164b9684cbe",
+              text: "A座",
+            },
+          ],
+          title: "北京科技大学",
+          value: "32816b88ff72423f960e7d492a386131",
+          text: "北京科技大学",
+        },
+      ],
+      title: "考勤中心",
+      value: "1",
+      text: "考勤中心",
+    },
+  ],
+});
+
+export default [
+  {
+    url: "/tree/list",
+    type: "post",
+    response: (config) => {
+      const items = data.items;
+      return {
+        code: 200,
+        msg: "success",
+        data: items,
+      };
+    },
+  },
+];
