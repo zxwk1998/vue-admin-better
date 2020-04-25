@@ -23,7 +23,7 @@ const getFiles = (jsonPath) => {
 getFiles("mock/controller");
 const mocks = [];
 if (httpRequestFile) {
-  fs.writeFile("./mock/http/mock.http", "", {}, function (err) {
+  fs.writeFile("./http/mock.http", "", {}, function (err) {
     if (err) throw err;
   });
 }
@@ -35,8 +35,8 @@ array.forEach(async (item, index) => {
   if (httpRequestFile) {
     obj.forEach((item, index) => {
       fs.appendFile(
-        "./mock/http/mock.http",
-        `\r\n###\r\POST http://localhost:${devPort}/${mockUrl}${item.url}\r\nContent-Type: application/x-www-form-urlencoded\r\n###\r\n`,
+        "./http/mock.http",
+        `\r\n###${item.url}###\r\POST http://localhost:${devPort}/${mockUrl}${item.url}\r\nContent-Type: application/x-www-form-urlencoded\r\n###\r\n`,
         (error) => {
           if (error)
             return chalk.magentaBright(

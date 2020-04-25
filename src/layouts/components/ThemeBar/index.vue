@@ -5,6 +5,10 @@
       :icon="['fas', 'palette']"
       @click="handleChangeTheme"
     />
+    <div class="theme-bar-setting" @click="handleChangeTheme">
+      <byui-icon title="主题配置" :icon="['fas', 'palette']" />
+      <p>主题配置</p>
+    </div>
     <el-drawer
       title="主题配置"
       :visible.sync="drawerVisible"
@@ -222,9 +226,6 @@ export default {
     handleSetDfaultTheme() {
       $("#BYUI-VUE-THEME").remove();
       localStorage.removeItem("BYUI-VUE-THEME");
-      //localStorage.removeItem("BYUI-VUE-LAYOUT");
-      //localStorage.removeItem("BYUI-VUE-HEADER");
-      //localStorage.removeItem("BYUI-VUE-TAGS-VIEW");
       this.$store.dispatch("settings/changeLayout", this.theme.layout);
       this.$refs["form"].resetFields();
       Object.assign(this.$data, this.$options.data());
@@ -232,15 +233,12 @@ export default {
       location.reload();
     },
     handleSwitchLayout(layout) {
-      //localStorage.setItem("BYUI-VUE-LAYOUT", layout);
       this.$store.dispatch("settings/changeLayout", layout);
     },
     handleSwitchHeader(header) {
-      //localStorage.setItem("BYUI-VUE-HEADER", header);
       this.$store.dispatch("settings/changeHeader", header);
     },
     handleSwitchTagsView(tagsView) {
-      //localStorage.setItem("BYUI-VUE-TAGS-VIEW", tagsView);
       this.$store.dispatch("settings/changeTagsView", tagsView);
     },
   },
@@ -248,6 +246,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.theme-bar-setting {
+  background: $base-color-blue;
+  border-radius: $base-border-radius;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  cursor: pointer;
+  position: fixed;
+  top: 40vh;
+  right: 0;
+  &:hover {
+    opacity: 0.9;
+  }
+  ::v-deep {
+    svg:not(:root).svg-inline--fa {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      color: $base-color-white;
+      margin-top: 12px;
+    }
+  }
+
+  p {
+    color: $base-color-white;
+    font-size: $base-font-size-small;
+    line-height: 30px;
+  }
+}
+
 .el-drawer__body {
   padding: 20px;
 }
