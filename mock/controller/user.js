@@ -14,11 +14,10 @@ export default [
     response: (config) => {
       return {
         code: 200,
-        data: [
-          {
-            mockServer: true,
-          },
-        ],
+        msg: "success",
+        data: {
+          mockServer: true,
+        },
       };
     },
   },
@@ -71,7 +70,6 @@ export default [
       return {
         code: 200,
         msg: "success",
-        data: [],
       };
     },
   },

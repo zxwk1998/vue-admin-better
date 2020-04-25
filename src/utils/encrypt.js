@@ -13,7 +13,7 @@ export async function encryptedData(data) {
   let publicKey = "";
   await getPublicKey().then((res) => {
     publicKey = res.data;
-    if (res.data[0].mockServer) {
+    if (publicKey.mockServer) {
       publicKey = "";
     }
   });

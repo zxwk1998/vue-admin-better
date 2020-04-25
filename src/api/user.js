@@ -10,7 +10,7 @@ export async function login(data) {
   if (loginRSA) {
     data = await encryptedData(data);
     await getPublicKey().then((res) => {
-      if (!res.data[0].mockServer)
+      if (!res.data.mockServer)
         headers = { "Content-Type": "application/json;charset=utf-8" };
     });
   }
