@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Layout from "@/layouts";
+import EmptyLayout from "@/layouts/EmptyLayout";
 
 Vue.use(VueRouter);
 
@@ -53,7 +54,7 @@ export const asyncRoutes = [
         name: "Test",
         component: () => import("@/views/test/index"),
         meta: {
-          title: "test",
+          title: "测试页 ",
           icon: "marker",
           roles: ["admin", "test"],
         },
@@ -74,7 +75,6 @@ export const asyncRoutes = [
         component: () => import("@/views/byui/permission/index"),
         meta: {
           title: "权限控制",
-          icon: "user-shield",
           roles: ["admin", "editor", "test"],
         },
       },
@@ -244,14 +244,26 @@ export const asyncRoutes = [
     ],
   },
   {
-    path: "/401",
-    component: () => import("@/views/401"),
-    meta: { title: "401错误页演示", icon: "bug" },
-  },
-  {
-    path: "/404",
-    component: () => import("@/views/404"),
-    meta: { title: "404错误页演示", icon: "bug" },
+    path: "/error",
+    component: EmptyLayout,
+    redirect: "noRedirect",
+    name: "Error",
+    meta: { title: "错误页演示", icon: "bug" },
+    alwaysShow: true,
+    children: [
+      {
+        path: "/401",
+        name: "401",
+        component: () => import("@/views/401"),
+        meta: { title: "401错误页演示" },
+      },
+      {
+        path: "/404",
+        name: "404",
+        component: () => import("@/views/404"),
+        meta: { title: "404错误页演示" },
+      },
+    ],
   },
   {
     path: "*",
