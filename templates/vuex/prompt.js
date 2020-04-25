@@ -17,7 +17,7 @@ module.exports = {
       {
         type: "add",
         path: `src/store/modules/${name}.js`,
-        templateFile: "plop-templates/vuex/index.hbs",
+        templateFile: "templates/vuex/index.hbs",
         data: {
           name: name,
         },

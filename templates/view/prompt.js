@@ -44,7 +44,7 @@ module.exports = {
       {
         type: "add",
         path: `src/views/byui/${name}/index.vue`,
-        templateFile: "plop-templates/view/index.hbs",
+        templateFile: "templates/view/index.hbs",
         data: {
           name: name,
           /* template: data.blocks.includes('template'),
