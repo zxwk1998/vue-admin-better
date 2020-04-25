@@ -30,7 +30,7 @@
               <byui-icon :icon="['fas', 'user']" />
             </span>
             <el-input
-              v-model="loginForm.userName"
+              v-model.trim="loginForm.userName"
               v-focus
               auto-complete="off"
               placeholder="请输入用户名"
@@ -45,7 +45,7 @@
             <el-input
               :key="passwordType"
               ref="password"
-              v-model="loginForm.password"
+              v-model.trim="loginForm.password"
               :type="passwordType"
               auto-complete="off"
               placeholder="请输入密码"

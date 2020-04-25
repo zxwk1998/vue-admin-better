@@ -26,7 +26,6 @@ export default [
     url: "/login",
     type: "post",
     response: (config) => {
-      /*我公司后端只接收form*/
       const { userName } = config.body;
       const accessToken = tokens[userName];
       if (!accessToken) {
@@ -37,7 +36,8 @@ export default [
       }
       return {
         code: 200,
-        data: [accessToken],
+        msg: "success",
+        data: accessToken,
       };
     },
   },
@@ -56,15 +56,10 @@ export default [
       return {
         code: 200,
         msg: "success",
-        data: [
-          {
-            roles: roles,
-            info: {
-              name: name,
-              lastLoginTime: null,
-            },
-          },
-        ],
+        data: {
+          roles: roles,
+          name: name,
+        },
       };
     },
   },

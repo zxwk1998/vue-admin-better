@@ -11,9 +11,6 @@ import { thirteenBitTimestamp } from "@/utils";
 const state = {
   accessToken: getAccessToken(),
   name: "",
-  loginTimes: "",
-  lastLoginTime: "",
-  avatar: "",
   roles: [],
 };
 const mutations = {
@@ -23,12 +20,6 @@ const mutations = {
   SET_NAME: (state, name) => {
     state.name = name;
   },
-  SET_LAST_LOGIN_TIME: (state, lastLoginTime) => {
-    state.lastLoginTime = lastLoginTime;
-  },
-  SET_AVATAR: (state, avatar) => {
-    state.avatar = avatar;
-  },
   SET_ROLES: (state, roles) => {
     state.roles = roles;
   },
@@ -37,11 +28,11 @@ const actions = {
   login({ commit }, userInfo) {
     const { userName, password } = userInfo;
     return new Promise((resolve, reject) => {
-      login({ userName: userName.trim(), password: password })
+      login({ userName, password })
         .then((response) => {
-          const { data } = response;
-          commit("SET_TOKEN", data[0].accessToken);
-          setAccessToken(data[0].accessToken);
+          const { accessToken } = response.data;
+          commit("SET_TOKEN", accessToken);
+          setAccessToken(accessToken);
           const time = new Date();
           const hour = time.getHours();
           const thisTime =
@@ -75,17 +66,13 @@ const actions = {
           if (!data) {
             reject("验证失败，请重新登录...");
           }
-          let { roles, info } = data[0];
-          let lastLoginTime = data[0].info.lastLoginTime;
-          lastLoginTime = thirteenBitTimestamp(lastLoginTime);
+          let { roles, name, lastLoginTime } = data;
           if (!roles || roles.length <= 0) {
             roles = ["*"];
           }
           commit("SET_ROLES", roles);
-          commit("SET_NAME", info.name);
-          commit("SET_LAST_LOGIN_TIME", lastLoginTime);
-          commit("SET_AVATAR", "");
-          resolve(data[0]);
+          commit("SET_NAME", name);
+          resolve(data);
         })
         .catch((error) => {
           reject(error);

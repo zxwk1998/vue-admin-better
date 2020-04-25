@@ -23,13 +23,13 @@
             :icon="['fas', 'redo']"
             @click="refreshSelectedTag"
           />
-          <el-tooltip effect="light" placement="bottom">
-            <div slot="content">上次登录时间:{{ lastLoginTime }}</div>
-            <el-avatar :src="require('@/assets/user.gif')"></el-avatar>
-          </el-tooltip>
 
           <el-dropdown @command="handleCommand">
             <span class="el-dropdown-link">
+              <el-avatar
+                class="user-avatar"
+                :src="require('@/assets/user.gif')"
+              ></el-avatar>
               <span class="user-name">{{ name }}</span>
             </span>
             <el-dropdown-menu slot="dropdown">
@@ -169,14 +169,22 @@ export default {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    align-content: center;
     height: 50px;
+
+    .user-avatar {
+      margin-right: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
 
     .user-name {
       margin-right: 15px;
       margin-left: 5px;
       cursor: pointer;
-      line-height: 40px;
       font-weight: 600;
+      position: relative;
+      top: -12px;
     }
 
     ::v-deep {
