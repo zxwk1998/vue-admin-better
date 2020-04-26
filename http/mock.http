@@ -3,19 +3,11 @@
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/face/list###POST http://localhost:80/mock-server/face/list
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/colorfulIcon/list###POST http://localhost:80/mock-server/colorfulIcon/list
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/menu/navigate###POST http://localhost:80/mock-server/menu/navigate
-Content-Type: application/x-www-form-urlencoded
-###
-
 ###/icon/list###POST http://localhost:80/mock-server/icon/list
+Content-Type: application/x-www-form-urlencoded
+###
+
+###/face/list###POST http://localhost:80/mock-server/face/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
@@ -23,15 +15,19 @@ Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 ###
 
+###/menu/navigate###POST http://localhost:80/mock-server/menu/navigate
+Content-Type: application/x-www-form-urlencoded
+###
+
 ###/table/list###POST http://localhost:80/mock-server/table/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/upload###POST http://localhost:80/mock-server/upload
+###/colorfulIcon/list###POST http://localhost:80/mock-server/colorfulIcon/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/publicKey###POST http://localhost:80/mock-server/publicKey
+###/tree/list###POST http://localhost:80/mock-server/tree/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
@@ -39,7 +35,7 @@ Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/waterfall/list###POST http://localhost:80/mock-server/waterfall/list
+###/user/info###POST http://localhost:80/mock-server/user/info
 Content-Type: application/x-www-form-urlencoded
 ###
 
@@ -47,10 +43,14 @@ Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/user/info###POST http://localhost:80/mock-server/user/info
+###/publicKey###POST http://localhost:80/mock-server/publicKey
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/tree/list###POST http://localhost:80/mock-server/tree/list
+###/waterfall/list###POST http://localhost:80/mock-server/waterfall/list
+Content-Type: application/x-www-form-urlencoded
+###
+
+###/upload###POST http://localhost:80/mock-server/upload
 Content-Type: application/x-www-form-urlencoded
 ###

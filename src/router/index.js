@@ -308,4 +308,14 @@ const router = new VueRouter({
   routes: constantRoutes,
 });
 
+export function resetRouter() {
+  router.matcher = new VueRouter({
+    mode: "hash",
+    scrollBehavior: () => ({
+      y: 0,
+    }),
+    routes: constantRoutes,
+  }).matcher;
+}
+
 export default router;

@@ -4,9 +4,9 @@ import {
   removeAccessToken,
   setAccessToken,
 } from "@/utils/accessToken";
+import { resetRouter } from "@/router";
 import { Notification } from "element-ui";
 import defaultSettings from "@/config/settings";
-import { thirteenBitTimestamp } from "@/utils";
 
 const state = {
   accessToken: getAccessToken(),
@@ -79,13 +79,15 @@ const actions = {
         });
     });
   },
-  logout({ commit, state }) {
+  logout({ commit, state, dispatch }) {
     return new Promise((resolve, reject) => {
       logout(state.accessToken)
         .then(() => {
           commit("SET_TOKEN", "");
+          commit("SET_ROLES", []);
           removeAccessToken();
-          location.reload();
+          resetRouter();
+          dispatch("tagsView/delAllViews", null, { root: true });
           resolve();
         })
         .catch((error) => {

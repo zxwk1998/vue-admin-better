@@ -99,8 +99,9 @@ export default {
         null,
         () => {
           const fullPath = this.$route.fullPath;
-          this.$store.dispatch("user/logout");
-          //this.$router.push(`/login?redirect=${fullPath}`);
+          this.$store.dispatch("user/logout").then(() => {
+            this.$router.push(`/login?redirect=${fullPath}`);
+          });
         }
       );
     },
