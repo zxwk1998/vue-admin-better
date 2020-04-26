@@ -116,6 +116,12 @@ export default {
         color: $base-color-white !important;
       }
     }
+
+    .nest-menu {
+      [class*="menu"] {
+        background-color: $base-menu-children-background !important;
+      }
+    }
   }
 
   &.is-collapse {
