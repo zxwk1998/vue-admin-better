@@ -16,90 +16,94 @@
       append-to-body
       size="300px"
     >
-      <div class="el-drawer__body">
-        <el-form ref="form" :model="theme">
-          <el-form-item label="布局">
-            <el-radio-group v-model="theme.layout">
-              <el-radio-button label="vertical">纵向布局</el-radio-button>
-              <el-radio-button label="horizontal">横向布局</el-radio-button>
-            </el-radio-group>
-          </el-form-item>
-          <el-form-item label="头部">
-            <el-radio-group v-model="theme.header">
-              <el-radio-button label="fixed">固定头部</el-radio-button>
-              <el-radio-button label="noFixed">不固定头部</el-radio-button>
-            </el-radio-group>
-          </el-form-item>
-          <el-form-item label="多标签">
-            <el-radio-group v-model="theme.tagsView">
-              <el-radio-button label="true">开启</el-radio-button>
-              <el-radio-button label="false">不开启</el-radio-button>
-            </el-radio-group>
-          </el-form-item>
-          <el-form-item label="菜单背景色">
-            <el-color-picker
-              v-model="theme.menuBackground"
-              :predefine="[
-                '#2a58ad',
-                '#001529',
-                '#f56c6c',
-                '#0fd59d',
-                '#3fb884',
-                '#ff7a47',
-                '#a80505',
-              ]"
-              show-alpha
-            ></el-color-picker>
-          </el-form-item>
-          <el-form-item label="菜单子级背景色">
-            <el-color-picker
-              v-model="theme.menuChildrenBackground"
-              :predefine="[
-                '#2a58ad',
-                '#001529',
-                '#f56c6c',
-                '#0fd59d',
-                '#3fb884',
-                '#ff7a47',
-                '#a80505',
-              ]"
-              show-alpha
-            ></el-color-picker>
-          </el-form-item>
-          <el-form-item label="菜单选中色">
-            <el-color-picker
-              v-model="theme.menuActiveBackground"
-              :predefine="['#22468a', '#1890ff', '#21e6af', '#f57e6c']"
-              show-alpha
-            ></el-color-picker>
-          </el-form-item>
-          <el-form-item label="标签主题色">
-            <el-color-picker
-              v-model="theme.tagViewsActiveBackground"
-              :predefine="['#1890ff', '#0fd59d', '#f56c6c']"
-              show-alpha
-            ></el-color-picker>
-          </el-form-item>
-          <el-form-item label="默认按钮主题色">
-            <el-color-picker
-              v-model="theme.buttonBackground"
-              :predefine="['#1890ff', '#0fd59d', '#f56c6c']"
-              show-alpha
-            ></el-color-picker>
-          </el-form-item>
-          <el-form-item label="分页选中色">
-            <el-color-picker
-              v-model="theme.paginationActiveBackground"
-              :predefine="['#1890ff', '#0fd59d', '#f56c6c']"
-              show-alpha
-            ></el-color-picker>
-          </el-form-item>
-          <el-form-item>
-            <el-button @click="handleSetDfaultTheme">恢复默认</el-button>
-            <el-button type="primary" @click="handleSaveTheme">保存</el-button>
-          </el-form-item>
-        </el-form>
-      </div>
+      <el-scrollbar style="height: 94vh; overflow: hidden;">
+        <div class="el-drawer__body">
+          <el-form ref="form" :model="theme">
+            <el-form-item label="布局">
+              <el-radio-group v-model="theme.layout">
+                <el-radio-button label="vertical">纵向布局</el-radio-button>
+                <el-radio-button label="horizontal">横向布局</el-radio-button>
+              </el-radio-group>
+            </el-form-item>
+            <el-form-item label="头部">
+              <el-radio-group v-model="theme.header">
+                <el-radio-button label="fixed">固定头部</el-radio-button>
+                <el-radio-button label="noFixed">不固定头部</el-radio-button>
+              </el-radio-group>
+            </el-form-item>
+            <el-form-item label="多标签">
+              <el-radio-group v-model="theme.tagsView">
+                <el-radio-button label="true">开启</el-radio-button>
+                <el-radio-button label="false">不开启</el-radio-button>
+              </el-radio-group>
+            </el-form-item>
+            <el-form-item label="菜单背景色">
+              <el-color-picker
+                v-model="theme.menuBackground"
+                :predefine="[
+                  '#2a58ad',
+                  '#001529',
+                  '#f56c6c',
+                  '#0fd59d',
+                  '#3fb884',
+                  '#ff7a47',
+                  '#a80505',
+                ]"
+                show-alpha
+              ></el-color-picker>
+            </el-form-item>
+            <el-form-item label="菜单子级背景色">
+              <el-color-picker
+                v-model="theme.menuChildrenBackground"
+                :predefine="[
+                  '#2a58ad',
+                  '#001529',
+                  '#f56c6c',
+                  '#0fd59d',
+                  '#3fb884',
+                  '#ff7a47',
+                  '#a80505',
+                ]"
+                show-alpha
+              ></el-color-picker>
+            </el-form-item>
+            <el-form-item label="菜单选中色">
+              <el-color-picker
+                v-model="theme.menuActiveBackground"
+                :predefine="['#22468a', '#1890ff', '#21e6af', '#f57e6c']"
+                show-alpha
+              ></el-color-picker>
+            </el-form-item>
+            <el-form-item label="标签主题色">
+              <el-color-picker
+                v-model="theme.tagViewsActiveBackground"
+                :predefine="['#1890ff', '#0fd59d', '#f56c6c']"
+                show-alpha
+              ></el-color-picker>
+            </el-form-item>
+            <el-form-item label="默认按钮主题色">
+              <el-color-picker
+                v-model="theme.buttonBackground"
+                :predefine="['#1890ff', '#0fd59d', '#f56c6c']"
+                show-alpha
+              ></el-color-picker>
+            </el-form-item>
+            <el-form-item label="分页选中色">
+              <el-color-picker
+                v-model="theme.paginationActiveBackground"
+                :predefine="['#1890ff', '#0fd59d', '#f56c6c']"
+                show-alpha
+              ></el-color-picker>
+            </el-form-item>
+            <el-form-item>
+              <el-button @click="handleSetDfaultTheme">恢复默认</el-button>
+              <el-button type="primary" @click="handleSaveTheme"
+                >保存</el-button
+              >
+            </el-form-item>
+          </el-form>
+        </div></el-scrollbar
+      >
     </el-drawer>
   </span>
 </template>
@@ -254,6 +258,7 @@ export default {
   text-align: center;
   cursor: pointer;
   position: fixed;
+  position: 99;
   top: 40vh;
   right: 0;
   &:hover {
