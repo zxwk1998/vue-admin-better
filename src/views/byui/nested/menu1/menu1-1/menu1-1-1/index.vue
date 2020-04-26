@@ -1,6 +1,6 @@
 <template>
   <div class="menu1-1-1-container">
-    <el-alert title="menu1-1-1" type="success"></el-alert>
+    <el-alert :closable="false" title="menu1-1-1" type="success"></el-alert>
   </div>
 </template>
 <style lang="scss" scoped>

@@ -19,7 +19,8 @@
       <byui-icon :icon="['fas', 'copyright']"></byui-icon>
       {{ fullYear }} 青岛市崂山区最强前端小组中的最菜组员荣誉出品
       <br />
-      每周六在线前端授课咨询（限时限量50元入VIP群） 联系QQ1204505056
+      每周六在线前端授课咨询（限时限量88元起步入VIP群，有钱的多给没钱的少给，希望能帮到你也帮到我自己）
+      联系QQ1204505056
     </footer>
   </section>
 </template>
@@ -54,13 +55,13 @@ export default {
     $route(to, from) {
       this.$nextTick(() => {
         /*if (this.$store.state.tagsView.skeleton) {
-                  this.show = true;
-                  setTimeout(() => {
-                    this.show = false;
-                  }, 0);
-                } else {
-                  this.show = false;
-                }*/
+                        this.show = true;
+                        setTimeout(() => {
+                          this.show = false;
+                        }, 0);
+                      } else {
+                        this.show = false;
+                      }*/
         if ("mobile" === this.device) {
           this.$store.dispatch("settings/foldSideBar");
           $("body").attr("style", "");
