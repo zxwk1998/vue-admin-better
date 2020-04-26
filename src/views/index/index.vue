@@ -3,8 +3,15 @@
     <el-row :gutter="15">
       <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
         <el-alert
+          title="鸣谢：花裤衩、唐金州、贤心的开源项目让我学到了很多知识也迸发了很多的灵感"
+          :closable="false"
+        >
+        </el-alert>
+        <br />
+        <el-alert
           title="作者寄语：世间本无事，庸人自扰之，框架发布以来，免不了质疑和嘲笑，但我从未放弃，我只是一条略懂前端的咸鱼，可我一直怀揣着改变世界的梦想，希望我们每个人，不管过程怎样，结局都是美好的"
           type="success"
+          :closable="false"
         >
           <a
             target="_blank"

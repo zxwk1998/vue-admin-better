@@ -3,7 +3,7 @@
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/colorfulIcon/list###POST http://localhost:80/mock-server/colorfulIcon/list
+###/remixicon/getList###POST http://localhost:80/mock-server/remixicon/getList
 Content-Type: application/x-www-form-urlencoded
 ###
 
@@ -11,7 +11,7 @@ Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/remixicon/getList###POST http://localhost:80/mock-server/remixicon/getList
+###/colorfulIcon/list###POST http://localhost:80/mock-server/colorfulIcon/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
@@ -19,11 +19,7 @@ Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/icon/list###POST http://localhost:80/mock-server/icon/list
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/table/list###POST http://localhost:80/mock-server/table/list
+###/tree/list###POST http://localhost:80/mock-server/tree/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
@@ -31,7 +27,7 @@ Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/tree/list###POST http://localhost:80/mock-server/tree/list
+###/icon/list###POST http://localhost:80/mock-server/icon/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
@@ -39,15 +35,19 @@ Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 ###
 
+###/table/list###POST http://localhost:80/mock-server/table/list
+Content-Type: application/x-www-form-urlencoded
+###
+
 ###/login###POST http://localhost:80/mock-server/login
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/logout###POST http://localhost:80/mock-server/logout
+###/user/info###POST http://localhost:80/mock-server/user/info
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/user/info###POST http://localhost:80/mock-server/user/info
+###/logout###POST http://localhost:80/mock-server/logout
 Content-Type: application/x-www-form-urlencoded
 ###
 
