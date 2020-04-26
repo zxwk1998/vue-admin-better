@@ -3,10 +3,6 @@
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/icon/list###POST http://localhost:80/mock-server/icon/list
-Content-Type: application/x-www-form-urlencoded
-###
-
 ###/colorfulIcon/list###POST http://localhost:80/mock-server/colorfulIcon/list
 Content-Type: application/x-www-form-urlencoded
 ###
@@ -23,15 +19,7 @@ Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/tree/list###POST http://localhost:80/mock-server/tree/list
-Content-Type: application/x-www-form-urlencoded
-###
-
 ###/remixicon/getList###POST http://localhost:80/mock-server/remixicon/getList
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/login###POST http://localhost:80/mock-server/login
 Content-Type: application/x-www-form-urlencoded
 ###
 
@@ -39,7 +27,19 @@ Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 ###
 
+###/icon/list###POST http://localhost:80/mock-server/icon/list
+Content-Type: application/x-www-form-urlencoded
+###
+
 ###/publicKey###POST http://localhost:80/mock-server/publicKey
+Content-Type: application/x-www-form-urlencoded
+###
+
+###/login###POST http://localhost:80/mock-server/login
+Content-Type: application/x-www-form-urlencoded
+###
+
+###/tree/list###POST http://localhost:80/mock-server/tree/list
 Content-Type: application/x-www-form-urlencoded
 ###
 

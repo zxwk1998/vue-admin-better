@@ -79,6 +79,34 @@ export const asyncRoutes = [
         },
       },
       {
+        path: "menu1",
+        component: () => import("@/views/byui/nested/menu1/index"),
+        name: "Menu1",
+        meta: {
+          title: "嵌套路由 1",
+          roles: ["admin"],
+        },
+        alwaysShow: true,
+        children: [
+          {
+            path: "menu1-1",
+            component: () => import("@/views/byui/nested/menu1/menu1-1/index"),
+            name: "Menu1-1",
+            meta: { title: "嵌套路由 1-1" },
+            alwaysShow: true,
+            children: [
+              {
+                path: "menu1-1-1-1",
+                component: () =>
+                  import("@/views/byui/nested/menu1/menu1-1/menu1-1-1/index"),
+                name: "Menu1-1-1",
+                meta: { title: "嵌套路由 1-1-1" },
+              },
+            ],
+          },
+        ],
+      },
+      {
         path: "table",
         name: "Table",
         component: () => import("@/views/byui/table/index"),
