@@ -54,7 +54,7 @@ export const asyncRoutes = [
         name: "Test",
         component: () => import("@/views/test/index"),
         meta: {
-          title: "测试页 ",
+          title: "test ",
           icon: "marker",
           roles: ["admin", "test"],
         },
@@ -66,7 +66,7 @@ export const asyncRoutes = [
     component: Layout,
     redirect: "noRedirect",
     name: "Byui",
-    meta: { title: "组件库", icon: "cloud" },
+    meta: { title: "组件", icon: "cloud" },
     alwaysShow: true,
     children: [
       {
@@ -276,20 +276,20 @@ export const asyncRoutes = [
     component: EmptyLayout,
     redirect: "noRedirect",
     name: "Error",
-    meta: { title: "错误页演示", icon: "bug" },
+    meta: { title: "错误页", icon: "bug" },
     alwaysShow: true,
     children: [
       {
         path: "/401",
         name: "401",
         component: () => import("@/views/401"),
-        meta: { title: "401错误页演示" },
+        meta: { title: "401" },
       },
       {
         path: "/404",
         name: "404",
         component: () => import("@/views/404"),
-        meta: { title: "404错误页演示" },
+        meta: { title: "404" },
       },
     ],
   },

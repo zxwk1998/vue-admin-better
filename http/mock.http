@@ -3,11 +3,11 @@
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/colorfulIcon/list###POST http://localhost:80/mock-server/colorfulIcon/list
+###/face/list###POST http://localhost:80/mock-server/face/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/face/list###POST http://localhost:80/mock-server/face/list
+###/colorfulIcon/list###POST http://localhost:80/mock-server/colorfulIcon/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
@@ -15,7 +15,7 @@ Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/table/list###POST http://localhost:80/mock-server/table/list
+###/icon/list###POST http://localhost:80/mock-server/icon/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
@@ -23,11 +23,11 @@ Content-Type: application/x-www-form-urlencoded
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/upload###POST http://localhost:80/mock-server/upload
+###/table/list###POST http://localhost:80/mock-server/table/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/icon/list###POST http://localhost:80/mock-server/icon/list
+###/upload###POST http://localhost:80/mock-server/upload
 Content-Type: application/x-www-form-urlencoded
 ###
 
@@ -36,10 +36,6 @@ Content-Type: application/x-www-form-urlencoded
 ###
 
 ###/login###POST http://localhost:80/mock-server/login
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/tree/list###POST http://localhost:80/mock-server/tree/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
@@ -52,5 +48,9 @@ Content-Type: application/x-www-form-urlencoded
 ###
 
 ###/user/info###POST http://localhost:80/mock-server/user/info
+Content-Type: application/x-www-form-urlencoded
+###
+
+###/tree/list###POST http://localhost:80/mock-server/tree/list
 Content-Type: application/x-www-form-urlencoded
 ###

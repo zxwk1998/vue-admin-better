@@ -23,7 +23,6 @@
             :icon="['fas', 'redo']"
             @click="refreshSelectedTag"
           />
-
           <el-dropdown @command="handleCommand">
             <span class="el-dropdown-link">
               <el-avatar
@@ -31,7 +30,9 @@
                 :src="require('@/assets/user.gif')"
               ></el-avatar>
               <span class="user-name">{{ name }}</span>
+              <i class="el-icon-arrow-down el-icon--right"></i>
             </span>
+
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item>
                 <byui-icon :icon="['fas', 'user']"></byui-icon>
@@ -179,12 +180,18 @@ export default {
     }
 
     .user-name {
-      margin-right: 15px;
+      margin-right: 35px;
       margin-left: 5px;
       cursor: pointer;
       font-weight: 600;
       position: relative;
-      top: -12px;
+      top: -14px;
+    }
+
+    .user-name + i {
+      position: absolute;
+      top: 16px;
+      right: 15px;
     }
 
     ::v-deep {
