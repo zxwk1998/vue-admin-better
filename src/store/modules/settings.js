@@ -8,6 +8,7 @@ const state = {
   collapse: false,
   layout: theme.layout || layout,
   header: theme.header || header,
+  device: "desktop",
 };
 const mutations = {
   CHANGE_LAYOUT: (state, layout) => {
@@ -34,6 +35,9 @@ const mutations = {
   OPEN_SIDE_BAR: (state) => {
     state.collapse = false;
   },
+  TOGGLE_DEVICE: (state, device) => {
+    state.device = device;
+  },
 };
 const actions = {
   changeLayout({ commit }, layout) {
@@ -53,6 +57,9 @@ const actions = {
   },
   openSideBar({ commit }) {
     commit("OPEN_SIDE_BAR");
+  },
+  toggleDevice({ commit }, device) {
+    commit("TOGGLE_DEVICE", device);
   },
 };
 export default { namespaced: true, state, mutations, actions };

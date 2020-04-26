@@ -61,6 +61,10 @@ const data = [
     content: "简化权限与登录逻辑 更新mock-server",
     timestamp: "2020-04-25",
   },
+  {
+    content: " 优化登录退出逻辑 代码更清晰 退出不再重载网页 改为重载路由形式",
+    timestamp: "2020-04-26",
+  },
 ];
 
 export default [

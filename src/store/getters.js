@@ -1,15 +1,12 @@
-const getters = {
-  device: (state) => state.app.device,
+export default {
   accessToken: (state) => state.user.accessToken,
-  avatar: (state) => state.user.avatar,
   collapse: (state) => state.settings.collapse,
   cachedViews: (state) => state.tagsView.cachedViews,
+  device: (state) => state.settings.device,
   errorLogs: (state) => state.errorLog.logs,
   header: (state) => state.settings.header,
-  lastLoginTime: (state) => state.user.lastLoginTime,
   layout: (state) => state.settings.layout,
   logo: (state) => state.settings.logo,
-  loginTimes: (state) => state.user.loginTimes,
   name: (state) => state.user.name,
   roles: (state) => state.user.roles,
   routes: (state) => state.permission.routes,
@@ -18,4 +15,3 @@ const getters = {
   tagsView: (state) => state.settings.tagsView,
   visitedViews: (state) => state.tagsView.visitedViews,
 };
-export default getters;

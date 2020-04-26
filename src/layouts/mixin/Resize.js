@@ -19,7 +19,7 @@ export default {
     }
     const isMobile = this.$_isMobile();
     if (isMobile) {
-      store.dispatch("app/toggleDevice", "mobile");
+      store.dispatch("settings/toggleDevice", "mobile");
       setTimeout(() => {
         store.dispatch("settings/foldSideBar");
       }, 2000);
@@ -35,7 +35,10 @@ export default {
     $_resizeHandler() {
       if (!document.hidden) {
         const isMobile = this.$_isMobile();
-        store.dispatch("app/toggleDevice", isMobile ? "mobile" : "desktop");
+        store.dispatch(
+          "settings/toggleDevice",
+          isMobile ? "mobile" : "desktop"
+        );
       }
     },
   },

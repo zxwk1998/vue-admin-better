@@ -66,7 +66,7 @@ const actions = {
           if (!data) {
             reject("验证失败，请重新登录...");
           }
-          let { roles, name, lastLoginTime } = data;
+          let { roles, name } = data;
           if (!roles || roles.length <= 0) {
             roles = ["*"];
           }
