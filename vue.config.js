@@ -80,7 +80,11 @@ module.exports = {
     /*config.plugins.delete("preload");
     config.plugins.delete("prefetch");*/
     config.resolve.symlinks(true);
-    config.module.rule("svg").exclude.add(resolve("src/icons")).end();
+    config.module
+      .rule("svg")
+      .exclude.add(resolve("src/icons"))
+      .add(resolve("src/remixicon"))
+      .end();
     config.module
       .rule("icons")
       .test(/\.svg$/)
@@ -90,9 +94,8 @@ module.exports = {
       .loader("svg-sprite-loader")
       .options({ symbolId: "icon-[name]" })
       .end();
-    config.module.rule("svg").exclude.add(resolve("src/remixicon")).end();
     config.module
-      .rule("icons")
+      .rule("remixicon")
       .test(/\.svg$/)
       .include.add(resolve("src/remixicon"))
       .end()
