@@ -11,7 +11,6 @@
       :collapse="collapse"
       :collapse-transition="false"
       :default-openeds="defaultOpen"
-      unique-opened
       mode="vertical"
     >
       <sidebar-item

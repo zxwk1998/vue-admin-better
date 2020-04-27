@@ -41,7 +41,7 @@ module.exports = {
     compress: true,
     port: devPort,
     open: true,
-    noInfo: true,
+    noInfo: false,
     overlay: {
       warnings: true,
       errors: true,

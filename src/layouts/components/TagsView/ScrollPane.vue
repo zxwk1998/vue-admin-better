@@ -84,6 +84,6 @@ export default {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 44px;
+  min-height: 38px;
 }
 </style>
