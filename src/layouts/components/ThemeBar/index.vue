@@ -10,10 +10,10 @@
         <byui-icon :icon="['fas', 'palette']" />
         <p>主题配置</p>
       </div>
-      <div @click="handleChangeQq">
+      <!--<div @click="handleChangeQq">
         <byui-remixicon icon-class="qq-fill" />
         <p>学习交流</p>
-      </div>
+      </div>-->
     </div>
 
     <el-drawer
