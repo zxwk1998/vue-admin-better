@@ -5,10 +5,17 @@
       :icon="['fas', 'palette']"
       @click="handleChangeTheme"
     />
-    <div class="theme-bar-setting" @click="handleChangeTheme">
-      <byui-icon title="主题配置" :icon="['fas', 'palette']" />
-      <p>主题配置</p>
+    <div class="theme-bar-setting">
+      <div @click="handleChangeTheme">
+        <byui-icon :icon="['fas', 'palette']" />
+        <p>主题配置</p>
+      </div>
+      <div @click="handleChangeQq">
+        <byui-remixicon icon-class="qq-fill" />
+        <p>学习交流</p>
+      </div>
     </div>
+
     <el-drawer
       title="主题配置"
       :visible.sync="drawerVisible"
@@ -186,6 +193,9 @@ export default {
     handleChangeTheme() {
       this.drawerVisible = true;
     },
+    handleChangeQq() {
+      window.open("tencent://message/?uin=1204505056");
+    },
     handleSetTheme() {
       $("#BYUI-VUE-THEME").remove();
       let {
@@ -250,34 +260,50 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.theme-bar-setting {
+@mixin right-bar {
   background: $base-color-blue;
   border-radius: $base-border-radius;
   width: 60px;
-  height: 60px;
+  min-height: 60px;
   text-align: center;
   cursor: pointer;
   position: fixed;
-  position: 99;
-  top: 40vh;
+  z-index: 99;
   right: 0;
   &:hover {
     opacity: 0.9;
   }
+  > div {
+    padding-top: 10px;
+
+    p {
+      color: $base-color-white;
+      font-size: $base-font-size-small;
+      line-height: 30px;
+    }
+  }
+}
+
+.theme-bar-setting {
+  @include right-bar;
+  top: 40vh;
+
   ::v-deep {
     svg:not(:root).svg-inline--fa {
       display: block;
       margin-left: auto;
       margin-right: auto;
       color: $base-color-white;
-      margin-top: 12px;
     }
-  }
 
-  p {
-    color: $base-color-white;
-    font-size: $base-font-size-small;
-    line-height: 30px;
+    .svg-icon {
+      display: block;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      color: $base-color-white !important;
+      fill: $base-color-white !important;
+      font-size: 20px !important;
+    }
   }
 }
 
