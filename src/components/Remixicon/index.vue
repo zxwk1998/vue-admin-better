@@ -51,14 +51,14 @@ export default {
 
 <style lang="scss" scoped>
 .svg-icon {
-  width: 1em;
-  height: 1em;
+  width: 1.25em;
+  height: 1.25em;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
 
   &:hover {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 }
 
