@@ -81,18 +81,17 @@ module.exports = {
   devPort: "80", //开发环境端口号
   version: "V2.2", //版本号
   copyright: "初志鑫1204505056@qq.com", //烦请保留版权，如需去除请联系群主
-  routesWhiteList: ["/login", "/404", "/401"],
+  routesWhiteList: ["/login", "/404", "/401"], //不经过token校验的路由
   loadingText: "正在加载中...", //加载时显示文字
   tokenName: "accessToken", //token名称
   tokenTableName: "BYUI-VUE-TABLE", //token表名
   storage: "localStorage", //token存储位置
   logo: true, //是否显示logo
-  header: "noFixed", //固定fixed 不固定noFixed
+  header: "fixed", //固定fixed 不固定noFixed
   layout: "vertical", //横纵布局 horizontal vertical
   themeBar: true, //是否开启主题配置按钮
   tagsView: true, //是否显示多标签页
-  colorWeakness: false, //色弱模式
-  messageDuration: 2000, //消息框消失时间
+  messageDuration: 3000, //消息框消失时间
   requestTimeout: 5000, //最长请求时间
   successCode: 200, //操作正常code
   invalidCode: 402, //登录失效code
@@ -114,14 +113,14 @@ module.exports = {
 
 ```scss
 @charset "utf-8";
-@charset "utf-8";
 /* byui scss全局变量开始 */
-$base-color-default: #009688;
+$base-color-default: #1890ff;
 
 $base-menu-background: #001529;
+$base-menu-children-background: #000c17;
 $base-menu-active-background: $base-color-default;
-$base-menu-text: #ffffff;
-$base-menu-text-active: #ffffff;
+$base-menu-text: hsla(0, 0%, 100%, 0.95);
+$base-menu-text-active: hsla(0, 0%, 100%, 0.95);
 $base-title: #ffffff;
 
 $base-font-size-small: 12px;
@@ -136,7 +135,7 @@ $base-color-white: #ffffff;
 $base-color-black: #000000;
 $base-color-yellow: #ffba00;
 $base-color-red: #ff4d4f;
-$base-color-gray: #97a8be;
+$base-color-gray: rgba(0, 0, 0, 0.65);
 $base-main-width: 1279px;
 $base-border-radius: 2px;
 $base-border-color: #ebeef5;
@@ -148,14 +147,15 @@ $base-padding: 15px;
 $base-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 $base-font-color: #606266;
 $base-left-menu-width: 220px;
-$base-right-content-width: calc(100vw - 220px);
+$base-right-content-width: calc(100% - 220px);
 $base-left-menu-width-min: 65px;
-$base-right-content-width-min: calc(100vw - 65px);
+$base-right-content-width-min: calc(100% - 65px);
 /* byui scss全局变量结束 */
 :export {
   menuText: $base-menu-text;
   menuTextAcive: $base-menu-text-active;
   menuBackground: $base-menu-background;
+  menuChildrenBackground: $base-menu-children-background;
   menuActiveBackground: $base-menu-active-background;
   tagViewsActiveBackground: $base-color-blue;
   buttonBackground: $base-color-blue;
