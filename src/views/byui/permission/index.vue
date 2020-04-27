@@ -5,10 +5,10 @@
     </el-divider>
 
     <el-form ref="form" :model="form" :inline="true">
-      <el-form-item label="权限切换">
+      <el-form-item label="切换账号">
         <el-radio-group v-model="form.permission">
-          <el-radio label="admin">超级管理员</el-radio>
-          <el-radio label="editor">访客</el-radio>
+          <el-radio label="admin">admin</el-radio>
+          <el-radio label="editor">editor</el-radio>
           <el-radio label="test">test</el-radio>
         </el-radio-group>
       </el-form-item>

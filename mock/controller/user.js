@@ -50,7 +50,7 @@ export default [
         name = "超级管理员";
       }
       if ("byui-test-accessToken" === accessToken) {
-        roles = ["admin", "test", "editor"];
+        roles = ["test", "admin", "editor"];
         name = "测试";
       }
       return {
