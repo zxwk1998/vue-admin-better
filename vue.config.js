@@ -2,20 +2,7 @@
 const path = require("path");
 const { title, abbreviation, devPort } = require("./src/config/settings");
 const pkg = require("./package.json");
-const webpack = require("webpack");
-const CompressionWebpackPlugin = require("compression-webpack-plugin");
-/*const productionGzipExtensions = [
-  "js",
-  "css",
-  "sass",
-  "svg",
-  "png",
-  "jpg",
-  "jpeg",
-  "ico",
-  "bmp",
-  "vue",
-];*/
+const Webpack = require("webpack");
 const WebpackBar = require("webpackbar");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 
@@ -71,7 +58,7 @@ module.exports = {
         },
       },
       plugins: [
-        new webpack.ProvidePlugin({
+        new Webpack.ProvidePlugin({
           $: "jquery",
           jQuery: "jquery",
           "windows.jQuery": "jquery",
@@ -80,7 +67,7 @@ module.exports = {
           maptalks: "maptalks",
           "window.maptalks": "maptalks",
         }),
-        new webpack.DefinePlugin({
+        new Webpack.DefinePlugin({
           "process.env.VUE_APP_UPDATE_TIME": time,
         }),
         new WebpackBar({
@@ -132,7 +119,7 @@ module.exports = {
       config
         .plugin("ScriptExtHtmlWebpackPlugin")
         .after("html")
-        .use("script-ext-html-webpack-plugin", [{ inline: /runtime\..*\.js$/ }])
+        .use("script-ext-html-Webpack-plugin", [{ inline: /runtime\..*\.js$/ }])
         .end();
       config.optimization.splitChunks({
         chunks: "all",
@@ -158,29 +145,9 @@ module.exports = {
         },
       });
       config.optimization.runtimeChunk("single");
-      config.module
-        .rule("images")
-        .use("image-webpack-loader")
-        .loader("image-webpack-loader")
-        .options({ bypassOnDebug: true })
-        .end();
-      /* config
-        .plugin("compression")
-        .use(CompressionWebpackPlugin, [
-          {
-            filename: "[path].gz[query]",
-            algorithm: "gzip",
-            test: new RegExp(
-              "\\.(" + productionGzipExtensions.join("|") + ")$"
-            ),
-            threshold: 8192,
-            minRatio: 0.8,
-          },
-        ])
-        .end();*/
       config
         .plugin("banner")
-        .use(webpack.BannerPlugin, [
+        .use(Webpack.BannerPlugin, [
           `\u0062\u0079\u0075\u0069\u524d\u7aef\u654f\u6377\u5f00\u53d1\u5e73\u53f0 : ${pkg.name}\n copyright:\u0031\u0032\u0030\u0034\u0035\u0030\u0035\u0030\u0035\u0036\u0040\u0071\u0071\u002e\u0063\u006f\u006d \n author: ${pkg.author} \n participants: ${pkg.participants}\n time: ${time}`,
         ])
         .end();
