@@ -151,7 +151,7 @@ module.exports = {
       config
         .plugin("banner")
         .use(Webpack.BannerPlugin, [
-          `\u0062\u0079\u0075\u0069\u524d\u7aef\u654f\u6377\u5f00\u53d1\u5e73\u53f0 : ${pkg.name}\n copyright:\u0031\u0032\u0030\u0034\u0035\u0030\u0035\u0030\u0035\u0036\u0040\u0071\u0071\u002e\u0063\u006f\u006d \n author: ${pkg.author} \n participants: ${pkg.participants}\n time: ${time}`,
+          `\u57fa\u4e8e\u0076\u0075\u0065\u002d\u0061\u0064\u006d\u0069\u006e\u002d\u0062\u0065\u0061\u0075\u0074\u0069\u0066\u0075\u006c\u6784\u5efa : ${pkg.name}\n copyright:\u0031\u0032\u0030\u0034\u0035\u0030\u0035\u0030\u0035\u0036\u0040\u0071\u0071\u002e\u0063\u006f\u006d \n author: ${pkg.author} \n participants: ${pkg.participants}\n time: ${time}`,
         ])
         .end();
     });
