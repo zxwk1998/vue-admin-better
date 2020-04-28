@@ -7,7 +7,7 @@ export default {
   header: (state) => state.settings.header,
   layout: (state) => state.settings.layout,
   logo: (state) => state.settings.logo,
-  name: (state) => state.user.name,
+  userName: (state) => state.user.userName,
   roles: (state) => state.user.roles,
   routes: (state) => state.permission.routes,
   selectedTag: (state) => state.tagsView.selectedTag,

@@ -69,8 +69,8 @@
               </span>
             </template>
           </el-table-column>
-        </el-table></el-col
-      >
+        </el-table>
+      </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <json-editor :value="res"></json-editor>
       </el-col>
@@ -83,6 +83,7 @@ import { mapGetters } from "vuex";
 import { tokenTableName } from "@/config/settings";
 import { getRouterList } from "@/api/router";
 import JsonEditor from "@/components/JsonEditor";
+
 export default {
   name: "Permission",
   components: {
@@ -98,13 +99,13 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["roles"]),
+    ...mapGetters(["userName", "roles"]),
   },
   created() {
     this.fetchData();
   },
   mounted() {
-    this.form.permission = this.roles[0];
+    this.form.permission = this.userName;
   },
   methods: {
     handleChangePermission() {

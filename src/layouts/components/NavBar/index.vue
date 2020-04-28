@@ -29,7 +29,7 @@
                 class="user-avatar"
                 :src="require('@/assets/user.gif')"
               ></el-avatar>
-              <span class="user-name">{{ name }}</span>
+              <span class="user-name">{{ userName }}</span>
               <i class="el-icon-arrow-down el-icon--right"></i>
             </span>
 
@@ -79,7 +79,7 @@ export default {
     ...mapGetters([
       "avatar",
       "collapse",
-      "name",
+      "userName",
       "loginTimes",
       "lastLoginTime",
       "selectedTag",

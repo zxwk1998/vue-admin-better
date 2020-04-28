@@ -119,6 +119,11 @@ export default {
     .nest-menu {
       [class*="menu"] {
         background-color: $base-menu-children-background !important;
+
+        &.is-active {
+          background-color: $base-menu-active-background !important;
+          color: $base-color-white !important;
+        }
       }
     }
   }

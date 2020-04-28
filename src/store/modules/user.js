@@ -10,15 +10,15 @@ import defaultSettings from "@/config/settings";
 
 const state = {
   accessToken: getAccessToken(),
-  name: "",
+  userName: "",
   roles: [],
 };
 const mutations = {
   SET_TOKEN: (state, accessToken) => {
     state.accessToken = accessToken;
   },
-  SET_NAME: (state, name) => {
-    state.name = name;
+  SET_NAME: (state, userName) => {
+    state.userName = userName;
   },
   SET_ROLES: (state, roles) => {
     state.roles = roles;
@@ -66,12 +66,12 @@ const actions = {
           if (!data) {
             reject("验证失败，请重新登录...");
           }
-          let { roles, name } = data;
+          let { roles, userName } = data;
           if (!roles || roles.length <= 0) {
             roles = ["*"];
           }
           commit("SET_ROLES", roles);
-          commit("SET_NAME", name);
+          commit("SET_NAME", userName);
           resolve(data);
         })
         .catch((error) => {

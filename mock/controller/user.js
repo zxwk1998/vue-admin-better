@@ -1,7 +1,7 @@
 const accessTokens = {
-  admin: "byui-admin-accessToken",
-  editor: "byui-editor-accessToken",
-  test: "byui-test-accessToken",
+  admin: "admin-accessToken",
+  editor: "editor-accessToken",
+  test: "test-accessToken",
 };
 
 export default [
@@ -44,21 +44,22 @@ export default [
     response: (config) => {
       const { accessToken } = config.body;
       let roles = ["editor"];
-      let name = "访客";
-      if ("byui-admin-accessToken" === accessToken) {
+      let userName = "访客";
+      if ("admin-accessToken" === accessToken) {
         roles = ["admin"];
-        name = "超级管理员";
+        userName = "admin";
       }
-      if ("byui-test-accessToken" === accessToken) {
-        roles = ["test", "admin", "editor"];
-        name = "测试";
+      //测试用例
+      if ("test-accessToken" === accessToken) {
+        roles = ["admin", "editor", "test"];
+        userName = "test";
       }
       return {
         code: 200,
         msg: "success",
         data: {
-          roles: roles,
-          name: name,
+          roles,
+          userName,
         },
       };
     },
