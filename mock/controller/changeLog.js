@@ -62,8 +62,12 @@ const data = [
     timestamp: "2020-04-25",
   },
   {
-    content: " 优化登录退出逻辑 代码更清晰 退出不再重载网页 改为重载路由形式",
+    content: "优化登录退出逻辑 代码更清晰 退出不再重载网页 改为重载路由形式",
     timestamp: "2020-04-26",
+  },
+  {
+    content: "无端的指责只会让我更加努力 修复sidebar 简化permission",
+    timestamp: "2020-04-28",
   },
 ];
 
