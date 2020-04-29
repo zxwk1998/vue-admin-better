@@ -12,7 +12,7 @@
         <el-button type="primary" @click="testALert">baseAlert</el-button>
         <el-button type="primary" @click="testConfirm">baseConfirm</el-button>
         <el-button type="primary" @click="testNotify">baseNotify</el-button>
-        <el-button v-if="checkPermission(['超级管理员'])" type="primary"
+        <el-button v-if="checkPermission(['admin'])" type="primary"
           >按钮级权限
         </el-button>
       </byui-query-form-left-panel>
