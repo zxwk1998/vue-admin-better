@@ -15,7 +15,7 @@
         >
           <a
             target="_blank"
-            href="https://github.com/chuzhixin/vue-element-admin-beautiful"
+            href="https://github.com/chuzhixin/vue-admin-beautiful"
           >
             <img
               style="height: 100%;"
@@ -194,6 +194,12 @@
                 <el-button type="warning">VIP授课群 氪金用户进</el-button>
               </a>
             </el-popover>-->
+            <a
+              target="_blank"
+              href="http://chu1204505056.gitee.io/vue-admin-beautiful-template"
+            >
+              <el-button type="primary">基础模板 </el-button>
+            </a>
           </div>
         </el-card>
       </el-col>
@@ -219,6 +225,15 @@
           <div slot="header">
             <span>其他信息</span>
           </div>
+          <el-alert title="重磅基础模板已发布" type="success" :closable="false">
+            <a
+              target="_blank"
+              href="https://chu1204505056.gitee.io/vue-admin-beautiful-template"
+            >
+              vue-admin-beautiful-template</a
+            >
+          </el-alert>
+          <br />
           <el-alert
             :closable="false"
             title="框架优势：mock数据自动导出无需配置；views，vuex，api支持自动生成；自动fixed问题代码，可以愉快的拥抱eslint"
