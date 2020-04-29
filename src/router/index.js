@@ -110,7 +110,7 @@ export const asyncRoutes = [
         path: "table",
         name: "Table",
         component: () => import("@/views/byui/table/index"),
-        meta: { title: "表格", roles: ["admin"] },
+        meta: { title: "表格", roles: ["admin", "editor"] },
       },
       {
         path: "form",

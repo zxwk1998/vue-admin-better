@@ -20,27 +20,11 @@
 
 感谢捐赠者 每当看到微信钱包有入账的时候 都非常的激动 但我不知道你们的名字 谢谢你们的支持 如果您有任何问题都可以微信 QQ 找我一起讨论 我一定知无不言 言无不尽 QQ1204505056 微信 chu1204505056
 
-## vue-admin-beautiful 前端讨论群-1 972435319
-
-不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 群里的任何问题我都会一一解答 感谢您的信任
-
-![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
-
-## vue-admin-beautiful 前端讨论群-VIP 805808910
-
-群内问题优先回答 群主每周在线授课 提供脚手架搭建在线指导 组件封装方法指导 NPM 发包开发组件指导（需付费 88-无限大有钱的多给没钱的能商量，帮助你的同时也帮了群主，感谢信任）
-
-![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm_vip.png)
-
-## 捐赠
-
-![image](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
-
 ## 梦想
 
 你相信吗?未来要和你共度一生的那个人，其实在与你相同的时间里，也忍受着同样的孤独，那个人一定也怀着满心的期待，拥着一腔孤勇，穿过茫茫人海，也要来与你相见，愿世间美好与你环环相扣...
 
-## 鸣谢 花裤衩的开源项目给了我不少灵感（tagsview 在花大佬的基础上改造）
+## 鸣谢 花裤衩、唐金州、贤心的开源项目给了我不少灵感（tagsview 在花大佬的基础上改造），感谢码云为我提供了免费的静态网页演示服务器和超棒的 git 仓库
 
 ## 目录结构
 
@@ -58,16 +42,21 @@ cnpm i
 npm run serve
 ```
 
-## 浏览器支持情况
+## vue-admin-beautiful 前端讨论群-1 972435319
 
-Modern browsers and Internet Explorer 11+.
+不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 群里的任何问题我都会一一解答 感谢您的信任
 
-<!-- prettier-ignore -->
-| [<img class="no-margin" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img class="no-margin" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img class="no-margin" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img class="no-margin" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
-| --------- | --------- | --------- | --------- |
-|  IE11, Edge| last 2 versions| last 2 versions| last 2 versions
+![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
 
-# 全局配置
+## vue-admin-beautiful 前端讨论群-VIP 805808910
+
+群内问题优先回答 群主每周在线授课 提供脚手架搭建在线指导 组件封装方法指导 NPM 发包开发组件指导（需付费 88-无限大有钱的多给没钱的能商量，帮助你的同时也帮了群主，感谢信任）
+
+![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm_vip.png)
+
+## 捐赠
+
+![image](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
 
 ## setting.js 配置
 
@@ -165,12 +154,10 @@ $base-right-content-width-min: calc(100% - 65px);
 
 ## 环境变量配置
 
-```
+```evn
 .env.development    # 在开发环境中被载入
 .env.production     # 在生成环境中被载入
 ```
-
-# 和服务端进行交互
 
 ## 前端请求示例
 
@@ -190,7 +177,7 @@ export function getList(data) {
 
 请求中会自动传 accessToken，用于后端接收，accessToken 的字段名可以在 setting.js 中配置
 
-```
+```js
 /*表格中请求参数约定*/
 {
     "pageNo": 1, //页数
@@ -200,7 +187,7 @@ export function getList(data) {
 
 ## 后端返回 JSON 数据的约定（路由接口除外）
 
-```
+```js
 {
     "code": 200,//成功的状态码
     "msg": "success",//提示信息
@@ -208,8 +195,6 @@ export function getList(data) {
     "data": [{}，{}，{}]//返回数据
 }
 ```
-
-# 开发（必看）
 
 ## 新增 router
 
