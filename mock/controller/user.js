@@ -44,7 +44,7 @@ export default [
     response: (config) => {
       const { accessToken } = config.body;
       let roles = ["editor"];
-      let userName = "访客";
+      let userName = "editor";
       if ("admin-accessToken" === accessToken) {
         roles = ["admin"];
         userName = "admin";

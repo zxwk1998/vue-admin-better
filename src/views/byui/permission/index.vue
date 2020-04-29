@@ -111,7 +111,7 @@ export default {
     handleChangePermission() {
       localStorage.setItem(
         tokenTableName,
-        `byui-${this.form.permission}-accessToken`
+        `${this.form.permission}-accessToken`
       );
       location.reload();
     },
