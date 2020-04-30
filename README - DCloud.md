@@ -13,7 +13,7 @@
   </a>
 </p>
 
-## ![avatar](https://chu1204505056.gitee.io/vue-admin-beautiful/static/img/user.1667c1c2.gif)[演示地址,点这里！！！直接点击登录即可!](http://chu1204505056.gitee.io/vue-admin-beautiful)
+## [演示地址,点这里！！！直接点击登录即可!](http://chu1204505056.gitee.io/vue-admin-beautiful)
 
 ## 官方问题解答讨论群 972435319
 
