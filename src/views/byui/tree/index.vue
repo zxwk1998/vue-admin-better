@@ -497,7 +497,7 @@ export default {
       while (stack.length) {
         const curr = stack.shift();
         if (curr.name == val) {
-          return this.$refs.multipleSelectTree.setChecked(node.id, false);
+          return this.$refs.multipleSelectTree.setChecked(curr.id, false);
         }
         if (curr.children && curr.children.length) {
           stack.unshift(...curr.children);
