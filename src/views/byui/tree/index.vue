@@ -491,7 +491,19 @@ export default {
       allNode.forEach((element) => element.classList.remove("is-current"));
     },
     // select多选时移除某项操作
-    removeSelectTreeTag(val) {},
+    removeSelectTreeTag(val) {
+      // 我假设n叉树中没有重名的叶子节点
+      const stack = JSON.parse(JSON.stringify(this.selectTreeData));
+      while (stack.length) {
+        const curr = stack.shift();
+        if (curr.name == val) {
+          return this.$refs.multipleSelectTree.setChecked(node.id, false);
+        }
+        if (curr.children && curr.children.length) {
+          stack.unshift(...curr.children);
+        }
+      }
+    },
     changeMultipleSelectTreeHandle(val) {},
     // 点击叶子节点
     selectTreeNodeClick(data, node, el) {
