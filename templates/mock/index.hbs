@@ -1,9 +1,9 @@
 import { mock } from 'mockjs';
 
 export default [{
-  url: '/{{ name }}/getList',
+  url: '/{{name}}/getList',
   type: 'post',
-  response: config = > {
+  response: (config) => {
   return {
     code: 200,
     msg: 'success',
@@ -17,9 +17,9 @@ export default [{
 }
 },
 {
-  url: '/{{ name }}/doEdit',
+  url: '/{{name}}/doEdit',
   type: 'post',
-  response: config = > {
+  response: (config) => {
   return {
     code: 200,
     msg: '模拟保存成功',
@@ -27,9 +27,9 @@ export default [{
 }
 },
 {
-  url: '/{{ name }}/doDelete',
+  url: '/{{name}}/doDelete',
   type: 'post',
-  response: config = > {
+  response: (config) => {
   return {
     code: 200,
     msg: '模拟删除成功',
