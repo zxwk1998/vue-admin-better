@@ -12,7 +12,7 @@ export default {
   props: {
     span: {
       type: Number,
-      default: 12,
+      default: 14,
     },
   },
   data() {

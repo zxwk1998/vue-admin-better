@@ -39,7 +39,8 @@ export default {
 
     .left-panel {
       @include panel;
-      .el-button {
+      .el-button,
+      .el-form-item {
         margin: 5px;
       }
     }
