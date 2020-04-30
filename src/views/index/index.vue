@@ -194,12 +194,12 @@
                 <el-button type="warning">VIP授课群 氪金用户进</el-button>
               </a>
             </el-popover>-->
-            <a
+            <!--  <a
               target="_blank"
               href="http://chu1204505056.gitee.io/vue-admin-beautiful-template"
             >
               <el-button type="primary">基础模板 </el-button>
-            </a>
+            </a> -->
           </div>
         </el-card>
       </el-col>
