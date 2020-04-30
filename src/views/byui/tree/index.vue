@@ -163,7 +163,7 @@
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogFormVisible = false">取 消</el-button>
+        <el-button @click="treeDialogVisible = false">取 消</el-button>
         <el-button type="primary" @click="saveTree">确 定</el-button>
       </div>
     </el-dialog>
@@ -211,7 +211,7 @@
           <div class="grid-content bg-pruple tree-box">
             <br />
             <p>
-              多选树：目前还未解决下拉框内tag点击删除树的联动删除效果
+              多选树
             </p>
             <br />
             <el-select
@@ -491,7 +491,19 @@ export default {
       allNode.forEach((element) => element.classList.remove("is-current"));
     },
     // select多选时移除某项操作
-    removeSelectTreeTag(val) {},
+    removeSelectTreeTag(val) {
+      // 假设n叉树中没有重名的叶子节点
+      const stack = JSON.parse(JSON.stringify(this.selectTreeData));
+      while (stack.length) {
+        const curr = stack.shift();
+        if (curr.name == val) {
+          return this.$refs.multipleSelectTree.setChecked(curr.id, false);
+        }
+        if (curr.children && curr.children.length) {
+          stack.unshift(...curr.children);
+        }
+      }
+    },
     changeMultipleSelectTreeHandle(val) {},
     // 点击叶子节点
     selectTreeNodeClick(data, node, el) {
