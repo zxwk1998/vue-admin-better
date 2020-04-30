@@ -1,6 +1,6 @@
 <template>
   <el-dialog :title="title" :visible.sync="dialogFormVisible" width="500px" @close="close">
-    <el-form ref="form" :model="form" :rules="{{name}}EditRules">
+    <el-form ref="form" :model="form" :rules="rules" label-width="80px">
       <el-form-item label="id" prop="id">
         <el-input v-model="form.id" autocomplete="off"></el-input>
       </el-form-item>
@@ -22,49 +22,48 @@
         form: {
           id: "",
         },
-        { { name } } EditRules: {
-        id: [
-          { required: true, trigger: "blur", message: "请输入id" },
-        ],
+        rules: {
+          id: [
+            { required: true, trigger: "blur", message: "请输入id" },
+          ],
         },
-      title: "",
+        title: "",
         dialogFormVisible: false,
       };
-  },
-  created() {
-    this.fetchData();
-  },
-  methods: {
-    showEdit(row) {
-      if (!row) {
-        this.title = "添加";
-      } else {
-        this.title = "编辑";
-        this.form = Object.assign({}, row);
-      }
-      this.dialogFormVisible = true;
     },
-    close() {
-      this.$refs["form"].resetFields();
-      this.form = this.$options.data().form;
-      this.dialogFormVisible = false;
-      this.$emit("fetchData");
+    created() {
     },
-    save() {
-      this.$refs["form"].validate((valid) => {
-        if (valid) {
-          updateData(this.form).then((res) => {
-            this.$refs["form"].resetFields();
-            this.dialogFormVisible = false;
-            this.$emit("fetchData");
-            this.form = this.$options.data().form;
-          });
+    methods: {
+      showEdit(row) {
+        if (!row) {
+          this.title = "添加";
         } else {
-          return false;
+          this.title = "编辑";
+          this.form = Object.assign({}, row);
         }
-      });
+        this.dialogFormVisible = true;
+      },
+      close() {
+        this.$refs["form"].resetFields();
+        this.form = this.$options.data().form;
+        this.dialogFormVisible = false;
+        this.$emit("fetchData");
+      },
+      save() {
+        this.$refs["form"].validate((valid) => {
+          if (valid) {
+            updateData(this.form).then((res) => {
+              this.$refs["form"].resetFields();
+              this.dialogFormVisible = false;
+              this.$emit("fetchData");
+              this.form = this.$options.data().form;
+            });
+          } else {
+            return false;
+          }
+        });
+      },
     },
-  },
   };
 </script>
 

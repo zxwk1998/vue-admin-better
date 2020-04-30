@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         type: "add",
-        path: `src/views/project/components/${properCaseName}Edit.vue`,
+        path: `src/views/project/${name}/components/${properCaseName}Edit.vue`,
         templateFile: "templates/curd/edit.hbs",
         data: {
           name: name,
