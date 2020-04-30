@@ -492,7 +492,7 @@ export default {
     },
     // select多选时移除某项操作
     removeSelectTreeTag(val) {
-      // 假设n叉树中没有重名的叶子节点
+
       const stack = JSON.parse(JSON.stringify(this.selectTreeData));
       while (stack.length) {
         const curr = stack.shift();
