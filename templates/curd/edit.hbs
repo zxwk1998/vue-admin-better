@@ -1,0 +1,72 @@
+<template>
+  <el-dialog :title="title" :visible.sync="dialogFormVisible" width="500px" @close="close">
+    <el-form ref="form" :model="form" :rules="{{name}}EditRules">
+      <el-form-item label="id" prop="id">
+        <el-input v-model="form.id" autocomplete="off"></el-input>
+      </el-form-item>
+    </el-form>
+    <div slot="footer" class="dialog-footer">
+      <el-button @click="close">取 消</el-button>
+      <el-button type="primary" @click="save">确 定</el-button>
+    </div>
+  </el-dialog>
+</template>
+
+<script>
+  import { doEdit } from "@/api/{{name}}";
+
+  export default {
+    name: "{{ properCase name }}Edit",
+    data() {
+      return {
+        form: {
+          id: "",
+        },
+        { { name } } EditRules: {
+        id: [
+          { required: true, trigger: "blur", message: "请输入id" },
+        ],
+        },
+      title: "",
+        dialogFormVisible: false,
+      };
+  },
+  created() {
+    this.fetchData();
+  },
+  methods: {
+    showEdit(row) {
+      if (!row) {
+        this.title = "添加";
+      } else {
+        this.title = "编辑";
+        this.form = Object.assign({}, row);
+      }
+      this.dialogFormVisible = true;
+    },
+    close() {
+      this.$refs["form"].resetFields();
+      this.form = this.$options.data().form;
+      this.dialogFormVisible = false;
+      this.$emit("fetchData");
+    },
+    save() {
+      this.$refs["form"].validate((valid) => {
+        if (valid) {
+          updateData(this.form).then((res) => {
+            this.$refs["form"].resetFields();
+            this.dialogFormVisible = false;
+            this.$emit("fetchData");
+            this.form = this.$options.data().form;
+          });
+        } else {
+          return false;
+        }
+      });
+    },
+  },
+  };
+</script>
+
+<style lang="scss" scoped="scoped">
+</style>
