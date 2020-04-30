@@ -492,7 +492,6 @@ export default {
     },
     // select多选时移除某项操作
     removeSelectTreeTag(val) {
-
       const stack = JSON.parse(JSON.stringify(this.selectTreeData));
       while (stack.length) {
         const curr = stack.shift();
