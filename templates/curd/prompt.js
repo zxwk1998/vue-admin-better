@@ -13,6 +13,7 @@ module.exports = {
   ],
   actions: (data) => {
     const name = "{{name}}";
+    const properCaseName = "{{properCase name}}";
     const actions = [
       {
         type: "add",
@@ -24,7 +25,7 @@ module.exports = {
       },
       {
         type: "add",
-        path: `src/views/project/${name}/components/Edit.vue`,
+        path: `src/views/project/components/${properCaseName}Edit.vue`,
         templateFile: "templates/curd/edit.hbs",
         data: {
           name: name,
