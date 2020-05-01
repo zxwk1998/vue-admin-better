@@ -174,7 +174,7 @@
             </el-popover>-->
             <el-popover placement="top" width="250" trigger="hover">
               <p>
-                谢谢您愿意支持开源，加群获取详细教程
+                谢谢您愿意支持开源，加群获取详细教程，群内提供vue-admin-beautiful-template基础模板
               </p>
               <el-image :src="require('@/assets/ewm.png')"></el-image>
               <a slot="reference" target="_blank">
@@ -250,7 +250,7 @@
             type="warning"
           >
           </el-alert>
-          <br />
+          <!-- <br />
           <el-alert title="重磅基础模板已发布" type="success" :closable="false">
             <a
               target="_blank"
@@ -258,7 +258,7 @@
             >
               vue-admin-beautiful-template</a
             >
-          </el-alert>
+          </el-alert>-->
         </el-card>
       </el-col>
     </el-row>
