@@ -225,6 +225,12 @@
           <div slot="header">
             <span>其他信息</span>
           </div>
+          <el-alert title="" type="success" :closable="false">
+            其实人生改变命运的机会并没有太多，我们并不是不优秀，我们也并不是一无是处，我们也希望驻足山巅被众人仰望，也许我们缺少的只是
+            一个机会，缺少的只是生命中的导师，我希望这个框架帮助到更多的人，我希望大家花费的的十块钱的群费，能获得一万倍的回报，希望有
+            一天，我们面试的时候不再胆怯，希望有一天别人看到的不仅仅是你的努力，还有你的功成名就，出人头地
+          </el-alert>
+          <br />
           <el-alert title="重磅基础模板已发布" type="success" :closable="false">
             <a
               target="_blank"

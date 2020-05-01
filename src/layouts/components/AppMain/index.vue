@@ -19,7 +19,7 @@
       <byui-icon :icon="['fas', 'copyright']"></byui-icon>
       {{ fullYear }} 青岛市崂山区最强前端小组中的最菜组员荣誉出品
       <br />
-      我的终极目标不再是做一名优秀的前端，因为我做不到，所以寄希望于协助和指引更多优秀的前端
+      我的终极目标不再是做一名优秀的前端，我的终极目标是帮助到更多优秀的前端，停留在这句话的你一定就是其中一个
       联系QQ1204505056
     </footer>
   </section>
@@ -55,13 +55,13 @@ export default {
     $route(to, from) {
       this.$nextTick(() => {
         /*if (this.$store.state.tagsView.skeleton) {
-                        this.show = true;
-                        setTimeout(() => {
+                          this.show = true;
+                          setTimeout(() => {
+                            this.show = false;
+                          }, 0);
+                        } else {
                           this.show = false;
-                        }, 0);
-                      } else {
-                        this.show = false;
-                      }*/
+                        }*/
         if ("mobile" === this.device) {
           this.$store.dispatch("settings/foldSideBar");
           $("body").attr("style", "");
