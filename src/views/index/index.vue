@@ -164,14 +164,6 @@
                 >国内源码下载通道（记得给个好评）
               </el-button>
             </a>
-            <!-- <el-popover placement="top" width="250" trigger="hover">
-              <p>
-                群内自取
-              </p>
-              <a slot="reference" target="_blank">
-                <el-button type="warning">文档</el-button>
-              </a>
-            </el-popover>-->
             <el-popover placement="top" width="250" trigger="hover">
               <p>
                 谢谢您愿意支持开源，加群获取详细教程，群内提供vue-admin-beautiful-template基础模板
@@ -181,25 +173,6 @@
                 <el-button type="warning">QQ讨论群 972435319</el-button>
               </a>
             </el-popover>
-            <!-- <el-popover placement="top" width="250" trigger="hover">
-              <p>
-                谢谢您愿意支持开源 群主每周在线授课 每天在线答疑
-                你会得到意想不到的收获
-              </p>
-              <p>第一步微信支付联系群主qq1204505056获取秘钥</p>
-              <el-image :src="require('@/assets/ewm_wx.png')"></el-image>
-              <p>第二步愉快的加群讨论学习</p>
-              <el-image :src="require('@/assets/ewm_vip.png')"></el-image>
-              <a slot="reference" target="_blank">
-                <el-button type="warning">VIP授课群 氪金用户进</el-button>
-              </a>
-            </el-popover>-->
-            <!--  <a
-              target="_blank"
-              href="http://chu1204505056.gitee.io/vue-admin-beautiful-template"
-            >
-              <el-button type="primary">基础模板 </el-button>
-            </a> -->
           </div>
         </el-card>
       </el-col>
@@ -244,21 +217,6 @@
           <el-alert :closable="false" :title="userAgent" type="info">
           </el-alert>
           <br />
-          <el-alert
-            :closable="false"
-            title="在这里你能学到更多的知识，包括eslint自动的修复而不是手动--fix(千万不要去掉规范，规范是每个人必备的技能)，包括组件的快速搭建与入手，你的所有问题都会第一时间得到解答，你同时还可以获得一手的学习资料，不要去相信网上好几年前的教程，对技术没有任何的提升，这里有更多的注册码与激活工具，保证你的开发坏境实时保持最新，当然一切都是你的自愿原则，你来或者不来，我都会在那里，开源还是会继续，你还是可以享受到最新的开源代码, 你相信吗？未来要和你共度一生的那个人，其实在与你相同的时间里，也忍受着同样的孤独，那个人一定也怀着满心的期待，拥着一腔孤勇，穿过茫茫人海，也要来与你相见。"
-            type="warning"
-          >
-          </el-alert>
-          <!-- <br />
-          <el-alert title="重磅基础模板已发布" type="success" :closable="false">
-            <a
-              target="_blank"
-              href="https://chu1204505056.gitee.io/vue-admin-beautiful-template"
-            >
-              vue-admin-beautiful-template</a
-            >
-          </el-alert>-->
         </el-card>
       </el-col>
     </el-row>
@@ -270,6 +228,7 @@ import ByuiChart from "@/plugins/echarts";
 import ByuiCount from "@/plugins/byuiCount";
 import { dependencies, devDependencies } from "../../../package.json";
 import { getList } from "@/api/changeLog";
+import { getRepos, getStargazers } from "@/api/github";
 
 export default {
   name: "Index",
@@ -612,6 +571,18 @@ export default {
         });
         this.activities = res.data;
       });
+      /*getRepos({
+            access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+          }).then((res) => {
+            const per_page = res.stargazers_count;
+            getStargazers({
+              access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+              page: 1,
+              per_page: res.per_page,
+            }).then((res) => {
+              alert(JSON.stringify(res));
+            });
+          });*/
     },
   },
 };

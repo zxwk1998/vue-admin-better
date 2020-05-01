@@ -1,15 +1,7 @@
 const data = [
   {
-    content: "在github上公布源码",
-    timestamp: "2020-03-07",
-  },
-  {
-    content: "上架DCloud插件市场",
-    timestamp: "2018-03-09",
-  },
-  {
-    content: "大幅优化手机端展示效果",
-    timestamp: "2020-03-20",
+    content: "在github上获得了第一个star，感恩一位名叫Bequiet2014的github用户",
+    timestamp: "2020-03-23",
   },
   {
     content: "增加更换主题功能",
