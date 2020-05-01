@@ -1,35 +1,78 @@
 <template>
   <div class="tree-container">
-    <p>
-      树形菜单分为两种渲染方式：一种数据量不多直接返回整棵树，另一种在数据量很多的情况下采用懒加载
-    </p>
-    <br />
     <el-row :gutter="15">
-      <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-        <div class="grid-content bg-pruple tree-box">
-          <p>
-            接口直接返回整棵树：目前支持功能——关键字过滤、自定义操作（添加、编辑、删除...）、初始树显示三层结构（openTree的n传入数值决定）、树的多选操作监听、点击树监听
-          </p>
-          <br />
-          <el-input v-model="filterText" placeholder="输入关键字过滤" />
+      <el-col :xs="24" :sm="24" :md="24" :lg="6" :xl="6">
+        <el-divider content-position="left">常规树</el-divider>
+        <el-input v-model="filterText" placeholder="输入关键字过滤" />
+        <el-tree
+          ref="demoTree"
+          :data="data2"
+          :default-checked-keys="defaultCheckedKeys"
+          :default-expanded-keys="defaultExpendedKeys"
+          :expand-on-click-node="false"
+          :filter-node-method="filterNode"
+          :highlight-current="true"
+          :props="defaultProps"
+          class="byui-filter-tree"
+          node-key="id"
+          show-checkbox
+          @check="checkNode"
+          @node-click="nodeClick"
+          @node-collapse="nodeCollapse"
+          @node-expand="nodeExpand"
+        >
+          <span slot-scope="{ node, data }" class="byui-custom-tree-node">
+            <span class="byui-tree-item">
+              <i v-if="node.data.rank == 4" class="el-icon-s-custom"></i>
+              {{ node.label }}
+            </span>
+            <span class="byui-tree-options">
+              <a
+                v-if="node.data.rank !== 4"
+                class="byui-tree-btn"
+                title="添加"
+                @click="() => append(node, data, 0)"
+                ><i class="el-icon-plus"></i
+              ></a>
+              <a
+                class="byui-tree-btn"
+                title="编辑"
+                @click="() => edit(node, data, 1)"
+                ><i class="el-icon-edit"></i
+              ></a>
+              <a
+                v-if="node.data.rank !== 1"
+                class="byui-tree-btn"
+                title="刪除"
+                @click="() => remove(node, data)"
+                ><i class="el-icon-delete"></i
+              ></a>
+            </span>
+          </span>
+        </el-tree>
+      </el-col>
+      <el-col :xs="24" :sm="24" :md="24" :lg="6" :xl="6">
+        <el-divider content-position="left">懒加载树</el-divider>
+        <el-input
+          v-model.lazy="keyW"
+          :value="keyW"
+          class="input-with-select"
+          placeholder="请输入内容"
+          @keyup.enter.native="showTreeList"
+        ></el-input>
+        <div v-show="isShow" class="blur-tree">
           <el-tree
-            ref="demoTree"
-            :data="data2"
-            :default-checked-keys="defaultCheckedKeys"
-            :default-expanded-keys="defaultExpendedKeys"
+            ref="treeFilter"
+            :data="filterDevLlist"
             :expand-on-click-node="false"
-            :filter-node-method="filterNode"
-            :highlight-current="true"
             :props="defaultProps"
             class="byui-filter-tree"
-            node-key="id"
-            show-checkbox
-            @check="checkNode"
+            default-expand-all
+            highlight-current
+            node-key="indexCode"
             @node-click="nodeClick"
-            @node-collapse="nodeCollapse"
-            @node-expand="nodeExpand"
           >
-            <span slot-scope="{ node, data }" class="byui-custom-tree-node">
+            <span slot-scope="{ node }" class="byui-custom-tree-node">
               <span class="byui-tree-item">
                 <i v-if="node.data.rank == 4" class="el-icon-s-custom"></i>
                 {{ node.label }}
@@ -39,20 +82,50 @@
                   v-if="node.data.rank !== 4"
                   class="byui-tree-btn"
                   title="添加"
-                  @click="() => append(node, data, 0)"
-                  ><i class="el-icon-plus"></i
-                ></a>
-                <a
-                  class="byui-tree-btn"
-                  title="编辑"
-                  @click="() => edit(node, data, 1)"
+                >
+                  <i class="el-icon-plus"></i>
+                </a>
+                <a class="byui-tree-btn" title="编辑"
                   ><i class="el-icon-edit"></i
                 ></a>
                 <a
                   v-if="node.data.rank !== 1"
                   class="byui-tree-btn"
                   title="刪除"
-                  @click="() => remove(node, data)"
+                >
+                  <i class="el-icon-delete"></i>
+                </a>
+              </span>
+            </span>
+          </el-tree>
+        </div>
+        <div v-show="!isShow" class="el-tree-wrap">
+          <el-tree
+            ref="tree"
+            v-loading="loading"
+            :expand-on-click-node="false"
+            :load="loadNode"
+            :props="defaultProps"
+            class="byui-filter-tree"
+            highlight-current
+            lazy
+            node-key="indexCode"
+            @node-click="nodeClick"
+          >
+            <span slot-scope="{ node }" class="byui-custom-tree-node">
+              <span class="byui-tree-item">
+                <i v-if="node.data.rank == 4" class="el-icon-s-custom"></i>
+                {{ node.label }}
+              </span>
+              <span class="byui-tree-options">
+                <!-- <a v-if="node.data.rank !== 4" class="byui-tree-btn" title="添加""><i class="el-icon-plus"></i></a> -->
+                <a class="byui-tree-btn" title="编辑"
+                  ><i class="el-icon-edit"></i
+                ></a>
+                <a
+                  v-if="node.data.rank !== 1"
+                  class="byui-tree-btn"
+                  title="刪除"
                   ><i class="el-icon-delete"></i
                 ></a>
               </span>
@@ -60,93 +133,65 @@
           </el-tree>
         </div>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-        <div class="grid-content bg-pruple tree-box">
-          <br />
-          <p>
-            数据量很多的情况下采用懒加载：目前支持功能——关键字过滤功能
-          </p>
-          <br />
-          <el-input
-            v-model.lazy="keyW"
-            :value="keyW"
-            class="input-with-select"
-            placeholder="请输入内容"
-            @keyup.enter.native="showTreeList"
-          ></el-input>
-          <div v-show="isShow" class="blur-tree">
+      <el-col :xs="24" :sm="24" :md="24" :lg="6" :xl="6">
+        <el-divider content-position="left">单选树</el-divider>
+        <el-select
+          ref="singleTree"
+          v-model="singleSelectTreeVal"
+          class="byui-tree-select"
+          clearable
+          popper-class="select-tree-popper"
+          value-key="id"
+          @clear="selectTreeClearHandle('single')"
+        >
+          <el-option :value="singleSelectTreeKey">
             <el-tree
-              ref="treeFilter"
-              :data="filterDevLlist"
-              :expand-on-click-node="false"
-              :props="defaultProps"
-              class="byui-filter-tree"
-              default-expand-all
-              highlight-current
-              node-key="indexCode"
-              @node-click="nodeClick"
+              id="singleSelectTree"
+              ref="singleSelectTree"
+              :current-node-key="singleSelectTreeKey"
+              :data="selectTreeData"
+              :default-expanded-keys="selectTreeDefaultSelectedKeys"
+              :highlight-current="true"
+              :props="selectTreeDefaultProps"
+              node-key="id"
+              @node-click="selectTreeNodeClick"
             >
               <span slot-scope="{ node }" class="byui-custom-tree-node">
-                <span class="byui-tree-item">
-                  <i v-if="node.data.rank == 4" class="el-icon-s-custom"></i>
-                  {{ node.label }}
-                </span>
-                <span class="byui-tree-options">
-                  <a
-                    v-if="node.data.rank !== 4"
-                    class="byui-tree-btn"
-                    title="添加"
-                  >
-                    <i class="el-icon-plus"></i>
-                  </a>
-                  <a class="byui-tree-btn" title="编辑"
-                    ><i class="el-icon-edit"></i
-                  ></a>
-                  <a
-                    v-if="node.data.rank !== 1"
-                    class="byui-tree-btn"
-                    title="刪除"
-                  >
-                    <i class="el-icon-delete"></i>
-                  </a>
-                </span>
+                <span class="byui-tree-item">{{ node.label }}</span>
               </span>
             </el-tree>
-          </div>
-          <div v-show="!isShow" class="el-tree-wrap">
+          </el-option>
+        </el-select>
+      </el-col>
+      <el-col :xs="24" :sm="24" :md="24" :lg="6" :xl="6">
+        <el-divider content-position="left">多选树</el-divider>
+        <el-select
+          v-model="multipleSelectTreeVal"
+          class="byui-tree-select"
+          clearable
+          collapse-tags
+          multiple
+          popper-class="select-tree-popper"
+          @change="changeMultipleSelectTreeHandle"
+          @clear="selectTreeClearHandle('multiple')"
+          @remove-tag="removeSelectTreeTag"
+        >
+          <el-option :value="multipleSelectTreeKey">
             <el-tree
-              ref="tree"
-              v-loading="loading"
-              :expand-on-click-node="false"
-              :load="loadNode"
-              :props="defaultProps"
-              class="byui-filter-tree"
-              highlight-current
-              lazy
-              node-key="indexCode"
-              @node-click="nodeClick"
-            >
-              <span slot-scope="{ node }" class="byui-custom-tree-node">
-                <span class="byui-tree-item">
-                  <i v-if="node.data.rank == 4" class="el-icon-s-custom"></i>
-                  {{ node.label }}
-                </span>
-                <span class="byui-tree-options">
-                  <!-- <a v-if="node.data.rank !== 4" class="byui-tree-btn" title="添加""><i class="el-icon-plus"></i></a> -->
-                  <a class="byui-tree-btn" title="编辑"
-                    ><i class="el-icon-edit"></i
-                  ></a>
-                  <a
-                    v-if="node.data.rank !== 1"
-                    class="byui-tree-btn"
-                    title="刪除"
-                    ><i class="el-icon-delete"></i
-                  ></a>
-                </span>
-              </span>
-            </el-tree>
-          </div>
-        </div>
+              id="multipleSelectTree"
+              ref="multipleSelectTree"
+              :current-node-key="multipleSelectTreeKey"
+              :data="selectTreeData"
+              :default-checked-keys="selectTreeDefaultSelectedKeys"
+              :default-expanded-keys="selectTreeDefaultSelectedKeys"
+              :highlight-current="true"
+              :props="selectTreeDefaultProps"
+              node-key="id"
+              show-checkbox
+              @check="multipleSelectTreeCheckNode"
+            ></el-tree>
+          </el-option>
+        </el-select>
       </el-col>
     </el-row>
     <!--添加/编辑节点弹框-------------------start-->
@@ -168,83 +213,6 @@
       </div>
     </el-dialog>
     <!--添加/编辑节点弹框-------------------end-->
-    <br />
-    <p>下拉树select-tree：单选/多选</p>
-    <br />
-    <div>
-      <el-row :gutter="15">
-        <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-          <div class="grid-content bg-pruple tree-box">
-            <br />
-            <p>单选树</p>
-            <br />
-            <el-select
-              ref="singleTree"
-              v-model="singleSelectTreeVal"
-              class="byui-tree-select"
-              clearable
-              popper-class="select-tree-popper"
-              value-key="id"
-              @clear="selectTreeClearHandle('single')"
-            >
-              <el-option :value="singleSelectTreeKey">
-                <el-tree
-                  id="singleSelectTree"
-                  ref="singleSelectTree"
-                  :current-node-key="singleSelectTreeKey"
-                  :data="selectTreeData"
-                  :default-expanded-keys="selectTreeDefaultSelectedKeys"
-                  :highlight-current="true"
-                  :props="selectTreeDefaultProps"
-                  node-key="id"
-                  @node-click="selectTreeNodeClick"
-                >
-                  <span slot-scope="{ node }" class="byui-custom-tree-node">
-                    <span class="byui-tree-item">{{ node.label }}</span>
-                  </span>
-                </el-tree>
-              </el-option>
-            </el-select>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-          <div class="grid-content bg-pruple tree-box">
-            <br />
-            <p>
-              多选树
-            </p>
-            <br />
-            <el-select
-              v-model="multipleSelectTreeVal"
-              class="byui-tree-select"
-              clearable
-              collapse-tags
-              multiple
-              popper-class="select-tree-popper"
-              @change="changeMultipleSelectTreeHandle"
-              @clear="selectTreeClearHandle('multiple')"
-              @remove-tag="removeSelectTreeTag"
-            >
-              <el-option :value="multipleSelectTreeKey">
-                <el-tree
-                  id="multipleSelectTree"
-                  ref="multipleSelectTree"
-                  :current-node-key="multipleSelectTreeKey"
-                  :data="selectTreeData"
-                  :default-checked-keys="selectTreeDefaultSelectedKeys"
-                  :default-expanded-keys="selectTreeDefaultSelectedKeys"
-                  :highlight-current="true"
-                  :props="selectTreeDefaultProps"
-                  node-key="id"
-                  show-checkbox
-                  @check="multipleSelectTreeCheckNode"
-                ></el-tree>
-              </el-option>
-            </el-select>
-          </div>
-        </el-col>
-      </el-row>
-    </div>
   </div>
 </template>
 
@@ -457,14 +425,14 @@ export default {
             );
           }
           /* const scrollWrap = document.querySelectorAll(
-              ".select-tree-popper .el-scrollbar .el-select-dropdown__wrap"
-            )[0];
-            const scrollBar = document.querySelectorAll(
-              "select-tree-popper .el-scrollbar .el-scrollbar__bar"
-            );
-            scrollWrap.style.cssText =
-              "margin: 0; max-height: none; overflow: hidden;";
-            scrollBar.forEach((ele) => (ele.style.width = 0));*/
+                        ".select-tree-popper .el-scrollbar .el-select-dropdown__wrap"
+                      )[0];
+                      const scrollBar = document.querySelectorAll(
+                        "select-tree-popper .el-scrollbar .el-scrollbar__bar"
+                      );
+                      scrollWrap.style.cssText =
+                        "margin: 0; max-height: none; overflow: hidden;";
+                      scrollBar.forEach((ele) => (ele.style.width = 0));*/
         });
       });
     },
@@ -531,11 +499,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.tree-container {
-  .tree-box {
-    width: 300px;
-    margin: auto;
-  }
-}
-</style>
+<style lang="scss" scoped></style>
