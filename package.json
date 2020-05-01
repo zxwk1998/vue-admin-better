@@ -64,7 +64,7 @@
     "zx-keel": "^0.9.0",
     "zx-magnifie": "^0.4.0",
     "zx-player": "^0.9.5",
-    "zx-rely": "^0.0.1",
+    "zx-rely": "^0.0.2",
     "zx-swiper": "^0.5.5"
   },
   "devDependencies": {
@@ -86,7 +86,7 @@
     "filemanager-webpack-plugin": "^2.0.5",
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.1",
+    "lint-staged": "^10.2.2",
     "mockjs": "^1.1.0",
     "plop": "^2.6.0",
     "prettier": "^2.0.5",
