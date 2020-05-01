@@ -15,11 +15,15 @@
 
 ## [演示地址,点这里！！！直接点击登录即可!](http://chu1204505056.gitee.io/vue-admin-beautiful)
 
+## 重要通知
+
+插件市场服务器似乎出现了一些问题，github 可以查看到最新的代码的提交情况[github 地址点这里](https://github.com/chuzhixin/vue-admin-beautiful)
+
 ## 官方问题解答讨论群 972435319
 
 ## 鸣谢 HBuilderX,prettier,Vue
 
-## star 如果您觉得帮助到了您，麻烦去 github 给个 star [详细文档点这里](https://github.com/chuzhixin/vue-admin-beautiful)
+## star 如果您觉得帮助到了您，麻烦去 github 给个 star [github 地址点这里](https://github.com/chuzhixin/vue-admin-beautiful)
 
 ## 安装
 
