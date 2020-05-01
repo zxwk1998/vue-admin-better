@@ -1,9 +1,5 @@
 # 介绍
 
-- Vue
-- Element
-- Vue-admin-beautiful
-
 <p align="left">
     <img src="https://img.shields.io/badge/vue-始终基于最新版-brightgreen.svg">
     <img src="https://img.shields.io/badge/vuex-始终基于最新版-brightgreen.svg" >
@@ -18,13 +14,7 @@
 
 ## 感谢
 
-感谢捐赠者 每当看到微信钱包有入账的时候 都非常的激动 但我不知道你们的名字 谢谢你们的支持 如果您有任何问题都可以微信 QQ 找我一起讨论 我一定知无不言 言无不尽 QQ1204505056 微信 chu1204505056
-
-## 梦想
-
-你相信吗?未来要和你共度一生的那个人，其实在与你相同的时间里，也忍受着同样的孤独，那个人一定也怀着满心的期待，拥着一腔孤勇，穿过茫茫人海，也要来与你相见，愿世间美好与你环环相扣...
-
-## 鸣谢 花裤衩、唐金州、贤心的开源项目给了我不少灵感（tagsview 在花大佬的基础上改造），感谢码云为我提供了免费的静态网页演示服务器和超棒的 git 仓库
+感谢捐赠者 每当看到捐赠入账的时候 都非常的激动 但我不知道你们的名字 谢谢你们的支持 有任何问题您都可以在群里右键添加群主好友，我一定认真回复
 
 ## 目录结构
 
@@ -41,22 +31,6 @@ cnpm i
 # 本地开发 启动项目
 npm run serve
 ```
-
-## vue-admin-beautiful 前端讨论群-1 972435319
-
-不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 群里的任何问题我都会一一解答 感谢您的信任
-
-![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
-
-## vue-admin-beautiful 前端讨论群-VIP 805808910
-
-群内问题优先回答 群主每周在线授课 提供脚手架搭建在线指导 组件封装方法指导 NPM 发包开发组件指导（需付费 88-无限大有钱的多给没钱的能商量，帮助你的同时也帮了群主，感谢信任）
-
-![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm_vip.png)
-
-## 捐赠
-
-![image](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
 
 ## setting.js 配置
 
@@ -239,3 +213,19 @@ cnpm run template
 ## 更多文档
 
 加群获取
+
+## vue-admin-beautiful 前端讨论群-1 972435319
+
+不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 群里的任何问题我都会一一解答 感谢您的信任
+
+![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
+
+## vue-admin-beautiful 前端讨论群-VIP 805808910
+
+群内问题优先回答 群主每周在线授课 提供脚手架搭建在线指导 组件封装方法指导 NPM 发包开发组件指导（需付费 88-无限大有钱的多给没钱的能商量，帮助你的同时也帮了群主，感谢信任）
+
+![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm_vip.png)
+
+## 捐赠
+
+![image](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
