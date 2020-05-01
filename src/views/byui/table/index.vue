@@ -53,18 +53,28 @@
           {{ scope.$index + 1 }}
         </template>
       </el-table-column>
-      <el-table-column label="标题" prop="title"></el-table-column>
+      <el-table-column label="标题">
+        <template slot-scope="scope">
+          <el-tooltip
+            :content="scope.row.title"
+            class="item"
+            effect="dark"
+            placement="top-start"
+          >
+            <span>{{ scope.row.title }}</span>
+          </el-tooltip>
+        </template>
+      </el-table-column>
+      <el-table-column label="点击量" prop="pageviews" sortable width="110">
+      </el-table-column>
       <el-table-column label="作者" prop="author" width="110"></el-table-column>
       <el-table-column label="头像" width="110">
         <template slot-scope="scope">
-          <div style="width: 50px; height: 50px; margin: auto;">
-            <el-image
-              v-if="imgShow"
-              :preview-src-list="imageList"
-              :src="scope.row.img"
-              style="width: 50px; height: 50px;"
-            ></el-image>
-          </div>
+          <el-image
+            v-if="imgShow"
+            :preview-src-list="imageList"
+            :src="scope.row.img"
+          ></el-image>
         </template>
       </el-table-column>
       <el-table-column
@@ -92,7 +102,7 @@
         prop="display_time"
         width="200"
       ></el-table-column>
-      <el-table-column label="操作">
+      <el-table-column label="操作" width="200px" fixed="right">
         <template slot-scope="scope">
           <el-button type="text" @click="handleEdit(scope.row)"
             >编辑
@@ -179,11 +189,11 @@ export default {
     },
     imgLine(img) {
       /*const index = this.imageList.indexOf(img);
-                                      const imageList = this.imageList;
-                                      this.imageList = this.imageList
-                                          .slice(index)
-                                          .concat(this.imageList.slice(0, index));
-                                      */
+                                                const imageList = this.imageList;
+                                                this.imageList = this.imageList
+                                                    .slice(index)
+                                                    .concat(this.imageList.slice(0, index));
+                                                */
     },
     setSelectRows(val) {
       this.selectRows = val;

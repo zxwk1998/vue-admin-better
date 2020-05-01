@@ -69,6 +69,10 @@ const data = [
     content: "无端的指责只会让我更加努力 修复sidebar 简化permission",
     timestamp: "2020-04-28",
   },
+  {
+    content: "又是一个深夜 实现了表格增删改查的一键生成",
+    timestamp: "2020-04-30",
+  },
 ];
 
 export default [

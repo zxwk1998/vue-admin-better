@@ -275,8 +275,6 @@ html {
       td,
       th {
         padding: 7.5px 0;
-        min-width: 0;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         text-overflow: ellipsis;
         vertical-align: middle;
@@ -290,10 +288,6 @@ html {
           color: #606266;
           font-weight: normal;
           font-size: $base-font-size-default;
-
-          .el- {
-            padding: 8px;
-          }
 
           .el-image {
             width: 50px;
