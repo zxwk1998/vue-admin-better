@@ -23,7 +23,7 @@ export default {
   },
   data() {
     return {
-      url: "https://chu1204505056.gitee.io/byui-bookmarks/",
+      url: "https://www.baidu.com",
       imagePath: require("@/assets/qr_logo/lqr_logo.png"),
     };
   },
