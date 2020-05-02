@@ -19,7 +19,7 @@
           ></byui-player-hls>
         </el-card>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
+      <!--<el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
         <el-card shadow="hover">
           <div slot="header">播放flv，且不暴露视频地址</div>
           <byui-player-flv
@@ -27,24 +27,19 @@
             @player="Player3 = $event"
           ></byui-player-flv>
         </el-card>
-      </el-col>
+      </el-col>-->
     </el-row>
   </div>
 </template>
 
 <script>
-import {
-  ByuiPlayerMp4,
-  ByuiPlayerHls,
-  ByuiPlayerFlv,
-} from "@/plugins/byuiPlayer.js";
+import { ByuiPlayerMp4, ByuiPlayerHls } from "@/plugins/byuiPlayer.js";
 
 export default {
   name: "Player",
   components: {
     ByuiPlayerMp4,
     ByuiPlayerHls,
-    ByuiPlayerFlv,
   },
   data() {
     return {
