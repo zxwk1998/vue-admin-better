@@ -1,9 +1,10 @@
 <template>
   <span :title="isFullscreen ? '退出全屏' : '进入全屏'">
-    <svg-icon
-      :icon-class="isFullscreen ? 'exit-fullscreen' : 'fullscreen'"
+    <byui-icon
+      :icon="['fas', isFullscreen ? 'compress' : 'expand']"
       @click="click"
-  /></span>
+    ></byui-icon>
+  </span>
 </template>
 
 <script>
