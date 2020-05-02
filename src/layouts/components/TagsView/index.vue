@@ -7,10 +7,10 @@
     >
     </byui-icon>
     <scroll-pane ref="scrollPane" class="tags-content" @contextmenu.stop>
-      <span>
+      <transition-group :enter-active-class="'animated ' + animated">
         <router-link
-          v-for="(item, index) in visitedViews"
-          :key="index"
+          v-for="item in visitedViews"
+          :key="item.path"
           ref="tag"
           :class="isActive(item) ? 'active' : ''"
           :to="{
@@ -30,7 +30,7 @@
             @click.prevent.stop="closeSelectedTag(item)"
           />
         </router-link>
-      </span>
+      </transition-group>
     </scroll-pane>
     <byui-icon
       class="tags-icon"
@@ -83,6 +83,7 @@ export default {
       left: 0,
       selectedTag: {},
       affixTags: [],
+      animated: "flipInY",
     };
   },
 
