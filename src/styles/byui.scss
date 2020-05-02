@@ -25,13 +25,13 @@ $base: ".byui";
 @mixin base-scrollbar {
   &::-webkit-scrollbar {
     width: 13px;
+    height: 13px;
   }
 
   &::-webkit-scrollbar-thumb {
     border: 3px solid transparent;
     background-clip: padding-box;
     border-radius: 7px;
-    min-height: 84px;
     background-color: rgba(0, 0, 0, 0.4);
   }
 
@@ -268,6 +268,9 @@ html {
     /*表格开始*/
 
     .el-table {
+      .el-table__body-wrapper {
+        @include base-scrollbar;
+      }
       th {
         background: #f5f7fa;
       }
