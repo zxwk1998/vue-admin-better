@@ -2149,7 +2149,7 @@ const data = [
 ];
 export default [
   {
-    url: "/remixicon/getList",
+    url: "/remixIcon/getList",
     type: "post",
     response: (config) => {
       return {

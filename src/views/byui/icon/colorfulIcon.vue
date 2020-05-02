@@ -1,13 +1,8 @@
 <template>
   <div class="colorful-icon-container">
     <el-divider content-position="left"
-      >由于多彩图标数量太多影响演示页面加载速度,故去掉演示功能,如果需要加群自取</el-divider
-    >
-    <byui-fault-text
-      ref="faultText"
-      text="you are beautiful,暂不展示"
-    ></byui-fault-text>
-    <!--<el-divider content-position="left">点击图标即可复制源码</el-divider>
+      >多彩图标暂未使用本地图标库使用的是cdn加速服务，开发时需存储到本地，使用方法可查看VIP群文档，点击图标即可复制源码
+    </el-divider>
     <el-row :gutter="15">
       <el-col :span="24">
         <el-form
@@ -19,18 +14,19 @@
           <el-form-item label="图标名称">
             <el-input v-model="name"></el-input>
           </el-form-item>
-          &lt;!&ndash;<el-form-item label-width="0">
+          <el-form-item label-width="0">
             <el-button native-type="submit" type="primary" @click="submit"
               >搜索
             </el-button>
-          </el-form-item>&ndash;&gt;
+          </el-form-item>
 
           <el-form-item label-width="0">
             {{ tips }}
           </el-form-item>
-          &lt;!&ndash; <el-form-item label-width="0">
+
+          <el-form-item label-width="0">
             <el-input :value="copyText" type="text"></el-input>
-          </el-form-item>&ndash;&gt;
+          </el-form-item>
         </el-form>
       </el-col>
 
@@ -48,22 +44,22 @@
           style="cursor: pointer;"
           @click.native="handleCopyIcon(index, $event)"
         >
-          <svg-icon :icon-class="item" @click.stop></svg-icon>
+          <byui-colorful-icon
+            :icon-class="`https://cdn.jsdelivr.net/gh/chuzhixin/zx-colorful-icon@master/${item}.svg`"
+          />
           <div class="icon-text">{{ item }}</div>
         </el-card>
       </el-col>
-    </el-row>-->
+    </el-row>
   </div>
 </template>
 
 <script>
 import { getIconList } from "@/api/colorfulIcon";
 import clip from "@/utils/clipboard";
-import ByuiFaultText from "@/components/ByuiFaultText";
 
 export default {
   name: "ColorfulIcon",
-  components: { ByuiFaultText },
   data() {
     return {
       queryIcon: [],
@@ -118,7 +114,8 @@ export default {
       });
     },
     handleCopyIcon(index, event) {
-      const copyText = `<svg-icon icon-class="${this.queryIcon[index]}" />`;
+      //const copyText = `<byui-colorful-icon icon-class="https://cdn.jsdelivr.net/gh/chuzhixin/zx-colorful-icon@master/${this.queryIcon[index]}.svg" />`;
+      const copyText = `<byui-colorful-icon icon-class="${this.queryIcon[index]}" />`;
       this.copyText = copyText;
       clip(copyText, event);
     },

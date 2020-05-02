@@ -228,9 +228,9 @@ export const asyncRoutes = [
         meta: { title: "多彩图标", roles: ["admin"] },
       },
       {
-        path: "remixicon",
-        name: "Remixicon",
-        component: () => import("@/views/byui/icon/remixicon"),
+        path: "remixIcon",
+        name: "RemixIcon",
+        component: () => import("@/views/byui/icon/remixIcon"),
         meta: { title: "小清新图标(图标过多打开会慢)", roles: ["admin"] },
       },
       {

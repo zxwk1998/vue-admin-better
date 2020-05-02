@@ -141,7 +141,6 @@ const data = [
   "heat_map",
   "high_priority",
   "high_battery",
-  "icons8_cup",
   "image_file",
   "home",
   "idea",

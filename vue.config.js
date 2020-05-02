@@ -83,7 +83,8 @@ module.exports = {
     config.module
       .rule("svg")
       .exclude.add(resolve("src/icons"))
-      .add(resolve("src/remixicon"))
+      .add(resolve("src/remixIcon"))
+      .add(resolve("src/colorfulIcon"))
       .end();
     config.module
       .rule("icons")
@@ -95,15 +96,23 @@ module.exports = {
       .options({ symbolId: "icon-[name]" })
       .end();
     config.module
-      .rule("remixicon")
+      .rule("remixIcon")
       .test(/\.svg$/)
-      .include.add(resolve("src/remixicon"))
+      .include.add(resolve("src/remixIcon"))
       .end()
       .use("svg-sprite-loader")
       .loader("svg-sprite-loader")
-      .options({ symbolId: "remixicon-[name]" })
+      .options({ symbolId: "remix-icon-[name]" })
       .end();
-
+    config.module
+      .rule("colorfulIcon")
+      .test(/\.svg$/)
+      .include.add(resolve("src/colorfulIcon"))
+      .end()
+      .use("svg-sprite-loader")
+      .loader("svg-sprite-loader")
+      .options({ symbolId: "colorful-icon-[name]" })
+      .end();
     config.module
       .rule("vue")
       .use("vue-loader")

@@ -14,7 +14,7 @@
 import { isExternal } from "@/utils/validate";
 
 export default {
-  name: "SvgIcon",
+  name: "RemixIcon",
   props: {
     iconClass: {
       type: String,
@@ -30,7 +30,7 @@ export default {
       return isExternal(this.iconClass);
     },
     iconName() {
-      return `#icon-${this.iconClass}`;
+      return `#remix-icon-${this.iconClass}`;
     },
     svgClass() {
       if (this.className) {
@@ -51,8 +51,8 @@ export default {
 
 <style lang="scss" scoped>
 .svg-icon {
-  width: 1em;
-  height: 1em;
+  width: 1.25em;
+  height: 1.25em;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;

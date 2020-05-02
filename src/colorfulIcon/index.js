@@ -1,6 +1,7 @@
 import Vue from "vue";
-import Remixicon from "@/components/Remixicon";
-Vue.component("byui-remixicon", Remixicon);
+import ColorfullIcon from "@/components/ColorfullIcon";
+
+Vue.component("byui-colorful-icon", ColorfullIcon);
 const req = require.context("./svg", false, /\.svg$/),
   requireAll = (requireContext) => {
     /*let a = requireContext.keys().map(requireContext);

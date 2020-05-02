@@ -1,7 +1,7 @@
 <template>
   <div class="colorful-icon-container">
     <el-divider content-position="left"
-      >图标太多暂未使用本地图标库使用的是cdn加速服务，如果需要换成本地加载方式请联系群主，点击图标即可复制源码
+      >图标太多暂未使用本地图标库使用的是cdn加速服务，开发时需存储到本地，使用方法可查看VIP群文档，点击图标即可复制源码，点击图标即可复制源码
     </el-divider>
     <el-row :gutter="15">
       <el-col :span="24">
@@ -44,10 +44,10 @@
           style="cursor: pointer;"
           @click.native="handleCopyIcon(index, $event)"
         >
-          <byui-remixicon
+          <byui-remix-icon
             :icon-class="`https://cdn.jsdelivr.net/gh/chuzhixin/zx-remixicon@master/src/icons/svg/${item}.svg`"
             @click.stop
-          ></byui-remixicon>
+          ></byui-remix-icon>
           <div class="icon-text">{{ item }}</div>
         </el-card>
       </el-col>
@@ -56,11 +56,11 @@
 </template>
 
 <script>
-import { getIconList } from "@/api/remixicon";
+import { getIconList } from "@/api/remixIcon";
 import clip from "@/utils/clipboard";
 
 export default {
-  name: "ColorfulIcon",
+  name: "RemixIcon",
   data() {
     return {
       queryIcon: [],
@@ -116,8 +116,8 @@ export default {
       });
     },
     handleCopyIcon(index, event) {
-      const copyText = `<byui-remixicon icon-class="https://cdn.jsdelivr.net/gh/chuzhixin/zx-remixicon@master/src/icons/svg/${this.queryIcon[index]}.svg" />`;
-      //const copyText = `<byui-remixicon icon-class="${this.queryIcon[index]}" />`;
+      //const copyText = `<byui-remixicon icon-class="https://cdn.jsdelivr.net/gh/chuzhixin/zx-remixicon@master/src/icons/svg/${this.queryIcon[index]}.svg" />`;
+      const copyText = `<byui-remixicon icon-class="${this.queryIcon[index]}" />`;
       this.copyText = copyText;
       clip(copyText, event);
     },

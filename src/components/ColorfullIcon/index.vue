@@ -14,7 +14,7 @@
 import { isExternal } from "@/utils/validate";
 
 export default {
-  name: "Remixicon",
+  name: "ColorfulIcon",
   props: {
     iconClass: {
       type: String,
@@ -30,7 +30,7 @@ export default {
       return isExternal(this.iconClass);
     },
     iconName() {
-      return `#remixicon-${this.iconClass}`;
+      return `#colorful-icon-${this.iconClass}`;
     },
     svgClass() {
       if (this.className) {
@@ -41,8 +41,8 @@ export default {
     },
     styleExternalIcon() {
       return {
-        mask: `url(${this.iconClass}) no-repeat 50% 50%`,
-        "-webkit-mask": `url(${this.iconClass}) no-repeat 50% 50%`,
+        background: `url(${this.iconClass}) no-repeat 50% 50%`,
+        backgroundSize: "cover",
       };
     },
   },
@@ -51,8 +51,8 @@ export default {
 
 <style lang="scss" scoped>
 .svg-icon {
-  width: 1.25em;
-  height: 1.25em;
+  width: 1em;
+  height: 1em;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
@@ -63,8 +63,8 @@ export default {
 }
 
 .svg-external-icon {
-  background-color: currentColor;
-  mask-size: cover !important;
   display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
 }
 </style>
