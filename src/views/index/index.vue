@@ -604,12 +604,12 @@ export default {
   .card {
     ::v-deep {
       .el-card__body {
-        min-height: 340px;
+        min-height: 345px;
         height: auto;
 
         .echarts {
           width: 100%;
-          height: 300px;
+          height: 305px;
         }
       }
     }
