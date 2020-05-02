@@ -11,7 +11,7 @@
 </template>
 
 <script>
-const tagAndTagSpacing = 4;
+const tagAndTagSpacing = 5;
 
 export default {
   name: "ScrollPane",
@@ -32,6 +32,7 @@ export default {
       const $container = this.$refs.scrollContainer.$el;
       const $containerWidth = $container.offsetWidth;
       const $scrollWrapper = this.scrollWrapper;
+      let $wrap = $($scrollWrapper);
       const tagList = this.$parent.$refs.tag;
 
       let firstTag = null;
@@ -43,10 +44,12 @@ export default {
       }
 
       if (firstTag === currentTag) {
-        $scrollWrapper.scrollLeft = 0;
+        $wrap.animate({ scrollLeft: 0 }, 400);
       } else if (lastTag === currentTag) {
-        $scrollWrapper.scrollLeft =
-          $scrollWrapper.scrollWidth - $containerWidth;
+        $wrap.animate(
+          { scrollLeft: $scrollWrapper.scrollWidth - $containerWidth + 15 },
+          400
+        );
       } else {
         const currentIndex = tagList.findIndex((item) => item === currentTag);
         const prevTag = tagList[currentIndex - 1];
@@ -62,9 +65,12 @@ export default {
           afterNextTagOffsetLeft >
           $scrollWrapper.scrollLeft + $containerWidth
         ) {
-          $scrollWrapper.scrollLeft = afterNextTagOffsetLeft - $containerWidth;
+          $wrap.animate(
+            { scrollLeft: afterNextTagOffsetLeft - $containerWidth },
+            400
+          );
         } else if (beforePrevTagOffsetLeft < $scrollWrapper.scrollLeft) {
-          $scrollWrapper.scrollLeft = beforePrevTagOffsetLeft;
+          $wrap.animate({ scrollLeft: beforePrevTagOffsetLeft }, 400);
         }
       }
     },
@@ -79,5 +85,11 @@ export default {
   overflow: hidden;
   width: 100%;
   min-height: 38px;
+
+  /*::v-deep {
+          .el-scrollbar__thumb {
+            transition: transform 0.5s ease-in-out;
+          }
+        }*/
 }
 </style>

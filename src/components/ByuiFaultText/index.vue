@@ -34,13 +34,13 @@ export default {
   },
   methods: {
     init() {
-      setTimeout(() => {
-        const random = (min, max) =>
-          min + Math.floor(Math.random() * (max - min + 1));
-        let crossBarGlitchTexts = document.querySelectorAll(
-          `.fault-text-${this.uuid}`
-        );
-        crossBarGlitchTexts.forEach((text) => {
+      const random = (min, max) =>
+        min + Math.floor(Math.random() * (max - min + 1));
+      let crossBarGlitchTexts = document.querySelectorAll(
+        `.fault-text-${this.uuid}`
+      );
+      crossBarGlitchTexts.forEach((text) => {
+        if (text) {
           let content = text.textContent;
           text.textContent = "";
           let slice = text.dataset.slice;
@@ -65,8 +65,8 @@ export default {
             bars.append(bar);
           }
           text.append(bars);
-        });
-      }, 500);
+        }
+      });
     },
   },
 };

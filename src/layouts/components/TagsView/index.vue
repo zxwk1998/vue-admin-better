@@ -239,7 +239,6 @@ export default {
       if ("left" === e) {
         $wrap.animate({ scrollLeft: 0 }, 400);
       } else {
-        console.log($wrap[0].scrollWidth);
         $wrap.animate({ scrollLeft: $wrap[0].scrollWidth }, 400);
       }
     },
