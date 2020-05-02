@@ -1,5 +1,8 @@
 <template>
   <div class="player-container">
+    <el-divider content-position="left"
+      >视频地址采用cdn加速服务，开发时需部署到到本地，使用方法可查看VIP群文档
+    </el-divider>
     <el-row :gutter="15">
       <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
         <el-card shadow="hover">
@@ -10,13 +13,19 @@
       <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
         <el-card shadow="hover">
           <div slot="header">播放m3u8,且不暴露视频地址</div>
-          加群获取
+          <byui-player-hls
+            :config="config2"
+            @player="Player2 = $event"
+          ></byui-player-hls>
         </el-card>
       </el-col>
       <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
         <el-card shadow="hover">
           <div slot="header">播放flv,且不暴露视频地址</div>
-          加群获取
+          <byui-player-flv
+            :config="config3"
+            @player="Player3 = $event"
+          ></byui-player-flv>
         </el-card>
       </el-col>
     </el-row>
@@ -24,29 +33,34 @@
 </template>
 
 <script>
-import { ByuiPlayerMp4 } from "@/plugins/byuiPlayer.js";
+import {
+  ByuiPlayerMp4,
+  ByuiPlayerHls,
+  ByuiPlayerFlv,
+} from "@/plugins/byuiPlayer.js";
 
 export default {
   name: "Player",
   components: {
     ByuiPlayerMp4,
+    ByuiPlayerHls,
+    ByuiPlayerFlv,
   },
   data() {
     return {
       config1: {
         id: "mse1",
-        url:
-          "//s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo-720p.mp4",
+        url: "https://cdn.jsdelivr.net/gh/chuzhixin/videos@master/video.mp4",
       },
       Player1: null,
       config2: {
         id: "mse2",
-        url: "",
+        url: "https://cdn.jsdelivr.net/gh/chuzhixin/videos@master/video.m3u8",
       },
       Player2: null,
       config3: {
         id: "mse3",
-        url: "",
+        url: "https://cdn.jsdelivr.net/gh/chuzhixin/videos@master/video.flv",
       },
       Player3: null,
     };
