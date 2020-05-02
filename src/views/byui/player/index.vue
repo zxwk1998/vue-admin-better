@@ -12,7 +12,7 @@
       </el-col>
       <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
         <el-card shadow="hover">
-          <div slot="header">播放m3u8,且不暴露视频地址</div>
+          <div slot="header">播放m3u8，且不暴露视频地址</div>
           <byui-player-hls
             :config="config2"
             @player="Player2 = $event"
@@ -21,7 +21,7 @@
       </el-col>
       <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
         <el-card shadow="hover">
-          <div slot="header">播放flv,且不暴露视频地址</div>
+          <div slot="header">播放flv，且不暴露视频地址</div>
           <byui-player-flv
             :config="config3"
             @player="Player3 = $event"
