@@ -2,9 +2,7 @@
   <div class="small-components-container">
     <el-row :gutter="15">
       <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-        <el-divider content-position="left"
-          >为演示方便，每隔五5秒重新渲染
-        </el-divider>
+        <el-divider content-position="left">小组件</el-divider>
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
         <el-card shadow="hover">
@@ -103,17 +101,15 @@ export default {
     };
   },
   mounted() {
+    this.handleProfile();
+    this.handleSolidText();
+    this.handleFaultText();
     this.timeInterval = setInterval(() => {
-      this.handleProfile();
-      this.handleSolidText();
-      this.handleFaultText();
       if (this.endVal < 100) {
         this.startVal = this.endVal;
         this.endVal++;
       }
     }, 5000);
-
-    /*充电动画*/
   },
   beforeDestroy() {
     if (this.clearInterval) {
