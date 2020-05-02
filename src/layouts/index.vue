@@ -35,7 +35,7 @@
       <div
         v-if="device === 'mobile' && collapse === false"
         class="mask"
-        @click="handleClickOutside"
+        @click="handleFoldSideBar"
       />
       <side-bar />
       <byui-main :class="collapse ? 'is-collapse-main' : ''">
@@ -94,9 +94,9 @@ export default {
     });
   },
   methods: {
-    handleClickOutside() {
+    handleFoldSideBar() {
       this.$store.dispatch("settings/foldSideBar");
-      $("body").attr("style", "");
+      document.body.style.overflow = "";
     },
   },
 };

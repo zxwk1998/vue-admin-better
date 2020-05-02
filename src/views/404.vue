@@ -57,11 +57,11 @@ export default {
   },
   mounted() {
     this.timeChange();
-    $("body").css("background", "#fff");
+    document.body.style.background = "#ffffff";
   },
   beforeDestroy() {
     clearInterval(this.timer);
-    $("body").css("background", "#f2f2f2");
+    document.body.style.background = "#f2f2f2";
   },
   methods: {
     timeChange() {

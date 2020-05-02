@@ -136,7 +136,7 @@ const install = (Vue, opts = {}) => {
 
   /* 全局TableHeight */
   Vue.prototype.$baseTableHeight = (formType) => {
-    let height = $(window).height();
+    let height = window.innerHeight;
     let paddingHeight = 270;
     const formHeight = 50;
     if (localStorage.getItem("BYUI-VUE-LAYOUT") === null) {

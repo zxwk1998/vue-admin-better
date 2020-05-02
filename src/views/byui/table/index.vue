@@ -167,18 +167,8 @@ export default {
   created() {
     this.fetchData();
   },
-  beforeDestroy() {
-    $("body").off("click");
-  },
-  mounted() {
-    //修复大图查看器存在的bug
-    $("body").on("click", ".el-image-viewer__close", () => {
-      this.imgShow = false;
-      setTimeout(() => {
-        this.imgShow = true;
-      }, 0);
-    });
-  },
+  beforeDestroy() {},
+  mounted() {},
   methods: {
     tableSortChange() {
       const imageList = [];
@@ -186,14 +176,6 @@ export default {
         imageList.push(item.img);
       });
       this.imageList = imageList;
-    },
-    imgLine(img) {
-      /*const index = this.imageList.indexOf(img);
-                                                const imageList = this.imageList;
-                                                this.imageList = this.imageList
-                                                    .slice(index)
-                                                    .concat(this.imageList.slice(0, index));
-                                                */
     },
     setSelectRows(val) {
       this.selectRows = val;
