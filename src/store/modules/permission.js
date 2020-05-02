@@ -10,7 +10,7 @@ function hasPermission(roles, route) {
   }
 }
 
-export function filterAsyncRoutes(routes, roles) {
+function filterAsyncRoutes(routes, roles) {
   const res = [];
   routes.forEach((route) => {
     const tmp = { ...route };
@@ -41,13 +41,9 @@ const mutations = {
 
 const actions = {
   setRoutes({ commit }, roles) {
-    return new Promise((resolve) => {
+    return new Promise(async (resolve) => {
       let accessedRoutes;
-      if (
-        roles.includes("superAdmin") ||
-        roles.includes("admin") ||
-        roles.includes("超级管理员")
-      ) {
+      if (roles.includes("admin")) {
         accessedRoutes = asyncRoutes || [];
       } else {
         accessedRoutes = filterAsyncRoutes(asyncRoutes, roles);
@@ -57,7 +53,7 @@ const actions = {
     });
   },
   setAllRoutes({ commit }) {
-    return new Promise((resolve) => {
+    return new Promise(async (resolve) => {
       getRouterList()
         .then((res) => {
           res.data.push({
