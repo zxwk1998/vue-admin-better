@@ -3,12 +3,11 @@ import Vuex from "vuex";
 import getters from "./getters";
 
 Vue.use(Vuex);
-const modulesFiles = require.context("./modules", true, /\.js$/);
-const modules = modulesFiles.keys().reduce((modules, modulePath) => {
-  const moduleName = modulePath.replace(/^\.\/(.*)\.\w+$/, "$1");
-  const value = modulesFiles(modulePath);
-  modules[moduleName] = value.default;
-  return modules;
-}, {});
+const files = require.context("./modules", false, /\.js$/);
+const modules = {};
+
+files.keys().forEach((key) => {
+  modules[key.replace(/(\.\/|\.js)/g, "")] = files(key).default;
+});
 const store = new Vuex.Store({ modules, getters });
 export default store;
