@@ -54,7 +54,7 @@ export const asyncRoutes = [
         name: "Test",
         component: () => import("@/views/test/index"),
         meta: {
-          title: "test ",
+          title: "test",
           icon: "marker",
           roles: ["admin", "test"],
         },

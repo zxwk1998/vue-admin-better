@@ -2,10 +2,10 @@ const data = [
   {
     path: "/",
     component: "Layout",
-    redirect: "/index",
+    redirect: "index",
     children: [
       {
-        path: "/index",
+        path: "index",
         name: "Index",
         component: "index/index",
         meta: {
@@ -27,7 +27,7 @@ const data = [
         name: "Test",
         component: "test/index",
         meta: {
-          title: "test ",
+          title: "test",
           icon: "marker",
           roles: ["admin", "test"],
         },

@@ -50,21 +50,6 @@
       <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
         <el-card shadow="hover">
           <div slot="header">
-            <span>faultText</span>
-            <el-button
-              style="float: right; padding: 3px 0;"
-              type="text"
-              @click="handleFaultText"
-              >重载
-            </el-button>
-          </div>
-          <byui-fault-text v-if="faultTextShow" ref="faultText" text="我爱自由">
-          </byui-fault-text>
-        </el-card>
-      </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
-        <el-card shadow="hover">
-          <div slot="header">
             <span>charge</span>
           </div>
           <byui-charge :start-val="startVal" :end-val="endVal"></byui-charge>
@@ -78,7 +63,6 @@
 import ByuiSnow from "@/components/ByuiSnow";
 import ByuiProfile from "@/components/ByuiProfile";
 import ByuiSolidText from "@/components/ByuiSolidText";
-import ByuiFaultText from "@/components/ByuiFaultText";
 import ByuiCharge from "@/components/ByuiCharge";
 
 export default {
@@ -87,7 +71,6 @@ export default {
     ByuiSnow,
     ByuiProfile,
     ByuiSolidText,
-    ByuiFaultText,
     ByuiCharge,
   },
   data() {
@@ -103,7 +86,6 @@ export default {
   mounted() {
     this.handleProfile();
     this.handleSolidText();
-    this.handleFaultText();
     this.timeInterval = setInterval(() => {
       if (this.endVal < 100) {
         this.startVal = this.endVal;
@@ -127,12 +109,6 @@ export default {
       this.solidTextShow = false;
       setTimeout(() => {
         this.solidTextShow = true;
-      });
-    },
-    handleFaultText() {
-      this.faultTextShow = false;
-      setTimeout(() => {
-        this.faultTextShow = true;
       });
     },
   },
