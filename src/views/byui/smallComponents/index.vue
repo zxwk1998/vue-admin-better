@@ -33,23 +33,6 @@
       <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
         <el-card shadow="hover">
           <div slot="header">
-            <span>solidText</span>
-            <el-button
-              style="float: right; padding: 3px 0;"
-              type="text"
-              @click="handleSolidText"
-              >重载
-            </el-button>
-          </div>
-          <byui-solid-text
-            v-if="solidTextShow"
-            text="我爱自由"
-          ></byui-solid-text>
-        </el-card>
-      </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
-        <el-card shadow="hover">
-          <div slot="header">
             <span>charge</span>
           </div>
           <byui-charge :start-val="startVal" :end-val="endVal"></byui-charge>
@@ -62,7 +45,6 @@
 <script>
 import ByuiSnow from "@/components/ByuiSnow";
 import ByuiProfile from "@/components/ByuiProfile";
-import ByuiSolidText from "@/components/ByuiSolidText";
 import ByuiCharge from "@/components/ByuiCharge";
 
 export default {
@@ -70,7 +52,6 @@ export default {
   components: {
     ByuiSnow,
     ByuiProfile,
-    ByuiSolidText,
     ByuiCharge,
   },
   data() {
