@@ -338,6 +338,11 @@ export default {
       padding: 7px 16px;
       cursor: pointer;
 
+      .svg-inline--fa {
+        margin-right: 5px;
+        vertical-align: -0.55px;
+      }
+
       &:hover {
         background: #eee;
       }

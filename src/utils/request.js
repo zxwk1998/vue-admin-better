@@ -67,7 +67,7 @@ service.interceptors.response.use(
     }
     const { status, data } = response;
     const { code, msg } = data;
-    if (code !== successCode) {
+    if (code !== successCode && code !== 0) {
       switch (code) {
         case invalidCode:
           errorMsg(msg || `后端接口${code}异常`);
