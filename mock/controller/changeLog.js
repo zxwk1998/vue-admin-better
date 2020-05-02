@@ -65,6 +65,10 @@ const data = [
     content: "又是一个深夜 实现了表格增删改查的一键生成",
     timestamp: "2020-04-30",
   },
+  {
+    content: "大幅优化tagsview标签动画",
+    timestamp: "2020-05-02",
+  },
 ];
 
 export default [
