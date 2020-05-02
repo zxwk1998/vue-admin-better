@@ -117,7 +117,7 @@ export default {
   },
   beforeDestroy() {
     if (this.clearInterval) {
-      clearInterval(this.interval);
+      clearInterval(this.timeInterval);
     }
   },
   methods: {
