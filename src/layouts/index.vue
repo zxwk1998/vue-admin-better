@@ -190,13 +190,13 @@ export default {
       margin-left: $base-left-menu-width;
       background: #f6f8f9;
       min-height: 100%;
-      transition: margin-left 0.28s;
+      transition: all 0.2s ease-in-out;
       position: relative;
 
       ::v-deep {
         .fixed-header {
           @include fix-header;
-          transition: all 0.28s;
+          transition: all 0.2s ease-in-out;
           left: $base-left-menu-width;
           width: $base-right-content-width;
           box-shadow: $base-box-shadow;

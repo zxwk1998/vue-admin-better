@@ -71,7 +71,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .side-bar-container {
-  transition: width 0.2s;
+  transition: all 0.2s ease-in-out;
   width: $base-left-menu-width;
   height: 100vh;
   background: $base-menu-background;

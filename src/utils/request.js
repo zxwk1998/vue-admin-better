@@ -67,18 +67,20 @@ service.interceptors.response.use(
     }
     const { status, data } = response;
     const { code, msg } = data;
-    if (code !== successCode && code !== 0) {
-      if (code == invalidCode) {
-        errorMsg(msg || "后端接口402异常");
-        store.dispatch("user/resetToken");
-      } else if (code == errorCode) {
-        errorMsg(msg || "后端接口500异常");
-      } else if (code == noPermissionCode) {
-        router.push({
-          path: "/401",
-        });
-      } else {
-        errorMsg(msg || "后端接口code异常");
+    if (code !== successCode) {
+      switch (code) {
+        case invalidCode:
+          errorMsg(msg || `后端接口${code}异常`);
+          store.dispatch("user/resetToken");
+          break;
+        case noPermissionCode:
+          router.push({
+            path: "/401",
+          });
+          break;
+        default:
+          errorMsg(msg || `后端接口${code}异常`);
+          break;
       }
       return Promise.reject({ code, msg } || "Error");
     } else {
@@ -91,14 +93,16 @@ service.interceptors.response.use(
     }
     /*网络连接过程异常处理*/
     let { message } = error;
-    if (message == "Network Error") {
-      message = "后端接口连接异常";
-    }
-    if (message.includes("timeout")) {
-      message = "后端接口请求超时";
-    }
-    if (message.includes("Request failed with status code")) {
-      message = "后端接口" + message.substr(message.length - 3) + "异常";
+    switch (message) {
+      case "Network Error":
+        message = "后端接口连接异常";
+        break;
+      case "timeout":
+        message = "后端接口请求超时";
+        break;
+      case "Request failed with status code":
+        message = "后端接口" + message.substr(message.length - 3) + "异常";
+        break;
     }
     errorMsg(message || "后端接口未知异常");
     return Promise.reject(error);
