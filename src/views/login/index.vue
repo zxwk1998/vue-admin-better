@@ -1,75 +1,87 @@
 <template>
   <div class="login-container">
-    <el-alert
-      title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
-      type="success"
-      :closable="false"
+    <transition
+      enter-active-class="animated flipInX"
+      leave-active-class="animated flipOutX"
     >
-    </el-alert>
+      <el-alert
+        v-if="animateShow"
+        title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
+        type="success"
+        :closable="false"
+      >
+      </el-alert>
+    </transition>
     <div class="login-logo-bysj"></div>
     <el-row>
       <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
-        <el-form
-          ref="loginForm"
-          :model="loginForm"
-          :rules="loginRules"
-          auto-complete="off"
-          class="login-form"
-          label-position="left"
+        <transition
+          enter-active-class="animated bounceInLeft"
+          leave-active-class="animated bounceOutLeft"
         >
-          <div class="title">
-            hello !
-          </div>
-          <div class="title-tips">欢迎来到{{ title }}！</div>
-          <el-form-item
-            style="margin-top: 49px;"
-            prop="userName"
-            class="login-form-admin"
+          <el-form
+            v-if="animateShow"
+            ref="loginForm"
+            :model="loginForm"
+            :rules="loginRules"
+            auto-complete="off"
+            class="login-form"
+            label-position="left"
           >
-            <span class="svg-container svg-container-admin">
-              <byui-icon :icon="['fas', 'user']" />
-            </span>
-            <el-input
-              v-model.trim="loginForm.userName"
-              v-focus
-              auto-complete="off"
-              placeholder="请输入用户名"
-              tabindex="1"
-              type="text"
-            />
-          </el-form-item>
-          <el-form-item prop="password" class="login-form-pass">
-            <span class="svg-container svg-container-pass"
-              ><byui-icon :icon="['fas', 'lock']"
-            /></span>
-            <el-input
-              :key="passwordType"
-              ref="password"
-              v-model.trim="loginForm.password"
-              :type="passwordType"
-              auto-complete="off"
-              placeholder="请输入密码"
-              tabindex="2"
-              @keyup.enter.native="handleLogin"
-            />
-            <span
-              v-if="passwordType === 'password'"
-              class="show-pwd"
-              @click="showPwd"
-              ><byui-icon :icon="['fas', 'eye-slash']"
-            /></span>
-            <span v-else class="show-pwd" @click="showPwd"
-              ><byui-icon :icon="['fas', 'eye']"
-            /></span>
-          </el-form-item>
-          <el-button
-            :loading="loading"
-            class="login-btn"
-            type="primary"
-            @click.native.prevent="handleLogin"
-            >登录
-          </el-button>
-        </el-form>
+            <div class="title">
+              hello !
+            </div>
+            <div class="title-tips">欢迎来到{{ title }}！</div>
+            <el-form-item
+              style="margin-top: 49px;"
+              prop="userName"
+              class="login-form-admin"
+            >
+              <span class="svg-container svg-container-admin">
+                <byui-icon :icon="['fas', 'user']" />
+              </span>
+              <el-input
+                v-model.trim="loginForm.userName"
+                v-focus
+                auto-complete="off"
+                placeholder="请输入用户名"
+                tabindex="1"
+                type="text"
+              />
+            </el-form-item>
+            <el-form-item prop="password" class="login-form-pass">
+              <span class="svg-container svg-container-pass"
+                ><byui-icon :icon="['fas', 'lock']"
+              /></span>
+              <el-input
+                :key="passwordType"
+                ref="password"
+                v-model.trim="loginForm.password"
+                :type="passwordType"
+                auto-complete="off"
+                placeholder="请输入密码"
+                tabindex="2"
+                @keyup.enter.native="handleLogin"
+              />
+              <span
+                v-if="passwordType === 'password'"
+                class="show-pwd"
+                @click="showPwd"
+                ><byui-icon :icon="['fas', 'eye-slash']"
+              /></span>
+              <span v-else class="show-pwd" @click="showPwd"
+                ><byui-icon :icon="['fas', 'eye']"
+              /></span>
+            </el-form-item>
+            <el-button
+              :loading="loading"
+              class="login-btn"
+              type="primary"
+              @click.native.prevent="handleLogin"
+              >登录
+            </el-button>
+          </el-form>
+        </transition>
       </el-col>
     </el-row>
   </div>
@@ -104,6 +116,7 @@ export default {
     };
     return {
       title: this.$baseTitle,
+      animateShow: false,
       loginForm: {
         userName: "",
         password: "",
@@ -143,6 +156,9 @@ export default {
       this.loginForm.userName = "admin";
       this.loginForm.password = "123456";
     }
+    setTimeout(() => {
+      this.animateShow = true;
+    });
   },
   methods: {
     showPwd() {

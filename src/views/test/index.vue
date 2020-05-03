@@ -7,7 +7,7 @@
 export default {
   name: "Test",
   data() {
-    return {};
+    return { show: true };
   },
   created() {},
   mounted() {},
