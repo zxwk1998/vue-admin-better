@@ -1,7 +1,7 @@
 <template>
-  <div
+  <img
     v-if="isExternal"
-    :style="styleExternalIcon"
+    :src="styleExternalIcon"
     class="svg-external-icon svg-icon"
     v-on="$listeners"
   />
@@ -40,10 +40,7 @@ export default {
       }
     },
     styleExternalIcon() {
-      return {
-        background: `url(${this.iconClass}) no-repeat 50% 50%`,
-        backgroundSize: "cover",
-      };
+      return this.iconClass;
     },
   },
 };
@@ -64,7 +61,5 @@ export default {
 
 .svg-external-icon {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
 }
 </style>

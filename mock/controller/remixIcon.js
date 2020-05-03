@@ -2164,7 +2164,7 @@ export default [
       return {
         code: 200,
         msg: "success",
-        totalCount: data.length,
+        totalCount: mockList.length,
         data: pageList,
       };
     },
