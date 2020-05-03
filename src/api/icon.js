@@ -2,7 +2,7 @@ import request from "@/utils/request";
 
 export function getIconList(data) {
   return request({
-    url: "/icon/list",
+    url: "/icon/getList",
     method: "post",
     data,
   });

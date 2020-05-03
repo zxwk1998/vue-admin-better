@@ -3,27 +3,19 @@
     <el-divider content-position="left">点击图标即可复制源码</el-divider>
     <el-row :gutter="15">
       <el-col :span="24">
-        <el-form
-          ref="form"
-          :inline="true"
-          label-width="80px"
-          @submit.native.prevent
-        >
+        <el-form :inline="true" label-width="80px" @submit.native.prevent>
           <el-form-item label="图标名称">
-            <el-input v-model="name"></el-input>
+            <el-input v-model="queryForm.title"></el-input>
           </el-form-item>
-          <!--<el-form-item label-width="0">
-            <el-button native-type="submit" type="primary" @click="submit"
+          <el-form-item label-width="0">
+            <el-button native-type="submit" type="primary" @click="queryData"
               >搜索
             </el-button>
-          </el-form-item>-->
+          </el-form-item>
 
           <el-form-item label-width="0">
-            {{ tips }}
-          </el-form-item>
-          <!--<el-form-item label-width="0">
             <el-input :value="copyText" type="text"></el-input>
-          </el-form-item>-->
+          </el-form-item>
         </el-form>
       </el-col>
 
@@ -45,6 +37,17 @@
           <div class="icon-text">{{ item }}</div>
         </el-card>
       </el-col>
+      <el-col :span="24">
+        <el-pagination
+          :background="background"
+          :current-page="queryForm.pageNo"
+          :page-size="queryForm.pageSize"
+          :layout="layout"
+          :total="total"
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+        ></el-pagination>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -57,55 +60,43 @@ export default {
   name: "Icon",
   data() {
     return {
-      queryIcon: [],
-      allIcon: [],
-      name: "",
       copyText: "",
-      tips: "",
+      layout: "total, sizes, prev, pager, next, jumper",
+      total: 0,
+      background: true,
+      height: 0,
+      selectRows: "",
+      elementLoadingText: "正在加载...",
+      queryIcon: [],
+      queryForm: {
+        pageNo: 1,
+        pageSize: 60,
+        title: "",
+      },
     };
-  },
-  watch: {
-    name() {
-      this.submit();
-    },
   },
   created() {
     this.fetchData();
   },
-  mounted() {},
   methods: {
-    RandomColor() {
-      const arr = [
-        "#1890FF",
-        "#36CBCB",
-        "#4ECB73",
-        "#FBD437",
-        "#F2637B",
-        "#975FE5",
-      ];
-      let index = Math.floor(Math.random() * arr.length);
-      return arr[index];
+    handleSizeChange(val) {
+      this.queryForm.pageSize = val;
+      this.fetchData();
     },
-    submit() {
-      let newItems = [];
-      this.queryIcon = this.allIcon;
-      this.queryIcon.map((item) => {
-        if (item.includes(this.name)) {
-          newItems.push(item);
-        }
-      });
-      this.queryIcon = newItems;
-      this.tips = `共检索到${newItems.length}个图标`;
+    handleCurrentChange(val) {
+      this.queryForm.pageNo = val;
+      this.fetchData();
+    },
+    queryData() {
+      this.queryForm.pageNo = 1;
+      this.fetchData();
     },
     fetchData() {
-      getIconList().then((res) => {
-        this.queryIcon = res.data;
-        this.allIcon = res.data;
-        this.tips = `共检索到${this.allIcon.length}个图标`;
-        this.$baseMessage(
-          "累计更新" + this.allIcon.length + "个图标",
-          "success"
-        );
+      getIconList(this.queryForm).then((res) => {
+        const data = res.data;
+        this.queryIcon = data;
+        this.allIcon = data;
+        this.total = res.totalCount;
       });
     },
     handleCopyIcon(index, event) {
@@ -129,10 +120,10 @@ export default {
 
       svg:not(:root).svg-inline--fa {
         cursor: pointer;
-        color: $base-color-blue;
+        color: $base-color-gray;
         vertical-align: middle;
         text-align: center;
-        font-size: $base-font-size-big;
+        font-size: 30px;
         font-weight: bold;
         pointer-events: none;
       }

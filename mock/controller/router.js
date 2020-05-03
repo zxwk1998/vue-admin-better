@@ -79,6 +79,24 @@ const data = [
         ],
       },
       {
+        path: "icon",
+        name: "Icon",
+        component: "byui/icon/index",
+        meta: { title: "常规图标", roles: ["admin"] },
+      },
+      {
+        path: "remixIcon",
+        name: "RemixIcon",
+        component: "byui/icon/remixIcon",
+        meta: { title: "小清新图标", roles: ["admin"] },
+      },
+      {
+        path: "colorfulIcon",
+        name: "ColorfulIcon",
+        component: "byui/icon/colorfulIcon",
+        meta: { title: "多彩图标", roles: ["admin"] },
+      },
+      {
         path: "table",
         name: "Table",
         component: "byui/table/index",
@@ -187,24 +205,7 @@ const data = [
         component: "byui/smallComponents/index",
         meta: { title: "小组件", roles: ["admin"] },
       },
-      {
-        path: "icon",
-        name: "Icon",
-        component: "byui/icon/index",
-        meta: { title: "常规图标", roles: ["admin"] },
-      },
-      {
-        path: "colorfulIcon",
-        name: "ColorfulIcon",
-        component: "byui/icon/colorfulIcon",
-        meta: { title: "多彩图标", roles: ["admin"] },
-      },
-      {
-        path: "remixIcon",
-        name: "RemixIcon",
-        component: "byui/icon/remixIcon",
-        meta: { title: "小清新图标(图标过多打开会慢)", roles: ["admin"] },
-      },
+
       {
         path: "upload",
         name: "Upload",

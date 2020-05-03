@@ -17,7 +17,7 @@
     <footer class="footer-copyright">
       Copyright
       <byui-icon :icon="['fas', 'copyright']"></byui-icon>
-      {{ fullYear }} 青岛市崂山区最强前端拖后腿小分队队长荣誉出品
+      {{ fullYear }} chuzhixin 1204505056@qq.com
       <br />
       我的目标不是做一名优秀的前端leader，我的目标是帮助到更多优秀的前端leader，停留在这句话的你一定会是或者已经是其中的那一个
     </footer>
@@ -54,13 +54,13 @@ export default {
     $route(to, from) {
       this.$nextTick(() => {
         /*if (this.$store.state.tagsView.skeleton) {
-                                          this.show = true;
-                                          setTimeout(() => {
+                                            this.show = true;
+                                            setTimeout(() => {
+                                              this.show = false;
+                                            }, 0);
+                                          } else {
                                             this.show = false;
-                                          }, 0);
-                                        } else {
-                                          this.show = false;
-                                        }*/
+                                          }*/
         if ("mobile" === this.device) {
           this.$store.dispatch("settings/foldSideBar");
         }
@@ -87,7 +87,6 @@ export default {
   overflow: hidden;
 
   .footer-copyright {
-    font-size: $base-font-size-small;
     min-height: 70px;
     line-height: 35px;
     text-align: center;

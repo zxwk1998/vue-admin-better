@@ -305,13 +305,23 @@ const data = [
 ];
 export default [
   {
-    url: "/colorfulIcon/list",
+    url: "/colorfulIcon/getList",
     type: "post",
     response: (config) => {
+      const { title, pageNo = 1, pageSize = 60 } = config.body;
+      let mockList = data.filter((item) => {
+        if (title && item.indexOf(title) < 0) return false;
+        return true;
+      });
+      const pageList = mockList.filter(
+        (item, index) =>
+          index < pageSize * pageNo && index >= pageSize * (pageNo - 1)
+      );
       return {
         code: 200,
         msg: "success",
-        data: data,
+        totalCount: data.length,
+        data: pageList,
       };
     },
   },

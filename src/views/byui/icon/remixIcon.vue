@@ -1,27 +1,18 @@
 <template>
   <div class="colorful-icon-container">
     <el-divider content-position="left"
-      >图标太多暂未使用本地图标库使用的是cdn加速服务，开发时需存储到本地，使用方法可查看VIP群文档，点击图标即可复制源码，点击图标即可复制源码
+      >小清新图标在演示环境中使用的是cdn加速服务，开发时需存储到本地，使用方法可查看群文档，点击图标即可复制源码，点击图标即可复制源码
     </el-divider>
     <el-row :gutter="15">
       <el-col :span="24">
-        <el-form
-          ref="form"
-          :inline="true"
-          label-width="80px"
-          @submit.native.prevent
-        >
+        <el-form :inline="true" label-width="80px" @submit.native.prevent>
           <el-form-item label="图标名称">
-            <el-input v-model="name"></el-input>
+            <el-input v-model="queryForm.title"></el-input>
           </el-form-item>
           <el-form-item label-width="0">
-            <el-button native-type="submit" type="primary" @click="submit"
+            <el-button native-type="submit" type="primary" @click="queryData"
               >搜索
             </el-button>
-          </el-form-item>
-
-          <el-form-item label-width="0">
-            {{ tips }}
           </el-form-item>
 
           <el-form-item label-width="0">
@@ -51,6 +42,18 @@
           <div class="icon-text">{{ item }}</div>
         </el-card>
       </el-col>
+
+      <el-col :span="24">
+        <el-pagination
+          :background="background"
+          :current-page="queryForm.pageNo"
+          :page-size="queryForm.pageSize"
+          :layout="layout"
+          :total="total"
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+        ></el-pagination>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -63,56 +66,43 @@ export default {
   name: "RemixIcon",
   data() {
     return {
-      queryIcon: [],
-      allIcon: [],
-      name: "",
       copyText: "",
-      tips: "",
+      layout: "total, sizes, prev, pager, next, jumper",
+      total: 0,
+      background: true,
+      height: 0,
+      selectRows: "",
+      elementLoadingText: "正在加载...",
+      queryIcon: [],
+      queryForm: {
+        pageNo: 1,
+        pageSize: 60,
+        title: "",
+      },
     };
-  },
-  watch: {
-    name() {
-      this.submit();
-    },
   },
   created() {
     this.fetchData();
   },
-  mounted() {},
   methods: {
-    RandomColor() {
-      const arr = [
-        "#1890FF",
-        "#36CBCB",
-        "#4ECB73",
-        "#FBD437",
-        "#F2637B",
-        "#975FE5",
-      ];
-      let index = Math.floor(Math.random() * arr.length);
-      return arr[index];
+    handleSizeChange(val) {
+      this.queryForm.pageSize = val;
+      this.fetchData();
     },
-    submit() {
-      let newItems = [];
-      this.queryIcon = this.allIcon;
-      this.queryIcon.map((item) => {
-        if (item.includes(this.name)) {
-          newItems.push(item);
-        }
-      });
-      this.queryIcon = newItems;
-      this.tips = `共检索到${newItems.length}个图标`;
+    handleCurrentChange(val) {
+      this.queryForm.pageNo = val;
+      this.fetchData();
+    },
+    queryData() {
+      this.queryForm.pageNo = 1;
+      this.fetchData();
     },
     fetchData() {
-      getIconList().then((res) => {
+      getIconList(this.queryForm).then((res) => {
         const data = res.data;
         this.queryIcon = data;
         this.allIcon = data;
-        this.tips = `共检索到${this.allIcon.length}个图标`;
-        this.$baseMessage(
-          "累计更新" + this.allIcon.length + "个图标",
-          "success"
-        );
+        this.total = res.totalCount;
       });
     },
     handleCopyIcon(index, event) {
@@ -138,7 +128,7 @@ export default {
       svg:not(:root),
       .svg-external-icon {
         cursor: pointer;
-        color: $base-color-blue;
+        color: $base-color-gray;
         vertical-align: middle;
         text-align: center;
         font-size: 28px;

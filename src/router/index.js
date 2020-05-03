@@ -107,6 +107,24 @@ export const asyncRoutes = [
         ],
       },
       {
+        path: "icon",
+        name: "Icon",
+        component: () => import("@/views/byui/icon/index"),
+        meta: { title: "常规图标", roles: ["admin"] },
+      },
+      {
+        path: "remixIcon",
+        name: "RemixIcon",
+        component: () => import("@/views/byui/icon/remixIcon"),
+        meta: { title: "小清新图标", roles: ["admin"] },
+      },
+      {
+        path: "colorfulIcon",
+        name: "ColorfulIcon",
+        component: () => import("@/views/byui/icon/colorfulIcon"),
+        meta: { title: "多彩图标", roles: ["admin"] },
+      },
+      {
         path: "table",
         name: "Table",
         component: () => import("@/views/byui/table/index"),
@@ -215,24 +233,7 @@ export const asyncRoutes = [
         component: () => import("@/views/byui/smallComponents/index"),
         meta: { title: "小组件", roles: ["admin"] },
       },
-      {
-        path: "icon",
-        name: "Icon",
-        component: () => import("@/views/byui/icon/index"),
-        meta: { title: "常规图标", roles: ["admin"] },
-      },
-      {
-        path: "colorfulIcon",
-        name: "ColorfulIcon",
-        component: () => import("@/views/byui/icon/colorfulIcon"),
-        meta: { title: "多彩图标", roles: ["admin"] },
-      },
-      {
-        path: "remixIcon",
-        name: "RemixIcon",
-        component: () => import("@/views/byui/icon/remixIcon"),
-        meta: { title: "小清新图标(图标过多打开会慢)", roles: ["admin"] },
-      },
+
       {
         path: "upload",
         name: "Upload",
