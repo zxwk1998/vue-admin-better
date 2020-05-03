@@ -7,13 +7,13 @@ for (let i = 0; i < count; i++) {
   List.push(
     Mock.mock({
       id: "@id",
-      title: "@sentence(10, 20)",
+      title: "@csentence(1, 2)",
       "status|1": ["published", "draft", "deleted"],
       author: "@cname",
       display_time: "@datetime",
       pageviews: "@integer(300, 5000)",
       img: `https://picsum.photos/200/200?random=${num++}`,
-      smalImg: `https://picsum.photos/200/200?random=${num++}`,
+      smalImg: `https://picsum.photos/40/40?random=${num++}`,
       switch: "@boolean",
       percent: "@integer(80,99)",
     })
