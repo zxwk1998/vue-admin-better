@@ -63,7 +63,6 @@ export default {
                                         }*/
         if ("mobile" === this.device) {
           this.$store.dispatch("settings/foldSideBar");
-          document.body.style.overflow = "";
         }
       });
     },

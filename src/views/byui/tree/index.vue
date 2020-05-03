@@ -424,15 +424,6 @@ export default {
               that.selectTreeDefaultSelectedKeys
             );
           }
-          /* const scrollWrap = document.querySelectorAll(
-                        ".select-tree-popper .el-scrollbar .el-select-dropdown__wrap"
-                      )[0];
-                      const scrollBar = document.querySelectorAll(
-                        "select-tree-popper .el-scrollbar .el-scrollbar__bar"
-                      );
-                      scrollWrap.style.cssText =
-                        "margin: 0; max-height: none; overflow: hidden;";
-                      scrollBar.forEach((ele) => (ele.style.width = 0));*/
         });
       });
     },

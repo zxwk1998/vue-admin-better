@@ -90,7 +90,6 @@ export default {
     handleCollapse() {
       this.$store.dispatch("settings/changeCollapse");
       if ("mobile" == this.device && false === this.collapse) {
-        document.body.style.overflow = "hidden";
       }
     },
     async logout() {

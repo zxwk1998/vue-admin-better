@@ -111,17 +111,6 @@ export default {
           that.$refs.treeOption.setCheckedKeys(that.defaultSelectedKeys);
         }
       }
-      this.$nextTick(() => {
-        /*const scrollWrap = document.querySelectorAll(
-          ".el-scrollbar .el-select-dropdown__wrap"
-        )[0];
-        const scrollBar = document.querySelectorAll(
-          ".el-scrollbar .el-scrollbar__bar"
-        );
-        scrollWrap.style.cssText =
-          "margin: 0; max-height: none; overflow: hidden;";
-        scrollBar.forEach((ele) => (ele.style.width = 0));*/
-      });
     },
     // 清除选中
     clearHandle() {

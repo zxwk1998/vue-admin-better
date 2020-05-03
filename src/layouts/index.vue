@@ -96,7 +96,6 @@ export default {
   methods: {
     handleFoldSideBar() {
       this.$store.dispatch("settings/foldSideBar");
-      document.body.style.overflow = "";
     },
   },
 };
