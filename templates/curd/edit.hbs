@@ -52,7 +52,8 @@
       save() {
         this.$refs["form"].validate((valid) => {
           if (valid) {
-            updateData(this.form).then((res) => {
+            doEdit(this.form).then((res) => {
+              this.$baseMessage(res.msg, "success");
               this.$refs["form"].resetFields();
               this.dialogFormVisible = false;
               this.$emit("fetchData");
