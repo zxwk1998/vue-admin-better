@@ -15,9 +15,9 @@
             </el-button>
           </el-form-item>
 
-          <el-form-item label-width="0">
+          <!-- <el-form-item label-width="0">
             <el-input :value="copyText" type="text"></el-input>
-          </el-form-item>
+          </el-form-item>-->
         </el-form>
       </el-col>
 
@@ -48,6 +48,7 @@
           :background="background"
           :current-page="queryForm.pageNo"
           :page-size="queryForm.pageSize"
+          :page-sizes="[60, 120, 180, 240]"
           :layout="layout"
           :total="total"
           @size-change="handleSizeChange"
