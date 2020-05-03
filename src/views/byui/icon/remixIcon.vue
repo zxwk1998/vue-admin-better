@@ -1,9 +1,11 @@
 <template>
   <div class="colorful-icon-container">
-    <el-divider content-position="left"
-      >小清新图标在演示环境中使用的是cdn加速服务，开发时需存储到本地，使用方法可查看群文档，点击图标即可复制源码，点击图标即可复制源码
-    </el-divider>
     <el-row :gutter="15">
+      <el-col :span="24"
+        ><el-divider content-position="left"
+          >小清新图标在演示环境中使用的是cdn加速服务，开发时需存储到本地，使用方法可查看群文档，点击图标即可复制源码，点击图标即可复制源码
+        </el-divider></el-col
+      >
       <el-col :span="24">
         <el-form :inline="true" label-width="80px" @submit.native.prevent>
           <el-form-item label="图标名称">
