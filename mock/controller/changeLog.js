@@ -69,6 +69,10 @@ const data = [
     content: "大幅优化tagsview标签动画",
     timestamp: "2020-05-02",
   },
+  {
+    content: "三种图标组件实现mock模拟分页",
+    timestamp: "2020-05-03",
+  },
 ];
 
 export default [

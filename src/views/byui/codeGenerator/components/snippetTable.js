@@ -46,7 +46,7 @@ export const genTableSnippet = (headers = "getList") => {
     >
       <el-table-column type="selection"></el-table-column>
       ${genTableColumnSnippet(headers)}
-      <el-table-column fixed="right" label="操作" width="150" fixed="right">
+      <el-table-column fixed="right" label="操作" width="200">
         <template v-slot="scope">
           <el-button type="text" @click="editList(scope.row)"
           >编辑
