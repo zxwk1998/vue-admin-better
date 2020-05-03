@@ -213,10 +213,13 @@ export function thirteenBitTimestamp(time) {
  * @param length
  * @returns {string}
  */
-export function uuid(length) {
-  return Number(
-    Math.random().toString().substr(3, length) + Date.now()
-  ).toString(36);
+export function uuid(length = 32) {
+  const num = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+  let str = "";
+  for (let i = 0; i < length; i++) {
+    str += num.charAt(Math.floor(Math.random() * num.length));
+  }
+  return str;
 }
 
 /**
@@ -230,6 +233,25 @@ export function random(m, n) {
 }
 
 /**
- * @description 事件总线
+ * @description addEventListener
+ * @type {function(...[*]=)}
  */
-export const EventBus = new Vue();
+export const on = (function () {
+  return function (element, event, handler, useCapture = false) {
+    if (element && event && handler) {
+      element.addEventListener(event, handler, useCapture);
+    }
+  };
+})();
+
+/**
+ * @description removeEventListener
+ * @type {function(...[*]=)}
+ */
+export const off = (function () {
+  return function (element, event, handler, useCapture = false) {
+    if (element && event) {
+      element.removeEventListener(event, handler, useCapture);
+    }
+  };
+})();

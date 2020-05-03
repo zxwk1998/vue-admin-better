@@ -7,7 +7,7 @@ import { title } from "@/config/settings";
  */
 export default function getPageTitle(pageTitle) {
   if (pageTitle) {
-    return `${title || "BYUI-2.3"}-${pageTitle}`;
+    return `${title}-${pageTitle}`;
   }
-  return `${title || "BYUI-2.3"}`;
+  return `${title}`;
 }
