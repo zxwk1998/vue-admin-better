@@ -118,7 +118,8 @@ export default {
               setTimeout(() => {
                 this.pulse = false;
               }, 1000);
-            });
+            })
+            .catch(() => {});
         });
       });
     },
