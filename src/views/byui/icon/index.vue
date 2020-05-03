@@ -14,10 +14,6 @@
               >搜索
             </el-button>
           </el-form-item>
-
-          <!--<el-form-item label-width="0">
-            <el-input :value="copyText" type="text"></el-input>
-          </el-form-item>-->
         </el-form>
       </el-col>
 
@@ -36,8 +32,8 @@
           @click.native="handleCopyIcon(index, $event)"
         >
           <byui-icon :icon="['fas', item]" />
-          <div class="icon-text">{{ item }}</div>
         </el-card>
+        <div class="icon-text">{{ item }}</div>
       </el-col>
       <el-col :span="24">
         <el-pagination
@@ -130,17 +126,18 @@ export default {
         font-weight: bold;
         pointer-events: none;
       }
-
-      .icon-text {
-        font-size: 12px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        text-align: center;
-        height: 30px;
-        line-height: 30px;
-      }
     }
+  }
+
+  .icon-text {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-top: -15px;
   }
 }
 </style>

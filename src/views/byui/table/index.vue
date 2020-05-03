@@ -53,22 +53,11 @@
           {{ scope.$index + 1 }}
         </template>
       </el-table-column>
-      <el-table-column label="标题">
-        <template slot-scope="scope">
-          <el-tooltip
-            :content="scope.row.title"
-            class="item"
-            effect="dark"
-            placement="top-start"
-          >
-            <span>{{ scope.row.title }}</span>
-          </el-tooltip>
-        </template>
+      <el-table-column prop="title" label="标题"></el-table-column>
+      <el-table-column label="点击量" prop="pageviews" sortable>
       </el-table-column>
-      <el-table-column label="点击量" prop="pageviews" sortable width="110">
-      </el-table-column>
-      <el-table-column label="作者" prop="author" width="110"></el-table-column>
-      <el-table-column label="头像" width="110">
+      <el-table-column label="作者" prop="author"></el-table-column>
+      <el-table-column label="头像">
         <template slot-scope="scope">
           <el-image
             v-if="imgShow"
@@ -81,9 +70,8 @@
         label="点击量"
         prop="pageviews"
         sortable
-        width="110"
       ></el-table-column>
-      <el-table-column class-name="status-col" label="状态" width="110">
+      <el-table-column class-name="status-col">
         <template slot-scope="scope">
           <el-tooltip
             :content="scope.row.status"
@@ -102,7 +90,7 @@
         prop="display_time"
         width="200"
       ></el-table-column>
-      <el-table-column label="操作" width="200px" fixed="right">
+      <el-table-column label="操作" width="180px" fixed="right">
         <template slot-scope="scope">
           <el-button type="text" @click="handleEdit(scope.row)"
             >编辑

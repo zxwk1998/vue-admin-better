@@ -40,8 +40,8 @@
           <byui-colorful-icon
             :icon-class="`https://cdn.jsdelivr.net/gh/chuzhixin/zx-colorful-icon@master/${item}.svg`"
           />
-          <div class="icon-text">{{ item }}</div>
         </el-card>
+        <div class="icon-text">{{ item }}</div>
       </el-col>
       <el-col :span="24">
         <el-pagination
@@ -136,21 +136,22 @@ export default {
         pointer-events: none;
       }
 
-      .icon-text {
-        font-size: 12px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        text-align: center;
-        height: 30px;
-        line-height: 30px;
-      }
-
       .svg-external-icon {
         width: 30px;
         height: 30px;
       }
     }
+  }
+
+  .icon-text {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-top: -15px;
   }
 }
 </style>
