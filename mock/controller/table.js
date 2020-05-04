@@ -22,7 +22,7 @@ for (let i = 0; i < count; i++) {
 
 export default [
   {
-    url: "/table/list",
+    url: "/table/getList",
     type: "post",
     response: (config) => {
       const { title, pageNo = 1, pageSize = 20 } = config.body;
@@ -39,6 +39,26 @@ export default [
         msg: "success",
         totalCount: count,
         data: pageList,
+      };
+    },
+  },
+  {
+    url: "/table/doEdit",
+    type: "post",
+    response: (config) => {
+      return {
+        code: 200,
+        msg: "模拟保存成功",
+      };
+    },
+  },
+  {
+    url: "/table/doDelete",
+    type: "post",
+    response: (config) => {
+      return {
+        code: 200,
+        msg: "模拟删除成功",
       };
     },
   },

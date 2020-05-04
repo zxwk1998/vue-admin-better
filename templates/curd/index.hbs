@@ -81,8 +81,11 @@
       },
       handleDelete(row) {
         if (row.id) {
-          doDelete(row.id).then((res) => {
-            this.$baseMessage(res.msg, "success");
+          this.$baseConfirm("你确定要删除当前项吗", null, () => {
+            doDelete({ ids: row.id }).then((res) => {
+              this.$baseMessage(res.msg, "success");
+              this.fetchData();
+            });
           });
         } else {
           if (this.selectRows.length > 0) {
@@ -91,8 +94,9 @@
                     "你确定要删除选中项吗",
                     null,
                     () => {
-                      doDelete(ids).then((res) => {
+                      doDelete({ ids: row.id }).then((res) => {
                         this.$baseMessage(res.msg, "success");
+                        this.fetchData();
                       });
                     },
             );

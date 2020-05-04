@@ -95,7 +95,7 @@
           <el-button type="text" @click="handleEdit(scope.row)"
             >编辑
           </el-button>
-          <el-button type="text" @click="tableDelete(scope.row)"
+          <el-button type="text" @click="handleDelete(scope.row)"
             >删除
           </el-button>
         </template>
@@ -116,7 +116,7 @@
 
 <script>
 import checkPermission from "@/utils/permission";
-import { getList } from "@/api/table";
+import { getList, doDelete } from "@/api/table";
 import Edit from "./components/edit";
 
 export default {
@@ -174,24 +174,28 @@ export default {
     handleEdit(row) {
       this.$refs["edit"].showEdit(row);
     },
-    handleDelete() {
-      if (this.selectRows.length === 0) {
-        return this.$baseMessage("请至少选择一项", "error");
-      }
-      const ids = this.selectRows.map((item) => item.id).join();
-      this.$baseConfirm(
-        "你确定要删除选中项吗",
-        null,
-        () => {
-          alert(ids);
-        },
-        () => {
-          alert("点击了取消");
+    handleDelete(row) {
+      if (row.id) {
+        this.$baseConfirm("你确定要删除当前项吗", null, () => {
+          doDelete({ ids: row.id }).then((res) => {
+            this.$baseMessage(res.msg, "success");
+            this.fetchData();
+          });
+        });
+      } else {
+        if (this.selectRows.length > 0) {
+          const ids = this.selectRows.map((item) => item.id).join();
+          this.$baseConfirm("你确定要删除选中项吗", null, () => {
+            doDelete({ ids: ids }).then((res) => {
+              this.$baseMessage(res.msg, "success");
+              this.fetchData();
+            });
+          });
+        } else {
+          this.$baseMessage("未选中任何行", "error");
+          return false;
         }
-      );
-    },
-    tableDelete(row) {
-      alert(row.id);
+      }
     },
     handleSizeChange(val) {
       this.queryForm.pageSize = val;
