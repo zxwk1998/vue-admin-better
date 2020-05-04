@@ -48,7 +48,7 @@
           :background="background"
           :current-page="queryForm.pageNo"
           :page-size="queryForm.pageSize"
-          :page-sizes="[60, 120, 180, 240]"
+          :page-sizes="[72, 144, 216, 288]"
           :layout="layout"
           :total="total"
           @size-change="handleSizeChange"
@@ -77,7 +77,7 @@ export default {
       queryIcon: [],
       queryForm: {
         pageNo: 1,
-        pageSize: 60,
+        pageSize: 72,
         title: "",
       },
     };
