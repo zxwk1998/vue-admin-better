@@ -73,6 +73,10 @@ const data = [
     content: "三种图标组件实现mock模拟分页",
     timestamp: "2020-05-03",
   },
+  {
+    content: "添加了markdown编辑器组件",
+    timestamp: "2020-05-04",
+  },
 ];
 
 export default [

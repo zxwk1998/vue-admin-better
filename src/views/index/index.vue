@@ -221,6 +221,12 @@
           >
           </el-alert>
           <br />
+          <el-alert :closable="false" title="nuzt" type="success">
+            <a target="_blank" href="http://www.nutzam.com/"
+              >nuzt是一个超棒的后端框架，欢迎后端同学使用，点击此处即可访问官网</a
+            >
+          </el-alert>
+          <br />
           <el-alert :closable="false" :title="userAgent" type="info">
           </el-alert>
           <br />

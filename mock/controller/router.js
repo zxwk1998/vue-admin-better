@@ -12,7 +12,6 @@ const data = [
           title: "首页",
           icon: "home",
           affix: true,
-          noCache: true,
         },
       },
     ],

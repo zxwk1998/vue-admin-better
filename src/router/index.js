@@ -39,7 +39,6 @@ export const asyncRoutes = [
           title: "首页",
           icon: "home",
           affix: true,
-          noCache: true,
         },
       },
     ],
@@ -183,7 +182,13 @@ export const asyncRoutes = [
         path: "player",
         name: "Player",
         component: () => import("@/views/byui/player/index"),
-        meta: { title: "视频播放器", noCache: true, roles: ["admin"] },
+        meta: { title: "视频播放器", roles: ["admin"] },
+      },
+      {
+        path: "markdownEditor",
+        name: "MarkdownEditor",
+        component: () => import("@/views/byui/markdownEditor/index"),
+        meta: { title: "markdown编辑器", roles: ["admin"] },
       },
       {
         path: "editor",
