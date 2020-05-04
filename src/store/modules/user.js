@@ -27,7 +27,7 @@ const mutations = {
 const actions = {
   login({ commit }, userInfo) {
     const { userName, password } = userInfo;
-    return new Promise(async (resolve, reject) => {
+    return new Promise((resolve, reject) => {
       login({ userName, password })
         .then((response) => {
           const { accessToken } = response.data;
@@ -59,7 +59,7 @@ const actions = {
     });
   },
   getInfo({ commit, state }) {
-    return new Promise(async (resolve, reject) => {
+    return new Promise((resolve, reject) => {
       getInfo(state.accessToken)
         .then((response) => {
           const { data } = response;
@@ -80,7 +80,7 @@ const actions = {
     });
   },
   logout({ commit, state, dispatch }) {
-    return new Promise(async (resolve, reject) => {
+    return new Promise((resolve, reject) => {
       logout(state.accessToken)
         .then(() => {
           commit("SET_TOKEN", "");
@@ -96,7 +96,7 @@ const actions = {
     });
   },
   resetToken({ commit }) {
-    return new Promise(async (resolve) => {
+    return new Promise((resolve) => {
       commit("SET_TOKEN", "");
       removeAccessToken();
       resolve();
