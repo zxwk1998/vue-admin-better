@@ -89,8 +89,8 @@ const actions = {
   },
   delView({ dispatch, state }, view) {
     return new Promise(async (resolve) => {
-      dispatch("delVisitedView", view);
-      dispatch("delCachedView", view);
+      await dispatch("delVisitedView", view);
+      await dispatch("delCachedView", view);
       resolve({
         visitedViews: [...state.visitedViews],
         cachedViews: [...state.cachedViews],
@@ -98,21 +98,21 @@ const actions = {
     });
   },
   delVisitedView({ commit, state }, view) {
-    return new Promise(async (resolve) => {
+    return new Promise((resolve) => {
       commit("DEL_VISITED_VIEW", view);
       resolve([...state.visitedViews]);
     });
   },
   delCachedView({ commit, state }, view) {
-    return new Promise(async (resolve) => {
+    return new Promise((resolve) => {
       commit("DEL_CACHED_VIEW", view);
       resolve([...state.cachedViews]);
     });
   },
   delOthersViews({ dispatch, state }, view) {
     return new Promise(async (resolve) => {
-      dispatch("delOthersVisitedViews", view);
-      dispatch("delOthersCachedViews", view);
+      await dispatch("delOthersVisitedViews", view);
+      await dispatch("delOthersCachedViews", view);
       resolve({
         visitedViews: [...state.visitedViews],
         cachedViews: [...state.cachedViews],
@@ -120,21 +120,21 @@ const actions = {
     });
   },
   delOthersVisitedViews({ commit, state }, view) {
-    return new Promise(async (resolve) => {
+    return new Promise((resolve) => {
       commit("DEL_OTHERS_VISITED_VIEWS", view);
       resolve([...state.visitedViews]);
     });
   },
   delOthersCachedViews({ commit, state }, view) {
-    return new Promise(async (resolve) => {
+    return new Promise((resolve) => {
       commit("DEL_OTHERS_CACHED_VIEWS", view);
       resolve([...state.cachedViews]);
     });
   },
   delAllViews({ dispatch, state }, view) {
     return new Promise(async (resolve) => {
-      dispatch("delAllVisitedViews", view);
-      dispatch("delAllCachedViews", view);
+      await dispatch("delAllVisitedViews", view);
+      await dispatch("delAllCachedViews", view);
       resolve({
         visitedViews: [...state.visitedViews],
         cachedViews: [...state.cachedViews],
@@ -142,13 +142,13 @@ const actions = {
     });
   },
   delAllVisitedViews({ commit, state }) {
-    return new Promise(async (resolve) => {
+    return new Promise((resolve) => {
       commit("DEL_ALL_VISITED_VIEWS");
       resolve([...state.visitedViews]);
     });
   },
   delAllCachedViews({ commit, state }) {
-    return new Promise(async (resolve) => {
+    return new Promise((resolve) => {
       commit("DEL_ALL_CACHED_VIEWS");
       resolve([...state.cachedViews]);
     });
