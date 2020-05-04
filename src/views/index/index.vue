@@ -9,7 +9,7 @@
         </el-alert>
         <br />
         <el-alert
-          title="作者寄语：世间本无事，庸人自扰之，框架发布以来，免不了质疑和嘲笑，但我从未放弃，我只是一条略懂前端的咸鱼，可我一直怀揣着改变世界的梦想，希望我们每个人，不管过程怎样，结局都是美好的"
+          title="作者寄语：弱小的人才习惯嘲讽与否定，内心强大的人从不吝啬赞美与鼓励，我只是一条略懂前端的咸鱼，可我一直怀揣着改变世界的梦想，希望我们每个人，不管过程怎样，结局都是美好的"
           type="success"
           :closable="false"
         >
@@ -118,7 +118,7 @@
       <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
         <el-card class="card" shadow="never">
           <div slot="header">
-            <span>版本信息</span>
+            <span>更新日志</span>
             <div style="float: right;">部署时间:{{ updateTime }}</div>
           </div>
           <table class="table">
@@ -176,6 +176,7 @@
           </div>
         </el-card>
       </el-col>
+
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <el-card class="card" shadow="never">
           <div slot="header">
@@ -200,8 +201,7 @@
           </div>
           <el-alert
             title=" 其实人生改变命运的机会并没有太多，我们并不是不优秀，我们也并不是一无是处，我们也希望驻足山巅被众人仰望， 也许我们
-            缺少的只是一个机会，缺少的只是生命中的导师，我希望这个框架帮助到更多的人，我希望大家花费的的十块钱的群费，能获得一万倍 的
-            回报，希望有 一天，我们面试的时候不再胆怯，希望有一天别人看到的不仅仅是你的努力，还有你的功成名就，出人头地"
+            缺少的只是一个机会，缺少的只是生命中的导师，我希望这个框架帮助到更多的人，希望有一天，我们面试的时候不再胆怯，希望有一天别人看到的不仅仅是你的努力，还有你的功成名就，出人头地"
             type="success"
             :closable="false"
           >
@@ -219,12 +219,6 @@
             title="鸣谢花裤衩、唐金州、贤心、element、ivew的开源给我带来的很多的灵感"
             type="success"
           >
-          </el-alert>
-          <br />
-          <el-alert :closable="false" title="nuzt" type="success">
-            <a target="_blank" href="http://www.nutzam.com/"
-              >nuzt是一个超棒的后端框架，欢迎后端同学使用，点击此处即可访问官网</a
-            >
           </el-alert>
           <br />
           <el-alert :closable="false" :title="userAgent" type="info">
@@ -585,17 +579,17 @@ export default {
         this.activities = res.data;
       });
       /*getRepos({
-                              access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
-                            }).then((res) => {
-                              const per_page = res.stargazers_count;
-                              getStargazers({
-                                access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
-                                page: 1,
-                                per_page: res.per_page,
-                              }).then((res) => {
-                                alert(JSON.stringify(res));
-                              });
-                            });*/
+                                        access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+                                      }).then((res) => {
+                                        const per_page = res.stargazers_count;
+                                        getStargazers({
+                                          access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+                                          page: 1,
+                                          per_page: res.per_page,
+                                        }).then((res) => {
+                                          alert(JSON.stringify(res));
+                                        });
+                                      });*/
     },
   },
 };

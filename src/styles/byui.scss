@@ -97,6 +97,7 @@ html {
     }
 
     /*文本编辑器开始*/
+
     .quill-editor {
       border: 1px solid #dcdfe6;
 
@@ -229,6 +230,15 @@ html {
     }
 
     /*文本编辑器结束*/
+    /*markdown编辑器开始*/
+    .editor-toolbar {
+      .no-mobile,
+      .fa-question-circle {
+        display: none;
+      }
+    }
+
+    /*markdown编辑器结束*/
 
     /*大图展示开始*/
     .el-image-viewer {
@@ -271,6 +281,7 @@ html {
       .el-table__body-wrapper {
         @include base-scrollbar;
       }
+
       th {
         background: #f5f7fa;
       }
