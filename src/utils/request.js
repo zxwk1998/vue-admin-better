@@ -1,6 +1,5 @@
 import axios from "axios";
 import {
-  errorCode,
   invalidCode,
   messageDuration,
   noPermissionCode,

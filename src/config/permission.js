@@ -11,7 +11,6 @@ import {
   loginInterception,
   routesWhiteList,
 } from "@/config/settings";
-import { Message } from "element-ui";
 
 NProgress.configure({ showSpinner: false });
 router.beforeEach(async (to, from, next) => {
@@ -45,7 +44,6 @@ router.beforeEach(async (to, from, next) => {
           next({ ...to, replace: true });
         } catch (error) {
           await store.dispatch("user/resetToken");
-          Message.error(error || "Has Error");
           next(`/login?redirect=${to.path}`);
           NProgress.done();
         }
