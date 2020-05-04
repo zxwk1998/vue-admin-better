@@ -3,7 +3,7 @@
     <el-row :gutter="15">
       <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
         <el-alert
-          title="作者初衷：iView Pro要卖￥9999，layui Admin要卖￥2499，作者买不起只好自己动手写一个咯，免费的东西一定就差吗，一个人就一定比不过一个团队吗？我还那么年轻，我不会认输，在屏幕前驻足的你也不会轻易认输，对吧"
+          title="作者初衷：iView Pro要卖￥9999，layui Admin要卖￥2600，作者只好自己动手写一个分享给大家咯，免费的东西一定就差吗，一个人就一定比不过一个团队吗？我还那么年轻，我不会认输，在屏幕前驻足的你也不会轻易认输，对吧"
           :closable="false"
         >
         </el-alert>
@@ -579,17 +579,17 @@ export default {
         this.activities = res.data;
       });
       /*getRepos({
-                                        access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
-                                      }).then((res) => {
-                                        const per_page = res.stargazers_count;
-                                        getStargazers({
-                                          access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
-                                          page: 1,
-                                          per_page: res.per_page,
-                                        }).then((res) => {
-                                          alert(JSON.stringify(res));
-                                        });
-                                      });*/
+                                            access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+                                          }).then((res) => {
+                                            const per_page = res.stargazers_count;
+                                            getStargazers({
+                                              access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+                                              page: 1,
+                                              per_page: res.per_page,
+                                            }).then((res) => {
+                                              alert(JSON.stringify(res));
+                                            });
+                                          });*/
     },
   },
 };

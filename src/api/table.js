@@ -17,7 +17,6 @@ export function doEdit(data) {
 }
 
 export function doDelete(data) {
-  console.log(data);
   return request({
     url: "/table/doDelete",
     method: "post",
