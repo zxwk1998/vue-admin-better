@@ -14,7 +14,7 @@
     <el-table ref="multipleTable" v-loading="listLoading" :data="list">
       <el-table-column label="序号" width="55">
         <template slot-scope="scope">
-          {{ scope.$index }}
+          {{ scope.$index + 1 }}
         </template>
       </el-table-column>
       <el-table-column label="Main Information">

@@ -79,41 +79,6 @@ export const asyncRoutes = [
         },
       },
       {
-        path: "/excel",
-        component: EmptyLayout,
-        redirect: "noRedirect",
-        name: "Excel",
-        meta: {
-          title: "Excel",
-        },
-        children: [
-          {
-            path: "export-excel",
-            component: () => import("@/views/byui/excel/export-excel"),
-            name: "ExportExcel",
-            meta: { title: "导出Excel" },
-          },
-          {
-            path: "export-selected-excel",
-            component: () => import("@/views/byui/excel/select-excel"),
-            name: "SelectExcel",
-            meta: { title: "导出选中行" },
-          },
-          {
-            path: "export-merge-header",
-            component: () => import("@/views/byui/excel/merge-header"),
-            name: "MergeHeader",
-            meta: { title: "导出合并" },
-          },
-          {
-            path: "upload-excel",
-            component: () => import("@/views/byui/excel/upload-excel"),
-            name: "UploadExcel",
-            meta: { title: "上传Excel" },
-          },
-        ],
-      },
-      {
         path: "menu1",
         component: () => import("@/views/byui/nested/menu1/index"),
         name: "Menu1",
@@ -280,6 +245,41 @@ export const asyncRoutes = [
         name: "Upload",
         component: () => import("@/views/byui/upload/index"),
         meta: { title: "上传", roles: ["admin"] },
+      },
+      {
+        path: "/excel",
+        component: EmptyLayout,
+        redirect: "noRedirect",
+        name: "Excel",
+        meta: {
+          title: "Excel",
+        },
+        children: [
+          {
+            path: "export-excel",
+            component: () => import("@/views/byui/excel/export-excel"),
+            name: "ExportExcel",
+            meta: { title: "导出Excel" },
+          },
+          {
+            path: "export-selected-excel",
+            component: () => import("@/views/byui/excel/select-excel"),
+            name: "SelectExcel",
+            meta: { title: "导出选中行" },
+          },
+          {
+            path: "export-merge-header",
+            component: () => import("@/views/byui/excel/merge-header"),
+            name: "MergeHeader",
+            meta: { title: "导出合并" },
+          },
+          {
+            path: "upload-excel",
+            component: () => import("@/views/byui/excel/upload-excel"),
+            name: "UploadExcel",
+            meta: { title: "上传Excel" },
+          },
+        ],
       },
       {
         path: "sticky",

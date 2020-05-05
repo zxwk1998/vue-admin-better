@@ -25,7 +25,7 @@
       <el-table-column type="selection" />
       <el-table-column label="序号" width="55">
         <template slot-scope="scope">
-          {{ scope.$index }}
+          {{ scope.$index + 1 }}
         </template>
       </el-table-column>
       <el-table-column label="标题">
