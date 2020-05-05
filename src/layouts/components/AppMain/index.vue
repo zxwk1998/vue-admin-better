@@ -17,7 +17,7 @@
     <footer class="footer-copyright">
       Copyright
       <byui-icon :icon="['fas', 'copyright']"></byui-icon>
-      {{ fullYear }} chuzhixin 1204505056@qq.com
+      {{ fullYear }} {{ copyright }}
       <br />
       我的目标不是做一名优秀的前端leader，我的目标是帮助到更多优秀的前端leader，停留在这句话的你一定会是或者已经是其中最优秀的那一个
     </footer>
@@ -28,7 +28,7 @@
 import { ByuiKeel, ByuiKeelHeading, ByuiKeelText } from "@/plugins/byuiKeel";
 import { mapGetters } from "vuex";
 import GithubCorner from "@/components/GithubCorner";
-
+import { copyright } from "@/config/settings";
 export default {
   name: "AppMain",
   components: {
@@ -42,6 +42,7 @@ export default {
       show: true,
       nodeEnv: process.env.NODE_ENV,
       fullYear: new Date().getFullYear(),
+      copyright,
     };
   },
   computed: {
