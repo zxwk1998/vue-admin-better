@@ -11,7 +11,7 @@
 import JsonEditor from "@/components/JsonEditor/index";
 
 const jsonData =
-  '{"code": 200, "msg": "操作成功", "pageNo": 1, "pageSize": 10, "totalPages": 4, "totalCount": 238, "data": [{"id": "", "title": "", "status": "", "author": "", "display_time": "", "pageviews": "", "img": "", "switch": ""}]}';
+  '{"code": 200, "msg": "操作成功", "pageNo": 1, "pageSize": 10, "totalPages": 4, "totalCount": 238, "data": [{"id": "", "title": "", "status": "", "author": "", "datetime": "", "pageViews": "", "img": "", "switch": ""}]}';
 
 export default {
   components: { JsonEditor },

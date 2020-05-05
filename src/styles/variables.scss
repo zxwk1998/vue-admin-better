@@ -4,7 +4,7 @@ $base-color-default: #1890ff;
 
 $base-menu-background: #001529;
 $base-menu-children-background: #000c17;
-$base-menu-active-background: $base-color-default;
+$base-menu-background-active: $base-color-default;
 $base-menu-text: hsla(0, 0%, 100%, 0.95);
 $base-menu-text-active: hsla(0, 0%, 100%, 0.95);
 $base-title: #ffffff;
@@ -42,8 +42,8 @@ $base-right-content-width-min: calc(100% - 65px);
   menuTextAcive: $base-menu-text-active;
   menuBackground: $base-menu-background;
   menuChildrenBackground: $base-menu-children-background;
-  menuActiveBackground: $base-menu-active-background;
-  tagViewsActiveBackground: $base-color-blue;
+  menuBackgroundActive: $base-menu-background-active;
+  tagViewsBackgroundActive: $base-color-blue;
   buttonBackground: $base-color-blue;
-  paginationActiveBackground: $base-color-blue;
+  paginationBackgroundActive: $base-color-blue;
 }

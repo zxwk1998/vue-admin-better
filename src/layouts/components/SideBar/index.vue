@@ -106,12 +106,12 @@ export default {
       line-height: 46px !important;
 
       &:hover {
-        background-color: $base-menu-active-background !important;
+        background-color: $base-menu-background-active !important;
         color: $base-color-white !important;
       }
 
       &.is-active {
-        background-color: $base-menu-active-background !important;
+        background-color: $base-menu-background-active !important;
         color: $base-color-white !important;
       }
     }
@@ -121,7 +121,7 @@ export default {
         background-color: $base-menu-children-background !important;
 
         &.is-active {
-          background-color: $base-menu-active-background !important;
+          background-color: $base-menu-background-active !important;
           color: $base-color-white !important;
         }
       }

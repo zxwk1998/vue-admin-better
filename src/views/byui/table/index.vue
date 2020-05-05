@@ -54,7 +54,7 @@
         </template>
       </el-table-column>
       <el-table-column prop="title" label="标题"></el-table-column>
-      <el-table-column label="点击量" prop="pageviews" sortable>
+      <el-table-column label="点击量" prop="pageViews" sortable>
       </el-table-column>
       <el-table-column label="作者" prop="author"></el-table-column>
       <el-table-column label="头像">
@@ -68,7 +68,7 @@
       </el-table-column>
       <el-table-column
         label="点击量"
-        prop="pageviews"
+        prop="pageViews"
         sortable
       ></el-table-column>
       <el-table-column class-name="status-col">
@@ -87,7 +87,7 @@
       </el-table-column>
       <el-table-column
         label="时间"
-        prop="display_time"
+        prop="datetime"
         width="200"
       ></el-table-column>
       <el-table-column label="操作" width="180px" fixed="right">

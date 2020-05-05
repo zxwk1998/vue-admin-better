@@ -76,14 +76,14 @@
             </el-form-item>
             <el-form-item label="菜单选中色">
               <el-color-picker
-                v-model="theme.menuActiveBackground"
+                v-model="theme.menuBackgroundActive"
                 :predefine="['#22468a', '#1890ff', '#21e6af', '#f57e6c']"
                 show-alpha
               ></el-color-picker>
             </el-form-item>
             <el-form-item label="标签主题色">
               <el-color-picker
-                v-model="theme.tagViewsActiveBackground"
+                v-model="theme.tagViewsBackgroundActive"
                 :predefine="['#1890ff', '#0fd59d', '#f56c6c']"
                 show-alpha
               ></el-color-picker>
@@ -97,7 +97,7 @@
             </el-form-item>
             <el-form-item label="分页选中色">
               <el-color-picker
-                v-model="theme.paginationActiveBackground"
+                v-model="theme.paginationBackgroundActive"
                 :predefine="['#1890ff', '#0fd59d', '#f56c6c']"
                 show-alpha
               ></el-color-picker>
@@ -119,10 +119,10 @@
 import {
   menuBackground,
   menuChildrenBackground,
-  menuActiveBackground,
-  tagViewsActiveBackground,
+  menuBackgroundActive,
+  tagViewsBackgroundActive,
   buttonBackground,
-  paginationActiveBackground,
+  paginationBackgroundActive,
 } from "@/styles/variables.scss";
 import { mapGetters } from "vuex";
 import { themeBar } from "@/config/settings";
@@ -139,10 +139,10 @@ export default {
         tagsView: "",
         menuBackground,
         menuChildrenBackground,
-        menuActiveBackground,
-        tagViewsActiveBackground,
+        menuBackgroundActive,
+        tagViewsBackgroundActive,
         buttonBackground,
-        paginationActiveBackground,
+        paginationBackgroundActive,
       },
     };
   },
@@ -168,13 +168,13 @@ export default {
       );
       this.$set(
         this.theme,
-        "menuActiveBackground",
-        JSON.parse(theme).menuActiveBackground
+        "menuBackgroundActive",
+        JSON.parse(theme).menuBackgroundActive
       );
       this.$set(
         this.theme,
-        "tagViewsActiveBackground",
-        JSON.parse(theme).tagViewsActiveBackground
+        "tagViewsBackgroundActive",
+        JSON.parse(theme).tagViewsBackgroundActive
       );
       this.$set(
         this.theme,
@@ -183,8 +183,8 @@ export default {
       );
       this.$set(
         this.theme,
-        "paginationActiveBackground",
-        JSON.parse(theme).paginationActiveBackground
+        "paginationBackgroundActive",
+        JSON.parse(theme).paginationBackgroundActive
       );
       this.handleSetTheme();
     }
@@ -204,28 +204,28 @@ export default {
         tagsView,
         menuBackground,
         menuChildrenBackground,
-        menuActiveBackground,
-        tagViewsActiveBackground,
+        menuBackgroundActive,
+        tagViewsBackgroundActive,
         buttonBackground,
-        paginationActiveBackground,
+        paginationBackgroundActive,
       } = this.theme;
 
       let style = document.createElement("style");
       style.id = "BYUI-VUE-THEME";
-      style.innerHTML = ` .top-bar-container, .top-bar-container .byui-main, .side-bar-container, .logo-container-vertical, .logo-container-horizontal, .el-menu, .el-menu-item, .el-submenu.is-active.is-opened, .el-submenu__title, .el-menu-item.is-active, .el-menu-item .is-active { background-color:${menuBackground}!important; } body .el-menu--horizontal .top-bar-item-container  .el-menu-item:hover, body .el-menu--horizontal .top-bar-item-container .el-menu-item.is-active, body .app-wrapper .side-bar-container .el-submenu .el-menu-item.is-active, body .app-wrapper .side-bar-container  .el-menu-item:hover,body .side-bar-container .el-menu .el-menu-item.is-active{ background-color:${menuActiveBackground}!important; } .tags-view-item.router-link-exact-active.router-link-active.active{ background-color: ${tagViewsActiveBackground}!important; border: 1px solid ${tagViewsActiveBackground}!important; } .el-button.el-button--primary{background-color: ${buttonBackground}!important;border-color: ${buttonBackground}!important;} .el-pagination.is-background .el-pager li:not(.disabled).active{background-color: ${paginationActiveBackground}!important;border-color: ${paginationActiveBackground}!important;}body .app-wrapper .side-bar-container .nest-menu .el-menu-item {background-color: ${menuChildrenBackground} !important;}`;
+      style.innerHTML = ` .top-bar-container, .top-bar-container .byui-main, .side-bar-container, .logo-container-vertical, .logo-container-horizontal, .el-menu, .el-menu-item, .el-submenu.is-active.is-opened, .el-submenu__title, .el-menu-item.is-active, .el-menu-item .is-active { background-color:${menuBackground}!important; } body .el-menu--horizontal .top-bar-item-container  .el-menu-item:hover, body .el-menu--horizontal .top-bar-item-container .el-menu-item.is-active, body .app-wrapper .side-bar-container .el-submenu .el-menu-item.is-active, body .app-wrapper .side-bar-container  .el-menu-item:hover,body .side-bar-container .el-menu .el-menu-item.is-active{ background-color:${menuBackgroundActive}!important; } .tags-view-item.router-link-exact-active.router-link-active.active{ background-color: ${tagViewsBackgroundActive}!important; border: 1px solid ${tagViewsBackgroundActive}!important; } .el-button.el-button--primary{background-color: ${buttonBackground}!important;border-color: ${buttonBackground}!important;} .el-pagination.is-background .el-pager li:not(.disabled).active{background-color: ${paginationBackgroundActive}!important;border-color: ${paginationBackgroundActive}!important;}body .app-wrapper .side-bar-container .nest-menu .el-menu-item {background-color: ${menuChildrenBackground} !important;}`;
       document.getElementsByTagName("head").item(0).appendChild(style);
       localStorage.setItem(
         "BYUI-VUE-THEME",
         `{
             "menuBackground":"${menuBackground}",
             "menuChildrenBackground":"${menuChildrenBackground}",
-            "menuActiveBackground":"${menuActiveBackground}",
-            "tagViewsActiveBackground":"${tagViewsActiveBackground}",
+            "menuBackgroundActive":"${menuBackgroundActive}",
+            "tagViewsBackgroundActive":"${tagViewsBackgroundActive}",
             "layout":"${layout}",
             "header":"${header}",
             "tagsView":"${tagsView}",
             "buttonBackground":"${buttonBackground}",
-            "paginationActiveBackground":"${paginationActiveBackground}"
+            "paginationBackgroundActive":"${paginationBackgroundActive}"
           }`
       );
       this.handleSwitchLayout(layout);

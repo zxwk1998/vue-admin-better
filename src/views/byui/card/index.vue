@@ -18,7 +18,7 @@
             <byui-image
               :big-src="item.img"
               :percent="item.percent"
-              :small-src="item.smalImg"
+              :small-src="item.smallImg"
               @clickBig="bigClick(item)"
               @clickSmall="smallClick(item)"
             ></byui-image>

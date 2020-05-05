@@ -13,14 +13,14 @@
         <el-input v-model="form.author" autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item label="点击量">
-        <el-input v-model="form.pageviews" autocomplete="off"></el-input>
+        <el-input v-model="form.pageViews" autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item label="状态">
         <el-input v-model="form.status" autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item label="日期">
         <el-date-picker
-          v-model="form.display_time"
+          v-model="form.datetime"
           placeholder="选择日期"
           type="date"
         ></el-date-picker>
