@@ -44,14 +44,15 @@
             </el-button>
             <el-button @click="resetForm('ruleForm')">重置</el-button>
           </el-form-item>
-        </el-form></el-col
-      >
+        </el-form>
+      </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
 export default {
+  name: "Form",
   data() {
     return {
       ruleForm: {
