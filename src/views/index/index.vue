@@ -216,7 +216,7 @@
           <br />
           <el-alert
             :closable="false"
-            title="鸣谢花裤衩、唐金州、贤心、element、ivew的开源给我带来的很多的灵感"
+            title="鸣谢花裤衩、唐金州、贤心、element、ivew的开源项目给我带来的很多的灵感"
             type="success"
           >
           </el-alert>
@@ -579,17 +579,17 @@ export default {
         this.activities = res.data;
       });
       /*getRepos({
-                                            access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
-                                          }).then((res) => {
-                                            const per_page = res.stargazers_count;
-                                            getStargazers({
                                               access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
-                                              page: 1,
-                                              per_page: res.per_page,
                                             }).then((res) => {
-                                              alert(JSON.stringify(res));
-                                            });
-                                          });*/
+                                              const per_page = res.stargazers_count;
+                                              getStargazers({
+                                                access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+                                                page: 1,
+                                                per_page: res.per_page,
+                                              }).then((res) => {
+                                                alert(JSON.stringify(res));
+                                              });
+                                            });*/
     },
   },
 };
