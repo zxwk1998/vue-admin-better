@@ -189,7 +189,23 @@
           </div>
         </el-card>
       </el-col>
-
+      <el-col
+        v-for="(item, index) in iconList"
+        :key="index"
+        :xs="12"
+        :sm="6"
+        :md="3"
+        :lg="3"
+        :xl="3"
+      >
+        <el-card class="icon-panel" shadow="never">
+          <byui-icon
+            :style="{ color: item.color }"
+            :icon="['fas', item.icon]"
+          ></byui-icon>
+          <p>{{ item.title }}</p>
+        </el-card>
+      </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <el-card class="card" shadow="never">
           <div slot="header">
@@ -568,6 +584,57 @@ export default {
       activities: [],
       //其他信息
       userAgent: navigator.userAgent,
+      //卡片图标
+      iconList: [
+        {
+          icon: "video",
+          title: "视频播放器",
+          link: "",
+          color: "#ffc069",
+        },
+        {
+          icon: "bullhorn",
+          title: "通知公告",
+          link: "",
+          color: "#ff85c0",
+        },
+        {
+          icon: "book",
+          title: "开发文档",
+          link: "",
+          color: "#69c0ff",
+        },
+        {
+          icon: "table",
+          title: "表格",
+          link: "",
+          color: "#5cdbd3",
+        },
+        {
+          icon: "gift",
+          title: "礼物",
+          link: "",
+          color: "#ffd666",
+        },
+        {
+          icon: "laptop-code",
+          title: "源码",
+          link: "",
+          color: "#b37feb",
+        },
+        {
+          icon: "balance-scale-left",
+          title: "公平的世界",
+          link: "",
+          color: "#ff9c6e",
+        },
+        {
+          icon: "coffee",
+          title: "休息一下",
+          link: "",
+          color: "#95de64",
+        },
+      ],
     };
   },
   created() {
@@ -612,8 +679,6 @@ export default {
 .index-container {
   ::v-deep {
     .el-card__body {
-      min-height: 200px;
-
       .echarts {
         width: 100%;
         height: 140px;
@@ -624,9 +689,6 @@ export default {
   .card {
     ::v-deep {
       .el-card__body {
-        min-height: 345px;
-        height: auto;
-
         .echarts {
           width: 100%;
           height: 305px;
@@ -664,6 +726,16 @@ export default {
         text-align: right;
         width: 50%;
       }
+    }
+  }
+  .icon-panel {
+    cursor: pointer;
+    text-align: center;
+    svg {
+      font-size: 40px;
+    }
+    p {
+      margin-top: 20px;
     }
   }
 
