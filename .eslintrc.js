@@ -4,13 +4,6 @@ module.exports = {
     node: true,
   },
   extends: ["plugin:vue/recommended", "@vue/prettier"],
-  globals: {
-    $: false,
-    Vue: false,
-    mapv: false,
-    maptalks: false,
-    echarts: false,
-  },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",

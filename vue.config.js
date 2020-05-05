@@ -5,15 +5,8 @@ const pkg = require("./package.json");
 const Webpack = require("webpack");
 const WebpackBar = require("webpackbar");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
-
-const date = new Date(),
-  year = date.getFullYear(),
-  month = date.getMonth() + 1,
-  day = date.getDate(),
-  hours = date.getHours(),
-  minutes = date.getMinutes(),
-  seconds = date.getSeconds(),
-  time = `"${year}-${month}-${day} ${hours}:${minutes}:${seconds}"`;
+const date = require("dayjs")().format("YYYY_M_D");
+const time = require("dayjs")().format("YYYY-M-D HH:mm:ss");
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -68,17 +61,15 @@ module.exports = {
           "window.maptalks": "maptalks",
         }),
         new Webpack.DefinePlugin({
-          "process.env.VUE_APP_UPDATE_TIME": time,
+          "process.env.VUE_APP_UPDATE_TIME": "'" + time + "'",
         }),
         new WebpackBar({
-          name: `\u0062\u0079\u0075\u0069\u524d\u7aef\u654f\u6377\u5f00\u53d1\u5e73\u53f0${pkg.name}`,
+          name: `\u0076\u0075\u0065\u002d\u0061\u0064\u006d\u0069\u006e\u002d\u0062\u0065\u0061\u0075\u0074\u0069\u0066\u0075\u006c`,
         }),
       ],
     };
   },
   chainWebpack(config) {
-    /*config.plugins.delete("preload");
-    config.plugins.delete("prefetch");*/
     config.resolve.symlinks(true);
     config.module
       .rule("svg")
@@ -160,7 +151,7 @@ module.exports = {
       config
         .plugin("banner")
         .use(Webpack.BannerPlugin, [
-          `\u57fa\u4e8e\u0076\u0075\u0065\u002d\u0061\u0064\u006d\u0069\u006e\u002d\u0062\u0065\u0061\u0075\u0074\u0069\u0066\u0075\u006c\u6784\u5efa : ${pkg.name}\n copyright:\u0031\u0032\u0030\u0034\u0035\u0030\u0035\u0030\u0035\u0036\u0040\u0071\u0071\u002e\u0063\u006f\u006d \n author: ${pkg.author} \n participants: ${pkg.participants}\n time: ${time}`,
+          ` \u57fa\u4e8e\u0076\u0075\u0065\u002d\u0061\u0064\u006d\u0069\u006e\u002d\u0062\u0065\u0061\u0075\u0074\u0069\u0066\u0075\u006c\u6784\u5efa \n \u0063\u006f\u0070\u0079\u0072\u0069\u0067\u0068\u0074\u003a\u0020\u0063\u0068\u0075\u007a\u0068\u0069\u0078\u0069\u006e\u0020\u0031\u0032\u0030\u0034\u0035\u0030\u0035\u0030\u0035\u0036\u0040\u0071\u0071\u002e\u0063\u006f\u006d \n \u0074\u0069\u006d\u0065\u003a ${time}`,
         ])
         .end();
     });
@@ -174,7 +165,7 @@ module.exports = {
               archive: [
                 {
                   source: "./dist",
-                  destination: `./dist/${abbreviation}_dist_${year}.${month}.${day}.7z`,
+                  destination: `./dist/${abbreviation}_dist_${date}.7z`,
                 },
               ],
             },
