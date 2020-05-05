@@ -156,14 +156,27 @@
               href="https://github.com/chuzhixin/vue-element-admin-beautiful"
             >
               <el-button type="primary">
-                github下载源码点star
+                github下载源码点star（实时更新）
               </el-button>
             </a>
-            <a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1476">
-              <el-button type="primary"
-                >国内源码下载通道（记得给个好评）
-              </el-button>
+            <a
+              target="_blank"
+              href="https://gitee.com/chu1204505056/vue-admin-beautiful"
+            >
+              <el-button type="primary">码云下载源码</el-button>
             </a>
+            <el-popover placement="top" width="250" trigger="hover">
+              <p>
+                插件市场评价给五星后加群送vue-admin-beautiful-template基础模板
+              </p>
+              <a
+                slot="reference"
+                target="_blank"
+                href="https://ext.dcloud.net.cn/plugin?id=1476"
+              >
+                <el-button type="primary">插件市场下载源码</el-button>
+              </a>
+            </el-popover>
             <el-popover placement="top" width="250" trigger="hover">
               <p>
                 谢谢您愿意支持开源，加群获取详细教程，群内提供vue-admin-beautiful-template基础模板
