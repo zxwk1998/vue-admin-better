@@ -77,6 +77,10 @@ const data = [
     content: "添加了markdown编辑器组件",
     timestamp: "2020-05-04",
   },
+  {
+    content: "添加stylelint-plus自动规整排序样式",
+    timestamp: "2020-05-06",
+  },
 ];
 
 export default [
