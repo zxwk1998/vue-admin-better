@@ -256,7 +256,7 @@ export default {
 @mixin right-bar {
   position: fixed;
   right: 0;
-  z-index: 99;
+  z-index: $base-z-index;
   width: 60px;
   min-height: 60px;
   text-align: center;

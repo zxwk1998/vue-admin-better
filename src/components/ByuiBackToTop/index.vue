@@ -103,7 +103,7 @@ export default {
 <style lang="scss" scoped>
 .back-to-ceiling {
   position: fixed;
-  z-index: 97;
+  z-index: $base-z-index - 2;
   display: inline-block;
   color: $base-color-blue;
   text-align: center;

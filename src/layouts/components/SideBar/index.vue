@@ -75,7 +75,7 @@ export default {
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 99;
+  z-index: $base-z-index;
   width: $base-left-menu-width;
   height: 100vh;
   overflow: hidden;

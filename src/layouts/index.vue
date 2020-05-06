@@ -107,7 +107,7 @@ export default {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 97;
+  z-index: $base-z-index - 2;
   width: 100%;
   overflow: hidden;
 }
@@ -169,7 +169,7 @@ export default {
       right: 0;
       bottom: 0;
       left: 0;
-      z-index: 98;
+      z-index: $base-z-index - 1;
       width: 100%;
       height: 100vh;
       overflow: hidden;

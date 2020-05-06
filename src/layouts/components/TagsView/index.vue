@@ -323,7 +323,7 @@ export default {
 
   .contextmenu {
     position: fixed;
-    z-index: 999;
+    z-index: $base-z-index;
     padding: 5px 0;
     margin: 0;
     font-size: $base-font-size-small;

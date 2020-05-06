@@ -38,7 +38,7 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 96;
+  z-index: $base-z-index - 3;
 
   .octo-arm {
     animation: octocat-wave 560ms ease-in-out infinite;

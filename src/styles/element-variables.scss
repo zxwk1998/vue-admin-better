@@ -7,7 +7,8 @@ $--fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
 $--fade-linear-transition: opacity 200ms linear;
 $--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1),
   opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
-$--border-transition-base: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+$--border-transition-base: border-color 0.2s
+  cubic-bezier(0.645, 0.045, 0.355, 1);
 $--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 /* Color
@@ -18,67 +19,31 @@ $--color-primary: $base-color-blue;
 $--color-white: #fff;
 /// color|1|Background Color|4
 $--color-black: #000;
-$--color-primary-light-1: mix(
-  $--color-white,
-  $--color-primary,
-  10%
-);
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%);
 
 /* 53a8ff */
-$--color-primary-light-2: mix(
-  $--color-white,
-  $--color-primary,
-  20%
-);
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%);
 
 /* 66b1ff */
-$--color-primary-light-3: mix(
-  $--color-white,
-  $--color-primary,
-  30%
-);
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%);
 
 /* 79bbff */
-$--color-primary-light-4: mix(
-  $--color-white,
-  $--color-primary,
-  40%
-);
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%);
 
 /* 8cc5ff */
-$--color-primary-light-5: mix(
-  $--color-white,
-  $--color-primary,
-  50%
-);
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%);
 
 /* a0cfff */
-$--color-primary-light-6: mix(
-  $--color-white,
-  $--color-primary,
-  60%
-);
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%);
 
 /* b3d8ff */
-$--color-primary-light-7: mix(
-  $--color-white,
-  $--color-primary,
-  70%
-);
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%);
 
 /* c6e2ff */
-$--color-primary-light-8: mix(
-  $--color-white,
-  $--color-primary,
-  80%
-);
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%);
 
 /* d9ecff */
-$--color-primary-light-9: mix(
-  $--color-white,
-  $--color-primary,
-  90%
-);
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%);
 
 /* ecf5ff */
 /// color|1|Functional Color|1
@@ -142,11 +107,9 @@ $--border-radius-zero: 0;
 
 // Box-shadow
 /// boxShadow|1|Shadow|1
-$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12),
-  0 0 6px rgba(0, 0, 0, 0.04);
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
 // boxShadow|1|Shadow|1
-$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12),
-  0 0 6px rgba(0, 0, 0, 0.12);
+$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12);
 /// boxShadow|1|Shadow|1
 $--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 
@@ -1023,37 +986,52 @@ $--md: 992px;
 $--lg: 1200px;
 $--xl: 1920px;
 
-$--breakpoints: ("xs": (max-width: $--sm - 1,
-),
-"sm": (min-width: $--sm,
-),
-"md": (min-width: $--md,
-),
-"lg": (min-width: $--lg,
-),
-"xl": (min-width: $--xl,
-),
+$--breakpoints: (
+  "xs": (
+    max-width: $--sm - 1,
+  ),
+  "sm": (
+    min-width: $--sm,
+  ),
+  "md": (
+    min-width: $--md,
+  ),
+  "lg": (
+    min-width: $--lg,
+  ),
+  "xl": (
+    min-width: $--xl,
+  ),
 );
 
-$--breakpoints-spec: ("xs-only": (max-width: $--sm - 1,
-),
-"sm-and-up": (min-width: $--sm,
-),
-"sm-only": "(min-width: #{$--sm}) and (max-width: #{$--md - 1})",
-"sm-and-down": (max-width: $--md - 1,
-),
-"md-and-up": (min-width: $--md,
-),
-"md-only": "(min-width: #{$--md}) and (max-width: #{$--lg - 1})",
-"md-and-down": (max-width: $--lg - 1,
-),
-"lg-and-up": (min-width: $--lg,
-),
-"lg-only": "(min-width: #{$--lg}) and (max-width: #{$--xl - 1})",
-"lg-and-down": (max-width: $--xl - 1,
-),
-"xl-only": (min-width: $--xl,
-),
+$--breakpoints-spec: (
+  "xs-only": (
+    max-width: $--sm - 1,
+  ),
+  "sm-and-up": (
+    min-width: $--sm,
+  ),
+  "sm-only": "(min-width: #{$--sm}) and (max-width: #{$--md - 1})",
+  "sm-and-down": (
+    max-width: $--md - 1,
+  ),
+  "md-and-up": (
+    min-width: $--md,
+  ),
+  "md-only": "(min-width: #{$--md}) and (max-width: #{$--lg - 1})",
+  "md-and-down": (
+    max-width: $--lg - 1,
+  ),
+  "lg-and-up": (
+    min-width: $--lg,
+  ),
+  "lg-only": "(min-width: #{$--lg}) and (max-width: #{$--xl - 1})",
+  "lg-and-down": (
+    max-width: $--xl - 1,
+  ),
+  "xl-only": (
+    min-width: $--xl,
+  ),
 );
 
 @import "~element-ui/packages/theme-chalk/src/index";
