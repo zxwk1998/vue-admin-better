@@ -11,15 +11,7 @@
           :visible.sync="dialogVisible"
         >
           <iframe
-            style="
-              position: absolute;
-              top: 55px;
-              right: 0;
-              bottom: 0;
-              left: 0;
-              width: 100%;
-              height: 89vh;
-            "
+            class="element-iframe"
             src="https://chu1204505056.gitee.io/element/#/zh-CN/component/installation"
             frameborder="0"
           ></iframe>
@@ -246,6 +238,16 @@ export default {
     .el-progress {
       margin: 20px;
     }
+  }
+
+  .element-iframe {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 89vh;
   }
 }
 </style>

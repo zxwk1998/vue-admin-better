@@ -49,8 +49,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.markdown-editor-container {
-}
-</style>

@@ -167,10 +167,6 @@ export default {
           line-height: 1.75;
           word-break: break-word;
 
-          * {
-            font-family: "微软雅黑" !important;
-          }
-
           h1 {
             margin: 1.3rem 0 5px;
             font-size: 30px;
@@ -211,9 +207,6 @@ export default {
 
           img {
             max-height: none;
-
-            &.lazyload {
-            }
 
             &.inited {
               visibility: visible;

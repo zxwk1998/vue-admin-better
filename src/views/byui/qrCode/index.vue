@@ -38,8 +38,8 @@ export default {
   ::v-deep {
     .el-card__body {
       display: flex;
-      justify-content: center;
       align-content: center;
+      justify-content: center;
     }
   }
 }

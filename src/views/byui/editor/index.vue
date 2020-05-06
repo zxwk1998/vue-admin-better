@@ -156,10 +156,11 @@ export default {
     ::v-deep {
       p {
         line-height: 30px;
+
         img {
           display: block;
-          margin-left: auto;
           margin-right: auto;
+          margin-left: auto;
         }
       }
     }
