@@ -86,10 +86,10 @@ export default {
   overflow: hidden;
   white-space: nowrap;
 
-  /* ::v-deep {
-          .el-scrollbar__thumb {
-            transition: transform 0.5s ease-in-out;
-          }
-        } */
+  ::v-deep {
+    .el-scrollbar__thumb {
+      overflow-y: hidden;
+    }
+  }
 }
 </style>

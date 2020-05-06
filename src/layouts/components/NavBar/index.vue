@@ -106,21 +106,17 @@ export default {
     },
     refreshSelectedTag() {
       this.pulse = true;
-      const view = this.selectedTag;
-      this.$store.dispatch("tagsView/delCachedView", view).then(() => {
-        const { fullPath } = view;
-        this.$nextTick(() => {
-          this.$router
-            .replace({
-              path: "/redirect" + fullPath,
-            })
-            .then(() => {
-              setTimeout(() => {
-                this.pulse = false;
-              }, 1000);
-            })
-            .catch(() => {});
-        });
+      this.$nextTick(() => {
+        this.$router
+          .replace({
+            path: "/redirect" + this.$route.path,
+          })
+          .then(() => {
+            setTimeout(() => {
+              this.pulse = false;
+            }, 1000);
+          })
+          .catch(() => {});
       });
     },
     handleCommand(command) {
