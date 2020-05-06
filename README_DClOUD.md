@@ -1,10 +1,14 @@
-## [★★★ 演示地址,点这里！直接点击登录即可！更新日志在首页底部 ★★★](http://chu1204505056.gitee.io/vue-admin-beautiful)
+# 更新日志
 
-[vue-admin-beautiful 演示地址](http://chu1204505056.gitee.io/vue-admin-beautiful)
+## 2020/05/06 添加 stylelint-plus 自动规整排序 css 样式
 
 ## 插件市场问题反馈
 
 插件市场服务器似乎出现了一些问题，无法上传更新日志，github 可以查看到最新的代码的提交情况[github 地址点这里](https://github.com/chuzhixin/vue-admin-beautiful)
+
+## [vue-admin-beautiful 演示地址](http://chu1204505056.gitee.io/vue-admin-beautiful)
+
+## ★★★ ☝☝☝ 演示地址,在上方直接点击登录即可！★★★
 
 ## 官方问题解答讨论群 972435319
 
@@ -22,7 +26,7 @@ git clone https://github.com/chuzhixin/vue-element-admin-beautiful.git
 
 # 进入项目目录
 cd vue-element-admin-beautiful
-# 安装依赖,一定要用cnpm,不要试图去用npm换成淘宝镜像这种方式,最近情况特殊,国外网站封锁的厉害
+# 安装依赖
 cnpm i
 # 本地开发 启动项目
 npm run serve
