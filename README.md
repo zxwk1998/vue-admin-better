@@ -26,8 +26,8 @@ git clone https://github.com/chuzhixin/vue-element-admin-beautiful.git
 
 # 进入项目目录
 cd vue-element-admin-beautiful
-# 安装依赖,一定要用cnpm,不要试图去用npm换成淘宝镜像这种方式,最近情况特殊,国外网站封锁的厉害
-cnpm i
+# 安装依赖
+npm i
 # 本地开发 启动项目
 npm run serve
 ```
