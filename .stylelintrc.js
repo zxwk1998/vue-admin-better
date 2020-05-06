@@ -21,5 +21,6 @@ module.exports = {
     ],
     indentation: 2,
     "no-descending-specificity": null,
+    "declaration-colon-newline-after": null,
   },
 };
