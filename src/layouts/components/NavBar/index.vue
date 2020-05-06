@@ -153,9 +153,6 @@ export default {
       cursor: pointer;
     }
 
-    .fold-unfold.el-icon-s-unfold {
-    }
-
     ::v-deep {
       .breadcrumb-container {
         margin-left: 10px;
@@ -198,7 +195,6 @@ export default {
         margin-right: 15px;
         font-size: $base-font-size-big;
         color: $base-color-gray;
-        cursor: pointer;
         cursor: pointer;
         fill: $base-color-gray;
       }
