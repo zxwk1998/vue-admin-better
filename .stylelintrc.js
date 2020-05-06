@@ -1,14 +1,10 @@
 module.exports = {
-  extends: [
-    "stylelint-config-standard",
-    "stylelint-config-recess-order",
-    "stylelint-scss",
-  ],
+  extends: ["stylelint-config-standard", "stylelint-config-recess-order"],
   rules: {
     "at-rule-no-unknown": [
       true,
       {
-        ignoreAtRules: ["mixin", "extend", "content", "include"],
+        ignoreAtRules: ["mixin", "extend", "content", "include", "for"],
       },
     ],
     "selector-pseudo-element-no-unknown": [
