@@ -87,14 +87,14 @@ export default {
 
 <style lang="scss" scoped>
 .breadcrumb-container {
-  -webkit-touch-callout: none;
+  display: inline-block;
+  font-size: $base-font-size-default;
+  line-height: 50px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  display: inline-block;
-  font-size: $base-font-size-default;
-  line-height: 50px;
+  -webkit-touch-callout: none;
 
   .no-redirect {
     color: $base-color-gray;

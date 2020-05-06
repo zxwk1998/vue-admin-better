@@ -182,13 +182,13 @@ ul li > .el-tree .el-tree-node__content {
 }
 
 .el-tree > .is-current .el-tree-node__label {
-  color: #409eff;
   font-weight: 700;
+  color: #409eff;
 }
 
 .el-tree > .is-current .el-tree-node__children .el-tree-node__label {
-  color: #606266;
   font-weight: normal;
+  color: #606266;
 }
 </style>
 <style lang="scss">

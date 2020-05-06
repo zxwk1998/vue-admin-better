@@ -56,13 +56,13 @@ export default {
   ::v-deep {
     .el-button {
       margin-top: 10px;
-      margin-left: 0;
       margin-right: 10px;
+      margin-left: 0;
     }
 
     .el-button + .el-button {
-      margin-left: 0;
       margin-right: 10px;
+      margin-left: 0;
     }
   }
 }

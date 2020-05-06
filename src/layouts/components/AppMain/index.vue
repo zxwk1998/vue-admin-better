@@ -83,15 +83,15 @@ export default {
 
 <style lang="scss" scoped>
 .app-main-container {
-  width: 100%;
   position: relative;
+  width: 100%;
   overflow: hidden;
 
   .footer-copyright {
     min-height: 70px;
     line-height: 35px;
-    text-align: center;
     color: rgba(0, 0, 0, 0.45);
+    text-align: center;
   }
 }
 </style>

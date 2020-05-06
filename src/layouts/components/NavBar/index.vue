@@ -136,25 +136,25 @@ export default {
 
 <style lang="scss" scoped>
 .nav-bar-container {
-  user-select: none;
+  position: relative;
   height: 50px;
   overflow: hidden;
-  position: relative;
+  user-select: none;
   background: $base-color-white;
   box-shadow: $base-box-shadow;
 
   .left-panel {
     display: flex;
-    justify-items: center;
     align-items: center;
+    justify-items: center;
     height: 50px;
     max-height: 50px;
 
     .fold-unfold {
+      margin-left: 10px;
       font-size: 20px;
       color: $base-color-gray;
       cursor: pointer;
-      margin-left: 10px;
     }
 
     .fold-unfold.el-icon-s-unfold {
@@ -169,24 +169,24 @@ export default {
 
   .right-panel {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
     align-content: center;
+    align-items: center;
+    justify-content: flex-end;
     height: 50px;
 
     .user-avatar {
       margin-right: 5px;
-      cursor: pointer;
       font-weight: 600;
+      cursor: pointer;
     }
 
     .user-name {
-      margin-right: 35px;
-      margin-left: 5px;
-      cursor: pointer;
-      font-weight: 600;
       position: relative;
       top: -14px;
+      margin-right: 35px;
+      margin-left: 5px;
+      font-weight: 600;
+      cursor: pointer;
     }
 
     .user-name + i {
@@ -199,20 +199,20 @@ export default {
       svg {
         width: 1em;
         height: 1em;
-        color: $base-color-gray;
-        fill: $base-color-gray;
         margin-right: 15px;
-        cursor: pointer;
         font-size: $base-font-size-big;
+        color: $base-color-gray;
         cursor: pointer;
+        cursor: pointer;
+        fill: $base-color-gray;
       }
 
       button {
         svg {
+          margin-right: 0;
           color: $base-color-white;
-          fill: $base-color-white;
-          margin-right: 0px;
           cursor: pointer;
+          fill: $base-color-white;
         }
       }
 
@@ -225,8 +225,8 @@ export default {
 </style>
 <style>
 .el-dropdown-menu--small .el-dropdown-menu__item {
-  line-height: 36px !important;
   padding: 0 15px;
   font-size: 13px;
+  line-height: 36px !important;
 }
 </style>

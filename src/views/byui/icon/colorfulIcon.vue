@@ -120,20 +120,20 @@ export default {
 .colorful-icon-container {
   ::v-deep {
     .el-card__body {
-      display: flex;
-      justify-content: center; /* 水平居中 */
-      align-items: center; /* 垂直居中 */
       position: relative;
+      display: flex;
       flex-direction: column;
+      align-items: center; /* 垂直居中 */
+      justify-content: center; /* 水平居中 */
 
       svg:not(:root) {
-        cursor: pointer;
-        color: $base-color-gray;
-        vertical-align: middle;
-        text-align: center;
         font-size: 30px;
         font-weight: bold;
+        color: $base-color-gray;
+        text-align: center;
+        vertical-align: middle;
         pointer-events: none;
+        cursor: pointer;
       }
 
       .svg-external-icon {
@@ -144,14 +144,14 @@ export default {
   }
 
   .icon-text {
-    font-size: 12px;
+    height: 30px;
+    margin-top: -15px;
     overflow: hidden;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    text-align: center;
-    height: 30px;
-    line-height: 30px;
-    margin-top: -15px;
   }
 }
 </style>

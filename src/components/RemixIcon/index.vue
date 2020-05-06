@@ -53,9 +53,9 @@ export default {
 .svg-icon {
   width: 1.25em;
   height: 1.25em;
+  overflow: hidden;
   vertical-align: -0.15em;
   fill: currentColor;
-  overflow: hidden;
 
   &:hover {
     opacity: 0.8;
@@ -63,8 +63,8 @@ export default {
 }
 
 .svg-external-icon {
+  display: inline-block;
   background-color: currentColor;
   mask-size: cover !important;
-  display: inline-block;
 }
 </style>

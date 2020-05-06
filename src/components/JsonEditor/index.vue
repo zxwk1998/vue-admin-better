@@ -80,8 +80,8 @@ export default {
 
 <style scoped>
 .json-editor {
-  height: 100%;
   position: relative;
+  height: 100%;
 }
 
 .json-editor >>> .CodeMirror {
@@ -98,13 +98,14 @@ export default {
 }
 
 .json-editor >>> .cm-s-rubyblue .CodeMirror-gutters {
-  /*background: transparent;*/
-  border-right: 1px solid #fff;
   padding-right: 10px;
+
+  /* background: transparent; */
+  border-right: 1px solid #fff;
 }
 
 .json-editor >>> .cm-s-rubyblue.CodeMirror {
-  /*background: #08233e;*/
+  /* background: #08233e; */
   color: white;
 }
 </style>

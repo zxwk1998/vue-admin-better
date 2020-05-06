@@ -27,30 +27,30 @@ export default {
 @mixin container {
   position: relative;
   height: 56px;
+  overflow: hidden;
   line-height: 56px;
   background: $base-color-header;
-  overflow: hidden;
 }
 
 @mixin logo {
   display: inline-block;
   width: 32px;
   height: 32px;
-  vertical-align: middle;
   margin-right: 5px;
   color: $base-title;
+  vertical-align: middle;
 }
 
 @mixin title {
   display: inline-block;
-  color: $base-title;
+  overflow: hidden;
+  font-size: $base-font-size-max;
   font-weight: 600;
   line-height: 55px;
-  font-size: $base-font-size-max;
-  vertical-align: middle;
-  overflow: hidden;
+  color: $base-title;
   text-overflow: ellipsis;
   white-space: nowrap;
+  vertical-align: middle;
 }
 
 .logo-container-horizontal {
@@ -67,6 +67,7 @@ export default {
 
 .logo-container-vertical {
   @include container;
+
   text-align: center;
 
   .logo {
@@ -75,6 +76,7 @@ export default {
 
   .title {
     @include title;
+
     max-width: 140px;
   }
 }

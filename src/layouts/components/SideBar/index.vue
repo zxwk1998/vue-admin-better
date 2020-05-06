@@ -4,9 +4,9 @@
   >
     <logo />
     <el-menu
-      :background-color="variables.menuBackground"
-      :text-color="variables.menuText"
-      :active-text-color="variables.menuTextAcive"
+      :background-color="variables['menu-background']"
+      :text-color="variables['menu-text']"
+      :active-text-color="variables['menu-text-active']"
       :default-active="activeMenu"
       :collapse="collapse"
       :collapse-transition="false"
@@ -71,17 +71,17 @@ export default {
 </script>
 <style lang="scss" scoped>
 .side-bar-container {
-  transition: all 0.2s ease-in-out;
-  width: $base-left-menu-width;
-  height: 100vh;
-  background: $base-menu-background;
-  overflow: hidden;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   z-index: 99;
+  width: $base-left-menu-width;
+  height: 100vh;
+  overflow: hidden;
+  background: $base-menu-background;
   box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+  transition: all 0.2s ease-in-out;
 
   ::v-deep {
     .el-scrollbar__wrap {
@@ -99,20 +99,20 @@ export default {
     }
 
     .el-menu-item {
+      height: 46px !important;
       overflow: hidden;
+      line-height: 46px !important;
       text-overflow: ellipsis;
       white-space: nowrap;
-      height: 46px !important;
-      line-height: 46px !important;
 
       &:hover {
-        background-color: $base-menu-background-active !important;
         color: $base-color-white !important;
+        background-color: $base-menu-background-active !important;
       }
 
       &.is-active {
-        background-color: $base-menu-background-active !important;
         color: $base-color-white !important;
+        background-color: $base-menu-background-active !important;
       }
     }
 
@@ -121,8 +121,8 @@ export default {
         background-color: $base-menu-children-background !important;
 
         &.is-active {
-          background-color: $base-menu-background-active !important;
           color: $base-color-white !important;
+          background-color: $base-menu-background-active !important;
         }
       }
     }

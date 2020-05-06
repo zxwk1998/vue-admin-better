@@ -10,7 +10,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .byui-main {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 </style>

@@ -26,22 +26,24 @@ export default {
 
 <style lang="scss" scoped>
 .content {
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  overflow: hidden;
-  filter: drop-shadow(0 0 10px white);
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  filter: drop-shadow(0 0 10px white);
 }
 
 @function random_range($min, $max) {
   $rand: random();
   $random_range: $min + floor($rand * (($max - $min) + 1));
+
   @return $random_range;
 }
 
 .snow {
   $total: 200;
+
   position: absolute;
   width: 10px;
   height: 10px;

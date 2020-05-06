@@ -51,7 +51,7 @@
     <div
       slot="footer"
       class="dialog-footer"
-      style="position: relative; text-align: right; padding-right: 15px;"
+      style="position: relative; padding-right: 15px; text-align: right;"
     >
       <div
         v-if="show"

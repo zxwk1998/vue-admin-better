@@ -103,11 +103,11 @@ export default {
 <style lang="scss" scoped>
 .back-to-ceiling {
   position: fixed;
+  z-index: 97;
   display: inline-block;
+  color: $base-color-blue;
   text-align: center;
   cursor: pointer;
-  z-index: 97;
-  color: $base-color-blue;
 }
 
 .back-to-ceiling:hover {
@@ -125,7 +125,7 @@ export default {
 }
 
 .back-to-ceiling .Icon {
-  fill: $base-color-gray;
   background: none;
+  fill: $base-color-gray;
 }
 </style>

@@ -161,20 +161,20 @@ export default {
     .el-dialog__body {
       ::v-deep {
         .article-content {
-          word-break: break-word;
-          line-height: 1.75;
-          font-weight: 400;
-          font-size: 15px;
           overflow-x: hidden;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 1.75;
+          word-break: break-word;
 
           * {
             font-family: "微软雅黑" !important;
           }
 
           h1 {
-            line-height: 1.2;
-            font-size: 30px;
             margin: 1.3rem 0 5px;
+            font-size: 30px;
+            line-height: 1.2;
 
             &.heading {
               & + h2 {
@@ -196,17 +196,17 @@ export default {
           }
 
           p {
-            line-height: 2.27rem;
-            line-height: inherit;
             margin-top: 22px;
             margin-bottom: 22px;
+            line-height: 2.27rem;
+            line-height: inherit;
           }
 
           hr {
-            border: none;
-            border-top: 1px solid #ddd;
             margin-top: 2.7rem;
             margin-bottom: 2.7rem;
+            border: none;
+            border-top: 1px solid #ddd;
           }
 
           img {
@@ -216,15 +216,15 @@ export default {
             }
 
             &.inited {
-              background-color: #f8f9fa;
-              background-position: 50%;
-              background-repeat: no-repeat;
               visibility: visible;
+              background-color: #f8f9fa;
+              background-repeat: no-repeat;
+              background-position: 50%;
             }
 
             &.loaded {
-              background-image: none;
               background-color: transparent;
+              background-image: none;
             }
 
             &.error {
@@ -232,8 +232,8 @@ export default {
             }
 
             &.equation {
-              margin: 0 0.1em;
               max-width: 100% !important;
+              margin: 0 0.1em;
               vertical-align: middle;
             }
 
@@ -244,62 +244,62 @@ export default {
 
           figure {
             margin: 2.7rem auto;
-            text-align: center;
             margin: 22px auto;
+            text-align: center;
 
             figcaption {
-              text-align: center;
+              margin-top: 2px;
               font-size: 1rem;
               line-height: 2.7rem;
-              color: #909090;
-              margin-top: 2px;
               line-height: 1.6;
+              color: #909090;
+              text-align: center;
             }
           }
 
           pre {
-            line-height: 1.93rem;
-            overflow: auto;
             position: relative;
+            overflow: auto;
+            line-height: 1.93rem;
             line-height: 1.75;
 
             & > code {
-              font-size: 1rem;
-              padding: 0.67rem 1.3rem;
-              margin: 0;
-              word-break: normal;
               display: block;
-              overflow-x: auto;
-              color: #333;
-              background: #f8f8f8;
+              padding: 0.67rem 1.3rem;
               padding: 15px 12px;
+              margin: 0;
+              overflow-x: auto;
+              font-size: 1rem;
+              color: #333;
+              word-break: normal;
+              background: #f8f8f8;
 
               &.hljs[lang] {
                 padding: 18px 15px 12px;
               }
 
-              &.hljs[lang]:before {
-                content: attr(lang);
+              &.hljs[lang]::before {
                 position: absolute;
-                right: 15px;
                 top: 2px;
+                right: 15px;
                 color: hsla(0, 0%, 54.9%, 0.8);
+                content: attr(lang);
               }
 
-              &.hljs[lang][lang="bash"]:before {
+              &.hljs[lang][lang="bash"]::before {
                 content: "";
               }
 
               &.copyable {
                 .copy-code-btn {
-                  display: none;
                   position: absolute;
                   top: 6px;
                   right: 15px;
+                  display: none;
                   font-size: 12px;
                   line-height: 1;
-                  cursor: pointer;
                   color: hsla(0, 0%, 54.9%, 0.8);
+                  cursor: pointer;
                   transition: color 0.1s;
 
                   &:hover {
@@ -311,17 +311,17 @@ export default {
           }
 
           code {
-            font-size: 1rem;
             padding: 0.26rem 0.53em;
-            word-break: break-word;
-            color: #4e5980;
-            background-color: #f8f8f8;
-            border-radius: 2px;
-            overflow-x: auto;
-            background-color: #fff5f5;
-            color: #ff502c;
-            font-size: 0.87em;
             padding: 0.065em 0.4em;
+            overflow-x: auto;
+            font-size: 1rem;
+            font-size: 0.87em;
+            color: #4e5980;
+            color: #ff502c;
+            word-break: break-word;
+            background-color: #f8f8f8;
+            background-color: #fff5f5;
+            border-radius: 2px;
           }
 
           a {
@@ -332,17 +332,17 @@ export default {
 
           table {
             display: inline-block !important;
-            font-size: 1rem;
             width: auto;
             max-width: 100%;
             overflow: auto;
+            font-size: 1rem;
             border: 1px solid #f6f6f6;
           }
 
           thead {
-            background: #f6f6f6;
             color: #000;
             text-align: left;
+            background: #f6f6f6;
           }
 
           tr {
@@ -356,43 +356,43 @@ export default {
           }
 
           blockquote {
-            margin: 1em 0;
-            border-left: 4px solid #ddd;
             padding: 0 1.3rem;
-            color: #666;
             padding: 1px 23px;
+            margin: 1em 0;
             margin: 22px 0;
-            border-left: 4px solid #cbcbcb;
+            color: #666;
             background-color: #f8f8f8;
+            border-left: 4px solid #ddd;
+            border-left: 4px solid #cbcbcb;
 
             & > p {
               margin: 0.6rem 0;
               margin: 10px 0;
             }
 
-            &:after {
+            &::after {
               display: block;
               content: "";
             }
 
             &.warning {
               position: relative;
-              border-left-color: #f75151;
               margin-left: 8px;
+              border-left-color: #f75151;
 
-              &:before {
+              &::before {
                 position: absolute;
                 top: 14px;
                 left: -12px;
-                background: #f75151;
-                border-radius: 50%;
-                content: "!";
-                width: 20px;
-                height: 20px;
-                color: #fff;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                width: 20px;
+                height: 20px;
+                color: #fff;
+                content: "!";
+                background: #f75151;
+                border-radius: 50%;
               }
             }
           }
@@ -402,8 +402,8 @@ export default {
           }
 
           .hljs-meta {
-            color: #999;
             font-weight: 700;
+            color: #999;
           }
 
           .hljs-deletion {
@@ -435,8 +435,8 @@ export default {
           }
 
           h3 {
-            font-size: 18px;
             padding-bottom: 0;
+            font-size: 18px;
           }
 
           h4 {
@@ -509,8 +509,8 @@ export default {
         .article-content .hljs-keyword,
         .article-content .hljs-selector-tag,
         .article-content .hljs-subst {
-          color: #333;
           font-weight: 700;
+          color: #333;
         }
 
         .article-content .hljs-literal,
@@ -529,21 +529,21 @@ export default {
         .article-content .hljs-section,
         .article-content .hljs-selector-id,
         .article-content .hljs-title {
-          color: #900;
           font-weight: 700;
+          color: #900;
         }
 
         .article-content .hljs-class .hljs-title,
         .article-content .hljs-type {
-          color: #458;
           font-weight: 700;
+          color: #458;
         }
 
         .article-content .hljs-attribute,
         .article-content .hljs-name,
         .article-content .hljs-tag {
-          color: navy;
           font-weight: 400;
+          color: navy;
         }
 
         .article-content .hljs-link,
@@ -579,11 +579,11 @@ export default {
         .article-content h4,
         .article-content h5,
         .article-content h6 {
-          color: #333;
-          line-height: 1.5;
+          padding-bottom: 5px;
           margin-top: 35px;
           margin-bottom: 10px;
-          padding-bottom: 5px;
+          line-height: 1.5;
+          color: #333;
         }
       }
     }

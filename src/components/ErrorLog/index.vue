@@ -116,15 +116,15 @@ export default {
 
 <style lang="scss" scoped>
 .message-title {
+  padding-right: 8px;
   font-size: 16px;
   color: #333;
-  padding-right: 8px;
 }
 
 ::v-deep {
   .el-badge__content {
-    line-height: 14px !important;
     top: 1px !important;
+    line-height: 14px !important;
   }
 }
 </style>

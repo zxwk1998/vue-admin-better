@@ -93,21 +93,21 @@ export default {
 </script>
 <style scoped>
 .table-header-card {
-  padding: 10px;
-  margin-bottom: 10px;
-  margin-left: 0px;
-  margin-right: 10px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 0;
   border: 1px solid #dcdfe6;
   border-radius: 4px;
 }
 
 .table-header >>> .el-input__inner {
-  border-radius: 0;
   border: none;
   border-bottom: 1px solid #9e9e9e;
+  border-radius: 0;
 }
 
 .el-popover {

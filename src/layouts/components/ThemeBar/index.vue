@@ -116,14 +116,7 @@
 </template>
 
 <script>
-import {
-  menuBackground,
-  menuChildrenBackground,
-  menuBackgroundActive,
-  tagViewsBackgroundActive,
-  buttonBackground,
-  paginationBackgroundActive,
-} from "@/styles/variables.scss";
+import variables from "@/styles/variables.scss";
 import { mapGetters } from "vuex";
 import { themeBar } from "@/config/settings";
 
@@ -137,12 +130,12 @@ export default {
         layout: "",
         header: "",
         tagsView: "",
-        menuBackground,
-        menuChildrenBackground,
-        menuBackgroundActive,
-        tagViewsBackgroundActive,
-        buttonBackground,
-        paginationBackgroundActive,
+        menuBackground: variables["menu-background"],
+        menuChildrenBackground: variables["menu-children-background"],
+        menuBackgroundActive: variables["menu-background-active"],
+        tagViewsBackgroundActive: variables["tagviews-background-active"],
+        buttonBackground: variables["button-background"],
+        paginationBackgroundActive: variables["pagination-background-active"],
       },
     };
   },
@@ -261,48 +254,51 @@ export default {
 
 <style lang="scss" scoped>
 @mixin right-bar {
-  background: $base-color-blue;
-  border-radius: $base-border-radius;
+  position: fixed;
+  right: 0;
+  z-index: 99;
   width: 60px;
   min-height: 60px;
   text-align: center;
   cursor: pointer;
-  position: fixed;
-  z-index: 99;
-  right: 0;
+  background: $base-color-blue;
+  border-radius: $base-border-radius;
+
   &:hover {
     opacity: 0.9;
   }
+
   > div {
     padding-top: 10px;
 
     p {
-      color: $base-color-white;
       font-size: $base-font-size-small;
       line-height: 30px;
+      color: $base-color-white;
     }
   }
 }
 
 .theme-bar-setting {
   @include right-bar;
+
   top: 40vh;
 
   ::v-deep {
     svg:not(:root).svg-inline--fa {
       display: block;
-      margin-left: auto;
       margin-right: auto;
+      margin-left: auto;
       color: $base-color-white;
     }
 
     .svg-icon {
       display: block;
-      margin-left: auto !important;
       margin-right: auto !important;
+      margin-left: auto !important;
+      font-size: 20px !important;
       color: $base-color-white !important;
       fill: $base-color-white !important;
-      font-size: 20px !important;
     }
   }
 }

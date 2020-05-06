@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* byui scss全局变量开始 */
+
 $base-color-default: #1890ff;
 
 $base-menu-background: #001529;
@@ -7,7 +7,7 @@ $base-menu-children-background: #000c17;
 $base-menu-background-active: $base-color-default;
 $base-menu-text: hsla(0, 0%, 100%, 0.95);
 $base-menu-text-active: hsla(0, 0%, 100%, 0.95);
-$base-title: #ffffff;
+$base-title: #fff;
 
 $base-font-size-small: 12px;
 $base-font-size-default: 14px;
@@ -17,8 +17,8 @@ $base-font-size-max: 22px;
 $base-color-header: $base-menu-background;
 $base-color-blue: $base-color-default;
 $base-color-green: #13ce66;
-$base-color-white: #ffffff;
-$base-color-black: #000000;
+$base-color-white: #fff;
+$base-color-black: #000;
 $base-color-yellow: #ffba00;
 $base-color-red: #ff4d4f;
 $base-color-gray: rgba(0, 0, 0, 0.65);
@@ -36,14 +36,15 @@ $base-left-menu-width: 220px;
 $base-right-content-width: calc(100% - 220px);
 $base-left-menu-width-min: 65px;
 $base-right-content-width-min: calc(100% - 65px);
-/* byui scss全局变量结束 */
+
+/* stylelint-disable */
 :export {
-  menuText: $base-menu-text;
-  menuTextAcive: $base-menu-text-active;
-  menuBackground: $base-menu-background;
-  menuChildrenBackground: $base-menu-children-background;
-  menuBackgroundActive: $base-menu-background-active;
-  tagViewsBackgroundActive: $base-color-blue;
-  buttonBackground: $base-color-blue;
-  paginationBackgroundActive: $base-color-blue;
+  menu-text: $base-menu-text;
+  menu-text-active: $base-menu-text-active;
+  menu-background: $base-menu-background;
+  menu-children-background: $base-menu-children-background;
+  menu-background-active: $base-menu-background-active;
+  tagviews-background-active: $base-color-blue;
+  button-background: $base-color-blue;
+  pagination-background-active: $base-color-blue;
 }

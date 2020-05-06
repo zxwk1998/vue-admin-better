@@ -66,6 +66,7 @@ export default {
 .card {
   --card-bg-color: hsl(240, 31%, 25%);
   --card-bg-color-transparent: hsla(240, 31%, 25%, 0.7);
+
   position: relative;
   width: 100%;
   height: 100%;
@@ -127,6 +128,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
     padding: 40px 0 40px 0;
     background: var(--card-bg-color-transparent);
     box-shadow: 0 0 0.6px rgba(0, 0, 0, 0.028), 0 0 1.3px rgba(0, 0, 0, 0.04),
@@ -135,35 +137,34 @@ export default {
     opacity: 0;
     transform: scale(0.6);
     animation: bump-in 0.5s 0.8s forwards;
-    height: 100%;
 
     .avatar {
       width: 80px;
       height: 80px;
+      border: 1px solid $base-color-white;
       border-radius: 50%;
       opacity: 0;
       transform: scale(0.6);
-      border: 1px solid $base-color-white;
       animation: bump-in 0.5s 1s forwards;
     }
 
     .username {
       position: relative;
-      font-size: 26px;
-      letter-spacing: 2px;
       margin-top: 20px;
       margin-bottom: 20px;
+      font-size: 26px;
       color: transparent;
+      letter-spacing: 2px;
       animation: fill-text-white 1.2s 2s forwards;
 
       &::before {
         position: absolute;
-        content: "";
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         color: black;
+        content: "";
         background: #35b9f1;
         transform: scaleX(0);
         transform-origin: left;
@@ -177,14 +178,14 @@ export default {
       .social-icon {
         position: relative;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         width: 2.5em;
         height: 2.5em;
         margin: 0 15px;
-        border-radius: 50%;
         color: white;
         text-decoration: none;
+        border-radius: 50%;
 
         @for $i from 1 through 3 {
           &:nth-child(#{$i}) {
@@ -205,11 +206,11 @@ export default {
         &::before,
         &::after {
           position: absolute;
-          content: "";
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
+          content: "";
           border-radius: inherit;
           transform: scale(0);
         }

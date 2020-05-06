@@ -141,20 +141,20 @@ export default {
 
 <style scoped>
 .excel-upload-input {
-  display: none;
   z-index: -9999;
+  display: none;
 }
 
 .drop {
-  border: 2px dashed #bbb;
+  position: relative;
   width: 600px;
   height: 160px;
-  line-height: 160px;
   margin: 0 auto;
   font-size: 24px;
-  border-radius: 5px;
-  text-align: center;
+  line-height: 160px;
   color: #bbb;
-  position: relative;
+  text-align: center;
+  border: 2px dashed #bbb;
+  border-radius: 5px;
 }
 </style>

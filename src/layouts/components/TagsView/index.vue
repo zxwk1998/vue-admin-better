@@ -249,21 +249,21 @@ export default {
 
 <style lang="scss" scoped>
 .tags-view-container {
-  user-select: none;
-  height: 44px;
   position: relative;
-  background: $base-color-white;
   box-sizing: border-box;
+  height: 44px;
+  user-select: none;
+  background: $base-color-white;
 
   .tags-icon {
     float: left;
     width: 30px;
-    vertical-align: auto;
     margin-top: 16px;
     font-size: $base-font-size-default;
     color: $base-color-gray;
-    cursor: pointer;
     text-align: center;
+    vertical-align: auto;
+    cursor: pointer;
 
     &:hover {
       opacity: 0.9;
@@ -276,35 +276,35 @@ export default {
 
     .tags-view-item {
       position: relative;
-      cursor: pointer;
-      height: $base-input-height;
-      line-height: $base-input-height;
-      border: 1px solid $base-border-color;
-      background: $base-color-white;
-      font-size: $base-font-size-small;
-      border-radius: $base-border-radius;
-      margin-right: 5px;
-      margin-top: 6px;
       display: inline-flex;
-      justify-items: center;
       align-items: center;
+      justify-items: center;
+      height: $base-input-height;
       padding: 0 15px 0 15px;
+      margin-top: 6px;
+      margin-right: 5px;
+      font-size: $base-font-size-small;
+      line-height: $base-input-height;
+      cursor: pointer;
+      background: $base-color-white;
+      border: 1px solid $base-border-color;
+      border-radius: $base-border-radius;
 
       &.active {
+        color: $base-color-white;
         background-color: $base-color-blue;
         border: 1px solid $base-color-blue;
-        color: $base-color-white;
       }
 
       .el-icon-close {
-        margin: 0 0 0 3px;
-        width: 15px;
-        height: 15px;
+        position: relative;
         box-sizing: border-box;
         display: inline-flex;
-        justify-items: center;
         align-items: center;
-        position: relative;
+        justify-items: center;
+        width: 15px;
+        height: 15px;
+        margin: 0 0 0 3px;
 
         &::before {
           position: absolute;
@@ -313,30 +313,30 @@ export default {
         }
 
         &:hover {
-          border-radius: 50%;
-          background-color: $base-color-red;
           color: $base-color-white;
+          background-color: $base-color-red;
+          border-radius: 50%;
         }
       }
     }
   }
 
   .contextmenu {
-    margin: 0;
-    background: #fff;
-    z-index: 999;
     position: fixed;
-    list-style-type: none;
+    z-index: 999;
     padding: 5px 0;
-    border-radius: 4px;
+    margin: 0;
     font-size: $base-font-size-small;
     font-weight: 400;
     color: #333;
+    list-style-type: none;
+    background: #fff;
+    border-radius: 4px;
     box-shadow: $base-box-shadow;
 
     li {
-      margin: 0;
       padding: 7px 16px;
+      margin: 0;
       cursor: pointer;
 
       .svg-inline--fa {

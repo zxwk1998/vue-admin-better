@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /* Transition
 -------------------------- */
 $--all-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -6,8 +7,7 @@ $--fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
 $--fade-linear-transition: opacity 200ms linear;
 $--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1),
   opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
-$--border-transition-base: border-color 0.2s
-  cubic-bezier(0.645, 0.045, 0.355, 1);
+$--border-transition-base: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 $--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 /* Color
@@ -15,54 +15,72 @@ $--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 /// color|1|Brand Color|0
 $--color-primary: $base-color-blue;
 /// color|1|Background Color|4
-$--color-white: #ffffff;
+$--color-white: #fff;
 /// color|1|Background Color|4
-$--color-black: #000000;
+$--color-black: #000;
 $--color-primary-light-1: mix(
   $--color-white,
   $--color-primary,
   10%
-); /* 53a8ff */
+);
+
+/* 53a8ff */
 $--color-primary-light-2: mix(
   $--color-white,
   $--color-primary,
   20%
-); /* 66b1ff */
+);
+
+/* 66b1ff */
 $--color-primary-light-3: mix(
   $--color-white,
   $--color-primary,
   30%
-); /* 79bbff */
+);
+
+/* 79bbff */
 $--color-primary-light-4: mix(
   $--color-white,
   $--color-primary,
   40%
-); /* 8cc5ff */
+);
+
+/* 8cc5ff */
 $--color-primary-light-5: mix(
   $--color-white,
   $--color-primary,
   50%
-); /* a0cfff */
+);
+
+/* a0cfff */
 $--color-primary-light-6: mix(
   $--color-white,
   $--color-primary,
   60%
-); /* b3d8ff */
+);
+
+/* b3d8ff */
 $--color-primary-light-7: mix(
   $--color-white,
   $--color-primary,
   70%
-); /* c6e2ff */
+);
+
+/* c6e2ff */
 $--color-primary-light-8: mix(
   $--color-white,
   $--color-primary,
   80%
-); /* d9ecff */
+);
+
+/* d9ecff */
 $--color-primary-light-9: mix(
   $--color-white,
   $--color-primary,
   90%
-); /* ecf5ff */
+);
+
+/* ecf5ff */
 /// color|1|Functional Color|1
 $--color-success: $base-color-green;
 /// color|1|Functional Color|1
@@ -124,9 +142,11 @@ $--border-radius-zero: 0;
 
 // Box-shadow
 /// boxShadow|1|Shadow|1
-$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12),
+  0 0 6px rgba(0, 0, 0, 0.04);
 // boxShadow|1|Shadow|1
-$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12);
+$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12),
+  0 0 6px rgba(0, 0, 0, 0.12);
 /// boxShadow|1|Shadow|1
 $--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 
@@ -159,6 +179,7 @@ $--font-line-height-primary: 24px;
 /// fontLineHeight|1|Line Height|2
 $--font-line-height-secondary: 16px;
 $--font-color-disabled-base: #bbb;
+
 /* Size
 -------------------------- */
 $--size-base: 14px;
@@ -776,7 +797,7 @@ $--badge-padding: 6px;
 $--badge-size: 18px;
 
 /* Card
---------------------------*/
+-------------------------- */
 /// color||Color|0
 $--card-border-color: $--border-color-lighter;
 $--card-border-radius: 4px;
@@ -784,7 +805,7 @@ $--card-border-radius: 4px;
 $--card-padding: 20px;
 
 /* Slider
---------------------------*/
+-------------------------- */
 /// color||Color|0
 $--slider-main-background-color: $--color-primary;
 /// color||Color|0
@@ -802,13 +823,13 @@ $--slider-button-wrapper-size: 36px;
 $--slider-button-wrapper-offset: -15px;
 
 /* Steps
---------------------------*/
+-------------------------- */
 $--steps-border-color: $--disabled-border-base;
 $--steps-border-radius: 4px;
 $--steps-padding: 20px;
 
 /* Menu
---------------------------*/
+-------------------------- */
 /// fontSize||Font|1
 $--menu-item-font-size: $--font-size-base;
 /// color||Color|0
@@ -818,7 +839,7 @@ $--menu-background-color: $--color-white;
 $--menu-item-hover-fill: $--color-primary-light-9;
 
 /* Rate
---------------------------*/
+-------------------------- */
 $--rate-height: 20px;
 /// fontSize||Font|1
 $--rate-font-size: $--font-size-base;
@@ -829,7 +850,7 @@ $--rate-icon-margin: 6px;
 $--rate-icon-color: $--color-text-placeholder;
 
 /* DatePicker
---------------------------*/
+-------------------------- */
 $--datepicker-font-color: $--color-text-regular;
 /// color|1|Color|0
 $--datepicker-off-font-color: $--color-text-placeholder;
@@ -849,19 +870,19 @@ $--datepicker-hover-font-color: $--color-primary;
 $--datepicker-cell-hover-color: #fff;
 
 /* Loading
---------------------------*/
+-------------------------- */
 /// height||Other|4
 $--loading-spinner-size: 42px;
 /// height||Other|4
 $--loading-fullscreen-spinner-size: 50px;
 
 /* Scrollbar
---------------------------*/
+-------------------------- */
 $--scrollbar-background-color: rgba($--color-text-secondary, 0.3);
 $--scrollbar-hover-background-color: rgba($--color-text-secondary, 0.5);
 
 /* Carousel
---------------------------*/
+-------------------------- */
 /// fontSize||Font|1
 $--carousel-arrow-font-size: 12px;
 $--carousel-arrow-size: 36px;
@@ -876,7 +897,7 @@ $--carousel-indicator-padding-vertical: 12px;
 $--carousel-indicator-out-color: $--border-color-hover;
 
 /* Collapse
---------------------------*/
+-------------------------- */
 /// color||Color|0
 $--collapse-border-color: $--border-color-lighter;
 /// height||Other|4
@@ -895,7 +916,7 @@ $--collapse-content-font-size: 13px;
 $--collapse-content-font-color: $--color-text-primary;
 
 /* Transfer
---------------------------*/
+-------------------------- */
 $--transfer-border-color: $--border-color-lighter;
 $--transfer-border-radius: $--border-radius-base;
 /// height||Other|4
@@ -914,25 +935,25 @@ $--transfer-item-height: 30px;
 $--transfer-filter-height: 32px;
 
 /* Header
-  --------------------------*/
+  -------------------------- */
 $--header-padding: 0 20px;
 
 /* Footer
---------------------------*/
+-------------------------- */
 $--footer-padding: 0 20px;
 
 /* Main
---------------------------*/
+-------------------------- */
 $--main-padding: 20px;
 
 /* Timeline
---------------------------*/
+-------------------------- */
 $--timeline-node-size-normal: 12px;
 $--timeline-node-size-large: 14px;
 $--timeline-node-color: $--border-color-light;
 
 /* Backtop
---------------------------*/
+-------------------------- */
 /// color||Color|0
 $--backtop-background-color: $--color-white;
 /// color||Color|0
@@ -941,7 +962,7 @@ $--backtop-font-color: $--color-primary;
 $--backtop-hover-background-color: $--border-color-extra-light;
 
 /* Link
---------------------------*/
+-------------------------- */
 /// fontSize||Font|1
 $--link-font-size: $--font-size-base;
 /// fontWeight||Font|1
@@ -962,8 +983,9 @@ $--link-warning-font-color: $--color-warning;
 $--link-danger-font-color: $--color-danger;
 /// color||Color|0
 $--link-info-font-color: $--color-info;
+
 /* Calendar
---------------------------*/
+-------------------------- */
 /// border||Other|4
 $--calendar-border: $--table-border;
 /// color||Other|4
@@ -976,7 +998,7 @@ $--calendar-cell-width: 85px;
 $--form-label-font-size: $--font-size-base;
 
 /* Avatar
---------------------------*/
+-------------------------- */
 /// color||Color|0
 $--avatar-font-color: #fff;
 /// color||Color|0
@@ -995,58 +1017,43 @@ $--avatar-medium-size: 36px;
 $--avatar-small-size: 28px;
 
 /* Break-point
---------------------------*/
+-------------------------- */
 $--sm: 768px;
 $--md: 992px;
 $--lg: 1200px;
 $--xl: 1920px;
 
-$--breakpoints: (
-  "xs": (
-    max-width: $--sm - 1,
-  ),
-  "sm": (
-    min-width: $--sm,
-  ),
-  "md": (
-    min-width: $--md,
-  ),
-  "lg": (
-    min-width: $--lg,
-  ),
-  "xl": (
-    min-width: $--xl,
-  ),
+$--breakpoints: ("xs": (max-width: $--sm - 1,
+),
+"sm": (min-width: $--sm,
+),
+"md": (min-width: $--md,
+),
+"lg": (min-width: $--lg,
+),
+"xl": (min-width: $--xl,
+),
 );
 
-$--breakpoints-spec: (
-  "xs-only": (
-    max-width: $--sm - 1,
-  ),
-  "sm-and-up": (
-    min-width: $--sm,
-  ),
-  "sm-only": "(min-width: #{$--sm}) and (max-width: #{$--md - 1})",
-  "sm-and-down": (
-    max-width: $--md - 1,
-  ),
-  "md-and-up": (
-    min-width: $--md,
-  ),
-  "md-only": "(min-width: #{$--md}) and (max-width: #{$--lg - 1})",
-  "md-and-down": (
-    max-width: $--lg - 1,
-  ),
-  "lg-and-up": (
-    min-width: $--lg,
-  ),
-  "lg-only": "(min-width: #{$--lg}) and (max-width: #{$--xl - 1})",
-  "lg-and-down": (
-    max-width: $--xl - 1,
-  ),
-  "xl-only": (
-    min-width: $--xl,
-  ),
+$--breakpoints-spec: ("xs-only": (max-width: $--sm - 1,
+),
+"sm-and-up": (min-width: $--sm,
+),
+"sm-only": "(min-width: #{$--sm}) and (max-width: #{$--md - 1})",
+"sm-and-down": (max-width: $--md - 1,
+),
+"md-and-up": (min-width: $--md,
+),
+"md-only": "(min-width: #{$--md}) and (max-width: #{$--lg - 1})",
+"md-and-down": (max-width: $--lg - 1,
+),
+"lg-and-up": (min-width: $--lg,
+),
+"lg-only": "(min-width: #{$--lg}) and (max-width: #{$--xl - 1})",
+"lg-and-down": (max-width: $--xl - 1,
+),
+"xl-only": (min-width: $--xl,
+),
 );
 
 @import "~element-ui/packages/theme-chalk/src/index";

@@ -104,18 +104,18 @@ export default {
 <style lang="scss" scoped>
 @mixin fix-header {
   position: fixed;
-  left: 0;
   top: 0;
   right: 0;
+  left: 0;
   z-index: 97;
   width: 100%;
   overflow: hidden;
 }
 
 .app-wrapper {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
 
   .layout-container-horizontal {
     position: relative;
@@ -153,8 +153,8 @@ export default {
         margin-bottom: 15px;
 
         .app-main-container {
-          background: $base-color-white;
           min-height: calc(100vh - 180px);
+          background: $base-color-white;
         }
       }
     }
@@ -164,17 +164,17 @@ export default {
     position: relative;
 
     .mask {
-      background: #000;
-      opacity: 0.5;
-      width: 100%;
+      position: fixed;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      height: 100vh;
-      position: fixed;
       z-index: 98;
+      width: 100%;
+      height: 100vh;
       overflow: hidden;
+      background: #000;
+      opacity: 0.5;
     }
 
     &.fixed {
@@ -186,19 +186,20 @@ export default {
     }
 
     .byui-main {
+      position: relative;
+      min-height: 100%;
       margin-left: $base-left-menu-width;
       background: #f6f8f9;
-      min-height: 100%;
       transition: all 0.2s ease-in-out;
-      position: relative;
 
       ::v-deep {
         .fixed-header {
           @include fix-header;
-          transition: all 0.2s ease-in-out;
+
           left: $base-left-menu-width;
           width: $base-right-content-width;
           box-shadow: $base-box-shadow;
+          transition: all 0.2s ease-in-out;
         }
 
         .nav-bar-container {
@@ -207,17 +208,17 @@ export default {
         }
 
         .tags-view-container {
-          padding-left: 5px;
-          padding-right: 5px;
           box-sizing: border-box;
+          padding-right: 5px;
+          padding-left: 5px;
         }
 
         .app-main-container {
-          margin: 15px auto;
           width: calc(100% - 30px);
-          border-radius: $base-border-radius;
-          background: $base-color-white;
           min-height: calc(100vh - 127px);
+          margin: 15px auto;
+          background: $base-color-white;
+          border-radius: $base-border-radius;
           box-shadow: $base-box-shadow;
         }
       }
@@ -227,15 +228,15 @@ export default {
 
         ::v-deep {
           .fixed-header {
-            width: calc(100% - 65px);
             left: $base-left-menu-width-min;
+            width: calc(100% - 65px);
           }
         }
       }
     }
   }
 
-  /*手机端开始*/
+  /* 手机端开始 */
   &.mobile {
     ::v-deep {
       .el-pager,
@@ -253,8 +254,8 @@ export default {
           margin-left: 0;
 
           .app-main-container {
-            margin: 5px !important;
             width: calc(100% - 10px) !important;
+            margin: 5px !important;
           }
         }
       }
@@ -268,6 +269,6 @@ export default {
     }
   }
 
-  /*手机端结束*/
+  /* 手机端结束 */
 }
 </style>

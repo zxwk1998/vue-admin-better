@@ -20,9 +20,9 @@ export default {
 <style lang="scss" scoped>
 @mixin panel {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .byui-query-form {
@@ -35,8 +35,9 @@ export default {
 
     .bottom-panel {
       @include panel;
-      border-top: 1px solid #dcdfe6;
+
       padding-top: 14px;
+      border-top: 1px solid #dcdfe6;
     }
 
     .left-panel {
@@ -50,6 +51,7 @@ export default {
 
     .right-panel {
       @include panel;
+
       justify-content: flex-end;
 
       .el-form-item {

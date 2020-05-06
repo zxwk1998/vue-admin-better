@@ -80,16 +80,16 @@ export default {
 
 <style lang="scss" scoped>
 .scroll-container {
-  white-space: nowrap;
   position: relative;
-  overflow: hidden;
   width: 100%;
   min-height: 38px;
+  overflow: hidden;
+  white-space: nowrap;
 
-  /*::v-deep {
+  /* ::v-deep {
           .el-scrollbar__thumb {
             transition: transform 0.5s ease-in-out;
           }
-        }*/
+        } */
 }
 </style>

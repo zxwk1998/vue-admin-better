@@ -200,6 +200,7 @@ export default {
 <style lang="scss" scoped>
 .lodash-container {
   text-align: left;
+
   ::v-deep {
     .lodash-content {
       min-height: 150px;

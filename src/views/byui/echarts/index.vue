@@ -1098,15 +1098,15 @@ export default {
 }
 
 .pie-legend {
-  margin-bottom: 10px;
   height: 34px;
+  margin-bottom: 10px;
   line-height: 34px;
-  border: 1px solid #153b7c;
   color: #b2e1ff;
-  text-indent: 5px;
-  background-size: 100% 100%;
-  cursor: pointer;
   text-align: left;
+  text-indent: 5px;
+  cursor: pointer;
+  background-size: 100% 100%;
+  border: 1px solid #153b7c;
 }
 
 .pie-legend:hover {
@@ -1121,11 +1121,11 @@ export default {
 }
 
 .pie-legend span:last-child {
-  float: right;
   display: inline-block;
-  font-size: 20px;
-  color: #2cffe4;
-  font-weight: bold;
+  float: right;
   margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2cffe4;
 }
 </style>

@@ -7,9 +7,9 @@
         </el-col>
         <el-col :xs="24" :sm="18" :md="18" :lg="18" :xl="18">
           <el-menu
-            :background-color="variables.menuBackground"
-            :text-color="variables.menuText"
-            :active-text-color="variables.menuTextAcive"
+            :background-color="variables['menu-background']"
+            :text-color="variables['menu-text']"
+            :active-text-color="variables['menu-text-active']"
             :default-active="activeMenu"
             :menu-trigger="menuTrigger"
             mode="horizontal"

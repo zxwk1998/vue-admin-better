@@ -99,10 +99,10 @@ export default {
 .small-components-container {
   ::v-deep {
     .el-card__body {
-      height: 430px;
       display: flex;
-      justify-content: center; /* 水平居中 */
       align-items: center; /* 垂直居中 */
+      justify-content: center; /* 水平居中 */
+      height: 430px;
     }
   }
 }

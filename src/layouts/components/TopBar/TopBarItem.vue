@@ -164,8 +164,8 @@ export default {
       .el-menu-item {
         &.el-submenu {
           &__title {
-            text-align: left;
             box-sizing: border-box;
+            text-align: left;
 
             span {
               margin-left: 5px;

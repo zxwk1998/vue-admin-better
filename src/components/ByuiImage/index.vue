@@ -65,27 +65,27 @@ export default {
 
     &__small {
       position: absolute;
-      width: 80px;
-      height: 100px;
       top: 0;
       right: 0;
-      border-radius: $base-border-radius;
-      border-left: 1px solid $base-color-white;
+      width: 80px;
+      height: 100px;
       border-bottom: 1px solid $base-color-white;
+      border-left: 1px solid $base-color-white;
+      border-radius: $base-border-radius;
     }
 
     &__percent {
       position: absolute;
-      display: inline-block;
-      bottom: 0;
       right: 0;
+      bottom: 0;
+      display: inline-block;
       min-width: 50px;
       height: 25px;
       line-height: 25px;
-      text-align: center;
       color: $base-color-white;
-      border-radius: $base-border-radius;
+      text-align: center;
       background-color: $base-color-red;
+      border-radius: $base-border-radius;
       border-radius: $base-border-radius;
     }
   }
