@@ -34,7 +34,7 @@ npm run serve
 
 ## vue-admin-beautiful 前端讨论群-1 972435319
 
-不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 群里的任何问题我都会一一解答 感谢您的信任
+不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 群里的任何问题我都会一一解答 感谢您的信任 群内提供 vue-admin-beautiful-template 基础版本
 
 ![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
 
