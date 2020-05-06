@@ -105,19 +105,18 @@ export default {
       );
     },
     refreshSelectedTag() {
+      console.log(this.$route);
       this.pulse = true;
-      this.$nextTick(() => {
-        this.$router
-          .replace({
-            path: "/redirect" + this.$route.path,
-          })
-          .then(() => {
-            setTimeout(() => {
-              this.pulse = false;
-            }, 1000);
-          })
-          .catch(() => {});
-      });
+      this.$router
+        .replace({
+          path: "/redirect" + this.$route.fullPath,
+        })
+        .then(() => {
+          setTimeout(() => {
+            this.pulse = false;
+          }, 1000);
+        })
+        .catch(() => {});
     },
     handleCommand(command) {
       switch (command) {
