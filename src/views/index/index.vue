@@ -698,42 +698,45 @@ export default {
   }
 
   .bottom {
-    margin-top: 5px;
     height: 40px;
     padding-top: 20px;
-    border-top: 1px solid $base-border-color;
-    text-align: left;
+    margin-top: 5px;
     color: #595959;
+    text-align: left;
+    border-top: 1px solid $base-border-color;
   }
 
   .table {
     width: 100%;
-    background-color: #fff;
     color: #666;
     border-collapse: collapse;
+    background-color: #fff;
 
     td {
-      border-width: 1px;
-      border-style: solid;
-      border-color: #e6e6e6;
       position: relative;
-      padding: 9px 15px;
       min-height: 20px;
-      line-height: 20px;
+      padding: 9px 15px;
       font-size: 14px;
+      line-height: 20px;
+      border-color: #e6e6e6;
+      border-style: solid;
+      border-width: 1px;
 
       &:first-child {
-        text-align: right;
         width: 50%;
+        text-align: right;
       }
     }
   }
+
   .icon-panel {
-    cursor: pointer;
     text-align: center;
+    cursor: pointer;
+
     svg {
       font-size: 40px;
     }
+
     p {
       margin-top: 20px;
     }
