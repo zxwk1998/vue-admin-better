@@ -34,13 +34,13 @@ npm run serve
 
 ## vue-admin-beautiful 前端讨论群-1 972435319
 
-不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 群里的任何问题我都会一一解答 感谢您的信任 群内提供 vue-admin-beautiful-template 基础版本
+不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 群里的任何问题我都会一一解答 感谢您的信任 群内提供 vue-admin-beautiful-template 基础版本 群内提供很详细的基础文档 适合框架快速入门
 
 ![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
 
 ## vue-admin-beautiful 前端讨论群-VIP 805808910
 
-群内问题优先回答 群主每周在线授课 提供脚手架搭建在线指导 组件封装方法指导 NPM 发包开发组件指导（需付费 88-无限大有钱的多给没钱的能商量，帮助你的同时也帮了群主，感谢信任）
+群内问题优先回答 群主每周在线授课 提供脚手架搭建在线指导 组件封装方法指导 NPM 发包开发组件指导（需付费 88-无限大，帮助你的同时也帮了群主，感谢信任）群内提供专属 VIP 文档 能快速掌握脚手架搭建 开发工具配置的技巧（其实 50%的重复工作都可以靠工具来完成）
 
 ![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm_vip.png)
 
