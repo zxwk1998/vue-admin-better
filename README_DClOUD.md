@@ -1,16 +1,16 @@
 # 更新日志
 
-## 2020/05/06 添加 stylelint-plus 自动规整排序 css 样式
+## 2020/05/07 添加 excel 导入导出
 
-## 插件市场问题反馈
-
-插件市场服务器似乎出现了一些问题，无法上传更新日志，github 可以查看到最新的代码的提交情况[github 地址点这里](https://github.com/chuzhixin/vue-admin-beautiful)
+更新日志详情已变更到演示网站首页底部[github 地址点这里](https://github.com/chuzhixin/vue-admin-beautiful)
 
 ## [vue-admin-beautiful 演示地址](http://chu1204505056.gitee.io/vue-admin-beautiful)
 
 ## ★★★ ☝☝☝ 演示地址,在上方直接点击登录即可！★★★
 
-## 官方问题解答讨论群 972435319
+## 官方问题解答讨论群
+
+已移至 github 及网站首页，放在此处有打广告嫌疑，就不放了
 
 ## 鸣谢 HBuilderX,prettier,Vue
 

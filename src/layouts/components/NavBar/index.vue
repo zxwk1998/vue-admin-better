@@ -105,7 +105,6 @@ export default {
       );
     },
     refreshSelectedTag() {
-      console.log(this.$route);
       this.pulse = true;
       this.$router
         .replace({
