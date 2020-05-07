@@ -198,13 +198,15 @@
         :lg="3"
         :xl="3"
       >
-        <el-card class="icon-panel" shadow="never">
-          <byui-icon
-            :style="{ color: item.color }"
-            :icon="['fas', item.icon]"
-          ></byui-icon>
-          <p>{{ item.title }}</p>
-        </el-card>
+        <router-link :to="item.link">
+          <el-card class="icon-panel" shadow="never">
+            <byui-icon
+              :style="{ color: item.color }"
+              :icon="['fas', item.icon]"
+            ></byui-icon>
+            <p>{{ item.title }}</p>
+          </el-card>
+        </router-link>
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <el-card class="card" shadow="never">
@@ -589,36 +591,37 @@ export default {
         {
           icon: "video",
           title: "视频播放器",
-          link: "",
+          link: "/byui/player",
           color: "#ffc069",
         },
         {
+          icon: "table",
+          title: "表格",
+          link: "/byui/table",
+          color: "#5cdbd3",
+        },
+        {
           icon: "bullhorn",
-          title: "通知公告",
+          title: "XXX",
           link: "",
           color: "#ff85c0",
         },
         {
           icon: "book",
-          title: "开发文档",
+          title: "XXX",
           link: "",
           color: "#69c0ff",
         },
-        {
-          icon: "table",
-          title: "表格",
-          link: "",
-          color: "#5cdbd3",
-        },
+
         {
           icon: "gift",
-          title: "礼物",
+          title: "XXX",
           link: "",
           color: "#ffd666",
         },
         {
           icon: "laptop-code",
-          title: "源码",
+          title: "XXX",
           link: "",
           color: "#b37feb",
         },
