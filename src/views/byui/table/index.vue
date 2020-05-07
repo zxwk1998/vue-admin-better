@@ -12,9 +12,6 @@
         <el-button type="primary" @click="testALert">baseAlert</el-button>
         <el-button type="primary" @click="testConfirm">baseConfirm</el-button>
         <el-button type="primary" @click="testNotify">baseNotify</el-button>
-        <el-button v-if="checkPermission(['admin'])" type="primary"
-          >按钮级权限
-        </el-button>
       </byui-query-form-left-panel>
       <byui-query-form-right-panel>
         <el-form
@@ -115,7 +112,6 @@
 </template>
 
 <script>
-import checkPermission from "@/utils/permission";
 import { getList, doDelete } from "@/api/table";
 import Edit from "./components/edit";
 
@@ -251,7 +247,6 @@ export default {
     testNotify() {
       this.$baseNotify("测试消息提示", "test", "success", "bottom-right");
     },
-    checkPermission,
   },
 };
 </script>

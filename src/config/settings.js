@@ -14,11 +14,11 @@ module.exports = {
   layout: "vertical", //横纵布局 horizontal vertical
   themeBar: true, //是否开启主题配置按钮
   tagsView: true, //是否显示多标签页
+  contentType: "application/json;charset=UTF-8", //配后端数据的接收方式application/json;charset=UTF-8或者application/x-www-form-urlencoded;charset=UTF-8
   messageDuration: 3000, //消息框消失时间
   requestTimeout: 5000, //最长请求时间
   successCode: 200, //操作正常code
   invalidCode: 402, //登录失效code
-  errorCode: 500, //系统异常code
   noPermissionCode: 401, //无权限code
   errorLog: ["development", "test", "production"], //是否显示在页面高亮错误
   shieldF12: false, //设置生产环境是否屏蔽f12等开发组工具快捷键

@@ -1,11 +1,10 @@
 import request from "@/utils/request";
 import { encryptedData } from "@/utils/encrypt";
 import { getPublicKey } from "@/api/publicKey";
-import { loginRSA } from "@/config/settings";
-
+import { loginRSA, contentType } from "@/config/settings";
 export async function login(data) {
   let headers = {
-    "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
+    "Content-Type": contentType,
   };
   if (loginRSA) {
     data = await encryptedData(data);

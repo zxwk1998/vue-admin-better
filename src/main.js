@@ -8,7 +8,9 @@ if (process.env.NODE_ENV === "test") {
   const { mockXHR } = require("../mock/static");
   mockXHR();
 }
+
 Vue.config.productionTip = false;
+
 new Vue({
   el: "#BYUI_APP",
   router,

@@ -22,7 +22,18 @@
         {{ JSON.stringify(roles) }}
       </el-form-item>
     </el-form>
-
+    <el-divider content-position="left">
+      按钮级权限演示
+    </el-divider>
+    <el-button v-if="checkPermission(['admin'])" type="primary"
+      >我是拥有["admin"]权限的按钮
+    </el-button>
+    <el-button v-if="checkPermission(['editor'])" type="primary"
+      >我是拥有["editor"]权限的按钮
+    </el-button>
+    <el-button v-if="checkPermission(['test'])" type="primary"
+      >我是拥有["test"]权限的按钮
+    </el-button>
     <el-divider content-position="left">
       all模式,路由以及view文件引入全部交给后端(权限复杂,且随时变更,建议使用此方案)
     </el-divider>
@@ -79,6 +90,7 @@
 </template>
 
 <script>
+import checkPermission from "@/utils/permission";
 import { mapGetters } from "vuex";
 import { tokenTableName } from "@/config/settings";
 import { getRouterList } from "@/api/router";
@@ -121,6 +133,7 @@ export default {
         this.res = res;
       });
     },
+    checkPermission,
   },
 };
 </script>
