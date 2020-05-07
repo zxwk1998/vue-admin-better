@@ -11,7 +11,7 @@
           <byui-keel-heading :img="true" />
           <byui-keel-text :lines="8" />
         </byui-keel>
-        <router-view :key="key" />
+        <router-view :key="key" style="min-height: 78vh;" />
       </keep-alive>
     </transition>
     <footer class="footer-copyright">

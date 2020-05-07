@@ -3,7 +3,7 @@ module.exports = {
   abbreviation: "byui", //简写
   devPort: "80", //开发环境端口号
   version: "V1.0", //版本号
-  copyright: "初志鑫1204505056@qq.com", //烦请保留版权，如需去除请联系群主
+  copyright: "chuzhixin1204505056@qq.com", //烦请保留版权，如需去除请联系群主
   routesWhiteList: ["/login", "/404", "/401"], //不经过token校验的路由
   loadingText: "正在加载中...", //加载时显示文字
   tokenName: "accessToken", //token名称
