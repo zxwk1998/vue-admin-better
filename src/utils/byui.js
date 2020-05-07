@@ -1,13 +1,14 @@
-import { layout, loadingText, messageDuration, title } from "@/config/settings";
+import { loadingText, messageDuration, title } from "@/config/settings";
 import * as lodash from "lodash";
 import { Loading, Message, MessageBox, Notification } from "element-ui";
 import store from "@/store";
+const { accessToken, layout } = store.getters;
 import { getAccessToken } from "@/utils/accessToken";
 
 const install = (Vue, opts = {}) => {
   /* 全局accessToken */
   Vue.prototype.$baseAccessToken = () => {
-    return store.getters.accessToken || getAccessToken();
+    return accessToken || getAccessToken();
   };
   /* 全局标题 */
   Vue.prototype.$baseTitle = (() => {
@@ -137,16 +138,11 @@ const install = (Vue, opts = {}) => {
   /* 全局TableHeight */
   Vue.prototype.$baseTableHeight = (formType) => {
     let height = window.innerHeight;
-    let paddingHeight = 270;
+    let paddingHeight = 400;
     const formHeight = 50;
-    if (localStorage.getItem("BYUI-VUE-LAYOUT") === null) {
-      if (layout === "vertical") {
-        paddingHeight = 220;
-      }
-    } else {
-      if (localStorage.getItem("BYUI-VUE-LAYOUT") === "vertical") {
-        paddingHeight = 220;
-      }
+
+    if (layout === "vertical") {
+      paddingHeight = 340;
     }
 
     if ("number" == typeof formType) {
