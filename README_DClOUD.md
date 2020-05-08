@@ -10,11 +10,15 @@
 
 ## 更新日志
 
-## 2020/05/07 添加 excel 导入导出
+## 2020/05/08 添加 stylelint order 自动排序 scss 加快浏览器渲染速度
 
-更新日志详情已变更到演示网站首页底部[github 地址点这里](https://github.com/chuzhixin/vue-admin-beautiful)
+## [演示地址 1： vue-admin-beautiful（经常被攻击，多刷新几次） ](http://chu1204505056.gitee.io/vue-admin-beautiful)
 
-## [vue-admin-beautiful 演示地址](http://chu1204505056.gitee.io/vue-admin-beautiful)
+## [演示地址 2： vue-admin-beautiful ](http://chu1204505056.gitee.io/vue-admin-beautiful-2)
+
+## [演示地址 3： vue-admin-beautiful ](http://chu1204505056.gitee.io/vue-admin-beautiful-3)
+
+## [演示地址 4（服务稳定，但访问速度较慢）： vue-admin-beautiful ](https://chuzhixin.github.io/vue-admin-beautiful)
 
 ## ★★★ ☝☝☝ 演示地址,在上方直接点击登录即可！★★★
 
@@ -22,7 +26,13 @@
 
 972435319
 
-## 鸣谢 HBuilderX,prettier,Vue
+更新日志详情已变更到演示网站首页底部[github 地址点这里](https://github.com/chuzhixin/vue-admin-beautiful)
+
+## 鸣谢
+
+感谢唐金州、花裤衩、贤心、element-ui、ant design、ivew 的开源项目给我带来的很多的灵感，其中 tagsview 在花裤衩的基础上升级改造，mock 服务结合了唐金州与 ivew 的思路进行了升级改造，添加了自动导出 mock 的功能，页面效果参照了 layui 与 ant design 的交互
+
+感谢 HBuilderX、prettier、Vue、stylelint、vscode 大大减少了我的工作强度
 
 ## star 如果您觉得帮助到了您，麻烦去 github 给个 star
 
