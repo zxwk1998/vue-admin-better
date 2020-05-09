@@ -17,7 +17,7 @@
     <footer class="footer-copyright">
       Copyright
       <byui-icon :icon="['fas', 'copyright']"></byui-icon>
-      {{ fullYear }} {{ copyright }}
+      {{ fullYear }} chuzhixin
       <br />
       我的目标不是做一名优秀的前端leader，我的目标是帮助到更多优秀的前端leader，停留在这句话的你一定会是或者已经是其中最优秀的那一个
     </footer>
