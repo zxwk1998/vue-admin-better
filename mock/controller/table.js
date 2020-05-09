@@ -6,6 +6,7 @@ let num = 0;
 for (let i = 0; i < count; i++) {
   List.push(
     mock({
+      uuid: "@uuid",
       id: "@id",
       title: "@csentence(1, 2)",
       "status|1": ["published", "draft", "deleted"],

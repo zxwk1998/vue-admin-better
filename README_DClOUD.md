@@ -4,7 +4,7 @@
 
 ## 演示地址
 
-- [演示地址 0： vue-admin-beautiful （群成员提供访问速度很快）](http://mpfhrd48.sanxing.uz7.cn)
+- [演示地址 0： vue-admin-beautiful （速度快）](http://mpfhrd48.sanxing.uz7.cn)
 
 - [演示地址 1： vue-admin-beautiful ](http://chu1204505056.gitee.io/vue-admin-beautiful)
 
@@ -18,8 +18,7 @@
 
 ## star 如果您觉得帮助到了您，麻烦去 github 给个 star
 
-![social](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=social)
-[github 地址点这里](https://github.com/chuzhixin/vue-admin-beautiful)
+[![social](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=social)github 地址点这里](https://github.com/chuzhixin/vue-admin-beautiful)
 
 ## 重要声明
 
