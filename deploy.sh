@@ -10,8 +10,6 @@ git push -f "https://${access_token}@gitee.com/chu1204505056/vue-admin-beautiful
 start "https://gitee.com/chu1204505056/vue-admin-beautiful/pages"
 git push -f "https://${access_token}@github.com/chuzhixin/vue-admin-beautiful.git" master:gh-pages
 cd -
-cd -
-rimraf dist
 exec /bin/bash
 
 
