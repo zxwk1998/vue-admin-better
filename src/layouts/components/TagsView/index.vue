@@ -7,30 +7,28 @@
     >
     </byui-icon>
     <scroll-pane ref="scrollPane" class="tags-content" @contextmenu.stop>
-      <transition-group :enter-active-class="'animated ' + animated">
-        <router-link
-          v-for="item in visitedViews"
-          :key="item.path"
-          ref="tag"
-          :class="isActive(item) ? 'active' : ''"
-          :to="{
-            path: item.path,
-            query: item.query,
-            fullPath: item.fullPath,
-          }"
-          class="tags-view-item"
-          tag="span"
-          @click.middle.native="!isAffix(tag) ? closeSelectedTag(tag) : ''"
-          @contextmenu.prevent.native="openMenu(item, $event, selectedTag)"
-        >
-          {{ item.title }}
-          <span
-            v-if="!isAffix(item)"
-            class="el-icon-close"
-            @click.prevent.stop="closeSelectedTag(item)"
-          />
-        </router-link>
-      </transition-group>
+      <router-link
+        v-for="item in visitedViews"
+        :key="item.path"
+        ref="tag"
+        :class="isActive(item) ? 'active' : ''"
+        :to="{
+          path: item.path,
+          query: item.query,
+          fullPath: item.fullPath,
+        }"
+        class="tags-view-item"
+        tag="span"
+        @click.middle.native="!isAffix(tag) ? closeSelectedTag(tag) : ''"
+        @contextmenu.prevent.native="openMenu(item, $event, selectedTag)"
+      >
+        {{ item.title }}
+        <span
+          v-if="!isAffix(item)"
+          class="el-icon-close"
+          @click.prevent.stop="closeSelectedTag(item)"
+        />
+      </router-link>
     </scroll-pane>
     <byui-icon
       class="tags-icon"
@@ -83,7 +81,6 @@ export default {
       left: 0,
       selectedTag: {},
       affixTags: [],
-      animated: "flipInY",
     };
   },
 

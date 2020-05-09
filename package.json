@@ -32,7 +32,6 @@
     ]
   },
   "dependencies": {
-    "animate.css": "^4.0.0",
     "axios": "^0.19.2",
     "clipboard": "^2.0.6",
     "codemirror": "^5.53.2",
