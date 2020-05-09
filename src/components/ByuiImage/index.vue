@@ -86,7 +86,6 @@ export default {
       text-align: center;
       background-color: $base-color-red;
       border-radius: $base-border-radius;
-      border-radius: $base-border-radius;
     }
   }
 }

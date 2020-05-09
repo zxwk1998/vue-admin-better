@@ -4,7 +4,15 @@ module.exports = {
     "at-rule-no-unknown": [
       true,
       {
-        ignoreAtRules: ["mixin", "extend", "content", "include", "for"],
+        ignoreAtRules: [
+          "mixin",
+          "extend",
+          "content",
+          "include",
+          "for",
+          "function",
+          "return",
+        ],
       },
     ],
     "selector-pseudo-element-no-unknown": [

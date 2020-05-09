@@ -244,17 +244,14 @@ export default {
 
     ::v-deep {
       .el-upload--picture-card {
+        width: 128px;
+        height: 128px;
+        margin: 3px 8px 8px 8px;
         border: 2px dashed #c0ccda;
       }
 
       .el-upload-list--picture {
         margin-bottom: 20px;
-      }
-
-      .el-upload--picture-card {
-        width: 128px;
-        height: 128px;
-        margin: 3px 8px 8px 8px;
       }
 
       .el-upload-list--picture-card {
