@@ -131,9 +131,6 @@ export default {
     height: 100%;
     padding: 40px 0 40px 0;
     background: var(--card-bg-color-transparent);
-    box-shadow: 0 0 0.6px rgba(0, 0, 0, 0.028), 0 0 1.3px rgba(0, 0, 0, 0.04),
-      0 0 2.5px rgba(0, 0, 0, 0.05), 0 0 4.5px rgba(0, 0, 0, 0.06),
-      0 0 8.4px rgba(0, 0, 0, 0.072), 0 0 20px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transform: scale(0.6);
     animation: bump-in 0.5s 0.8s forwards;
