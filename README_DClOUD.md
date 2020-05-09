@@ -10,15 +10,17 @@
 
 ## 更新日志
 
-## 2020/05/08 添加 stylelint order 自动排序 scss 加快浏览器渲染速度
+## 2020/05/09 添加 gzip 压缩选项 加快浏览器访问速度
 
-## [演示地址 1： vue-admin-beautiful（经常被攻击，多刷新几次） ](http://chu1204505056.gitee.io/vue-admin-beautiful)
+## [演示地址 0： vue-admin-beautiful （群成员提供访问速度很快）](http://mpfhrd48.sanxing.uz7.cn)
+
+## [演示地址 1： vue-admin-beautiful ](http://chu1204505056.gitee.io/vue-admin-beautiful)
 
 ## [演示地址 2： vue-admin-beautiful ](http://chu1204505056.gitee.io/vue-admin-beautiful-2)
 
 ## [演示地址 3： vue-admin-beautiful ](http://chu1204505056.gitee.io/vue-admin-beautiful-3)
 
-## [演示地址 4（服务稳定，但访问速度较慢）： vue-admin-beautiful ](https://chuzhixin.github.io/vue-admin-beautiful)
+## [演示地址 4： vue-admin-beautiful ](https://chuzhixin.github.io/vue-admin-beautiful)
 
 ## ★★★ ☝☝☝ 演示地址,在上方直接点击登录即可！★★★
 

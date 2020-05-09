@@ -70,12 +70,7 @@ export default {
   },
   created() {},
   mounted() {
-    this.$nextTick(() => {
-      this.show = true;
-      setTimeout(() => {
-        this.show = false;
-      }, 400);
-    });
+    this.show = false;
   },
   methods: {},
 };
