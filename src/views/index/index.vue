@@ -148,14 +148,23 @@
             </tr>
           </table>
           <div class="bottom-btn">
-            <!--<a @click="handleChangeTheme">
+            <el-popover placement="top" width="250" trigger="hover">
+              <p>
+                谢谢您愿意支持开源，加群获取详细教程，群内提供vue-admin-beautiful-template基础模板
+              </p>
+              <el-image :src="require('@/assets/ewm.png')"></el-image>
+              <a slot="reference" target="_blank">
+                <el-button type="primary">QQ讨论群 972435319</el-button>
+              </a>
+            </el-popover>
+            <a @click="handleChangeTheme">
               <el-button type="danger">修改主题和布局</el-button>
-            </a>-->
+            </a>
             <a
               target="_blank"
               href="https://github.com/chuzhixin/vue-element-admin-beautiful"
             >
-              <el-button type="primary">
+              <el-button type="warning">
                 github下载源码点star（实时更新）
               </el-button>
             </a>
@@ -163,27 +172,15 @@
               target="_blank"
               href="https://gitee.com/chu1204505056/vue-admin-beautiful"
             >
-              <el-button type="primary">码云下载源码</el-button>
+              <el-button type="warning">码云下载源码</el-button>
             </a>
-            <el-popover placement="top" width="250" trigger="hover">
-              <p>
-                插件市场评价给五星后加群送vue-admin-beautiful-template基础模板
-              </p>
-              <a
-                slot="reference"
-                target="_blank"
-                href="https://ext.dcloud.net.cn/plugin?id=1476"
-              >
-                <el-button type="primary">插件市场下载源码</el-button>
-              </a>
-            </el-popover>
             <el-popover placement="top" width="250" trigger="hover">
               <p>
                 谢谢您愿意支持开源，加群获取详细教程，群内提供vue-admin-beautiful-template基础模板
               </p>
               <el-image :src="require('@/assets/ewm.png')"></el-image>
               <a slot="reference" target="_blank">
-                <el-button type="warning">QQ讨论群 972435319</el-button>
+                <el-button type="warning">文档</el-button>
               </a>
             </el-popover>
           </div>
@@ -690,6 +687,8 @@ export default {
   }
 
   .card {
+    min-height: 395px;
+
     ::v-deep {
       .el-card__body {
         .echarts {
