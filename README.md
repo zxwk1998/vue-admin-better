@@ -28,7 +28,7 @@
 
 ## 捐赠
 
-![image](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
+![img](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
 
 ## 安装
 
