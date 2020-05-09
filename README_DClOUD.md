@@ -4,17 +4,13 @@
 
 ## 演示地址
 
-- [演示地址 0： vue-admin-beautiful （速度快）](http://mpfhrd48.sanxing.uz7.cn)
+### - [演示地址 1： vue-admin-beautiful （速度快）](http://mpfhrd48.sanxing.uz7.cn)
 
-- [演示地址 1： vue-admin-beautiful ](http://chu1204505056.gitee.io/vue-admin-beautiful)
+### - [演示地址 2： vue-admin-beautiful （速度较快）](http://chu1204505056.gitee.io/vue-admin-beautiful)
 
-- [演示地址 2： vue-admin-beautiful ](http://chu1204505056.gitee.io/vue-admin-beautiful-2)
+### - [演示地址 3： vue-admin-beautiful （速度慢）](https://chuzhixin.github.io/vue-admin-beautiful)
 
-- [演示地址 3： vue-admin-beautiful ](http://chu1204505056.gitee.io/vue-admin-beautiful-3)
-
-- [演示地址 4： vue-admin-beautiful ](https://chuzhixin.github.io/vue-admin-beautiful)
-
-## ★★★ ☝☝☝ 演示地址,在上方直接点击登录即可！★★★
+## ☝☝☝ 演示地址,在上方直接点击登录即可！
 
 ## star 如果您觉得帮助到了您，麻烦去 github 给个 star
 
@@ -29,10 +25,6 @@
 弄得我实在心力交瘁，但我想对你说你阻止不了我，你阻止不了这个框架的成长，谢谢你让我知道了人心险恶，你攻击或者不攻击，它都在那里
 [vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/#/index)
 </font>
-
-## 官方问题解答讨论群
-
-972435319
 
 ## 鸣谢
 
