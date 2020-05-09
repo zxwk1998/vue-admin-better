@@ -69,7 +69,7 @@ export default {
     },
     handleDownload() {
       this.downloadLoading = true;
-      import("@/vendor/Export2Excel").then((excel) => {
+      import("@/vendor/ExportExcel").then((excel) => {
         const multiHeader = [["Id", "Main Information", "", "", "Date"]];
         const header = ["", "Title", "Author", "Readings", ""];
         const filterVal = ["id", "title", "author", "pageViews", "datetime"];

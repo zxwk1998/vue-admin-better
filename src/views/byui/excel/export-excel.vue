@@ -100,7 +100,7 @@ export default {
     },
     handleDownload() {
       this.downloadLoading = true;
-      import("@/vendor/Export2Excel").then((excel) => {
+      import("@/vendor/ExportExcel").then((excel) => {
         const tHeader = ["Id", "Title", "Author", "Readings", "Date"];
         const filterVal = ["id", "title", "author", "pageViews", "datetime"];
         const list = this.list;

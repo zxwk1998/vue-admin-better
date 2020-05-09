@@ -10,6 +10,12 @@
 
 ### - [演示地址 3： vue-admin-beautiful （速度慢）](https://chuzhixin.github.io/vue-admin-beautiful)
 
+### - [演示地址 4： vue-admin-beautiful （layuiAdmin 风格）](http://chu1204505056.gitee.io/vue-admin-beautiful-2)
+
+### - [演示地址 5： vue-admin-beautiful （iviewPro 风格）](http://chu1204505056.gitee.io/vue-admin-beautiful-3)
+
+### - [演示地址 6： vue-admin-beautiful （横向布局）](http://chu1204505056.gitee.io/vue-admin-beautiful-4)
+
 ## ☝☝☝ 演示地址,在上方直接点击登录即可！
 
 ## star 如果您觉得帮助到了您，麻烦去 github 给个 star
