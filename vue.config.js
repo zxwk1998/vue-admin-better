@@ -7,6 +7,9 @@ const WebpackBar = require("webpackbar");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 const date = require("dayjs")().format("YYYY_M_D");
 const time = require("dayjs")().format("YYYY-M-D HH:mm:ss");
+const CompressionWebpackPlugin = require("compression-webpack-plugin");
+
+const productionGzipExtensions = ["js", "css", "sass", "svg", "vue", "ttf"];
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -70,6 +73,8 @@ module.exports = {
     };
   },
   chainWebpack(config) {
+    config.plugins.delete("preload");
+    config.plugins.delete("prefetch");
     config.resolve.symlinks(true);
     config.module
       .rule("svg")
@@ -155,6 +160,18 @@ module.exports = {
         ])
         .end();
     });
+    config
+      .plugin("compression")
+      .use(CompressionWebpackPlugin, [
+        {
+          filename: "[path].gz[query]",
+          algorithm: "gzip",
+          test: new RegExp("\\.(" + productionGzipExtensions.join("|") + ")$"),
+          threshold: 8192,
+          minRatio: 0.8,
+        },
+      ])
+      .end();
     config.when(process.env.NODE_ENV === "production", (config) => {
       config
         .plugin("fileManager")

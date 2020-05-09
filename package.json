@@ -83,6 +83,7 @@
     "babel-eslint": "^10.1.0",
     "chalk": "^4.0.0",
     "chokidar": "^3.4.0",
+    "compression-webpack-plugin": "^3.1.0",
     "connect": "^3.7.0",
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.3",
