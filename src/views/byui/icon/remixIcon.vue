@@ -109,8 +109,8 @@ export default {
       });
     },
     handleCopyIcon(index, event) {
-      //const copyText = `<byui-remixicon icon-class="https://cdn.jsdelivr.net/gh/chuzhixin/zx-remixicon@master/src/icons/svg/${this.queryIcon[index]}.svg" />`;
-      const copyText = `<byui-remixicon icon-class="${this.queryIcon[index]}" />`;
+      //const copyText = `<byui-remix-icon icon-class="https://cdn.jsdelivr.net/gh/chuzhixin/zx-remixicon@master/src/icons/svg/${this.queryIcon[index]}.svg" />`;
+      const copyText = `<byui-remix-icon icon-class="${this.queryIcon[index]}" />`;
       this.copyText = copyText;
       clip(copyText, event);
     },

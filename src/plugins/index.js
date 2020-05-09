@@ -6,7 +6,6 @@ import "./element";
 import "./support";
 import "@/styles/byui.scss";
 import byui from "@/utils/byui";
-import "@/icons";
 import "@/remixIcon";
 import "@/colorfulIcon";
 import "@/config/permission";

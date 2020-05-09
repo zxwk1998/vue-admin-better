@@ -11,7 +11,7 @@
         <p>主题配置</p>
       </div>
       <!--<div @click="handleChangeQq">
-        <byui-remixicon icon-class="qq-fill" />
+        <byui-remix-icon icon-class="qq-fill" />
         <p>学习交流</p>
       </div>-->
     </div>
