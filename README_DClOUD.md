@@ -4,7 +4,7 @@
 
 ## 演示地址
 
-### - [演示地址 1： vue-admin-beautiful （速度快）](http://mpfhrd48.sanxing.uz7.cn)
+### - [演示地址 1： vue-admin-beautiful （速度快）](http://mpfhrd48.sanxing.uz7.cn/vue-admin-beautiful)
 
 ### - [演示地址 2： vue-admin-beautiful （速度较快）](http://chu1204505056.gitee.io/vue-admin-beautiful)
 
