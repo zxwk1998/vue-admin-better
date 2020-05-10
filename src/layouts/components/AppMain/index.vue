@@ -54,14 +54,14 @@ export default {
   watch: {
     $route(to, from) {
       this.$nextTick(() => {
-        /*if (this.$store.state.tagsView.skeleton) {
-                                            this.show = true;
-                                            setTimeout(() => {
-                                              this.show = false;
-                                            }, 0);
-                                          } else {
-                                            this.show = false;
-                                          }*/
+        if (this.$store.state.tagsView.skeleton) {
+          this.show = true;
+          setTimeout(() => {
+            this.show = false;
+          }, 200);
+        } else {
+          this.show = false;
+        }
         if ("mobile" === this.device) {
           this.$store.dispatch("settings/foldSideBar");
         }
@@ -70,7 +70,9 @@ export default {
   },
   created() {},
   mounted() {
-    this.show = false;
+    setTimeout(() => {
+      this.show = false;
+    }, 200);
   },
   methods: {},
 };

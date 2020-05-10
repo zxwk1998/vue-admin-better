@@ -1,22 +1,18 @@
 <template>
-  <el-breadcrumb class="breadcrumb-container" separator="/">
-    <transition-group name="breadcrumb">
-      <el-breadcrumb-item v-for="(item, index) in levelList" :key="item.path">
-        <span
-          v-if="
-            item.redirect === 'noRedirect' || index === levelList.length - 1
-          "
-          class="no-redirect"
-        >
-          <byui-icon v-if="item.meta.icon" :icon="['fas', item.meta.icon]" />
-          {{ item.meta.title }}
-        </span>
-        <span v-else style="cursor: pointer;" @click.prevent="handleLink(item)">
-          <byui-icon v-if="item.meta.icon" :icon="['fas', item.meta.icon]" />
-          {{ item.meta.title }}
-        </span>
-      </el-breadcrumb-item>
-    </transition-group>
+  <el-breadcrumb class="breadcrumb-container" separator=">">
+    <el-breadcrumb-item v-for="(item, index) in levelList" :key="item.path">
+      <span
+        v-if="item.redirect === 'noRedirect' || index === levelList.length - 1"
+        class="no-redirect"
+      >
+        <byui-icon v-if="item.meta.icon" :icon="['fas', item.meta.icon]" />
+        {{ item.meta.title }}
+      </span>
+      <span v-else style="cursor: pointer;" @click.prevent="handleLink(item)">
+        <byui-icon v-if="item.meta.icon" :icon="['fas', item.meta.icon]" />
+        {{ item.meta.title }}
+      </span>
+    </el-breadcrumb-item>
   </el-breadcrumb>
 </template>
 
@@ -45,7 +41,7 @@ export default {
       );
       const first = matched[0];
 
-      /*if (!this.isIndex(first)) {
+      if (!this.isIndex(first)) {
         matched = [
           {
             path: "/index",
@@ -55,7 +51,7 @@ export default {
             },
           },
         ].concat(matched);
-      }*/
+      }
 
       this.levelList = matched.filter(
         (item) => item.meta && item.meta.title && item.meta.breadcrumb !== false
