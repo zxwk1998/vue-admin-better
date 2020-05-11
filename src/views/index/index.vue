@@ -658,18 +658,19 @@ export default {
         });
         this.activities = res.data;
       });
-      /*getRepos({
-                                              access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
-                                            }).then((res) => {
-                                              const per_page = res.stargazers_count;
-                                              getStargazers({
-                                                access_token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
-                                                page: 1,
-                                                per_page: res.per_page,
-                                              }).then((res) => {
-                                                alert(JSON.stringify(res));
-                                              });
-                                            });*/
+      /* getRepos({
+        token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+      }).then((res) => {
+        const per_page = Math.ceil(res.data.stargazers_count / 100);
+        alert(per_page);
+        getStargazers({
+          token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+          page: 1,
+          per_page: res.per_page,
+        }).then((res) => {
+          alert(JSON.stringify(res));
+        });
+      }); */
     },
   },
 };
