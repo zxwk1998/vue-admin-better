@@ -8,9 +8,21 @@
     <img src="https://img.shields.io/badge/axios-始终基于最新版-brightgreen.svg">
 </p>
 
-## 简介
+## 演示地址
 
-演示地址:[vue-admin-beautiful](http://chu1204505056.gitee.io/vue-admin-beautiful)
+### - [演示地址 1： vue-admin-beautiful （速度快）](http://mpfhrd48.sanxing.uz7.cn/vue-admin-beautiful)
+
+### - [演示地址 2： vue-admin-beautiful （速度较快）](http://chu1204505056.gitee.io/vue-admin-beautiful)
+
+### - [演示地址 3： vue-admin-beautiful （速度慢）](https://chuzhixin.github.io/vue-admin-beautiful)
+
+### - [演示地址 4： vue-admin-beautiful （layuiAdmin 风格）](http://chu1204505056.gitee.io/vue-admin-beautiful-2)
+
+### - [演示地址 5： vue-admin-beautiful （iviewPro 风格）](http://chu1204505056.gitee.io/vue-admin-beautiful-3)
+
+### - [演示地址 6： vue-admin-beautiful （横向布局）](http://chu1204505056.gitee.io/vue-admin-beautiful-4)
+
+## ☝☝☝ 演示地址,在上方直接点击登录即可！
 
 ## 感谢
 
