@@ -10,7 +10,7 @@
         <el-input v-model="form.payAccount"></el-input>
       </el-form-item>
       <el-form-item label="收款账户" prop="gatheringAccount">
-        <el-input v-model="form.gatheringType"></el-input>
+        <el-input v-model="form.gatheringAccount"></el-input>
       </el-form-item>
       <el-form-item label="收款人姓名" prop="gatheringName">
         <el-input v-model="form.gatheringName"></el-input>
@@ -31,7 +31,6 @@ export default {
       form: {
         payAccount: "XXXXXXXXXXXXXXXX",
         gatheringAccount: "1204505056@qq.com",
-        gatheringType: "XXXXXXXXXXXXXXXX",
         gatheringName: "初志鑫",
         price: "100",
       },
