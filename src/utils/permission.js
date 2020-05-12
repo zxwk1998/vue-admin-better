@@ -7,11 +7,11 @@ import store from "@/store";
  */
 export default function checkPermission(value) {
   if (value && value instanceof Array && value.length > 0) {
-    const roles = store.getters && store.getters.roles;
-    const permissionRoles = value;
+    const permissions = store.getters && store.getters.permissions;
+    const permissionPermissions = value;
 
-    return roles.some((role) => {
-      return permissionRoles.includes(role);
+    return permissions.some((role) => {
+      return permissionPermissions.includes(role);
     });
   } else {
     return false;

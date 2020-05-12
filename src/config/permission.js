@@ -23,15 +23,19 @@ router.beforeEach(async (to, from, next) => {
       next({ path: "/" });
       NProgress.done();
     } else {
-      const hasRoles = store.getters.roles && store.getters.roles.length > 0;
-      if (hasRoles) {
+      const hasPermissions =
+        store.getters.permissions && store.getters.permissions.length > 0;
+      if (hasPermissions) {
         next();
       } else {
         try {
-          const { roles } = await store.dispatch("user/getInfo");
+          const { permissions } = await store.dispatch("user/getInfo");
           let accessRoutes = [];
           if (authentication === "intelligence") {
-            accessRoutes = await store.dispatch("permission/setRoutes", roles);
+            accessRoutes = await store.dispatch(
+              "permission/setRoutes",
+              permissions
+            );
           } else if (authentication === "all") {
             accessRoutes = await store.dispatch("permission/setAllRoutes");
           }

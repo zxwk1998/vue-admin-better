@@ -2,21 +2,21 @@ import { asyncRoutes, constantRoutes } from "@/router";
 import { getRouterList } from "@/api/router";
 import { filterRoutes } from "@/utils/filterRoutes";
 
-function hasPermission(roles, route) {
-  if (route.meta && route.meta.roles) {
-    return roles.some((role) => route.meta.roles.includes(role));
+function hasPermission(permissions, route) {
+  if (route.meta && route.meta.permissions) {
+    return permissions.some((role) => route.meta.permissions.includes(role));
   } else {
     return true;
   }
 }
 
-function filterAsyncRoutes(routes, roles) {
+function filterAsyncRoutes(routes, permissions) {
   const res = [];
   routes.forEach((route) => {
     const tmp = { ...route };
-    if (hasPermission(roles, tmp)) {
+    if (hasPermission(permissions, tmp)) {
       if (tmp.children) {
-        tmp.children = filterAsyncRoutes(tmp.children, roles);
+        tmp.children = filterAsyncRoutes(tmp.children, permissions);
       }
       res.push(tmp);
     }
@@ -40,13 +40,13 @@ const mutations = {
 };
 
 const actions = {
-  setRoutes({ commit }, roles) {
+  setRoutes({ commit }, permissions) {
     return new Promise((resolve) => {
       let accessedRoutes;
-      if (roles.includes("admin")) {
+      if (permissions.includes("admin")) {
         accessedRoutes = asyncRoutes || [];
       } else {
-        accessedRoutes = filterAsyncRoutes(asyncRoutes, roles);
+        accessedRoutes = filterAsyncRoutes(asyncRoutes, permissions);
       }
       commit("SET_ROUTES", accessedRoutes);
       resolve(accessedRoutes);

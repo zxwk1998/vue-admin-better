@@ -19,7 +19,7 @@
         </el-button>
       </el-form-item>
       <el-form-item label="当前账号拥有的权限">
-        {{ JSON.stringify(roles) }}
+        {{ JSON.stringify(permissions) }}
       </el-form-item>
     </el-form>
     <el-divider content-position="left">
@@ -111,7 +111,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["userName", "roles"]),
+    ...mapGetters(["userName", "permissions"]),
   },
   created() {
     this.fetchData();

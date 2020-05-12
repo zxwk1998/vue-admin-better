@@ -8,7 +8,7 @@ export default {
   layout: (state) => state.settings.layout,
   logo: (state) => state.settings.logo,
   userName: (state) => state.user.userName,
-  roles: (state) => state.user.roles,
+  permissions: (state) => state.user.permissions,
   routes: (state) => state.permission.routes,
   selectedTag: (state) => state.tagsView.selectedTag,
   srcTableCode: (state) => state.table.srcCode,
