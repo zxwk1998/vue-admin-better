@@ -76,7 +76,7 @@
           <el-table-column label="是否无缓存">
             <template slot-scope="scope">
               <span v-if="scope.row.meta">
-                {{ scope.row.meta.noCache }}
+                {{ scope.row.meta.noKeepAlive }}
               </span>
             </template>
           </el-table-column>

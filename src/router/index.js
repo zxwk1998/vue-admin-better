@@ -75,7 +75,7 @@ export const asyncRoutes = [
         component: () => import("@/views/mall/pay/index"),
         meta: {
           title: "支付",
-          noCache: true,
+          noKeepAlive: true,
         },
       },
       {
@@ -84,7 +84,7 @@ export const asyncRoutes = [
         component: () => import("@/views/mall/goods/index"),
         meta: {
           title: "商品",
-          noCache: true,
+          noKeepAlive: true,
         },
       },
     ],
@@ -192,7 +192,7 @@ export const asyncRoutes = [
         path: "waterfall",
         name: "Waterfall",
         component: () => import("@/views/byui/waterfall/index"),
-        meta: { title: "瀑布屏", noCache: true, permissions: ["admin"] },
+        meta: { title: "瀑布屏", noKeepAlive: true, permissions: ["admin"] },
       },
       {
         path: "echarts",

@@ -135,7 +135,7 @@ const data = [
         path: "waterfall",
         name: "Waterfall",
         component: "byui/waterfall/index",
-        meta: { title: "瀑布屏", noCache: true, permissions: ["admin"] },
+        meta: { title: "瀑布屏", noKeepAlive: true, permissions: ["admin"] },
       },
       {
         path: "echarts",
@@ -154,7 +154,11 @@ const data = [
         path: "player",
         name: "Player",
         component: "byui/player/index",
-        meta: { title: "视频播放器", noCache: true, permissions: ["admin"] },
+        meta: {
+          title: "视频播放器",
+          noKeepAlive: true,
+          permissions: ["admin"],
+        },
       },
       {
         path: "editor",

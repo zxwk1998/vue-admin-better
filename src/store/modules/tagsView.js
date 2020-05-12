@@ -14,14 +14,14 @@ const mutations = {
   ADD_CACHED_VIEW: (state, view) => {
     if (state.cachedViews.includes(view.name)) {
       state.skeleton = false;
-      if (view.meta.noCache) {
+      if (view.meta.noKeepAlive) {
         state.skeleton = true;
       }
       return;
     } else {
       state.skeleton = true;
     }
-    if (!view.meta.noCache) {
+    if (!view.meta.noKeepAlive) {
       state.cachedViews.push(view.name);
     }
   },
