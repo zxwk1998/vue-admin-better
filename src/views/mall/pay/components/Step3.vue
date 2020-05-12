@@ -1,29 +1,38 @@
 <template>
-  <el-form ref="form" :model="form" :rules="rules" label-width="120px">
-    <el-form-item label-width="0">
+  <div>
+    <div class="pay-top-content">
       <byui-icon
-        style="font-size: 30px; color: green; text-align: center;"
+        class="pay-success"
         :icon="['fas', 'check-circle']"
       ></byui-icon>
-    </el-form-item>
-    <el-form-item label="付款账户：">
-      {{ infoData.payAccount }}
-    </el-form-item>
-    <el-form-item label="收款账户：">
-      {{ infoData.gatheringAccount }}
-    </el-form-item>
-    <el-form-item label="收款人姓名：">
-      {{ infoData.gatheringName }}
-    </el-form-item>
-    <el-form-item label="转账金额：">
-      <strong>
-        {{ infoData.price }}
-      </strong>
-    </el-form-item>
-    <el-form-item>
+      <p>支付成功</p>
+    </div>
+    <el-form
+      ref="form"
+      :model="form"
+      :rules="rules"
+      label-width="120px"
+      class="pay-bottom"
+    >
+      <el-form-item label="付款账户：">
+        {{ infoData.payAccount }}
+      </el-form-item>
+      <el-form-item label="收款账户：">
+        {{ infoData.gatheringAccount }}
+      </el-form-item>
+      <el-form-item label="收款人姓名：">
+        {{ infoData.gatheringName }}
+      </el-form-item>
+      <el-form-item label="转账金额：">
+        <strong>
+          {{ infoData.price }}
+        </strong>
+      </el-form-item>
+    </el-form>
+    <div class="pay-button-group">
       <el-button type="primary" @click="handlePrev">再转一笔</el-button>
-    </el-form-item>
-  </el-form>
+    </div>
+  </div>
 </template>
 <script>
 export default {
@@ -68,3 +77,28 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.pay-top-content {
+  text-align: center;
+
+  .pay-success {
+    display: block;
+    margin: 20px auto 5px auto;
+    font-size: 40px;
+    color: $base-color-green;
+  }
+}
+
+.pay-bottom {
+  padding: 20px;
+  margin-top: 20px;
+  background: #f5f7f8;
+  border: 1px dashed $base-color-gray;
+}
+
+.pay-button-group {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+</style>

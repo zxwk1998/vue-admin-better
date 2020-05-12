@@ -18,10 +18,10 @@
       <el-form-item label="转账金额" prop="price">
         <el-input v-model="form.price"></el-input>
       </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="handleSubmit">下一步</el-button>
-      </el-form-item>
     </el-form>
+    <div class="pay-button-group">
+      <el-button type="primary" @click="handleSubmit">下一步</el-button>
+    </div>
   </div>
 </template>
 <script>
@@ -64,3 +64,10 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.pay-button-group {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+</style>
