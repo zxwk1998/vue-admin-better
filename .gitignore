@@ -14,5 +14,5 @@ yarn-error.log*
 *.sln
 *.sw?
 public/video
-vue-admin-beautiful.zip
-vue-admin-beautiful.7z
+*.zip
+*.7z
