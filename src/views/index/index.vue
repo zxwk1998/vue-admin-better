@@ -228,6 +228,13 @@
             <span>其他信息</span>
           </div>
           <el-alert
+            :closable="false"
+            title="2020年5月12日，不同寻常的一天，汶川大地震的12周年，被一名社区一名叫做812770127@qq.com的网友骂的狗血淋头，说这是一个抄袭的项目，这是一个一点技术含量都没有的项目，没关系，我把这段话一直留在这里，总有一天你会看到这个你曾经不屑一顾的框架发展壮大，谢谢你的讽刺让我变得强大"
+            type="error"
+          >
+          </el-alert>
+          <br />
+          <el-alert
             title=" 其实人生改变命运的机会并没有太多，我们并不是不优秀，我们也并不是一无是处，我们也希望驻足山巅被众人仰望， 也许我们
             缺少的只是一个机会，缺少的只是生命中的导师，我希望这个框架帮助到更多的人，希望有一天，我们面试的时候不再胆怯，希望有一天别人看到的不仅仅是你的努力，还有你的功成名就，出人头地"
             type="success"
@@ -237,18 +244,19 @@
           <br />
           <el-alert
             :closable="false"
-            title="框架优势：mock数据自动导出无需配置；views，vuex，api支持自动生成；自动fixed问题代码，可以愉快的拥抱eslint"
+            title="框架优势：mock数据自动导出无需配置；views，vuex，api支持自动生成；自动fixed问题代码，可以愉快的拥抱eslint；支持stylint自动排序css属性，自动fiexed scss问题样式"
             type="success"
           >
           </el-alert>
           <br />
           <el-alert
             :closable="false"
-            title="鸣谢花裤衩、唐金州、贤心、element、ivew的开源项目给我带来的很多的灵感"
+            title="鸣谢唐金州、花裤衩、贤心、element-ui、ivew的开源项目给我带来的很多的灵感"
             type="success"
           >
           </el-alert>
           <br />
+
           <el-alert :closable="false" :title="userAgent" type="info">
           </el-alert>
           <br />
