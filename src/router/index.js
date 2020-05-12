@@ -43,7 +43,7 @@ export const asyncRoutes = [
       },
     ],
   },
-  {
+  /* {
     path: "/test",
     component: Layout,
     redirect: "noRedirect",
@@ -59,8 +59,27 @@ export const asyncRoutes = [
         },
       },
     ],
+  }, */
+  {
+    path: "/mall",
+    component: Layout,
+    redirect: "noRedirect",
+    name: "Mall",
+    meta: { title: "商城", icon: "shopping-cart" },
+    alwaysShow: true,
+    children: [
+      {
+        path: "pay",
+        name: "Pay",
+        component: () => import("@/views/mall/pay/index"),
+        meta: {
+          title: "支付",
+          roles: ["admin"],
+          noCache: true,
+        },
+      },
+    ],
   },
-
   {
     path: "/byui",
     component: Layout,
@@ -307,6 +326,7 @@ export const asyncRoutes = [
       },
     ],
   },
+
   {
     path: "/error",
     component: EmptyLayout,
