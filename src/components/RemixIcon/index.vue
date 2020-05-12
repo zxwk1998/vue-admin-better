@@ -54,7 +54,6 @@ export default {
   width: 1.25em;
   height: 1.25em;
   overflow: hidden;
-  vertical-align: -0.15em;
   fill: currentColor;
 
   &:hover {

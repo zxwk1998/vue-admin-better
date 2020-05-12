@@ -22,6 +22,11 @@
               :icon="['fas', onlyOneChild.meta.icon]"
               class="byui-nav-icon"
             />
+            <byui-remix-icon
+              v-if="onlyOneChild.meta && onlyOneChild.meta.remixIcon"
+              :icon-class="onlyOneChild.meta.icon"
+              class="byui-nav-icon"
+            />
             <span slot="title">{{ onlyOneChild.meta.title }}</span>
           </el-menu-item>
         </ul>
@@ -32,6 +37,11 @@
         <byui-icon
           v-if="item.meta && item.meta.icon"
           :icon="['fas', item.meta.icon]"
+          class="byui-nav-icon"
+        />
+        <byui-remix-icon
+          v-if="item.meta && item.meta.remixIcon"
+          :icon-class="item.meta.remixIcon"
           class="byui-nav-icon"
         />
         <span>{{ item.meta.title }}</span>
