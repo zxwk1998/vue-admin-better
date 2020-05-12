@@ -20,7 +20,7 @@ const mutations = {
   SET_NAME: (state, userName) => {
     state.userName = userName;
   },
-  SET_ROLES: (state, permissions) => {
+  SET_PERMISSIONS: (state, permissions) => {
     state.permissions = permissions;
   },
 };
@@ -70,7 +70,7 @@ const actions = {
           if (!permissions || permissions.length <= 0) {
             permissions = ["*"];
           }
-          commit("SET_ROLES", permissions);
+          commit("SET_PERMISSIONS", permissions);
           commit("SET_NAME", userName);
           resolve(data);
         })
@@ -84,7 +84,7 @@ const actions = {
       logout(state.accessToken)
         .then(() => {
           commit("SET_TOKEN", "");
-          commit("SET_ROLES", []);
+          commit("SET_PERMISSIONS", []);
           removeAccessToken();
           resetRouter();
           dispatch("tagsView/delAllViews", null, { root: true });

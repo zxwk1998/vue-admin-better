@@ -1,7 +1,7 @@
 <template>
   <div class="permission-container">
     <el-divider content-position="left">
-      intelligence模式,前端根据roles拦截路由(演示环境,默认使用此方案)
+      intelligence模式,前端根据permissions拦截路由(演示环境,默认使用此方案)
     </el-divider>
 
     <el-form ref="form" :model="form" :inline="true">
