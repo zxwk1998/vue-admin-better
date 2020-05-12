@@ -43,13 +43,16 @@ export default [
     type: "post",
     response: (config) => {
       const { accessToken } = config.body;
-      let roles = ["editor"];
-      let userName = "editor";
+      let roles = ["admin"];
+      let userName = "admin";
       if ("admin-accessToken" === accessToken) {
         roles = ["admin"];
         userName = "admin";
       }
-      //测试用例
+      if ("editor-accessToken" === accessToken) {
+        roles = ["editor"];
+        userName = "editor";
+      }
       if ("test-accessToken" === accessToken) {
         roles = ["admin", "editor", "test"];
         userName = "test";

@@ -81,6 +81,10 @@ const data = [
     content: "添加stylelint-plus自动规整排序样式",
     timestamp: "2020-05-06",
   },
+  {
+    content: "添加商城模板",
+    timestamp: "2020-05-12",
+  },
 ];
 
 export default [

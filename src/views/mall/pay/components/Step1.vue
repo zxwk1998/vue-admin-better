@@ -31,7 +31,7 @@ export default {
       form: {
         payAccount: "XXXXXXXXXXXXXXXX",
         gatheringAccount: "1204505056@qq.com",
-        gatheringName: "初志鑫",
+        gatheringName: "chuzhixin",
         price: "100",
       },
       rules: {

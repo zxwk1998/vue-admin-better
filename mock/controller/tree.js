@@ -29,9 +29,9 @@ const data = [
               {
                 id: "4cc1b04635e4444292526c5391699077",
                 parentId: "9e11afc35d55475fb0bd3164b9684cbe",
-                name: "组员初志鑫",
-                title: "组员初志鑫",
-                text: "组员初志鑫",
+                name: "组员chuzhixin",
+                title: "组员chuzhixin",
+                text: "组员chuzhixin",
                 value: "4cc1b04635e4444292526c5391699077",
                 rank: 4,
                 children: [],
