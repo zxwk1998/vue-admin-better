@@ -1,7 +1,7 @@
 import store from "@/store";
 
 export default {
-  inserted(el, binding, vnode) {
+  inserted(el, binding) {
     const { value } = binding;
     const roles = store.getters && store.getters.roles;
 
@@ -14,8 +14,6 @@ export default {
       if (!hasPermission) {
         el.parentNode && el.parentNode.removeChild(el);
       }
-    } else {
-      throw new Error(`need roles! Like v-permission="['admin','...']"`);
     }
   },
 };

@@ -1,8 +1,4 @@
-const Clipboard = require("clipboard");
-if (!Clipboard) {
-  throw new Error("you should npm install `clipboard` --save at first ");
-}
-
+import Clipboard from "clipboard";
 export default {
   bind(el, binding) {
     if (binding.arg === "success") {
