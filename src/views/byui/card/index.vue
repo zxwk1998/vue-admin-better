@@ -47,16 +47,6 @@ export default {
   components: {
     ByuiImage,
   },
-  filters: {
-    statusFilter(status) {
-      const statusMap = {
-        published: "success",
-        draft: "gray",
-        deleted: "danger",
-      };
-      return statusMap[status];
-    },
-  },
   data() {
     return {
       value: true,
@@ -71,16 +61,6 @@ export default {
       height: 0,
       elementLoadingText: "正在加载...",
       dialogFormVisible: false,
-      form: {
-        name: "",
-        region: "",
-        date1: "",
-        date2: "",
-        delivery: false,
-        type: [],
-        resource: "",
-        desc: "",
-      },
     };
   },
   created() {
@@ -109,7 +89,7 @@ export default {
         this.total = res.totalCount;
         setTimeout(() => {
           this.listLoading = false;
-        }, 500);
+        }, 300);
       });
     },
   },

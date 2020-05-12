@@ -65,7 +65,7 @@ export const asyncRoutes = [
     component: Layout,
     redirect: "noRedirect",
     name: "Mall",
-    meta: { title: "商城", icon: "shopping-cart" },
+    meta: { title: "商城模板", icon: "shopping-cart" },
     alwaysShow: true,
     children: [
       {
@@ -74,6 +74,16 @@ export const asyncRoutes = [
         component: () => import("@/views/mall/pay/index"),
         meta: {
           title: "支付",
+          roles: ["admin"],
+          noCache: true,
+        },
+      },
+      {
+        path: "goods",
+        name: "Goods",
+        component: () => import("@/views/mall/goods/index"),
+        meta: {
+          title: "商品",
           roles: ["admin"],
           noCache: true,
         },

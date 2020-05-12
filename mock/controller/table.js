@@ -26,29 +26,6 @@ export default [
     url: "/table/getList",
     type: "post",
     response: (config) => {
-      if (!config.body) {
-        return {
-          code: 200,
-          msg: "success",
-          totalCount: count,
-          data: mock({
-            "data|50": [
-              {
-                id: "@id",
-                title: "@csentence(1, 2)",
-                "status|1": ["published", "draft", "deleted"],
-                author: "@cname",
-                datetime: "@datetime",
-                pageViews: "@integer(300, 5000)",
-                img: `https://picsum.photos/200/200?random=${num++}`,
-                smallImg: `https://picsum.photos/40/40?random=${num++}`,
-                switch: "@boolean",
-                percent: "@integer(80,99)",
-              },
-            ],
-          }).data,
-        };
-      }
       const { title = "", pageNo = 1, pageSize = 20 } = config.body;
       let mockList = List.filter((item) => {
         if (title && item.title.indexOf(title) < 0) return false;
