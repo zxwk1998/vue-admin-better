@@ -16,6 +16,8 @@
 
 ### - [演示地址 6： vue-admin-beautiful （横向布局）](http://chu1204505056.gitee.io/vue-admin-beautiful-4)
 
+### - [PC、平板、手机适配演示： vue-admin-beautiful](http://www.jq22.com/yanshi23029)
+
 ## ☝☝☝ 演示地址,在上方直接点击登录即可！
 
 ## star 如果您觉得帮助到了您，麻烦去 github 给个 star

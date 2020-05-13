@@ -316,12 +316,6 @@ export default {
 
       //访问量
       fwl: {
-        tooltip: {
-          trigger: "axis",
-          axisPointer: {
-            type: "line",
-          },
-        },
         grid: {
           top: "4%",
           left: "2%",
@@ -356,12 +350,6 @@ export default {
       },
       //授权数
       sqs: {
-        tooltip: {
-          trigger: "axis",
-          axisPointer: {
-            type: "line",
-          },
-        },
         grid: {
           top: "4%",
           left: "2%",
@@ -529,12 +517,6 @@ export default {
       },
       //销售量
       xsl: {
-        tooltip: {
-          trigger: "axis",
-          axisPointer: {
-            type: "line",
-          },
-        },
         grid: {
           top: "4%",
           left: "2%",

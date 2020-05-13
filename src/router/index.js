@@ -139,6 +139,12 @@ export const asyncRoutes = [
         ],
       },
       {
+        path: "verify",
+        name: "Verify",
+        component: () => import("@/views/byui/verify/index"),
+        meta: { title: "验证码", permissions: ["admin"] },
+      },
+      {
         path: "icon",
         name: "Icon",
         component: () => import("@/views/byui/icon/index"),
