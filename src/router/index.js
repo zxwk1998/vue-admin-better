@@ -65,7 +65,11 @@ export const asyncRoutes = [
     component: Layout,
     redirect: "noRedirect",
     name: "Mall",
-    meta: { title: "商城模板", icon: "shopping-cart", permissions: ["admin"] },
+    meta: {
+      title: "商城模板",
+      icon: "shopping-cart",
+      permissions: ["admin"],
+    },
     alwaysShow: true,
 
     children: [
@@ -153,10 +157,28 @@ export const asyncRoutes = [
         meta: { title: "多彩图标", permissions: ["admin"] },
       },
       {
-        path: "table",
+        path: "/table",
+        component: EmptyLayout,
+        redirect: "noRedirect",
         name: "Table",
-        component: () => import("@/views/byui/table/index"),
-        meta: { title: "表格", permissions: ["admin", "editor"] },
+        meta: {
+          title: "表格",
+        },
+        alwaysShow: true,
+        children: [
+          {
+            path: "table",
+            name: "Table",
+            component: () => import("@/views/byui/table/index"),
+            meta: { title: "综合表格", permissions: ["admin"] },
+          },
+          {
+            path: "inlineEditTable",
+            name: "InlineEditTable",
+            component: () => import("@/views/byui/table/inlineEditTable"),
+            meta: { title: "行内编辑", permissions: ["admin"] },
+          },
+        ],
       },
       {
         path: "form",
@@ -192,7 +214,11 @@ export const asyncRoutes = [
         path: "waterfall",
         name: "Waterfall",
         component: () => import("@/views/byui/waterfall/index"),
-        meta: { title: "瀑布屏", noKeepAlive: true, permissions: ["admin"] },
+        meta: {
+          title: "瀑布屏",
+          noKeepAlive: true,
+          permissions: ["admin"],
+        },
       },
       {
         path: "echarts",
