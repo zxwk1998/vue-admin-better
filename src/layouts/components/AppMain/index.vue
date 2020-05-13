@@ -1,16 +1,16 @@
 <template>
   <section class="app-main-container">
     <github-corner v-if="nodeEnv !== 'development'"></github-corner>
+    <byui-keel v-if="show" style="margin: 15px;">
+      <byui-keel-heading :img="true" />
+      <byui-keel-text :lines="7" />
+      <byui-keel-heading :img="true" />
+      <byui-keel-text :lines="6" />
+      <byui-keel-heading :img="true" />
+      <byui-keel-text :lines="8" />
+    </byui-keel>
     <transition mode="out-in" name="fade-transform">
       <keep-alive :include="cachedViews" :max="10">
-        <byui-keel v-if="show" style="margin: 15px;">
-          <byui-keel-heading :img="true" />
-          <byui-keel-text :lines="7" />
-          <byui-keel-heading :img="true" />
-          <byui-keel-text :lines="6" />
-          <byui-keel-heading :img="true" />
-          <byui-keel-text :lines="8" />
-        </byui-keel>
         <router-view :key="key" style="min-height: 78vh;" />
       </keep-alive>
     </transition>
