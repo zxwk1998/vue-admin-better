@@ -42,7 +42,6 @@ module.exports = {
   transpileDependencies: ["vue-echarts", "resize-detector"],
   devServer: {
     hot: true,
-    compress: true,
     port: devPort,
     open: true,
     noInfo: false,

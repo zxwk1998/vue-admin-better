@@ -10,6 +10,10 @@
         <byui-icon :icon="['fas', 'palette']" />
         <p>主题配置</p>
       </div>
+      <div @click="handleGetCode">
+        <byui-icon :icon="['fas', 'laptop-code']"></byui-icon>
+        <p>拷贝代码</p>
+      </div>
       <!--<div @click="handleChangeQq">
         <byui-remix-icon icon-class="qq-fill" />
         <p>学习交流</p>
@@ -119,9 +123,10 @@
 import variables from "@/styles/variables.scss";
 import { mapGetters } from "vuex";
 import { themeBar } from "@/config/settings";
-
+import GetCode from "./mixin/GetCode";
 export default {
   name: "ThemeBar",
+  mixins: [GetCode],
   data() {
     return {
       themeBar,
@@ -264,12 +269,13 @@ export default {
   background: $base-color-blue;
   border-radius: $base-border-radius;
 
-  &:hover {
-    opacity: 0.9;
-  }
-
   > div {
     padding-top: 10px;
+    border-bottom: 1px solid $base-color-white;
+
+    &:hover {
+      opacity: 0.9;
+    }
 
     p {
       font-size: $base-font-size-small;

@@ -128,7 +128,7 @@ export const asyncRoutes = [
             alwaysShow: true,
             children: [
               {
-                path: "menu1-1-1-1",
+                path: "menu1-1-1",
                 component: () =>
                   import("@/views/byui/nested/menu1/menu1-1/menu1-1-1/index"),
                 name: "Menu1-1-1",
@@ -157,7 +157,7 @@ export const asyncRoutes = [
         meta: { title: "多彩图标", permissions: ["admin"] },
       },
       {
-        path: "/table",
+        path: "table",
         component: EmptyLayout,
         redirect: "noRedirect",
         name: "Table",
@@ -167,8 +167,8 @@ export const asyncRoutes = [
         alwaysShow: true,
         children: [
           {
-            path: "table",
-            name: "Table",
+            path: "comprehensiveTable",
+            name: "ComprehensiveTable",
             component: () => import("@/views/byui/table/index"),
             meta: { title: "综合表格", permissions: ["admin"] },
           },
@@ -301,7 +301,7 @@ export const asyncRoutes = [
         meta: { title: "上传", permissions: ["admin"] },
       },
       {
-        path: "/excel",
+        path: "excel",
         component: EmptyLayout,
         redirect: "noRedirect",
         name: "Excel",
