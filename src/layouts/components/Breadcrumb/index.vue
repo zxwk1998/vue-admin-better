@@ -41,7 +41,7 @@ export default {
       );
       const first = matched[0];
 
-      if (!this.isIndex(first)) {
+      /* if (!this.isIndex(first)) {
         matched = [
           {
             path: "/index",
@@ -51,7 +51,7 @@ export default {
             },
           },
         ].concat(matched);
-      }
+      } */
 
       this.levelList = matched.filter(
         (item) => item.meta && item.meta.title && item.meta.breadcrumb !== false
