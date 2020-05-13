@@ -52,7 +52,7 @@
       </el-col>
     </el-row>
     <el-pagination
-      :background="background"
+      background
       :current-page="queryForm.pageNo"
       :layout="layout"
       :page-size="queryForm.pageSize"
@@ -78,12 +78,8 @@ export default {
       },
       list: null,
       listLoading: true,
-      pageNo: 1,
-      pageSize: 10,
       layout: "total, sizes, prev, pager, next, jumper",
       total: 0,
-      background: true,
-      height: 0,
       elementLoadingText: "正在加载...",
     };
   },
@@ -92,11 +88,11 @@ export default {
   },
   methods: {
     handleSizeChange(val) {
-      this.pageSize = val;
+      this.queryForm.pageSize = val;
       this.fetchData();
     },
     handleCurrentChange(val) {
-      this.pageNo = val;
+      this.queryForm.pageNo = val;
       this.fetchData();
     },
     handleQuery() {

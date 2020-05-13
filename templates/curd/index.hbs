@@ -9,7 +9,7 @@
       <byui-query-form-right-panel :span="12">
         <el-form :inline="true" :model="queryForm" @submit.native.prevent>
           <el-form-item>
-            <el-input v-model.trim="queryForm.id" placeholder="请输入查询条件" clearable/>
+            <el-input v-model.trim="queryForm.id" placeholder="请输入查询条件" clearable />
           </el-form-item>
           <el-form-item>
             <el-button icon="el-icon-search" type="primary" @click="queryData">查询
@@ -20,9 +20,9 @@
     </byui-query-form>
 
     <el-table v-loading="listLoading" :data="list" :element-loading-text="elementLoadingText"
-              @selection-change="setSelectRows">
+      @selection-change="setSelectRows">
       <el-table-column type="selection"></el-table-column>
-      <el-table-column prop="id" label="id"/>
+      <el-table-column prop="id" label="id" />
       <el-table-column fixed="right" label="操作" width="200">
         <template v-slot="scope">
           <el-button type="text" @click="handleEdit(scope.row)">编辑
@@ -32,9 +32,8 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-pagination :background="background" :current-page="queryForm.pageNo" :page-size="queryForm.pageSize"
-                   :layout="layout" :total="total" @size-change="handleSizeChange"
-                   @current-change="handleCurrentChange">
+    <el-pagination background :current-page="queryForm.pageNo" :page-size="queryForm.pageSize" :layout="layout"
+      :total="total" @size-change="handleSizeChange" @current-change="handleCurrentChange">
     </el-pagination>
     <edit ref="edit" @fetchData="fetchData"></edit>
   </div>
@@ -54,7 +53,6 @@
         listLoading: true,
         layout: "total, sizes, prev, pager, next, jumper",
         total: 0,
-        background: true,
         selectRows: "",
         elementLoadingText: "正在加载...",
         queryForm: {
@@ -91,14 +89,14 @@
           if (this.selectRows.length > 0) {
             const ids = this.selectRows.map(item => item.id).join();
             this.$baseConfirm(
-                    "你确定要删除选中项吗",
-                    null,
-                    () => {
-                      doDelete({ ids: row.id }).then((res) => {
-                        this.$baseMessage(res.msg, "success");
-                        this.fetchData();
-                      });
-                    },
+              "你确定要删除选中项吗",
+              null,
+              () => {
+                doDelete({ ids: row.id }).then((res) => {
+                  this.$baseMessage(res.msg, "success");
+                  this.fetchData();
+                });
+              },
             );
           } else {
             this.$baseMessage("未选中任何行", "error");
