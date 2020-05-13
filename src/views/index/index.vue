@@ -195,7 +195,7 @@
         :lg="3"
         :xl="3"
       >
-        <router-link :to="item.link">
+        <app-link :to="item.link" target="_blank">
           <el-card class="icon-panel" shadow="never">
             <byui-icon
               :style="{ color: item.color }"
@@ -203,7 +203,7 @@
             ></byui-icon>
             <p>{{ item.title }}</p>
           </el-card>
-        </router-link>
+        </app-link>
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <el-card class="card" shadow="never">
@@ -272,12 +272,13 @@ import ByuiCount from "@/plugins/byuiCount";
 import { dependencies, devDependencies } from "../../../package.json";
 import { getList } from "@/api/changeLog";
 import { getRepos, getStargazers } from "@/api/github";
-
+import AppLink from "@/layouts/components/Link";
 export default {
   name: "Index",
   components: {
     ByuiChart,
     ByuiCount,
+    AppLink,
   },
   data() {
     return {
@@ -602,8 +603,14 @@ export default {
         {
           icon: "table",
           title: "表格",
-          link: "/byui/table",
+          link: "/byui/table/comprehensiveTable",
           color: "#5cdbd3",
+        },
+        {
+          icon: "laptop-code",
+          title: "源码",
+          link: "https://github.com/chuzhixin/vue-admin-beautiful",
+          color: "#b37feb",
         },
         {
           icon: "bullhorn",
@@ -624,12 +631,7 @@ export default {
           link: "",
           color: "#ffd666",
         },
-        {
-          icon: "laptop-code",
-          title: "XXX",
-          link: "",
-          color: "#b37feb",
-        },
+
         {
           icon: "balance-scale-left",
           title: "公平的世界",
