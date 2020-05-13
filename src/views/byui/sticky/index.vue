@@ -1,7 +1,7 @@
 <template>
   <div class="sticky-container">
     <byui-sticky :sticky-top="100">
-      <el-alert title="我会吸附" type="success"></el-alert>
+      <el-alert title="我会吸附" type="success" :closable="false"></el-alert>
     </byui-sticky>
     <div>sticky</div>
     <div>sticky</div>
@@ -24,7 +24,7 @@
     <div>sticky</div>
     <div>sticky</div>
     <byui-sticky :sticky-top="150">
-      <el-alert title="我会吸附" type="success"></el-alert>
+      <el-alert title="我会吸附" type="success" :closable="false"></el-alert>
     </byui-sticky>
     <div>sticky</div>
     <div>sticky</div>
@@ -47,7 +47,7 @@
     <div>sticky</div>
     <div>sticky</div>
     <byui-sticky :sticky-top="200">
-      <el-alert title="我会吸附" type="success"></el-alert>
+      <el-alert title="我会吸附" type="success" :closable="false"></el-alert>
     </byui-sticky>
     <div>sticky</div>
     <div>sticky</div>
@@ -70,7 +70,7 @@
     <div>sticky</div>
     <div>sticky</div>
     <byui-sticky :sticky-top="250">
-      <el-alert title="我会吸附" type="success"></el-alert>
+      <el-alert title="我会吸附" type="success" :closable="false"></el-alert>
     </byui-sticky>
     <div>sticky</div>
     <div>sticky</div>
@@ -93,7 +93,7 @@
     <div>sticky</div>
     <div>sticky</div>
     <byui-sticky :sticky-top="300">
-      <el-alert title="我会吸附" type="success"></el-alert>
+      <el-alert title="我会吸附" type="success" :closable="false"></el-alert>
     </byui-sticky>
     <div>sticky</div>
     <div>sticky</div>
@@ -116,7 +116,7 @@
     <div>sticky</div>
     <div>sticky</div>
     <byui-sticky :sticky-top="350">
-      <el-alert title="我会吸附" type="success"></el-alert>
+      <el-alert title="我会吸附" type="success" :closable="false"></el-alert>
     </byui-sticky>
     <div>sticky</div>
     <div>sticky</div>
@@ -139,7 +139,7 @@
     <div>sticky</div>
     <div>sticky</div>
     <byui-sticky :sticky-top="400">
-      <el-alert title="我会吸附" type="success"></el-alert>
+      <el-alert title="我会吸附" type="success" :closable="false"></el-alert>
     </byui-sticky>
     <div>sticky</div>
     <div>sticky</div>
@@ -162,7 +162,7 @@
     <div>sticky</div>
     <div>sticky</div>
     <byui-sticky :sticky-top="450">
-      <el-alert title="我会吸附" type="success"></el-alert>
+      <el-alert title="我会吸附" type="success" :closable="false"></el-alert>
     </byui-sticky>
     <div>sticky</div>
     <div>sticky</div>
@@ -185,7 +185,7 @@
     <div>sticky</div>
     <div>sticky</div>
     <byui-sticky :sticky-top="500">
-      <el-alert title="我会吸附" type="success"></el-alert>
+      <el-alert title="我会吸附" type="success" :closable="false"></el-alert>
     </byui-sticky>
     <div>sticky</div>
     <div>sticky</div>
@@ -208,7 +208,7 @@
     <div>sticky</div>
     <div>sticky</div>
     <byui-sticky :sticky-top="550">
-      <el-alert title="我会吸附" type="success"></el-alert>
+      <el-alert title="我会吸附" type="success" :closable="false"></el-alert>
     </byui-sticky>
     <div>sticky</div>
     <div>sticky</div>
@@ -231,7 +231,7 @@
     <div>sticky</div>
     <div>sticky</div>
     <byui-sticky :sticky-top="600">
-      <el-alert title="我会吸附" type="success"></el-alert>
+      <el-alert title="我会吸附" type="success" :closable="false"></el-alert>
     </byui-sticky>
     <div>sticky</div>
     <div>sticky</div>
@@ -254,7 +254,7 @@
     <div>sticky</div>
     <div>sticky</div>
     <byui-sticky :sticky-top="650">
-      <el-alert title="我会吸附" type="success"></el-alert>
+      <el-alert title="我会吸附" type="success" :closable="false"></el-alert>
     </byui-sticky>
     <div>sticky</div>
     <div>sticky</div>
