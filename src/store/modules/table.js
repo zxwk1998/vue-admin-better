@@ -1,9 +1,7 @@
-const state = {
-  srcCode: "",
-};
+const state = { srcCode: "" };
 const mutations = {
-  SET_SRC_TABLE_CODE(state, srcCode) {
+  setTableCode(state, srcCode) {
     state.srcCode = srcCode;
   },
 };
-export default { namespaced: true, state, mutations };
+export default { state, mutations, actions };

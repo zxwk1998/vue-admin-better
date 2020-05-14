@@ -7,20 +7,15 @@ import {
 import { resetRouter } from "@/router";
 import { Notification } from "element-ui";
 import defaultSettings from "@/config/settings";
-
-const state = {
-  accessToken: getAccessToken(),
-  userName: "",
-  permissions: [],
-};
+const state = { accessToken: getAccessToken(), userName: "", permissions: [] };
 const mutations = {
-  SET_TOKEN: (state, accessToken) => {
+  setAccessToken: (state, accessToken) => {
     state.accessToken = accessToken;
   },
-  SET_NAME: (state, userName) => {
+  setUserName: (state, userName) => {
     state.userName = userName;
   },
-  SET_PERMISSIONS: (state, permissions) => {
+  setPermissions: (state, permissions) => {
     state.permissions = permissions;
   },
 };
@@ -31,7 +26,7 @@ const actions = {
       login({ userName, password })
         .then((response) => {
           const { accessToken } = response.data;
-          commit("SET_TOKEN", accessToken);
+          commit("setAccessToken", accessToken);
           setAccessToken(accessToken);
           const time = new Date();
           const hour = time.getHours();
@@ -70,8 +65,8 @@ const actions = {
           if (!permissions || permissions.length <= 0) {
             permissions = ["*"];
           }
-          commit("SET_PERMISSIONS", permissions);
-          commit("SET_NAME", userName);
+          commit("setPermissions", permissions);
+          commit("setUserName", userName);
           resolve(data);
         })
         .catch((error) => {
@@ -83,8 +78,8 @@ const actions = {
     return new Promise((resolve, reject) => {
       logout(state.accessToken)
         .then(() => {
-          commit("SET_TOKEN", "");
-          commit("SET_PERMISSIONS", []);
+          commit("setAccessToken", "");
+          commit("setPermissions", []);
           removeAccessToken();
           resetRouter();
           dispatch("tagsView/delAllViews", null, { root: true });
@@ -95,12 +90,12 @@ const actions = {
         });
     });
   },
-  resetToken({ commit }) {
+  resetAccessToken({ commit }) {
     return new Promise((resolve) => {
-      commit("SET_TOKEN", "");
+      commit("setAccessToken", "");
       removeAccessToken();
       resolve();
     });
   },
 };
-export default { namespaced: true, state, mutations, actions };
+export default { state, mutations, actions };

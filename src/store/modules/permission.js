@@ -1,7 +1,6 @@
 import { asyncRoutes, constantRoutes } from "@/router";
 import { getRouterList } from "@/api/router";
 import { filterRoutes } from "@/utils/filterRoutes";
-
 function hasPermission(permissions, route) {
   if (route.meta && route.meta.permissions) {
     return permissions.some((role) => route.meta.permissions.includes(role));
@@ -9,7 +8,6 @@ function hasPermission(permissions, route) {
     return true;
   }
 }
-
 function filterAsyncRoutes(routes, permissions) {
   const res = [];
   routes.forEach((route) => {
@@ -23,22 +21,16 @@ function filterAsyncRoutes(routes, permissions) {
   });
   return res;
 }
-
-const state = {
-  routes: [],
-  addRoutes: [],
-};
-
+const state = { routes: [], addRoutes: [] };
 const mutations = {
-  SET_ROUTES: (state, routes) => {
+  setRoutes: (state, routes) => {
     state.addRoutes = routes;
     state.routes = constantRoutes.concat(routes);
   },
-  SET_ALL_ROUTES: (state, routes) => {
+  setAllRoutes: (state, routes) => {
     state.routes = constantRoutes.concat(routes);
   },
 };
-
 const actions = {
   setRoutes({ commit }, permissions) {
     return new Promise((resolve) => {
@@ -48,7 +40,7 @@ const actions = {
       } else {
         accessedRoutes = filterAsyncRoutes(asyncRoutes, permissions);
       }
-      commit("SET_ROUTES", accessedRoutes);
+      commit("setRoutes", accessedRoutes);
       resolve(accessedRoutes);
     });
   },
@@ -56,13 +48,9 @@ const actions = {
     return new Promise((resolve) => {
       getRouterList()
         .then((res) => {
-          res.data.push({
-            path: "*",
-            redirect: "/404",
-            hidden: true,
-          });
+          res.data.push({ path: "*", redirect: "/404", hidden: true });
           let accessRoutes = filterRoutes(res.data);
-          commit("SET_ALL_ROUTES", accessRoutes);
+          commit("setAllRoutes", accessRoutes);
           resolve(accessRoutes);
         })
         .catch((error) => {
@@ -71,10 +59,4 @@ const actions = {
     });
   },
 };
-
-export default {
-  namespaced: true,
-  state,
-  mutations,
-  actions,
-};
+export default { state, mutations, actions };

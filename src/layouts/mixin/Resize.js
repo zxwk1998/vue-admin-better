@@ -1,14 +1,14 @@
 import store from "@/store";
 
 const { body } = document;
-const WIDTH = 992;
+const width = 992;
 
 export default {
   beforeMount() {
-    window.addEventListener("resize", this.$_resizeHandler);
+    window.addEventListener("resize", this.handleResize);
   },
   beforeDestroy() {
-    window.removeEventListener("resize", this.$_resizeHandler);
+    window.removeEventListener("resize", this.handleResize);
   },
   mounted() {
     const userAgent = navigator.userAgent;
@@ -17,7 +17,7 @@ export default {
         "vue-admin-beautiful不支持在掘金内置浏览器演示，请手动复制以下地址到浏览器中查看http://chu1204505056.gitee.io/vue-admin-beautiful"
       );
     }
-    const isMobile = this.$_isMobile();
+    const isMobile = this.handleIsMobile();
     if (isMobile) {
       store.dispatch("settings/toggleDevice", "mobile");
       setTimeout(() => {
@@ -28,13 +28,12 @@ export default {
     }
   },
   methods: {
-    $_isMobile() {
-      const rect = body.getBoundingClientRect();
-      return rect.width - 1 < WIDTH;
+    handleIsMobile() {
+      return body.getBoundingClientRect().width - 1 < width;
     },
-    $_resizeHandler() {
+    handleResize() {
       if (!document.hidden) {
-        const isMobile = this.$_isMobile();
+        const isMobile = this.handleIsMobile();
         store.dispatch(
           "settings/toggleDevice",
           isMobile ? "mobile" : "desktop"

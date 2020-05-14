@@ -1,5 +1,4 @@
 import defaultSettings from "@/config/settings";
-
 const { tagsView, logo, layout, header } = defaultSettings;
 const theme = JSON.parse(localStorage.getItem("BYUI-VUE-THEME")) || "";
 const state = {
@@ -11,55 +10,55 @@ const state = {
   device: "desktop",
 };
 const mutations = {
-  CHANGE_LAYOUT: (state, layout) => {
+  changeLayout: (state, layout) => {
     if (layout) {
       state.layout = layout;
     }
   },
-  CHANGE_HEADER: (state, header) => {
+  changeHeader: (state, header) => {
     if (header) {
       state.header = header;
     }
   },
-  CHANGE_TAGS_VIEW: (state, tagsView) => {
+  changeTagsView: (state, tagsView) => {
     if (tagsView) {
       state.tagsView = tagsView;
     }
   },
-  CHANGE_COLLAPSE: (state) => {
+  changeCollapse: (state) => {
     state.collapse = !state.collapse;
   },
-  FOLD_SIDE_BAR: (state) => {
+  foldSideBar: (state) => {
     state.collapse = true;
   },
-  OPEN_SIDE_BAR: (state) => {
+  openSideBar: (state) => {
     state.collapse = false;
   },
-  TOGGLE_DEVICE: (state, device) => {
+  toggleDevice: (state, device) => {
     state.device = device;
   },
 };
 const actions = {
   changeLayout({ commit }, layout) {
-    commit("CHANGE_LAYOUT", layout);
+    commit("changeLayout", layout);
   },
   changeHeader({ commit }, header) {
-    commit("CHANGE_HEADER", header);
+    commit("changeHeader", header);
   },
   changeTagsView({ commit }, tagsView) {
-    commit("CHANGE_TAGS_VIEW", tagsView);
+    commit("changeTagsView", tagsView);
   },
   changeCollapse({ commit }) {
-    commit("CHANGE_COLLAPSE");
+    commit("changeCollapse");
   },
   foldSideBar({ commit }) {
-    commit("FOLD_SIDE_BAR");
+    commit("foldSideBar");
   },
   openSideBar({ commit }) {
-    commit("OPEN_SIDE_BAR");
+    commit("openSideBar");
   },
   toggleDevice({ commit }, device) {
-    commit("TOGGLE_DEVICE", device);
+    commit("toggleDevice", device);
   },
 };
-export default { namespaced: true, state, mutations, actions };
+export default { state, mutations, actions };

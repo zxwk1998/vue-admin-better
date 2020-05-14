@@ -5,13 +5,13 @@ const state = {
   skeleton: true,
 };
 const mutations = {
-  ADD_VISITED_VIEW: (state, view) => {
+  addVisitedView: (state, view) => {
     if (state.visitedViews.some((v) => v.path === view.path)) return;
     state.visitedViews.push(
       Object.assign({}, view, { title: view.meta.title || "no-name" })
     );
   },
-  ADD_CACHED_VIEW: (state, view) => {
+  addCachedView: (state, view) => {
     if (state.cachedViews.includes(view.name)) {
       state.skeleton = false;
       if (view.meta.noKeepAlive) {
@@ -25,7 +25,7 @@ const mutations = {
       state.cachedViews.push(view.name);
     }
   },
-  DEL_VISITED_VIEW: (state, view) => {
+  delVisitedView: (state, view) => {
     for (const [i, v] of state.visitedViews.entries()) {
       if (v.path === view.path) {
         state.visitedViews.splice(i, 1);
@@ -33,7 +33,7 @@ const mutations = {
       }
     }
   },
-  DEL_CACHED_VIEW: (state, view) => {
+  delCachedView: (state, view) => {
     for (const i of state.cachedViews) {
       if (i === view.name) {
         const index = state.cachedViews.indexOf(i);
@@ -42,12 +42,12 @@ const mutations = {
       }
     }
   },
-  DEL_OTHERS_VISITED_VIEWS: (state, view) => {
+  delOthersVisitedViews: (state, view) => {
     state.visitedViews = state.visitedViews.filter((v) => {
       return v.meta.affix || v.path === view.path;
     });
   },
-  DEL_OTHERS_CACHED_VIEWS: (state, view) => {
+  delOthersCachedViews: (state, view) => {
     for (const i of state.cachedViews) {
       if (i === view.name) {
         const index = state.cachedViews.indexOf(i);
@@ -56,18 +56,17 @@ const mutations = {
       }
     }
   },
-  DEL_ALL_VISITED_VIEWS: (state) => {
-    /* keep affix tags*/
+  delAllVisitedViews: (state) => {
     const affixTags = state.visitedViews.filter((tag) => tag.meta.affix);
     state.visitedViews = affixTags;
   },
-  DEL_ALL_CACHED_VIEWS: (state) => {
+  delAllCachedViews: (state) => {
     state.cachedViews = [];
   },
-  SET_SELECTED_TAG: (state, selectedTag) => {
+  setSelectedTag: (state, selectedTag) => {
     state.selectedTag = selectedTag;
   },
-  UPDATE_VISITED_VIEW: (state, view) => {
+  updateVisitedView: (state, view) => {
     for (let v of state.visitedViews) {
       if (v.path === view.path) {
         v = Object.assign(v, view);
@@ -82,10 +81,10 @@ const actions = {
     dispatch("addCachedView", view);
   },
   addVisitedView({ commit }, view) {
-    commit("ADD_VISITED_VIEW", view);
+    commit("addVisitedView", view);
   },
   addCachedView({ commit }, view) {
-    commit("ADD_CACHED_VIEW", view);
+    commit("addCachedView", view);
   },
   delView({ dispatch, state }, view) {
     return new Promise(async (resolve) => {
@@ -99,13 +98,13 @@ const actions = {
   },
   delVisitedView({ commit, state }, view) {
     return new Promise((resolve) => {
-      commit("DEL_VISITED_VIEW", view);
+      commit("delVisitedView", view);
       resolve([...state.visitedViews]);
     });
   },
   delCachedView({ commit, state }, view) {
     return new Promise((resolve) => {
-      commit("DEL_CACHED_VIEW", view);
+      commit("delCachedView", view);
       resolve([...state.cachedViews]);
     });
   },
@@ -121,13 +120,13 @@ const actions = {
   },
   delOthersVisitedViews({ commit, state }, view) {
     return new Promise((resolve) => {
-      commit("DEL_OTHERS_VISITED_VIEWS", view);
+      commit("delOthersVisitedViews", view);
       resolve([...state.visitedViews]);
     });
   },
   delOthersCachedViews({ commit, state }, view) {
     return new Promise((resolve) => {
-      commit("DEL_OTHERS_CACHED_VIEWS", view);
+      commit("delOthersCachedViews", view);
       resolve([...state.cachedViews]);
     });
   },
@@ -143,21 +142,21 @@ const actions = {
   },
   delAllVisitedViews({ commit, state }) {
     return new Promise((resolve) => {
-      commit("DEL_ALL_VISITED_VIEWS");
+      commit("delAllVisitedViews");
       resolve([...state.visitedViews]);
     });
   },
   delAllCachedViews({ commit, state }) {
     return new Promise((resolve) => {
-      commit("DEL_ALL_CACHED_VIEWS");
+      commit("delAllCachedViews");
       resolve([...state.cachedViews]);
     });
   },
   setSelectedTag({ commit }, selectedTag) {
-    commit("SET_SELECTED_TAG", selectedTag);
+    commit("setSelectedTag", selectedTag);
   },
   updateVisitedView({ commit }, view) {
-    commit("UPDATE_VISITED_VIEW", view);
+    commit("updateVisitedView", view);
   },
 };
-export default { namespaced: true, state, mutations, actions };
+export default { state, mutations, actions };

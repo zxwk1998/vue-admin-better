@@ -1,13 +1,13 @@
 const state = {
-{{  name }}List: []
+{{  name }}: []
 };
 
 const mutations = {
-SET_{{ constantCase name }}_LIST: (state, {{ name }}) = > {
+set{{ properCase name }}: (state, {{ name }}) = > {
 if({{ name }}) {
-state.{{ name }}List = {{ name }};
+state.{{ name }} = {{ name }};
 } else {
-state.{{  name }}List = [];
+state.{{  name }} = [];
 }
 }
 };
@@ -16,7 +16,7 @@ const actions = {
 set{{ properCase name }}({
 commit
 }, {{ name }}) {
-commit('SET_{{ constantCase name }}_LIST', {{ name }});
+commit('set{{ properCase name }}', {{ name }});
 }
 };
 

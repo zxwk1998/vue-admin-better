@@ -89,8 +89,6 @@ export default {
   methods: {
     handleCollapse() {
       this.$store.dispatch("settings/changeCollapse");
-      if ("mobile" == this.device && false === this.collapse) {
-      }
     },
     async logout() {
       await this.$baseConfirm(
