@@ -8,16 +8,7 @@ const FileManagerPlugin = require("filemanager-webpack-plugin");
 const date = require("dayjs")().format("YYYY_M_D");
 const time = require("dayjs")().format("YYYY-M-D HH:mm:ss");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
-
-const productionGzipExtensions = [
-  "js",
-  "css",
-  "sass",
-  "scss",
-  "svg",
-  "vue",
-  "ttf",
-];
+const productionGzipExtensions = ["html", "js", "css", "svg"];
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -42,6 +33,7 @@ module.exports = {
   transpileDependencies: ["vue-echarts", "resize-detector"],
   devServer: {
     hot: true,
+    https: true,
     port: devPort,
     open: true,
     noInfo: false,
