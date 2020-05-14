@@ -595,18 +595,17 @@ export default {
           color: "#b37feb",
         },
         {
+          icon: "book",
+          title: "文档",
+          link: "https://chu1204505056.gitee.io/byui-bookmarks/",
+          color: "#69c0ff",
+        },
+        {
           icon: "bullhorn",
           title: "XXX",
           link: "",
           color: "#ff85c0",
         },
-        {
-          icon: "book",
-          title: "XXX",
-          link: "",
-          color: "#69c0ff",
-        },
-
         {
           icon: "gift",
           title: "XXX",
