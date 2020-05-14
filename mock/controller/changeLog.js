@@ -85,6 +85,14 @@ const data = [
     content: "添加商城模板",
     timestamp: "2020-05-12",
   },
+  {
+    content: "github标星超过1000 感恩",
+    timestamp: "2020-05-13",
+  },
+  {
+    content: "添加验证码组件",
+    timestamp: "2020-05-14",
+  },
 ];
 
 export default [
