@@ -9,4 +9,4 @@ const actions = {
     commit("setTableCode", srcCode);
   },
 };
-export default { namespaced: true, state, mutations, actions };
+export default { state, mutations, actions };

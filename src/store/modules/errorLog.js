@@ -15,4 +15,4 @@ const actions = {
     commit("clearErrorLog");
   },
 };
-export default { namespaced: true, state, mutations, actions };
+export default { state, mutations, actions };
