@@ -140,6 +140,7 @@ $base-color-green: #13ce66;
 $base-color-white: #fff;
 $base-color-black: #000;
 $base-color-yellow: #ffba00;
+$base-color-orange: #ff6700;
 $base-color-red: #ff4d4f;
 $base-color-gray: rgba(0, 0, 0, 0.65);
 $base-main-width: 1279px;
@@ -153,9 +154,9 @@ $base-padding: 15px;
 $base-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 $base-font-color: #606266;
 $base-left-menu-width: 220px;
-$base-right-content-width: calc(100% - 220px);
+$base-right-content-width: calc(100% - #{$base-left-menu-width});
 $base-left-menu-width-min: 65px;
-$base-right-content-width-min: calc(100% - 65px);
+$base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
 
 /* stylelint-disable */
 :export {
