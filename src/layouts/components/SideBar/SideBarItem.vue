@@ -64,7 +64,7 @@ import { isExternal } from "@/utils/validate";
 import AppLink from "../Link/index";
 
 export default {
-  name: "SidebarItem",
+  name: "SideBarItem",
   components: { AppLink },
   props: {
     item: {

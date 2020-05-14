@@ -63,7 +63,7 @@ import { isExternal } from "@/utils/validate";
 import AppLink from "@/layouts/components/Link";
 
 export default {
-  name: "TabItem",
+  name: "TopBarItem",
   components: { AppLink },
   props: {
     item: {

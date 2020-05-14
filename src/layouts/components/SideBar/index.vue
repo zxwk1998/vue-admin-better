@@ -32,6 +32,7 @@ import { version } from "@/config/settings";
 import { mapGetters } from "vuex";
 
 export default {
+  name: "SideBar",
   components: { SidebarItem, Logo },
   data() {
     return { version: version };

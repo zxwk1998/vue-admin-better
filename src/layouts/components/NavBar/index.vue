@@ -64,6 +64,7 @@ import Breadcrumb from "@/layouts/components/Breadcrumb";
 import ThemeBar from "@/layouts/components/ThemeBar";
 
 export default {
+  name: "NavBar",
   components: {
     Breadcrumb,
     ErrorLog,
