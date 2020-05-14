@@ -4,4 +4,4 @@ const mutations = {
     state.srcCode = srcCode;
   },
 };
-export default { state, mutations, actions };
+export default { state, mutations };
