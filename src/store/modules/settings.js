@@ -61,4 +61,4 @@ const actions = {
     commit("toggleDevice", device);
   },
 };
-export default { state, mutations, actions };
+export default { namespaced: true, state, mutations, actions };

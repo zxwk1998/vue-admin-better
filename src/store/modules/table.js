@@ -4,4 +4,9 @@ const mutations = {
     state.srcCode = srcCode;
   },
 };
-export default { state, mutations };
+const actions = {
+  setTableCode({ commit }, srcCode) {
+    commit("setTableCode", srcCode);
+  },
+};
+export default { namespaced: true, state, mutations, actions };

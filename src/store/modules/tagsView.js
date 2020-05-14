@@ -159,4 +159,4 @@ const actions = {
     commit("updateVisitedView", view);
   },
 };
-export default { state, mutations, actions };
+export default { namespaced: true, state, mutations, actions };

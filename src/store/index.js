@@ -10,7 +10,6 @@ files.keys().forEach((key) => {
   modules[key.replace(/(\.\/|\.js)/g, "")] = files(key).default;
 });
 const store = new Vuex.Store({
-  namespaced: true,
   modules,
   getters,
 });

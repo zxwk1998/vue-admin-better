@@ -16,7 +16,7 @@ const checkNeed = () => {
 };
 if (checkNeed()) {
   Vue.config.errorHandler = (err, vm, info) => {
-    console.error("博云前端敏捷开发平台Vue错误拦截:", err, vm, info);
+    console.error("vue-admin-beautiful错误拦截:", err, vm, info);
     const url = window.location.href;
     Vue.nextTick(() => {
       store.dispatch("errorLog/addErrorLog", { err, vm, info, url });

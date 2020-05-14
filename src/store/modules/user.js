@@ -98,4 +98,4 @@ const actions = {
     });
   },
 };
-export default { state, mutations, actions };
+export default { namespaced: true, state, mutations, actions };

@@ -67,7 +67,7 @@ export default {
     headers: {
       handler(val) {
         this.code = genTableSnippet(val, this.getTableAPI);
-        this.$store.commit("table/setTableCode", this.code);
+        this.$store.dispatch("table/setTableCode", this.code);
       },
       deep: true,
     },
