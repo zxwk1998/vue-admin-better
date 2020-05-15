@@ -46,7 +46,7 @@
         />
         <span>{{ item.meta.title }}</span>
       </template>
-      <sidebar-item
+      <side-bar-item
         v-for="child in item.children"
         :key="child.path"
         :base-path="resolvePath(child.path)"
