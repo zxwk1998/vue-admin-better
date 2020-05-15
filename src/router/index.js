@@ -83,12 +83,19 @@ export const asyncRoutes = [
         },
       },
       {
-        path: "goods",
-        name: "Goods",
-        component: () => import("@/views/mall/goods/index"),
+        path: "goodsList",
+        name: "GoodsList",
+        component: () => import("@/views/mall/goodsList/index"),
         meta: {
-          title: "商品",
-          noKeepAlive: true,
+          title: "商品列表",
+        },
+      },
+      {
+        path: "goodsDetail",
+        name: "GoodsDetail",
+        component: () => import("@/views/mall/goodsDetail/index"),
+        meta: {
+          title: "商品详情",
         },
       },
     ],

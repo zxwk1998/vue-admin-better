@@ -20,7 +20,7 @@ for (let i = 0; i < count; i++) {
 
 export default [
   {
-    url: "/goods/getList",
+    url: "/goodsList/getList",
     type: "post",
     response: (config) => {
       const { title = "", pageNo = 1, pageSize = 20 } = config.body;
