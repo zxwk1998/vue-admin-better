@@ -179,6 +179,14 @@
           </div>
         </el-card>
       </el-col>
+      <el-col :span="24">
+        <el-alert
+          title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
+          :closable="false"
+        >
+        </el-alert>
+        <br />
+      </el-col>
       <el-col
         v-for="(item, index) in iconList"
         :key="index"

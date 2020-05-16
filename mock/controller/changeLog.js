@@ -93,6 +93,10 @@ const data = [
     content: "添加验证码组件",
     timestamp: "2020-05-14",
   },
+  {
+    content: "修复横向菜单bug",
+    timestamp: "2020-05-16",
+  },
 ];
 
 export default [
