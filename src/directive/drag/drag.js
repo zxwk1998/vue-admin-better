@@ -4,7 +4,6 @@ export default {
       el.querySelector(".el-dialog__header") &&
       el.querySelector(".el-dialog")
     ) {
-      debugger;
       const dialogHeaderEl = el.querySelector(".el-dialog__header");
       const dragDom = el.querySelector(".el-dialog");
       dialogHeaderEl.style.cssText += ";cursor:move;";

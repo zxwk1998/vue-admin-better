@@ -85,6 +85,13 @@
                 show-alpha
               ></el-color-picker>
             </el-form-item>
+            <el-form-item label="菜单文字色">
+              <el-color-picker
+                v-model="theme.menuColor"
+                :predefine="['#000', '#fff']"
+                show-alpha
+              ></el-color-picker>
+            </el-form-item>
             <el-form-item label="标签主题色">
               <el-color-picker
                 v-model="theme.tagViewsBackgroundActive"
@@ -138,6 +145,7 @@ export default {
         menuBackground: variables["menu-background"],
         menuChildrenBackground: variables["menu-children-background"],
         menuBackgroundActive: variables["menu-background-active"],
+        menuColor: variables["menu-color"],
         tagViewsBackgroundActive: variables["tagviews-background-active"],
         buttonBackground: variables["button-background"],
         paginationBackgroundActive: variables["pagination-background-active"],
@@ -169,6 +177,7 @@ export default {
         "menuBackgroundActive",
         JSON.parse(theme).menuBackgroundActive
       );
+      this.$set(this.theme, "menuColor", JSON.parse(theme).menuColor);
       this.$set(
         this.theme,
         "tagViewsBackgroundActive",
@@ -203,6 +212,7 @@ export default {
         menuBackground,
         menuChildrenBackground,
         menuBackgroundActive,
+        menuColor,
         tagViewsBackgroundActive,
         buttonBackground,
         paginationBackgroundActive,
@@ -210,7 +220,63 @@ export default {
 
       let style = document.createElement("style");
       style.id = "BYUI-VUE-THEME";
-      style.innerHTML = ` .top-bar-container, .top-bar-container .byui-main, .side-bar-container, .logo-container-vertical, .logo-container-horizontal, .el-menu, .el-menu-item, .el-submenu.is-active.is-opened, .el-submenu__title, .el-menu-item.is-active, .el-menu-item .is-active { background-color:${menuBackground}!important; } body .el-menu--horizontal .top-bar-item-container  .el-menu-item:hover, body .el-menu--horizontal .top-bar-item-container .el-menu-item.is-active, body .app-wrapper .side-bar-container .el-submenu .el-menu-item.is-active, body .app-wrapper .side-bar-container  .el-menu-item:hover,body .side-bar-container .el-menu .el-menu-item.is-active{ background-color:${menuBackgroundActive}!important; } .tags-view-item.router-link-exact-active.router-link-active.active{ background-color: ${tagViewsBackgroundActive}!important; border: 1px solid ${tagViewsBackgroundActive}!important; } .el-button.el-button--primary{background-color: ${buttonBackground}!important;border-color: ${buttonBackground}!important;} .el-pagination.is-background .el-pager li:not(.disabled).active{background-color: ${paginationBackgroundActive}!important;border-color: ${paginationBackgroundActive}!important;}body .app-wrapper .side-bar-container .nest-menu .el-menu-item {background-color: ${menuChildrenBackground} !important;}`;
+      style.innerHTML = `
+        .top-bar-container,
+        .top-bar-container .byui-main,
+        .side-bar-container,
+        .logo-container-vertical,
+        .logo-container-horizontal,
+        .el-menu,
+        .el-menu-item,
+        .el-submenu.is-active.is-opened,
+        .el-submenu__title,
+        .el-menu-item.is-active,
+        .el-menu-item .is-active {
+          background-color:${menuBackground}!important;
+        }
+
+        body .el-menu--horizontal .top-bar-item-container .el-menu-item:hover,
+        body .el-menu--horizontal .top-bar-item-container .el-menu-item.is-active,
+        body .app-wrapper .side-bar-container .el-submenu .el-menu-item.is-active,
+        body .app-wrapper .side-bar-container .el-menu-item:hover,
+        body .side-bar-container .el-menu .el-menu-item.is-active {
+          background-color:${menuBackgroundActive}!important;
+        }
+
+        .tags-view-item.router-link-exact-active.router-link-active.active {
+          background-color: ${tagViewsBackgroundActive}!important;
+          border: 1px solid ${tagViewsBackgroundActive}!important;
+        }
+
+        .el-button.el-button--primary {
+          background-color: ${buttonBackground}!important;
+          border-color: ${buttonBackground}!important;
+        }
+
+        .el-pagination.is-background .el-pager li:not(.disabled).active {
+          background-color: ${paginationBackgroundActive}!important;
+          border-color: ${paginationBackgroundActive}!important;
+        }
+
+        body .app-wrapper .side-bar-container .nest-menu .el-menu-item {
+          background-color: ${menuChildrenBackground}!important;
+        }
+
+        body .app-wrapper .side-bar-container .el-menu .nest-menu [class*=menu] {
+          background-color: ${menuChildrenBackground}!important
+        }
+
+        body .app-wrapper .side-bar-container .el-menu .nest-menu [class*=menu].is-active {
+          background-color:${menuBackgroundActive}!important
+        }
+        body .app-wrapper .side-bar-container .el-menu [class*=menu] span,
+        body .app-wrapper .side-bar-container .el-menu [class*=menu] svg,
+        body .app-wrapper .side-bar-container .el-menu [class*=menu] i
+        {
+          color:${menuColor}!important
+        }
+
+      `;
       document.getElementsByTagName("head").item(0).appendChild(style);
       localStorage.setItem(
         "BYUI-VUE-THEME",
@@ -218,6 +284,7 @@ export default {
             "menuBackground":"${menuBackground}",
             "menuChildrenBackground":"${menuChildrenBackground}",
             "menuBackgroundActive":"${menuBackgroundActive}",
+            "menuColor":"${menuColor}",
             "tagViewsBackgroundActive":"${tagViewsBackgroundActive}",
             "layout":"${layout}",
             "header":"${header}",

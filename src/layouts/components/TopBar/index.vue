@@ -8,8 +8,8 @@
         <el-col :xs="24" :sm="18" :md="18" :lg="18" :xl="18">
           <el-menu
             :background-color="variables['menu-background']"
-            :text-color="variables['menu-text']"
-            :active-text-color="variables['menu-text-active']"
+            :text-color="variables['menu-color']"
+            :active-text-color="variables['menu-color-active']"
             :default-active="activeMenu"
             :menu-trigger="menuTrigger"
             mode="horizontal"

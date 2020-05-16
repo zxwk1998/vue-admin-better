@@ -367,6 +367,12 @@ export const asyncRoutes = [
         meta: { title: "新闻（可能存在跨域）", permissions: ["admin"] },
       },
       {
+        path: "word",
+        name: "Word",
+        component: () => import("@/views/byui/word/index"),
+        meta: { title: "word下载", permissions: ["admin"] },
+      },
+      {
         path: "more",
         name: "More",
         component: () => import("@/views/byui/more/index"),

@@ -5,8 +5,8 @@
     <logo />
     <el-menu
       :background-color="variables['menu-background']"
-      :text-color="variables['menu-text']"
-      :active-text-color="variables['menu-text-active']"
+      :text-color="variables['menu-color']"
+      :active-text-color="variables['menu-color-active']"
       :default-active="activeMenu"
       :collapse="collapse"
       :collapse-transition="false"
