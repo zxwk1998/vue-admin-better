@@ -1,3 +1,4 @@
+import Vue from "vue";
 import { getInfo, login, logout } from "@/api/user";
 import {
   getAccessToken,
@@ -28,8 +29,7 @@ const actions = {
           const { accessToken } = response.data;
           commit("setAccessToken", accessToken);
           setAccessToken(accessToken);
-          const time = new Date();
-          const hour = time.getHours();
+          const hour = new Date().getHours();
           const thisTime =
             hour < 8
               ? "早上好"
@@ -40,12 +40,10 @@ const actions = {
               : hour < 18
               ? "下午好"
               : "晚上好";
-          Notification({
-            title: thisTime + "!",
-            message: "欢迎登录" + defaultSettings.title,
-            type: "success",
-            duration: 2000,
-          });
+          Vue.prototype.$baseNotify(
+            `欢迎登录${defaultSettings.title}`,
+            `${userName}，${thisTime}！`
+          );
           resolve();
         })
         .catch((error) => {
@@ -62,9 +60,6 @@ const actions = {
             reject("验证失败，请重新登录...");
           }
           let { permissions, userName } = data;
-          if (!permissions || permissions.length <= 0) {
-            permissions = ["*"];
-          }
           commit("setPermissions", permissions);
           commit("setUserName", userName);
           resolve(data);

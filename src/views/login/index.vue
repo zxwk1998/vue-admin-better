@@ -158,7 +158,7 @@ export default {
         this.$refs.password.focus();
       });
     },
-    handleLogin() {
+    async handleLogin() {
       this.$refs.loginForm.validate((valid) => {
         if (valid) {
           this.loading = true;
