@@ -6,7 +6,6 @@ import {
   setAccessToken,
 } from "@/utils/accessToken";
 import { resetRouter } from "@/router";
-import { Notification } from "element-ui";
 import defaultSettings from "@/config/settings";
 const state = { accessToken: getAccessToken(), userName: "", permissions: [] };
 const mutations = {
