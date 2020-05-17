@@ -10,9 +10,9 @@ import "pizzip/dist/pizzip.js";
 import "pizzip/dist/pizzip-utils.js";
 import "file-saver";
 import { getList } from "@/api/word";
-import ImageModule from "open-docxtemplater-image-module";
+import ImageModule from "docxtemplater-image-module-free/build/imagemodule";
 export default {
-  name: "Home",
+  name: "Word",
   data() {
     return {
       imageBase64: "",
@@ -92,40 +92,34 @@ export default {
       let _this = this;
       JSZipUtils.getBinaryContent("template.docx", (error, content) => {
         if (error) {
-          throw error;
+          console.error(error);
+          return;
         }
-        let opts = {};
+        var opts = {};
         opts.centered = false;
-        opts.fileType = "docx";
-        opts.getImage = () => {
-          return _this.base64DataURLToArrayBuffer(_this.imageBase64);
+        opts.getImage = function (tagValue, tagName) {
+          return _this.base64DataURLToArrayBuffer(tagValue);
         };
-        opts.getSize = () => {
-          return [200, 200];
+        opts.getSize = function (img, tagValue, tagName) {
+          return [150, 150];
         };
-        let imageModule = new ImageModule(opts);
-        let zip = new PizZip(content);
-        let doc = new docxtemplater()
-          /* .attachModule(imageModule) */
+
+        var zip = new PizZip(content);
+        var doc = new docxtemplater()
           .loadZip(zip)
-          .setData({
-            table: _this.checklist,
-            single: _this.chanquan_list_1,
-            multi: _this.chanquan_list_2,
-            /* image: _this.imageBase64, */
-          });
-        try {
-          doc.render();
-        } catch (error) {
-          let e = {
-            message: error.message,
-            name: error.name,
-            stack: error.stack,
-            properties: error.properties,
-          };
-          throw error;
-        }
-        let out = doc.getZip().generate({
+          .attachModule(new ImageModule(opts))
+          .compile();
+        const image = _this.imageBase64;
+        doc.setData({
+          image,
+          table: _this.checklist,
+          single: _this.chanquan_list_1,
+          multi: _this.chanquan_list_2,
+        });
+
+        console.log("ready");
+        doc.render();
+        var out = doc.getZip().generate({
           type: "blob",
           mimeType:
             "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
