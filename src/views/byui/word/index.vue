@@ -1,13 +1,7 @@
 <template>
   <div>
-    <div class="threeLevelMain">
-      <!-- 底部按钮容器 -->
-      <div class="botmBtnContainer">
-        <el-button size="small" type="primary" @click="exportWord"
-          >导出word</el-button
-        >
-        <!-- <el-button @click="exportExcelClick" size="small" type="primary">导出excel</el-button> -->
-      </div>
+    <div class="word-container">
+      <el-button type="primary" @click="exportWord">根据json导出word</el-button>
     </div>
   </div>
 </template>
