@@ -18,7 +18,8 @@
     "update": "nrm use taobao&&ncu -u&&cnpm i",
     "svgo": "svgo -f src/icons/svg --config=svgo.yml&&svgo -f src/remixIcon/svg --config=svgo.yml",
     "push": "start ./push.sh",
-    "deploy": "start ./deploy.sh"
+    "deploy": "start ./deploy.sh",
+    "increase-memory-limit": "increase-memory-limit"
   },
   "husky": {
     "hooks": {
@@ -94,6 +95,7 @@
     "filemanager-webpack-plugin": "^2.0.5",
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
+    "increase-memory-limit": "^1.0.7",
     "lint-staged": "^10.2.2",
     "mockjs": "^1.1.0",
     "plop": "^2.6.0",
