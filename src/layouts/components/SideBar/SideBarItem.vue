@@ -2,37 +2,37 @@
   <li v-if="!item.hidden">
     <template
       v-if="
-        hasOneShowingChild(item.children, item) &&
-        (!onlyOneChild.children || onlyOneChild.noShowingChildren) &&
+        handleChildren(item.children, item) &&
+        (!onlyOneChildren.children || onlyOneChildren.notShowChildren) &&
         !item.alwaysShow
       "
     >
       <app-link
-        v-if="onlyOneChild.meta"
-        :target="onlyOneChild.meta.target ? onlyOneChild.meta.target : ''"
-        :to="resolvePath(onlyOneChild.path)"
+        v-if="onlyOneChildren.meta"
+        :target="onlyOneChildren.meta.target ? onlyOneChildren.meta.target : ''"
+        :to="handlePath(onlyOneChildren.path)"
       >
         <ul>
           <el-menu-item
             :class="{ 'submenu-title-noDropdown': !isNest }"
-            :index="resolvePath(onlyOneChild.path)"
+            :index="handlePath(onlyOneChildren.path)"
           >
             <byui-icon
-              v-if="onlyOneChild.meta && onlyOneChild.meta.icon"
-              :icon="['fas', onlyOneChild.meta.icon]"
+              v-if="onlyOneChildren.meta && onlyOneChildren.meta.icon"
+              :icon="['fas', onlyOneChildren.meta.icon]"
               class="byui-nav-icon"
             />
             <byui-remix-icon
-              v-if="onlyOneChild.meta && onlyOneChild.meta.remixIcon"
-              :icon-class="onlyOneChild.meta.icon"
+              v-if="onlyOneChildren.meta && onlyOneChildren.meta.remixIcon"
+              :icon-class="onlyOneChildren.meta.icon"
               class="byui-nav-icon"
             />
-            <span slot="title">{{ onlyOneChild.meta.title }}</span>
+            <span slot="title">{{ onlyOneChildren.meta.title }}</span>
           </el-menu-item>
         </ul>
       </app-link>
     </template>
-    <el-submenu v-else ref="subMenu" :index="resolvePath(item.path)">
+    <el-submenu v-else ref="subMenu" :index="handlePath(item.path)">
       <template slot="title">
         <byui-icon
           v-if="item.meta && item.meta.icon"
@@ -49,7 +49,7 @@
       <side-bar-item
         v-for="child in item.children"
         :key="child.path"
-        :base-path="resolvePath(child.path)"
+        :base-path="handlePath(child.path)"
         :is-nest="true"
         :item="child"
         class="nest-menu"
@@ -82,34 +82,35 @@ export default {
   },
   data() {
     return {
-      onlyOneChild: null,
+      onlyOneChildren: null,
     };
   },
   methods: {
-    hasOneShowingChild(children = [], parent) {
-      const showingChildren = children.filter((item) => {
+    handleChildren(children = [], parent) {
+      if (children === null) children = [];
+      const showChildren = children.filter((item) => {
         if (item.hidden) {
           return false;
         } else {
-          this.onlyOneChild = item;
+          this.onlyOneChildren = item;
           return true;
         }
       });
-      if (showingChildren.length === 1) {
+      if (showChildren.length === 1) {
         return true;
       }
 
-      if (showingChildren.length === 0) {
-        this.onlyOneChild = {
+      if (showChildren.length === 0) {
+        this.onlyOneChildren = {
           ...parent,
           path: "",
-          noShowingChildren: true,
+          notShowChildren: true,
         };
         return true;
       }
       return false;
     },
-    resolvePath(routePath) {
+    handlePath(routePath) {
       if (isExternal(routePath)) {
         return routePath;
       }

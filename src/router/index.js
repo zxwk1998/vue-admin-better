@@ -12,11 +12,6 @@ export const constantRoutes = [
     hidden: true,
   },
   {
-    path: "/image",
-    component: () => import("@/views/byui/word/image"),
-    hidden: true,
-  },
-  {
     path: "/redirect",
     component: Layout,
     hidden: true,
@@ -47,6 +42,11 @@ export const asyncRoutes = [
         },
       },
     ],
+  },
+  {
+    path: "/image",
+    component: () => import("@/views/byui/word/image"),
+    hidden: true,
   },
   /* {
     path: "/test",
@@ -86,6 +86,7 @@ export const asyncRoutes = [
           title: "支付",
           noKeepAlive: true,
         },
+        children: null,
       },
       {
         path: "goodsList",

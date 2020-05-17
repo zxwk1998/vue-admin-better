@@ -46,7 +46,7 @@
         />
         {{ item.meta.title }}
       </template>
-      <top-bar-item
+      <tab-item
         v-for="child in item.children"
         :key="child.path"
         :base-path="resolvePath(child.path)"

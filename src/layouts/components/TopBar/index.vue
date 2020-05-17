@@ -2,16 +2,16 @@
   <div class="top-bar-container">
     <byui-main>
       <el-row>
-        <el-col :xs="0" :sm="6" :md="6" :lg="6" :xl="6">
+        <el-col :lg="6" :md="6" :sm="6" :xl="6" :xs="0">
           <logo class="hidden-xs-only" />
         </el-col>
-        <el-col :xs="24" :sm="18" :md="18" :lg="18" :xl="18">
+        <el-col :lg="18" :md="18" :sm="18" :xl="18" :xs="24">
           <el-menu
+            :active-text-color="variables['menu-text-active']"
             :background-color="variables['menu-background']"
-            :text-color="variables['menu-color']"
-            :active-text-color="variables['menu-color-active']"
             :default-active="activeMenu"
             :menu-trigger="menuTrigger"
+            :text-color="variables['menu-text']"
             mode="horizontal"
           >
             <tab-item

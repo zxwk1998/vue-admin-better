@@ -29,6 +29,7 @@ import { ByuiKeel, ByuiKeelHeading, ByuiKeelText } from "@/plugins/byuiKeel";
 import { mapGetters } from "vuex";
 import GithubCorner from "@/components/GithubCorner";
 import { copyright } from "@/config/settings";
+
 export default {
   name: "AppMain",
   components: {

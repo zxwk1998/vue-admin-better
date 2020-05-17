@@ -28,14 +28,13 @@ import path from "path";
 import Logo from "@/layouts/components/Logo";
 import SideBarItem from "./SideBarItem";
 import variables from "@/styles/variables.scss";
-import { version } from "@/config/settings";
 import { mapGetters } from "vuex";
 
 export default {
   name: "SideBar",
   components: { SideBarItem, Logo },
   data() {
-    return { version: version };
+    return {};
   },
   computed: {
     ...mapGetters(["collapse", "routes"]),
