@@ -127,7 +127,7 @@ $base-menu-children-background: #000c17;
 $base-menu-background-active: $base-color-default;
 $base-menu-color: hsla(0, 0%, 100%, 0.95);
 $base-menu-color-active: hsla(0, 0%, 100%, 0.95);
-$base-title: #fff;
+$base-title-color: #fff;
 
 $base-font-size-small: 12px;
 $base-font-size-default: 14px;
