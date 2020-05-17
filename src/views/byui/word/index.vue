@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <div class="word-container">
-      <el-button type="primary" @click="exportWord">根据json导出word</el-button>
-    </div>
+  <div class="word-container">
+    <el-button type="primary" @click="exportWord">根据json导出word</el-button>
   </div>
 </template>
 <script>
