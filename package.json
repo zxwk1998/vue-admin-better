@@ -38,6 +38,7 @@
     "core-js": "^3.6.5",
     "dayjs": "^1.8.27",
     "docxtemplater": "^3.17.6",
+    "docxtemplater-image-module-free": "^1.1.1",
     "echarts": "^4.7.0",
     "echarts-wordcloud": "^1.1.3",
     "element-ui": "^2.13.1",

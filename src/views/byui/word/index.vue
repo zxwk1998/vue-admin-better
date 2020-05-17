@@ -10,7 +10,7 @@ import "pizzip/dist/pizzip.js";
 import "pizzip/dist/pizzip-utils.js";
 import "file-saver";
 import { getList } from "@/api/word";
-import ImageModule from "docxtemplater-image-module-free/build/imagemodule";
+import ImageModule from "docxtemplater-image-module-free";
 export default {
   name: "Word",
   data() {
@@ -95,36 +95,37 @@ export default {
           console.error(error);
           return;
         }
-        var opts = {};
+        let opts = {};
         opts.centered = false;
-        opts.getImage = function (tagValue, tagName) {
+        opts.getImage = (tagValue, tagName) => {
           return _this.base64DataURLToArrayBuffer(tagValue);
         };
-        opts.getSize = function (img, tagValue, tagName) {
+        opts.getSize = (img, tagValue, tagName) => {
           return [150, 150];
         };
 
-        var zip = new PizZip(content);
-        var doc = new docxtemplater()
+        let imageModule = new ImageModule(opts);
+
+        let zip = new PizZip(content);
+        let doc = new docxtemplater()
           .loadZip(zip)
-          .attachModule(new ImageModule(opts))
+          .attachModule(imageModule)
           .compile();
-        const image = _this.imageBase64;
+
         doc.setData({
-          image,
           table: _this.checklist,
           single: _this.chanquan_list_1,
           multi: _this.chanquan_list_2,
         });
-
-        console.log("ready");
-        doc.render();
-        var out = doc.getZip().generate({
-          type: "blob",
-          mimeType:
-            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        });
-        saveAs(out, "工业园区安全生产分级监管工作实施.docx");
+        setTimeout(() => {
+          doc.render();
+          var out = doc.getZip().generate({
+            type: "blob",
+            mimeType:
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          });
+          saveAs(out, "业园区安全生产分级监管工作实施.docx");
+        }, 3000);
       });
     },
   },
