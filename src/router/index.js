@@ -12,6 +12,11 @@ export const constantRoutes = [
     hidden: true,
   },
   {
+    path: "/image",
+    component: () => import("@/views/byui/word/image"),
+    hidden: true,
+  },
+  {
     path: "/redirect",
     component: Layout,
     hidden: true,

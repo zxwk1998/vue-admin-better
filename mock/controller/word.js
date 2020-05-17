@@ -399,27 +399,24 @@ export default [
               ],
             },
           ],
+          problem: [
+            {
+              title: "标题1",
+              images1:
+                "http://nwimg.im810.com/fg_cmp_check/2020-3-13/25bb1584030426000bb61.jpeg,http://nwimg.im810.com/fg_cmp_check/2020-3-13/4eea1584030429000cc16.jpeg,http://nwimg.im810.com/fg_cmp_check/2020-3-13/62ae15840304340008079.jpeg",
+            },
+            {
+              title: "标题2",
+              images1:
+                "http://nwimg.im810.com/fg_cmp_check/2020-3-7/e8591583572138000dd48.jpg",
+            },
+            {
+              title: "666",
+              images1:
+                "http://nwimg.im810.com/fg_cmp_check/2020-3-20/234915847024940009f5b.png,http://nwimg.im810.com/fg_cmp_check/2020-3-20/1d74158470251700033de.png",
+            },
+          ],
         },
-      };
-    },
-  },
-  {
-    url: "/word/doEdit",
-    type: "post",
-    response: (config) => {
-      return {
-        code: 200,
-        msg: "模拟保存成功",
-      };
-    },
-  },
-  {
-    url: "/word/doDelete",
-    type: "post",
-    response: (config) => {
-      return {
-        code: 200,
-        msg: "模拟删除成功",
       };
     },
   },

@@ -1,9 +1,23 @@
 <template>
   <div class="word-container">
-    <el-button type="primary" @click="exportWord">根据json导出word</el-button>
+    <el-divider content-position="left"
+      >本功能代码由VIP-0030用户付费购买定制，如需商业用途请联系群主获取VIP-0030联系方式</el-divider
+    >
+    <el-button type="primary" @click="exportWord"
+      >根据json导出word demo</el-button
+    >
+    <app-link to="/image" target="_blank">
+      <el-button
+        style="margin-left: 10px;"
+        type="primary"
+        @click="handleOpenWindow"
+        >根据json打印图片demo</el-button
+      ></app-link
+    >
   </div>
 </template>
 <script>
+import AppLink from "@/layouts/components/Link";
 import JSZipUtils from "jszip-utils";
 import "docxtemplater/build/docxtemplater.js";
 import "pizzip/dist/pizzip.js";
@@ -13,6 +27,7 @@ import { getList } from "@/api/word";
 import ImageModule from "docxtemplater-image-module-free";
 export default {
   name: "Word",
+  components: { AppLink },
   data() {
     return {
       imageBase64: "",
@@ -117,15 +132,13 @@ export default {
           single: _this.chanquan_list_1,
           multi: _this.chanquan_list_2,
         });
-        setTimeout(() => {
-          doc.render();
-          var out = doc.getZip().generate({
-            type: "blob",
-            mimeType:
-              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-          });
-          saveAs(out, "业园区安全生产分级监管工作实施.docx");
-        }, 3000);
+        doc.render();
+        var out = doc.getZip().generate({
+          type: "blob",
+          mimeType:
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        });
+        saveAs(out, "业园区安全生产分级监管工作实施.docx");
       });
     },
   },
