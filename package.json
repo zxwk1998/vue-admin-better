@@ -50,6 +50,7 @@
     "lodash": "^4.17.15",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
+    "open-docxtemplater-image-module": "^1.0.3",
     "pizzip": "^3.0.6",
     "qs": "^6.9.4",
     "screenfull": "^5.0.2",

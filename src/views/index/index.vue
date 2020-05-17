@@ -181,7 +181,7 @@
       </el-col>
       <el-col :span="24">
         <el-alert
-          title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
+          title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319，群内提供文档教程，如果你觉得框架一文不值，请勿加群"
           :closable="false"
         >
         </el-alert>
@@ -597,8 +597,8 @@ export default {
         },
         {
           icon: "book",
-          title: "文档",
-          link: "https://chu1204505056.gitee.io/byui-bookmarks/",
+          title: "XXX",
+          link: "",
           color: "#69c0ff",
         },
         {
