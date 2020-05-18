@@ -39,9 +39,7 @@ array.forEach(async (item, index) => {
         `\r\n###${item.url}###\r\POST http://localhost:${devPort}/${mockUrl}${item.url}\r\nContent-Type: application/x-www-form-urlencoded\r\n###\r\n`,
         (error) => {
           if (error)
-            return chalk.magentaBright(
-              `\n > 追加HTTP Request失败${error.message}`
-            );
+            return chalk.red(`\n > 追加HTTP Request失败${error.message}`);
         }
       );
     });

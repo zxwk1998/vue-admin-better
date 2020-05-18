@@ -83,8 +83,6 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "autoprefixer": "^9.8.0",
     "babel-eslint": "^10.1.0",
-    "chalk": "^4.0.0",
-    "chokidar": "^3.4.0",
     "compression-webpack-plugin": "^4.0.0",
     "connect": "^3.7.0",
     "eslint": "^7.0.0",
