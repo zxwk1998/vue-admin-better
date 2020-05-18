@@ -1,5 +1,5 @@
 <template>
-  <li v-if="!item.hidden" class="top-bar-item-container">
+  <div v-if="!item.hidden" class="top-bar-item-container">
     <template
       v-if="
         hasOneShowingChild(item.children, item) &&
@@ -12,24 +12,22 @@
         :target="onlyOneChild.meta.target ? onlyOneChild.meta.target : ''"
         :to="resolvePath(onlyOneChild.path)"
       >
-        <ul>
-          <el-menu-item
-            :class="{ 'submenu-title-noDropdown': !isNest }"
-            :index="resolvePath(onlyOneChild.path)"
-          >
-            <byui-icon
-              v-if="onlyOneChild.meta && onlyOneChild.meta.icon"
-              :icon="['fas', onlyOneChild.meta.icon]"
-              class="byui-nav-icon"
-            />
-            <byui-remix-icon
-              v-if="onlyOneChild.meta && onlyOneChild.meta.remixIcon"
-              :icon-class="onlyOneChild.meta.icon"
-              class="byui-nav-icon"
-            />
-            {{ onlyOneChild.meta.title }}
-          </el-menu-item>
-        </ul>
+        <el-menu-item
+          :class="{ 'submenu-title-noDropdown': !isNest }"
+          :index="resolvePath(onlyOneChild.path)"
+        >
+          <byui-icon
+            v-if="onlyOneChild.meta && onlyOneChild.meta.icon"
+            :icon="['fas', onlyOneChild.meta.icon]"
+            class="byui-nav-icon"
+          />
+          <byui-remix-icon
+            v-if="onlyOneChild.meta && onlyOneChild.meta.remixIcon"
+            :icon-class="onlyOneChild.meta.icon"
+            class="byui-nav-icon"
+          />
+          {{ onlyOneChild.meta.title }}
+        </el-menu-item>
       </app-link>
     </template>
     <el-submenu v-else ref="subMenu" :index="resolvePath(item.path)">
@@ -55,7 +53,7 @@
         class="nest-menu"
       />
     </el-submenu>
-  </li>
+  </div>
 </template>
 <script>
 import path from "path";
