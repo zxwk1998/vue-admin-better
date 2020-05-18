@@ -12,7 +12,7 @@
       <el-image
         v-for="(itemImg, indexImg) in item.images1.split(',')"
         :key="itemImg + indexImg"
-        style="width: 300px; height: 300px; margin: 30px;"
+        style="margin: 10px 0 0 30px;"
         :src="itemImg"
         fit="scale-down"
       ></el-image>

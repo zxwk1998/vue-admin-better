@@ -24,7 +24,7 @@ import "pizzip/dist/pizzip.js";
 import "pizzip/dist/pizzip-utils.js";
 import "file-saver";
 import { getList } from "@/api/word";
-import ImageModule from "docxtemplater-image-module-free";
+/* import ImageModule from "docxtemplater-image-module-free"; */
 export default {
   name: "Word",
   components: { AppLink },
@@ -119,12 +119,12 @@ export default {
           return [150, 150];
         };
 
-        let imageModule = new ImageModule(opts);
+        /* let imageModule = new ImageModule(opts); */
 
         let zip = new PizZip(content);
         let doc = new docxtemplater()
           .loadZip(zip)
-          .attachModule(imageModule)
+          /*  .attachModule(imageModule) */
           .compile();
 
         doc.setData({
