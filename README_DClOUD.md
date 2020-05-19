@@ -20,6 +20,8 @@
 
 ## ☝☝☝ 演示地址,在上方直接点击登录即可！
 
+![vue-admin-beautiful](https://chu1204505056.gitee.io/byui-bookmarks/GIF.gif)
+
 ## 重要声明
 
 <font color="#FF0000">
