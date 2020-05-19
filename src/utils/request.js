@@ -70,7 +70,7 @@ service.interceptors.response.use(
       switch (code) {
         case invalidCode:
           errorMsg(msg || `后端接口${code}异常`);
-          store.dispatch("user/resetToken");
+          store.dispatch("user/resetAccessToken");
           break;
         case noPermissionCode:
           router.push({
