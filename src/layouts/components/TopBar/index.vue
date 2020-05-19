@@ -7,11 +7,11 @@
         </el-col>
         <el-col :lg="18" :md="18" :sm="18" :xl="18" :xs="24">
           <el-menu
-            :active-text-color="variables['menu-text-active']"
+            :active-text-color="variables['menu-color-active']"
             :background-color="variables['menu-background']"
             :default-active="activeMenu"
             :menu-trigger="menuTrigger"
-            :text-color="variables['menu-text']"
+            :text-color="variables['menu-color']"
             mode="horizontal"
           >
             <tab-item

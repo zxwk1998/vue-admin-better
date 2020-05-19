@@ -44,14 +44,14 @@
         />
         {{ item.meta.title }}
       </template>
-      <tab-item
+      <top-bar-item
         v-for="child in item.children"
         :key="child.path"
         :base-path="resolvePath(child.path)"
         :is-nest="true"
         :item="child"
         class="nest-menu"
-      />
+      ></top-bar-item>
     </el-submenu>
   </div>
 </template>
@@ -84,6 +84,7 @@ export default {
   },
   methods: {
     hasOneShowingChild(children = [], parent) {
+      if (children === null) children = [];
       const showingChildren = children.filter((item) => {
         if (item.hidden) {
           return false;
