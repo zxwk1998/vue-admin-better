@@ -39,7 +39,8 @@ service.interceptors.request.use(
       config.url.includes("set") ||
       config.url.includes("update") ||
       config.url.includes("import") ||
-      config.url.includes("export")
+      config.url.includes("export") ||
+      config.url.includes("save")
     ) {
       loadingInstance = Loading.service();
     }
