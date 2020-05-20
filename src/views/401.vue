@@ -70,7 +70,7 @@ export default {
           this.jumpTime--;
         } else {
           this.$router.push({ path: "/" });
-          this.$store.dispatch("tagsView/delOthersViews", {
+          this.$store.dispatch("tagsBar/delOthersViews", {
             path: "/",
           });
           clearInterval(this.timer);

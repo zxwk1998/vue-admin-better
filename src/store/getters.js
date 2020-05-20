@@ -1,7 +1,7 @@
 export default {
   accessToken: (state) => state.user.accessToken,
   collapse: (state) => state.settings.collapse,
-  cachedRoutes: (state) => state.tagsView.cachedRoutes,
+  cachedRoutes: (state) => state.tagsBar.cachedRoutes,
   device: (state) => state.settings.device,
   errorLogs: (state) => state.errorLog.logs,
   header: (state) => state.settings.header,
@@ -11,6 +11,6 @@ export default {
   permissions: (state) => state.user.permissions,
   routes: (state) => state.permission.routes,
   srcTableCode: (state) => state.table.srcCode,
-  tagsView: (state) => state.settings.tagsView,
-  visitedRoutes: (state) => state.tagsView.visitedRoutes,
+  tagsBar: (state) => state.settings.tagsBar,
+  visitedRoutes: (state) => state.tagsBar.visitedRoutes,
 };

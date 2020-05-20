@@ -55,7 +55,7 @@ export default {
   watch: {
     $route(to, from) {
       this.$nextTick(() => {
-        if (this.$store.state.tagsView.skeleton) {
+        if (this.$store.state.tagsBar.skeleton) {
           this.show = true;
           setTimeout(() => {
             this.show = false;

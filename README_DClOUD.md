@@ -95,7 +95,7 @@ module.exports = {
   header: "fixed", //固定fixed 不固定noFixed
   layout: "vertical", //横纵布局 horizontal vertical
   themeBar: true, //是否开启主题配置按钮
-  tagsView: true, //是否显示多标签页
+  tagsBar: true, //是否显示多标签页
   contentType: "application/json;charset=UTF-8", //配后端数据的接收方式application/json;charset=UTF-8或者application/x-www-form-urlencoded;charset=UTF-8
   messageDuration: 3000, //消息框消失时间
   requestTimeout: 5000, //最长请求时间

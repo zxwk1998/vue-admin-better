@@ -112,7 +112,7 @@ export default {
       });
       const view = arr[0];
       this.pulse = true;
-      this.$store.dispatch("tagsView/delCachedRoutes", view).then(() => {
+      this.$store.dispatch("tagsBar/delCachedRoutes", view).then(() => {
         const { fullPath } = view;
         this.$nextTick(() => {
           this.$router

@@ -5,17 +5,17 @@
       class="layout-container-horizontal"
       :class="{
         fixed: header === 'fixed',
-        'no-tags-view': tagsView === 'false' || tagsView === false,
+        'no-tags-bar': tagsBar === 'false' || tagsBar === false,
       }"
     >
       <div :class="header === 'fixed' ? 'fixed-header' : ''">
         <top-bar />
         <div
-          v-if="tagsView === 'true' || tagsView === true"
-          :class="{ 'tag-view-show': tagsView }"
+          v-if="tagsBar === 'true' || tagsBar === true"
+          :class="{ 'tag-view-show': tagsBar }"
         >
           <byui-main>
-            <tags-view />
+            <tags-bar />
           </byui-main>
         </div>
       </div>
@@ -29,7 +29,7 @@
       class="layout-container-vertical"
       :class="{
         fixed: header === 'fixed',
-        'no-tags-view': tagsView === 'false' || tagsView === false,
+        'no-tags-bar': tagsBar === 'false' || tagsBar === false,
       }"
     >
       <div
@@ -41,7 +41,7 @@
       <byui-main :class="collapse ? 'is-collapse-main' : ''">
         <div :class="header === 'fixed' ? 'fixed-header' : ''">
           <nav-bar />
-          <tags-view v-if="tagsView === 'true' || tagsView === true" />
+          <tags-bar v-if="tagsBar === 'true' || tagsBar === true" />
         </div>
         <app-main />
       </byui-main>
@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import { AppMain, NavBar, SideBar, TagsView, TopBar } from "./components";
+import { AppMain, NavBar, SideBar, TagsBar, TopBar } from "./components";
 import ByuiMain from "@/components/ByuiMain";
 import ByuiBackToTop from "@/components/ByuiBackToTop";
 import { mapGetters } from "vuex";
@@ -66,7 +66,7 @@ export default {
     SideBar,
     AppMain,
     ByuiMain,
-    TagsView,
+    TagsBar,
     ByuiBackToTop,
   },
   mixins: [Media],
@@ -74,7 +74,7 @@ export default {
     return {};
   },
   computed: {
-    ...mapGetters(["layout", "tagsView", "collapse", "header", "device"]),
+    ...mapGetters(["layout", "tagsBar", "collapse", "header", "device"]),
     classObj() {
       return {
         mobile: this.device === "mobile",
@@ -124,7 +124,7 @@ export default {
       padding-top: 96px;
     }
 
-    &.fixed.no-tags-view {
+    &.fixed.no-tags-bar {
       padding-top: 56px;
     }
 
@@ -181,7 +181,7 @@ export default {
       padding-top: 96px;
     }
 
-    &.fixed.no-tags-view {
+    &.fixed.no-tags-bar {
       padding-top: 56px;
     }
 
@@ -207,7 +207,7 @@ export default {
           box-sizing: border-box;
         }
 
-        .tags-view-container {
+        .tags-bar-container {
           box-sizing: border-box;
           padding-right: 5px;
           padding-left: 5px;

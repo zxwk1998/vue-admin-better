@@ -43,7 +43,7 @@
               </el-radio-group>
             </el-form-item>
             <el-form-item label="多标签">
-              <el-radio-group v-model="theme.tagsView">
+              <el-radio-group v-model="theme.tagsBar">
                 <el-radio-button label="true">开启</el-radio-button>
                 <el-radio-button label="false">不开启</el-radio-button>
               </el-radio-group>
@@ -141,7 +141,7 @@ export default {
       theme: {
         layout: "",
         header: "",
-        tagsView: "",
+        tagsBar: "",
         menuBackground: variables["menu-background"],
         menuChildrenBackground: variables["menu-children-background"],
         menuBackgroundActive: variables["menu-background-active"],
@@ -153,7 +153,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["layout", "header", "tagsView"]),
+    ...mapGetters(["layout", "header", "tagsBar"]),
   },
   mounted() {
     this.$baseEventBus.$on("theme", () => {
@@ -164,7 +164,7 @@ export default {
     const theme = localStorage.getItem("BYUI-VUE-THEME");
     this.theme.layout = this.layout;
     this.theme.header = this.header;
-    this.theme.tagsView = this.tagsView;
+    this.theme.tagsBar = this.tagsBar;
     if (null !== theme) {
       this.$set(this.theme, "menuBackground", JSON.parse(theme).menuBackground);
       this.$set(
@@ -208,7 +208,7 @@ export default {
       let {
         layout,
         header,
-        tagsView,
+        tagsBar,
         menuBackground,
         menuChildrenBackground,
         menuBackgroundActive,
@@ -243,7 +243,7 @@ export default {
           background-color:${menuBackgroundActive}!important;
         }
 
-        .tags-view-item.router-link-exact-active.router-link-active.active {
+        .tags-bar-item.router-link-exact-active.router-link-active.active {
           background-color: ${tagViewsBackgroundActive}!important;
           border: 1px solid ${tagViewsBackgroundActive}!important;
         }
@@ -288,14 +288,14 @@ export default {
             "tagViewsBackgroundActive":"${tagViewsBackgroundActive}",
             "layout":"${layout}",
             "header":"${header}",
-            "tagsView":"${tagsView}",
+            "tagsBar":"${tagsBar}",
             "buttonBackground":"${buttonBackground}",
             "paginationBackgroundActive":"${paginationBackgroundActive}"
           }`
       );
       this.handleSwitchLayout(layout);
       this.handleSwitchHeader(header);
-      this.handleSwitchTagsView(tagsView);
+      this.handleSwitchTagsBar(tagsBar);
       this.drawerVisible = false;
     },
     handleSaveTheme() {
@@ -317,8 +317,8 @@ export default {
     handleSwitchHeader(header) {
       this.$store.dispatch("settings/changeHeader", header);
     },
-    handleSwitchTagsView(tagsView) {
-      this.$store.dispatch("settings/changeTagsView", tagsView);
+    handleSwitchTagsBar(tagsBar) {
+      this.$store.dispatch("settings/changeTagsBar", tagsBar);
     },
   },
 };

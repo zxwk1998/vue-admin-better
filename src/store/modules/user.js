@@ -76,7 +76,7 @@ const actions = {
           commit("setPermissions", []);
           removeAccessToken();
           resetRouter();
-          dispatch("tagsView/delAllViews", null, { root: true });
+          dispatch("tagsBar/delAllViews", null, { root: true });
           resolve();
         })
         .catch((error) => {

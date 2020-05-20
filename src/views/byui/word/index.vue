@@ -4,10 +4,7 @@
       >根据json导出word demo</el-button
     >
     <app-link to="/image" target="_blank">
-      <el-button
-        style="margin-left: 10px;"
-        type="primary"
-        @click="handleOpenWindow"
+      <el-button style="margin-left: 10px;" type="primary"
         >根据json打印图片demo</el-button
       ></app-link
     >
