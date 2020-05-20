@@ -25,3 +25,24 @@ export function filterRoutes(constantRoutes) {
     return true;
   });
 }
+
+function hasPermission(permissions, route) {
+  if (route.meta && route.meta.permissions) {
+    return permissions.some((role) => route.meta.permissions.includes(role));
+  } else {
+    return true;
+  }
+}
+export function filterAsyncRoutes(routes, permissions) {
+  const res = [];
+  routes.forEach((route) => {
+    const tmp = { ...route };
+    if (hasPermission(permissions, tmp)) {
+      if (tmp.children) {
+        tmp.children = filterAsyncRoutes(tmp.children, permissions);
+      }
+      res.push(tmp);
+    }
+  });
+  return res;
+}

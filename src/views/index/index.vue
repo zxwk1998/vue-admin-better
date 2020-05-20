@@ -155,7 +155,7 @@
             </a>
             <a
               target="_blank"
-              href="https://github.com/chuzhixin/vue-element-admin-beautiful"
+              href="https://github.com/chuzhixin/vue-admin-beautiful"
             >
               <el-button type="warning">
                 github下载源码点star（实时更新）
