@@ -26,9 +26,9 @@
 
 ![vue-admin-beautiful](https://chu1204505056.gitee.io/byui-bookmarks/GIF.gif)
 
-## 关于框架的验证声明
+## 关于框架的严正声明
 
-此框架基于 element-ui 开发，并非二次开发项目，不存在抄袭任何框架，除 tagsview 借鉴开源框架 vue-element-admin（今后会进行重构），骨架屏借鉴开源框架 ant-design 外不存在任何抄袭行为，外框完全开源免费，短期内火爆起来也许触犯了某些人的利益，在此说声对不起
+<font color="red">此框架基于 element-ui 开发，并非二次开发项目，不存在抄袭任何框架，除 tagsview 借鉴开源框架 vue-element-admin（今后会进行重构），骨架屏借鉴开源框架 ant-design 外不存在任何抄袭行为，外框完全开源免费，短期内火爆起来也许触犯了某些人的利益，在此说声对不起</font>
 
 ## 感谢
 
