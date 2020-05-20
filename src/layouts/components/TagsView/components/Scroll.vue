@@ -11,10 +11,8 @@
 </template>
 
 <script>
-const tagAndTagSpacing = 5;
-
 export default {
-  name: "ScrollPane",
+  name: "Scroll",
   data() {
     return {
       left: 0,
@@ -56,10 +54,9 @@ export default {
         const nextTag = tagList[currentIndex + 1];
 
         const afterNextTagOffsetLeft =
-          nextTag.$el.offsetLeft + nextTag.$el.offsetWidth + tagAndTagSpacing;
+          nextTag.$el.offsetLeft + nextTag.$el.offsetWidth + 5;
 
-        const beforePrevTagOffsetLeft =
-          prevTag.$el.offsetLeft - tagAndTagSpacing;
+        const beforePrevTagOffsetLeft = prevTag.$el.offsetLeft - 5;
 
         if (
           afterNextTagOffsetLeft >

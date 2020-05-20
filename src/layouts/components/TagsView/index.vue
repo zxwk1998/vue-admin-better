@@ -6,7 +6,7 @@
       @click="handleScroll('left')"
     >
     </byui-icon>
-    <scroll-pane ref="scrollPane" class="tags-content" @contextmenu.stop>
+    <scroll ref="scrollPane" class="tags-content" @contextmenu.stop>
       <router-link
         v-for="item in visitedViews"
         :key="item.path"
@@ -29,7 +29,7 @@
           @click.prevent.stop="closeSelectedTag(item)"
         />
       </router-link>
-    </scroll-pane>
+    </scroll>
     <byui-icon
       class="tags-icon"
       :icon="['fas', 'angle-double-right']"
@@ -68,13 +68,13 @@
 </template>
 
 <script>
-import ScrollPane from "./ScrollPane";
+import Scroll from "./components/Scroll";
 import path from "path";
 import { mapGetters } from "vuex";
 
 export default {
   name: "TagsView",
-  components: { ScrollPane },
+  components: { Scroll },
   data() {
     return {
       visible: false,

@@ -56,7 +56,7 @@ import ByuiMain from "@/components/ByuiMain";
 import ByuiBackToTop from "@/components/ByuiBackToTop";
 import { mapGetters } from "vuex";
 import { tokenName } from "@/config/settings";
-import ResizeMixin from "./mixin/Resize";
+import Media from "./mixin/Media";
 
 export default {
   name: "Layout",
@@ -69,7 +69,7 @@ export default {
     TagsView,
     ByuiBackToTop,
   },
-  mixins: [ResizeMixin],
+  mixins: [Media],
   data() {
     return {};
   },

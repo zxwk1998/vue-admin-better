@@ -1,8 +1,5 @@
 import store from "@/store";
 
-const { body } = document;
-const width = 992;
-
 export default {
   beforeMount() {
     window.addEventListener("resize", this.handleResize);
@@ -29,7 +26,7 @@ export default {
   },
   methods: {
     handleIsMobile() {
-      return body.getBoundingClientRect().width - 1 < width;
+      return document.body.getBoundingClientRect().width - 1 < 992;
     },
     handleResize() {
       if (!document.hidden) {
