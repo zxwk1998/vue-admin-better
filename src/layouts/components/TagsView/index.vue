@@ -8,7 +8,7 @@
     </byui-icon>
     <scroll ref="scrollPane" class="tags-content" @contextmenu.stop>
       <router-link
-        v-for="item in visitedViews"
+        v-for="item in visitedRoutes"
         :key="item.path"
         ref="tag"
         :class="isActive(item) ? 'active' : ''"
@@ -19,8 +19,6 @@
         }"
         class="tags-view-item"
         tag="span"
-        @click.middle.native="!isAffix(tag) ? closeSelectedTag(tag) : ''"
-        @contextmenu.prevent.native="openMenu(item, $event, selectedTag)"
       >
         {{ item.title }}
         <span
@@ -36,34 +34,34 @@
       @click="handleScroll('right')"
     >
     </byui-icon>
-    <ul
-      v-show="visible"
-      :style="{ 'margin-left': left + 'px', 'margin-top': top + 'px' }"
-      class="contextmenu"
-    >
-      <li @click="refreshSelectedTag(selectedTag)">
-        <byui-icon :icon="['fas', 'circle-notch']" style="margin-right: 5px;" />
-        刷新
-      </li>
-      <li v-if="!isAffix(selectedTag)" @click="closeSelectedTag(selectedTag)">
-        <byui-icon
-          :icon="['fas', 'times-circle']"
-          style="margin-right: 5px; margin-left: 2px;"
-        />
-        关闭
-      </li>
-      <li @click="closeOthersTags">
-        <byui-icon :icon="['fas', 'times-circle']" style="margin-right: 5px;" />
-        关闭其他
-      </li>
-      <li @click="closeAllTags(selectedTag)">
-        <byui-icon
-          :icon="['fas', 'times-circle']"
-          style="margin-right: 5px; margin-left: 2px;"
-        />
-        关闭全部
-      </li>
-    </ul>
+    <el-dropdown>
+      <span style="cursor: pointer;">
+        更多操作<i class="el-icon-arrow-down el-icon--right"></i>
+      </span>
+      <el-dropdown-menu slot="dropdown" class="tags-more">
+        <el-dropdown-item @click.native="refreshRoute"
+          ><byui-icon
+            :icon="['fas', 'circle-notch']"
+            style="margin-right: 5px;"
+          />
+          刷新</el-dropdown-item
+        >
+        <el-dropdown-item @click.native="closeOthersTags">
+          <byui-icon
+            :icon="['fas', 'times-circle']"
+            style="margin-right: 5px;"
+          />
+          关闭其他</el-dropdown-item
+        >
+        <el-dropdown-item @click.native="closeAllTags"
+          ><byui-icon
+            :icon="['fas', 'times-circle']"
+            style="margin-right: 5px; margin-left: 2px;"
+          />
+          关闭全部</el-dropdown-item
+        >
+      </el-dropdown-menu>
+    </el-dropdown>
   </div>
 </template>
 
@@ -77,28 +75,17 @@ export default {
   components: { Scroll },
   data() {
     return {
-      visible: false,
-      top: 0,
-      left: 0,
-      selectedTag: {},
       affixTags: [],
     };
   },
 
   computed: {
-    ...mapGetters(["layout", "visitedViews", "routes"]),
+    ...mapGetters(["layout", "visitedRoutes", "routes"]),
   },
   watch: {
     $route() {
       this.addTags();
       this.moveToCurrentTag();
-    },
-    visible(value) {
-      if (value) {
-        document.body.addEventListener("click", this.closeMenu);
-      } else {
-        document.body.removeEventListener("click", this.closeMenu);
-      }
     },
   },
   mounted() {
@@ -107,9 +94,6 @@ export default {
   },
   methods: {
     isActive(route) {
-      if (route.path === this.$route.path) {
-        this.$store.dispatch("tagsView/setSelectedTag", route);
-      }
       return route.path === this.$route.path;
     },
     isAffix(tag) {
@@ -140,7 +124,7 @@ export default {
       const affixTags = (this.affixTags = this.filterAffixTags(this.routes));
       for (const tag of affixTags) {
         if (tag.name) {
-          this.$store.dispatch("tagsView/addVisitedView", tag);
+          this.$store.dispatch("tagsView/addVisitedRoute", tag);
         }
       }
     },
@@ -158,50 +142,68 @@ export default {
           if (tag.to.path === this.$route.path) {
             this.$refs.scrollPane.moveToTarget(tag);
             if (tag.to.fullPath !== this.$route.fullPath) {
-              this.$store.dispatch("tagsView/updateVisitedView", this.$route);
+              this.$store.dispatch("tagsView/updateVisitedRoute", this.$route);
             }
             break;
           }
         }
       });
     },
-    refreshSelectedTag(view) {
-      this.$store.dispatch("tagsView/delCachedView", view).then(() => {
+    refreshRoute() {
+      const arr = this.visitedRoutes.filter((item, index) => {
+        if (item.path === this.$route.fullPath) {
+          return item;
+        }
+      });
+      const view = arr[0];
+      this.$store.dispatch("tagsView/delCachedRoutes", view).then(() => {
         const { fullPath } = view;
         this.$nextTick(() => {
-          this.$router.replace({
-            path: "/redirect" + fullPath,
-          });
+          this.$router
+            .replace({
+              path: "/redirect" + this.$route.fullPath,
+            })
+            .catch(() => {});
         });
       });
     },
     closeSelectedTag(view) {
       this.$store
         .dispatch("tagsView/delView", view)
-        .then(({ visitedViews }) => {
+        .then(({ visitedRoutes }) => {
           if (this.isActive(view)) {
-            this.toLastView(visitedViews, view);
+            this.toLastView(visitedRoutes, view);
           }
         });
     },
     closeOthersTags() {
-      this.$router.push(this.selectedTag);
-      this.$store
-        .dispatch("tagsView/delOthersViews", this.selectedTag)
-        .then(() => {
-          this.moveToCurrentTag();
-        });
+      const arr = this.visitedRoutes.filter((item, index) => {
+        if (item.path === this.$route.fullPath) {
+          return item;
+        }
+      });
+      const view = arr[0];
+      this.$router.push(view);
+      this.$store.dispatch("tagsView/delOthersViews", view).then(() => {
+        this.moveToCurrentTag();
+      });
     },
-    closeAllTags(view) {
-      this.$store.dispatch("tagsView/delAllViews").then(({ visitedViews }) => {
+    closeAllTags() {
+      const arr = this.visitedRoutes.filter((item, index) => {
+        if (item.path === this.$route.fullPath) {
+          return item;
+        }
+      });
+      const view = arr[0];
+      this.$store.dispatch("tagsView/delAllViews").then(({ visitedRoutes }) => {
         if (this.affixTags.some((tag) => tag.path === view.path)) {
           return;
         }
-        this.toLastView(visitedViews, view);
+        this.toLastView(visitedRoutes, view);
       });
     },
-    toLastView(visitedViews, view) {
-      const latestView = visitedViews.slice(-1)[0];
+    toLastView(visitedRoutes, view) {
+      const latestView = visitedRoutes.slice(-1)[0];
       if (latestView) {
         this.$router.push(latestView);
       } else {
@@ -211,27 +213,6 @@ export default {
           this.$router.push("/");
         }
       }
-    },
-    openMenu(tag, e, selectedTag) {
-      const menuMinWidth = 105;
-      const offsetLeft = this.$el.getBoundingClientRect().left;
-      const offsetWidth = this.$el.offsetWidth;
-      const maxLeft = offsetWidth - menuMinWidth;
-      const left = e.clientX - offsetLeft + 15;
-
-      if (left > maxLeft) {
-        this.left = maxLeft;
-      } else {
-        this.left = left;
-      }
-      this.top = e.clientY - 50;
-
-      this.visible = true;
-      this.selectedTag = tag;
-      this.$store.dispatch("tagsView/setSelectedTag", tag);
-    },
-    closeMenu() {
-      this.visible = false;
     },
     handleScroll(e) {
       let $wrap = $(".tags-view-container .el-scrollbar__wrap");
@@ -270,7 +251,7 @@ export default {
 
   .tags-content {
     float: left;
-    width: calc(100% - 60px);
+    width: calc(100% - 145px);
 
     .tags-view-item {
       position: relative;
@@ -319,32 +300,9 @@ export default {
     }
   }
 
-  .contextmenu {
-    position: fixed;
-    z-index: $base-z-index;
-    padding: 5px 0;
-    margin: 0;
-    font-size: $base-font-size-small;
-    font-weight: 400;
-    color: #333;
-    list-style-type: none;
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: $base-box-shadow;
-
-    li {
-      padding: 7px 16px;
-      margin: 0;
-      cursor: pointer;
-
-      .svg-inline--fa {
-        margin-right: 5px;
-        vertical-align: -0.55px;
-      }
-
-      &:hover {
-        background: #eee;
-      }
+  ::v-deep {
+    .el-dropdown {
+      margin-top: 15px;
     }
   }
 }

@@ -10,7 +10,7 @@
       <byui-keel-text :lines="8" />
     </byui-keel>
     <transition mode="out-in" name="fade-transform">
-      <keep-alive :include="cachedViews" :max="10">
+      <keep-alive :include="cachedRoutes" :max="10">
         <router-view :key="key" style="min-height: 78vh;" />
       </keep-alive>
     </transition>
@@ -47,7 +47,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["cachedViews", "device"]),
+    ...mapGetters(["cachedRoutes", "device"]),
     key() {
       return this.$route.path;
     },

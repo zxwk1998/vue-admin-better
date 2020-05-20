@@ -1,18 +1,17 @@
 const state = {
-  visitedViews: [],
-  cachedViews: [],
-  selectedTag: {},
+  visitedRoutes: [],
+  cachedRoutes: [],
   skeleton: true,
 };
 const mutations = {
-  addVisitedView: (state, view) => {
-    if (state.visitedViews.some((v) => v.path === view.path)) return;
-    state.visitedViews.push(
-      Object.assign({}, view, { title: view.meta.title || "no-name" })
+  addVisitedRoute: (state, view) => {
+    if (state.visitedRoutes.some((v) => v.path === view.path)) return;
+    state.visitedRoutes.push(
+      Object.assign({}, view, { title: view.meta.title || "新标签页" })
     );
   },
-  addCachedView: (state, view) => {
-    if (state.cachedViews.includes(view.name)) {
+  addCachedRoutes: (state, view) => {
+    if (state.cachedRoutes.includes(view.name)) {
       state.skeleton = false;
       if (view.meta.noKeepAlive) {
         state.skeleton = true;
@@ -22,52 +21,49 @@ const mutations = {
       state.skeleton = true;
     }
     if (!view.meta.noKeepAlive) {
-      state.cachedViews.push(view.name);
+      state.cachedRoutes.push(view.name);
     }
   },
-  delVisitedView: (state, view) => {
-    for (const [i, v] of state.visitedViews.entries()) {
+  delVisitedRoute: (state, view) => {
+    for (const [i, v] of state.visitedRoutes.entries()) {
       if (v.path === view.path) {
-        state.visitedViews.splice(i, 1);
+        state.visitedRoutes.splice(i, 1);
         break;
       }
     }
   },
-  delCachedView: (state, view) => {
-    for (const i of state.cachedViews) {
+  delCachedRoutes: (state, view) => {
+    for (const i of state.cachedRoutes) {
       if (i === view.name) {
-        const index = state.cachedViews.indexOf(i);
-        state.cachedViews.splice(index, 1);
+        const index = state.cachedRoutes.indexOf(i);
+        state.cachedRoutes.splice(index, 1);
         break;
       }
     }
   },
-  delOthersVisitedViews: (state, view) => {
-    state.visitedViews = state.visitedViews.filter((v) => {
+  delOthersVisitedRoute: (state, view) => {
+    state.visitedRoutes = state.visitedRoutes.filter((v) => {
       return v.meta.affix || v.path === view.path;
     });
   },
-  delOthersCachedViews: (state, view) => {
-    for (const i of state.cachedViews) {
+  delOthersCachedRoutes: (state, view) => {
+    for (const i of state.cachedRoutes) {
       if (i === view.name) {
-        const index = state.cachedViews.indexOf(i);
-        state.cachedViews = state.cachedViews.slice(index, index + 1);
+        const index = state.cachedRoutes.indexOf(i);
+        state.cachedRoutes = state.cachedRoutes.slice(index, index + 1);
         break;
       }
     }
   },
-  delAllVisitedViews: (state) => {
-    const affixTags = state.visitedViews.filter((tag) => tag.meta.affix);
-    state.visitedViews = affixTags;
+  delAllVisitedRoutes: (state) => {
+    const affixTags = state.visitedRoutes.filter((tag) => tag.meta.affix);
+    state.visitedRoutes = affixTags;
   },
-  delAllCachedViews: (state) => {
-    state.cachedViews = [];
+  delAllCachedRoutess: (state) => {
+    state.cachedRoutes = [];
   },
-  setSelectedTag: (state, selectedTag) => {
-    state.selectedTag = selectedTag;
-  },
-  updateVisitedView: (state, view) => {
-    for (let v of state.visitedViews) {
+  updateVisitedRoute: (state, view) => {
+    for (let v of state.visitedRoutes) {
       if (v.path === view.path) {
         v = Object.assign(v, view);
         break;
@@ -77,86 +73,83 @@ const mutations = {
 };
 const actions = {
   addView({ dispatch }, view) {
-    dispatch("addVisitedView", view);
-    dispatch("addCachedView", view);
+    dispatch("addVisitedRoute", view);
+    dispatch("addCachedRoutes", view);
   },
-  addVisitedView({ commit }, view) {
-    commit("addVisitedView", view);
+  addVisitedRoute({ commit }, view) {
+    commit("addVisitedRoute", view);
   },
-  addCachedView({ commit }, view) {
-    commit("addCachedView", view);
+  addCachedRoutes({ commit }, view) {
+    commit("addCachedRoutes", view);
   },
   delView({ dispatch, state }, view) {
     return new Promise(async (resolve) => {
-      await dispatch("delVisitedView", view);
-      await dispatch("delCachedView", view);
+      await dispatch("delVisitedRoute", view);
+      await dispatch("delCachedRoutes", view);
       resolve({
-        visitedViews: [...state.visitedViews],
-        cachedViews: [...state.cachedViews],
+        visitedRoutes: [...state.visitedRoutes],
+        cachedRoutes: [...state.cachedRoutes],
       });
     });
   },
-  delVisitedView({ commit, state }, view) {
+  delVisitedRoute({ commit, state }, view) {
     return new Promise((resolve) => {
-      commit("delVisitedView", view);
-      resolve([...state.visitedViews]);
+      commit("delVisitedRoute", view);
+      resolve([...state.visitedRoutes]);
     });
   },
-  delCachedView({ commit, state }, view) {
+  delCachedRoutes({ commit, state }, view) {
     return new Promise((resolve) => {
-      commit("delCachedView", view);
-      resolve([...state.cachedViews]);
+      commit("delCachedRoutes", view);
+      resolve([...state.cachedRoutes]);
     });
   },
   delOthersViews({ dispatch, state }, view) {
     return new Promise(async (resolve) => {
-      await dispatch("delOthersVisitedViews", view);
-      await dispatch("delOthersCachedViews", view);
+      await dispatch("delOthersVisitedRoute", view);
+      await dispatch("delOthersCachedRoutes", view);
       resolve({
-        visitedViews: [...state.visitedViews],
-        cachedViews: [...state.cachedViews],
+        visitedRoutes: [...state.visitedRoutes],
+        cachedRoutes: [...state.cachedRoutes],
       });
     });
   },
-  delOthersVisitedViews({ commit, state }, view) {
+  delOthersVisitedRoute({ commit, state }, view) {
     return new Promise((resolve) => {
-      commit("delOthersVisitedViews", view);
-      resolve([...state.visitedViews]);
+      commit("delOthersVisitedRoute", view);
+      resolve([...state.visitedRoutes]);
     });
   },
-  delOthersCachedViews({ commit, state }, view) {
+  delOthersCachedRoutes({ commit, state }, view) {
     return new Promise((resolve) => {
-      commit("delOthersCachedViews", view);
-      resolve([...state.cachedViews]);
+      commit("delOthersCachedRoutes", view);
+      resolve([...state.cachedRoutes]);
     });
   },
   delAllViews({ dispatch, state }, view) {
     return new Promise(async (resolve) => {
-      await dispatch("delAllVisitedViews", view);
-      await dispatch("delAllCachedViews", view);
+      await dispatch("delAllVisitedRoutes", view);
+      await dispatch("delAllCachedRoutess", view);
       resolve({
-        visitedViews: [...state.visitedViews],
-        cachedViews: [...state.cachedViews],
+        visitedRoutes: [...state.visitedRoutes],
+        cachedRoutes: [...state.cachedRoutes],
       });
     });
   },
-  delAllVisitedViews({ commit, state }) {
+  delAllVisitedRoutes({ commit, state }) {
     return new Promise((resolve) => {
-      commit("delAllVisitedViews");
-      resolve([...state.visitedViews]);
+      commit("delAllVisitedRoutes");
+      resolve([...state.visitedRoutes]);
     });
   },
-  delAllCachedViews({ commit, state }) {
+  delAllCachedRoutess({ commit, state }) {
     return new Promise((resolve) => {
-      commit("delAllCachedViews");
-      resolve([...state.cachedViews]);
+      commit("delAllCachedRoutess");
+      resolve([...state.cachedRoutes]);
     });
   },
-  setSelectedTag({ commit }, selectedTag) {
-    commit("setSelectedTag", selectedTag);
-  },
-  updateVisitedView({ commit }, view) {
-    commit("updateVisitedView", view);
+  updateVisitedRoute({ commit }, view) {
+    commit("updateVisitedRoute", view);
   },
 };
 export default { state, mutations, actions };
