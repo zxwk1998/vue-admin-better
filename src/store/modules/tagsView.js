@@ -72,7 +72,7 @@ const mutations = {
   },
 };
 const actions = {
-  addView({ dispatch }, view) {
+  addRoute({ dispatch }, view) {
     dispatch("addVisitedRoute", view);
     dispatch("addCachedRoutes", view);
   },
