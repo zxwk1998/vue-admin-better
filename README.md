@@ -24,7 +24,9 @@
 
 ## ☝☝☝ 演示地址,在上方直接点击登录即可！
 
-![vue-admin-beautiful](https://chu1204505056.gitee.io/byui-bookmarks/GIF.gif)
+### 全网首家实现 element-ui 横向纵向布局无缝切换，多标签页关闭左侧关闭右侧关闭其他（布局切换效果仿 ant-design-pro，tagsBar 仿谷歌浏览器右键菜单,代码纯手写，技术抄袭 Vue）
+
+![vue-admin-beautiful](http://mpfhrd48.sanxing.uz7.cn/byui-bookmarks/GIF.gif)
 
 ## 关于框架的严正声明
 
