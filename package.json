@@ -63,6 +63,7 @@
     "vuedraggable": "^2.23.2",
     "vuex": "^3.4.0",
     "xlsx": "^0.16.1",
+    "zx-breadcrumb": "^0.0.1",
     "zx-comparison": "^1.0.3",
     "zx-count": "^0.3.4",
     "zx-icon": "1.0.2",
@@ -70,7 +71,10 @@
     "zx-magnifie": "^0.4.0",
     "zx-markdown-editor": "^0.0.1",
     "zx-player": "^0.9.6",
+    "zx-side-bar": "^0.0.3",
     "zx-swiper": "^0.5.5",
+    "zx-tags-bar": "^0.0.1",
+    "zx-top-bar": "^0.0.1",
     "zx-verify": "^0.0.1"
   },
   "devDependencies": {

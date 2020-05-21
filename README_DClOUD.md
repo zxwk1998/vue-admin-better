@@ -4,7 +4,7 @@
 
 ### 2020/05/20 修复 resetAccessoken 无限重载路由的 bug，增加验证码组件，word 模板根据 json 导出组件
 
-## <font color="red">全网首家实现 element-ui 横向纵向布局无缝切换，多标签页关闭左侧关闭右侧关闭其他（布局切换效果仿 ant-design-pro，tagsBar 仿谷歌浏览器右键菜单，代码自己编写）
+### <font color="#22ac38">全网首家实现 element-ui 横向纵向布局无缝切换，多标签页关闭左侧关闭右侧关闭其他（布局切换效果仿 ant-design-pro，tagsBar 仿谷歌浏览器右键菜单）
 
 ![vue-admin-beautiful](http://mpfhrd48.sanxing.uz7.cn/byui-bookmarks/GIF.gif)
 

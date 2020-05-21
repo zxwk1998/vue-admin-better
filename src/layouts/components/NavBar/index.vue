@@ -60,7 +60,7 @@
 import { mapGetters } from "vuex";
 import ErrorLog from "@/components/ErrorLog";
 import ByuiScreenfull from "@/components/ByuiScreenfull";
-import Breadcrumb from "@/layouts/components/Breadcrumb";
+import Breadcrumb from "zx-breadcrumb";
 import ThemeBar from "@/layouts/components/ThemeBar";
 
 export default {
