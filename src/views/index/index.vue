@@ -1,5 +1,5 @@
 <template>
-  <div class="index-container">
+  <div v-if="nodeEnv !== 'development'" class="index-container">
     <el-row :gutter="15">
       <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
         <el-alert

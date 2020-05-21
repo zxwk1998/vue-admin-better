@@ -65,47 +65,7 @@ export const asyncRoutes = [
       },
     ],
   }, */
-  {
-    path: "/mall",
-    component: Layout,
-    redirect: "noRedirect",
-    name: "Mall",
-    meta: {
-      title: "商城模板",
-      icon: "shopping-cart",
-      permissions: ["admin"],
-    },
-    alwaysShow: true,
 
-    children: [
-      {
-        path: "pay",
-        name: "Pay",
-        component: () => import("@/views/mall/pay/index"),
-        meta: {
-          title: "支付",
-          noKeepAlive: true,
-        },
-        children: null,
-      },
-      {
-        path: "goodsList",
-        name: "GoodsList",
-        component: () => import("@/views/mall/goodsList/index"),
-        meta: {
-          title: "商品列表",
-        },
-      },
-      {
-        path: "goodsDetail",
-        name: "GoodsDetail",
-        component: () => import("@/views/mall/goodsDetail/index"),
-        meta: {
-          title: "商品详情",
-        },
-      },
-    ],
-  },
   {
     path: "/byui",
     component: Layout,
@@ -386,7 +346,47 @@ export const asyncRoutes = [
       },
     ],
   },
+  {
+    path: "/mall",
+    component: Layout,
+    redirect: "noRedirect",
+    name: "Mall",
+    meta: {
+      title: "商城模板",
+      icon: "shopping-cart",
+      permissions: ["admin"],
+    },
+    alwaysShow: true,
 
+    children: [
+      {
+        path: "pay",
+        name: "Pay",
+        component: () => import("@/views/mall/pay/index"),
+        meta: {
+          title: "支付",
+          noKeepAlive: true,
+        },
+        children: null,
+      },
+      {
+        path: "goodsList",
+        name: "GoodsList",
+        component: () => import("@/views/mall/goodsList/index"),
+        meta: {
+          title: "商品列表",
+        },
+      },
+      {
+        path: "goodsDetail",
+        name: "GoodsDetail",
+        component: () => import("@/views/mall/goodsDetail/index"),
+        meta: {
+          title: "商品详情",
+        },
+      },
+    ],
+  },
   {
     path: "/error",
     component: EmptyLayout,

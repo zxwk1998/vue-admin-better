@@ -55,6 +55,45 @@ const mutations = {
       }
     }
   },
+  delLeftVisitedRoute: (state, view) => {
+    let _index = state.visitedRoutes.length;
+    state.visitedRoutes = state.visitedRoutes.filter((item, index) => {
+      if (item.name === view.name) {
+        _index = state.visitedRoutes.indexOf(item);
+      }
+      return item.meta.affix || _index <= state.visitedRoutes.indexOf(item);
+    });
+  },
+  delLeftCachedRoutes: (state, view) => {
+    for (const i of state.cachedRoutes) {
+      if (i === view.name) {
+        const index = state.cachedRoutes.indexOf(i);
+        state.cachedRoutes = state.cachedRoutes.slice(
+          index,
+          state.cachedRoutes.length
+        );
+        break;
+      }
+    }
+  },
+  delRightVisitedRoute: (state, view) => {
+    let _index = state.visitedRoutes.length;
+    state.visitedRoutes = state.visitedRoutes.filter((item, index) => {
+      if (item.name === view.name) {
+        _index = state.visitedRoutes.indexOf(item);
+      }
+      return item.meta.affix || _index >= state.visitedRoutes.indexOf(item);
+    });
+  },
+  delRightCachedRoutes: (state, view) => {
+    for (const i of state.cachedRoutes) {
+      if (i === view.name) {
+        const index = state.cachedRoutes.indexOf(i);
+        state.cachedRoutes = state.cachedRoutes.slice(0, index + 1);
+        break;
+      }
+    }
+  },
   delAllVisitedRoutes: (state) => {
     const affixTags = state.visitedRoutes.filter((tag) => tag.meta.affix);
     state.visitedRoutes = affixTags;
@@ -82,7 +121,7 @@ const actions = {
   addCachedRoutes({ commit }, view) {
     commit("addCachedRoutes", view);
   },
-  delView({ dispatch, state }, view) {
+  delRoute({ dispatch, state }, view) {
     return new Promise(async (resolve) => {
       await dispatch("delVisitedRoute", view);
       await dispatch("delCachedRoutes", view);
@@ -104,10 +143,30 @@ const actions = {
       resolve([...state.cachedRoutes]);
     });
   },
-  delOthersViews({ dispatch, state }, view) {
+  delOthersRoutes({ dispatch, state }, view) {
     return new Promise(async (resolve) => {
       await dispatch("delOthersVisitedRoute", view);
       await dispatch("delOthersCachedRoutes", view);
+      resolve({
+        visitedRoutes: [...state.visitedRoutes],
+        cachedRoutes: [...state.cachedRoutes],
+      });
+    });
+  },
+  delLeftRoutes({ dispatch, state }, view) {
+    return new Promise(async (resolve) => {
+      await dispatch("delLeftVisitedRoute", view);
+      await dispatch("delLeftCachedRoutes", view);
+      resolve({
+        visitedRoutes: [...state.visitedRoutes],
+        cachedRoutes: [...state.cachedRoutes],
+      });
+    });
+  },
+  delRightRoutes({ dispatch, state }, view) {
+    return new Promise(async (resolve) => {
+      await dispatch("delRightVisitedRoute", view);
+      await dispatch("delRightCachedRoutes", view);
       resolve({
         visitedRoutes: [...state.visitedRoutes],
         cachedRoutes: [...state.cachedRoutes],
@@ -126,7 +185,31 @@ const actions = {
       resolve([...state.cachedRoutes]);
     });
   },
-  delAllViews({ dispatch, state }, view) {
+  delLeftVisitedRoute({ commit, state }, view) {
+    return new Promise((resolve) => {
+      commit("delLeftVisitedRoute", view);
+      resolve([...state.visitedRoutes]);
+    });
+  },
+  delLeftCachedRoutes({ commit, state }, view) {
+    return new Promise((resolve) => {
+      commit("delLeftCachedRoutes", view);
+      resolve([...state.cachedRoutes]);
+    });
+  },
+  delRightVisitedRoute({ commit, state }, view) {
+    return new Promise((resolve) => {
+      commit("delRightVisitedRoute", view);
+      resolve([...state.visitedRoutes]);
+    });
+  },
+  delRightCachedRoutes({ commit, state }, view) {
+    return new Promise((resolve) => {
+      commit("delRightCachedRoutes", view);
+      resolve([...state.cachedRoutes]);
+    });
+  },
+  delAllRoutes({ dispatch, state }, view) {
     return new Promise(async (resolve) => {
       await dispatch("delAllVisitedRoutes", view);
       await dispatch("delAllCachedRoutess", view);
