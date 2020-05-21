@@ -56,7 +56,7 @@ import ByuiMain from "@/components/ByuiMain";
 import ByuiBackToTop from "@/components/ByuiBackToTop";
 import { mapGetters } from "vuex";
 import { tokenName } from "@/config/settings";
-import Media from "./mixin/Media";
+import Media from "zx-media/mixin/Media";
 
 export default {
   name: "Layout",
