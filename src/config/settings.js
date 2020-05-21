@@ -2,7 +2,7 @@ module.exports = {
   //标题
   title: "vue-admin-beautiful",
   //简写
-  abbreviation: "byui",
+  abbreviation: "vab",
   //开发环境端口号
   devPort: "80",
   //版本号
@@ -16,7 +16,7 @@ module.exports = {
   //token名称
   tokenName: "accessToken",
   //token表名
-  tokenTableName: "BYUI-VUE-TABLE",
+  tokenTableName: "VUE-TABLE",
   //token存储位置
   storage: "localStorage",
   //是否显示logo
