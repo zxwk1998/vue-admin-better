@@ -34,7 +34,7 @@
 ## 重要声明
 
 <font color="#FF0000" >
-自 vue-admin-beautiful 开源以来，很感谢大家的支持，在短时间内 github 收获了![social](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=social) 多个 star，我欣喜万分，我真的把 vue-admin-beautiful 当成了自己的孩子，在此声明vue-admin-beautiful除了使用element-ui做为ui库以外未依赖任何第三方开源框架，此前目录结构借鉴了vue-ant-design-pro，tagsview借鉴了vue-element-admin，遭到社区某位成员定时谩骂，谢谢他让我决定重写，为了让大家满意经常熬夜到凌晨，看着一个个组件的编写完成，一个个组件提交到npm仓库，看到大家的评价，我真的超级高兴，但是事情总不会那么尽如人意，也许是开源触动了某些人的利益，演示网站每日会遭受 100 余次恶意攻击以及重定向跳转，弄得我实在心力交瘁，但我想对你说你阻止不了我，你阻止不了这个框架的成长，谢谢你让我知道了人心险恶，你攻击或者不攻击，它都在那里[vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/#/index)
+自 vue-admin-beautiful 开源以来，很感谢大家的支持，在短时间内 github 收获了![social](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=social) 多个 star，我欣喜万分，我真的把 vue-admin-beautiful 当成了自己的孩子，在此声明vue-admin-beautiful除了使用element-ui做为ui库以外未依赖任何第三方开源框架，此前目录结构借鉴了vue-ant-design-pro，tagsview借鉴了vue-element-admin，遭到社区某位成员定时谩骂，谢谢他让我决定重写，为了让大家满意经常熬夜到凌晨，看着一个个组件的编写完成，一个个组件提交到npm仓库，看到大家的评价，我真的超级高兴，但是事情总不会那么尽如人意，也许是开源触动了某些人的利益，演示网站每日会遭受 2000 余次恶意攻击以及重定向跳转，弄得我实在心力交瘁，但我想对你说你阻止不了我，你阻止不了这个框架的成长，谢谢你让我知道了人心险恶，你攻击或者不攻击，它都在那里[vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/#/index)
 </font>
 
 ## 鸣谢
