@@ -1,13 +1,14 @@
 # 更新日志
 
-### 2020/05/21 12:33 删减 layouts，将 layouts 提交到 npm 为基础版发布做准备
+## 2.1.6（2020/05/22 09:18）
 
-### 2020/05/20 23:48 大版本迭代：重写 tagsview
+---
 
-### 2020/05/20 修复 resetAccessoken 无限重载路由的 bug，增加验证码组件，word 模板根据 json 导出组件
+多标签页选项卡仿谷歌浏览器实现关闭左侧标签关闭右侧标签，全网首家基于 element-ui 实现最全功能
 
 ### 全网首家实现 element-ui 横向纵向布局无缝切换，多标签页关闭左侧关闭右侧关闭其他（布局切换效果仿 ant-design-pro，tagsBar 仿谷歌浏览器右键菜单,代码纯手写，技术抄袭 Vue）
 
+以下演示效果图，不代表最终效果，github 每日都会更新新功能
 ![vue-admin-beautiful](http://mpfhrd48.sanxing.uz7.cn/byui-bookmarks/GIF.gif)
 
 ## 演示地址

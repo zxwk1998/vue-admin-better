@@ -131,6 +131,7 @@ import variables from "@/styles/variables.scss";
 import { mapGetters } from "vuex";
 import { themeBar } from "@/config/settings";
 import GetCode from "./mixin/GetCode";
+
 export default {
   name: "ThemeBar",
   mixins: [GetCode],
@@ -153,7 +154,11 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["layout", "header", "tagsBar"]),
+    ...mapGetters({
+      layout: "settings/layout",
+      header: "settings/header",
+      tagsBar: "settings/tagsBar",
+    }),
   },
   mounted() {
     this.$baseEventBus.$on("theme", () => {

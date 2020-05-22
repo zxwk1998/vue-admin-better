@@ -47,7 +47,10 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["cachedRoutes", "device"]),
+    ...mapGetters({
+      cachedRoutes: "tagsBar/cachedRoutes",
+      device: "settings/device",
+    }),
     key() {
       return this.$route.path;
     },

@@ -67,6 +67,7 @@
 
 <script>
 import { abbreviation, title } from "@/config/settings";
+import { mapGetters } from "vuex";
 
 export default {
   name: "ErrorLog",
@@ -94,9 +95,9 @@ export default {
   },
 
   computed: {
-    errorLogs() {
-      return this.$store.getters.errorLogs;
-    },
+    ...mapGetters({
+      errorLogs: "errorLog/errorLogs",
+    }),
   },
   methods: {
     clearAll() {

@@ -111,7 +111,10 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["userName", "permissions"]),
+    ...mapGetters({
+      userName: "user/userName",
+      permissions: "user/permissions",
+    }),
   },
   created() {
     this.fetchData();

@@ -19,7 +19,10 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["logo", "layout"]),
+    ...mapGetters({
+      logo: "settings/logo",
+      layout: "settings/layout",
+    }),
   },
 };
 </script>

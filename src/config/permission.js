@@ -16,7 +16,7 @@ NProgress.configure({ showSpinner: false });
 router.beforeEach(async (to, from, next) => {
   NProgress.start();
   document.title = getPageTitle(to.meta.title);
-  let hasToken = store.getters.accessToken;
+  let hasToken = store.getters["user/accessToken"];
   if (!loginInterception) hasToken = true;
   if (hasToken) {
     if (to.path === "/login") {
@@ -24,7 +24,8 @@ router.beforeEach(async (to, from, next) => {
       NProgress.done();
     } else {
       const hasPermissions =
-        store.getters.permissions && store.getters.permissions.length > 0;
+        store.getters["user/permissions"] &&
+        store.getters["user/permissions"].length > 0;
       if (hasPermissions) {
         next();
       } else {

@@ -1,4 +1,7 @@
 const state = { logs: [] };
+const getters = {
+  errorLogs: (state) => state.logs,
+};
 const mutations = {
   addErrorLog: (state, log) => {
     state.logs.push(log);
@@ -15,4 +18,4 @@ const actions = {
     commit("clearErrorLog");
   },
 };
-export default { state, mutations, actions };
+export default { state, getters, mutations, actions };

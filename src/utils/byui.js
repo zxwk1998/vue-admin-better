@@ -2,8 +2,10 @@ import { loadingText, messageDuration, title } from "@/config/settings";
 import * as lodash from "lodash";
 import { Loading, Message, MessageBox, Notification } from "element-ui";
 import store from "@/store";
-const { accessToken, layout } = store.getters;
 import { getAccessToken } from "@/utils/accessToken";
+
+const accessToken = store.getters["user/accessToken"];
+const layout = store.getters["settings/layout"];
 
 const install = (Vue, opts = {}) => {
   /* 全局accessToken */

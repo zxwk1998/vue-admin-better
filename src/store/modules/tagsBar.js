@@ -3,6 +3,10 @@ const state = {
   cachedRoutes: [],
   skeleton: true,
 };
+const getters = {
+  cachedRoutes: (state) => state.cachedRoutes,
+  visitedRoutes: (state) => state.visitedRoutes,
+};
 const mutations = {
   addVisitedRoute: (state, view) => {
     if (state.visitedRoutes.some((v) => v.path === view.path)) return;
@@ -235,4 +239,4 @@ const actions = {
     commit("updateVisitedRoute", view);
   },
 };
-export default { state, mutations, actions };
+export default { state, getters, mutations, actions };

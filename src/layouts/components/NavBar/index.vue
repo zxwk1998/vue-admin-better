@@ -77,16 +77,14 @@ export default {
     };
   },
   computed: {
-    ...mapGetters([
-      "avatar",
-      "collapse",
-      "userName",
-      "loginTimes",
-      "lastLoginTime",
-      "visitedRoutes",
-      "device",
-      "routes",
-    ]),
+    ...mapGetters({
+      avatar: "user/avatar",
+      collapse: "settings/collapse",
+      userName: "user/userName",
+      visitedRoutes: "tagsBar/visitedRoutes",
+      device: "settings/device",
+      routes: "permission/routes",
+    }),
   },
   methods: {
     handleCollapse() {

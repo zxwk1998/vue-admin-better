@@ -1,8 +1,11 @@
 import { asyncRoutes, constantRoutes } from "@/router";
 import { getRouterList } from "@/api/router";
-import { filterRoutes, filterAsyncRoutes } from "@/utils/handleRoutes";
+import { filterAsyncRoutes, filterRoutes } from "@/utils/handleRoutes";
 
 const state = { routes: [], addRoutes: [] };
+const getters = {
+  routes: (state) => state.routes,
+};
 const mutations = {
   setRoutes: (state, routes) => {
     state.addRoutes = routes;
@@ -40,4 +43,4 @@ const actions = {
     });
   },
 };
-export default { state, mutations, actions };
+export default { state, getters, mutations, actions };

@@ -74,7 +74,13 @@ export default {
     return {};
   },
   computed: {
-    ...mapGetters(["layout", "tagsBar", "collapse", "header", "device"]),
+    ...mapGetters({
+      layout: "settings/layout",
+      tagsBar: "settings/tagsBar",
+      collapse: "settings/collapse",
+      header: "settings/header",
+      device: "settings/device",
+    }),
     classObj() {
       return {
         mobile: this.device === "mobile",

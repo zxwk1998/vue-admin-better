@@ -7,7 +7,13 @@ import {
 } from "@/utils/accessToken";
 import { resetRouter } from "@/router";
 import defaultSettings from "@/config/settings";
+
 const state = { accessToken: getAccessToken(), userName: "", permissions: [] };
+const getters = {
+  accessToken: (state) => state.accessToken,
+  userName: (state) => state.userName,
+  permissions: (state) => state.permissions,
+};
 const mutations = {
   setAccessToken: (state, accessToken) => {
     state.accessToken = accessToken;
@@ -76,7 +82,7 @@ const actions = {
           commit("setPermissions", []);
           removeAccessToken();
           resetRouter();
-          dispatch("tagsBar/delAllViews", null, { root: true });
+          dispatch("tagsBar/delAllRoutes", null, { root: true });
           resolve();
         })
         .catch((error) => {
@@ -92,4 +98,4 @@ const actions = {
     });
   },
 };
-export default { state, mutations, actions };
+export default { state, getters, mutations, actions };

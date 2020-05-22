@@ -37,7 +37,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["srcTableCode"]),
+    ...mapGetters({ srcTableCode: "table/srcTableCode" }),
   },
   methods: {
     handleClipboard(text, event) {
