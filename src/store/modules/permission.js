@@ -2,17 +2,20 @@ import { asyncRoutes, constantRoutes } from "@/router";
 import { getRouterList } from "@/api/router";
 import { filterAsyncRoutes, filterRoutes } from "@/utils/handleRoutes";
 
-const state = { routes: [], addRoutes: [] };
+const state = { routes: [], partialRoutes: [] };
 const getters = {
   routes: (state) => state.routes,
+  partialRoutes: (state) => state.partialRoutes,
 };
 const mutations = {
   setRoutes: (state, routes) => {
-    state.addRoutes = routes;
     state.routes = constantRoutes.concat(routes);
   },
   setAllRoutes: (state, routes) => {
     state.routes = constantRoutes.concat(routes);
+  },
+  setPartialRoutes: (state, routes) => {
+    state.partialRoutes = constantRoutes.concat(routes);
   },
 };
 const actions = {
@@ -40,6 +43,13 @@ const actions = {
         .catch((error) => {
           reject(error);
         });
+    });
+  },
+  setPartialRoutes({ commit }, accessRoutes) {
+    return new Promise((resolve) => {
+      console.log(accessRoutes);
+      commit("setPartialRoutes", accessRoutes);
+      resolve(accessRoutes);
     });
   },
 };
