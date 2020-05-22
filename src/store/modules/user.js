@@ -31,7 +31,7 @@ const actions = {
     return new Promise((resolve, reject) => {
       login({ userName, password })
         .then((response) => {
-          const { accessToken } = response.data;
+          const accessToken = response.data[defaultSettings.tokenName];
           commit("setAccessToken", accessToken);
           setAccessToken(accessToken);
           const hour = new Date().getHours();
