@@ -14,7 +14,7 @@
         <router-view :key="key" style="min-height: 78vh;" />
       </keep-alive>
     </transition>
-    <footer class="footer-copyright">
+    <footer v-if="nodeEnv !== 'development'" class="footer-copyright">
       Copyright
       <byui-icon :icon="['fas', 'copyright']"></byui-icon>
       {{ fullYear }} {{ copyright }}

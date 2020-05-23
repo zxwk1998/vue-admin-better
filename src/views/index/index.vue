@@ -1,7 +1,14 @@
 <template>
   <div class="index-container">
     <el-row :gutter="15">
-      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+      <el-col
+        v-if="nodeEnv !== 'development'"
+        :xs="24"
+        :sm="24"
+        :md="24"
+        :lg="24"
+        :xl="24"
+      >
         <el-alert
           title="作者初衷：iView Pro要卖￥9999，layui Admin要卖￥2600，作者只好自己动手写一个分享给大家咯，免费的东西一定就差吗，一个人就一定比不过一个团队吗？我还那么年轻，我不会认输，在屏幕前驻足的你也不会轻易认输，对吧！弱小的人才习惯嘲讽与否定，内心强大的人从不吝啬赞美与鼓励，人生在世，得到每个人的认可几乎是痴心妄想，我也只是一条略懂前端的咸鱼，可我仍一直怀揣着改变世界的梦想，希望我们每个人，不管过程怎样，结局都是美好的。。。"
           :closable="false"
@@ -140,7 +147,7 @@
               <td>{{ dependencies.axios }}</td>
             </tr>
           </table>
-          <div class="bottom-btn">
+          <div v-if="nodeEnv !== 'development'" class="bottom-btn">
             <el-popover placement="top" width="250" trigger="hover">
               <p>
                 谢谢您愿意支持开源，加群获取详细教程，群内提供vue-admin-beautiful-template基础模板
@@ -179,7 +186,7 @@
           </div>
         </el-card>
       </el-col>
-      <el-col :span="24">
+      <el-col v-if="nodeEnv !== 'development'" :span="24">
         <el-alert
           title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319，群内提供文档教程，如果你觉得框架一文不值，请勿加群"
           :closable="false"
@@ -206,7 +213,14 @@
           </el-card>
         </app-link>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+      <el-col
+        v-if="nodeEnv !== 'development'"
+        :xs="24"
+        :sm="24"
+        :md="12"
+        :lg="12"
+        :xl="12"
+      >
         <el-card class="card" shadow="never">
           <div slot="header">
             <span>更新日志</span>
@@ -223,7 +237,14 @@
           </el-timeline>
         </el-card>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+      <el-col
+        v-if="nodeEnv !== 'development'"
+        :xs="24"
+        :sm="24"
+        :md="12"
+        :lg="12"
+        :xl="12"
+      >
         <el-card shadow="never">
           <div slot="header">
             <span>其他信息</span>
