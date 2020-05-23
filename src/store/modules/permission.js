@@ -47,7 +47,6 @@ const actions = {
   },
   setPartialRoutes({ commit }, accessRoutes) {
     return new Promise((resolve) => {
-      console.log(accessRoutes);
       commit("setPartialRoutes", accessRoutes);
       resolve(accessRoutes);
     });
