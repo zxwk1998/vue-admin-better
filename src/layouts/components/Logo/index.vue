@@ -16,7 +16,6 @@ export default {
   data() {
     return {
       title: this.$baseTitle,
-      logo,
     };
   },
   computed: {
