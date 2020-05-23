@@ -66,7 +66,7 @@
             :loading="loading"
             class="login-btn"
             type="primary"
-            @click.native.prevent="handleLogin"
+            @click="handleLogin"
             >登录
           </el-button>
         </el-form>
