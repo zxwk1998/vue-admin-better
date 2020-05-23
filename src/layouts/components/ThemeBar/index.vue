@@ -242,8 +242,8 @@ export default {
 
         body .el-menu--horizontal .top-bar-item-container .el-menu-item:hover,
         body .el-menu--horizontal .top-bar-item-container .el-menu-item.is-active,
-        body .app-wrapper .side-bar-container .el-submenu .el-menu-item.is-active,
-        body .app-wrapper .side-bar-container .el-menu-item:hover,
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-submenu .el-menu-item.is-active,
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu-item:hover,
         body .side-bar-container .el-menu .el-menu-item.is-active {
           background-color:${menuBackgroundActive}!important;
         }
@@ -263,20 +263,20 @@ export default {
           border-color: ${paginationBackgroundActive}!important;
         }
 
-        body .app-wrapper .side-bar-container .nest-menu .el-menu-item {
+        body .vue-admin-beautiful-wrapper .side-bar-container .nest-menu .el-menu-item {
           background-color: ${menuChildrenBackground}!important;
         }
 
-        body .app-wrapper .side-bar-container .el-menu .nest-menu [class*=menu] {
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu .nest-menu [class*=menu] {
           background-color: ${menuChildrenBackground}!important
         }
 
-        body .app-wrapper .side-bar-container .el-menu .nest-menu [class*=menu].is-active {
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu .nest-menu [class*=menu].is-active {
           background-color:${menuBackgroundActive}!important
         }
-        body .app-wrapper .side-bar-container .el-menu [class*=menu] span,
-        body .app-wrapper .side-bar-container .el-menu [class*=menu] svg,
-        body .app-wrapper .side-bar-container .el-menu [class*=menu] i
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu [class*=menu] span,
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu [class*=menu] svg,
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu [class*=menu] i
         {
           color:${menuColor}!important
         }
