@@ -43,11 +43,6 @@ export const asyncRoutes = [
       },
     ],
   },
-  {
-    path: "/image",
-    component: () => import("@/views/byui/word/image"),
-    hidden: true,
-  },
   /* {
     path: "/test",
     component: Layout,
@@ -330,13 +325,7 @@ export const asyncRoutes = [
         path: "news",
         name: "News",
         component: () => import("@/views/byui/news/index"),
-        meta: { title: "新闻（可能存在跨域）", permissions: ["admin"] },
-      },
-      {
-        path: "word",
-        name: "Word",
-        component: () => import("@/views/byui/word/index"),
-        meta: { title: "word下载", permissions: ["admin"] },
+        meta: { title: "新闻", permissions: ["admin"] },
       },
       {
         path: "more",
