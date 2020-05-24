@@ -58,10 +58,14 @@
 
 <script>
 import { mapGetters } from "vuex";
-import ErrorLog from "@/components/ErrorLog";
-import { Breadcrumb } from "@/layouts/components";
-import ThemeBar from "@/layouts/components/ThemeBar";
-import FullScreenBar from "@/layouts/components/FullScreenBar";
+
+import {
+  Breadcrumb,
+  ThemeBar,
+  FullScreenBar,
+  ErrorLog,
+} from "@/layouts/components";
+
 export default {
   name: "NavBar",
   components: {

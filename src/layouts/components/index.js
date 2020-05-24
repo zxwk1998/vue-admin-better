@@ -1,7 +1,10 @@
-export { default as TopBar } from "zx-top-bar";
-export { default as TagsBar } from "zx-tags-bar";
-export { default as SideBar } from "zx-side-bar";
-export { default as Breadcrumb } from "zx-breadcrumb";
-export { default as NavBar } from "./NavBar";
+export { default as TopBar } from "zx-layouts/zx-top-bar";
+export { default as TagsBar } from "zx-layouts/zx-tags-bar";
+export { default as SideBar } from "zx-layouts/zx-side-bar";
+export { default as Breadcrumb } from "zx-layouts/zx-breadcrumb";
+export { default as FullScreenBar } from "zx-layouts/zx-full-screen-bar";
+export { default as ErrorLog } from "zx-layouts/zx-error-log";
+export { default as BackToTop } from "zx-layouts/zx-back-to-top";
+export { default as ThemeBar } from "@/layouts/components/ThemeBar";
 export { default as AppMain } from "./AppMain";
-export { default as FullScreenBar } from "./FullScreenBar";
+export { default as NavBar } from "./NavBar";
