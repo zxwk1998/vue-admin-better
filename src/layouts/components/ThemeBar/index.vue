@@ -94,7 +94,7 @@
             </el-form-item>
             <el-form-item label="标签主题色">
               <el-color-picker
-                v-model="theme.tagViewsBackgroundActive"
+                v-model="theme.tagsBarBackgroundActive"
                 :predefine="['#1890ff', '#0fd59d', '#f56c6c']"
                 show-alpha
               ></el-color-picker>
@@ -137,6 +137,18 @@ export default {
   data() {
     return {
       drawerVisible: false,
+      theme: {
+        layout: "",
+        header: "",
+        tagsBar: "",
+        menuBackground: variables["menu-background"],
+        menuChildrenBackground: variables["menu-children-background"],
+        menuBackgroundActive: variables["menu-background-active"],
+        menuColor: variables["menu-color"],
+        tagsBarBackgroundActive: variables["tags-bar-background-active"],
+        buttonBackground: variables["button-background"],
+        paginationBackgroundActive: variables["pagination-background-active"],
+      },
     };
   },
   computed: {
@@ -146,17 +158,6 @@ export default {
       tagsBar: "settings/tagsBar",
       themeBar: "settings/themeBar",
     }),
-    theme() {
-      return {
-        menuBackground: variables["menu-background"],
-        menuChildrenBackground: variables["menu-children-background"],
-        menuBackgroundActive: variables["menu-background-active"],
-        menuColor: variables["menu-color"],
-        tagViewsBackgroundActive: variables["tagviews-background-active"],
-        buttonBackground: variables["button-background"],
-        paginationBackgroundActive: variables["pagination-background-active"],
-      };
-    },
   },
   mounted() {},
   created() {
@@ -182,8 +183,8 @@ export default {
       this.$set(this.theme, "menuColor", JSON.parse(theme).menuColor);
       this.$set(
         this.theme,
-        "tagViewsBackgroundActive",
-        JSON.parse(theme).tagViewsBackgroundActive
+        "tagsBarBackgroundActive",
+        JSON.parse(theme).tagsBarBackgroundActive
       );
       this.$set(
         this.theme,
@@ -215,7 +216,7 @@ export default {
         menuChildrenBackground,
         menuBackgroundActive,
         menuColor,
-        tagViewsBackgroundActive,
+        tagsBarBackgroundActive,
         buttonBackground,
         paginationBackgroundActive,
       } = this.theme;
@@ -246,8 +247,8 @@ export default {
         }
 
         .tags-bar-item.router-link-exact-active.router-link-active.active {
-          background-color: ${tagViewsBackgroundActive}!important;
-          border: 1px solid ${tagViewsBackgroundActive}!important;
+          background-color: ${tagsBarBackgroundActive}!important;
+          border: 1px solid ${tagsBarBackgroundActive}!important;
         }
 
         .el-button.el-button--primary {
@@ -287,7 +288,7 @@ export default {
             "menuChildrenBackground":"${menuChildrenBackground}",
             "menuBackgroundActive":"${menuBackgroundActive}",
             "menuColor":"${menuColor}",
-            "tagViewsBackgroundActive":"${tagViewsBackgroundActive}",
+            "tagsBarBackgroundActive":"${tagsBarBackgroundActive}",
             "layout":"${layout}",
             "header":"${header}",
             "tagsBar":"${tagsBar}",
