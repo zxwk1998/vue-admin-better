@@ -1,3 +1,4 @@
+import { handleRandomImage } from "../utils";
 const accessTokens = {
   admin: "admin-accessToken",
   editor: "editor-accessToken",
@@ -63,6 +64,7 @@ export default [
         data: {
           permissions,
           userName,
+          avatar: handleRandomImage(50, 50),
         },
       };
     },

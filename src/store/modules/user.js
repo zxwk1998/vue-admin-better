@@ -8,10 +8,16 @@ import {
 import { resetRouter } from "@/router";
 import defaultSettings from "@/config/settings";
 
-const state = { accessToken: getAccessToken(), userName: "", permissions: [] };
+const state = {
+  accessToken: getAccessToken(),
+  userName: "",
+  avatar: "",
+  permissions: [],
+};
 const getters = {
   accessToken: (state) => state.accessToken,
   userName: (state) => state.userName,
+  avatar: (state) => state.avatar,
   permissions: (state) => state.permissions,
 };
 const mutations = {
@@ -20,6 +26,9 @@ const mutations = {
   },
   setUserName: (state, userName) => {
     state.userName = userName;
+  },
+  setAvatar: (state, avatar) => {
+    state.avatar = avatar;
   },
   setPermissions: (state, permissions) => {
     state.permissions = permissions;
@@ -64,9 +73,10 @@ const actions = {
           if (!data) {
             reject("验证失败，请重新登录...");
           }
-          let { permissions, userName } = data;
+          let { permissions, userName, avatar } = data;
           commit("setPermissions", permissions);
           commit("setUserName", userName);
+          commit("setAvatar", avatar);
           resolve(data);
         })
         .catch((error) => {
