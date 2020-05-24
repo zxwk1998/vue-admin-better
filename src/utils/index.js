@@ -1,5 +1,3 @@
-import Vue from "vue";
-
 /**
  * @description 格式化时间
  * @param time
