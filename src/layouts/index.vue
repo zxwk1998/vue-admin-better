@@ -14,15 +14,15 @@
           v-if="tagsBar === 'true' || tagsBar === true"
           :class="{ 'tag-view-show': tagsBar }"
         >
-          <byui-main>
+          <div class="byui-main">
             <tags-bar />
-          </byui-main>
+          </div>
         </div>
       </div>
-      <byui-main class="main-padding">
+      <div class="byui-main main-padding">
         <nav-bar />
         <app-main />
-      </byui-main>
+      </div>
     </div>
     <div
       v-else
@@ -38,22 +38,27 @@
         @click="handleFoldSideBar"
       />
       <side-bar />
-      <byui-main :class="collapse ? 'is-collapse-main' : ''">
+      <div class="byui-main" :class="collapse ? 'is-collapse-main' : ''">
         <div :class="header === 'fixed' ? 'fixed-header' : ''">
           <nav-bar />
           <tags-bar v-if="tagsBar === 'true' || tagsBar === true" />
         </div>
-        <app-main />
-      </byui-main>
+        <app-main></app-main>
+      </div>
     </div>
-    <byui-back-to-top transition-name="fade" />
+    <back-to-top transition-name="fade"></back-to-top>
   </div>
 </template>
 
 <script>
-import { AppMain, NavBar, SideBar, TagsBar, TopBar } from "./components";
-import ByuiMain from "@/components/ByuiMain";
-import ByuiBackToTop from "@/components/ByuiBackToTop";
+import {
+  AppMain,
+  NavBar,
+  SideBar,
+  TagsBar,
+  TopBar,
+  BackToTop,
+} from "./components";
 import { mapGetters } from "vuex";
 import { tokenName } from "@/config/settings";
 import Media from "./mixin/Media";
@@ -65,9 +70,8 @@ export default {
     NavBar,
     SideBar,
     AppMain,
-    ByuiMain,
     TagsBar,
-    ByuiBackToTop,
+    BackToTop,
   },
   mixins: [Media],
   data() {
@@ -137,6 +141,7 @@ export default {
     ::v-deep {
       .byui-main {
         width: 88%;
+        margin: auto;
       }
 
       .fixed-header {

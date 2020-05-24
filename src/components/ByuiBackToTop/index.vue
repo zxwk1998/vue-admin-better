@@ -3,7 +3,7 @@
     <div
       v-show="visible"
       :style="customStyle"
-      class="back-to-ceiling"
+      class="back-to-top"
       @click="backToTop"
     >
       <byui-icon :icon="['fas', 'eject']" />
@@ -101,7 +101,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.back-to-ceiling {
+.back-to-top {
   position: fixed;
   z-index: $base-z-index - 2;
   display: inline-block;
@@ -110,7 +110,7 @@ export default {
   cursor: pointer;
 }
 
-.back-to-ceiling:hover {
+.back-to-top:hover {
   background: $base-color-gray;
 }
 
@@ -124,7 +124,7 @@ export default {
   opacity: 0;
 }
 
-.back-to-ceiling .Icon {
+.back-to-top .Icon {
   background: none;
   fill: $base-color-gray;
 }
