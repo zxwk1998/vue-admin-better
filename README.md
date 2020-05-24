@@ -46,7 +46,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/chuzhixin/vue-element-admin-beautiful.git
+git clone https://github.com/chuzhixin/vue-admin-beautiful.git
 
 # 进入项目目录
 cd vue-element-admin-beautiful
