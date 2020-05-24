@@ -15,7 +15,7 @@
       <el-col :xs="20" :sm="12" :md="12" :lg="12" :xl="12">
         <div class="right-panel">
           <error-log />
-          <byui-screenfull @refresh="refreshRoute"></byui-screenfull>
+          <full-screen-bar @refresh="refreshRoute"></full-screen-bar>
           <theme-bar></theme-bar>
           <byui-icon
             title="重载路由"
@@ -59,16 +59,15 @@
 <script>
 import { mapGetters } from "vuex";
 import ErrorLog from "@/components/ErrorLog";
-import ByuiScreenfull from "@/components/ByuiScreenfull";
-import Breadcrumb from "zx-breadcrumb";
+import { Breadcrumb } from "@/layouts/components";
 import ThemeBar from "@/layouts/components/ThemeBar";
-
+import FullScreenBar from "@/layouts/components/FullScreenBar";
 export default {
   name: "NavBar",
   components: {
     Breadcrumb,
     ErrorLog,
-    ByuiScreenfull,
+    FullScreenBar,
     ThemeBar,
   },
   data() {

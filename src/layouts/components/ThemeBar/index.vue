@@ -129,28 +129,14 @@
 <script>
 import variables from "@/styles/variables.scss";
 import { mapGetters } from "vuex";
-import { themeBar } from "@/config/settings";
-import GetCode from "./mixin/GetCode";
+import GetCode from "@/layouts/mixin/GetCode";
 
 export default {
   name: "ThemeBar",
   mixins: [GetCode],
   data() {
     return {
-      themeBar,
       drawerVisible: false,
-      theme: {
-        layout: "",
-        header: "",
-        tagsBar: "",
-        menuBackground: variables["menu-background"],
-        menuChildrenBackground: variables["menu-children-background"],
-        menuBackgroundActive: variables["menu-background-active"],
-        menuColor: variables["menu-color"],
-        tagViewsBackgroundActive: variables["tagviews-background-active"],
-        buttonBackground: variables["button-background"],
-        paginationBackgroundActive: variables["pagination-background-active"],
-      },
     };
   },
   computed: {
@@ -158,14 +144,25 @@ export default {
       layout: "settings/layout",
       header: "settings/header",
       tagsBar: "settings/tagsBar",
+      themeBar: "settings/themeBar",
     }),
+    theme() {
+      return {
+        menuBackground: variables["menu-background"],
+        menuChildrenBackground: variables["menu-children-background"],
+        menuBackgroundActive: variables["menu-background-active"],
+        menuColor: variables["menu-color"],
+        tagViewsBackgroundActive: variables["tagviews-background-active"],
+        buttonBackground: variables["button-background"],
+        paginationBackgroundActive: variables["pagination-background-active"],
+      };
+    },
   },
-  mounted() {
+  mounted() {},
+  created() {
     this.$baseEventBus.$on("theme", () => {
       this.handleChangeTheme();
     });
-  },
-  created() {
     const theme = localStorage.getItem("BYUI-VUE-THEME");
     this.theme.layout = this.layout;
     this.theme.header = this.header;

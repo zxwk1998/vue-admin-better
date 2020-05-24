@@ -1,14 +1,15 @@
 import defaultSettings from "@/config/settings";
 
-const { tagsBar, logo, layout, header } = defaultSettings;
+const { tagsBar, logo, layout, header, themeBar } = defaultSettings;
 const theme = JSON.parse(localStorage.getItem("BYUI-VUE-THEME")) || "";
 const state = {
   tagsBar: theme.tagsBar || tagsBar,
-  logo: logo,
+  logo,
   collapse: false,
   layout: theme.layout || layout,
   header: theme.header || header,
   device: "desktop",
+  themeBar,
 };
 const getters = {
   collapse: (state) => state.collapse,
@@ -17,6 +18,7 @@ const getters = {
   layout: (state) => state.layout,
   logo: (state) => state.logo,
   tagsBar: (state) => state.tagsBar,
+  themeBar: (state) => state.themeBar,
 };
 const mutations = {
   changeLayout: (state, layout) => {

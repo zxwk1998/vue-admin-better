@@ -1,7 +1,7 @@
 import store from "@/store";
 
 export default {
-  mounted() {
+  beforeMount() {
     window.addEventListener("resize", this.handleResize);
   },
   destroyed() {

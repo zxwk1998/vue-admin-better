@@ -14,7 +14,7 @@
 import screenfull from "screenfull";
 
 export default {
-  name: "Screenfull",
+  name: "FullScreenBar",
   data() {
     return {
       isFullscreen: false,
