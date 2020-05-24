@@ -115,7 +115,7 @@ module.exports = {
       config
         .plugin("ScriptExtHtmlWebpackPlugin")
         .after("html")
-        .use("script-ext-html-Webpack-plugin", [{ inline: /runtime\..*\.js$/ }])
+        .use("script-ext-html-webpack-plugin", [{ inline: /runtime\..*\.js$/ }])
         .end();
       config.optimization.splitChunks({
         chunks: "all",
