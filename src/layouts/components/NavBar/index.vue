@@ -111,19 +111,16 @@ export default {
       const view = arr[0];
       this.pulse = true;
       this.$store.dispatch("tagsBar/delCachedRoutes", view).then(() => {
-        const { fullPath } = view;
-        this.$nextTick(() => {
-          this.$router
-            .replace({
-              path: "/redirect" + this.$route.fullPath,
-            })
-            .then(() => {
-              setTimeout(() => {
-                this.pulse = false;
-              }, 1000);
-            })
-            .catch(() => {});
-        });
+        this.$router
+          .replace({
+            path: "/redirect" + this.$route.fullPath,
+          })
+          .then(() => {
+            setTimeout(() => {
+              this.pulse = false;
+            }, 1000);
+          })
+          .catch(() => {});
       });
     },
     handleCommand(command) {
