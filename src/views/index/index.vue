@@ -273,7 +273,7 @@
           <br />
           <el-alert
             :closable="false"
-            title="鸣谢唐金州、花裤衩、贤心、element-ui、ivew的开源项目给我带来的很多的灵感"
+            title="鸣谢唐金州、花裤衩、贤心、element-ui、ivew的开源项目给我带来的很多的灵感，注意只是灵感，本框架未抄袭任何一方框架源代码，当然欢迎更多喷子抄袭本框架"
             type="success"
           >
           </el-alert>
