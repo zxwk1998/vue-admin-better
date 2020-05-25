@@ -79,32 +79,13 @@ export const asyncRoutes = [
         },
       },
       {
-        path: "menu1",
-        component: () => import("@/views/byui/nested/menu1/index"),
-        name: "Menu1",
+        path: "betterScroll",
+        name: "BetterScroll",
+        component: () => import("@/views/byui/betterScroll/index"),
         meta: {
-          title: "嵌套路由 1",
+          title: "滚动侦测",
           permissions: ["admin"],
         },
-        alwaysShow: true,
-        children: [
-          {
-            path: "menu1-1",
-            component: () => import("@/views/byui/nested/menu1/menu1-1/index"),
-            name: "Menu1-1",
-            meta: { title: "嵌套路由 1-1" },
-            alwaysShow: true,
-            children: [
-              {
-                path: "menu1-1-1",
-                component: () =>
-                  import("@/views/byui/nested/menu1/menu1-1/menu1-1-1/index"),
-                name: "Menu1-1-1",
-                meta: { title: "嵌套路由 1-1-1" },
-              },
-            ],
-          },
-        ],
       },
       {
         path: "verify",
@@ -177,6 +158,34 @@ export const asyncRoutes = [
         name: "Card",
         component: () => import("@/views/byui/card/index"),
         meta: { title: "卡片", permissions: ["admin"] },
+      },
+      {
+        path: "menu1",
+        component: () => import("@/views/byui/nested/menu1/index"),
+        name: "Menu1",
+        meta: {
+          title: "嵌套路由 1",
+          permissions: ["admin"],
+        },
+        alwaysShow: true,
+        children: [
+          {
+            path: "menu1-1",
+            component: () => import("@/views/byui/nested/menu1/menu1-1/index"),
+            name: "Menu1-1",
+            meta: { title: "嵌套路由 1-1" },
+            alwaysShow: true,
+            children: [
+              {
+                path: "menu1-1-1",
+                component: () =>
+                  import("@/views/byui/nested/menu1/menu1-1/menu1-1-1/index"),
+                name: "Menu1-1-1",
+                meta: { title: "嵌套路由 1-1-1" },
+              },
+            ],
+          },
+        ],
       },
       {
         path: "magnifier",
@@ -281,29 +290,31 @@ export const asyncRoutes = [
         name: "Excel",
         meta: {
           title: "Excel",
+          permissions: ["admin"],
         },
         children: [
           {
-            path: "export-excel",
-            component: () => import("@/views/byui/excel/export-excel"),
+            path: "exportExcel",
+            component: () => import("@/views/byui/excel/exportExcel"),
             name: "ExportExcel",
             meta: { title: "导出Excel" },
           },
           {
-            path: "export-selected-excel",
-            component: () => import("@/views/byui/excel/select-excel"),
-            name: "SelectExcel",
+            path: "exportSelectedExcel",
+            component: () => import("@/views/byui/excel/exportSelectExcel"),
+            name: "ExportSelectedExcel",
             meta: { title: "导出选中行" },
           },
           {
-            path: "export-merge-header",
-            component: () => import("@/views/byui/excel/merge-header"),
-            name: "MergeHeader",
+            path: "exportMergeHeaderExcel",
+            component: () =>
+              import("@/views/byui/excel/exportMergeHeaderExcel"),
+            name: "ExportMergeHeaderExcel",
             meta: { title: "导出合并" },
           },
           {
-            path: "upload-excel",
-            component: () => import("@/views/byui/excel/upload-excel"),
+            path: "uploadExcel",
+            component: () => import("@/views/byui/excel/uploadExcel"),
             name: "UploadExcel",
             meta: { title: "上传Excel" },
           },

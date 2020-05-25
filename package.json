@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "better-scroll": "^1.15.2",
     "clipboard": "^2.0.6",
     "codemirror": "^5.54.0",
     "core-js": "^3.6.5",

@@ -16,17 +16,17 @@ export default {
       if (path === "/byui/table/comprehensiveTable/index.vue") {
         path = "/byui/table/index.vue";
       }
-      if (path === "/byui/excel/export-excel/index.vue") {
-        path = "/byui/excel/export-excel.vue";
+      if (path === "/byui/excel/exportExcel/index.vue") {
+        path = "/byui/excel/exportExcel.vue";
       }
-      if (path === "/byui/excel/export-selected-excel/index.vue") {
-        path = "/byui/excel/export-selected-excel.vue";
+      if (path === "/byui/excel/exportSelectedExcel/index.vue") {
+        path = "/byui/excel/exportSelectedExcel.vue";
       }
-      if (path === "/byui/excel/export-merge-header/index.vue") {
-        path = "/byui/excel/export-merge-header.vue";
+      if (path === "/byui/excel/exportMergeHeader/index.vue") {
+        path = "/byui/excel/exportMergeHeaderExcel.vue";
       }
-      if (path === "/byui/excel/upload-excel/index.vue") {
-        path = "/byui/excel/upload-excel.vue";
+      if (path === "/byui/excel/uploadExcel/index.vue") {
+        path = "/byui/excel/uploadExcel.vue";
       }
       window.open(url + path);
     },
