@@ -24,13 +24,13 @@
 
 ## ☝☝☝ 演示地址,在上方直接点击登录即可！
 
-### 全网首家实现 element-ui 横向纵向布局无缝切换，多标签页关闭左侧关闭右侧关闭其他（布局切换效果仿 ant-design-pro，tagsBar 仿谷歌浏览器右键菜单,代码纯手写，技术抄袭 Vue）
+### 全网首家实现 element-ui 横向纵向布局无缝切换，多标签页关闭左侧关闭右侧关闭其他（布局切换效果仿 ant-design-pro，tagsBar 仿谷歌浏览器右键菜单）
 
 ![vue-admin-beautiful](http://mpfhrd48.sanxing.uz7.cn/byui-bookmarks/GIF.gif)
 
-## 关于框架的严正声明
-
-<font color="red">此框架基于 element-ui 二次开发，除此之外与任何第三方开源 admin 框架无关，框架完全开源免费，短期内火爆起来也许触犯了某些人的利益，在此说声对不起</font>
+####<font color="#FF0000" >
+自 vue-admin-beautiful 开源以来，很感谢大家的支持，在短时间内 github 收获了![social](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=social) 个 star，我欣喜万分，我真的把 vue-admin-beautiful 当成了自己的孩子，在此声明 vue-admin-beautiful 除了使用 element-ui 做为 ui 库以外未依赖任何第三方开源 admin 框架，也不是在某某 admin 上进行的二次开发，为了让大家满意经常熬夜到凌晨，看着一个个组件的编写完成，一个个组件提交到 npm 仓库，看到大家的评价，我真的超级高兴，但是事情总不会那么尽如人意，也许是开源触动了某些人的利益，演示网站每日会遭受 2000 余次恶意攻击以及重定向跳转，弄得我实在心力交瘁，但我想对你说你阻止不了我，你阻止不了这个框架的成长，谢谢你让我知道了人心险恶，你攻击或者不攻击，它都在那里[github 开源地址](https://github.com/chuzhixin/vue-admin-beautiful)
+</font>
 
 ## 感谢
 
