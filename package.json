@@ -39,7 +39,7 @@
     "codemirror": "^5.54.0",
     "core-js": "^3.6.5",
     "dayjs": "^1.8.27",
-    "echarts": "^4.7.0",
+    "echarts": "^4.8.0",
     "echarts-wordcloud": "^1.1.3",
     "element-ui": "^2.13.2",
     "file-saver": "^2.0.2",

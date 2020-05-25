@@ -94,6 +94,10 @@ html {
 
     @include base-scrollbar;
 
+    div {
+      @include base-scrollbar;
+    }
+
     svg,
     i {
       &:hover {
