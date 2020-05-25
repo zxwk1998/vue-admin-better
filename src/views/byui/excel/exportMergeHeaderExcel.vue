@@ -1,5 +1,5 @@
 <template>
-  <div class="merge-header-container">
+  <div class="export-merge-header-excel-container">
     <byui-query-form>
       <byui-query-form-left-panel :span="24">
         <el-button

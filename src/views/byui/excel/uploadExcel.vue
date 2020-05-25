@@ -1,6 +1,6 @@
 <template>
   <div class="upload-excel-container">
-    <upload-excel-component
+    <uploadExcel-component
       :on-success="handleSuccess"
       :before-upload="beforeUpload"
     />

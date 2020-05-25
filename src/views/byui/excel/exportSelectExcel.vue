@@ -1,5 +1,5 @@
 <template>
-  <div class="select-excel-container">
+  <div class="export-select-excel-container">
     <byui-query-form>
       <byui-query-form-left-panel>
         <el-form :inline="true" @submit.native.prevent>
