@@ -4,7 +4,7 @@ export default {
   beforeMount() {
     window.addEventListener("resize", this.handleResize);
   },
-  destroyed() {
+  beforeDestroy() {
     window.removeEventListener("resize", this.handleResize);
   },
   mounted() {
