@@ -11,15 +11,13 @@
     </byui-keel>
     <transition mode="out-in" name="fade-transform">
       <keep-alive :include="cachedRoutes" :max="10">
-        <router-view :key="key" style="min-height: 78vh;" />
+        <router-view :key="key" style="min-height: 82vh;" />
       </keep-alive>
     </transition>
-    <footer v-if="nodeEnv !== 'development'" class="footer-copyright">
+    <footer class="footer-copyright">
       Copyright
       <byui-icon :icon="['fas', 'copyright']"></byui-icon>
       {{ fullYear }} {{ copyright }}
-      <br />
-      我的目标不是做一名优秀的前端leader，我的目标是帮助到更多优秀的前端leader，停留在这句话的你一定会是或者已经是其中最优秀的那一个
     </footer>
   </section>
 </template>
@@ -89,7 +87,7 @@ export default {
   overflow: hidden;
 
   .footer-copyright {
-    min-height: 70px;
+    min-height: 35px;
     line-height: 35px;
     color: rgba(0, 0, 0, 0.45);
     text-align: center;
