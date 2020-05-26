@@ -16,7 +16,7 @@ function resolve(dir) {
 
 function mockServer() {
   if (process.env.NODE_ENV === "development") {
-    const mockServer = require("./mock/mock-server.js");
+    const mockServer = require("./mock/mockServer.js");
     return mockServer;
   } else {
     return "";

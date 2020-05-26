@@ -2,16 +2,12 @@ import Mock from "mockjs";
 import { param2Obj } from "../src/utils";
 
 const mocks = [];
+const files = require.context("./controller", false, /\.js$/);
 
-const controllerFiles = require.context("./controller", true, /\.js$/);
-const controller = controllerFiles
-  .keys()
-  .reduce((controller, controllerPath) => {
-    const controllerName = controllerPath.replace(/^\.\/(.*)\.\w+$/, "$1");
-    const value = controllerFiles(controllerPath);
-    const obj = value.default;
-    mocks.push(...obj);
-  }, {});
+files.keys().forEach((key) => {
+  const obj = files(key).default;
+  mocks.push(...obj);
+});
 
 export function mockXHR() {
   Mock.XHR.prototype.proxy_send = Mock.XHR.prototype.send;

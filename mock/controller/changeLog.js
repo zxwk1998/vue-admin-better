@@ -50,7 +50,7 @@ const data = [
     timestamp: "2020-04-24",
   },
   {
-    content: "简化权限与登录逻辑 更新mock-server",
+    content: "简化权限与登录逻辑 更新mockServer",
     timestamp: "2020-04-25",
   },
   {

@@ -1,56 +1,70 @@
 
-###/changeLog/getList###POST http://localhost:80/mock-server/changeLog/getList
+###/changeLog/getList###mockServer
+POST http://localhost:80/mock-server/changeLog/getList
+Content-Type: application/x-www-form-urlencoded
+###
+mockServer
+###/colorfulIcon/list###
+POST http://localhost:80/mock-server/colorfulIcon/list
+Content-Type: application/x-www-form-urlencoded
+###mockServer
+
+###/menu/navigate###
+POST http://localhost:80/mock-server/menu/navigate
+Content-Type: application/x-www-form-urlenmockServer
+###
+
+###/icon/list###
+POST http://localhost:80/mock-server/icon/mockServer
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/colorfulIcon/list###POST http://localhost:80/mock-server/colorfulIcon/list
+###/face/list###mockServer
+POST http://localhost:80/mock-server/face/list
+Content-Type: application/x-www-form-urlencoded
+###
+mockServer
+###/table/list###
+POST http://localhost:80/mock-server/table/list
+Content-Type: application/x-www-form-urlencoded
+###mockServer
+
+###/remixicon/getList###
+POST http://localhost:80/mock-server/remixicon/getList
+Content-Type: application/x-www-form-urlenmockServer
+###
+
+###/publicKey###
+POST http://localhost:80/mock-server/pumockServer
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/menu/navigate###POST http://localhost:80/mock-server/menu/navigate
+###/tree/list###mockServer
+POST http://localhost:80/mock-server/tree/list
+Content-Type: application/x-www-form-urlencoded
+###
+mockServer
+###/upload###
+POST http://localhost:80/mock-server/upload
+Content-Type: application/x-www-form-urlencoded
+###mockServer
+
+###/login###
+POST http://localhost:80/mock-server/login
+Content-Type: application/x-www-form-urlenmockServer
+###
+
+###/waterfall/list###
+POST http://localhost:80/mock-server/waterfall/list
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/icon/list###POST http://localhost:80/mock-server/icon/list
+###/logout###
+POST http://localhost:80/mock-server/logout
 Content-Type: application/x-www-form-urlencoded
 ###
 
-###/face/list###POST http://localhost:80/mock-server/face/list
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/table/list###POST http://localhost:80/mock-server/table/list
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/remixicon/getList###POST http://localhost:80/mock-server/remixicon/getList
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/publicKey###POST http://localhost:80/mock-server/publicKey
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/tree/list###POST http://localhost:80/mock-server/tree/list
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/upload###POST http://localhost:80/mock-server/upload
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/login###POST http://localhost:80/mock-server/login
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/waterfall/list###POST http://localhost:80/mock-server/waterfall/list
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/logout###POST http://localhost:80/mock-server/logout
-Content-Type: application/x-www-form-urlencoded
-###
-
-###/user/info###POST http://localhost:80/mock-server/user/info
+###/user/info###
+POST http://localhost:80/mock-server/user/info
 Content-Type: application/x-www-form-urlencoded
 ###
