@@ -70,30 +70,6 @@ export const asyncRoutes = [
     alwaysShow: true,
     children: [
       {
-        path: "permission",
-        name: "Permission",
-        component: () => import("@/views/byui/permission/index"),
-        meta: {
-          title: "权限控制",
-          permissions: ["admin", "editor", "test"],
-        },
-      },
-      {
-        path: "betterScroll",
-        name: "BetterScroll",
-        component: () => import("@/views/byui/betterScroll/index"),
-        meta: {
-          title: "滚动侦测",
-          permissions: ["admin"],
-        },
-      },
-      {
-        path: "verify",
-        name: "Verify",
-        component: () => import("@/views/byui/verify/index"),
-        meta: { title: "验证码", permissions: ["admin"] },
-      },
-      {
         path: "icon",
         name: "Icon",
         component: () => import("@/views/byui/icon/index"),
@@ -158,6 +134,30 @@ export const asyncRoutes = [
         name: "Card",
         component: () => import("@/views/byui/card/index"),
         meta: { title: "卡片", permissions: ["admin"] },
+      },
+      {
+        path: "permission",
+        name: "Permission",
+        component: () => import("@/views/byui/permission/index"),
+        meta: {
+          title: "权限控制",
+          permissions: ["admin", "editor", "test"],
+        },
+      },
+      {
+        path: "betterScroll",
+        name: "BetterScroll",
+        component: () => import("@/views/byui/betterScroll/index"),
+        meta: {
+          title: "滚动侦测",
+          permissions: ["admin"],
+        },
+      },
+      {
+        path: "verify",
+        name: "Verify",
+        component: () => import("@/views/byui/verify/index"),
+        meta: { title: "验证码", permissions: ["admin"] },
       },
       {
         path: "menu1",
