@@ -38,7 +38,7 @@
           @click.native="handleCopyIcon(index, $event)"
         >
           <byui-remix-icon
-            :icon-class="`https://cdn.jsdelivr.net/gh/chuzhixin/zx-remixicon@master/src/icons/svg/${item}.svg`"
+            :icon-class="`https://cdn.jsdelivr.net/gh/chuzhixin/zx-remixicon/src/icons/svg/${item}.svg`"
             @click.stop
           ></byui-remix-icon>
         </el-card>
