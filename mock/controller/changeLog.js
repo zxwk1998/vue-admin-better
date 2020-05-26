@@ -101,6 +101,10 @@ const data = [
     content: "又被人骂了 挺好的 让我下定决心重写了tagsBar",
     timestamp: "2020-05-20",
   },
+  {
+    content: "仿ant-design 添加雪花屏",
+    timestamp: "2020-05-26",
+  },
 ];
 
 export default [
