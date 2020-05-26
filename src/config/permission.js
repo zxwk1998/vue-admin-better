@@ -30,7 +30,7 @@ router.beforeEach(async (to, from, next) => {
         next();
       } else {
         try {
-          const { permissions } = await store.dispatch("user/getInfo");
+          const permissions = await store.dispatch("user/getInfo");
           let accessRoutes = [];
           if (authentication === "intelligence") {
             accessRoutes = await store.dispatch(

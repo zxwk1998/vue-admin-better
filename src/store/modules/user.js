@@ -6,7 +6,7 @@ import {
   setAccessToken,
 } from "@/utils/accessToken";
 import { resetRouter } from "@/router";
-import defaultSettings from "@/config/settings";
+import { tokenName, title } from "@/config/settings";
 
 const state = {
   accessToken: getAccessToken(),
@@ -36,11 +36,10 @@ const mutations = {
 };
 const actions = {
   login({ commit }, userInfo) {
-    const { userName, password } = userInfo;
     return new Promise((resolve, reject) => {
-      login({ userName, password })
+      login(userInfo)
         .then((response) => {
-          const accessToken = response.data[defaultSettings.tokenName];
+          const accessToken = response.data[tokenName];
           commit("setAccessToken", accessToken);
           setAccessToken(accessToken);
           const hour = new Date().getHours();
@@ -54,10 +53,7 @@ const actions = {
               : hour < 18
               ? "下午好"
               : "晚上好";
-          Vue.prototype.$baseNotify(
-            `欢迎登录${defaultSettings.title}`,
-            `${userName}，${thisTime}！`
-          );
+          Vue.prototype.$baseNotify(`欢迎登录${title}`, `${thisTime}！`);
           resolve();
         })
         .catch((error) => {
@@ -77,7 +73,7 @@ const actions = {
           commit("setPermissions", permissions);
           commit("setUserName", userName);
           commit("setAvatar", avatar);
-          resolve(data);
+          resolve(permissions);
         })
         .catch((error) => {
           reject(error);
