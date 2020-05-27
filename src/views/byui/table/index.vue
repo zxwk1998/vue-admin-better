@@ -115,7 +115,7 @@
 import { getList, doDelete } from "@/api/table";
 import Edit from "./components/edit";
 export default {
-  name: "Table",
+  name: "ComprehensiveTable",
   components: {
     Edit,
   },
