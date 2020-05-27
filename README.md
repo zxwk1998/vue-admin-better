@@ -10,9 +10,9 @@
 
 ## 演示地址
 
-### - [演示地址 1： vue-admin-beautiful （速度快）](http://mpfhrd48.sanxing.uz7.cn/vue-admin-beautiful)
+### - [演示地址 1： vue-admin-beautiful （速度较快）](http://chu1204505056.gitee.io/vue-admin-beautiful)
 
-### - [演示地址 2： vue-admin-beautiful （速度较快）](http://chu1204505056.gitee.io/vue-admin-beautiful)
+### - [演示地址 2： vue-admin-beautiful （速度快，可能会被浏览器误报风险网站）](http://mpfhrd48.sanxing.uz7.cn/vue-admin-beautiful)
 
 ### - [演示地址 3： vue-admin-beautiful （layuiAdmin 风格）](http://chu1204505056.gitee.io/vue-admin-beautiful-2)
 
