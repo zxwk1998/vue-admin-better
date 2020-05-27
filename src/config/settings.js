@@ -57,4 +57,6 @@ module.exports = {
   uniqueOpened: true,
   //vertical布局时默认展开的菜单path，使用逗号隔开建议只展开一个
   defaultOopeneds: ["/byui"],
+  //需要加loading层的请求，防止重复提交
+  debounce: ["doEdit"],
 };

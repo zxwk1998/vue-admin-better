@@ -7,11 +7,13 @@ import {
   requestTimeout,
   successCode,
   tokenName,
+  debounce,
 } from "@/config/settings";
 import { Loading, Message } from "element-ui";
 import store from "@/store";
 import qs from "qs";
 import router from "@/router";
+import _ from "lodash";
 
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
@@ -26,6 +28,9 @@ service.interceptors.request.use(
     if (store.getters["user/accessToken"]) {
       config.headers[tokenName] = store.getters["user/accessToken"];
     }
+    if (config.data) {
+      config.data = _.pickBy(config.data, _.identity);
+    }
     if (process.env.NODE_ENV !== "test") {
       if (contentType === "application/x-www-form-urlencoded;charset=UTF-8") {
         if (config.data && !config.data.param) {
@@ -33,16 +38,16 @@ service.interceptors.request.use(
         }
       }
     }
-
-    if (
-      config.url.includes("add") ||
-      config.url.includes("edit") ||
-      config.url.includes("set") ||
-      config.url.includes("update") ||
-      config.url.includes("import") ||
-      config.url.includes("export") ||
-      config.url.includes("save")
-    ) {
+    const needLoading = () => {
+      let status = false;
+      debounce.forEach((item) => {
+        if (_.includes(config.url, item)) {
+          status = true;
+        }
+      });
+      return status;
+    };
+    if (needLoading()) {
       loadingInstance = Loading.service();
     }
 

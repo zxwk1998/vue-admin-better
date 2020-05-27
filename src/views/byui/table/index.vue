@@ -107,17 +107,17 @@
       @current-change="handleCurrentChange"
       @size-change="handleSizeChange"
     ></el-pagination>
-    <edit ref="edit"></edit>
+    <table-edit ref="edit"></table-edit>
   </div>
 </template>
 
 <script>
 import { getList, doDelete } from "@/api/table";
-import Edit from "./components/edit";
+import TableEdit from "./components/TableEdit";
 export default {
   name: "ComprehensiveTable",
   components: {
-    Edit,
+    TableEdit,
   },
   filters: {
     statusFilter(status) {
