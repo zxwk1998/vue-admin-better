@@ -30,6 +30,11 @@ export const asyncRoutes = [
     path: "/",
     component: Layout,
     redirect: "/index",
+    meta: {
+      title: "首页",
+      icon: "home",
+      affix: true,
+    },
     children: [
       {
         path: "/index",
@@ -67,7 +72,6 @@ export const asyncRoutes = [
     redirect: "noRedirect",
     name: "Byui",
     meta: { title: "组件", icon: "cloud" },
-    alwaysShow: true,
     children: [
       {
         path: "icon",
@@ -78,7 +82,6 @@ export const asyncRoutes = [
           title: "图标",
           permissions: ["admin"],
         },
-        alwaysShow: true,
         children: [
           {
             path: "awesomeIcon",
@@ -108,7 +111,6 @@ export const asyncRoutes = [
         meta: {
           title: "表格",
         },
-        alwaysShow: true,
         children: [
           {
             path: "comprehensiveTable",
@@ -180,14 +182,12 @@ export const asyncRoutes = [
           title: "嵌套路由 1",
           permissions: ["admin"],
         },
-        alwaysShow: true,
         children: [
           {
             path: "menu1-1",
             component: () => import("@/views/byui/nested/menu1/menu1-1/index"),
             name: "Menu1-1",
             meta: { title: "嵌套路由 1-1" },
-            alwaysShow: true,
             children: [
               {
                 path: "menu1-1-1",
@@ -369,7 +369,6 @@ export const asyncRoutes = [
       icon: "shopping-cart",
       permissions: ["admin"],
     },
-    alwaysShow: true,
 
     children: [
       {
@@ -406,7 +405,6 @@ export const asyncRoutes = [
     redirect: "noRedirect",
     name: "Error",
     meta: { title: "错误页", icon: "bug" },
-    alwaysShow: true,
     children: [
       {
         path: "/401",
