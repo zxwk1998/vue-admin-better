@@ -130,7 +130,7 @@ export default {
 
       svg:not(:root),
       .svg-external-icon {
-        font-size: 28px;
+        font-size: 30px;
         font-weight: bold;
         color: $base-color-gray;
         text-align: center;
