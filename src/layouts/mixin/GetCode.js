@@ -7,10 +7,13 @@ export default {
       if (path === "/byui/menu1/menu1-1/menu1-1-1/index.vue") {
         path = "/byui/nested/menu1/menu1-1/menu1-1-1/index.vue";
       }
-      if (path === "/byui/remixIcon/index.vue") {
+      if (path === "/byui/icon/remixIcon/index.vue") {
+        path = "/byui/icon/index.vue";
+      }
+      if (path === "/byui/icon/remixIcon/index.vue") {
         path = "/byui/icon/remixIcon.vue";
       }
-      if (path === "/byui/colorfulIcon/index.vue") {
+      if (path === "/byui/icon/colorfulIcon/index.vue") {
         path = "/byui/icon/colorfulIcon.vue";
       }
       if (path === "/byui/table/comprehensiveTable/index.vue") {

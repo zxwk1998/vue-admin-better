@@ -32,11 +32,11 @@ const actions = {
     });
   },
   setAllRoutes({ commit }) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       getRouterList()
-        .then((res) => {
-          res.data.push({ path: "*", redirect: "/404", hidden: true });
-          let accessRoutes = filterRoutes(res.data);
+        .then(({ data }) => {
+          data.push({ path: "*", redirect: "/404", hidden: true });
+          let accessRoutes = filterRoutes(data);
           commit("setAllRoutes", accessRoutes);
           resolve(accessRoutes);
         })
