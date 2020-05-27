@@ -118,7 +118,7 @@ export default {
       justify-content: center; /* 水平居中 */
 
       svg:not(:root).svg-inline--fa {
-        font-size: 37px;
+        font-size: 35px;
         font-weight: bold;
         color: $base-color-gray;
         text-align: center;

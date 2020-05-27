@@ -11,7 +11,7 @@
     </byui-keel>
     <transition mode="out-in" name="fade-transform">
       <keep-alive :include="cachedRoutes" :max="10">
-        <router-view :key="key" style="min-height: 82vh;" />
+        <router-view :key="key" style="min-height: 80.6vh;" />
       </keep-alive>
     </transition>
     <footer class="footer-copyright">
@@ -87,10 +87,11 @@ export default {
   overflow: hidden;
 
   .footer-copyright {
-    min-height: 35px;
-    line-height: 35px;
+    min-height: 55px;
+    line-height: 55px;
     color: rgba(0, 0, 0, 0.45);
     text-align: center;
+    border-top: 1px dashed $base-border-color;
   }
 }
 </style>
