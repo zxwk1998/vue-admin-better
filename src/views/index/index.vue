@@ -688,7 +688,6 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
 .index-container {
   ::v-deep {
@@ -734,9 +733,7 @@ export default {
       padding: 9px 15px;
       font-size: 14px;
       line-height: 20px;
-      border-color: #e6e6e6;
-      border-style: solid;
-      border-width: 1px;
+      border: 1px solid #e6e6e6;
 
       &:first-child {
         width: 50%;
