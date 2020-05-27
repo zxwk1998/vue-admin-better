@@ -71,21 +71,34 @@ export const asyncRoutes = [
     children: [
       {
         path: "icon",
+        component: EmptyLayout,
+        redirect: "noRedirect",
         name: "Icon",
-        component: () => import("@/views/byui/icon/index"),
-        meta: { title: "常规图标", permissions: ["admin"] },
-      },
-      {
-        path: "remixIcon",
-        name: "RemixIcon",
-        component: () => import("@/views/byui/icon/remixIcon"),
-        meta: { title: "小清新图标", permissions: ["admin"] },
-      },
-      {
-        path: "colorfulIcon",
-        name: "ColorfulIcon",
-        component: () => import("@/views/byui/icon/colorfulIcon"),
-        meta: { title: "多彩图标", permissions: ["admin"] },
+        meta: {
+          title: "图标",
+          permissions: ["admin"],
+        },
+        alwaysShow: true,
+        children: [
+          {
+            path: "awesomeIcon",
+            name: "AwesomeIcon",
+            component: () => import("@/views/byui/icon/index"),
+            meta: { title: "常规图标" },
+          },
+          {
+            path: "remixIcon",
+            name: "RemixIcon",
+            component: () => import("@/views/byui/icon/remixIcon"),
+            meta: { title: "小清新图标" },
+          },
+          {
+            path: "colorfulIcon",
+            name: "ColorfulIcon",
+            component: () => import("@/views/byui/icon/colorfulIcon"),
+            meta: { title: "多彩图标" },
+          },
+        ],
       },
       {
         path: "table",
