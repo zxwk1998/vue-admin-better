@@ -56,7 +56,7 @@ import clip from "@/utils/clipboard";
 import { getIconList } from "@/api/icon";
 
 export default {
-  name: "Icon",
+  name: "AwesomeIcon",
   data() {
     return {
       copyText: "",
