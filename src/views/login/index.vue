@@ -139,23 +139,17 @@ export default {
       immediate: true,
     },
   },
-  created() {},
   mounted() {
     if ("production" !== process.env.NODE_ENV) {
       this.loginForm.userName = "admin";
       this.loginForm.password = "123456";
     }
-    setTimeout(() => {
-      this.animateShow = true;
-    });
   },
   methods: {
     showPwd() {
-      if (this.passwordType === "password") {
-        this.passwordType = "";
-      } else {
-        this.passwordType = "password";
-      }
+      this.passwordType === "password"
+        ? (this.passwordType = "")
+        : (this.passwordType = "password");
       this.$nextTick(() => {
         this.$refs.password.focus();
       });
