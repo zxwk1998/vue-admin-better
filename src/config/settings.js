@@ -17,7 +17,7 @@ module.exports = {
   tokenName: "accessToken",
   //token表名
   tokenTableName: "VUE-TABLE",
-  //token存储位置
+  //token存储位置localStorage sessionStorage cookie
   storage: "localStorage",
   //是否显示logo
   logo: true,

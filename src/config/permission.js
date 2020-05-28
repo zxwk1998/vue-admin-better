@@ -13,7 +13,7 @@ import {
 } from "@/config/settings";
 
 NProgress.configure({ showSpinner: false });
-router.beforeEach(async (to, from, next) => {
+router.beforeResolve(async (to, from, next) => {
   NProgress.start();
   document.title = getPageTitle(to.meta.title);
   let hasToken = store.getters["user/accessToken"];
