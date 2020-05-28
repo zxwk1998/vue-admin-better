@@ -1,18 +1,18 @@
-const state = { logs: [] };
+const state = { errorLogs: [] };
 const getters = {
-  errorLogs: (state) => state.logs,
+  errorLogs: (state) => state.errorLogs,
 };
 const mutations = {
-  addErrorLog: (state, log) => {
-    state.logs.push(log);
+  addErrorLog: (state, errorLog) => {
+    state.errorLogs.push(errorLog);
   },
   clearErrorLog: (state) => {
-    state.logs.splice(0);
+    state.errorLogs.splice(0);
   },
 };
 const actions = {
-  addErrorLog({ commit }, log) {
-    commit("addErrorLog", log);
+  addErrorLog({ commit }, errorLog) {
+    commit("addErrorLog", errorLog);
   },
   clearErrorLog({ commit }) {
     commit("clearErrorLog");
