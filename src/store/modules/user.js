@@ -35,73 +35,47 @@ const mutations = {
   },
 };
 const actions = {
-  login({ commit }, userInfo) {
-    return new Promise((resolve, reject) => {
-      login(userInfo)
-        .then((response) => {
-          const accessToken = response.data[tokenName];
-          commit("setAccessToken", accessToken);
-          setAccessToken(accessToken);
-          const hour = new Date().getHours();
-          const thisTime =
-            hour < 8
-              ? "早上好"
-              : hour <= 11
-              ? "上午好"
-              : hour <= 13
-              ? "中午好"
-              : hour < 18
-              ? "下午好"
-              : "晚上好";
-          Vue.prototype.$baseNotify(`欢迎登录${title}`, `${thisTime}！`);
-          resolve();
-        })
-        .catch((error) => {
-          reject(error);
-        });
-    });
+  async login({ commit }, userInfo) {
+    const { data } = await login(userInfo);
+    const accessToken = data[tokenName];
+    commit("setAccessToken", accessToken);
+    setAccessToken(accessToken);
+    const hour = new Date().getHours();
+    const thisTime =
+      hour < 8
+        ? "早上好"
+        : hour <= 11
+        ? "上午好"
+        : hour <= 13
+        ? "中午好"
+        : hour < 18
+        ? "下午好"
+        : "晚上好";
+    Vue.prototype.$baseNotify(`欢迎登录${title}`, `${thisTime}！`);
   },
-  getInfo({ commit, state }) {
-    return new Promise((resolve, reject) => {
-      getInfo(state.accessToken)
-        .then((response) => {
-          const { data } = response;
-          if (!data) {
-            reject("验证失败，请重新登录...");
-          }
-          let { permissions, userName, avatar } = data;
-          commit("setPermissions", permissions);
-          commit("setUserName", userName);
-          commit("setAvatar", avatar);
-          resolve(permissions);
-        })
-        .catch((error) => {
-          reject(error);
-        });
-    });
+  async getInfo({ commit, state }) {
+    const { data } = await getInfo(state.accessToken);
+    if (!data) {
+      Vue.prototype.$baseMessage("验证失败，请重新登录...", "error");
+      return false;
+    }
+    let { permissions, userName, avatar } = data;
+    commit("setPermissions", permissions);
+    commit("setUserName", userName);
+    commit("setAvatar", avatar);
+    return permissions;
   },
-  logout({ commit, state, dispatch }) {
-    return new Promise((resolve, reject) => {
-      logout(state.accessToken)
-        .then(() => {
-          commit("setAccessToken", "");
-          commit("setPermissions", []);
-          removeAccessToken();
-          resetRouter();
-          dispatch("tagsBar/delAllRoutes", null, { root: true });
-          resolve();
-        })
-        .catch((error) => {
-          reject(error);
-        });
-    });
+  async logout({ commit, dispatch }) {
+    await logout(state.accessToken);
+    commit("setAccessToken", "");
+    commit("setPermissions", []);
+    removeAccessToken();
+    resetRouter();
+    await dispatch("tagsBar/delAllRoutes", null, { root: true });
   },
   resetAccessToken({ commit }) {
-    return new Promise((resolve) => {
-      commit("setAccessToken", "");
-      removeAccessToken();
-      resolve();
-    });
+    commit("setAccessToken", "");
+    removeAccessToken();
   },
 };
 export default { state, getters, mutations, actions };

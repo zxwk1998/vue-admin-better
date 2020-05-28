@@ -71,7 +71,7 @@ service.interceptors.response.use(
     if (loadingInstance) {
       loadingInstance.close();
     }
-    const { status, data } = response;
+    const { status, data, config } = response;
     const { code, msg } = data;
     if (code !== successCode && code !== 0) {
       switch (code) {
@@ -88,7 +88,10 @@ service.interceptors.response.use(
           errorMsg(msg || `后端接口${code}异常`);
           break;
       }
-      return Promise.reject({ code, msg } || "Error");
+      return Promise.reject(
+        "vue-admin-beautiful请求异常拦截:" +
+          JSON.stringify({ url: config.url, code, msg }) || "Error"
+      );
     } else {
       return data;
     }
