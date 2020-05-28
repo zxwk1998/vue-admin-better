@@ -150,7 +150,7 @@
           <div v-if="nodeEnv !== 'development'" class="bottom-btn">
             <el-popover placement="top" width="250" trigger="hover">
               <p>
-                谢谢您愿意支持开源，加群获取详细教程，群内提供vue-admin-beautiful-template基础模板
+                这是一个付费群，谢谢您愿意支持开源，加群获取详细文档，群内提供vue-admin-beautiful-template基础模板
               </p>
               <el-image :src="require('@/assets/ewm.png')"></el-image>
               <a slot="reference" target="_blank">
