@@ -3,7 +3,7 @@ const getters = {
   errorLogs: (state) => state.errorLogs,
 };
 const mutations = {
-  addErrorLog: (state, errorLog) => {
+  addErrorLog(state, errorLog) {
     state.errorLogs.push(errorLog);
   },
   clearErrorLog: (state) => {

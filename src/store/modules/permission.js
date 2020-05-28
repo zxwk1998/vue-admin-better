@@ -8,13 +8,13 @@ const getters = {
   partialRoutes: (state) => state.partialRoutes,
 };
 const mutations = {
-  setRoutes: (state, routes) => {
+  setRoutes(state, routes) {
     state.routes = constantRoutes.concat(routes);
   },
-  setAllRoutes: (state, routes) => {
+  setAllRoutes(state, routes) {
     state.routes = constantRoutes.concat(routes);
   },
-  setPartialRoutes: (state, routes) => {
+  setPartialRoutes(state, routes) {
     state.partialRoutes = constantRoutes.concat(routes);
   },
 };

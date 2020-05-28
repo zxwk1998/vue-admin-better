@@ -21,16 +21,16 @@ const getters = {
   permissions: (state) => state.permissions,
 };
 const mutations = {
-  setAccessToken: (state, accessToken) => {
+  setAccessToken(state, accessToken) {
     state.accessToken = accessToken;
   },
-  setUserName: (state, userName) => {
+  setUserName(state, userName) {
     state.userName = userName;
   },
-  setAvatar: (state, avatar) => {
+  setAvatar(state, avatar) {
     state.avatar = avatar;
   },
-  setPermissions: (state, permissions) => {
+  setPermissions(state, permissions) {
     state.permissions = permissions;
   },
 };

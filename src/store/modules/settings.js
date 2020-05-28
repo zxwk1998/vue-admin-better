@@ -22,19 +22,13 @@ const getters = {
 };
 const mutations = {
   changeLayout: (state, layout) => {
-    if (layout) {
-      state.layout = layout;
-    }
+    if (layout) state.layout = layout;
   },
   changeHeader: (state, header) => {
-    if (header) {
-      state.header = header;
-    }
+    if (header) state.header = header;
   },
   changeTagsBar: (state, tagsBar) => {
-    if (tagsBar) {
-      state.tagsBar = tagsBar;
-    }
+    if (tagsBar) state.tagsBar = tagsBar;
   },
   changeCollapse: (state) => {
     state.collapse = !state.collapse;

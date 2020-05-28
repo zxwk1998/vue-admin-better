@@ -8,13 +8,13 @@ const getters = {
   visitedRoutes: (state) => state.visitedRoutes,
 };
 const mutations = {
-  addVisitedRoute: (state, view) => {
+  addVisitedRoute(state, view) {
     if (state.visitedRoutes.some((v) => v.path === view.path)) return;
     state.visitedRoutes.push(
       Object.assign({}, view, { title: view.meta.title || "新标签页" })
     );
   },
-  addCachedRoutes: (state, view) => {
+  addCachedRoutes(state, view) {
     if (state.cachedRoutes.includes(view.name)) {
       state.skeleton = false;
       if (view.meta.noKeepAlive) {
@@ -28,7 +28,7 @@ const mutations = {
       state.cachedRoutes.push(view.name);
     }
   },
-  delVisitedRoute: (state, view) => {
+  delVisitedRoute(state, view) {
     for (const [i, v] of state.visitedRoutes.entries()) {
       if (v.path === view.path) {
         state.visitedRoutes.splice(i, 1);
@@ -36,7 +36,7 @@ const mutations = {
       }
     }
   },
-  delCachedRoutes: (state, view) => {
+  delCachedRoutes(state, view) {
     for (const i of state.cachedRoutes) {
       if (i === view.name) {
         const index = state.cachedRoutes.indexOf(i);
@@ -45,12 +45,12 @@ const mutations = {
       }
     }
   },
-  delOthersVisitedRoute: (state, view) => {
+  delOthersVisitedRoute(state, view) {
     state.visitedRoutes = state.visitedRoutes.filter((v) => {
       return v.meta.affix || v.path === view.path;
     });
   },
-  delOthersCachedRoutes: (state, view) => {
+  delOthersCachedRoutes(state, view) {
     for (const i of state.cachedRoutes) {
       if (i === view.name) {
         const index = state.cachedRoutes.indexOf(i);
@@ -59,7 +59,7 @@ const mutations = {
       }
     }
   },
-  delLeftVisitedRoute: (state, view) => {
+  delLeftVisitedRoute(state, view) {
     let _index = state.visitedRoutes.length;
     state.visitedRoutes = state.visitedRoutes.filter((item, index) => {
       if (item.name === view.name) {
@@ -68,7 +68,7 @@ const mutations = {
       return item.meta.affix || _index <= state.visitedRoutes.indexOf(item);
     });
   },
-  delLeftCachedRoutes: (state, view) => {
+  delLeftCachedRoutes(state, view) {
     for (const i of state.cachedRoutes) {
       if (i === view.name) {
         const index = state.cachedRoutes.indexOf(i);
@@ -80,7 +80,7 @@ const mutations = {
       }
     }
   },
-  delRightVisitedRoute: (state, view) => {
+  delRightVisitedRoute(state, view) {
     let _index = state.visitedRoutes.length;
     state.visitedRoutes = state.visitedRoutes.filter((item, index) => {
       if (item.name === view.name) {
@@ -89,7 +89,7 @@ const mutations = {
       return item.meta.affix || _index >= state.visitedRoutes.indexOf(item);
     });
   },
-  delRightCachedRoutes: (state, view) => {
+  delRightCachedRoutes(state, view) {
     for (const i of state.cachedRoutes) {
       if (i === view.name) {
         const index = state.cachedRoutes.indexOf(i);
@@ -98,14 +98,14 @@ const mutations = {
       }
     }
   },
-  delAllVisitedRoutes: (state) => {
+  delAllVisitedRoutes(state) {
     const affixTags = state.visitedRoutes.filter((tag) => tag.meta.affix);
     state.visitedRoutes = affixTags;
   },
-  delAllCachedRoutess: (state) => {
+  delAllCachedRoutess(state) {
     state.cachedRoutes = [];
   },
-  updateVisitedRoute: (state, view) => {
+  updateVisitedRoute(state, view) {
     for (let v of state.visitedRoutes) {
       if (v.path === view.path) {
         v = Object.assign(v, view);
