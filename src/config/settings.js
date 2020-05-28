@@ -1,4 +1,12 @@
 module.exports = {
+  // 部署时的URL
+  publicPath: "",
+  // 生产环境构建文件的目录名
+  outputDir: "dist",
+  // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
+  assetsDir: "static",
+  // 开发环境每次保存时是否输出为eslint编译警告
+  lintOnSave: true,
   //标题
   title: "vue-admin-beautiful",
   //简写
@@ -6,7 +14,7 @@ module.exports = {
   //开发环境端口号
   devPort: "80",
   //版本号
-  version: "V1.0",
+  version: process.env.VUE_APP_VERSION,
   //烦请保留版权 如需去除请联系群主QQ 1204505056 恶意修改发生纠纷及出现任何问题 由修改人自行承担
   copyright: process.env.VUE_APP_AUTHOR,
   //不经过token校验的路由

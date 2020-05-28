@@ -13,9 +13,9 @@
 
 ## 演示地址
 
-### - [演示地址 1： vue-admin-beautiful （速度较快，功能保持最新）](http://chu1204505056.gitee.io/vue-admin-beautiful)
+### - [演示地址 1： vue-admin-beautiful （速度最快）](http://beautiful.panm.cn/vue-admin-beautiful)
 
-### - [演示地址 2： vue-admin-beautiful （速度极快）](http://beautiful.panm.cn/vue-admin-beautiful)
+### - [演示地址 2： vue-admin-beautiful （速度较快，功能保持最新）](http://chu1204505056.gitee.io/vue-admin-beautiful)
 
 ### - [演示地址 3： vue-admin-beautiful （速度慢）](https://chuzhixin.github.io/vue-admin-beautiful)
 

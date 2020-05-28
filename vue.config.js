@@ -1,7 +1,14 @@
-"use strict";
 const path = require("path");
-const { title, abbreviation, devPort } = require("./src/config/settings");
-const pkg = require("./package.json");
+const {
+  publicPath,
+  assetsDir,
+  outputDir,
+  lintOnSave,
+  title,
+  abbreviation,
+  devPort,
+} = require("./src/config/settings");
+const { version, author } = require("./package.json");
 const Webpack = require("webpack");
 const WebpackBar = require("webpackbar");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
@@ -9,7 +16,9 @@ const date = require("dayjs")().format("YYYY_M_D");
 const time = require("dayjs")().format("YYYY-M-D HH:mm:ss");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const productionGzipExtensions = ["html", "js", "css", "svg"];
-
+process.env.VUE_APP_AUTHOR = author;
+process.env.VUE_APP_UPDATE_TIME = time;
+process.env.VUE_APP_VERSION = version;
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
@@ -26,10 +35,10 @@ function mockServer() {
 const name = title || "vue-admin-beautiful";
 
 module.exports = {
-  publicPath: "",
-  assetsDir: "static",
-  outputDir: "dist",
-  lintOnSave: true,
+  publicPath,
+  assetsDir,
+  outputDir,
+  lintOnSave,
   transpileDependencies: ["vue-echarts", "resize-detector"],
   devServer: {
     hot: true,
@@ -60,9 +69,6 @@ module.exports = {
           "window.echarts": "echarts",
           maptalks: "maptalks",
           "window.maptalks": "maptalks",
-        }),
-        new Webpack.DefinePlugin({
-          "process.env.VUE_APP_UPDATE_TIME": "'" + time + "'",
         }),
         new WebpackBar({
           name: `\u0076\u0075\u0065\u002d\u0061\u0064\u006d\u0069\u006e\u002d\u0062\u0065\u0061\u0075\u0074\u0069\u0066\u0075\u006c`,
