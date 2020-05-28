@@ -160,20 +160,17 @@ export default {
         this.$refs.password.focus();
       });
     },
-    async handleLogin() {
-      this.$refs.loginForm.validate((valid) => {
+    handleLogin() {
+      this.$refs.loginForm.validate(async (valid) => {
         if (valid) {
           this.loading = true;
-          this.$store
-            .dispatch("user/login", this.loginForm)
-            .then(() => {
-              const routerPath = this.redirect === "/404" ? "/" : this.redirect;
-              this.$router.push({ path: routerPath || "/" }).catch(() => {});
-              this.loading = false;
-            })
-            .catch(() => {
-              this.loading = false;
-            });
+          await this.$store.dispatch("user/login", this.loginForm);
+          const routerPath =
+            this.redirect === "/404" || this.redirect === "/401"
+              ? "/"
+              : this.redirect;
+          this.$router.push({ path: routerPath }).catch((error) => {});
+          this.loading = false;
         } else {
           return false;
         }
