@@ -67,11 +67,11 @@ const actions = {
   },
   async logout({ commit, dispatch }) {
     await logout(state.accessToken);
+    await dispatch("tagsBar/delAllRoutes", null, { root: true });
     commit("setAccessToken", "");
     commit("setPermissions", []);
     removeAccessToken();
     resetRouter();
-    await dispatch("tagsBar/delAllRoutes", null, { root: true });
   },
   resetAccessToken({ commit }) {
     commit("setAccessToken", "");
