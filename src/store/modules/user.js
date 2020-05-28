@@ -67,10 +67,15 @@ const actions = {
       return false;
     }
     let { permissions, userName, avatar } = data;
-    commit("setPermissions", permissions);
-    commit("setUserName", userName);
-    commit("setAvatar", avatar);
-    return permissions;
+    if (permissions && userName && avatar) {
+      commit("setPermissions", permissions);
+      commit("setUserName", userName);
+      commit("setAvatar", avatar);
+      return permissions;
+    } else {
+      Vue.prototype.$baseMessage("获取用户信息接口异常", "error");
+      return false;
+    }
   },
   async logout({ commit, dispatch }) {
     await logout(state.accessToken);
