@@ -4,6 +4,7 @@ const {
   assetsDir,
   outputDir,
   lintOnSave,
+  transpileDependencies,
   title,
   abbreviation,
   devPort,
@@ -39,7 +40,7 @@ module.exports = {
   assetsDir,
   outputDir,
   lintOnSave,
-  transpileDependencies: ["vue-echarts", "resize-detector"],
+  transpileDependencies,
   devServer: {
     hot: true,
     port: devPort,

@@ -7,7 +7,9 @@ module.exports = {
   assetsDir: "static",
   // 开发环境每次保存时是否输出为eslint编译警告
   lintOnSave: true,
-  //标题
+  // 进行编译的依赖
+  transpileDependencies: ["vue-echarts", "resize-detector"],
+  //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
   title: "vue-admin-beautiful",
   //简写
   abbreviation: "vab",
@@ -15,7 +17,7 @@ module.exports = {
   devPort: "80",
   //版本号
   version: process.env.VUE_APP_VERSION,
-  //烦请保留版权 如需去除请联系群主QQ 1204505056 恶意修改发生纠纷及出现任何问题 由修改人自行承担
+  //烦请保留package.json作者信息 如需去除请联系群主QQ 1204505056 需支付299元 恶意修改发生纠纷及出现任何问题 由修改人自行承担
   copyright: process.env.VUE_APP_AUTHOR,
   //不经过token校验的路由
   routesWhiteList: ["/login", "/404", "/401"],
