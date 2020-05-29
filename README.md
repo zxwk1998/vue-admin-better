@@ -10,9 +10,9 @@
 
 ## 演示地址
 
-### - [演示地址 1： vue-admin-beautiful （速度较快）](http://chu1204505056.gitee.io/vue-admin-beautiful)
+### - [演示地址 1： vue-admin-beautiful （纵向布局展示，速度最快）](http://beautiful.panm.cn/vue-admin-beautiful)
 
-### - [演示地址 2： vue-admin-beautiful （速度极快）](http://beautiful.panm.cn/vue-admin-beautiful)
+### - [演示地址 2： vue-admin-beautiful （横向布局展示，新添加功能）](http://beautiful.panm.cn/vue-admin-beautiful-horizonal)
 
 ### - [演示地址 3： vue-admin-beautiful （layuiAdmin 风格）](http://chu1204505056.gitee.io/vue-admin-beautiful-2)
 

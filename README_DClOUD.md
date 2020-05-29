@@ -13,9 +13,9 @@
 
 ## 演示地址
 
-### - [演示地址 1： vue-admin-beautiful （速度最快）](http://beautiful.panm.cn/vue-admin-beautiful)
+### - [演示地址 1： vue-admin-beautiful （纵向布局展示，速度最快）](http://beautiful.panm.cn/vue-admin-beautiful)
 
-### - [演示地址 2： vue-admin-beautiful （速度较快，功能保持最新）](http://chu1204505056.gitee.io/vue-admin-beautiful)
+### - [演示地址 2： vue-admin-beautiful （横向布局展示，新添加功能）](http://beautiful.panm.cn/vue-admin-beautiful-horizonal)
 
 ### - [演示地址 3： vue-admin-beautiful （速度慢）](https://chuzhixin.github.io/vue-admin-beautiful)
 
@@ -23,11 +23,9 @@
 
 ### - [演示地址 5： vue-admin-beautiful （iviewPro 风格）](http://chu1204505056.gitee.io/vue-admin-beautiful-3)
 
-### - [演示地址 6： vue-admin-beautiful （横向布局）](http://chu1204505056.gitee.io/vue-admin-beautiful-4)
-
 ### - [PC、平板、手机适配演示： vue-admin-beautiful](http://www.jq22.com/yanshi23029)
 
-### - [演示地址 7： vue-admin-clever （服务器捐赠者开源版本）](http://mpfhrd48.sanxing.uz7.cn/vue-admin-clever)
+### - [演示地址 6： vue-admin-clever （服务器捐赠者开源版本）](http://mpfhrd48.sanxing.uz7.cn/vue-admin-clever)
 
 ## ☝☝☝ 演示地址,在上方直接点击登录即可！
 
