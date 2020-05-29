@@ -55,7 +55,7 @@
     "vue-echarts": "^5.0.0-beta.0",
     "vue-qart": "^2.2.0",
     "vue-quill-editor": "^3.0.6",
-    "vue-router": "^3.3.1",
+    "vue-router": "^3.3.2",
     "vue-waterfall-easy": "^2.4.4",
     "vuedraggable": "^2.23.2",
     "vuex": "^3.4.0",
@@ -68,6 +68,7 @@
     "zx-magnifie": "^0.4.0",
     "zx-markdown-editor": "^0.0.1",
     "zx-player": "^0.9.6",
+    "zx-templates": "^0.0.1",
     "zx-verify": "^0.0.1"
   },
   "devDependencies": {
