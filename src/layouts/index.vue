@@ -9,19 +9,18 @@
       }"
     >
       <div :class="header === 'fixed' ? 'fixed-header' : ''">
-        <top-bar />
+        <top-bar></top-bar>
         <div
           v-if="tagsBar === 'true' || tagsBar === true"
           :class="{ 'tag-view-show': tagsBar }"
         >
           <div class="byui-main">
-            <tags-bar />
+            <tags-bar></tags-bar>
           </div>
         </div>
       </div>
       <div class="byui-main main-padding">
-        <nav-bar />
-        <app-main />
+        <app-main></app-main>
       </div>
     </div>
     <div
@@ -37,10 +36,10 @@
         class="mask"
         @click="handleFoldSideBar"
       />
-      <side-bar />
+      <side-bar></side-bar>
       <div class="byui-main" :class="collapse ? 'is-collapse-main' : ''">
         <div :class="header === 'fixed' ? 'fixed-header' : ''">
-          <nav-bar />
+          <nav-bar></nav-bar>
           <tags-bar v-if="tagsBar === 'true' || tagsBar === true" />
         </div>
         <app-main></app-main>

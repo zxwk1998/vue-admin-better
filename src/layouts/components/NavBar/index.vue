@@ -23,28 +23,7 @@
             :icon="['fas', 'redo']"
             @click="refreshRoute"
           />
-          <el-dropdown @command="handleCommand">
-            <span class="el-dropdown-link">
-              <el-avatar
-                class="user-avatar"
-                :src="require('@/assets/user.gif')"
-              ></el-avatar>
-              <span class="user-name">{{ userName }}</span>
-              <i class="el-icon-arrow-down el-icon--right"></i>
-            </span>
-
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>
-                <byui-icon :icon="['fas', 'user']"></byui-icon>
-                个人中心
-              </el-dropdown-item>
-              <el-dropdown-item command="logout" divided>
-                <byui-icon :icon="['fas', 'sign-out-alt']"></byui-icon>
-                退出登录
-              </el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
-
+          <avatar></avatar>
           <!--  <byui-icon
             title="退出系统"
             :icon="['fas', 'sign-out-alt']"
@@ -60,6 +39,7 @@
 import { mapGetters } from "vuex";
 
 import {
+  Avatar,
   Breadcrumb,
   ThemeBar,
   FullScreenBar,
@@ -69,6 +49,7 @@ import {
 export default {
   name: "NavBar",
   components: {
+    Avatar,
     Breadcrumb,
     ErrorLog,
     FullScreenBar,
@@ -81,9 +62,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      avatar: "user/avatar",
       collapse: "settings/collapse",
-      userName: "user/userName",
       visitedRoutes: "tagsBar/visitedRoutes",
       device: "settings/device",
       routes: "permission/routes",
@@ -92,18 +71,6 @@ export default {
   methods: {
     handleCollapse() {
       this.$store.dispatch("settings/changeCollapse");
-    },
-    async logout() {
-      await this.$baseConfirm(
-        "您确定要退出" + this.$baseTitle + "吗?",
-        null,
-        () => {
-          const fullPath = this.$route.fullPath;
-          this.$store.dispatch("user/logout").then(() => {
-            this.$router.push(`/login?redirect=${fullPath}`);
-          });
-        }
-      );
     },
     refreshRoute() {
       const arr = this.visitedRoutes.filter((item, index) => {
@@ -125,13 +92,6 @@ export default {
           })
           .catch(() => {});
       });
-    },
-    handleCommand(command) {
-      switch (command) {
-        case "logout":
-          this.logout();
-          break;
-      }
     },
   },
 };
@@ -174,28 +134,28 @@ export default {
     justify-content: flex-end;
     height: 50px;
 
-    .user-avatar {
-      margin-right: 5px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .user-name {
-      position: relative;
-      top: -14px;
-      margin-right: 35px;
-      margin-left: 5px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .user-name + i {
-      position: absolute;
-      top: 16px;
-      right: 15px;
-    }
-
     ::v-deep {
+      .user-avatar {
+        margin-right: 5px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .user-name {
+        position: relative;
+        top: -14px;
+        margin-right: 35px;
+        margin-left: 5px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .user-name + i {
+        position: absolute;
+        top: 16px;
+        right: 15px;
+      }
+
       svg {
         width: 1em;
         height: 1em;
@@ -220,12 +180,5 @@ export default {
       }
     }
   }
-}
-</style>
-<style>
-.el-dropdown-menu--small .el-dropdown-menu__item {
-  padding: 0 15px;
-  font-size: 13px;
-  line-height: 36px !important;
 }
 </style>
