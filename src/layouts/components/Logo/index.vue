@@ -2,7 +2,11 @@
   <div :class="'logo-container-' + layout">
     <router-link to="/">
       <byui-remix-icon v-if="logo" class="logo" icon-class="vuejs-fill" />
-      <span class="title hidden-xs-only" :title="title">
+      <span
+        class="title"
+        :class="{ 'hidden-xs-only': layout === 'horizontal' }"
+        :title="title"
+      >
         {{ title }}
       </span>
     </router-link>
