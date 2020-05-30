@@ -55,7 +55,7 @@ export default [
         userName = "editor";
       }
       if ("test-accessToken" === accessToken) {
-        permissions = ["admin", "editor", "test"];
+        permissions = ["admin", "editor"];
         userName = "test";
       }
       return {

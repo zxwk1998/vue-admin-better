@@ -60,12 +60,34 @@ export const asyncRoutes = [
         meta: {
           title: "test",
           icon: "marker",
-          permissions: ["admin", "test"],
+          permissions: ["admin"],
         },
       },
     ],
   }, */
-
+  {
+    path: "/personnelManagement",
+    component: Layout,
+    redirect: "noRedirect",
+    name: "PersonnelManagement",
+    meta: { title: "人员", icon: "users-cog" },
+    children: [
+      {
+        path: "userManagement",
+        name: "UserManagement",
+        component: () =>
+          import("@/views/personnelManagement/userManagement/index"),
+        meta: { title: "用户管理", permissions: ["admin"] },
+      },
+      {
+        path: "roleManagement",
+        name: "RoleManagement",
+        component: () =>
+          import("@/views/personnelManagement/roleManagement/index"),
+        meta: { title: "角色管理", permissions: ["admin"] },
+      },
+    ],
+  },
   {
     path: "/byui",
     component: Layout,
@@ -156,7 +178,7 @@ export const asyncRoutes = [
         component: () => import("@/views/byui/permission/index"),
         meta: {
           title: "权限控制",
-          permissions: ["admin", "editor", "test"],
+          permissions: ["admin", "editor"],
         },
       },
       {
@@ -368,7 +390,7 @@ export const asyncRoutes = [
     redirect: "noRedirect",
     name: "Mall",
     meta: {
-      title: "商城模板",
+      title: "商城",
       icon: "shopping-cart",
       permissions: ["admin"],
     },
