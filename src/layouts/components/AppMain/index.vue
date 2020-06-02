@@ -1,7 +1,7 @@
 <template>
   <section class="app-main-container">
     <github-corner v-if="nodeEnv !== 'development'"></github-corner>
-    <byui-keel v-if="show" style="margin: 15px;">
+    <byui-keel v-if="show && skeleton" style="margin: 15px;">
       <byui-keel-heading :img="true" />
       <byui-keel-text :lines="7" />
       <byui-keel-heading :img="true" />
@@ -48,6 +48,7 @@ export default {
     ...mapGetters({
       cachedRoutes: "tagsBar/cachedRoutes",
       device: "settings/device",
+      skeleton: "settings/skeleton",
     }),
     key() {
       return this.$route.path;

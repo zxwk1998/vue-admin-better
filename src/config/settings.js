@@ -39,6 +39,8 @@ module.exports = {
   themeBar: true,
   //是否显示多标签页
   tagsBar: true,
+  //是否显示骨架屏
+  skeleton: false,
   //配后端数据的接收方式application/json;charset=UTF-8或者application/x-www-form-urlencoded;charset=UTF-8
   contentType: "application/json;charset=UTF-8",
   //消息框消失时间
