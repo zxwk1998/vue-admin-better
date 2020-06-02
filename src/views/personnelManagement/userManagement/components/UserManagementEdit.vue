@@ -75,17 +75,14 @@ export default {
       this.$refs["form"].resetFields();
       this.form = this.$options.data().form;
       this.dialogFormVisible = false;
-      this.$emit("fetchData");
     },
     save() {
       this.$refs["form"].validate((valid) => {
         if (valid) {
           doEdit(this.form).then((res) => {
             this.$baseMessage(res.msg, "success");
-            this.$refs["form"].resetFields();
-            this.dialogFormVisible = false;
             this.$emit("fetchData");
-            this.form = this.$options.data().form;
+            this.close();
           });
         } else {
           return false;
