@@ -144,6 +144,12 @@ export const asyncRoutes = [
         ],
       },
       {
+        path: "webSocket",
+        name: "WebSocket",
+        component: () => import("@/views/byui/webSocket/index"),
+        meta: { title: "webSocket", permissions: ["admin"] },
+      },
+      {
         path: "form",
         name: "Form",
         component: () => import("@/views/byui/form/index"),

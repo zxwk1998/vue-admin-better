@@ -105,6 +105,10 @@ const data = [
     content: "仿ant-design 添加雪花屏",
     timestamp: "2020-05-26",
   },
+  {
+    content: "添加人员管理模块",
+    timestamp: "2020-06-02",
+  },
 ];
 
 export default [
