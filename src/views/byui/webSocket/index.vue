@@ -7,7 +7,10 @@
         </el-alert>
         <br />
         <el-form ref="form" :model="form" :rules="rules" label-width="100px">
-          <el-form-item label="message" prop="message">
+          <el-form-item label="地址">
+            <el-input v-model="url" disabled></el-input>
+          </el-form-item>
+          <el-form-item label="消息" prop="message">
             <el-input v-model="form.message"></el-input>
           </el-form-item>
           <el-form-item>
@@ -34,9 +37,7 @@ export default {
       status: "",
       form: { message: null },
       rules: {
-        message: [
-          { required: true, message: "请输入message", trigger: "blur" },
-        ],
+        message: [{ required: true, message: "请输入消息", trigger: "blur" }],
       },
     };
   },
