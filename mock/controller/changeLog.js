@@ -109,6 +109,10 @@ const data = [
     content: "添加人员管理模块",
     timestamp: "2020-06-02",
   },
+  {
+    content: "github标星超过2000 感恩",
+    timestamp: "2020-06-03",
+  },
 ];
 
 export default [
