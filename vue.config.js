@@ -17,6 +17,7 @@ const date = require("dayjs")().format("YYYY_M_D");
 const time = require("dayjs")().format("YYYY-M-D HH:mm:ss");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const productionGzipExtensions = ["html", "js", "css", "svg"];
+process.env.VUE_APP_TITLE = title || "vue-admin-beautiful";
 process.env.VUE_APP_AUTHOR = author;
 process.env.VUE_APP_UPDATE_TIME = time;
 process.env.VUE_APP_VERSION = version;
@@ -32,8 +33,6 @@ function mockServer() {
     return "";
   }
 }
-
-const name = title || "vue-admin-beautiful";
 
 module.exports = {
   publicPath,
@@ -54,7 +53,6 @@ module.exports = {
   },
   configureWebpack(config) {
     return {
-      name: name,
       resolve: {
         alias: {
           "@": resolve("src"),

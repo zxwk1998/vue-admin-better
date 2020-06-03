@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title><%= VUE_APP_TITLE %></title>
     <meta name="keywords" content="vue admin,vue-admin,vue-admin-beautiful" />
     <meta
       name="description"
-      content="<%= webpackConfig.name %>基于vue-admin-beautiful构建,作者:chuzhixin 1204505056@qq.com"
+      content="<%= VUE_APP_TITLE %>基于vue-admin-beautiful构建,作者：<%= VUE_APP_AUTHOR %>"
     />
-    <meta name="author" content="chuzhixin 1204505056@qq.com" />
+    <meta name="author" content="<%= VUE_APP_AUTHOR %>" />
     <link rel="stylesheet" href="<%= BASE_URL %>static/loading.css" />
   </head>
   <body>
     <noscript>
-      非常抱歉鉴于安全考量,您无法查看<%= webpackConfig.name %>
+      非常抱歉鉴于安全考量,您无法查看<%= VUE_APP_TITLE %>
       源代码，该系统基于vue-admin-beautiful开发
     </noscript>
     <div id="vue-admin-beautiful">
@@ -24,7 +24,7 @@
         <div class="loading-wrp">
           <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
         </div>
-        <h1><%= webpackConfig.name %></h1>
+        <h1><%= VUE_APP_TITLE %></h1>
       </div>
     </div>
     <script>
