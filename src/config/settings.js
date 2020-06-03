@@ -17,7 +17,7 @@ module.exports = {
   devPort: "80",
   //版本号
   version: process.env.VUE_APP_VERSION,
-  //烦请保留package.json作者信息 如需去除请联系群主QQ 1204505056 需支付299元 恶意修改发生纠纷及出现任何问题 由修改人自行承担
+  //烦请保留package.json作者信息 保留版权可免费商用 如需去除并自定义为自己企业的版权请联系群主QQ 1204505056 需支付299元 恶意修改发生纠纷及出现任何问题 由修改人自行承担
   copyright: process.env.VUE_APP_AUTHOR,
   //不经过token校验的路由
   routesWhiteList: ["/login", "/404", "/401"],
@@ -40,7 +40,7 @@ module.exports = {
   //是否显示多标签页
   tagsBar: true,
   //是否显示骨架屏
-  skeleton: false,
+  skeleton: true,
   //配后端数据的接收方式application/json;charset=UTF-8或者application/x-www-form-urlencoded;charset=UTF-8
   contentType: "application/json;charset=UTF-8",
   //消息框消失时间
