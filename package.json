@@ -90,7 +90,7 @@
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
     "increase-memory-limit": "^1.0.7",
-    "lint-staged": "^10.2.7",
+    "lint-staged": "^10.2.8",
     "mockjs": "^1.1.0",
     "plop": "^2.7.1",
     "prettier": "^2.0.5",
