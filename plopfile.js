@@ -4,7 +4,7 @@ const componentGenerator = require("zx-templates/component/prompt");
 const mockGenerator = require("zx-templates/mock/prompt");
 const vuexGenerator = require("zx-templates/vuex/prompt");
 
-module.exports = function (plop) {
+module.exports = (plop) => {
   plop.setGenerator("view", viewGenerator);
   plop.setGenerator("curd", curdGenerator);
   plop.setGenerator("component", componentGenerator);
