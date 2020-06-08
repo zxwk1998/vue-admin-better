@@ -6,6 +6,7 @@ const state = {
 const getters = {
   cachedRoutes: (state) => state.cachedRoutes,
   visitedRoutes: (state) => state.visitedRoutes,
+  skeleton: (state) => state.skeleton,
 };
 const mutations = {
   addVisitedRoute(state, view) {

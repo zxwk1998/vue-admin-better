@@ -58,7 +58,7 @@ import {
   TopBar,
   BackToTop,
 } from "./components";
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 import { tokenName } from "@/config/settings";
 import Media from "./mixin/Media";
 
@@ -103,9 +103,9 @@ export default {
     });
   },
   methods: {
-    handleFoldSideBar() {
-      this.$store.dispatch("settings/foldSideBar");
-    },
+    ...mapActions({
+      handleFoldSideBar: "settings/foldSideBar",
+    }),
   },
 };
 </script>
