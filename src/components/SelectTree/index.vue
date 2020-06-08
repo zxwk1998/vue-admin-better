@@ -5,7 +5,7 @@
       :clearable="clearable"
       :collapse-tags="selectType == 'multiple'"
       :multiple="selectType == 'multiple'"
-      class="byui-tree-select"
+      class="vab-tree-select"
       value-key="id"
       @clear="clearHandle"
       @remove-tag="removeTag"
@@ -192,7 +192,7 @@ ul li > .el-tree .el-tree-node__content {
 }
 </style>
 <style lang="scss">
-/* .byui-tree-select{
+/* .vab-tree-select{
       .el-tag__close.el-icon-close{
         width:0;
         overflow:hidden;

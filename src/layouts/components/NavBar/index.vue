@@ -17,14 +17,14 @@
           <error-log />
           <full-screen-bar @refresh="refreshRoute"></full-screen-bar>
           <theme-bar></theme-bar>
-          <byui-icon
+          <vab-icon
             title="重载路由"
             :pulse="pulse"
             :icon="['fas', 'redo']"
             @click="refreshRoute"
           />
           <avatar></avatar>
-          <!--  <byui-icon
+          <!--  <vab-icon
             title="退出系统"
             :icon="['fas', 'sign-out-alt']"
             @click="logout"

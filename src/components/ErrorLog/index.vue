@@ -5,7 +5,7 @@
       @click.native="dialogTableVisible = true"
     >
       <el-button type="danger">
-        <byui-icon :icon="['fas', 'bug']" />
+        <vab-icon :icon="['fas', 'bug']" />
         {{ abbreviation }}异常捕获
       </el-button>
     </el-badge>
@@ -48,7 +48,7 @@
               target="_blank"
             >
               <el-button style="margin-left: 5px;" type="primary">
-                <byui-icon :icon="['fas', 'search']" />
+                <vab-icon :icon="['fas', 'search']" />
                 {{ item.title }}
               </el-button>
             </a>

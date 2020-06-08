@@ -1,14 +1,14 @@
 <template>
   <section class="app-main-container">
     <github-corner v-if="nodeEnv !== 'development'"></github-corner>
-    <byui-keel v-if="show && skeleton" style="margin: 15px;">
-      <byui-keel-heading :img="true" />
-      <byui-keel-text :lines="7" />
-      <byui-keel-heading :img="true" />
-      <byui-keel-text :lines="6" />
-      <byui-keel-heading :img="true" />
-      <byui-keel-text :lines="8" />
-    </byui-keel>
+    <vab-keel v-if="show && skeleton" style="margin: 15px;">
+      <vab-keel-heading :img="true" />
+      <vab-keel-text :lines="7" />
+      <vab-keel-heading :img="true" />
+      <vab-keel-text :lines="6" />
+      <vab-keel-heading :img="true" />
+      <vab-keel-text :lines="8" />
+    </vab-keel>
     <transition mode="out-in" name="fade-transform">
       <keep-alive :include="cachedRoutes" :max="10">
         <router-view :key="key" style="min-height: 80.6vh;" />
@@ -16,14 +16,14 @@
     </transition>
     <footer class="footer-copyright">
       Copyright
-      <byui-icon :icon="['fas', 'copyright']"></byui-icon>
+      <vab-icon :icon="['fas', 'copyright']"></vab-icon>
       {{ fullYear }} {{ copyright }}
     </footer>
   </section>
 </template>
 
 <script>
-import { ByuiKeel, ByuiKeelHeading, ByuiKeelText } from "@/plugins/byuiKeel";
+import { VabKeel, VabKeelHeading, VabKeelText } from "@/plugins/vabKeel";
 import { mapGetters } from "vuex";
 import GithubCorner from "@/components/GithubCorner";
 import { copyright } from "@/config/settings";
@@ -31,9 +31,9 @@ import { copyright } from "@/config/settings";
 export default {
   name: "AppMain",
   components: {
-    ByuiKeel,
-    ByuiKeelHeading,
-    ByuiKeelText,
+    VabKeel,
+    VabKeelHeading,
+    VabKeelText,
     GithubCorner,
   },
   data() {

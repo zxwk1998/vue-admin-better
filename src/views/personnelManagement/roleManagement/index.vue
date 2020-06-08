@@ -3,16 +3,16 @@
     <el-divider content-position="left">
       演示环境仅做基础功能展示，若想实现不同角色的真实菜单配置，需将settings.js路由加载模式改为all模式，由后端全面接管路由渲染与权限控制
     </el-divider>
-    <byui-query-form>
-      <byui-query-form-left-panel :span="12">
+    <vab-query-form>
+      <vab-query-form-left-panel :span="12">
         <el-button icon="el-icon-plus" type="primary" @click="handleEdit"
           >添加</el-button
         >
         <el-button icon="el-icon-delete" type="danger" @click="handleDelete"
           >批量删除
         </el-button>
-      </byui-query-form-left-panel>
-      <byui-query-form-right-panel :span="12">
+      </vab-query-form-left-panel>
+      <vab-query-form-right-panel :span="12">
         <el-form :inline="true" :model="queryForm" @submit.native.prevent>
           <el-form-item>
             <el-input
@@ -27,8 +27,8 @@
             </el-button>
           </el-form-item>
         </el-form>
-      </byui-query-form-right-panel>
-    </byui-query-form>
+      </vab-query-form-right-panel>
+    </vab-query-form>
 
     <el-table
       v-loading="listLoading"

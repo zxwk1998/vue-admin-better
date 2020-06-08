@@ -28,7 +28,7 @@
             class="login-form-admin"
           >
             <span class="svg-container svg-container-admin">
-              <byui-icon :icon="['fas', 'user']" />
+              <vab-icon :icon="['fas', 'user']" />
             </span>
             <el-input
               v-model.trim="loginForm.userName"
@@ -41,7 +41,7 @@
           </el-form-item>
           <el-form-item prop="password" class="login-form-pass">
             <span class="svg-container svg-container-pass"
-              ><byui-icon :icon="['fas', 'lock']"
+              ><vab-icon :icon="['fas', 'lock']"
             /></span>
             <el-input
               :key="passwordType"
@@ -57,10 +57,10 @@
               v-if="passwordType === 'password'"
               class="show-pwd"
               @click="showPwd"
-              ><byui-icon :icon="['fas', 'eye-slash']"
+              ><vab-icon :icon="['fas', 'eye-slash']"
             /></span>
             <span v-else class="show-pwd" @click="showPwd"
-              ><byui-icon :icon="['fas', 'eye']"
+              ><vab-icon :icon="['fas', 'eye']"
             /></span>
           </el-form-item>
           <el-button

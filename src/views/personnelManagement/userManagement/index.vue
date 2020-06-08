@@ -1,15 +1,15 @@
 <template>
   <div class="userManagement-container">
-    <byui-query-form>
-      <byui-query-form-left-panel :span="12">
+    <vab-query-form>
+      <vab-query-form-left-panel :span="12">
         <el-button icon="el-icon-plus" type="primary" @click="handleEdit"
           >添加</el-button
         >
         <el-button icon="el-icon-delete" type="danger" @click="handleDelete"
           >批量删除
         </el-button>
-      </byui-query-form-left-panel>
-      <byui-query-form-right-panel :span="12">
+      </vab-query-form-left-panel>
+      <vab-query-form-right-panel :span="12">
         <el-form :inline="true" :model="queryForm" @submit.native.prevent>
           <el-form-item>
             <el-input
@@ -24,8 +24,8 @@
             </el-button>
           </el-form-item>
         </el-form>
-      </byui-query-form-right-panel>
-    </byui-query-form>
+      </vab-query-form-right-panel>
+    </vab-query-form>
 
     <el-table
       v-loading="listLoading"

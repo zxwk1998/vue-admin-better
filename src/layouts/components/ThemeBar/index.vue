@@ -1,21 +1,21 @@
 <template>
   <span v-if="themeBar">
-    <byui-icon
+    <vab-icon
       title="主题配置"
       :icon="['fas', 'palette']"
       @click="handleChangeTheme"
     />
     <div class="theme-bar-setting">
       <div @click="handleChangeTheme">
-        <byui-icon :icon="['fas', 'palette']" />
+        <vab-icon :icon="['fas', 'palette']" />
         <p>主题配置</p>
       </div>
       <div @click="handleGetCode">
-        <byui-icon :icon="['fas', 'laptop-code']"></byui-icon>
+        <vab-icon :icon="['fas', 'laptop-code']"></vab-icon>
         <p>拷贝代码</p>
       </div>
       <!--<div @click="handleChangeQq">
-        <byui-remix-icon icon-class="qq-fill" />
+        <vab-remix-icon icon-class="qq-fill" />
         <p>学习交流</p>
       </div>-->
     </div>
@@ -225,7 +225,7 @@ export default {
       style.id = "BYUI-VUE-THEME";
       style.innerHTML = `
         .top-bar-container,
-        .top-bar-container .byui-main,
+        .top-bar-container .vab-main,
         .side-bar-container,
         .logo-container-vertical,
         .logo-container-horizontal,

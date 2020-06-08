@@ -1,7 +1,7 @@
 <template>
   <div class="goods-list-container">
-    <byui-query-form>
-      <byui-query-form-right-panel :span="24">
+    <vab-query-form>
+      <vab-query-form-right-panel :span="24">
         <el-form
           ref="form"
           :model="queryForm"
@@ -21,8 +21,8 @@
             </el-button>
           </el-form-item>
         </el-form>
-      </byui-query-form-right-panel>
-    </byui-query-form>
+      </vab-query-form-right-panel>
+    </vab-query-form>
     <el-row :gutter="15">
       <el-col
         v-for="(item, index) in list"

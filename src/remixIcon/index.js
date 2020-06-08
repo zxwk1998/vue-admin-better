@@ -1,7 +1,7 @@
 import Vue from "vue";
 import RemixIcon from "@/components/RemixIcon";
 
-Vue.component("byui-remix-icon", RemixIcon);
+Vue.component("vab-remix-icon", RemixIcon);
 const req = require.context("./svg", false, /\.svg$/),
   requireAll = (requireContext) => {
     /*let a = requireContext.keys().map(requireContext);

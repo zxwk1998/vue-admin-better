@@ -11,11 +11,11 @@
 
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item>
-        <byui-icon :icon="['fas', 'user']"></byui-icon>
+        <vab-icon :icon="['fas', 'user']"></vab-icon>
         个人中心
       </el-dropdown-item>
       <el-dropdown-item command="logout" divided>
-        <byui-icon :icon="['fas', 'sign-out-alt']"></byui-icon>
+        <vab-icon :icon="['fas', 'sign-out-alt']"></vab-icon>
         退出登录
       </el-dropdown-item>
     </el-dropdown-menu>

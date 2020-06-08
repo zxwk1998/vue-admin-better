@@ -68,7 +68,7 @@ module.exports = {
   //vertical布局时是否只保持一个子菜单的展开
   uniqueOpened: true,
   //vertical布局时默认展开的菜单path，使用逗号隔开建议只展开一个
-  defaultOopeneds: ["/byui"],
+  defaultOopeneds: ["/vab"],
   //需要加loading层的请求，防止重复提交
   debounce: ["doEdit"],
 };

@@ -1,7 +1,7 @@
 <template>
   <div :class="'logo-container-' + layout">
     <router-link to="/">
-      <byui-remix-icon v-if="logo" class="logo" icon-class="vuejs-fill" />
+      <vab-remix-icon v-if="logo" class="logo" icon-class="vuejs-fill" />
       <span
         class="title"
         :class="{ 'hidden-xs-only': layout === 'horizontal' }"

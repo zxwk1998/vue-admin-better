@@ -26,7 +26,7 @@
 
 ### 全网首家实现 element-ui 横向纵向布局无缝切换，多标签页关闭左侧关闭右侧关闭其他（布局切换效果仿 ant-design-pro，tagsBar 仿谷歌浏览器右键菜单）
 
-<img src="http://mpfhrd48.sanxing.uz7.cn/byui-bookmarks/GIF.gif?time=20200603" />
+<img src="http://mpfhrd48.sanxing.uz7.cn/vab-bookmarks/GIF.gif?time=20200603" />
 
 自 vue-admin-beautiful 开源以来，很感谢大家的支持，在短时间内 github 收获了![social](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=social)个 star，我欣喜万分，我真的把 vue-admin-beautiful 当成了自己的孩子，在此声明 vue-admin-beautiful 除了使用 element-ui 做为 ui 库以外未依赖任何第三方开源 admin 框架，也不是在某某 admin 上进行的二次开发，为了让大家满意经常熬夜到凌晨，看着一个个组件的编写完成，一个个组件提交到 npm 仓库，看到大家的评价，我真的超级高兴，但是事情总不会那么尽如人意，也许是开源触动了某些人的利益，演示网站每日会遭受 2000 余次恶意攻击以及重定向跳转，弄得我实在心力交瘁，但我想对你说你阻止不了我，你阻止不了这个框架的成长，谢谢你让我知道了人心险恶，你攻击或者不攻击，它都在那里[github 开源地址](https://github.com/chuzhixin/vue-admin-beautiful)
 
@@ -38,7 +38,7 @@
 
 不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 群里的任何问题我都会一一解答 感谢您的信任 群内提供 vue-admin-beautiful-template 基础版本 群内提供详细的基础文档 适合框架快速入门
 
-![img](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
+![img](https://chu1204505056.gitee.io/vab-bookmarks/img/ewm.png)
 
 ## 安装
 
@@ -85,7 +85,7 @@ cnpm run serve
 ```js
 module.exports = {
   title: "vue-admin-beautiful", //标题
-  abbreviation: "byui", //简写
+  abbreviation: "vab", //简写
   devPort: "80", //开发环境端口号
   version: "V1.0", //版本号
   copyright: process.env.VUE_APP_AUTHOR,
@@ -239,17 +239,17 @@ authentication: "all";
       ]
     },
     {
-      "path": "/byui",
+      "path": "/vab",
       "component": "Layout",
       "redirect": "noRedirect",
-      "name": "Byui",
+      "name": "Vab",
       "meta": { "title": "组件", "icon": "cloud" },
       "alwaysShow": true,
       "children": [
         {
           "path": "permission",
           "name": "Permission",
-          "component": "byui/permission/index",
+          "component": "vab/permission/index",
           "meta": {
             "title": "权限控制",
             "permissions": ["admin", "editor", "test"]
@@ -257,21 +257,21 @@ authentication: "all";
         },
         {
           "path": "menu1",
-          "component": "byui/nested/menu1/index",
+          "component": "vab/nested/menu1/index",
           "name": "Menu1",
           "meta": { "title": "嵌套路由 1", "permissions": ["admin"] },
           "alwaysShow": true,
           "children": [
             {
               "path": "menu1-1",
-              "component": "byui/nested/menu1/menu1-1/index",
+              "component": "vab/nested/menu1/menu1-1/index",
               "name": "Menu1-1",
               "meta": { "title": "嵌套路由 1-1" },
               "alwaysShow": true,
               "children": [
                 {
                   "path": "menu1-1-1-1",
-                  "component": "byui/nested/menu1/menu1-1/menu1-1-1/index",
+                  "component": "vab/nested/menu1/menu1-1/menu1-1-1/index",
                   "name": "Menu1-1-1",
                   "meta": { "title": "嵌套路由 1-1-1" }
                 }
@@ -282,43 +282,43 @@ authentication: "all";
         {
           "path": "table",
           "name": "Table",
-          "component": "byui/table/index",
+          "component": "vab/table/index",
           "meta": { "title": "表格", "permissions": ["admin", "editor"] }
         },
         {
           "path": "form",
           "name": "Form",
-          "component": "byui/form/index",
+          "component": "vab/form/index",
           "meta": { "title": "表单", "permissions": ["admin"] }
         },
         {
           "path": "element",
           "name": "Element",
-          "component": "byui/element/index",
+          "component": "vab/element/index",
           "meta": { "title": "常用组件", "permissions": ["admin"] }
         },
         {
           "path": "tree",
           "name": "Tree",
-          "component": "byui/tree/index",
+          "component": "vab/tree/index",
           "meta": { "title": "树", "permissions": ["admin"] }
         },
         {
           "path": "card",
           "name": "Card",
-          "component": "byui/card/index",
+          "component": "vab/card/index",
           "meta": { "title": "卡片", "permissions": ["admin"] }
         },
         {
           "path": "magnifier",
           "name": "Magnifier",
-          "component": "byui/magnifier/index",
+          "component": "vab/magnifier/index",
           "meta": { "title": "放大镜", "permissions": ["admin"] }
         },
         {
           "path": "waterfall",
           "name": "Waterfall",
-          "component": "byui/waterfall/index",
+          "component": "vab/waterfall/index",
           "meta": {
             "title": "瀑布屏",
             "noKeepAlive": true,
@@ -328,19 +328,19 @@ authentication: "all";
         {
           "path": "echarts",
           "name": "Echarts",
-          "component": "byui/echarts/index",
+          "component": "vab/echarts/index",
           "meta": { "title": "图表", "permissions": ["admin"] }
         },
         {
           "path": "loading",
           "name": "Loading",
-          "component": "byui/loading/index",
+          "component": "vab/loading/index",
           "meta": { "title": "loading", "permissions": ["admin"] }
         },
         {
           "path": "player",
           "name": "Player",
-          "component": "byui/player/index",
+          "component": "vab/player/index",
           "meta": {
             "title": "视频播放器",
             "noKeepAlive": true,
@@ -350,67 +350,67 @@ authentication: "all";
         {
           "path": "editor",
           "name": "Editor",
-          "component": "byui/editor/index",
+          "component": "vab/editor/index",
           "meta": { "title": "富文本编辑器", "permissions": ["admin"] }
         },
         {
           "path": "qrCode",
           "name": "QrCode",
-          "component": "byui/qrCode/index",
+          "component": "vab/qrCode/index",
           "meta": { "title": "二维码", "permissions": ["admin"] }
         },
         {
           "path": "backToTop",
           "name": "BackToTop",
-          "component": "byui/backToTop/index",
+          "component": "vab/backToTop/index",
           "meta": { "title": "返回顶部", "permissions": ["admin"] }
         },
         {
           "path": "lodash",
           "name": "Lodash",
-          "component": "byui/lodash/index",
+          "component": "vab/lodash/index",
           "meta": { "title": "lodash", "permissions": ["admin"] }
         },
         {
           "path": "imgComparison",
           "name": "ImgComparison",
-          "component": "byui/imgComparison/index",
+          "component": "vab/imgComparison/index",
           "meta": { "title": "图像拖拽比对", "permissions": ["admin"] }
         },
         {
           "path": "codeGenerator",
           "name": "CodeGenerator",
-          "component": "byui/codeGenerator/index",
+          "component": "vab/codeGenerator/index",
           "meta": { "title": "代码生成机", "permissions": ["admin"] }
         },
         {
           "path": "markdown",
           "name": "Markdown",
-          "component": "byui/markdown/index",
+          "component": "vab/markdown/index",
           "meta": { "title": "markdown阅读器", "permissions": ["admin"] }
         },
         {
           "path": "smallComponents",
           "name": "SmallComponents",
-          "component": "byui/smallComponents/index",
+          "component": "vab/smallComponents/index",
           "meta": { "title": "小组件", "permissions": ["admin"] }
         },
         {
           "path": "icon",
           "name": "Icon",
-          "component": "byui/icon/index",
+          "component": "vab/icon/index",
           "meta": { "title": "常规图标", "permissions": ["admin"] }
         },
         {
           "path": "colorfulIcon",
           "name": "ColorfulIcon",
-          "component": "byui/icon/colorfulIcon",
+          "component": "vab/icon/colorfulIcon",
           "meta": { "title": "多彩图标", "permissions": ["admin"] }
         },
         {
           "path": "remixIcon",
           "name": "RemixIcon",
-          "component": "byui/icon/remixIcon",
+          "component": "vab/icon/remixIcon",
           "meta": {
             "title": "小清新图标(图标过多打开会慢)",
             "permissions": ["admin"]
@@ -419,31 +419,31 @@ authentication: "all";
         {
           "path": "upload",
           "name": "Upload",
-          "component": "byui/upload/index",
+          "component": "vab/upload/index",
           "meta": { "title": "上传", "permissions": ["admin"] }
         },
         {
           "path": "sticky",
           "name": "Sticky",
-          "component": "byui/sticky/index",
+          "component": "vab/sticky/index",
           "meta": { "title": "sticky吸附", "permissions": ["admin"] }
         },
         {
           "path": "log",
           "name": "Log",
-          "component": "byui/errorLog/index",
+          "component": "vab/errorLog/index",
           "meta": { "title": "错误日志模拟", "permissions": ["admin"] }
         },
         {
           "path": "news",
           "name": "News",
-          "component": "byui/news/index",
+          "component": "vab/news/index",
           "meta": { "title": "新闻（可能存在跨域）", "permissions": ["admin"] }
         },
         {
           "path": "more",
           "name": "More",
-          "component": "byui/more/index",
+          "component": "vab/more/index",
           "meta": { "title": "更多组件", "permissions": ["admin"] }
         }
       ]
@@ -510,10 +510,10 @@ export default {
 
 群内问题优先回答 群主每周在线授课 提供脚手架搭建在线指导 组件封装方法指导 NPM 发包开发组件指导（需付费￥ 88，帮助你的同时也帮了群主，感谢信任）群内提供专属 VIP 文档 能快速掌握脚手架搭建 开发工具配置的技巧（其实 50%的重复工作都可以靠工具来完成） 如有需要加作者 QQ 1204505056（加作者的前提是您愿意尊重知识，为人谦逊，不糟蹋开原作者的善良，如果你习惯了白嫖，那我尊重不同的声音，如果你觉得贵，请忽略。。。）
 
-![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm_vip.png)
+![image](https://chu1204505056.gitee.io/vab-bookmarks/img/ewm_vip.png)
 
 ## 捐赠
 
-![img](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
+![img](https://chu1204505056.gitee.io/vab-bookmarks/img/donation.png)
 
 #
