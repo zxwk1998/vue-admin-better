@@ -235,20 +235,6 @@ html {
 
     /* tag结束 */
 
-    /* 按钮开始 */
-    .el-button--small {
-      padding: 8px 20px;
-      font-size: $base-font-size-default;
-      border-radius: $base-border-radius;
-
-      button:hover::before {
-        transform: scaleX(1);
-        transform-origin: center;
-      }
-    }
-
-    /* 按钮结束 */
-
     /* 弹窗开始 */
 
     .el-dialog,
@@ -289,12 +275,6 @@ html {
 
     .el-submenu__title i {
       color: $base-color-white;
-    }
-
-    .el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
-      color: $base-color-white;
-      background-color: $base-color-blue;
-      outline: 0;
     }
 
     /* 卡片开始 */
