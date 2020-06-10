@@ -30,6 +30,16 @@
 
 自 vue-admin-beautiful 开源以来，很感谢大家的支持，在短时间内 github 收获了![social](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=social)个 star，我欣喜万分，我真的把 vue-admin-beautiful 当成了自己的孩子，在此声明 vue-admin-beautiful 除了使用 element-ui 做为 ui 库以外未依赖任何第三方开源 admin 框架，也不是在某某 admin 上进行的二次开发，为了让大家满意经常熬夜到凌晨，看着一个个组件的编写完成，一个个组件提交到 npm 仓库，看到大家的评价，我真的超级高兴，但是事情总不会那么尽如人意，也许是开源触动了某些人的利益，演示网站每日会遭受 2000 余次恶意攻击以及重定向跳转，弄得我实在心力交瘁，但我想对你说你阻止不了我，你阻止不了这个框架的成长，谢谢你让我知道了人心险恶，你攻击或者不攻击，它都在那里[github 开源地址](https://github.com/chuzhixin/vue-admin-beautiful)
 
+## vue-admin-beautiful 前端讨论群-VIP 805808910
+
+群内问题优先回答 群主每周在线授课 提供脚手架搭建在线指导 组件封装方法指导 NPM 发包开发组件指导（需付费￥ 88，帮助你的同时也帮了群主，感谢信任）群内提供专属 VIP 文档 能快速掌握脚手架搭建 开发工具配置的技巧（其实 50%的重复工作都可以靠工具来完成） 如有需要加作者 QQ 1204505056（加作者的前提是您愿意尊重知识，为人谦逊，不糟蹋开原作者的善良，如果你习惯了白嫖，那我尊重不同的声音，如果你觉得贵，请忽略。。。）
+
+![image](https://chu1204505056.gitee.io/vab-bookmarks/img/ewm_vip.png)
+
+## 捐赠
+
+![img](https://chu1204505056.gitee.io/vab-bookmarks/img/donation.png)
+
 ## 感谢
 
 感谢捐赠者 每当看到捐赠入账的时候 都非常的激动 但我不知道你们的名字 谢谢你们的支持 有任何问题您都可以在群里右键添加群主好友，我一定认真回复
@@ -39,6 +49,20 @@
 不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 群里的任何问题我都会一一解答 感谢您的信任 群内提供 vue-admin-beautiful-template 基础版本 群内提供详细的基础文档 适合框架快速入门
 
 ![img](https://chu1204505056.gitee.io/vab-bookmarks/img/ewm.png)
+
+## vue-admin-beautiful 前端讨论群-VIP 805808910
+
+群内问题优先回答 群主每周在线授课 提供脚手架搭建在线指导 组件封装方法指导 NPM 发包开发组件指导（需付费 100，帮助你的同时也帮了群主，感谢信任）群内提供专属 VIP 文档 能快速掌握脚手架搭建 开发工具配置的技巧（其实 50%的重复工作都可以靠工具来完成） 如有需要加作者 QQ 1204505056（加作者的前提是您愿意尊重知识，为人谦逊，不糟蹋开原作者的善良，如果你习惯了白嫖，那我尊重不同的声音，如果你觉得贵，请忽略。。。）
+
+![image](https://chu1204505056.gitee.io/vab-bookmarks/img/ewm_vip.png)
+
+## 捐赠
+
+![img](https://chu1204505056.gitee.io/vab-bookmarks/img/donation.png)
+
+## 关于商用
+
+保留开发者控制台打印的框架及作者信息即可免费商用，如需自定义为自己的版权信息，需联系 QQ1204505056 支付 299
 
 ## 安装
 
@@ -505,15 +529,3 @@ export default {
 </script>
 <style lang="scss" scoped></style>
 ```
-
-## vue-admin-beautiful 前端讨论群-VIP 805808910
-
-群内问题优先回答 群主每周在线授课 提供脚手架搭建在线指导 组件封装方法指导 NPM 发包开发组件指导（需付费￥ 88，帮助你的同时也帮了群主，感谢信任）群内提供专属 VIP 文档 能快速掌握脚手架搭建 开发工具配置的技巧（其实 50%的重复工作都可以靠工具来完成） 如有需要加作者 QQ 1204505056（加作者的前提是您愿意尊重知识，为人谦逊，不糟蹋开原作者的善良，如果你习惯了白嫖，那我尊重不同的声音，如果你觉得贵，请忽略。。。）
-
-![image](https://chu1204505056.gitee.io/vab-bookmarks/img/ewm_vip.png)
-
-## 捐赠
-
-![img](https://chu1204505056.gitee.io/vab-bookmarks/img/donation.png)
-
-#
