@@ -49,6 +49,8 @@
     "jsencrypt": "^3.0.0-rc.1",
     "jsonlint": "^1.6.3",
     "lodash": "^4.17.15",
+    "maptalks": "^0.47.2",
+    "mapv": "^2.0.56",
     "nprogress": "^0.2.0",
     "qs": "^6.9.4",
     "quill": "^1.3.7",

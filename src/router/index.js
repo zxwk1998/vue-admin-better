@@ -144,6 +144,12 @@ export const asyncRoutes = [
         ],
       },
       {
+        path: "map",
+        name: "Map",
+        component: () => import("@/views/vab/map/index"),
+        meta: { title: "地图", permissions: ["admin"] },
+      },
+      {
         path: "webSocket",
         name: "WebSocket",
         component: () => import("@/views/vab/webSocket/index"),
