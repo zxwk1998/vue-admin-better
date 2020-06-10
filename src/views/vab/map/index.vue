@@ -31,7 +31,6 @@ export default {
           let maxLength = 0;
           for (let i = 0; i < rs.length; i++) {
             let item = rs[i].split(",");
-            debugger;
             let coordinates = [];
             if (item.length > maxLength) {
               maxLength = item.length;
