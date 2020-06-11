@@ -47,12 +47,15 @@ function hasPermission(permissions, route) {
  * @returns {[]}
  */
 export function filterAsyncRoutes(routes, permissions) {
-  return routes.filter((route) => {
-    if (hasPermission(permissions, route)) {
-      if (route.children) {
-        route.children = filterAsyncRoutes(route.children, permissions);
+  const finallyRoutes = [];
+  routes.forEach((route) => {
+    const item = { ...route };
+    if (hasPermission(permissions, item)) {
+      if (item.children) {
+        item.children = filterAsyncRoutes(item.children, permissions);
       }
-      return route;
+      finallyRoutes.push(item);
     }
   });
+  return finallyRoutes;
 }
