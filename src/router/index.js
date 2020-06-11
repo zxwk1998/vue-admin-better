@@ -65,21 +65,21 @@ export const asyncRoutes = [
     component: Layout,
     redirect: "noRedirect",
     name: "PersonnelManagement",
-    meta: { title: "人员", icon: "users-cog" },
+    meta: { title: "人员", icon: "users-cog", permissions: ["admin"] },
     children: [
       {
         path: "userManagement",
         name: "UserManagement",
         component: () =>
           import("@/views/personnelManagement/userManagement/index"),
-        meta: { title: "用户管理", permissions: ["admin"] },
+        meta: { title: "用户管理" },
       },
       {
         path: "roleManagement",
         name: "RoleManagement",
         component: () =>
           import("@/views/personnelManagement/roleManagement/index"),
-        meta: { title: "角色管理", permissions: ["admin"] },
+        meta: { title: "角色管理" },
       },
     ],
   },
@@ -88,6 +88,7 @@ export const asyncRoutes = [
     component: Layout,
     redirect: "noRedirect",
     name: "Vab",
+    alwaysShow: true,
     meta: { title: "组件", icon: "cloud" },
     children: [
       {
@@ -127,19 +128,20 @@ export const asyncRoutes = [
         name: "Table",
         meta: {
           title: "表格",
+          permissions: ["admin"],
         },
         children: [
           {
             path: "comprehensiveTable",
             name: "ComprehensiveTable",
             component: () => import("@/views/vab/table/index"),
-            meta: { title: "综合表格", permissions: ["admin"] },
+            meta: { title: "综合表格" },
           },
           {
             path: "inlineEditTable",
             name: "InlineEditTable",
             component: () => import("@/views/vab/table/inlineEditTable"),
-            meta: { title: "行内编辑", permissions: ["admin"] },
+            meta: { title: "行内编辑" },
           },
         ],
       },

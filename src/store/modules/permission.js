@@ -1,6 +1,6 @@
 import { asyncRoutes, constantRoutes } from "@/router";
 import { getRouterList } from "@/api/router";
-import { filterAsyncRoutes, filterRoutes } from "@/utils/handleRoutes";
+import { filterAsyncRoutes, filterAllRoutes } from "@/utils/handleRoutes";
 
 const state = { routes: [], partialRoutes: [] };
 const getters = {
@@ -32,7 +32,7 @@ const actions = {
   async setAllRoutes({ commit }) {
     let { data } = await getRouterList();
     data.push({ path: "*", redirect: "/404", hidden: true });
-    let accessRoutes = filterRoutes(data);
+    let accessRoutes = filterAllRoutes(data);
     commit("setAllRoutes", accessRoutes);
     return accessRoutes;
   },

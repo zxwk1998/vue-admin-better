@@ -1,9 +1,9 @@
 /**
- * @description 渲染路由
+ * @description all模式渲染后端返回路由
  * @param constantRoutes
  * @returns {*}
  */
-export function filterRoutes(constantRoutes) {
+export function filterAllRoutes(constantRoutes) {
   return constantRoutes.filter((route) => {
     if (route.component) {
       if (route.component === "Layout") {
@@ -17,7 +17,7 @@ export function filterRoutes(constantRoutes) {
       }
     }
     if (route.children && route.children.length) {
-      route.children = filterRoutes(route.children);
+      route.children = filterAllRoutes(route.children);
     }
     if (route.children && route.children.length === 0) {
       delete route.children;
@@ -33,16 +33,20 @@ function hasPermission(permissions, route) {
     return true;
   }
 }
+
+/**
+ * @description intelligence模式根据permissions数组拦截路由
+ * @param routes
+ * @param permissions
+ * @returns {[]}
+ */
 export function filterAsyncRoutes(routes, permissions) {
-  const res = [];
-  routes.forEach((route) => {
-    const tmp = { ...route };
-    if (hasPermission(permissions, tmp)) {
-      if (tmp.children) {
-        tmp.children = filterAsyncRoutes(tmp.children, permissions);
+  return routes.filter((route) => {
+    if (hasPermission(permissions, route)) {
+      if (route.children) {
+        route.children = filterAsyncRoutes(route.children, permissions);
       }
-      res.push(tmp);
+      return route;
     }
   });
-  return res;
 }
