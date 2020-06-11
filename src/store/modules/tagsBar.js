@@ -126,115 +126,85 @@ const actions = {
   addCachedRoutes({ commit }, view) {
     commit("addCachedRoutes", view);
   },
-  delRoute({ dispatch, state }, view) {
-    return new Promise(async (resolve) => {
-      await dispatch("delVisitedRoute", view);
-      await dispatch("delCachedRoutes", view);
-      resolve({
-        visitedRoutes: [...state.visitedRoutes],
-        cachedRoutes: [...state.cachedRoutes],
-      });
-    });
+  async delRoute({ dispatch, state }, view) {
+    await dispatch("delVisitedRoute", view);
+    await dispatch("delCachedRoutes", view);
+    return {
+      visitedRoutes: [...state.visitedRoutes],
+      cachedRoutes: [...state.cachedRoutes],
+    };
   },
   delVisitedRoute({ commit, state }, view) {
-    return new Promise((resolve) => {
-      commit("delVisitedRoute", view);
-      resolve([...state.visitedRoutes]);
-    });
+    commit("delVisitedRoute", view);
+    return [...state.visitedRoutes];
   },
   delCachedRoutes({ commit, state }, view) {
-    return new Promise((resolve) => {
-      commit("delCachedRoutes", view);
-      resolve([...state.cachedRoutes]);
-    });
+    commit("delCachedRoutes", view);
+    return [...state.cachedRoutes];
   },
-  delOthersRoutes({ dispatch, state }, view) {
-    return new Promise(async (resolve) => {
-      await dispatch("delOthersVisitedRoute", view);
-      await dispatch("delOthersCachedRoutes", view);
-      resolve({
-        visitedRoutes: [...state.visitedRoutes],
-        cachedRoutes: [...state.cachedRoutes],
-      });
-    });
+  async delOthersRoutes({ dispatch, state }, view) {
+    await dispatch("delOthersVisitedRoute", view);
+    await dispatch("delOthersCachedRoutes", view);
+    return {
+      visitedRoutes: [...state.visitedRoutes],
+      cachedRoutes: [...state.cachedRoutes],
+    };
   },
-  delLeftRoutes({ dispatch, state }, view) {
-    return new Promise(async (resolve) => {
-      await dispatch("delLeftVisitedRoute", view);
-      await dispatch("delLeftCachedRoutes", view);
-      resolve({
-        visitedRoutes: [...state.visitedRoutes],
-        cachedRoutes: [...state.cachedRoutes],
-      });
-    });
+  async delLeftRoutes({ dispatch, state }, view) {
+    await dispatch("delLeftVisitedRoute", view);
+    await dispatch("delLeftCachedRoutes", view);
+    return {
+      visitedRoutes: [...state.visitedRoutes],
+      cachedRoutes: [...state.cachedRoutes],
+    };
   },
-  delRightRoutes({ dispatch, state }, view) {
-    return new Promise(async (resolve) => {
-      await dispatch("delRightVisitedRoute", view);
-      await dispatch("delRightCachedRoutes", view);
-      resolve({
-        visitedRoutes: [...state.visitedRoutes],
-        cachedRoutes: [...state.cachedRoutes],
-      });
-    });
+  async delRightRoutes({ dispatch, state }, view) {
+    await dispatch("delRightVisitedRoute", view);
+    await dispatch("delRightCachedRoutes", view);
+    return {
+      visitedRoutes: [...state.visitedRoutes],
+      cachedRoutes: [...state.cachedRoutes],
+    };
   },
   delOthersVisitedRoute({ commit, state }, view) {
-    return new Promise((resolve) => {
-      commit("delOthersVisitedRoute", view);
-      resolve([...state.visitedRoutes]);
-    });
+    commit("delOthersVisitedRoute", view);
+    return [...state.visitedRoutes];
   },
   delOthersCachedRoutes({ commit, state }, view) {
-    return new Promise((resolve) => {
-      commit("delOthersCachedRoutes", view);
-      resolve([...state.cachedRoutes]);
-    });
+    commit("delOthersCachedRoutes", view);
+    return [...state.cachedRoutes];
   },
   delLeftVisitedRoute({ commit, state }, view) {
-    return new Promise((resolve) => {
-      commit("delLeftVisitedRoute", view);
-      resolve([...state.visitedRoutes]);
-    });
+    commit("delLeftVisitedRoute", view);
+    return [...state.visitedRoutes];
   },
   delLeftCachedRoutes({ commit, state }, view) {
-    return new Promise((resolve) => {
-      commit("delLeftCachedRoutes", view);
-      resolve([...state.cachedRoutes]);
-    });
+    commit("delLeftCachedRoutes", view);
+    return [...state.cachedRoutes];
   },
   delRightVisitedRoute({ commit, state }, view) {
-    return new Promise((resolve) => {
-      commit("delRightVisitedRoute", view);
-      resolve([...state.visitedRoutes]);
-    });
+    commit("delRightVisitedRoute", view);
+    return [...state.visitedRoutes];
   },
   delRightCachedRoutes({ commit, state }, view) {
-    return new Promise((resolve) => {
-      commit("delRightCachedRoutes", view);
-      resolve([...state.cachedRoutes]);
-    });
+    commit("delRightCachedRoutes", view);
+    return [...state.cachedRoutes];
   },
-  delAllRoutes({ dispatch, state }, view) {
-    return new Promise(async (resolve) => {
-      await dispatch("delAllVisitedRoutes", view);
-      await dispatch("delAllCachedRoutess", view);
-      resolve({
-        visitedRoutes: [...state.visitedRoutes],
-        cachedRoutes: [...state.cachedRoutes],
-      });
-    });
+  async delAllRoutes({ dispatch, state }, view) {
+    await dispatch("delAllVisitedRoutes", view);
+    await dispatch("delAllCachedRoutess", view);
+    return {
+      visitedRoutes: [...state.visitedRoutes],
+      cachedRoutes: [...state.cachedRoutes],
+    };
   },
   delAllVisitedRoutes({ commit, state }) {
-    return new Promise((resolve) => {
-      commit("delAllVisitedRoutes");
-      resolve([...state.visitedRoutes]);
-    });
+    commit("delAllVisitedRoutes");
+    return [...state.visitedRoutes];
   },
   delAllCachedRoutess({ commit, state }) {
-    return new Promise((resolve) => {
-      commit("delAllCachedRoutess");
-      resolve([...state.cachedRoutes]);
-    });
+    commit("delAllCachedRoutess");
+    return [...state.cachedRoutes];
   },
   updateVisitedRoute({ commit }, view) {
     commit("updateVisitedRoute", view);
