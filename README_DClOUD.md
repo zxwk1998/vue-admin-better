@@ -9,7 +9,7 @@
 ### 全网首家实现 element-ui 横向纵向布局无缝切换，多标签页关闭左侧关闭右侧关闭其他（布局切换效果仿 ant-design-pro，tagsBar 仿谷歌浏览器右键菜单）
 
 以下演示效果图，不代表最终效果，github 每日都会更新新功能
-![vue-admin-beautiful](http://mpfhrd48.sanxing.uz7.cn/vab-bookmarks/GIF.gif)
+![vue-admin-beautiful](http://mpfhrd48.sanxing.uz7.cn/byui-bookmarks/GIF.gif)
 
 ## 演示地址
 
