@@ -18,7 +18,6 @@ export default {
   mounted() {
     this.$nextTick(() => {
       const map = this.$baseMap();
-      console.log("map: ", map);
 
       $.get(
         "https://cdn.jsdelivr.net/npm/mapv@2.0.12/examples/data/od-xierqi.txt",
@@ -27,7 +26,6 @@ export default {
           let timeData = [];
 
           rs = rs.split("\n");
-          console.log(rs.length);
           let maxLength = 0;
           for (let i = 0; i < rs.length; i++) {
             let item = rs[i].split(",");
