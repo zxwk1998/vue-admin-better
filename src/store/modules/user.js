@@ -77,7 +77,7 @@ const actions = {
       return false;
     }
   },
-  async logout({ commit, dispatch }) {
+  async logout({ dispatch }) {
     await logout(state.accessToken);
     await dispatch("tagsBar/delAllRoutes", null, { root: true });
     await dispatch("resetAccessToken");
