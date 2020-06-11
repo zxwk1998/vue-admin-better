@@ -6,7 +6,7 @@ import {
   setAccessToken,
 } from "@/utils/accessToken";
 import { resetRouter } from "@/router";
-import { tokenName, title } from "@/config/settings";
+import { title, tokenName } from "@/config/settings";
 
 const state = {
   accessToken: getAccessToken(),
@@ -23,6 +23,7 @@ const getters = {
 const mutations = {
   setAccessToken(state, accessToken) {
     state.accessToken = accessToken;
+    setAccessToken(accessToken);
   },
   setUserName(state, userName) {
     state.userName = userName;
@@ -40,7 +41,6 @@ const actions = {
     const accessToken = data[tokenName];
     if (accessToken) {
       commit("setAccessToken", accessToken);
-      setAccessToken(accessToken);
       const hour = new Date().getHours();
       const thisTime =
         hour < 8
@@ -80,12 +80,11 @@ const actions = {
   async logout({ commit, dispatch }) {
     await logout(state.accessToken);
     await dispatch("tagsBar/delAllRoutes", null, { root: true });
-    commit("setAccessToken", "");
-    commit("setPermissions", []);
-    removeAccessToken();
-    resetRouter();
+    await dispatch("resetAccessToken");
+    await resetRouter();
   },
   resetAccessToken({ commit }) {
+    commit("setPermissions", []);
     commit("setAccessToken", "");
     removeAccessToken();
   },

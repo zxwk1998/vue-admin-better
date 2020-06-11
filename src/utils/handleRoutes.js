@@ -26,6 +26,12 @@ export function filterAllRoutes(constantRoutes) {
   });
 }
 
+/**
+ * @description 判断当前路由是否包含权限
+ * @param permissions
+ * @param route
+ * @returns {boolean|*}
+ */
 function hasPermission(permissions, route) {
   if (route.meta && route.meta.permissions) {
     return permissions.some((role) => route.meta.permissions.includes(role));
