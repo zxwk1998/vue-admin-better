@@ -8,7 +8,6 @@ import "@/remixIcon";
 import "@/colorfulIcon";
 import "@/config/permission";
 import "@/utils/errorLog";
-import "./f12";
 import drag from "@/directive/drag";
 import permission from "@/directive/permission";
 import "./vabIcon";
