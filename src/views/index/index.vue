@@ -10,8 +10,9 @@
         :xl="24"
       >
         <el-alert
-          title="作者初衷：iView Pro要卖￥9999，layui Admin要卖￥2600，作者只好自己动手写一个分享给大家咯。。。框架能走到今天更多的应该感谢巨人给了我肩膀依靠，鸣谢尤雨溪、饿了么、唐金州、花裤衩（毕业时掘金还有github上给过我很多鼓励，不知道他看到时还会不会想起我）、贤心、ivew的开源项目给我带来的很多的灵感（借鉴、抄袭、灵感每个人都可以有自己的见解，但请你尊重别人的劳动成果，不要一棒子打死），弱小的人才习惯嘲讽与否定，内心强大的人从不吝啬赞美与鼓励，人生在世，得到每个人的认可几乎是痴心妄想（有时候借鉴别人也是错，从头造轮子也是错，我尽量让每个人满意，我只知道无论何种评价，赞美或者抹黑，只要帮助到大家，我就是快乐的），我也只是一条略懂前端的咸鱼，可我仍一直怀揣着改变世界的梦想，希望我们每个人，不管过程怎样，结局都是美好的。。。"
-          :closable="false"
+          v-if="noticeList[0]"
+          :title="noticeList[0].title"
+          :closable="noticeList[0].closable"
         >
           <a
             target="_blank"
@@ -256,30 +257,16 @@
           >
           </el-alert>
           <br /> -->
-          <el-alert
-            title=" 其实人生改变命运的机会并没有太多，我们并不是不优秀，我们也并不是一无是处，我们也希望驻足山巅被众人仰望， 也许我们
-            缺少的只是一个机会，缺少的只是生命中的导师，我希望这个框架帮助到更多的人，希望有一天，我们面试的时候不再胆怯，希望有一天别人看到的不仅仅是你的努力，还有你的功成名就，出人头地"
-            type="success"
-            :closable="false"
-          >
-          </el-alert>
-          <br />
-          <el-alert
-            :closable="false"
-            title="框架优势：mock数据自动导出无需配置；views，vuex，api支持自动生成；自动fixed问题代码，可以愉快的拥抱eslint；支持stylint自动排序css属性，自动fiexed scss问题样式"
-            type="success"
-          >
-          </el-alert>
-          <br />
-          <!-- 似乎容易让人造成反感的描述暂时注释 -->
-          <!--  <el-alert
-            :closable="false"
-            title="鸣谢唐金州、花裤衩、贤心、element-ui、ivew的开源项目给我带来的很多的灵感，注意只是灵感，本框架未抄袭任何一方框架源代码，当然欢迎更多喷子抄袭本框架"
-            type="success"
-          >
-          </el-alert>
-          <br /> -->
-
+          <div v-for="(item, index) in noticeList" :key="index">
+            <el-alert
+              v-if="index !== 0"
+              :title="item.title"
+              :type="item.type"
+              :closable="item.closable"
+            >
+            </el-alert>
+            <br />
+          </div>
           <el-alert :closable="false" :title="userAgent" type="info">
           </el-alert>
           <br />
@@ -294,6 +281,7 @@ import VabChart from "@/plugins/echarts";
 import VabCount from "@/plugins/vabCount";
 import { dependencies, devDependencies } from "../../../package.json";
 import { getList } from "@/api/changeLog";
+import { getNoticeList } from "@/api/notice";
 import { getRepos, getStargazers } from "@/api/github";
 import AppLink from "@/layouts/components/Link";
 export default {
@@ -595,6 +583,7 @@ export default {
       //更新日志
       reverse: true,
       activities: [],
+      noticeList: [],
       //其他信息
       userAgent: navigator.userAgent,
       //卡片图标
@@ -671,6 +660,9 @@ export default {
           }
         });
         this.activities = res.data;
+      });
+      getNoticeList().then((res) => {
+        this.noticeList = res.data;
       });
       /* getRepos({
         token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",

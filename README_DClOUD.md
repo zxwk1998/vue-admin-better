@@ -4,7 +4,7 @@
 
 #### 1.添加炫酷地图组件
 
-#### 2.添加炫酷地图组件
+#### 2.添加 websocket 组件
 
 #### 3.更新 layouts 组件
 
@@ -32,6 +32,8 @@
 ### - [PC、平板、手机适配演示： vue-admin-beautiful](http://www.jq22.com/yanshi23029)
 
 ### - [演示地址 6： vue-admin-clever （服务器捐赠者开源版本）](http://mpfhrd48.sanxing.uz7.cn/vue-admin-clever)
+
+### - [演示地址 7： 基础版传送](https://ext.dcloud.net.cn/plugin?id=2022)
 
 ## ☝☝☝ 演示地址,在上方直接点击登录即可！
 

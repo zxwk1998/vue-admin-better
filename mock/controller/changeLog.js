@@ -113,6 +113,10 @@ const data = [
     content: "github标星超过2000 感恩",
     timestamp: "2020-06-03",
   },
+  {
+    content: "添加炫酷地图组件",
+    timestamp: "2020-06-11",
+  },
 ];
 
 export default [
