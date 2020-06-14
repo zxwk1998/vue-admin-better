@@ -6,9 +6,8 @@ export default {
     const permissions = store.getters["user/permissions"];
 
     if (value && value instanceof Array && value.length > 0) {
-      const permissionPermissions = value;
       const hasPermission = permissions.some((role) => {
-        return permissionPermissions.includes(role);
+        return value.includes(role);
       });
 
       if (!hasPermission) {

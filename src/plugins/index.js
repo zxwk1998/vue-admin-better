@@ -9,7 +9,7 @@ import "@/colorfulIcon";
 import "@/config/permission";
 import "@/utils/errorLog";
 import drag from "@/directive/drag";
-import permission from "@/directive/permission";
+import permissions from "@/directive/permissions";
 import "./vabIcon";
 import VabQueryForm from "@/components/VabQueryForm";
 import VabQueryFormTopPanel from "@/components/VabQueryForm/VabQueryFormTopPanel";
@@ -17,7 +17,7 @@ import VabQueryFormBottomPanel from "@/components/VabQueryForm/VabQueryFormBotto
 import VabQueryFormLeftPanel from "@/components/VabQueryForm/VabQueryFormLeftPanel";
 import VabQueryFormRightPanel from "@/components/VabQueryForm/VabQueryFormRightPanel";
 
-Vue.use(permission);
+Vue.use(permissions);
 Vue.use(drag);
 Vue.use(vab);
 
