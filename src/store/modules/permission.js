@@ -24,7 +24,7 @@ const actions = {
     if (permissions.includes("admin")) {
       accessedRoutes = asyncRoutes;
     } else {
-      accessedRoutes = await filterAsyncRoutes(...asyncRoutes, permissions);
+      accessedRoutes = await filterAsyncRoutes(asyncRoutes, permissions);
     }
     console.log(accessedRoutes);
     commit("setRoutes", accessedRoutes);
