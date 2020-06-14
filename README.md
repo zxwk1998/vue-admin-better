@@ -1,13 +1,5 @@
 # 介绍
 
-<p align="left">
-    <img src="https://img.shields.io/badge/vue-始终基于最新版-brightgreen.svg">
-    <img src="https://img.shields.io/badge/vuex-始终基于最新版-brightgreen.svg" >
-    <img src="https://img.shields.io/badge/vue--router-始终基于最新版-brightgreen.svg">
-    <img src="https://img.shields.io/badge/@vue/cli-始终基于最新版-brightgreen.svg">
-    <img src="https://img.shields.io/badge/axios-始终基于最新版-brightgreen.svg">
-</p>
-
 ## 演示地址
 
 ### - [演示地址 1： vue-admin-beautiful （纵向布局展示，速度最快）](http://beautiful.panm.cn/vue-admin-beautiful)
@@ -16,7 +8,11 @@
 
 ### - [演示地址 3： vue-admin-clever （常规后台管理布局）](http://beautiful.panm.cn/vue-admin-clever)
 
-## ☝☝☝ 演示地址,在上方直接点击登录即可！
+## 友情链接
+
+### - [uVIew 文档（超棒的移动跨端框架）](https://uviewui.com/)
+
+### - [uVIew 开源地址（https://github.com/YanxinNet/uView）](https://uviewui.com/)
 
 ### 全网首家实现 element-ui 横向纵向布局无缝切换，多标签页关闭左侧关闭右侧关闭其他（布局切换效果仿 ant-design-pro，tagsBar 仿谷歌浏览器右键菜单）
 
