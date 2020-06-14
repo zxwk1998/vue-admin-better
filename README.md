@@ -10,11 +10,9 @@
 
 ## 友情链接
 
-### - [uVIew 文档（超棒的移动跨端框架）](https://uviewui.com/)
+### - [uView 文档（超棒的移动跨端框架）](https://uviewui.com/)
 
-### - [uVIew 开源地址](https://github.com/YanxinNet/uView)
-
-### 全网首家实现 element-ui 横向纵向布局无缝切换，多标签页关闭左侧关闭右侧关闭其他（布局切换效果仿 ant-design-pro，tagsBar 仿谷歌浏览器右键菜单）
+### - [uView 开源地址（uView UI，是 uni-app 生态最优秀的 UI 框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水）](https://github.com/YanxinNet/uView)
 
 ## 安装
 
