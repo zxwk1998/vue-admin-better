@@ -17,7 +17,7 @@
 ```bash
 
 # 进入项目目录
-cd vue-element-admin-clever
+cd vue-element-admin-beautiful
 # 安装依赖
 cnpm i
 # 本地开发 启动项目
