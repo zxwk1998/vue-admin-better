@@ -51,7 +51,7 @@ export default {
 @mixin title {
   display: inline-block;
   overflow: hidden;
-  font-size: $base-font-size-max;
+  font-size: 20px;
   font-weight: 600;
   line-height: 55px;
   color: $base-title-color;
@@ -75,6 +75,8 @@ export default {
 .logo-container-vertical {
   @include container;
 
+  height: 67px;
+  line-height: 67px;
   text-align: center;
 
   .logo {
@@ -84,7 +86,7 @@ export default {
   .title {
     @include title;
 
-    max-width: 140px;
+    max-width: calc(#{$base-left-menu-width} - 50px);
   }
 }
 </style>

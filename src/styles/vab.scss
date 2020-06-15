@@ -131,7 +131,7 @@ html {
         @include base-scrollbar;
 
         > [class*="-container"] {
-          padding: 15px;
+          padding: $base-padding;
           background: $base-color-white;
         }
       }
