@@ -12,10 +12,9 @@ import {
   routesWhiteList,
 } from "@/config/settings";
 
-NProgress.configure({ showSpinner: false });
+NProgress.configure({ showSpinner: true });
 router.beforeResolve(async (to, from, next) => {
   NProgress.start();
-  document.title = getPageTitle(to.meta.title);
   let hasToken = store.getters["user/accessToken"];
   if (!loginInterception) hasToken = true;
   if (hasToken) {
@@ -62,6 +61,7 @@ router.beforeResolve(async (to, from, next) => {
       NProgress.done();
     }
   }
+  document.title = getPageTitle(to.meta.title);
 });
 router.afterEach(() => {
   NProgress.done();
