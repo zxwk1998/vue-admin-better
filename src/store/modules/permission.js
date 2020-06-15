@@ -26,7 +26,6 @@ const actions = {
     } else {
       accessedRoutes = await filterAsyncRoutes(asyncRoutes, permissions);
     }
-    console.log(accessedRoutes);
     commit("setRoutes", accessedRoutes);
     return accessedRoutes;
   },

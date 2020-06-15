@@ -12,7 +12,17 @@ export function filterAllRoutes(constantRoutes) {
         route.component = (resolve) =>
           require(["@/layouts/EmptyLayout"], resolve);
       } else {
-        const path = "views/" + route.component;
+        let path = "views/" + route.component;
+        if (
+          new RegExp("^/views/.*$").test(route.component) ||
+          new RegExp("^views/.*$").test(route.component)
+        ) {
+          path = route.component;
+        } else if (new RegExp("^/.*$").test(route.component)) {
+          path = "views" + route.component;
+        } else {
+          path = "views/" + route.component;
+        }
         route.component = (resolve) => require([`@/${path}`], resolve);
       }
     }
