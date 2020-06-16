@@ -67,7 +67,7 @@ const actions = {
       return false;
     }
     let { permissions, userName, avatar } = data;
-    if (permissions && userName && avatar) {
+    if (permissions && userName) {
       commit("setPermissions", permissions);
       commit("setUserName", userName);
       commit("setAvatar", avatar);
