@@ -80,7 +80,7 @@ export default {
       });
       const view = arr[0];
       this.pulse = true;
-      await this.$store.dispatch("tagsBar/delCachedRoutes", view);
+      await this.$store.dispatch("tagsBar/delRoute", view);
       await this.$router.replace({
         path: "/redirect" + this.$route.fullPath,
       });
