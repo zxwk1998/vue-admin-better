@@ -274,7 +274,7 @@ export default {
   methods: {
     // 树level小于n级展开方法
     openTree(treeData, n) {
-      function each(data) {
+      const each = (data) => {
         data.forEach((e) => {
           if (e.rank <= n) {
             this.defaultExpendedKeys.push(e.id);
@@ -283,7 +283,7 @@ export default {
             each(e.children);
           }
         });
-      }
+      };
 
       each(treeData);
     },
