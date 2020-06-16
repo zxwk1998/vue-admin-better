@@ -20,7 +20,7 @@
 
 # 进入项目目录
 cd vue-element-admin-beautiful
-# 安装依赖
+# 安装依赖，一定要cnpm i，不用看网上乱七八糟的答案，本项目始终基于最新的package版本，cnpm不会出现任何问题，至于怎么安装cnpm自行百度
 cnpm i
 # 本地开发 启动项目
 cnpm run serve
