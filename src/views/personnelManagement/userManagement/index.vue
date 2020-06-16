@@ -110,20 +110,18 @@ export default {
     },
     handleDelete(row) {
       if (row.id) {
-        this.$baseConfirm("你确定要删除当前项吗", null, () => {
-          doDelete({ ids: row.id }).then((res) => {
-            this.$baseMessage(res.msg, "success");
-            this.fetchData();
-          });
+        this.$baseConfirm("你确定要删除当前项吗", null, async () => {
+          const { msg } = await doDelete({ ids: row.id });
+          this.$baseMessage(msg, "success");
+          this.fetchData();
         });
       } else {
         if (this.selectRows.length > 0) {
           const ids = this.selectRows.map((item) => item.id).join();
-          this.$baseConfirm("你确定要删除选中项吗", null, () => {
-            doDelete({ ids: row.id }).then((res) => {
-              this.$baseMessage(res.msg, "success");
-              this.fetchData();
-            });
+          this.$baseConfirm("你确定要删除选中项吗", null, async () => {
+            const { msg } = await doDelete({ ids: row.id });
+            this.$baseMessage(msg, "success");
+            this.fetchData();
           });
         } else {
           this.$baseMessage("未选中任何行", "error");
@@ -143,15 +141,14 @@ export default {
       this.queryForm.pageNo = 1;
       this.fetchData();
     },
-    fetchData() {
+    async fetchData() {
       this.listLoading = true;
-      getList(this.queryForm).then((res) => {
-        this.list = res.data;
-        this.total = res.totalCount;
-        setTimeout((_) => {
-          this.listLoading = false;
-        }, 300);
-      });
+      const { data, totalCount } = await getList(this.queryForm);
+      this.list = data;
+      this.total = totalCount;
+      setTimeout(() => {
+        this.listLoading = false;
+      }, 300);
     },
   },
 };

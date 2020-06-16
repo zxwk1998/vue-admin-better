@@ -90,13 +90,11 @@ export default {
       this.queryForm.pageNo = 1;
       this.fetchData();
     },
-    fetchData() {
-      getIconList(this.queryForm).then((res) => {
-        const data = res.data;
-        this.queryIcon = data;
-        this.allIcon = data;
-        this.total = res.totalCount;
-      });
+    async fetchData() {
+      const { data, totalCount } = await getIconList(this.queryForm);
+      this.queryIcon = data;
+      this.allIcon = data;
+      this.total = totalCount;
     },
     handleCopyIcon(index, event) {
       const copyText = `<vab-icon :icon="['fas', '${this.queryIcon[index]}']"></vab-icon>`;

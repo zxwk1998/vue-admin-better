@@ -129,11 +129,10 @@ export default {
       );
       location.reload();
     },
-    fetchData() {
-      getRouterList().then((res) => {
-        this.tableData = res.data;
-        this.res = res;
-      });
+    async fetchData() {
+      const res = await getRouterList();
+      this.tableData = res.data;
+      this.res = res;
     },
   },
 };

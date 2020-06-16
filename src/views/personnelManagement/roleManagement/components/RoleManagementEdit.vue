@@ -53,13 +53,12 @@ export default {
       this.dialogFormVisible = false;
     },
     save() {
-      this.$refs["form"].validate((valid) => {
+      this.$refs["form"].validate(async (valid) => {
         if (valid) {
-          doEdit(this.form).then((res) => {
-            this.$baseMessage(res.msg, "success");
-            this.$emit("fetchData");
-            this.close();
-          });
+          const { msg } = await doEdit(this.form);
+          this.$baseMessage(msg, "success");
+          this.$emit("fetchData");
+          this.close();
         } else {
           return false;
         }

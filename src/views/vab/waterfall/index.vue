@@ -39,17 +39,16 @@ export default {
     this.height = this.$baseTableHeight();
   },
   methods: {
-    getData() {
-      getWaterfallList({
+    async getData() {
+      const data = await getWaterfallList({
         group: this.group,
-      }).then((res) => {
-        this.group++;
-        /* if (this.group === 10) {
+      });
+      this.group++;
+      /* if (this.group === 10) {
                       this.$refs.waterfall.waterfallOver();
                       return;
                     } */
-        this.imgsArr = this.imgsArr.concat(res.data);
-      });
+      this.imgsArr = this.imgsArr.concat(data);
     },
   },
 };

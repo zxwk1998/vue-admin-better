@@ -60,30 +60,28 @@ export default {
     this.fetchData();
   },
   methods: {
-    fetchData() {
+    async fetchData() {
       this.listLoading = true;
-      getList(this.listQuery).then((response) => {
-        this.list = response.data;
-        this.listLoading = false;
-      });
+      const { data } = await getList(this.listQuery);
+      this.list = data;
+      this.listLoading = false;
     },
-    handleDownload() {
+    async handleDownload() {
       this.downloadLoading = true;
-      import("@/vendor/ExportExcel").then((excel) => {
-        const multiHeader = [["Id", "Main Information", "", "", "Date"]];
-        const header = ["", "Title", "Author", "Readings", ""];
-        const filterVal = ["id", "title", "author", "pageViews", "datetime"];
-        const list = this.list;
-        const data = this.formatJson(filterVal, list);
-        const merges = ["A1:A2", "B1:D1", "E1:E2"];
-        excel.export_json_to_excel({
-          multiHeader,
-          header,
-          merges,
-          data,
-        });
-        this.downloadLoading = false;
+      const { export_json_to_excel } = await import("@/vendor/ExportExcel");
+      const multiHeader = [["Id", "Main Information", "", "", "Date"]];
+      const header = ["", "Title", "Author", "Readings", ""];
+      const filterVal = ["id", "title", "author", "pageViews", "datetime"];
+      const list = this.list;
+      const data = this.formatJson(filterVal, list);
+      const merges = ["A1:A2", "B1:D1", "E1:E2"];
+      export_json_to_excel({
+        multiHeader,
+        header,
+        merges,
+        data,
       });
+      this.downloadLoading = false;
     },
     formatJson(filterVal, jsonData) {
       return jsonData.map((v) =>

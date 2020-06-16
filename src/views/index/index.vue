@@ -652,18 +652,15 @@ export default {
     handleChangeTheme() {
       this.$baseEventBus.$emit("theme");
     },
-    fetchData() {
-      getList().then((res) => {
-        res.data.map((item, index) => {
-          if (index === res.data.length - 1) {
-            item.color = "#0bbd87";
-          }
-        });
-        this.activities = res.data;
+    async fetchData() {
+      const { data } = await getList();
+      data.map((item, index) => {
+        if (index === data.length - 1) {
+          item.color = "#0bbd87";
+        }
       });
-      getNoticeList().then((res) => {
-        this.noticeList = res.data;
-      });
+      this.activities = data;
+      this.noticeList = await getNoticeList().data;
       /* getRepos({
         token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
       }).then((res) => {

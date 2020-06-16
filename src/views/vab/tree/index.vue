@@ -262,25 +262,22 @@ export default {
     },
   },
   mounted() {
-    const that = this;
-    that.$nextTick(() => {
-      that.getTreeListFuc(1);
-      that.setCheckedKeys();
+    this.$nextTick(() => {
+      this.getTreeListFuc(1);
+      this.setCheckedKeys();
       // 初始化单选树
-      that.initSingleTree("single");
+      this.initSingleTree("single");
       // 初始化多选树
-      that.initSingleTree("multiple");
+      this.initSingleTree("multiple");
     });
   },
   methods: {
     // 树level小于n级展开方法
     openTree(treeData, n) {
-      const that = this;
-
       function each(data) {
         data.forEach((e) => {
           if (e.rank <= n) {
-            that.defaultExpendedKeys.push(e.id);
+            this.defaultExpendedKeys.push(e.id);
           }
           if (e.children.length > 0) {
             each(e.children);
@@ -291,14 +288,12 @@ export default {
       each(treeData);
     },
     // 获取tree数据
-    getTreeListFuc(flag) {
-      const that = this;
-      getTreeList().then((res) => {
-        this.data2 = res.data;
-        if (flag) {
-          that.openTree(that.data2, 2);
-        }
-      });
+    async getTreeListFuc(flag) {
+      const { data } = await getTreeList();
+      this.data2 = data;
+      if (flag) {
+        this.openTree(this.data2, 2);
+      }
     },
     // 节点过滤操作
     filterNode(value, data) {
@@ -327,24 +322,20 @@ export default {
     },
     // 删除节点操作
     remove(node, data) {
-      const that = this;
-      that.$baseConfirm("你确定要删除该节点?", null, () => {
-        getTreeList().then((res) => {
-          that.$baseMessage(res.msg, "success");
-          that.getTreeListFuc(0);
-        });
+      this.$baseConfirm("你确定要删除该节点?", null, async () => {
+        const { msg } = getTreeList();
+        this.$baseMessage(msg, "success");
+        this.getTreeListFuc(0);
       });
     },
     // 保存添加和编辑
     saveTree() {
-      const that = this;
-      this.$refs.treeForm.validate((valid) => {
+      this.$refs.treeForm.validate(async (valid) => {
         if (valid) {
-          getTreeList().then((res) => {
-            that.$baseMessage(res.msg, "success");
-            that.treeDialogVisible = false;
-            that.getTreeListFuc(0);
-          });
+          const { msg } = await getTreeList();
+          this.$baseMessage(msg, "success");
+          this.treeDialogVisible = false;
+          this.getTreeListFuc(0);
         }
       });
     },
@@ -369,74 +360,66 @@ export default {
         1
       );
     },
-    loadNode(node, resolve) {
-      const that = this;
+    async loadNode(node, resolve) {
       if (node.level === 0) {
-        getTreeList().then((res) => {
-          that.loading = false;
-          return resolve(res.data);
-        });
+        const { data } = await getTreeList();
+        this.loading = false;
+        return resolve(data);
       } else {
-        getTreeList().then((res) => {
-          return resolve(res.data);
-        });
+        const { data } = await getTreeList();
+        return resolve(res.data);
       }
     },
     //懒加载树输入框筛选方法
-    showTreeList(value) {
-      const that = this;
+    async showTreeList(value) {
       if (typeof value === "string") {
-        that.keyW = value.trim();
+        this.keyW = value.trim();
       }
-      if (that.keyW.length !== 0) {
+      if (this.keyW.length !== 0) {
         // 请求后台返回查询结果
         let treeOption = {};
         treeOption = {
-          keyWord: that.keyW,
+          keyWord: this.keyW,
         };
-        getTreeList().then((res) => {
-          that.filterDevLlist = res.data;
-          that.isShow = true;
-        });
+        const { data } = await getTreeList();
+        this.filterDevLlist = data;
+        this.isShow = true;
       } else {
-        that.isShow = false;
+        this.isShow = false;
       }
     },
     /* 单选/多选树方法-------------------开始 */
     // 初始化单选树的值
-    initSingleTree(treeType) {
-      const that = this;
-      getTreeList().then((res) => {
-        that.selectTreeData = res.data;
-        this.$nextTick(() => {
-          that.selectTreeDefaultSelectedKeys = that.singleSelectTreeKey.split(
-            ","
-          ); // 设置默认展开
-          if (treeType == "single") {
-            //单选树
-            that.$refs.singleSelectTree.setCurrentKey(that.singleSelectTreeKey); // 设置默认选中
-          } else {
-            // 多选树
-            that.$refs.multipleSelectTree.setCheckedKeys(
-              that.selectTreeDefaultSelectedKeys
-            );
-          }
-        });
+    async initSingleTree(treeType) {
+      const { data } = await getTreeList();
+      this.selectTreeData = data;
+      this.$nextTick(() => {
+        this.selectTreeDefaultSelectedKeys = this.singleSelectTreeKey.split(
+          ","
+        ); // 设置默认展开
+        if (treeType == "single") {
+          //单选树
+          this.$refs.singleSelectTree.setCurrentKey(this.singleSelectTreeKey); // 设置默认选中
+        } else {
+          // 多选树
+          this.$refs.multipleSelectTree.setCheckedKeys(
+            this.selectTreeDefaultSelectedKeys
+          );
+        }
       });
     },
     // 清除单选树选中
     selectTreeClearHandle(type) {
-      const that = this;
       this.selectTreeDefaultSelectedKeys = [];
       this.clearSelected();
       if (type == "single") {
-        that.singleSelectTreeVal = "";
-        that.singleSelectTreeKey = "";
-        that.$refs.singleSelectTree.setCurrentKey(""); // 设置默认选中
+        this.singleSelectTreeVal = "";
+        this.singleSelectTreeKey = "";
+        this.$refs.singleSelectTree.setCurrentKey(""); // 设置默认选中
       } else {
-        that.multipleSelectTreeVal = [];
-        that.multipleSelectTreeKey = "";
-        that.$refs.multipleSelectTree.setCheckedKeys([]);
+        this.multipleSelectTreeVal = [];
+        this.multipleSelectTreeKey = "";
+        this.$refs.multipleSelectTree.setCheckedKeys([]);
       }
     },
     /* 清空选中样式 */

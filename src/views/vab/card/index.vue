@@ -82,15 +82,17 @@ export default {
       this.pageNo = val;
       this.fetchData();
     },
-    fetchData() {
+    async fetchData() {
       this.listLoading = true;
-      getList({ pageNo: this.pageNo, pageSize: this.pageSize }).then((res) => {
-        this.list = res.data;
-        this.total = res.totalCount;
-        setTimeout(() => {
-          this.listLoading = false;
-        }, 300);
+      const { data, totalCount } = await getList({
+        pageNo: this.pageNo,
+        pageSize: this.pageSize,
       });
+      this.list = data;
+      this.total = totalCount;
+      setTimeout(() => {
+        this.listLoading = false;
+      }, 300);
     },
   },
 };

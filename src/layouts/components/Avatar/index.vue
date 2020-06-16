@@ -41,12 +41,15 @@ export default {
       }
     },
     logout() {
-      this.$baseConfirm("您确定要退出" + this.$baseTitle + "吗?", null, () => {
-        const fullPath = this.$route.fullPath;
-        this.$store.dispatch("user/logout").then(() => {
+      this.$baseConfirm(
+        "您确定要退出" + this.$baseTitle + "吗?",
+        null,
+        async () => {
+          const fullPath = this.$route.fullPath;
+          await this.$store.dispatch("user/logout");
           this.$router.push(`/login?redirect=${fullPath}`);
-        });
-      });
+        }
+      );
     },
   },
 };

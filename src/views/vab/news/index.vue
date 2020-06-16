@@ -109,26 +109,24 @@ export default {
       this.pagination.pageSize = 10;
       this.fetchData();
     },
-    fetchData() {
+    async fetchData() {
       this.listLoading = true;
       switch (this.value) {
         case "0":
-          getQdysjList({
+          const res1 = await getQdysjList({
             ...this.pagination,
             ...{ page: this.pagination.page - 1 },
-          }).then((res) => {
-            this.pagination.total = res.total;
-            this.newsList = res.data;
           });
+          this.pagination.total = res1.total;
+          this.newsList = res1.data;
           break;
         case "1":
-          getFbzbList({
+          const res2 = await getFbzbList({
             ...this.pagination,
             ...{ page: this.pagination.page - 1 },
-          }).then((res) => {
-            this.pagination.total = res.total;
-            this.newsList = res.data;
           });
+          this.pagination.total = res2.total;
+          this.newsList = res2.data;
           break;
       }
       setTimeout(() => {

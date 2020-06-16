@@ -137,15 +137,14 @@ export const genTableSnippet = (headers = "getList") => {
         this.queryForm.pageNo = 1;
         this.fetchData();
       },
-      fetchData() {
+    async  fetchData() {
         this.listLoading = true;
-        getList(this.queryForm).then(res => {
-          this.list = res.data;
-          this.total = res.totalCount;
-          setTimeout(_ => {
-            this.listLoading = false;
-          }, 300);
-        });
+        const { data, totalCount }= await getList(this.queryForm);
+        this.list = data;
+        this.total = totalCount;
+        setTimeout(() => {
+          this.listLoading = false;
+        }, 300);
       },
     },
   };

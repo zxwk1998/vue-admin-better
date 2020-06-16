@@ -72,7 +72,7 @@ export default {
     handleCollapse() {
       this.$store.dispatch("settings/changeCollapse");
     },
-    refreshRoute() {
+    async refreshRoute() {
       const arr = this.visitedRoutes.filter((item, index) => {
         if (item.path === this.$route.fullPath) {
           return item;
@@ -80,18 +80,13 @@ export default {
       });
       const view = arr[0];
       this.pulse = true;
-      this.$store.dispatch("tagsBar/delCachedRoutes", view).then(() => {
-        this.$router
-          .replace({
-            path: "/redirect" + this.$route.fullPath,
-          })
-          .then(() => {
-            setTimeout(() => {
-              this.pulse = false;
-            }, 1000);
-          })
-          .catch(() => {});
+      await this.$store.dispatch("tagsBar/delCachedRoutes", view);
+      await this.$router.replace({
+        path: "/redirect" + this.$route.fullPath,
       });
+      setTimeout(() => {
+        this.pulse = false;
+      }, 1000);
     },
   },
 };

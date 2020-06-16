@@ -57,15 +57,14 @@ export default {
       this.$emit("fetchData");
     },
     save() {
-      this.$refs["form"].validate((valid) => {
+      this.$refs["form"].validate(async (valid) => {
         if (valid) {
-          doEdit(this.form).then((res) => {
-            this.$baseMessage(res.msg, "success");
-            this.$refs["form"].resetFields();
-            this.dialogFormVisible = false;
-            this.$emit("fetchData");
-            this.form = this.$options.data().form;
-          });
+          const { msg } = await doEdit(this.form);
+          this.$baseMessage(msg, "success");
+          this.$refs["form"].resetFields();
+          this.dialogFormVisible = false;
+          this.$emit("fetchData");
+          this.form = this.$options.data().form;
         } else {
           return false;
         }

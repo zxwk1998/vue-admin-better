@@ -91,29 +91,27 @@ export default {
     this.fetchData();
   },
   methods: {
-    fetchData() {
+    async fetchData() {
       this.listLoading = true;
-      getList().then((response) => {
-        this.list = response.data;
-        this.listLoading = false;
-      });
+      const { data } = await getList();
+      this.list = data;
+      this.listLoading = false;
     },
-    handleDownload() {
+    async handleDownload() {
       this.downloadLoading = true;
-      import("@/vendor/ExportExcel").then((excel) => {
-        const tHeader = ["Id", "Title", "Author", "Readings", "Date"];
-        const filterVal = ["id", "title", "author", "pageViews", "datetime"];
-        const list = this.list;
-        const data = this.formatJson(filterVal, list);
-        excel.export_json_to_excel({
-          header: tHeader,
-          data,
-          filename: this.filename,
-          autoWidth: this.autoWidth,
-          bookType: this.bookType,
-        });
-        this.downloadLoading = false;
+      const { export_json_to_excel } = await import("@/vendor/ExportExcel");
+      const tHeader = ["Id", "Title", "Author", "Readings", "Date"];
+      const filterVal = ["id", "title", "author", "pageViews", "datetime"];
+      const list = this.list;
+      const data = this.formatJson(filterVal, list);
+      export_json_to_excel({
+        header: tHeader,
+        data,
+        filename: this.filename,
+        autoWidth: this.autoWidth,
+        bookType: this.bookType,
       });
+      this.downloadLoading = false;
     },
     formatJson(filterVal, jsonData) {
       return jsonData.map((v) =>

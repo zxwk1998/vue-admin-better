@@ -71,32 +71,30 @@ export default {
     this.fetchData();
   },
   methods: {
-    fetchData() {
+    async fetchData() {
       this.listLoading = true;
-      getList(this.listQuery).then((response) => {
-        this.list = response.data;
-        this.listLoading = false;
-      });
+      const { data } = await getList(this.listQuery);
+      this.list = data;
+      this.listLoading = false;
     },
     handleSelectionChange(val) {
       this.multipleSelection = val;
     },
-    handleDownload() {
+    async handleDownload() {
       if (this.multipleSelection.length) {
         this.downloadLoading = true;
-        import("@/vendor/ExportExcel").then((excel) => {
-          const tHeader = ["Id", "Title", "Author", "Readings", "Date"];
-          const filterVal = ["id", "title", "author", "pageViews", "datetime"];
-          const list = this.multipleSelection;
-          const data = this.formatJson(filterVal, list);
-          excel.export_json_to_excel({
-            header: tHeader,
-            data,
-            filename: this.filename,
-          });
-          this.$refs.multipleTable.clearSelection();
-          this.downloadLoading = false;
+        const { export_json_to_excel } = await import("@/vendor/ExportExcel");
+        const tHeader = ["Id", "Title", "Author", "Readings", "Date"];
+        const filterVal = ["id", "title", "author", "pageViews", "datetime"];
+        const list = this.multipleSelection;
+        const data = this.formatJson(filterVal, list);
+        export_json_to_excel({
+          header: tHeader,
+          data,
+          filename: this.filename,
         });
+        this.$refs.multipleTable.clearSelection();
+        this.downloadLoading = false;
       } else {
         this.$baseMessage("请至少选择一行", "error");
       }
