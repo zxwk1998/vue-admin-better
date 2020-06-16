@@ -52,7 +52,6 @@ export default {
     }),
     cachedRoutes() {
       const cachedRoutesArr = [];
-
       this.visitedRoutes.forEach((item) => {
         if (!item.meta.noKeepAlive) {
           cachedRoutesArr.push(item.name);
@@ -67,7 +66,7 @@ export default {
   watch: {
     $route(to, from) {
       this.$nextTick(() => {
-        if (this.$store.state.tagsBar.skeleton) {
+        if (this.skeleton) {
           this.show = true;
           setTimeout(() => {
             this.show = false;
