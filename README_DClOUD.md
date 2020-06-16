@@ -8,6 +8,16 @@
 
 #### 学习辅导、加入 VIP 群、购买自定义版权版本 联系 QQ 1204505056
 
+```bash
+
+# 进入项目目录
+cd vue-element-admin-beautiful
+# 安装依赖，一定要cnpm i，别听网上乱七八糟的回答，本项目始终基于最新的package版本，cnpm不会出现任何问题，置于怎么安装cnpm自行百度
+cnpm i
+# 本地开发 启动项目
+cnpm run serve
+```
+
 ## 友情链接
 
 #### - [uView 文档（超棒的移动跨端框架，文档详细，上手容易）](https://uviewui.com/)
