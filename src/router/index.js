@@ -1,3 +1,8 @@
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description router全局配置，如有必要可分文件抽离
+ */
+
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Layout from "@/layouts";
