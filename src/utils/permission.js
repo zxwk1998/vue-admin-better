@@ -1,6 +1,7 @@
 import store from "@/store";
 
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description 检查权限
  * @param value
  * @returns {boolean}

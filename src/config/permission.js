@@ -1,4 +1,5 @@
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description 路由守卫
  */
 import router from "../router";

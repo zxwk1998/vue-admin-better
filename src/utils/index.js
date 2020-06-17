@@ -1,4 +1,5 @@
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description 格式化时间
  * @param time
  * @param cFormat
@@ -44,6 +45,7 @@ export function parseTime(time, cFormat) {
 }
 
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description 格式化时间
  * @param time
  * @param option
@@ -88,6 +90,7 @@ export function formatTime(time, option) {
 }
 
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description 将url请求参数转为json格式
  * @param url
  * @returns {{}|any}
@@ -109,6 +112,7 @@ export function param2Obj(url) {
 }
 
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description 父子关系的数组转换成树形结构数据
  * @param data
  * @returns {*}
@@ -139,6 +143,7 @@ export function translateDataToTree(data) {
 }
 
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description 树形结构数据转换成父子关系的数组
  * @param data
  * @returns {[]}
@@ -165,6 +170,7 @@ export function translateTreeToData(data) {
 }
 
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description 10位时间戳转换
  * @param time
  * @returns {string}
@@ -186,6 +192,7 @@ export function tenBitTimestamp(time) {
 }
 
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description 13位时间戳转换
  * @param time
  * @returns {string}
@@ -207,6 +214,7 @@ export function thirteenBitTimestamp(time) {
 }
 
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description 获取随机id
  * @param length
  * @returns {string}
@@ -221,6 +229,7 @@ export function uuid(length = 32) {
 }
 
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description m到n的随机数
  * @param m
  * @param n
@@ -231,6 +240,7 @@ export function random(m, n) {
 }
 
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description addEventListener
  * @type {function(...[*]=)}
  */
@@ -243,6 +253,7 @@ export const on = (function () {
 })();
 
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description removeEventListener
  * @type {function(...[*]=)}
  */

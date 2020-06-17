@@ -660,7 +660,8 @@ export default {
         }
       });
       this.activities = data;
-      this.noticeList = await getNoticeList().data;
+      const res = await getNoticeList();
+      this.noticeList = res.data;
       /* getRepos({
         token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
       }).then((res) => {
