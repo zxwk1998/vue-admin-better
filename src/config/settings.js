@@ -25,8 +25,8 @@ module.exports = {
   loadingText: "正在加载中...",
   //token名称
   tokenName: "accessToken",
-  //token表名
-  tokenTableName: "VUE-TABLE",
+  //token在localStorage、sessionStorage、cookie存储的key的名称
+  tokenTableName: "vue-admin-beautiful",
   //token存储位置localStorage sessionStorage cookie
   storage: "localStorage",
   //是否显示logo
