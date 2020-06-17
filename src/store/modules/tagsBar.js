@@ -58,9 +58,6 @@ const mutations = {
   },
 };
 const actions = {
-  addRoute({ dispatch }, view) {
-    dispatch("addVisitedRoute", view);
-  },
   addVisitedRoute({ commit }, view) {
     commit("addVisitedRoute", view);
   },

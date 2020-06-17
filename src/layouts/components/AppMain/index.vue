@@ -57,6 +57,7 @@ export default {
           cachedRoutesArr.push(item.name);
         }
       });
+      this.handleSkeleton(cachedRoutesArr);
       return cachedRoutesArr;
     },
     key() {
@@ -64,20 +65,13 @@ export default {
     },
   },
   watch: {
-    $route(to, from) {
-      this.$nextTick(() => {
-        if (this.skeleton) {
-          this.show = true;
-          setTimeout(() => {
-            this.show = false;
-          }, 200);
-        } else {
-          this.show = false;
-        }
+    $route: {
+      handler(route) {
         if ("mobile" === this.device) {
           this.$store.dispatch("settings/foldSideBar");
         }
-      });
+      },
+      immediate: true,
     },
   },
   created() {},
@@ -86,7 +80,21 @@ export default {
       this.show = false;
     }, 200);
   },
-  methods: {},
+  methods: {
+    // TODO 骨架屏处理还有bug我找到更好的解决方案待修复
+    handleSkeleton(cachedRoutesArr) {
+      cachedRoutesArr.pop();
+      if (this.skeleton && !cachedRoutesArr.includes(this.$route.name)) {
+        cachedRoutesArr.push(this.$route.name);
+        this.show = true;
+        setTimeout(() => {
+          this.show = false;
+        }, 200);
+      } else {
+        this.show = false;
+      }
+    },
+  },
 };
 </script>
 
