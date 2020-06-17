@@ -12,6 +12,18 @@ export const constantRoutes = [
     hidden: true,
   },
   {
+    path: "/401",
+    name: "401",
+    component: () => import("@/views/401"),
+    hidden: true,
+  },
+  {
+    path: "/404",
+    name: "404",
+    component: () => import("@/views/404"),
+    hidden: true,
+  },
+  {
     path: "/redirect",
     component: Layout,
     hidden: true,
@@ -440,14 +452,14 @@ export const asyncRoutes = [
     meta: { title: "错误页", icon: "bug" },
     children: [
       {
-        path: "/401",
-        name: "401",
+        path: "401",
+        name: "Error401",
         component: () => import("@/views/401"),
         meta: { title: "401" },
       },
       {
-        path: "/404",
-        name: "404",
+        path: "404",
+        name: "Error404",
         component: () => import("@/views/404"),
         meta: { title: "404" },
       },
