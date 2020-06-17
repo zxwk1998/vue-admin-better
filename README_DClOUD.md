@@ -2,6 +2,8 @@
 
 #### - [演示地址 vue-admin-beautiful ](http://beautiful.panm.cn/vue-admin-beautiful)
 
+#### - [clever 版本 演示地址 vue-admin-beautiful ](http://beautiful.panm.cn/vue-admin-clever)
+
 #### - [开源地址，感谢 star](https://github.com/chuzhixin/vue-admin-beautiful)
 
 #### 学习讨论 QQ 群：972435319 群内提供基础版、集成版、clever 版本、详细文档与视频教程
