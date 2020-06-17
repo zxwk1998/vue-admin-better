@@ -1,3 +1,8 @@
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description 代码生成机状态管理
+ */
+
 const state = { srcCode: "" };
 const getters = {
   srcTableCode: (state) => state.srcCode,

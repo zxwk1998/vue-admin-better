@@ -1,3 +1,8 @@
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description tagsBar多标签页逻辑，此处借鉴了很多开源项目，踩了很多坑，请勿修改
+ */
+
 const state = {
   visitedRoutes: [],
   skeleton: true,
