@@ -34,11 +34,11 @@ router.beforeResolve(async (to, from, next) => {
           let accessRoutes = [];
           if (authentication === "intelligence") {
             accessRoutes = await store.dispatch(
-              "permission/setRoutes",
+              "routes/setRoutes",
               permissions
             );
           } else if (authentication === "all") {
-            accessRoutes = await store.dispatch("permission/setAllRoutes");
+            accessRoutes = await store.dispatch("routes/setAllRoutes");
           }
           router.addRoutes(accessRoutes);
           /*console.log(to);

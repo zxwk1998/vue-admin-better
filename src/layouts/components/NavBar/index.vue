@@ -65,7 +65,7 @@ export default {
       collapse: "settings/collapse",
       visitedRoutes: "tagsBar/visitedRoutes",
       device: "settings/device",
-      routes: "permission/routes",
+      routes: "routes/routes",
     }),
   },
   methods: {
