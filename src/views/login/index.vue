@@ -1,6 +1,7 @@
 <template>
   <div class="login-container">
     <el-alert
+      v-if="nodeEnv !== 'development'"
       title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
       type="success"
       :closable="false"
@@ -27,7 +28,7 @@
             class="login-form-admin"
           >
             <span class="svg-container svg-container-admin">
-              <byui-icon :icon="['fas', 'user']" />
+              <vab-icon :icon="['fas', 'user']" />
             </span>
             <el-input
               v-model.trim="loginForm.userName"
@@ -40,7 +41,7 @@
           </el-form-item>
           <el-form-item prop="password" class="login-form-pass">
             <span class="svg-container svg-container-pass"
-              ><byui-icon :icon="['fas', 'lock']"
+              ><vab-icon :icon="['fas', 'lock']"
             /></span>
             <el-input
               :key="passwordType"
@@ -56,17 +57,17 @@
               v-if="passwordType === 'password'"
               class="show-pwd"
               @click="showPwd"
-              ><byui-icon :icon="['fas', 'eye-slash']"
+              ><vab-icon :icon="['fas', 'eye-slash']"
             /></span>
             <span v-else class="show-pwd" @click="showPwd"
-              ><byui-icon :icon="['fas', 'eye']"
+              ><vab-icon :icon="['fas', 'eye']"
             /></span>
           </el-form-item>
           <el-button
             :loading="loading"
             class="login-btn"
             type="primary"
-            @click.native.prevent="handleLogin"
+            @click="handleLogin"
             >登录
           </el-button>
         </el-form>
@@ -103,6 +104,7 @@ export default {
       }
     };
     return {
+      nodeEnv: process.env.NODE_ENV,
       title: this.$baseTitle,
       loginForm: {
         userName: "",
@@ -131,47 +133,38 @@ export default {
   },
   watch: {
     $route: {
-      handler: function (route) {
+      handler(route) {
         this.redirect = route.query && route.query.redirect;
       },
       immediate: true,
     },
   },
-  created() {},
   mounted() {
     if ("production" !== process.env.NODE_ENV) {
       this.loginForm.userName = "admin";
       this.loginForm.password = "123456";
     }
-    setTimeout(() => {
-      this.animateShow = true;
-    });
   },
   methods: {
     showPwd() {
-      if (this.passwordType === "password") {
-        this.passwordType = "";
-      } else {
-        this.passwordType = "password";
-      }
+      this.passwordType === "password"
+        ? (this.passwordType = "")
+        : (this.passwordType = "password");
       this.$nextTick(() => {
         this.$refs.password.focus();
       });
     },
-    async handleLogin() {
-      this.$refs.loginForm.validate((valid) => {
+    handleLogin() {
+      this.$refs.loginForm.validate(async (valid) => {
         if (valid) {
           this.loading = true;
-          this.$store
-            .dispatch("user/login", this.loginForm)
-            .then(() => {
-              const routerPath = this.redirect === "/404" ? "/" : this.redirect;
-              this.$router.push({ path: routerPath || "/" }).catch(() => {});
-              this.loading = false;
-            })
-            .catch(() => {
-              this.loading = false;
-            });
+          await this.$store.dispatch("user/login", this.loginForm);
+          const routerPath =
+            this.redirect === "/404" || this.redirect === "/401"
+              ? "/"
+              : this.redirect;
+          this.$router.push({ path: routerPath }).catch((error) => {});
+          this.loading = false;
         } else {
           return false;
         }

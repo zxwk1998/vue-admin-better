@@ -1,21 +1,21 @@
 <template>
   <span v-if="themeBar">
-    <byui-icon
+    <vab-icon
       title="主题配置"
       :icon="['fas', 'palette']"
       @click="handleChangeTheme"
     />
     <div class="theme-bar-setting">
       <div @click="handleChangeTheme">
-        <byui-icon :icon="['fas', 'palette']" />
+        <vab-icon :icon="['fas', 'palette']" />
         <p>主题配置</p>
       </div>
       <div @click="handleGetCode">
-        <byui-icon :icon="['fas', 'laptop-code']"></byui-icon>
+        <vab-icon :icon="['fas', 'laptop-code']"></vab-icon>
         <p>拷贝代码</p>
       </div>
       <!--<div @click="handleChangeQq">
-        <byui-remix-icon icon-class="qq-fill" />
+        <vab-remix-icon icon-class="qq-fill" />
         <p>学习交流</p>
       </div>-->
     </div>
@@ -94,7 +94,7 @@
             </el-form-item>
             <el-form-item label="标签主题色">
               <el-color-picker
-                v-model="theme.tagViewsBackgroundActive"
+                v-model="theme.tagsBarBackgroundActive"
                 :predefine="['#1890ff', '#0fd59d', '#f56c6c']"
                 show-alpha
               ></el-color-picker>
@@ -129,14 +129,13 @@
 <script>
 import variables from "@/styles/variables.scss";
 import { mapGetters } from "vuex";
-import { themeBar } from "@/config/settings";
-import GetCode from "./mixin/GetCode";
+import GetCode from "@/layouts/mixin/GetCode";
+
 export default {
   name: "ThemeBar",
   mixins: [GetCode],
   data() {
     return {
-      themeBar,
       drawerVisible: false,
       theme: {
         layout: "",
@@ -146,21 +145,25 @@ export default {
         menuChildrenBackground: variables["menu-children-background"],
         menuBackgroundActive: variables["menu-background-active"],
         menuColor: variables["menu-color"],
-        tagViewsBackgroundActive: variables["tagviews-background-active"],
+        tagsBarBackgroundActive: variables["tags-bar-background-active"],
         buttonBackground: variables["button-background"],
         paginationBackgroundActive: variables["pagination-background-active"],
       },
     };
   },
   computed: {
-    ...mapGetters(["layout", "header", "tagsBar"]),
+    ...mapGetters({
+      layout: "settings/layout",
+      header: "settings/header",
+      tagsBar: "settings/tagsBar",
+      themeBar: "settings/themeBar",
+    }),
   },
-  mounted() {
+  mounted() {},
+  created() {
     this.$baseEventBus.$on("theme", () => {
       this.handleChangeTheme();
     });
-  },
-  created() {
     const theme = localStorage.getItem("BYUI-VUE-THEME");
     this.theme.layout = this.layout;
     this.theme.header = this.header;
@@ -180,8 +183,8 @@ export default {
       this.$set(this.theme, "menuColor", JSON.parse(theme).menuColor);
       this.$set(
         this.theme,
-        "tagViewsBackgroundActive",
-        JSON.parse(theme).tagViewsBackgroundActive
+        "tagsBarBackgroundActive",
+        JSON.parse(theme).tagsBarBackgroundActive
       );
       this.$set(
         this.theme,
@@ -213,7 +216,7 @@ export default {
         menuChildrenBackground,
         menuBackgroundActive,
         menuColor,
-        tagViewsBackgroundActive,
+        tagsBarBackgroundActive,
         buttonBackground,
         paginationBackgroundActive,
       } = this.theme;
@@ -222,7 +225,7 @@ export default {
       style.id = "BYUI-VUE-THEME";
       style.innerHTML = `
         .top-bar-container,
-        .top-bar-container .byui-main,
+        .top-bar-container .vab-main,
         .side-bar-container,
         .logo-container-vertical,
         .logo-container-horizontal,
@@ -237,15 +240,15 @@ export default {
 
         body .el-menu--horizontal .top-bar-item-container .el-menu-item:hover,
         body .el-menu--horizontal .top-bar-item-container .el-menu-item.is-active,
-        body .app-wrapper .side-bar-container .el-submenu .el-menu-item.is-active,
-        body .app-wrapper .side-bar-container .el-menu-item:hover,
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-submenu .el-menu-item.is-active,
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu-item:hover,
         body .side-bar-container .el-menu .el-menu-item.is-active {
           background-color:${menuBackgroundActive}!important;
         }
 
         .tags-bar-item.router-link-exact-active.router-link-active.active {
-          background-color: ${tagViewsBackgroundActive}!important;
-          border: 1px solid ${tagViewsBackgroundActive}!important;
+          background-color: ${tagsBarBackgroundActive}!important;
+          border: 1px solid ${tagsBarBackgroundActive}!important;
         }
 
         .el-button.el-button--primary {
@@ -258,20 +261,20 @@ export default {
           border-color: ${paginationBackgroundActive}!important;
         }
 
-        body .app-wrapper .side-bar-container .nest-menu .el-menu-item {
+        body .vue-admin-beautiful-wrapper .side-bar-container .nest-menu .el-menu-item {
           background-color: ${menuChildrenBackground}!important;
         }
 
-        body .app-wrapper .side-bar-container .el-menu .nest-menu [class*=menu] {
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu .nest-menu [class*=menu] {
           background-color: ${menuChildrenBackground}!important
         }
 
-        body .app-wrapper .side-bar-container .el-menu .nest-menu [class*=menu].is-active {
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu .nest-menu [class*=menu].is-active {
           background-color:${menuBackgroundActive}!important
         }
-        body .app-wrapper .side-bar-container .el-menu [class*=menu] span,
-        body .app-wrapper .side-bar-container .el-menu [class*=menu] svg,
-        body .app-wrapper .side-bar-container .el-menu [class*=menu] i
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu [class*=menu] span,
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu [class*=menu] svg,
+        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu [class*=menu] i
         {
           color:${menuColor}!important
         }
@@ -285,7 +288,7 @@ export default {
             "menuChildrenBackground":"${menuChildrenBackground}",
             "menuBackgroundActive":"${menuBackgroundActive}",
             "menuColor":"${menuColor}",
-            "tagViewsBackgroundActive":"${tagViewsBackgroundActive}",
+            "tagsBarBackgroundActive":"${tagsBarBackgroundActive}",
             "layout":"${layout}",
             "header":"${header}",
             "tagsBar":"${tagsBar}",

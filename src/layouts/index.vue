@@ -1,5 +1,5 @@
 <template>
-  <div class="app-wrapper" :class="classObj">
+  <div class="vue-admin-beautiful-wrapper" :class="classObj">
     <div
       v-if="'horizontal' === layout"
       class="layout-container-horizontal"
@@ -9,20 +9,19 @@
       }"
     >
       <div :class="header === 'fixed' ? 'fixed-header' : ''">
-        <top-bar />
+        <top-bar></top-bar>
         <div
           v-if="tagsBar === 'true' || tagsBar === true"
           :class="{ 'tag-view-show': tagsBar }"
         >
-          <byui-main>
-            <tags-bar />
-          </byui-main>
+          <div class="vab-main">
+            <tags-bar></tags-bar>
+          </div>
         </div>
       </div>
-      <byui-main class="main-padding">
-        <nav-bar />
-        <app-main />
-      </byui-main>
+      <div class="vab-main main-padding">
+        <app-main></app-main>
+      </div>
     </div>
     <div
       v-else
@@ -37,26 +36,31 @@
         class="mask"
         @click="handleFoldSideBar"
       />
-      <side-bar />
-      <byui-main :class="collapse ? 'is-collapse-main' : ''">
+      <side-bar></side-bar>
+      <div class="vab-main" :class="collapse ? 'is-collapse-main' : ''">
         <div :class="header === 'fixed' ? 'fixed-header' : ''">
-          <nav-bar />
+          <nav-bar></nav-bar>
           <tags-bar v-if="tagsBar === 'true' || tagsBar === true" />
         </div>
-        <app-main />
-      </byui-main>
+        <app-main></app-main>
+      </div>
     </div>
-    <byui-back-to-top transition-name="fade" />
+    <back-to-top transition-name="fade"></back-to-top>
   </div>
 </template>
 
 <script>
-import { AppMain, NavBar, SideBar, TagsBar, TopBar } from "./components";
-import ByuiMain from "@/components/ByuiMain";
-import ByuiBackToTop from "@/components/ByuiBackToTop";
-import { mapGetters } from "vuex";
+import {
+  AppMain,
+  NavBar,
+  SideBar,
+  TagsBar,
+  TopBar,
+  BackToTop,
+} from "./components";
+import { mapGetters, mapActions } from "vuex";
 import { tokenName } from "@/config/settings";
-import Media from "zx-media/mixin/Media";
+import Media from "./mixin/Media";
 
 export default {
   name: "Layout",
@@ -65,16 +69,21 @@ export default {
     NavBar,
     SideBar,
     AppMain,
-    ByuiMain,
     TagsBar,
-    ByuiBackToTop,
+    BackToTop,
   },
   mixins: [Media],
   data() {
     return {};
   },
   computed: {
-    ...mapGetters(["layout", "tagsBar", "collapse", "header", "device"]),
+    ...mapGetters({
+      layout: "settings/layout",
+      tagsBar: "settings/tagsBar",
+      collapse: "settings/collapse",
+      header: "settings/header",
+      device: "settings/device",
+    }),
     classObj() {
       return {
         mobile: this.device === "mobile",
@@ -94,9 +103,9 @@ export default {
     });
   },
   methods: {
-    handleFoldSideBar() {
-      this.$store.dispatch("settings/foldSideBar");
-    },
+    ...mapActions({
+      handleFoldSideBar: "settings/foldSideBar",
+    }),
   },
 };
 </script>
@@ -112,7 +121,7 @@ export default {
   overflow: hidden;
 }
 
-.app-wrapper {
+.vue-admin-beautiful-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -129,8 +138,9 @@ export default {
     }
 
     ::v-deep {
-      .byui-main {
+      .vab-main {
         width: 88%;
+        margin: auto;
       }
 
       .fixed-header {
@@ -185,7 +195,7 @@ export default {
       padding-top: 56px;
     }
 
-    .byui-main {
+    .vab-main {
       position: relative;
       min-height: 100%;
       margin-left: $base-left-menu-width;
@@ -249,7 +259,7 @@ export default {
           width: 0;
         }
 
-        .byui-main {
+        .vab-main {
           width: 100%;
           margin-left: 0;
 
@@ -260,7 +270,7 @@ export default {
         }
       }
 
-      .byui-main {
+      .vab-main {
         .fixed-header {
           left: 0 !important;
           width: 100% !important;

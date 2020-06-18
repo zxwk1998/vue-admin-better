@@ -1,10 +1,18 @@
 <template>
   <div class="index-container">
     <el-row :gutter="15">
-      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+      <el-col
+        v-if="nodeEnv !== 'development'"
+        :xs="24"
+        :sm="24"
+        :md="24"
+        :lg="24"
+        :xl="24"
+      >
         <el-alert
-          title="作者初衷：iView Pro要卖￥9999，layui Admin要卖￥2600，作者只好自己动手写一个分享给大家咯，免费的东西一定就差吗，一个人就一定比不过一个团队吗？我还那么年轻，我不会认输，在屏幕前驻足的你也不会轻易认输，对吧！弱小的人才习惯嘲讽与否定，内心强大的人从不吝啬赞美与鼓励，人生在世，得到每个人的认可几乎是痴心妄想，我也只是一条略懂前端的咸鱼，可我仍一直怀揣着改变世界的梦想，希望我们每个人，不管过程怎样，结局都是美好的。。。"
-          :closable="false"
+          v-if="noticeList[0]"
+          :title="noticeList[0].title"
+          :closable="noticeList[0].closable"
         >
           <a
             target="_blank"
@@ -23,16 +31,16 @@
           <div slot="header">
             <span>访问量</span>
           </div>
-          <byui-chart
+          <vab-chart
             :autoresize="true"
-            theme="byui-echarts-theme"
+            theme="vab-echarts-theme"
             :options="fwl"
           />
           <div class="bottom">
             <span
               >日均访问量:
 
-              <byui-count
+              <vab-count
                 :start-val="config1.startVal"
                 :end-val="config1.endVal"
                 :duration="config1.duration"
@@ -50,15 +58,15 @@
           <div slot="header">
             <span>授权数</span>
           </div>
-          <byui-chart
+          <vab-chart
             :autoresize="true"
-            theme="byui-echarts-theme"
+            theme="vab-echarts-theme"
             :options="sqs"
           />
           <div class="bottom">
             <span
               >总授权数:
-              <byui-count
+              <vab-count
                 :start-val="config2.startVal"
                 :end-val="config2.endVal"
                 :duration="config2.duration"
@@ -75,16 +83,16 @@
           <div slot="header">
             <span>词云</span>
           </div>
-          <byui-chart
+          <vab-chart
             :autoresize="true"
-            theme="byui-echarts-theme"
+            theme="vab-echarts-theme"
             :options="cy"
             @zr:click="handleZrClick"
             @click="handleClick"
           />
           <div class="bottom">
             <span
-              >词云数量:<byui-count
+              >词云数量:<vab-count
                 :start-val="config3.startVal"
                 :end-val="config3.endVal"
                 :duration="config3.duration"
@@ -101,9 +109,9 @@
           <div slot="header">
             <span>销售量/签单量</span>
           </div>
-          <byui-chart
+          <vab-chart
             :autoresize="true"
-            theme="byui-echarts-theme"
+            theme="vab-echarts-theme"
             :options="xsl"
           />
         </el-card>
@@ -140,10 +148,10 @@
               <td>{{ dependencies.axios }}</td>
             </tr>
           </table>
-          <div class="bottom-btn">
+          <div v-if="nodeEnv !== 'development'" class="bottom-btn">
             <el-popover placement="top" width="250" trigger="hover">
               <p>
-                谢谢您愿意支持开源，加群获取详细教程，群内提供vue-admin-beautiful-template基础模板
+                这是一个付费群，谢谢您愿意支持开源，加群获取详细文档，群内提供vue-admin-beautiful-template基础模板
               </p>
               <el-image :src="require('@/assets/ewm.png')"></el-image>
               <a slot="reference" target="_blank">
@@ -179,7 +187,7 @@
           </div>
         </el-card>
       </el-col>
-      <el-col :span="24">
+      <el-col v-if="nodeEnv !== 'development'" :span="24">
         <el-alert
           title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319，群内提供文档教程，如果你觉得框架一文不值，请勿加群"
           :closable="false"
@@ -198,15 +206,22 @@
       >
         <app-link :to="item.link" target="_blank">
           <el-card class="icon-panel" shadow="never">
-            <byui-icon
+            <vab-icon
               :style="{ color: item.color }"
               :icon="['fas', item.icon]"
-            ></byui-icon>
+            ></vab-icon>
             <p>{{ item.title }}</p>
           </el-card>
         </app-link>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+      <el-col
+        v-if="nodeEnv !== 'development'"
+        :xs="24"
+        :sm="24"
+        :md="12"
+        :lg="12"
+        :xl="12"
+      >
         <el-card class="card" shadow="never">
           <div slot="header">
             <span>更新日志</span>
@@ -223,7 +238,14 @@
           </el-timeline>
         </el-card>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+      <el-col
+        v-if="nodeEnv !== 'development'"
+        :xs="24"
+        :sm="24"
+        :md="12"
+        :lg="12"
+        :xl="12"
+      >
         <el-card shadow="never">
           <div slot="header">
             <span>其他信息</span>
@@ -235,29 +257,16 @@
           >
           </el-alert>
           <br /> -->
-          <el-alert
-            title=" 其实人生改变命运的机会并没有太多，我们并不是不优秀，我们也并不是一无是处，我们也希望驻足山巅被众人仰望， 也许我们
-            缺少的只是一个机会，缺少的只是生命中的导师，我希望这个框架帮助到更多的人，希望有一天，我们面试的时候不再胆怯，希望有一天别人看到的不仅仅是你的努力，还有你的功成名就，出人头地"
-            type="success"
-            :closable="false"
-          >
-          </el-alert>
-          <br />
-          <el-alert
-            :closable="false"
-            title="框架优势：mock数据自动导出无需配置；views，vuex，api支持自动生成；自动fixed问题代码，可以愉快的拥抱eslint；支持stylint自动排序css属性，自动fiexed scss问题样式"
-            type="success"
-          >
-          </el-alert>
-          <br />
-          <el-alert
-            :closable="false"
-            title="鸣谢唐金州、花裤衩、贤心、element-ui、ivew的开源项目给我带来的很多的灵感"
-            type="success"
-          >
-          </el-alert>
-          <br />
-
+          <div v-for="(item, index) in noticeList" :key="index">
+            <el-alert
+              v-if="index !== 0"
+              :title="item.title"
+              :type="item.type"
+              :closable="item.closable"
+            >
+            </el-alert>
+            <br />
+          </div>
           <el-alert :closable="false" :title="userAgent" type="info">
           </el-alert>
           <br />
@@ -268,17 +277,18 @@
 </template>
 
 <script>
-import ByuiChart from "@/plugins/echarts";
-import ByuiCount from "@/plugins/byuiCount";
+import VabChart from "@/plugins/echarts";
+import VabCount from "@/plugins/vabCount";
 import { dependencies, devDependencies } from "../../../package.json";
 import { getList } from "@/api/changeLog";
+import { getNoticeList } from "@/api/notice";
 import { getRepos, getStargazers } from "@/api/github";
 import AppLink from "@/layouts/components/Link";
 export default {
   name: "Index",
   components: {
-    ByuiChart,
-    ByuiCount,
+    VabChart,
+    VabCount,
     AppLink,
   },
   data() {
@@ -573,6 +583,7 @@ export default {
       //更新日志
       reverse: true,
       activities: [],
+      noticeList: [],
       //其他信息
       userAgent: navigator.userAgent,
       //卡片图标
@@ -580,13 +591,13 @@ export default {
         {
           icon: "video",
           title: "视频播放器",
-          link: "/byui/player",
+          link: "/vab/player",
           color: "#ffc069",
         },
         {
           icon: "table",
           title: "表格",
-          link: "/byui/table/comprehensiveTable",
+          link: "/vab/table/comprehensiveTable",
           color: "#5cdbd3",
         },
         {
@@ -641,15 +652,16 @@ export default {
     handleChangeTheme() {
       this.$baseEventBus.$emit("theme");
     },
-    fetchData() {
-      getList().then((res) => {
-        res.data.map((item, index) => {
-          if (index === res.data.length - 1) {
-            item.color = "#0bbd87";
-          }
-        });
-        this.activities = res.data;
+    async fetchData() {
+      const { data } = await getList();
+      data.map((item, index) => {
+        if (index === data.length - 1) {
+          item.color = "#0bbd87";
+        }
       });
+      this.activities = data;
+      const res = await getNoticeList();
+      this.noticeList = res.data;
       /* getRepos({
         token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
       }).then((res) => {
@@ -667,7 +679,6 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
 .index-container {
   ::v-deep {
@@ -713,9 +724,7 @@ export default {
       padding: 9px 15px;
       font-size: 14px;
       line-height: 20px;
-      border-color: #e6e6e6;
-      border-style: solid;
-      border-width: 1px;
+      border: 1px solid #e6e6e6;
 
       &:first-child {
         width: 50%;

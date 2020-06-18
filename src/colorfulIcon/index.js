@@ -1,7 +1,7 @@
 import Vue from "vue";
 import ColorfullIcon from "@/components/ColorfullIcon";
 
-Vue.component("byui-colorful-icon", ColorfullIcon);
+Vue.component("vab-colorful-icon", ColorfullIcon);
 const req = require.context("./svg", false, /\.svg$/),
   requireAll = (requireContext) => {
     /*let a = requireContext.keys().map(requireContext);

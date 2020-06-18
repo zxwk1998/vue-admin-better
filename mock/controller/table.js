@@ -1,8 +1,7 @@
 import { mock } from "mockjs";
-
+import { handleRandomImage } from "../utils";
 const List = [];
 const count = 999;
-let num = 0;
 for (let i = 0; i < count; i++) {
   List.push(
     mock({
@@ -13,8 +12,8 @@ for (let i = 0; i < count; i++) {
       author: "@cname",
       datetime: "@datetime",
       pageViews: "@integer(300, 5000)",
-      img: `https://picsum.photos/200/200?random=${num++}`,
-      smallImg: `https://picsum.photos/40/40?random=${num++}`,
+      img: handleRandomImage(200, 200),
+      smallImg: handleRandomImage(40, 40),
       switch: "@boolean",
       percent: "@integer(80,99)",
     })
@@ -40,8 +39,8 @@ export default [
                 author: "@cname",
                 datetime: "@datetime",
                 pageViews: "@integer(300, 5000)",
-                img: `https://picsum.photos/200/200?random=${num++}`,
-                smallImg: `https://picsum.photos/40/40?random=${num++}`,
+                img: handleRandomImage(200, 200),
+                smallImg: handleRandomImage(40, 40),
                 switch: "@boolean",
                 percent: "@integer(80,99)",
               },

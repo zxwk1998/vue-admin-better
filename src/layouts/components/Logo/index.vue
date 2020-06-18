@@ -1,8 +1,12 @@
 <template>
   <div :class="'logo-container-' + layout">
     <router-link to="/">
-      <byui-remix-icon class="logo" icon-class="vuejs-fill" />
-      <span class="title" :title="title">
+      <vab-remix-icon v-if="logo" class="logo" icon-class="vuejs-fill" />
+      <span
+        class="title"
+        :class="{ 'hidden-xs-only': layout === 'horizontal' }"
+        :title="title"
+      >
         {{ title }}
       </span>
     </router-link>
@@ -10,7 +14,7 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-
+import { logo } from "@/config/settings";
 export default {
   name: "Logo",
   data() {
@@ -19,7 +23,10 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["logo", "layout"]),
+    ...mapGetters({
+      logo: "settings/logo",
+      layout: "settings/layout",
+    }),
   },
 };
 </script>
@@ -44,7 +51,7 @@ export default {
 @mixin title {
   display: inline-block;
   overflow: hidden;
-  font-size: $base-font-size-max;
+  font-size: 20px;
   font-weight: 600;
   line-height: 55px;
   color: $base-title-color;
@@ -68,6 +75,8 @@ export default {
 .logo-container-vertical {
   @include container;
 
+  height: 67px;
+  line-height: 67px;
   text-align: center;
 
   .logo {
@@ -77,7 +86,7 @@ export default {
   .title {
     @include title;
 
-    max-width: 140px;
+    max-width: calc(#{$base-left-menu-width} - 50px);
   }
 }
 </style>

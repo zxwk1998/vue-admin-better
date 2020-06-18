@@ -31,5 +31,5 @@ module.exports = {
     "no-descending-specificity": null,
     "declaration-colon-newline-after": null,
   },
-  ignoreFiles: ["**/*.js"],
+  ignoreFiles: ["**/*.js", "dist/*.*"],
 };

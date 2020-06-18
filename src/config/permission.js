@@ -1,4 +1,5 @@
 /**
+ * @copyright chuzhixin 1204505056@qq.com
  * @description 路由守卫
  */
 import router from "../router";
@@ -12,11 +13,10 @@ import {
   routesWhiteList,
 } from "@/config/settings";
 
-NProgress.configure({ showSpinner: false });
-router.beforeEach(async (to, from, next) => {
+NProgress.configure({ showSpinner: true });
+router.beforeResolve(async (to, from, next) => {
   NProgress.start();
-  document.title = getPageTitle(to.meta.title);
-  let hasToken = store.getters.accessToken;
+  let hasToken = store.getters["user/accessToken"];
   if (!loginInterception) hasToken = true;
   if (hasToken) {
     if (to.path === "/login") {
@@ -24,20 +24,21 @@ router.beforeEach(async (to, from, next) => {
       NProgress.done();
     } else {
       const hasPermissions =
-        store.getters.permissions && store.getters.permissions.length > 0;
+        store.getters["user/permissions"] &&
+        store.getters["user/permissions"].length > 0;
       if (hasPermissions) {
         next();
       } else {
         try {
-          const { permissions } = await store.dispatch("user/getInfo");
+          const permissions = await store.dispatch("user/getInfo");
           let accessRoutes = [];
           if (authentication === "intelligence") {
             accessRoutes = await store.dispatch(
-              "permission/setRoutes",
+              "routes/setRoutes",
               permissions
             );
           } else if (authentication === "all") {
-            accessRoutes = await store.dispatch("permission/setAllRoutes");
+            accessRoutes = await store.dispatch("routes/setAllRoutes");
           }
           router.addRoutes(accessRoutes);
           /*console.log(to);
@@ -61,6 +62,7 @@ router.beforeEach(async (to, from, next) => {
       NProgress.done();
     }
   }
+  document.title = getPageTitle(to.meta.title);
 });
 router.afterEach(() => {
   NProgress.done();

@@ -1,3 +1,4 @@
+import { handleRandomImage } from "../utils";
 const accessTokens = {
   admin: "admin-accessToken",
   editor: "editor-accessToken",
@@ -54,7 +55,7 @@ export default [
         userName = "editor";
       }
       if ("test-accessToken" === accessToken) {
-        permissions = ["admin", "editor", "test"];
+        permissions = ["admin", "editor"];
         userName = "test";
       }
       return {
@@ -63,6 +64,7 @@ export default [
         data: {
           permissions,
           userName,
+          avatar: handleRandomImage(50, 50),
         },
       };
     },

@@ -1,10 +1,7 @@
 <template>
   <div>
     <div class="pay-top-content">
-      <byui-icon
-        class="pay-success"
-        :icon="['fas', 'check-circle']"
-      ></byui-icon>
+      <vab-icon class="pay-success" :icon="['fas', 'check-circle']"></vab-icon>
       <p>支付成功</p>
     </div>
     <el-form

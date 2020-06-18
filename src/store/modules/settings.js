@@ -1,29 +1,41 @@
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description 所有全局配置的状态管理，如无必要请勿修改
+ */
+
 import defaultSettings from "@/config/settings";
-const { tagsBar, logo, layout, header } = defaultSettings;
+
+const { tagsBar, logo, layout, header, themeBar, skeleton } = defaultSettings;
 const theme = JSON.parse(localStorage.getItem("BYUI-VUE-THEME")) || "";
 const state = {
   tagsBar: theme.tagsBar || tagsBar,
-  logo: logo,
+  logo,
   collapse: false,
   layout: theme.layout || layout,
   header: theme.header || header,
+  skeleton,
   device: "desktop",
+  themeBar,
+};
+const getters = {
+  collapse: (state) => state.collapse,
+  device: (state) => state.device,
+  header: (state) => state.header,
+  layout: (state) => state.layout,
+  logo: (state) => state.logo,
+  tagsBar: (state) => state.tagsBar,
+  themeBar: (state) => state.themeBar,
+  skeleton: (state) => state.skeleton,
 };
 const mutations = {
   changeLayout: (state, layout) => {
-    if (layout) {
-      state.layout = layout;
-    }
+    if (layout) state.layout = layout;
   },
   changeHeader: (state, header) => {
-    if (header) {
-      state.header = header;
-    }
+    if (header) state.header = header;
   },
   changeTagsBar: (state, tagsBar) => {
-    if (tagsBar) {
-      state.tagsBar = tagsBar;
-    }
+    if (tagsBar) state.tagsBar = tagsBar;
   },
   changeCollapse: (state) => {
     state.collapse = !state.collapse;
@@ -61,4 +73,4 @@ const actions = {
     commit("toggleDevice", device);
   },
 };
-export default { state, mutations, actions };
+export default { state, getters, mutations, actions };

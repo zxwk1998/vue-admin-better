@@ -1,18 +1,26 @@
-const state = { logs: [] };
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description 异常捕获的状态拦截，请勿修改
+ */
+
+const state = { errorLogs: [] };
+const getters = {
+  errorLogs: (state) => state.errorLogs,
+};
 const mutations = {
-  addErrorLog: (state, log) => {
-    state.logs.push(log);
+  addErrorLog(state, errorLog) {
+    state.errorLogs.push(errorLog);
   },
   clearErrorLog: (state) => {
-    state.logs.splice(0);
+    state.errorLogs.splice(0);
   },
 };
 const actions = {
-  addErrorLog({ commit }, log) {
-    commit("addErrorLog", log);
+  addErrorLog({ commit }, errorLog) {
+    commit("addErrorLog", errorLog);
   },
   clearErrorLog({ commit }) {
     commit("clearErrorLog");
   },
 };
-export default { state, mutations, actions };
+export default { state, getters, mutations, actions };

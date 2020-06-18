@@ -15,37 +15,16 @@
       <el-col :xs="20" :sm="12" :md="12" :lg="12" :xl="12">
         <div class="right-panel">
           <error-log />
-          <byui-screenfull @refresh="refreshRoute"></byui-screenfull>
+          <full-screen-bar @refresh="refreshRoute"></full-screen-bar>
           <theme-bar></theme-bar>
-          <byui-icon
+          <vab-icon
             title="重载路由"
             :pulse="pulse"
             :icon="['fas', 'redo']"
             @click="refreshRoute"
           />
-          <el-dropdown @command="handleCommand">
-            <span class="el-dropdown-link">
-              <el-avatar
-                class="user-avatar"
-                :src="require('@/assets/user.gif')"
-              ></el-avatar>
-              <span class="user-name">{{ userName }}</span>
-              <i class="el-icon-arrow-down el-icon--right"></i>
-            </span>
-
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>
-                <byui-icon :icon="['fas', 'user']"></byui-icon>
-                个人中心
-              </el-dropdown-item>
-              <el-dropdown-item command="logout" divided>
-                <byui-icon :icon="['fas', 'sign-out-alt']"></byui-icon>
-                退出登录
-              </el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
-
-          <!--  <byui-icon
+          <avatar></avatar>
+          <!--  <vab-icon
             title="退出系统"
             :icon="['fas', 'sign-out-alt']"
             @click="logout"
@@ -58,17 +37,22 @@
 
 <script>
 import { mapGetters } from "vuex";
-import ErrorLog from "@/components/ErrorLog";
-import ByuiScreenfull from "@/components/ByuiScreenfull";
-import Breadcrumb from "zx-breadcrumb";
-import ThemeBar from "@/layouts/components/ThemeBar";
+
+import {
+  Avatar,
+  Breadcrumb,
+  ThemeBar,
+  FullScreenBar,
+  ErrorLog,
+} from "@/layouts/components";
 
 export default {
   name: "NavBar",
   components: {
+    Avatar,
     Breadcrumb,
     ErrorLog,
-    ByuiScreenfull,
+    FullScreenBar,
     ThemeBar,
   },
   data() {
@@ -77,34 +61,18 @@ export default {
     };
   },
   computed: {
-    ...mapGetters([
-      "avatar",
-      "collapse",
-      "userName",
-      "loginTimes",
-      "lastLoginTime",
-      "visitedRoutes",
-      "device",
-      "routes",
-    ]),
+    ...mapGetters({
+      collapse: "settings/collapse",
+      visitedRoutes: "tagsBar/visitedRoutes",
+      device: "settings/device",
+      routes: "routes/routes",
+    }),
   },
   methods: {
     handleCollapse() {
       this.$store.dispatch("settings/changeCollapse");
     },
-    async logout() {
-      await this.$baseConfirm(
-        "您确定要退出" + this.$baseTitle + "吗?",
-        null,
-        () => {
-          const fullPath = this.$route.fullPath;
-          this.$store.dispatch("user/logout").then(() => {
-            this.$router.push(`/login?redirect=${fullPath}`);
-          });
-        }
-      );
-    },
-    refreshRoute() {
+    async refreshRoute() {
       const arr = this.visitedRoutes.filter((item, index) => {
         if (item.path === this.$route.fullPath) {
           return item;
@@ -112,28 +80,13 @@ export default {
       });
       const view = arr[0];
       this.pulse = true;
-      this.$store.dispatch("tagsBar/delCachedRoutes", view).then(() => {
-        const { fullPath } = view;
-        this.$nextTick(() => {
-          this.$router
-            .replace({
-              path: "/redirect" + this.$route.fullPath,
-            })
-            .then(() => {
-              setTimeout(() => {
-                this.pulse = false;
-              }, 1000);
-            })
-            .catch(() => {});
-        });
+      await this.$store.dispatch("tagsBar/delRoute", view);
+      await this.$router.replace({
+        path: "/redirect" + this.$route.fullPath,
       });
-    },
-    handleCommand(command) {
-      switch (command) {
-        case "logout":
-          this.logout();
-          break;
-      }
+      setTimeout(() => {
+        this.pulse = false;
+      }, 1000);
     },
   },
 };
@@ -176,28 +129,28 @@ export default {
     justify-content: flex-end;
     height: 50px;
 
-    .user-avatar {
-      margin-right: 5px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .user-name {
-      position: relative;
-      top: -14px;
-      margin-right: 35px;
-      margin-left: 5px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .user-name + i {
-      position: absolute;
-      top: 16px;
-      right: 15px;
-    }
-
     ::v-deep {
+      .user-avatar {
+        margin-right: 5px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .user-name {
+        position: relative;
+        top: -14px;
+        margin-right: 35px;
+        margin-left: 5px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .user-name + i {
+        position: absolute;
+        top: 16px;
+        right: 15px;
+      }
+
       svg {
         width: 1em;
         height: 1em;
@@ -222,12 +175,5 @@ export default {
       }
     }
   }
-}
-</style>
-<style>
-.el-dropdown-menu--small .el-dropdown-menu__item {
-  padding: 0 15px;
-  font-size: 13px;
-  line-height: 36px !important;
 }
 </style>

@@ -1,31 +1,29 @@
 <template>
   <section class="app-main-container">
     <github-corner v-if="nodeEnv !== 'development'"></github-corner>
-    <byui-keel v-if="show" style="margin: 15px;">
-      <byui-keel-heading :img="true" />
-      <byui-keel-text :lines="7" />
-      <byui-keel-heading :img="true" />
-      <byui-keel-text :lines="6" />
-      <byui-keel-heading :img="true" />
-      <byui-keel-text :lines="8" />
-    </byui-keel>
+    <vab-keel v-if="show && skeleton" style="margin: 15px;">
+      <vab-keel-heading :img="true" />
+      <vab-keel-text :lines="7" />
+      <vab-keel-heading :img="true" />
+      <vab-keel-text :lines="6" />
+      <vab-keel-heading :img="true" />
+      <vab-keel-text :lines="8" />
+    </vab-keel>
     <transition mode="out-in" name="fade-transform">
       <keep-alive :include="cachedRoutes" :max="10">
-        <router-view :key="key" style="min-height: 78vh;" />
+        <router-view :key="key" style="min-height: 80.6vh;" />
       </keep-alive>
     </transition>
     <footer class="footer-copyright">
       Copyright
-      <byui-icon :icon="['fas', 'copyright']"></byui-icon>
+      <vab-icon :icon="['fas', 'copyright']"></vab-icon>
       {{ fullYear }} {{ copyright }}
-      <br />
-      我的目标不是做一名优秀的前端leader，我的目标是帮助到更多优秀的前端leader，停留在这句话的你一定会是或者已经是其中最优秀的那一个
     </footer>
   </section>
 </template>
 
 <script>
-import { ByuiKeel, ByuiKeelHeading, ByuiKeelText } from "@/plugins/byuiKeel";
+import { VabKeel, VabKeelHeading, VabKeelText } from "@/plugins/vabKeel";
 import { mapGetters } from "vuex";
 import GithubCorner from "@/components/GithubCorner";
 import { copyright } from "@/config/settings";
@@ -33,9 +31,9 @@ import { copyright } from "@/config/settings";
 export default {
   name: "AppMain",
   components: {
-    ByuiKeel,
-    ByuiKeelHeading,
-    ByuiKeelText,
+    VabKeel,
+    VabKeelHeading,
+    VabKeelText,
     GithubCorner,
   },
   data() {
@@ -47,26 +45,33 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["cachedRoutes", "device"]),
+    ...mapGetters({
+      visitedRoutes: "tagsBar/visitedRoutes",
+      device: "settings/device",
+      skeleton: "settings/skeleton",
+    }),
+    cachedRoutes() {
+      const cachedRoutesArr = [];
+      this.visitedRoutes.forEach((item) => {
+        if (!item.meta.noKeepAlive) {
+          cachedRoutesArr.push(item.name);
+        }
+      });
+      this.handleSkeleton(cachedRoutesArr);
+      return cachedRoutesArr;
+    },
     key() {
       return this.$route.path;
     },
   },
   watch: {
-    $route(to, from) {
-      this.$nextTick(() => {
-        if (this.$store.state.tagsBar.skeleton) {
-          this.show = true;
-          setTimeout(() => {
-            this.show = false;
-          }, 200);
-        } else {
-          this.show = false;
-        }
+    $route: {
+      handler(route) {
         if ("mobile" === this.device) {
           this.$store.dispatch("settings/foldSideBar");
         }
-      });
+      },
+      immediate: true,
     },
   },
   created() {},
@@ -75,7 +80,21 @@ export default {
       this.show = false;
     }, 200);
   },
-  methods: {},
+  methods: {
+    // TODO 骨架屏处理还有bug我找到更好的解决方案待修复
+    handleSkeleton(cachedRoutesArr) {
+      cachedRoutesArr.pop();
+      if (this.skeleton && !cachedRoutesArr.includes(this.$route.name)) {
+        cachedRoutesArr.push(this.$route.name);
+        this.show = true;
+        setTimeout(() => {
+          this.show = false;
+        }, 200);
+      } else {
+        this.show = false;
+      }
+    },
+  },
 };
 </script>
 
@@ -86,10 +105,11 @@ export default {
   overflow: hidden;
 
   .footer-copyright {
-    min-height: 70px;
-    line-height: 35px;
+    min-height: 55px;
+    line-height: 55px;
     color: rgba(0, 0, 0, 0.45);
     text-align: center;
+    border-top: 1px dashed $base-border-color;
   }
 }
 </style>

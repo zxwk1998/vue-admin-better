@@ -1,17 +1,20 @@
 import axios from "axios";
 import {
+  contentType,
   invalidCode,
   messageDuration,
   noPermissionCode,
   requestTimeout,
   successCode,
   tokenName,
-  contentType,
+  debounce,
 } from "@/config/settings";
 import { Loading, Message } from "element-ui";
 import store from "@/store";
 import qs from "qs";
 import router from "@/router";
+import _ from "lodash";
+
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
   timeout: requestTimeout,
@@ -22,8 +25,11 @@ const service = axios.create({
 let loadingInstance;
 service.interceptors.request.use(
   (config) => {
-    if (store.getters.accessToken) {
-      config.headers[tokenName] = store.getters.accessToken;
+    if (store.getters["user/accessToken"]) {
+      config.headers[tokenName] = store.getters["user/accessToken"];
+    }
+    if (config.data) {
+      config.data = _.pickBy(config.data, _.identity);
     }
     if (process.env.NODE_ENV !== "test") {
       if (contentType === "application/x-www-form-urlencoded;charset=UTF-8") {
@@ -32,16 +38,16 @@ service.interceptors.request.use(
         }
       }
     }
-
-    if (
-      config.url.includes("add") ||
-      config.url.includes("edit") ||
-      config.url.includes("set") ||
-      config.url.includes("update") ||
-      config.url.includes("import") ||
-      config.url.includes("export") ||
-      config.url.includes("save")
-    ) {
+    const needLoading = () => {
+      let status = false;
+      debounce.forEach((item) => {
+        if (_.includes(config.url, item)) {
+          status = true;
+        }
+      });
+      return status;
+    };
+    if (needLoading()) {
       loadingInstance = Loading.service();
     }
 
@@ -65,7 +71,7 @@ service.interceptors.response.use(
     if (loadingInstance) {
       loadingInstance.close();
     }
-    const { status, data } = response;
+    const { status, data, config } = response;
     const { code, msg } = data;
     if (code !== successCode && code !== 0) {
       switch (code) {
@@ -82,7 +88,10 @@ service.interceptors.response.use(
           errorMsg(msg || `后端接口${code}异常`);
           break;
       }
-      return Promise.reject({ code, msg } || "Error");
+      return Promise.reject(
+        "vue-admin-beautiful请求异常拦截:" +
+          JSON.stringify({ url: config.url, code, msg }) || "Error"
+      );
     } else {
       return data;
     }

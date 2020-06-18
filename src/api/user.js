@@ -1,6 +1,7 @@
 import request from "@/utils/request";
 import { encryptedData } from "@/utils/encrypt";
 import { loginRSA } from "@/config/settings";
+
 export async function login(data) {
   if (loginRSA) {
     data = await encryptedData(data);

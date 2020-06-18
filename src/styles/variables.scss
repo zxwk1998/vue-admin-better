@@ -1,3 +1,8 @@
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description 全局主题变量配置
+ */
+
 @charset "utf-8";
 
 $base-color-default: #1890ff;
@@ -30,7 +35,6 @@ $base-border-color: #ebeef5;
 $base-form-width: 600px;
 $base-input-height: 32px;
 $base-pagination-height: 28px;
-$base-dialog-title-height: 40px;
 $base-padding: 15px;
 $base-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 $base-font-color: #606266;
@@ -46,7 +50,7 @@ $base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
   menu-background: $base-menu-background;
   menu-children-background: $base-menu-children-background;
   menu-background-active: $base-menu-background-active;
-  tagviews-background-active: $base-color-blue;
+  tags-bar-background-active: $base-color-blue;
   button-background: $base-color-blue;
   pagination-background-active: $base-color-blue;
 }

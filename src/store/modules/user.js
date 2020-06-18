@@ -1,3 +1,8 @@
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description 登录、获取用户信息、退出登录、清除accessToken逻辑，不建议修改
+ */
+
 import Vue from "vue";
 import { getInfo, login, logout } from "@/api/user";
 import {
@@ -6,90 +11,87 @@ import {
   setAccessToken,
 } from "@/utils/accessToken";
 import { resetRouter } from "@/router";
-import defaultSettings from "@/config/settings";
-const state = { accessToken: getAccessToken(), userName: "", permissions: [] };
+import { title, tokenName } from "@/config/settings";
+
+const state = {
+  accessToken: getAccessToken(),
+  userName: "",
+  avatar: "",
+  permissions: [],
+};
+const getters = {
+  accessToken: (state) => state.accessToken,
+  userName: (state) => state.userName,
+  avatar: (state) => state.avatar,
+  permissions: (state) => state.permissions,
+};
 const mutations = {
-  setAccessToken: (state, accessToken) => {
+  setAccessToken(state, accessToken) {
     state.accessToken = accessToken;
+    setAccessToken(accessToken);
   },
-  setUserName: (state, userName) => {
+  setUserName(state, userName) {
     state.userName = userName;
   },
-  setPermissions: (state, permissions) => {
+  setAvatar(state, avatar) {
+    state.avatar = avatar;
+  },
+  setPermissions(state, permissions) {
     state.permissions = permissions;
   },
 };
 const actions = {
-  login({ commit }, userInfo) {
-    const { userName, password } = userInfo;
-    return new Promise((resolve, reject) => {
-      login({ userName, password })
-        .then((response) => {
-          const { accessToken } = response.data;
-          commit("setAccessToken", accessToken);
-          setAccessToken(accessToken);
-          const hour = new Date().getHours();
-          const thisTime =
-            hour < 8
-              ? "早上好"
-              : hour <= 11
-              ? "上午好"
-              : hour <= 13
-              ? "中午好"
-              : hour < 18
-              ? "下午好"
-              : "晚上好";
-          Vue.prototype.$baseNotify(
-            `欢迎登录${defaultSettings.title}`,
-            `${userName}，${thisTime}！`
-          );
-          resolve();
-        })
-        .catch((error) => {
-          reject(error);
-        });
-    });
+  async login({ commit }, userInfo) {
+    const { data } = await login(userInfo);
+    const accessToken = data[tokenName];
+    if (accessToken) {
+      commit("setAccessToken", accessToken);
+      const hour = new Date().getHours();
+      const thisTime =
+        hour < 8
+          ? "早上好"
+          : hour <= 11
+          ? "上午好"
+          : hour <= 13
+          ? "中午好"
+          : hour < 18
+          ? "下午好"
+          : "晚上好";
+      Vue.prototype.$baseNotify(`欢迎登录${title}`, `${thisTime}！`);
+    } else {
+      Vue.prototype.$baseMessage(
+        `登录接口异常，未正确返回${tokenName}...`,
+        "error"
+      );
+    }
   },
-  getInfo({ commit, state }) {
-    return new Promise((resolve, reject) => {
-      getInfo(state.accessToken)
-        .then((response) => {
-          const { data } = response;
-          if (!data) {
-            reject("验证失败，请重新登录...");
-          }
-          let { permissions, userName } = data;
-          commit("setPermissions", permissions);
-          commit("setUserName", userName);
-          resolve(data);
-        })
-        .catch((error) => {
-          reject(error);
-        });
-    });
+  async getInfo({ commit, state }) {
+    const { data } = await getInfo(state.accessToken);
+    if (!data) {
+      Vue.prototype.$baseMessage("验证失败，请重新登录...", "error");
+      return false;
+    }
+    let { permissions, userName, avatar } = data;
+    if (permissions && userName) {
+      commit("setPermissions", permissions);
+      commit("setUserName", userName);
+      commit("setAvatar", avatar);
+      return permissions;
+    } else {
+      Vue.prototype.$baseMessage("获取用户信息接口异常", "error");
+      return false;
+    }
   },
-  logout({ commit, state, dispatch }) {
-    return new Promise((resolve, reject) => {
-      logout(state.accessToken)
-        .then(() => {
-          commit("setAccessToken", "");
-          commit("setPermissions", []);
-          removeAccessToken();
-          resetRouter();
-          dispatch("tagsBar/delAllViews", null, { root: true });
-          resolve();
-        })
-        .catch((error) => {
-          reject(error);
-        });
-    });
+  async logout({ dispatch }) {
+    await logout(state.accessToken);
+    await dispatch("tagsBar/delAllRoutes", null, { root: true });
+    await dispatch("resetAccessToken");
+    await resetRouter();
   },
   resetAccessToken({ commit }) {
-    return new Promise((resolve) => {
-      commit("setAccessToken", "");
-      removeAccessToken();
-      resolve();
-    });
+    commit("setPermissions", []);
+    commit("setAccessToken", "");
+    removeAccessToken();
   },
 };
-export default { state, mutations, actions };
+export default { state, getters, mutations, actions };

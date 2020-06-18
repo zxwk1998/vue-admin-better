@@ -43,5 +43,6 @@
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.suggest.snippetsPreventQuickSuggestions": false
 }

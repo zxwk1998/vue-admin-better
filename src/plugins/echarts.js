@@ -1,8 +1,8 @@
 import "echarts";
 import "echarts-wordcloud";
 
-import ByuiChart from "vue-echarts";
-import theme from "./byui-echarts-theme.json";
+import VabChart from "vue-echarts";
+import theme from "./vab-echarts-theme.json";
 
-ByuiChart.registerTheme("byui-echarts-theme", theme);
-export default ByuiChart;
+VabChart.registerTheme("vab-echarts-theme", theme);
+export default VabChart;
