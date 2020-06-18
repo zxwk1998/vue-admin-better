@@ -1,27 +1,33 @@
 /**
  * @copyright chuzhixin 1204505056@qq.com
- * @description 路由守卫
+ * @description 路由守卫，目前两种模式：all模式与intelligence模式
  */
 import router from "../router";
 import store from "../store";
-import NProgress from "nprogress";
+import VabProgress from "nprogress";
 import "nprogress/nprogress.css";
 import getPageTitle from "@/utils/pageTitle";
 import {
   authentication,
   loginInterception,
   routesWhiteList,
+  progressBar,
 } from "@/config/settings";
 
-NProgress.configure({ showSpinner: true });
+VabProgress.configure({
+  easing: "ease",
+  speed: 500,
+  trickleSpeed: 200,
+  showSpinner: false,
+});
 router.beforeResolve(async (to, from, next) => {
-  NProgress.start();
+  if (progressBar) VabProgress.start();
   let hasToken = store.getters["user/accessToken"];
   if (!loginInterception) hasToken = true;
   if (hasToken) {
     if (to.path === "/login") {
       next({ path: "/" });
-      NProgress.done();
+      if (progressBar) VabProgress.done();
     } else {
       const hasPermissions =
         store.getters["user/permissions"] &&
@@ -50,7 +56,7 @@ router.beforeResolve(async (to, from, next) => {
         } catch (error) {
           await store.dispatch("user/resetAccessToken");
           next(`/login?redirect=${to.path}`);
-          NProgress.done();
+          if (progressBar) VabProgress.done();
         }
       }
     }
@@ -59,11 +65,11 @@ router.beforeResolve(async (to, from, next) => {
       next();
     } else {
       next(`/login?redirect=${to.path}`);
-      NProgress.done();
+      if (progressBar) VabProgress.done();
     }
   }
   document.title = getPageTitle(to.meta.title);
 });
 router.afterEach(() => {
-  NProgress.done();
+  if (progressBar) VabProgress.done();
 });
