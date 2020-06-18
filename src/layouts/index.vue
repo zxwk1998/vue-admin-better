@@ -225,11 +225,9 @@ export default {
 
         .app-main-container {
           width: calc(100% - 30px);
-          min-height: calc(100vh - 127px);
           margin: 15px auto;
           background: $base-color-white;
           border-radius: $base-border-radius;
-          box-shadow: $base-box-shadow;
         }
       }
 
