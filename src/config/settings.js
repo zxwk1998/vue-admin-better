@@ -22,7 +22,7 @@ module.exports = {
   //是否显示顶部进度条
   progressBar: true,
   // 路由模式，可选值为 history 或 hash
-  routerMode: "history",
+  routerMode: "hash",
   //不经过token校验的路由
   routesWhiteList: ["/login", "/404", "/401"],
   //加载时显示文字
