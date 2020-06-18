@@ -2,6 +2,8 @@
 
 #### - [演示地址 vue-admin-beautiful ](http://beautiful.panm.cn/vue-admin-beautiful)
 
+#### - [备份地址 vue-admin-beautiful ](https://chu1204505056.gitee.io/vue-admin-beautiful)
+
 #### - [clever 版本 演示地址 vue-admin-beautiful ](http://beautiful.panm.cn/vue-admin-clever)
 
 #### - [开源地址，感谢 star](https://github.com/chuzhixin/vue-admin-beautiful)
@@ -20,7 +22,7 @@
 
 #### - [uView 开源地址（uView UI，是 uni-app 生态优秀的 UI 框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水）](https://github.com/YanxinNet/uView)
 
-#### <font color="red">已付费置顶 烦请小号刷差评的放过 我也需要养家糊口 也祝您财运亨通 好不好用请看演示地址 保留版权信息可免费商用（页面所有版权信息不付费也可完全删除） 完全自定义版权299元，VIP+完全自定义版权360 元 (赠送 VIP，包含 VIP 群内所有特权，可完全修改为自己的版权信息)，VIP 群内提供详细的视频与文档教程，由于置顶费用较高，如有需要在本页加广告的朋友可以联系我</font>
+#### <font color="red">已付费置顶 烦请小号刷差评的放过 我也需要养家糊口 也祝您财运亨通 好不好用请看演示地址 保留版权信息可免费商用（页面所有版权信息不付费也可完全删除） 完全自定义版权 299 元，VIP+完全自定义版权 360 元 (赠送 VIP，包含 VIP 群内所有特权，可完全修改为自己的版权信息)，VIP 群内提供详细的视频与文档教程，由于置顶费用较高，如有需要在本页加广告的朋友可以联系我</font>
 
 ## 运行步骤，严格按步骤来
 

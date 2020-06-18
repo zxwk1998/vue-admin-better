@@ -22,9 +22,9 @@
               style="height: 100%;"
               src="https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=social"
             />
+            <br />
           </a>
         </el-alert>
-        <br />
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
         <el-card shadow="never">
@@ -679,6 +679,8 @@ export default {
 
   ::v-deep {
     .el-alert--info.is-light {
+      min-height: 82px;
+      margin-bottom: 15px;
       color: #909399;
       background-color: $base-color-white;
       border: 1px solid #ebeef5;
