@@ -74,7 +74,7 @@ export default {
     },
     async refreshRoute() {
       const arr = this.visitedRoutes.filter((item, index) => {
-        if (item.path === this.$route.fullPath) {
+        if (item.path === this.$route.path) {
           return item;
         }
       });

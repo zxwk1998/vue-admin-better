@@ -1,12 +1,17 @@
 <script>
 export default {
   name: "Redirect",
-  created() {
-    const { params, query } = this.$route;
-    const { path } = params;
-    this.$router.replace({ path: "/" + path, query });
+  watch: {
+    $route: {
+      handler(route) {
+        const { params, query } = this.$route;
+        const { path } = params;
+        this.$router.replace({ path: "/" + path, query });
+      },
+      immediate: true,
+    },
   },
-  render: function (h) {
+  render(h) {
     return h();
   },
 };
