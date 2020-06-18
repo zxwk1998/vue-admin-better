@@ -174,7 +174,7 @@
         </el-divider>
         <el-avatar icon="el-icon-user-solid"></el-avatar>
         <el-divider content-position="left"
-          >步骤条
+          >页头
           <a
             target="_blank"
             href="https://chu1204505056.gitee.io/element/#/zh-CN/component/page-header"
