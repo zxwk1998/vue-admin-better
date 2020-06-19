@@ -1,6 +1,6 @@
 /**
  * @copyright chuzhixin 1204505056@qq.com
- * @description tagsBar多标签页逻辑，此处借鉴了很多开源项目，踩了很多坑，请勿修改
+ * @description tagsBar多标签页逻辑，前期借鉴了很多开源项目发现都有个共同的特点很繁琐并不符合框架设计的初衷，后来在github用户cyea的启发下完成了重构，请勿修改
  */
 
 const state = {
@@ -12,9 +12,7 @@ const getters = {
 const mutations = {
   addVisitedRoute(state, view) {
     if (state.visitedRoutes.some((item) => item.path === view.path)) return;
-    state.visitedRoutes.push(
-      Object.assign({}, view, { title: view.meta.title })
-    );
+    state.visitedRoutes.push(Object.assign({}, view));
   },
   delVisitedRoute(state, view) {
     state.visitedRoutes.forEach((item, index) => {
