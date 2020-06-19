@@ -8,6 +8,8 @@ const {
   title,
   abbreviation,
   devPort,
+  providePlugin,
+  build7z,
 } = require("./src/config/settings");
 const { version, author } = require("./package.json");
 const Webpack = require("webpack");
@@ -18,7 +20,7 @@ const time = require("dayjs")().format("YYYY-M-D HH:mm:ss");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const productionGzipExtensions = ["html", "js", "css", "svg"];
 process.env.VUE_APP_TITLE = title || "vue-admin-beautiful";
-process.env.VUE_APP_AUTHOR = author;
+process.env.VUE_APP_AUTHOR = author || "chuzhixin";
 process.env.VUE_APP_UPDATE_TIME = time;
 process.env.VUE_APP_VERSION = version;
 function resolve(dir) {
@@ -51,7 +53,7 @@ module.exports = {
     },
     after: mockServer(),
   },
-  configureWebpack(config) {
+  configureWebpack() {
     return {
       resolve: {
         alias: {
@@ -60,15 +62,7 @@ module.exports = {
         },
       },
       plugins: [
-        new Webpack.ProvidePlugin({
-          $: "jquery",
-          jQuery: "jquery",
-          "windows.jQuery": "jquery",
-          echarts: "echarts",
-          "window.echarts": "echarts",
-          maptalks: "maptalks",
-          "window.maptalks": "maptalks",
-        }),
+        new Webpack.ProvidePlugin(providePlugin),
         new WebpackBar({
           name: `\u0076\u0075\u0065\u002d\u0061\u0064\u006d\u0069\u006e\u002d\u0062\u0065\u0061\u0075\u0074\u0069\u0066\u0075\u006c`,
         }),
@@ -170,24 +164,26 @@ module.exports = {
         },
       ])
       .end();
-    config.when(process.env.NODE_ENV === "production", (config) => {
-      config
-        .plugin("fileManager")
-        .use(FileManagerPlugin, [
-          {
-            onEnd: {
-              delete: ["./dist/video", "./dist/data"],
-              archive: [
-                {
-                  source: "./dist",
-                  destination: `./dist/${abbreviation}_dist_${date}.7z`,
-                },
-              ],
+    if (build7z) {
+      config.when(process.env.NODE_ENV === "production", (config) => {
+        config
+          .plugin("fileManager")
+          .use(FileManagerPlugin, [
+            {
+              onEnd: {
+                delete: [`./${outputDir}/video`, `./${outputDir}/data`],
+                archive: [
+                  {
+                    source: `./${outputDir}`,
+                    destination: `./${outputDir}/${abbreviation}_${outputDir}_${date}.7z`,
+                  },
+                ],
+              },
             },
-          },
-        ])
-        .end();
-    });
+          ])
+          .end();
+      });
+    }
   },
   runtimeCompiler: true,
   productionSourceMap: false,

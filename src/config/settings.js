@@ -73,4 +73,16 @@ module.exports = {
   defaultOopeneds: ["/vab"],
   //需要加loading层的请求，防止重复提交
   debounce: ["doEdit"],
+  //需要自动注入并加载的模块
+  providePlugin: {
+    $: "jquery",
+    jQuery: "jquery",
+    "windows.jQuery": "jquery",
+    echarts: "echarts",
+    "window.echarts": "echarts",
+    maptalks: "maptalks",
+    "window.maptalks": "maptalks",
+  },
+  //npm run build时是否自动生成7z压缩包
+  build7z: true,
 };
