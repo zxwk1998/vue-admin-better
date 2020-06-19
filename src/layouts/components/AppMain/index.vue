@@ -83,7 +83,6 @@ export default {
   methods: {
     // TODO 骨架屏处理还有bug我找到更好的解决方案待修复
     handleSkeleton(cachedRoutesArr) {
-      cachedRoutesArr.pop();
       if (this.skeleton && !cachedRoutesArr.includes(this.$route.name)) {
         cachedRoutesArr.push(this.$route.name);
         this.show = true;
