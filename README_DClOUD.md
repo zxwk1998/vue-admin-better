@@ -35,3 +35,7 @@ cnpm run serve
 ```
 
 #### <font color="red">已付费置顶 烦请小号刷差评的放过 我也需要养家糊口 也祝您财运亨通 好不好用请看演示地址 保留版权信息可免费商用（页面所有版权信息不付费也可完全删除） 完全自定义版权 299 元)，VIP 群内提供详细的视频与文档教程，由于置顶费用较高，如有需要在本页加广告的朋友可以联系我</font>
+
+#### github 标星增长量统计
+
+[![Stargazers over time](https://starcharts.herokuapp.com/chuzhixin/vue-admin-beautiful.svg)](https://github.com/chuzhixin/vue-admin-beautiful)

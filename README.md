@@ -51,3 +51,7 @@ cnpm run serve
 ## 关于商用
 
 保留开发者控制台打印的框架及作者信息即可免费商用，如需自定义为自己的版权信息，需联系 QQ1204505056 支付 299
+
+#### github 标星增长量统计
+
+[![Stargazers over time](https://starcharts.herokuapp.com/chuzhixin/vue-admin-beautiful.svg)](https://github.com/chuzhixin/vue-admin-beautiful)
