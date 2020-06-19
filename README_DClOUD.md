@@ -1,8 +1,8 @@
 ## 本项目地址
 
-#### - [演示地址 vue-admin-beautiful ](http://beautiful.panm.cn/vue-admin-beautiful)
+#### - [演示地址 1 vue-admin-beautiful ](https://chu1204505056.gitee.io/vue-admin-beautiful)
 
-#### - [备份地址 vue-admin-beautiful ](https://chu1204505056.gitee.io/vue-admin-beautiful)
+#### - [演示地址 2 vue-admin-beautiful ](http://beautiful.panm.cn/vue-admin-beautiful)
 
 #### - [clever 版本 演示地址 vue-admin-beautiful ](http://beautiful.panm.cn/vue-admin-clever)
 
