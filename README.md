@@ -1,10 +1,8 @@
-# 介绍
+![](https://repository-images.githubusercontent.com/249342059/ba4c6a80-b305-11ea-9d02-f90e36568169)
 
 ## 演示地址
 
-#### - [演示地址 1 vue-admin-beautiful ](https://chu1204505056.gitee.io/vue-admin-beautiful)
-
-#### - [演示地址 2 vue-admin-beautiful ](http://beautiful.panm.cn/vue-admin-beautiful)
+#### - [演示地址 1： vue-admin-beautiful （横向纵向布局无缝切换）](http://beautiful.panm.cn/vue-admin-beautiful)
 
 #### - [演示地址 2： vue-admin-clever （常规后台管理布局）](http://beautiful.panm.cn/vue-admin-clever)
 
@@ -51,7 +49,3 @@ cnpm run serve
 ## 关于商用
 
 保留开发者控制台打印的框架及作者信息即可免费商用，如需自定义为自己的版权信息，需联系 QQ1204505056 支付 299
-
-#### github 标星增长量统计
-
-[![Stargazers over time](https://starcharts.herokuapp.com/chuzhixin/vue-admin-beautiful.svg)](https://github.com/chuzhixin/vue-admin-beautiful)
