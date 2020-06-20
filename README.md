@@ -2,6 +2,8 @@
 
 #### - [演示地址 1： vue-admin-beautiful （横向纵向布局无缝切换）](http://beautiful.panm.cn/vue-admin-beautiful)
 
+#### - [国内备份地址： vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful)
+
 #### - [演示地址 2： vue-admin-clever （常规后台管理布局）](http://beautiful.panm.cn/vue-admin-clever)
 
 ## 友情链接
