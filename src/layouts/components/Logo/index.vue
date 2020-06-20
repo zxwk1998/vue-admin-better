@@ -86,7 +86,7 @@ export default {
   .title {
     @include title;
 
-    max-width: calc(#{$base-left-menu-width} - 50px);
+    max-width: calc(#{$base-left-menu-width} - 60px);
   }
 }
 </style>
