@@ -42,7 +42,7 @@ $base-left-menu-width: 220px;
 $base-right-content-width: calc(100% - #{$base-left-menu-width});
 $base-left-menu-width-min: 65px;
 $base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
-
+$base-transition: all 0.3s;
 /* stylelint-disable */
 :export {
   menu-color: $base-menu-color;

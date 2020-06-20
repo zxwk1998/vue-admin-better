@@ -200,7 +200,7 @@ export default {
       min-height: 100%;
       margin-left: $base-left-menu-width;
       background: #f6f8f9;
-      transition: all 0.1s;
+      transition: $base-transition;
 
       ::v-deep {
         .fixed-header {
@@ -209,7 +209,7 @@ export default {
           left: $base-left-menu-width;
           width: $base-right-content-width;
           box-shadow: $base-box-shadow;
-          transition: all 0.1s;
+          transition: $base-transition;
         }
 
         .nav-bar-container {

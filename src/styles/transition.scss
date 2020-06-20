@@ -7,7 +7,7 @@
 
 .fade-transform-leave-active,
 .fade-transform-enter-active {
-  transition: all 0.1s ease-in;
+  transition: $base-transition;
 }
 
 .fade-transform-enter {
