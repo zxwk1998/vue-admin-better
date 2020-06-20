@@ -1,5 +1,3 @@
-![](https://repository-images.githubusercontent.com/249342059/ba4c6a80-b305-11ea-9d02-f90e36568169)
-
 ## 演示地址
 
 #### - [演示地址 1： vue-admin-beautiful （横向纵向布局无缝切换）](http://beautiful.panm.cn/vue-admin-beautiful)
