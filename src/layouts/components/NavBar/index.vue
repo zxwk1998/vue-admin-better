@@ -133,10 +133,10 @@ export default {
 
     ::v-deep {
       .user-avatar {
+        margin-top: 2px;
         margin-right: 5px;
         font-weight: 600;
         cursor: pointer;
-        margin-top: 2px;
       }
 
       .user-name {
