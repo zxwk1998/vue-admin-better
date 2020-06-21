@@ -167,7 +167,7 @@ export const asyncRoutes = [
         path: "map",
         name: "Map",
         component: () => import("@/views/vab/map/index"),
-        meta: { title: "地图", permissions: ["admin"] },
+        meta: { title: "地图", permissions: ["admin"], badge: "Pro" },
       },
       {
         path: "webSocket",
@@ -406,7 +406,7 @@ export const asyncRoutes = [
         path: "more",
         name: "More",
         component: () => import("@/views/vab/more/index"),
-        meta: { title: "更多组件", permissions: ["admin"], badge: "Pro" },
+        meta: { title: "更多组件", permissions: ["admin"] },
       },
     ],
   },
