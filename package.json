@@ -100,7 +100,6 @@
     "prettier": "^2.0.5",
     "sass": "^1.26.8",
     "sass-loader": "^8.0.2",
-    "script-ext-html-webpack-plugin": "^2.1.4",
     "script-loader": "^0.7.2",
     "serve-static": "^1.14.1",
     "stylelint": "^13.6.0",

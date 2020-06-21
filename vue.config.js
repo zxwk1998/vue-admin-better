@@ -111,11 +111,6 @@ module.exports = {
     config.when(process.env.NODE_ENV !== "development", (config) => {
       config.performance.set("hints", false);
       config.devtool("none");
-      config
-        .plugin("ScriptExtHtmlWebpackPlugin")
-        .after("html")
-        .use("script-ext-html-webpack-plugin", [{ inline: /runtime\..*\.js$/ }])
-        .end();
       config.optimization.splitChunks({
         chunks: "all",
         cacheGroups: {
