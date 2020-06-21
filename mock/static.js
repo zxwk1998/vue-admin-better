@@ -1,5 +1,9 @@
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description 导入所有 controller 模块，浏览器环境中自动输出controller文件夹下Mock接口，请勿修改。
+ */
 import Mock from "mockjs";
-import { param2Obj } from "../src/utils";
+import { paramObj } from "../src/utils";
 
 const mocks = [];
 const files = require.context("./controller", false, /\.js$/);
@@ -30,7 +34,7 @@ export function mockXHR() {
         result = respond({
           method: type,
           body: JSON.parse(body),
-          query: param2Obj(url),
+          query: paramObj(url),
         });
       } else {
         result = respond;

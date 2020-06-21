@@ -1,39 +1,29 @@
-import fs from "fs";
-import { join } from "path";
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description 导入所有 controller 模块，npm run serve时在node环境中自动输出controller文件夹下Mock接口，请勿修改。
+ */
+
+import { handleMockArray } from "./utils";
 import chalk from "chalk";
 import dotenv from "dotenv";
+
 import { devPort, httpRequestFile } from "../src/config/settings";
 
-const array = [];
-
-const getFiles = (jsonPath) => {
-  const jsonFiles = [];
-  const findJsonFile = (path) => {
-    const files = fs.readdirSync(path);
-    files.forEach((item, index) => {
-      const fPath = join(path, item);
-      const stat = fs.statSync(fPath);
-      if (stat.isDirectory() === true) findJsonFile(item);
-      if (stat.isFile() === true) jsonFiles.push(item);
-    });
-  };
-  findJsonFile(jsonPath);
-  jsonFiles.forEach((item, index) => array.push(`./controller/${item}`));
-};
-getFiles("mock/controller");
 const mocks = [];
+const mockArray = handleMockArray();
+
 if (httpRequestFile) {
   fs.writeFile("./http/mock.http", "", {}, function (err) {
     if (err) throw err;
   });
 }
-array.forEach(async (item, index) => {
+mockArray.forEach(async (item) => {
   const obj = require(item).default;
   const envConfig = dotenv.parse(fs.readFileSync(".env.development"));
   const mockUrl = envConfig["VUE_APP_BASE_API"];
   await mocks.push(...obj);
   if (httpRequestFile) {
-    obj.forEach((item, index) => {
+    obj.forEach((item) => {
       fs.appendFile(
         "./http/mock.http",
         `\r\n###${item.url}###\r\POST http://localhost:${devPort}/${mockUrl}${item.url}\r\nContent-Type: application/x-www-form-urlencoded\r\n###\r\n`,

@@ -95,7 +95,7 @@ export function formatTime(time, option) {
  * @param url
  * @returns {{}|any}
  */
-export function param2Obj(url) {
+export function paramObj(url) {
   const search = url.split("?")[1];
   if (!search) {
     return {};

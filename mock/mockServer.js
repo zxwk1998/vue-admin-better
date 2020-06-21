@@ -83,11 +83,9 @@ module.exports = (app) => {
               delete require.cache[require.resolve(item)];
             }
           });
-
           const mockRoutes = registerRoutes(app);
           mockRoutesLength = mockRoutes.mockRoutesLength;
           mockStartIndex = mockRoutes.mockStartIndex;
-
           //console.log(chalk.blue(`> Mock服务热更新成功：${path}`));
         } catch (error) {
           console.log(chalk.red(error));
