@@ -14,7 +14,7 @@
       </el-col>
       <el-col :xs="20" :sm="12" :md="12" :lg="12" :xl="12">
         <div class="right-panel">
-          <error-log />
+          <error-log></error-log>
           <full-screen-bar @refresh="refreshRoute"></full-screen-bar>
           <theme-bar></theme-bar>
           <vab-icon
@@ -22,7 +22,7 @@
             :pulse="pulse"
             :icon="['fas', 'redo']"
             @click="refreshRoute"
-          />
+          ></vab-icon>
           <avatar></avatar>
           <!--  <vab-icon
             title="退出系统"
@@ -73,17 +73,19 @@ export default {
       this.$store.dispatch("settings/changeCollapse");
     },
     async refreshRoute() {
-      const arr = this.visitedRoutes.filter((item, index) => {
+      const arr = this.visitedRoutes.filter((item) => {
         if (item.path === this.$route.path) {
           return item;
         }
       });
-      const view = arr[0];
+      const route = arr[0];
       this.pulse = true;
-      await this.$store.dispatch("tagsBar/delRoute", view);
-      await this.$router.replace({
-        path: "/redirect" + this.$route.fullPath,
-      });
+      await this.$store.dispatch("tagsBar/delRoute", route);
+      await this.$router
+        .replace({
+          path: "/redirect" + this.$route.fullPath,
+        })
+        .catch(() => {});
       setTimeout(() => {
         this.pulse = false;
       }, 1000);

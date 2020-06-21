@@ -10,35 +10,35 @@ const getters = {
   visitedRoutes: (state) => state.visitedRoutes,
 };
 const mutations = {
-  addVisitedRoute(state, view) {
-    if (state.visitedRoutes.some((item) => item.path === view.path)) return;
-    state.visitedRoutes.push(Object.assign({}, view));
+  addVisitedRoute(state, route) {
+    if (state.visitedRoutes.some((item) => item.path === route.path)) return;
+    state.visitedRoutes.push(Object.assign({}, route));
   },
-  delVisitedRoute(state, view) {
+  delVisitedRoute(state, route) {
     state.visitedRoutes.forEach((item, index) => {
-      if (item.path === view.path) {
+      if (item.path === route.path) {
         state.visitedRoutes.splice(index, 1);
       }
     });
   },
-  delOthersVisitedRoute(state, view) {
+  delOthersVisitedRoute(state, route) {
     state.visitedRoutes = state.visitedRoutes.filter((item) => {
-      return item.meta.affix || item.path === view.path;
+      return item.meta.affix || item.path === route.path;
     });
   },
-  delLeftVisitedRoute(state, view) {
+  delLeftVisitedRoute(state, route) {
     let index = state.visitedRoutes.length;
     state.visitedRoutes = state.visitedRoutes.filter((item) => {
-      if (item.name === view.name) {
+      if (item.name === route.name) {
         index = state.visitedRoutes.indexOf(item);
       }
       return item.meta.affix || index <= state.visitedRoutes.indexOf(item);
     });
   },
-  delRightVisitedRoute(state, view) {
+  delRightVisitedRoute(state, route) {
     let index = state.visitedRoutes.length;
     state.visitedRoutes = state.visitedRoutes.filter((item) => {
-      if (item.name === view.name) {
+      if (item.name === route.name) {
         index = state.visitedRoutes.indexOf(item);
       }
       return item.meta.affix || index >= state.visitedRoutes.indexOf(item);
@@ -47,60 +47,60 @@ const mutations = {
   delAllVisitedRoutes(state) {
     state.visitedRoutes = state.visitedRoutes.filter((item) => item.meta.affix);
   },
-  updateVisitedRoute(state, view) {
+  updateVisitedRoute(state, route) {
     state.visitedRoutes.forEach((item) => {
-      if (item.path === view.path) {
-        item = Object.assign(item, view);
+      if (item.path === route.path) {
+        item = Object.assign(item, route);
       }
     });
   },
 };
 const actions = {
-  addVisitedRoute({ commit }, view) {
-    commit("addVisitedRoute", view);
+  addVisitedRoute({ commit }, route) {
+    commit("addVisitedRoute", route);
   },
-  async delRoute({ dispatch, state }, view) {
-    await dispatch("delVisitedRoute", view);
+  async delRoute({ dispatch, state }, route) {
+    await dispatch("delVisitedRoute", route);
     return {
       visitedRoutes: [...state.visitedRoutes],
     };
   },
-  delVisitedRoute({ commit, state }, view) {
-    commit("delVisitedRoute", view);
+  delVisitedRoute({ commit, state }, route) {
+    commit("delVisitedRoute", route);
     return [...state.visitedRoutes];
   },
-  async delOthersRoutes({ dispatch, state }, view) {
-    await dispatch("delOthersVisitedRoute", view);
+  async delOthersRoutes({ dispatch, state }, route) {
+    await dispatch("delOthersVisitedRoute", route);
     return {
       visitedRoutes: [...state.visitedRoutes],
     };
   },
-  async delLeftRoutes({ dispatch, state }, view) {
-    await dispatch("delLeftVisitedRoute", view);
+  async delLeftRoutes({ dispatch, state }, route) {
+    await dispatch("delLeftVisitedRoute", route);
     return {
       visitedRoutes: [...state.visitedRoutes],
     };
   },
-  async delRightRoutes({ dispatch, state }, view) {
-    await dispatch("delRightVisitedRoute", view);
+  async delRightRoutes({ dispatch, state }, route) {
+    await dispatch("delRightVisitedRoute", route);
     return {
       visitedRoutes: [...state.visitedRoutes],
     };
   },
-  delOthersVisitedRoute({ commit, state }, view) {
-    commit("delOthersVisitedRoute", view);
+  delOthersVisitedRoute({ commit, state }, route) {
+    commit("delOthersVisitedRoute", route);
     return [...state.visitedRoutes];
   },
-  delLeftVisitedRoute({ commit, state }, view) {
-    commit("delLeftVisitedRoute", view);
+  delLeftVisitedRoute({ commit, state }, route) {
+    commit("delLeftVisitedRoute", route);
     return [...state.visitedRoutes];
   },
-  delRightVisitedRoute({ commit, state }, view) {
-    commit("delRightVisitedRoute", view);
+  delRightVisitedRoute({ commit, state }, route) {
+    commit("delRightVisitedRoute", route);
     return [...state.visitedRoutes];
   },
-  async delAllRoutes({ dispatch, state }, view) {
-    await dispatch("delAllVisitedRoutes", view);
+  async delAllRoutes({ dispatch, state }, route) {
+    await dispatch("delAllVisitedRoutes", route);
     return {
       visitedRoutes: [...state.visitedRoutes],
     };
@@ -109,8 +109,8 @@ const actions = {
     commit("delAllVisitedRoutes");
     return [...state.visitedRoutes];
   },
-  updateVisitedRoute({ commit }, view) {
-    commit("updateVisitedRoute", view);
+  updateVisitedRoute({ commit }, route) {
+    commit("updateVisitedRoute", route);
   },
 };
 export default { state, getters, mutations, actions };
