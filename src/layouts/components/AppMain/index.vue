@@ -10,7 +10,7 @@
       <vab-keel-text :lines="8" />
     </vab-keel>
     <transition mode="out-in" name="fade-transform">
-      <keep-alive :include="cachedRoutes" :max="10">
+      <keep-alive v-if="routerView" :include="cachedRoutes" :max="10">
         <router-view :key="key" style="min-height: 80.6vh;" />
       </keep-alive>
     </transition>
@@ -42,13 +42,15 @@ export default {
       nodeEnv: process.env.NODE_ENV,
       fullYear: new Date().getFullYear(),
       copyright,
+      routerView: true,
+      skeleton: this._skeleton,
     };
   },
   computed: {
     ...mapGetters({
       visitedRoutes: "tagsBar/visitedRoutes",
       device: "settings/device",
-      skeleton: "settings/skeleton",
+      _skeleton: "settings/skeleton",
     }),
     cachedRoutes() {
       const cachedRoutesArr = [];
@@ -74,7 +76,17 @@ export default {
       immediate: true,
     },
   },
-  created() {},
+  created() {
+    //重载所有路由
+    this.$baseEventBus.$on("reloadRouterView", () => {
+      this.routerView = false;
+      this.skeleton = false;
+      this.$nextTick(() => {
+        this.routerView = true;
+        this.skeleton = true;
+      });
+    });
+  },
   mounted() {
     setTimeout(() => {
       this.show = false;
@@ -83,7 +95,7 @@ export default {
   methods: {
     // TODO 骨架屏处理还有bug我找到更好的解决方案待修复
     handleSkeleton(cachedRoutesArr) {
-      if (this.skeleton && !cachedRoutesArr.includes(this.$route.name)) {
+      if (this.skeleton) {
         cachedRoutesArr.push(this.$route.name);
         this.show = true;
         setTimeout(() => {

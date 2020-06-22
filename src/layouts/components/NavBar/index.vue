@@ -18,7 +18,7 @@
           <full-screen-bar @refresh="refreshRoute"></full-screen-bar>
           <theme-bar></theme-bar>
           <vab-icon
-            title="重载路由"
+            title="重载所有路由"
             :pulse="pulse"
             :icon="['fas', 'redo']"
             @click="refreshRoute"
@@ -41,9 +41,9 @@ import { mapGetters } from "vuex";
 import {
   Avatar,
   Breadcrumb,
-  ThemeBar,
-  FullScreenBar,
   ErrorLog,
+  FullScreenBar,
+  ThemeBar,
 } from "@/layouts/components";
 
 export default {
@@ -73,19 +73,8 @@ export default {
       this.$store.dispatch("settings/changeCollapse");
     },
     async refreshRoute() {
-      const arr = this.visitedRoutes.filter((item) => {
-        if (item.path === this.$route.path) {
-          return item;
-        }
-      });
-      const route = arr[0];
+      this.$baseEventBus.$emit("reloadRouterView");
       this.pulse = true;
-      await this.$store.dispatch("tagsBar/delRoute", route);
-      await this.$router
-        .replace({
-          path: "/redirect" + this.$route.fullPath,
-        })
-        .catch(() => {});
       setTimeout(() => {
         this.pulse = false;
       }, 1000);
