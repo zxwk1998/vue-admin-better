@@ -6,7 +6,7 @@
 import { handleMockArray } from "./utils";
 import chalk from "chalk";
 import dotenv from "dotenv";
-
+import fs from "fs";
 import { devPort, httpRequestFile } from "../src/config/settings";
 
 const mocks = [];
