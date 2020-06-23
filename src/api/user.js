@@ -29,3 +29,9 @@ export function logout() {
     method: "post",
   });
 }
+export function register() {
+  return request({
+    url: "/register",
+    method: "post",
+  });
+}

@@ -38,7 +38,16 @@ export default [
       };
     },
   },
-
+  {
+    url: "/register",
+    type: "post",
+    response: (config) => {
+      return {
+        code: 200,
+        msg: "模拟注册成功",
+      };
+    },
+  },
   {
     url: "/user/info",
     type: "post",

@@ -24,7 +24,7 @@ module.exports = {
   // 路由模式，可选值为 history 或 hash
   routerMode: "hash",
   //不经过token校验的路由
-  routesWhiteList: ["/login", "/404", "/401"],
+  routesWhiteList: ["/login", "/register", "/404", "/401"],
   //加载时显示文字
   loadingText: "正在加载中...",
   //token名称

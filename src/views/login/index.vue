@@ -7,7 +7,6 @@
       :closable="false"
     >
     </el-alert>
-    <div class="login-logo-bysj"></div>
     <el-row>
       <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
         <el-form
@@ -22,11 +21,7 @@
             hello !
           </div>
           <div class="title-tips">欢迎来到{{ title }}！</div>
-          <el-form-item
-            style="margin-top: 49px;"
-            prop="userName"
-            class="login-form-admin"
-          >
+          <el-form-item style="margin-top: 40px;" prop="userName">
             <span class="svg-container svg-container-admin">
               <vab-icon :icon="['fas', 'user']" />
             </span>
@@ -39,7 +34,7 @@
               type="text"
             />
           </el-form-item>
-          <el-form-item prop="password" class="login-form-pass">
+          <el-form-item prop="password">
             <span class="svg-container svg-container-pass"
               ><vab-icon :icon="['fas', 'lock']"
             /></span>
@@ -206,16 +201,6 @@ export default {
 
     &:hover {
       opacity: 0.9;
-    }
-  }
-
-  .login-logo-bysj {
-    position: absolute;
-    top: 45px;
-    left: 45px;
-
-    img {
-      width: 180px;
     }
   }
 
