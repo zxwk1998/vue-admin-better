@@ -207,7 +207,6 @@ export default {
       window.open("tencent://message/?uin=1204505056");
     },
     handleSetTheme() {
-      $("#BYUI-VUE-THEME").remove();
       let {
         layout,
         header,
@@ -248,6 +247,10 @@ export default {
 
         .tags-bar-item.router-link-exact-active.router-link-active.active {
           background-color: ${tagsBarBackgroundActive}!important;
+          border: 1px solid ${tagsBarBackgroundActive}!important;
+        }
+        .vab-main .tags-bar-container .tags-content .el-tabs__header .el-tabs__item.is-active {
+          background:  ${tagsBarBackgroundActive}!important;
           border: 1px solid ${tagsBarBackgroundActive}!important;
         }
 
@@ -306,7 +309,6 @@ export default {
       location.reload();
     },
     handleSetDfaultTheme() {
-      $("#BYUI-VUE-THEME").remove();
       localStorage.removeItem("BYUI-VUE-THEME");
       this.$store.dispatch("settings/changeLayout", this.theme.layout);
       this.$refs["form"].resetFields();

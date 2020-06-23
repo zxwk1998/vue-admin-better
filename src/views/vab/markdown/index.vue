@@ -58,13 +58,6 @@ export default {
             smartypants: false,
           });
 
-          $(".markdown-container a").each(function () {
-            if (typeof $(this).attr("href") !== "undefined") {
-              if ($(this).attr("href").indexOf("http") === -1) {
-                $(this).removeAttr("href");
-              }
-            }
-          });
           break;
       }
       setTimeout(() => {

@@ -75,8 +75,6 @@ module.exports = {
   debounce: ["doEdit"],
   //需要自动注入并加载的模块
   providePlugin: {
-    $: "jquery",
-    jQuery: "jquery",
     "windows.jQuery": "jquery",
     echarts: "echarts",
     "window.echarts": "echarts",
