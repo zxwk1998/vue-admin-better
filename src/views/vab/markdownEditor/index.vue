@@ -40,7 +40,7 @@ export default {
     },
     handleAddImg() {
       this.$refs.mde.add(
-        "\n![](https://chu1204505056.gitee.io/vab-bookmarks/img/ewm.png)"
+        "\n![](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)"
       );
     },
     handleShowHtml(html) {
