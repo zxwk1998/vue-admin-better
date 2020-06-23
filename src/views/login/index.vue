@@ -65,6 +65,9 @@
             @click="handleLogin"
             >登录
           </el-button>
+          <router-link to="/register">
+            <div style="margin-top: 20px;">注册</div>
+          </router-link>
         </el-form>
       </el-col>
     </el-row>

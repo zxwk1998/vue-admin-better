@@ -77,6 +77,9 @@
               @click.native.prevent="handleReister"
               >注册
             </el-button>
+            <router-link to="/login">
+              <div style="margin-top: 20px;">登录</div>
+            </router-link>
           </el-form-item>
         </el-form>
       </el-col>
