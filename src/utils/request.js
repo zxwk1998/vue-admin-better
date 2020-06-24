@@ -1,5 +1,6 @@
 import axios from "axios";
 import {
+  baseURL,
   contentType,
   invalidCode,
   messageDuration,
@@ -16,7 +17,7 @@ import router from "@/router";
 import _ from "lodash";
 
 const service = axios.create({
-  baseURL: process.env.VUE_APP_BASE_API,
+  baseURL,
   timeout: requestTimeout,
   headers: {
     "Content-Type": contentType,

@@ -5,9 +5,8 @@
 
 import { handleMockArray } from "./utils";
 import chalk from "chalk";
-import dotenv from "dotenv";
 import fs from "fs";
-import { devPort, httpRequestFile } from "../src/config/settings";
+import { baseURL, devPort, httpRequestFile } from "../src/config/settings";
 
 const mocks = [];
 const mockArray = handleMockArray();
@@ -19,14 +18,12 @@ if (httpRequestFile) {
 }
 mockArray.forEach(async (item) => {
   const obj = require(item).default;
-  const envConfig = dotenv.parse(fs.readFileSync(".env.development"));
-  const mockUrl = envConfig["VUE_APP_BASE_API"];
   await mocks.push(...obj);
   if (httpRequestFile) {
     obj.forEach((item) => {
       fs.appendFile(
         "./http/mock.http",
-        `\r\n###${item.url}###\r\POST http://localhost:${devPort}/${mockUrl}${item.url}\r\nContent-Type: application/x-www-form-urlencoded\r\n###\r\n`,
+        `\r\n###${item.url}###\r\POST http://localhost:${devPort}/${baseURL}${item.url}\r\nContent-Type: application/x-www-form-urlencoded\r\n###\r\n`,
         (error) => {
           if (error)
             return chalk.red(`\n > 追加HTTP Request失败${error.message}`);

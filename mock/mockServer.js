@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const chalk = require("chalk");
 const path = require("path");
 const Mock = require("mockjs");
-
+const { baseURL } = require("../src/config/settings");
 const mockDir = path.join(process.cwd(), "mock");
 
 /**
@@ -37,7 +37,7 @@ function registerRoutes(app) {
  */
 const responseFake = (url, type, respond) => {
   return {
-    url: new RegExp(`${process.env.VUE_APP_BASE_API}${url}`),
+    url: new RegExp(`${baseURL}${url}`),
     type: type || "get",
     response(req, res) {
       if (JSON.stringify(req.body) !== "{}") {
@@ -73,7 +73,7 @@ module.exports = (app) => {
       ignored: /mock-server/,
       ignoreInitial: true,
     })
-    .on("all", (event, path) => {
+    .on("all", (event) => {
       if (event === "change" || event === "add") {
         try {
           app._router.stack.splice(mockStartIndex, mockRoutesLength);
@@ -86,7 +86,6 @@ module.exports = (app) => {
           const mockRoutes = registerRoutes(app);
           mockRoutesLength = mockRoutes.mockRoutesLength;
           mockStartIndex = mockRoutes.mockStartIndex;
-          //console.log(chalk.blue(`> Mock服务热更新成功：${path}`));
         } catch (error) {
           console.log(chalk.red(error));
         }
