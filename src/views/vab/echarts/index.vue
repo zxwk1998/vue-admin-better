@@ -65,6 +65,7 @@
 </template>
 
 <script>
+import * as echarts from "echarts";
 import VabChart from "@/plugins/echarts";
 
 export default {

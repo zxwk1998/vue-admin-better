@@ -5,8 +5,7 @@
 </template>
 
 <script>
-import "maptalks/dist/maptalks.css";
-import * as maptalks from "maptalks";
+import axios from "axios";
 import * as mapv from "mapv";
 export default {
   name: "Map",
@@ -18,14 +17,15 @@ export default {
   mounted() {
     this.$nextTick(() => {
       const map = this.$baseMap();
-
-      $.get(
-        "https://cdn.jsdelivr.net/npm/mapv@2.0.12/examples/data/od-xierqi.txt",
-        (rs) => {
+      axios
+        .get(
+          "https://cdn.jsdelivr.net/npm/mapv@2.0.12/examples/data/od-xierqi.txt"
+        )
+        .then((rs) => {
           let data = [];
           let timeData = [];
 
-          rs = rs.split("\n");
+          rs = rs.data.split("\n");
           let maxLength = 0;
           for (let i = 0; i < rs.length; i++) {
             let item = rs[i].split(",");
@@ -99,8 +99,7 @@ export default {
             dataSet2,
             options2
           ).addTo(map);
-        }
-      );
+        });
     });
   },
   methods: {},
