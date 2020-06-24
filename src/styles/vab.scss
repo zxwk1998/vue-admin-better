@@ -94,7 +94,6 @@ html {
     font-size: $base-font-size-default;
     font-weight: 400;
     background: #f6f8f9;
-    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 
     @include base-scrollbar;
@@ -172,8 +171,6 @@ html {
         box-sizing: border-box;
         padding: 7.5px 0;
         text-align: center;
-        text-overflow: ellipsis;
-        vertical-align: middle;
 
         .cell {
           overflow: hidden;
@@ -201,7 +198,6 @@ html {
       font-weight: normal;
       color: $base-color-black;
       text-align: center;
-      white-space: nowrap;
     }
 
     /* 分页结束 */
@@ -215,30 +211,11 @@ html {
       @include scrollbar;
     }
 
-    .el-menu--vertical {
-      .el-menu-item {
-        height: 46px !important;
-        line-height: 46px !important;
-
-        &.is-active {
-          background-color: $base-menu-background-active !important;
-        }
-      }
+    .el-submenu__title i {
+      color: $base-color-white;
     }
 
     /* 菜单结束 */
-
-    /* tag开始 */
-    .el-tag {
-      &--small {
-        height: $base-input-height;
-        margin-right: 10px;
-        line-height: $base-input-height;
-        border-radius: $base-border-radius;
-      }
-    }
-
-    /* tag结束 */
 
     /* 弹窗开始 */
 
@@ -264,43 +241,10 @@ html {
     }
 
     /* 弹窗结束 */
-    #{$base}-form-main {
-      width: $base-form-width;
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    #{$base}-pull-left {
-      float: left;
-    }
-
-    #{$base}-pull-right {
-      float: right;
-    }
-
-    .el-submenu__title i {
-      color: $base-color-white;
-    }
 
     /* 卡片开始 */
     .el-card {
       margin-bottom: 15px;
-      box-shadow: none;
-
-      &:hover {
-        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-      }
-
-      &__header {
-        padding: $base-padding;
-
-        & > div > span {
-          width: 60%;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-      }
 
       &__body {
         padding: $base-padding;

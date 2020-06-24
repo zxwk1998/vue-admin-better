@@ -51,8 +51,6 @@
         </template>
       </el-table-column>
       <el-table-column prop="title" label="标题"></el-table-column>
-      <el-table-column label="点击量" prop="pageViews" sortable>
-      </el-table-column>
       <el-table-column label="作者" prop="author"></el-table-column>
       <el-table-column label="头像">
         <template slot-scope="scope">
@@ -68,7 +66,7 @@
         prop="pageViews"
         sortable
       ></el-table-column>
-      <el-table-column class-name="status-col">
+      <el-table-column label="状态">
         <template slot-scope="scope">
           <el-tooltip
             :content="scope.row.status"
