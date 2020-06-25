@@ -125,6 +125,14 @@ const data = [
     content: "彻底完成了tagsbar多标签页的重构",
     timestamp: "2020-06-22",
   },
+  {
+    content: "感恩github标星过3.0K 祝大家端午节快乐",
+    timestamp: "2020-06-25",
+  },
+  {
+    content: "彻底重构了SideBar与TopBar 大幅精简dom渲染逻辑 全球首发",
+    timestamp: "2020-06-25",
+  },
 ];
 
 export default [

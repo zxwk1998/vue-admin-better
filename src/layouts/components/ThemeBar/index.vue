@@ -63,21 +63,6 @@
                 show-alpha
               ></el-color-picker>
             </el-form-item>
-            <el-form-item label="菜单子级背景色">
-              <el-color-picker
-                v-model="theme.menuChildrenBackground"
-                :predefine="[
-                  '#2a58ad',
-                  '#001529',
-                  '#f56c6c',
-                  '#0fd59d',
-                  '#3fb884',
-                  '#ff7a47',
-                  '#a80505',
-                ]"
-                show-alpha
-              ></el-color-picker>
-            </el-form-item>
             <el-form-item label="菜单选中色">
               <el-color-picker
                 v-model="theme.menuBackgroundActive"
@@ -142,7 +127,6 @@ export default {
         header: "",
         tagsBar: "",
         menuBackground: variables["menu-background"],
-        menuChildrenBackground: variables["menu-children-background"],
         menuBackgroundActive: variables["menu-background-active"],
         menuColor: variables["menu-color"],
         tagsBarBackgroundActive: variables["tags-bar-background-active"],
@@ -170,11 +154,6 @@ export default {
     this.theme.tagsBar = this.tagsBar;
     if (null !== theme) {
       this.$set(this.theme, "menuBackground", JSON.parse(theme).menuBackground);
-      this.$set(
-        this.theme,
-        "menuChildrenBackground",
-        JSON.parse(theme).menuChildrenBackground
-      );
       this.$set(
         this.theme,
         "menuBackgroundActive",
@@ -212,7 +191,6 @@ export default {
         header,
         tagsBar,
         menuBackground,
-        menuChildrenBackground,
         menuBackgroundActive,
         menuColor,
         tagsBarBackgroundActive,
@@ -245,10 +223,6 @@ export default {
           background-color:${menuBackgroundActive}!important;
         }
 
-        .tags-bar-item.router-link-exact-active.router-link-active.active {
-          background-color: ${tagsBarBackgroundActive}!important;
-          border: 1px solid ${tagsBarBackgroundActive}!important;
-        }
         .vab-main .tags-bar-container .tags-content .el-tabs__header .el-tabs__item.is-active {
           background:  ${tagsBarBackgroundActive}!important;
           border: 1px solid ${tagsBarBackgroundActive}!important;
@@ -262,14 +236,6 @@ export default {
         .el-pagination.is-background .el-pager li:not(.disabled).active {
           background-color: ${paginationBackgroundActive}!important;
           border-color: ${paginationBackgroundActive}!important;
-        }
-
-        body .vue-admin-beautiful-wrapper .side-bar-container .nest-menu .el-menu-item {
-          background-color: ${menuChildrenBackground}!important;
-        }
-
-        body .vue-admin-beautiful-wrapper .side-bar-container .el-menu .nest-menu [class*=menu] {
-          background-color: ${menuChildrenBackground}!important
         }
 
         body .vue-admin-beautiful-wrapper .side-bar-container .el-menu .nest-menu [class*=menu].is-active {
@@ -288,7 +254,6 @@ export default {
         "BYUI-VUE-THEME",
         `{
             "menuBackground":"${menuBackground}",
-            "menuChildrenBackground":"${menuChildrenBackground}",
             "menuBackgroundActive":"${menuBackgroundActive}",
             "menuColor":"${menuColor}",
             "tagsBarBackgroundActive":"${tagsBarBackgroundActive}",

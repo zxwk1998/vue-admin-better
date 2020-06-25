@@ -264,16 +264,6 @@ export const asyncRoutes = [
         meta: { title: "放大镜", permissions: ["admin"] },
       },
       {
-        path: "waterfall",
-        name: "Waterfall",
-        component: () => import("@/views/vab/waterfall/index"),
-        meta: {
-          title: "瀑布屏",
-          noKeepAlive: true,
-          permissions: ["admin"],
-        },
-      },
-      {
         path: "echarts",
         name: "Echarts",
         component: () => import("@/views/vab/echarts/index"),

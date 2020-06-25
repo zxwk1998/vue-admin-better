@@ -17,8 +17,8 @@ $base: ".vab";
   overflow-y: auto;
 
   &::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 0;
+    height: 0;
     background: transparent;
   }
 

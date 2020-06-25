@@ -197,7 +197,7 @@
         :lg="3"
         :xl="3"
       >
-        <app-link :to="item.link" target="_blank">
+        <router-link :to="item.link" target="_blank">
           <el-card class="icon-panel" shadow="never">
             <vab-icon
               :style="{ color: item.color }"
@@ -205,7 +205,7 @@
             ></vab-icon>
             <p>{{ item.title }}</p>
           </el-card>
-        </app-link>
+        </router-link>
       </el-col>
       <el-col
         v-if="nodeEnv !== 'development'"
@@ -269,13 +269,11 @@ import { dependencies, devDependencies } from "../../../package.json";
 import { getList } from "@/api/changeLog";
 import { getNoticeList } from "@/api/notice";
 import { getRepos, getStargazers } from "@/api/github";
-import AppLink from "@/layouts/components/Link";
 export default {
   name: "Index",
   components: {
     VabChart,
     VabCount,
-    AppLink,
   },
   data() {
     return {

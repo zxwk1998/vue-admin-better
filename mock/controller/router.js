@@ -132,12 +132,6 @@ const data = [
         meta: { title: "放大镜", permissions: ["admin"] },
       },
       {
-        path: "waterfall",
-        name: "Waterfall",
-        component: "vab/waterfall/index",
-        meta: { title: "瀑布屏", noKeepAlive: true, permissions: ["admin"] },
-      },
-      {
         path: "echarts",
         name: "Echarts",
         component: "vab/echarts/index",
