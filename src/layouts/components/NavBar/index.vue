@@ -121,28 +121,6 @@ export default {
     height: 50px;
 
     ::v-deep {
-      .user-avatar {
-        margin-top: 2px;
-        margin-right: 5px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-
-      .user-name {
-        position: relative;
-        top: -14px;
-        margin-right: 35px;
-        margin-left: 5px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-
-      .user-name + i {
-        position: absolute;
-        top: 16px;
-        right: 15px;
-      }
-
       svg {
         width: 1em;
         height: 1em;

@@ -1,6 +1,6 @@
 <template>
   <el-dropdown @command="handleCommand">
-    <span class="el-dropdown-link">
+    <span class="avatar-dropdown">
       <el-avatar
         class="user-avatar"
         :src="require('@/assets/user.gif')"
@@ -24,6 +24,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+
 export default {
   name: "Avatar",
   computed: {
@@ -54,3 +55,23 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.avatar-dropdown {
+  .user-avatar {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  .user-name {
+    position: relative;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .user-name + i {
+    margin-right: 17px;
+  }
+}
+</style>
