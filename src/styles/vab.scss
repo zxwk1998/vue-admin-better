@@ -67,14 +67,6 @@ $base: ".vab";
   outline: none;
 }
 
-#{$base}-clearfix::after {
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-  content: ".";
-}
-
 img {
   object-fit: cover;
 }
@@ -91,10 +83,9 @@ html {
     height: 100vh;
     padding: 0;
     margin: 0;
+    font-family: "PingFang SC", Arial, "Microsoft YaHei", sans-serif;
     font-size: $base-font-size-default;
-    font-weight: 400;
     background: #f6f8f9;
-    -webkit-font-smoothing: antialiased;
 
     @include base-scrollbar;
 
