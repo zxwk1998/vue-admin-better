@@ -91,6 +91,8 @@ export default {
   user-select: none;
   background: $base-color-white;
   box-shadow: $base-box-shadow;
+  padding-left: $base-padding;
+  padding-right: $base-padding;
 
   .left-panel {
     display: flex;
@@ -100,7 +102,6 @@ export default {
     max-height: 50px;
 
     .fold-unfold {
-      margin-left: 10px;
       font-size: 20px;
       color: $base-color-gray;
       cursor: pointer;

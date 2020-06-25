@@ -219,8 +219,6 @@ export default {
 
         .tags-bar-container {
           box-sizing: border-box;
-          padding-right: 5px;
-          padding-left: 5px;
         }
 
         .app-main-container {

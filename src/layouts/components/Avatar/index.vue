@@ -5,14 +5,12 @@
         class="user-avatar"
         :src="require('@/assets/user.gif')"
       ></el-avatar>
-      <span class="hidden-md-and-down user-name">{{ userName }}</span>
-      <i class="hidden-md-and-down el-icon-arrow-down el-icon--right"></i>
     </span>
 
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item>
         <vab-icon :icon="['fas', 'user']"></vab-icon>
-        个人中心
+        {{ userName }}的个人中心
       </el-dropdown-item>
       <el-dropdown-item command="logout" divided>
         <vab-icon :icon="['fas', 'sign-out-alt']"></vab-icon>
@@ -58,7 +56,6 @@ export default {
 <style lang="scss" scoped>
 .avatar-dropdown {
   .user-avatar {
-    margin-right: 5px;
     cursor: pointer;
   }
 
@@ -68,10 +65,6 @@ export default {
     margin-left: 5px;
     font-weight: 600;
     cursor: pointer;
-  }
-
-  .user-name + i {
-    margin-right: 17px;
   }
 }
 </style>
