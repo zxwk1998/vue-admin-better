@@ -45,20 +45,13 @@
         <app-main></app-main>
       </div>
     </div>
-    <back-to-top transition-name="fade"></back-to-top>
+    <el-backtop></el-backtop>
   </div>
 </template>
 
 <script>
-import {
-  AppMain,
-  NavBar,
-  SideBar,
-  TagsBar,
-  TopBar,
-  BackToTop,
-} from "./components";
-import { mapGetters, mapActions } from "vuex";
+import { AppMain, NavBar, SideBar, TagsBar, TopBar } from "./components";
+import { mapActions, mapGetters } from "vuex";
 import { tokenName } from "@/config/settings";
 import Media from "./mixin/Media";
 
@@ -70,7 +63,6 @@ export default {
     SideBar,
     AppMain,
     TagsBar,
-    BackToTop,
   },
   mixins: [Media],
   data() {

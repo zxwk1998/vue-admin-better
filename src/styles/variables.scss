@@ -9,7 +9,6 @@ $base-color-default: #1890ff;
 $base-z-index: 999;
 
 $base-menu-background: #001529;
-$base-menu-children-background: #000c17;
 $base-menu-background-active: $base-color-default;
 $base-menu-color: hsla(0, 0%, 100%, 0.95);
 $base-menu-color-active: hsla(0, 0%, 100%, 0.95);
@@ -49,7 +48,6 @@ $base-transition: all 0.3s;
   menu-color: $base-menu-color;
   menu-color-active: $base-menu-color-active;
   menu-background: $base-menu-background;
-  menu-children-background: $base-menu-children-background;
   menu-background-active: $base-menu-background-active;
   tags-bar-background-active: $base-color-blue;
   button-background: $base-color-blue;

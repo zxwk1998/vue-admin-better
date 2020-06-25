@@ -3,7 +3,6 @@ export { default as SideBar } from "zx-layouts/zx-side-bar";
 export { default as Breadcrumb } from "zx-layouts/zx-breadcrumb";
 export { default as FullScreenBar } from "zx-layouts/zx-full-screen-bar";
 export { default as ErrorLog } from "zx-layouts/zx-error-log";
-export { default as BackToTop } from "zx-layouts/zx-back-to-top";
 export { default as ThemeBar } from "@/layouts/components/ThemeBar";
 export { default as Avatar } from "@/layouts/components/Avatar";
 export { default as TopBar } from "zx-layouts/zx-top-bar";
