@@ -731,6 +731,7 @@ export default {
   }
 
   .icon-panel {
+    height: 100px;
     text-align: center;
     cursor: pointer;
 
@@ -739,7 +740,7 @@ export default {
     }
 
     p {
-      margin-top: 20px;
+      margin-top: 10px;
     }
   }
 
