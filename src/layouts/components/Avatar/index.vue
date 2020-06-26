@@ -2,7 +2,6 @@
   <el-dropdown @command="handleCommand">
     <span class="avatar-dropdown">
       <el-avatar class="user-avatar" :src="avatar"></el-avatar>
-      {{ userName }}
     </span>
 
     <el-dropdown-menu slot="dropdown">
