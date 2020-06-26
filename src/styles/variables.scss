@@ -42,7 +42,7 @@ $base-menu-item-height: 50px;
 $base-tag-item-height: 34px;
 $base-app-main-height: calc(
   100vh - #{$base-nav-bar-height} - #{$base-tags-bar-height} - #{$base-padding} -
-    #{$base-padding}
+    #{$base-padding} - 55px
 );
 $base-left-menu-width: 220px;
 $base-right-content-width: calc(100% - #{$base-left-menu-width});

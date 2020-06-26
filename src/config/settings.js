@@ -1,3 +1,7 @@
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description 全局变量配置
+ */
 module.exports = {
   // 部署时的URL
   publicPath: "",
