@@ -1,4 +1,3 @@
-import { mock } from "mockjs";
 const totalCount = 3;
 const List = [
   {
@@ -51,7 +50,7 @@ export default [
   {
     url: "/userManagement/doEdit",
     type: "post",
-    response: (config) => {
+    response: () => {
       return {
         code: 200,
         msg: "模拟保存成功",
@@ -61,7 +60,7 @@ export default [
   {
     url: "/userManagement/doDelete",
     type: "post",
-    response: (config) => {
+    response: () => {
       return {
         code: 200,
         msg: "模拟删除成功",
