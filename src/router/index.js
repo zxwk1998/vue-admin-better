@@ -8,6 +8,7 @@ import VueRouter from "vue-router";
 import Layout from "@/layouts";
 import EmptyLayout from "@/layouts/EmptyLayout";
 import { routerMode } from "@/config/settings";
+
 Vue.use(VueRouter);
 
 export const constantRoutes = [
@@ -62,6 +63,22 @@ export const asyncRoutes = [
           icon: "home",
           affix: true,
           badge: "New",
+        },
+      },
+    ],
+  },
+  {
+    path: "/personalCenter",
+    component: Layout,
+    hidden: true,
+    redirect: "personalCenter",
+    children: [
+      {
+        path: "personalCenter",
+        name: "PersonalCenter",
+        component: () => import("@/views/personalCenter/index"),
+        meta: {
+          title: "个人中心",
         },
       },
     ],
@@ -484,6 +501,7 @@ const originalPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch((err) => err);
 };
+
 export function resetRouter() {
   router.matcher = new VueRouter({
     mode: routerMode,
