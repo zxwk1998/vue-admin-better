@@ -1,10 +1,14 @@
-export { default as TagsBar } from "zx-layouts/zx-tags-bar";
-export { default as SideBar } from "zx-layouts/zx-side-bar";
-export { default as Breadcrumb } from "zx-layouts/zx-breadcrumb";
-export { default as FullScreenBar } from "zx-layouts/zx-full-screen-bar";
-export { default as ErrorLog } from "zx-layouts/zx-error-log";
-export { default as ThemeBar } from "@/layouts/components/ThemeBar";
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description 公共布局导出，已封装成npm，便于此后在线升级，当然也存在一定的弊端，给开发者自定义增加了一定的困难，如果您一定要进行高度自定义，请仔细阅读VIP群文档，layouts本地化篇
+ */
 export { default as Avatar } from "@/layouts/components/Avatar";
-export { default as TopBar } from "zx-layouts/zx-top-bar";
 export { default as AppMain } from "./AppMain";
-export { default as NavBar } from "./NavBar";
+export { default as TagsBar } from "zx-layouts/TagsBar";
+export { default as SideBar } from "zx-layouts/SideBar";
+export { default as Breadcrumb } from "zx-layouts/Breadcrumb";
+export { default as FullScreenBar } from "zx-layouts/FullScreenBar";
+export { default as ErrorLog } from "zx-layouts/ErrorLog";
+export { default as ThemeBar } from "zx-layouts/ThemeBar";
+export { default as TopBar } from "zx-layouts/TopBar";
+export { default as NavBar } from "zx-layouts/NavBar";

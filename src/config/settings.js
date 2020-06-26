@@ -10,7 +10,7 @@ module.exports = {
   // 进行编译的依赖
   transpileDependencies: ["vue-echarts", "resize-detector"],
   // 默认的接口地址 如果是开发环境或测试环境那么走vab-mock-server，如果是生产环境那么默认为空当然你也可以选择自己配置成需要的接口地址
-  baseURL: process.env !== "production" ? "vab-mock-server" : "",
+  baseURL: process.env.NODE_ENV !== "production" ? "vab-mock-server" : "",
   //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
   title: "vue-admin-beautiful",
   //简写
@@ -21,8 +21,14 @@ module.exports = {
   version: process.env.VUE_APP_VERSION,
   //烦请保留package.json作者信息 保留版权可免费商用 如需去除并自定义为自己企业的版权请联系群主QQ 1204505056 需支付299元 恶意修改发生纠纷及出现任何问题 由修改人自行承担
   copyright: process.env.VUE_APP_AUTHOR,
+  //是否显示页面底部版权信息，建议您显示，当然您也可以选择不显示，不管您是付费用户还是未付费用户您都有选择显示或者不显示的权利
+  footerCopyright: process.env.NODE_ENV !== "development" ? true : false,
+  //是否显示右上角github图标
+  githubCorner: process.env.NODE_ENV !== "development" ? true : false,
   //是否显示顶部进度条
   progressBar: true,
+  //缓存路由的最大数量
+  keepAliveMaxNum: 99,
   // 路由模式，可选值为 history 或 hash
   routerMode: "hash",
   //不经过token校验的路由

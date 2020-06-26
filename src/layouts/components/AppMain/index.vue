@@ -1,7 +1,7 @@
 <template>
   <section class="app-main-container">
-    <github-corner v-if="nodeEnv !== 'development'"></github-corner>
-    <vab-keel v-if="show && skeleton" style="margin: 15px;">
+    <github-corner v-if="githubCorner"></github-corner>
+    <vab-keel v-if="show" style="margin: 15px;">
       <vab-keel-heading :img="true" />
       <vab-keel-text :lines="7" />
       <vab-keel-heading :img="true" />
@@ -10,14 +10,18 @@
       <vab-keel-text :lines="8" />
     </vab-keel>
     <transition mode="out-in" name="fade-transform">
-      <keep-alive v-if="routerView" :include="cachedRoutes" :max="10">
-        <router-view :key="key" style="min-height: 80.6vh;" />
+      <keep-alive
+        v-if="routerView"
+        :include="cachedRoutes"
+        :max="keepAliveMaxNum"
+      >
+        <router-view :key="key" />
       </keep-alive>
     </transition>
-    <footer class="footer-copyright">
+    <footer v-show="footerCopyright" class="footer-copyright">
       Copyright
       <vab-icon :icon="['fas', 'copyright']"></vab-icon>
-      {{ fullYear }} {{ copyright }}
+      {{ title }} {{ fullYear }} by {{ copyright }}
     </footer>
   </section>
 </template>
@@ -26,7 +30,13 @@
 import { VabKeel, VabKeelHeading, VabKeelText } from "@/plugins/vabKeel";
 import { mapGetters } from "vuex";
 import GithubCorner from "@/components/GithubCorner";
-import { copyright } from "@/config/settings";
+import {
+  title,
+  copyright,
+  keepAliveMaxNum,
+  footerCopyright,
+  githubCorner,
+} from "@/config/settings";
 
 export default {
   name: "AppMain",
@@ -39,27 +49,29 @@ export default {
   data() {
     return {
       show: true,
-      nodeEnv: process.env.NODE_ENV,
       fullYear: new Date().getFullYear(),
       copyright,
+      title,
+      keepAliveMaxNum,
       routerView: true,
-      skeleton: this._skeleton,
+      footerCopyright,
+      githubCorner,
     };
   },
   computed: {
     ...mapGetters({
       visitedRoutes: "tagsBar/visitedRoutes",
       device: "settings/device",
-      _skeleton: "settings/skeleton",
+      skeleton: "settings/skeleton",
     }),
     cachedRoutes() {
       const cachedRoutesArr = [];
       this.visitedRoutes.forEach((item) => {
         if (!item.meta.noKeepAlive) {
           cachedRoutesArr.push(item.name);
+          this.handleSkeleton();
         }
       });
-      this.handleSkeleton(cachedRoutesArr);
       return cachedRoutesArr;
     },
     key() {
@@ -80,30 +92,21 @@ export default {
     //重载所有路由
     this.$baseEventBus.$on("reloadRouterView", () => {
       this.routerView = false;
-      this.skeleton = false;
       this.$nextTick(() => {
         this.routerView = true;
-        this.skeleton = true;
+        this.handleSkeleton();
       });
     });
   },
   mounted() {
-    setTimeout(() => {
-      this.show = false;
-    }, 200);
+    this.handleSkeleton();
   },
   methods: {
-    // TODO 骨架屏处理还有bug我找到更好的解决方案待修复
-    handleSkeleton(cachedRoutesArr) {
-      if (this.skeleton) {
-        cachedRoutesArr.push(this.$route.name);
-        this.show = true;
-        setTimeout(() => {
-          this.show = false;
-        }, 200);
-      } else {
+    handleSkeleton() {
+      this.show = true;
+      setTimeout(() => {
         this.show = false;
-      }
+      }, 200);
     },
   },
 };
