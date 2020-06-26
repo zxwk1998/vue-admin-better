@@ -41,8 +41,8 @@ module.exports = {
   tokenTableName: "vue-admin-beautiful",
   //token存储位置localStorage sessionStorage cookie
   storage: "localStorage",
-  //是否显示logo
-  logo: true,
+  //是否显示logo，不显示时设置false，显示时请填写remixIcon图标名称，暂时只支持设置remixIcon
+  logo: "vuejs-fill",
   //是否国定头部 固定fixed 不固定noFixed
   header: "fixed",
   //横纵布局 horizontal vertical

@@ -122,7 +122,7 @@ export default {
     position: relative;
 
     &.fixed {
-      padding-top: 96px;
+      padding-top: calc(#{$base-nav-bar-height} + #{$base-tags-bar-height});
     }
 
     &.fixed.no-tags-bar {
@@ -180,11 +180,11 @@ export default {
     }
 
     &.fixed {
-      padding-top: 96px;
+      padding-top: calc(#{$base-nav-bar-height} + #{$base-tags-bar-height});
     }
 
     &.fixed.no-tags-bar {
-      padding-top: 56px;
+      padding-top: $base-nav-bar-height;
     }
 
     .vab-main {
