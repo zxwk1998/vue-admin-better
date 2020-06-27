@@ -1,6 +1,6 @@
 <template>
   <div class="pay-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col
         :xs="24"
         :sm="{ span: 20, offset: 2 }"

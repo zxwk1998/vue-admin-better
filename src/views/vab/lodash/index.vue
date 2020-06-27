@@ -1,6 +1,6 @@
 <template>
   <div class="lodash-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col :span="24">
         <el-card shadow="hover">
           <el-link

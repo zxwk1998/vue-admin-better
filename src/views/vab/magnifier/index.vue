@@ -1,6 +1,6 @@
 <template>
   <div class="magnifier-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
         <el-card shadow="hover">
           <div slot="header"><span>放大镜1</span></div>

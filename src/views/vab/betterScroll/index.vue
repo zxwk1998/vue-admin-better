@@ -1,6 +1,6 @@
 <template>
   <div class="better-scroll-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
         动画时长
         <el-slider

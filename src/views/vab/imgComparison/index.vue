@@ -1,6 +1,6 @@
 <template>
   <div class="image-comparison-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col
         v-for="(item, index) in 24"
         :key="index"

@@ -108,6 +108,21 @@ html {
 
     /* markdown编辑器结束 */
 
+    /* 间隔线开始 */
+    .el-divider--horizontal {
+      margin: 10px 0 25px 0;
+
+      .el-divider__text {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    /* 间隔线结束 */
+
     /* 大图展示开始 */
     .el-image-viewer {
       &__close {

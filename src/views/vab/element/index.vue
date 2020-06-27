@@ -1,6 +1,6 @@
 <template>
   <div class="element-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col :xs="24" :sm="24" :md="18" :lg="18" :xl="16">
         <el-button type="primary" @click="dialogVisible = !dialogVisible"
           >element全部文档点这里

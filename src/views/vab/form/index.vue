@@ -1,6 +1,6 @@
 <template>
   <div class="form-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
         <el-form
           ref="ruleForm"

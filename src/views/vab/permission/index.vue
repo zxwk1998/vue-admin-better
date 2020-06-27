@@ -42,7 +42,7 @@
       由于演示环境是mock数据模拟,可能无法展现此功能的配置,只做如下展示,便于您的理解
     </p>
     <br />
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <el-table
           :data="tableData"

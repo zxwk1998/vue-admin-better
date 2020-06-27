@@ -33,7 +33,7 @@ $base-border-radius: 2px;
 $base-border-color: #dcdfe6;
 $base-form-width: 600px;
 $base-input-height: 32px;
-$base-padding: 15px;
+$base-padding: 20px;
 $base-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 $base-font-color: #606266;
 $base-top-bar-height: 70px;
@@ -43,7 +43,7 @@ $base-menu-item-height: 50px;
 $base-tag-item-height: 34px;
 $base-app-main-height: calc(
   100vh - #{$base-nav-bar-height} - #{$base-tags-bar-height} - #{$base-padding} -
-    #{$base-padding} - 55px
+  #{$base-padding} - 55px
 );
 $base-left-menu-width: 220px;
 $base-right-content-width: calc(100% - #{$base-left-menu-width});

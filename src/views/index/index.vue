@@ -1,6 +1,6 @@
 <template>
   <div class="index-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col
         v-if="nodeEnv !== 'development'"
         :xs="24"
@@ -688,7 +688,7 @@ export default {
   }
 
   .card {
-    min-height: 395px;
+    min-height: 420px;
 
     ::v-deep {
       .el-card__body {

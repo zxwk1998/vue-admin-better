@@ -214,8 +214,8 @@ export default {
         }
 
         .app-main-container {
-          width: calc(100% - 30px);
-          margin: 15px auto;
+          width: calc(100% - #{$base-padding} - #{$base-padding});
+          margin: $base-padding auto;
           background: $base-color-white;
           border-radius: $base-border-radius;
         }

@@ -1,6 +1,6 @@
 <template>
   <div class="tree-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col :xs="24" :sm="24" :md="24" :lg="6" :xl="6">
         <el-divider content-position="left">常规树</el-divider>
         <el-input v-model="filterText" placeholder="输入关键字过滤" />

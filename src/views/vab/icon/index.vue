@@ -1,6 +1,6 @@
 <template>
   <div class="icon-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col :span="24">
         <el-divider content-position="left">点击图标即可复制源码</el-divider>
       </el-col>

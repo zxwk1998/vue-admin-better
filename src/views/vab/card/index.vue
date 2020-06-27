@@ -1,6 +1,6 @@
 <template>
   <div class="card-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col
         v-for="(item, index) in list"
         :key="index"

@@ -1,6 +1,6 @@
 <template>
   <div class="small-components-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
         <el-divider content-position="left">小组件</el-divider>
       </el-col>

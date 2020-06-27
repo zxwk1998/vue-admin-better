@@ -1,6 +1,6 @@
 <template>
   <div class="qr-code-container">
-    <el-row :gutter="15">
+    <el-row :gutter="20">
       <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
         <el-card shadow="hover">
           <div slot="header"><span>二维码示例</span></div>
