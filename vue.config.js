@@ -135,19 +135,30 @@ module.exports = {
           ` \u57fa\u4e8e\u0076\u0075\u0065\u002d\u0061\u0064\u006d\u0069\u006e\u002d\u0062\u0065\u0061\u0075\u0074\u0069\u0066\u0075\u006c\u6784\u5efa \n \u0063\u006f\u0070\u0079\u0072\u0069\u0067\u0068\u0074\u003a\u0020\u0063\u0068\u0075\u007a\u0068\u0069\u0078\u0069\u006e\u0020\u0031\u0032\u0030\u0034\u0035\u0030\u0035\u0030\u0035\u0036\u0040\u0071\u0071\u002e\u0063\u006f\u006d \n \u0074\u0069\u006d\u0065\u003a ${time}`,
         ])
         .end();
+      config
+        .plugin("compression")
+        .use(CompressionWebpackPlugin, [
+          {
+            filename: "[path].gz[query]",
+            algorithm: "gzip",
+            test: new RegExp(
+              "\\.(" + productionGzipExtensions.join("|") + ")$"
+            ),
+            threshold: 8192,
+            minRatio: 0.8,
+          },
+        ])
+        .end();
+      config.module
+        .rule("images")
+        .use("image-webpack-loader")
+        .loader("image-webpack-loader")
+        .options({
+          bypassOnDebug: true,
+        })
+        .end();
     });
-    config
-      .plugin("compression")
-      .use(CompressionWebpackPlugin, [
-        {
-          filename: "[path].gz[query]",
-          algorithm: "gzip",
-          test: new RegExp("\\.(" + productionGzipExtensions.join("|") + ")$"),
-          threshold: 8192,
-          minRatio: 0.8,
-        },
-      ])
-      .end();
+
     if (build7z) {
       config.when(process.env.NODE_ENV === "production", (config) => {
         config

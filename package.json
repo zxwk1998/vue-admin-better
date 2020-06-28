@@ -91,6 +91,7 @@
     "filemanager-webpack-plugin": "^2.0.5",
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
+    "image-webpack-loader": "^6.0.0",
     "increase-memory-limit": "^1.0.7",
     "lint-staged": "^10.2.11",
     "mockjs": "^1.1.0",
