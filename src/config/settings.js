@@ -91,5 +91,5 @@ module.exports = {
   //需要自动注入并加载的模块
   providePlugin: { maptalks: "maptalks", "window.maptalks": "maptalks" },
   //npm run build时是否自动生成7z压缩包
-  build7z: true,
+  build7z: false,
 };
