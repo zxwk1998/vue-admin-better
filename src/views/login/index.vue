@@ -138,10 +138,9 @@ export default {
     },
   },
   mounted() {
-    if ("production" !== process.env.NODE_ENV) {
-      this.loginForm.userName = "admin";
-      this.loginForm.password = "123456";
-    }
+    //项目上线时记得去掉
+    this.loginForm.userName = "admin";
+    this.loginForm.password = "123456";
   },
   methods: {
     showPwd() {
