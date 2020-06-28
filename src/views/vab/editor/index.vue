@@ -1,6 +1,6 @@
 <template>
   <div class="editor-container">
-    <el-form ref="form" :model="form" :rules="rules" label-width="80px">
+    <el-form ref="form" :model="form" :rules="rules" label-width="100px">
       <el-form-item label="标题" prop="title">
         <el-input v-model="form.title" maxlength="20"></el-input>
       </el-form-item>
@@ -10,17 +10,8 @@
           <el-option label="实时热点" value="2"></el-option>
         </el-select>
       </el-form-item>
-      <el-form-item label="内容" prop="content">
-        <quill-editor
-          v-model="form.content"
-          :style="{
-            height: '400px',
-            border: '1px solid ' + borderColor,
-          }"
-          :options="editorOption"
-          @blur="onEditorBlur($event)"
-          @change="onEditorChange($event)"
-        ></quill-editor>
+      <el-form-item label="内容" prop="content" class="vab-quill-content">
+        <vab-quill v-model="form.content" :min-height="400"></vab-quill>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="handleSee">预览效果 </el-button>
@@ -37,14 +28,13 @@
 </template>
 
 <script>
-import { quillEditor } from "vue-quill-editor";
 import "quill/dist/quill.core.css";
 import "quill/dist/quill.snow.css";
 import "quill/dist/quill.bubble.css";
-
+import vabQuill from "@/plugins/vabQuill";
 export default {
   name: "Editor",
-  components: { quillEditor },
+  components: { vabQuill },
   data() {
     return {
       borderColor: "#dcdfe6",
@@ -53,25 +43,6 @@ export default {
         title: "",
         module: "",
         content: "",
-      },
-      editorOption: {
-        placeholder: "",
-        modules: {
-          toolbar: [
-            [{ header: [1, 2, 3, 4, 5, 6, false] }],
-            [{ size: ["small", false, "large", "huge"] }],
-            ["bold", "italic", "underline", "strike"],
-            ["blockquote", "code-block"],
-            [{ list: "ordered" }, { list: "bullet" }],
-            [{ script: "sub" }, { script: "super" }],
-            [{ indent: "-1" }, { indent: "+1" }],
-            [{ direction: "rtl" }],
-            [{ color: [] }, { background: [] }],
-            [{ align: [] }],
-            ["clean"],
-            ["link", "image", "video"],
-          ],
-        },
       },
       rules: {
         title: [
@@ -99,28 +70,9 @@ export default {
     };
   },
   methods: {
-    onEditorBlur(quill) {
-      // 失去焦点事件
-
-      this.$refs.form.validateField("content", (errorMsg) => {
-        this.borderColor = "#dcdfe6";
-        if (errorMsg) {
-          this.borderColor = "#F56C6C";
-        }
-      });
-    },
-    onEditorChange({ quill, html, text }) {
-      // 内容改变事件
-      this.form.content = html;
-    },
     handleSee() {
       this.$refs["form"].validate((valid) => {
-        this.$refs.form.validateField("content", (errorMsg) => {
-          this.borderColor = "#dcdfe6";
-          if (errorMsg) {
-            this.borderColor = "#F56C6C";
-          }
-        });
+        this.$refs.form.validateField("content", (errorMsg) => {});
         if (valid) {
           this.dialogTableVisible = true;
         } else {
@@ -147,21 +99,31 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.news {
-  &-title {
-    text-align: center;
+.editor-container {
+  .news {
+    &-title {
+      text-align: center;
+    }
+
+    &-content {
+      ::v-deep {
+        p {
+          line-height: 30px;
+
+          img {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+          }
+        }
+      }
+    }
   }
 
-  &-content {
+  .vab-quill-content {
     ::v-deep {
-      p {
-        line-height: 30px;
-
-        img {
-          display: block;
-          margin-right: auto;
-          margin-left: auto;
-        }
+      .el-form-item__content {
+        line-height: normal;
       }
     }
   }

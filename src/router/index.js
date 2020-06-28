@@ -309,7 +309,7 @@ export const asyncRoutes = [
         path: "editor",
         name: "Editor",
         component: () => import("@/views/vab/editor/index"),
-        meta: { title: "富文本编辑器", permissions: ["admin"] },
+        meta: { title: "富文本编辑器", permissions: ["admin"], badge: "New" },
       },
       {
         path: "qrCode",
