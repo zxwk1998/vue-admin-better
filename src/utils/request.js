@@ -74,7 +74,7 @@ service.interceptors.response.use(
     }
     const { status, data, config } = response;
     const { code, msg } = data;
-    if (code !== successCode && code !== 0) {
+    if (code !== successCode) {
       switch (code) {
         case invalidCode:
           errorMsg(msg || `后端接口${code}异常`);
@@ -103,16 +103,14 @@ service.interceptors.response.use(
     }
     /*网络连接过程异常处理*/
     let { message } = error;
-    switch (message) {
-      case "Network Error":
-        message = "后端接口连接异常";
-        break;
-      case "timeout":
-        message = "后端接口请求超时";
-        break;
-      case "Request failed with status code":
-        message = "后端接口" + message.substr(message.length - 3) + "异常";
-        break;
+    if (message == "Network Error") {
+      message = "后端接口连接异常";
+    }
+    if (message.includes("timeout")) {
+      message = "后端接口请求超时";
+    }
+    if (message.includes("Request failed with status code")) {
+      message = "后端接口" + message.substr(message.length - 3) + "异常";
     }
     errorMsg(message || "后端接口未知异常");
     return Promise.reject(error);
