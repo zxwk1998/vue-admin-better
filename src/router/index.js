@@ -112,7 +112,7 @@ export const asyncRoutes = [
         name: "UserManagement",
         component: () =>
           import("@/views/personnelManagement/userManagement/index"),
-        meta: { title: "用户管理" },
+        meta: { title: "用户管理", icon: "home" },
       },
       {
         path: "roleManagement",
@@ -497,10 +497,11 @@ const router = new VueRouter({
   }),
   routes: constantRoutes,
 });
-const originalPush = VueRouter.prototype.push;
+
+/*const originalPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch((err) => err);
-};
+};*/
 
 export function resetRouter() {
   router.matcher = new VueRouter({
