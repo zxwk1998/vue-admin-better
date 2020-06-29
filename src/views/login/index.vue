@@ -132,7 +132,7 @@ export default {
   watch: {
     $route: {
       handler(route) {
-        this.redirect = route.query && route.query.redirect;
+        this.redirect = (route.query && route.query.redirect) || "/";
       },
       immediate: true,
     },
@@ -160,7 +160,7 @@ export default {
             this.redirect === "/404" || this.redirect === "/401"
               ? "/"
               : this.redirect;
-          this.$router.push({ path: routerPath }).catch((error) => {});
+          await this.$router.push(routerPath).catch(() => {});
           this.loading = false;
         } else {
           return false;
