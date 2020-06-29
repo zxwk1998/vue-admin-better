@@ -53,9 +53,8 @@ router.beforeResolve(async (to, from, next) => {
           console.log(Object.assign(obj1, obj2));
           console.log({ ...to, replace: true });*/
           next({ ...to, replace: true });
-        } catch (error) {
+        } catch {
           await store.dispatch("user/resetAccessToken");
-          next(`/login?redirect=${to.path}`);
           if (progressBar) VabProgress.done();
         }
       }

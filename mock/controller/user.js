@@ -41,7 +41,7 @@ export default [
   {
     url: "/register",
     type: "post",
-    response: (config) => {
+    response: () => {
       return {
         code: 200,
         msg: "模拟注册成功",
@@ -49,7 +49,7 @@ export default [
     },
   },
   {
-    url: "/user/info",
+    url: "/userInfo",
     type: "post",
     response: (config) => {
       const { accessToken } = config.body;
