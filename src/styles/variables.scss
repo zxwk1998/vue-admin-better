@@ -36,18 +36,28 @@ $base-input-height: 32px;
 $base-padding: 20px;
 $base-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 $base-font-color: #606266;
+//横向布局时top-bar、logo、一级菜单的高度
 $base-top-bar-height: 70px;
+//顶部nav-bar的高度
 $base-nav-bar-height: 55px;
+//顶部多标签页tags-bar的高度
 $base-tags-bar-height: 55px;
-$base-menu-item-height: 50px;
+//顶部多标签页tags-bar中每一个item的高度
 $base-tag-item-height: 34px;
+//菜单li标签的高度
+$base-menu-item-height: 50px;
+//app-main的高度
 $base-app-main-height: calc(
   100vh - #{$base-nav-bar-height} - #{$base-tags-bar-height} - #{$base-padding} -
   #{$base-padding} - 55px
 );
+//纵向布局时左侧导航未折叠时的宽度
 $base-left-menu-width: 220px;
+//纵向布局时左侧导航未折叠时右侧内容的宽度
 $base-right-content-width: calc(100% - #{$base-left-menu-width});
+//纵向布局时左侧导航已折叠时的宽度
 $base-left-menu-width-min: 65px;
+//纵向布局时左侧导航已折叠时右侧内容的宽度
 $base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
 $base-transition: all 0.3s;
 
