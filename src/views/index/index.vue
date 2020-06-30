@@ -18,7 +18,6 @@
             target="_blank"
             href="https://github.com/chuzhixin/vue-admin-beautiful"
           >
-            <br />
             <img
               style="height: 100%;"
               src="https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=social"
@@ -785,7 +784,6 @@ export default {
   }
 
   .bottom-btn {
-    float: right;
     margin-top: 5px;
 
     button {
