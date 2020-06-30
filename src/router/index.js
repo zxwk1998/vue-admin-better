@@ -497,7 +497,7 @@ const router = new VueRouter({
   }),
   routes: constantRoutes,
 });
-
+//注释的地方是允许路由重复点击，如果你觉得框架路由跳转规范太过严格可选择放开
 /*const originalPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch((err) => err);
