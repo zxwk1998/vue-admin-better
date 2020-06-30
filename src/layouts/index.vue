@@ -50,10 +50,9 @@
 </template>
 
 <script>
-import { AppMain, NavBar, SideBar, TagsBar, TopBar } from "./components";
+import { Media, AppMain, NavBar, SideBar, TagsBar, TopBar } from "./components";
 import { mapActions, mapGetters } from "vuex";
 import { tokenName } from "@/config/settings";
-import Media from "./mixin/Media";
 
 export default {
   name: "Layout",

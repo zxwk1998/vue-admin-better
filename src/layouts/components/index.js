@@ -13,3 +13,4 @@ export { default as ErrorLog } from "zx-layouts/ErrorLog";
 export { default as ThemeBar } from "zx-layouts/ThemeBar";
 export { default as TopBar } from "zx-layouts/TopBar";
 export { default as NavBar } from "zx-layouts/NavBar";
+export { default as Media } from "zx-layouts/Mixin/Media";
