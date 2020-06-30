@@ -34,17 +34,6 @@ export const constantRoutes = [
     component: () => import("@/views/404"),
     hidden: true,
   },
-  {
-    path: "/redirect",
-    component: Layout,
-    hidden: true,
-    children: [
-      {
-        path: "/redirect/:path(.*)",
-        component: () => import("@/views/redirect/index"),
-      },
-    ],
-  },
 ];
 
 /*当settings.js里authentication配置的是intelligence时，views引入交给前端配置*/
