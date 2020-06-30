@@ -1,6 +1,6 @@
 /**
  * @copyright chuzhixin 1204505056@qq.com
- * @description router全局配置，如有必要可分文件抽离
+ * @description router全局配置，如有必要可分文件抽离，其中asyncRoutes只有在intelligence模式下才会用到，vip文档中已提供路由的基础图标与小清新图标的配置方案，请仔细阅读
  */
 
 import Vue from "vue";
@@ -10,7 +10,6 @@ import EmptyLayout from "@/layouts/EmptyLayout";
 import { routerMode } from "@/config/settings";
 
 Vue.use(VueRouter);
-
 export const constantRoutes = [
   {
     path: "/login",
@@ -36,7 +35,6 @@ export const constantRoutes = [
   },
 ];
 
-/*当settings.js里authentication配置的是intelligence时，views引入交给前端配置*/
 export const asyncRoutes = [
   {
     path: "/",
