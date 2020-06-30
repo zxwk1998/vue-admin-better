@@ -18,11 +18,11 @@
             target="_blank"
             href="https://github.com/chuzhixin/vue-admin-beautiful"
           >
+            <br />
             <img
               style="height: 100%;"
               src="https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=social"
             />
-            <br />
           </a>
         </el-alert>
       </el-col>
@@ -104,7 +104,7 @@
           </div>
         </el-card>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="16" :xl="16">
+      <el-col :xs="24" :sm="24" :md="24" :lg="13" :xl="13">
         <el-card class="card" shadow="never">
           <div slot="header">
             <span>GDP分布图</span>
@@ -116,7 +116,7 @@
           />
         </el-card>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
+      <el-col :xs="24" :sm="24" :md="24" :lg="11" :xl="11">
         <el-card class="card" shadow="never">
           <div slot="header">
             <span>更新日志</span>
@@ -126,28 +126,41 @@
             <tr>
               <td>@vue/cli版本</td>
               <td>{{ devDependencies["@vue/cli-service"] }}</td>
-            </tr>
-            <tr>
               <td>vue版本</td>
-              <td>{{ dependencies.vue }}</td>
+              <td>{{ dependencies["vue"] }}</td>
             </tr>
             <tr>
               <td>vuex版本</td>
-              <td>{{ dependencies.vuex }}</td>
-            </tr>
-            <tr>
+              <td>{{ dependencies["vuex"] }}</td>
               <td>vue-router版本</td>
               <td>{{ dependencies["vue-router"] }}</td>
             </tr>
             <tr>
               <td>element-ui版本</td>
               <td>{{ dependencies["element-ui"] }}</td>
+              <td>axios版本</td>
+              <td>{{ dependencies["axios"] }}</td>
             </tr>
             <tr>
-              <td>axios版本</td>
-              <td>{{ dependencies.axios }}</td>
+              <td>eslint版本</td>
+              <td>{{ devDependencies["eslint"] }}</td>
+              <td>prettier版本</td>
+              <td>{{ devDependencies["prettier"] }}</td>
+            </tr>
+            <tr>
+              <td>sass版本</td>
+              <td>{{ devDependencies["sass"] }}</td>
+              <td>mockjs版本</td>
+              <td>{{ devDependencies["mockjs"] }}</td>
+            </tr>
+            <tr>
+              <td>zx-layouts版本</td>
+              <td>{{ dependencies["zx-layouts"] }}</td>
+              <td>lodash版本</td>
+              <td>{{ dependencies["lodash"] }}</td>
             </tr>
           </table>
+
           <div v-if="nodeEnv !== 'development'" class="bottom-btn">
             <el-popover placement="top" width="250" trigger="hover">
               <p>
@@ -173,7 +186,7 @@
               target="_blank"
               href="https://gitee.com/chu1204505056/vue-admin-beautiful"
             >
-              <el-button type="warning">码云下载源码</el-button>
+              <el-button type="warning">码云下载源码点star</el-button>
             </a>
             <el-popover placement="top" width="250" trigger="hover">
               <p>
@@ -531,6 +544,7 @@ export default {
             name: "2099年全国GDP分布",
             type: "map",
             roam: false,
+            zoom: 1.25,
             mapType: "china",
             mapLocation: {
               x: "center",
@@ -613,19 +627,19 @@ export default {
         },
         {
           icon: "book",
-          title: "XXX",
+          title: "书籍",
           link: "",
           color: "#69c0ff",
         },
         {
           icon: "bullhorn",
-          title: "XXX",
+          title: "公告",
           link: "",
           color: "#ff85c0",
         },
         {
           icon: "gift",
-          title: "XXX",
+          title: "礼物",
           link: "",
           color: "#ffd666",
         },
@@ -691,12 +705,17 @@ export default {
   background: #f5f7f8 !important;
 
   ::v-deep {
-    .el-alert--info.is-light {
-      min-height: 82px;
-      margin-bottom: 15px;
-      color: #909399;
-      background-color: $base-color-white;
-      border: 1px solid #ebeef5;
+    .el-alert {
+      padding: $base-padding;
+
+      &--info.is-light {
+        min-height: 82px;
+        padding: $base-padding;
+        margin-bottom: 15px;
+        color: #909399;
+        background-color: $base-color-white;
+        border: 1px solid #ebeef5;
+      }
     }
 
     .el-card__body {
@@ -743,9 +762,10 @@ export default {
       line-height: 20px;
       border: 1px solid #e6e6e6;
 
-      &:first-child {
-        width: 50%;
+      &:nth-child(odd) {
+        width: 20%;
         text-align: right;
+        background-color: #f7f7f7;
       }
     }
   }
@@ -769,7 +789,7 @@ export default {
     margin-top: 5px;
 
     button {
-      margin: 5px 0 5px 10px;
+      margin: 5px 10px 5px 0;
     }
   }
 }
