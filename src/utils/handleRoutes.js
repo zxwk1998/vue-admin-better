@@ -21,6 +21,8 @@ export function filterAllRoutes(constantRoutes) {
           path = route.component;
         } else if (new RegExp("^/.*$").test(route.component)) {
           path = "views" + route.component;
+        } else if (new RegExp("^@views/.*$").test(route.component)) {
+          path = route.component.str.slice(2);
         } else {
           path = "views/" + route.component;
         }
