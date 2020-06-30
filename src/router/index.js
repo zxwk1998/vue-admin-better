@@ -62,7 +62,6 @@ export const asyncRoutes = [
           title: "首页",
           icon: "home",
           affix: true,
-          badge: "New",
         },
       },
     ],
@@ -131,6 +130,16 @@ export const asyncRoutes = [
     alwaysShow: true,
     meta: { title: "组件", icon: "cloud" },
     children: [
+      {
+        path: "permissions",
+        name: "Permission",
+        component: () => import("@/views/vab/permissions/index"),
+        meta: {
+          title: "权限控制",
+          permissions: ["admin", "editor"],
+          badge: "New",
+        },
+      },
       {
         path: "icon",
         component: EmptyLayout,
@@ -221,15 +230,7 @@ export const asyncRoutes = [
         component: () => import("@/views/vab/card/index"),
         meta: { title: "卡片", permissions: ["admin"] },
       },
-      {
-        path: "permission",
-        name: "Permission",
-        component: () => import("@/views/vab/permission/index"),
-        meta: {
-          title: "权限控制",
-          permissions: ["admin", "editor"],
-        },
-      },
+
       {
         path: "betterScroll",
         name: "BetterScroll",

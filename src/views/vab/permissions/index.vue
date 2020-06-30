@@ -1,12 +1,12 @@
 <template>
-  <div class="permission-container">
+  <div class="permissions-container">
     <el-divider content-position="left">
       intelligence模式,前端根据permissions拦截路由(演示环境,默认使用此方案)
     </el-divider>
 
     <el-form ref="form" :model="form" :inline="true">
       <el-form-item label="切换账号">
-        <el-radio-group v-model="form.permission">
+        <el-radio-group v-model="form.account">
           <el-radio label="admin">admin</el-radio>
           <el-radio label="editor">editor</el-radio>
           <el-radio label="test">test</el-radio>
@@ -34,6 +34,8 @@
     <el-button v-permissions="['test']" type="primary">
       我是拥有["test"]权限的按钮
     </el-button>
+    <br />
+    <br />
     <el-divider content-position="left">
       all模式,路由以及view文件引入全部交给后端(权限复杂,且随时变更,建议使用此方案)
     </el-divider>
@@ -80,6 +82,13 @@
               </span>
             </template>
           </el-table-column>
+          <el-table-column label="badge">
+            <template slot-scope="scope">
+              <span v-if="scope.row.meta">
+                {{ scope.row.meta.badge }}
+              </span>
+            </template>
+          </el-table-column>
         </el-table>
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
@@ -96,14 +105,14 @@ import { getRouterList } from "@/api/router";
 import JsonEditor from "@/components/JsonEditor";
 
 export default {
-  name: "Permission",
+  name: "Permissions",
   components: {
     JsonEditor,
   },
   data() {
     return {
       form: {
-        permission: "",
+        account: "",
       },
       tableData: [],
       res: [],
@@ -119,14 +128,11 @@ export default {
     this.fetchData();
   },
   mounted() {
-    this.form.permission = this.userName;
+    this.form.account = this.userName;
   },
   methods: {
     handleChangePermission() {
-      localStorage.setItem(
-        tokenTableName,
-        `${this.form.permission}-accessToken`
-      );
+      localStorage.setItem(tokenTableName, `${this.form.account}-accessToken`);
       location.reload();
     },
     async fetchData() {

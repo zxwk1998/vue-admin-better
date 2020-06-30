@@ -42,9 +42,9 @@ const data = [
     alwaysShow: true,
     children: [
       {
-        path: "permission",
-        name: "Permission",
-        component: "vab/permission/index",
+        path: "permissions",
+        name: "Permissions",
+        component: "vab/permissions/index",
         meta: {
           title: "权限控制",
           permissions: ["admin", "editor", "test"],
