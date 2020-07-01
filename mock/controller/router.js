@@ -340,12 +340,6 @@ const data = [
         meta: { title: "错误日志模拟", permissions: ["admin"] },
       },
       {
-        path: "news",
-        name: "News",
-        component: "views/vab/news/index",
-        meta: { title: "新闻", permissions: ["admin"] },
-      },
-      {
         path: "more",
         name: "More",
         component: "views/vab/more/index",
