@@ -2,8 +2,8 @@
  * @copyright chuzhixin 1204505056@qq.com
  * @description 路由守卫，目前两种模式：all模式与intelligence模式
  */
-import router from "../router";
-import store from "../store";
+import router from "@/router";
+import store from "@/store";
 import VabProgress from "nprogress";
 import "nprogress/nprogress.css";
 import getPageTitle from "@/utils/pageTitle";
@@ -12,7 +12,8 @@ import {
   loginInterception,
   routesWhiteList,
   progressBar,
-} from "@/config/settings";
+  recordRoute,
+} from "./settings";
 
 VabProgress.configure({
   easing: "ease",
@@ -47,11 +48,6 @@ router.beforeResolve(async (to, from, next) => {
             accessRoutes = await store.dispatch("routes/setAllRoutes");
           }
           router.addRoutes(accessRoutes);
-          /*console.log(to);
-          let obj1 = { ...to };
-          let obj2 = { replace: true };
-          console.log(Object.assign(obj1, obj2));
-          console.log({ ...to, replace: true });*/
           next({ ...to, replace: true });
         } catch {
           await store.dispatch("user/resetAccessToken");
@@ -63,7 +59,12 @@ router.beforeResolve(async (to, from, next) => {
     if (routesWhiteList.indexOf(to.path) !== -1) {
       next();
     } else {
-      next(`/login?redirect=${to.path}`);
+      if (recordRoute) {
+        next(`/login?redirect=${to.path}`);
+      } else {
+        next("/login");
+      }
+
       if (progressBar) VabProgress.done();
     }
   }
