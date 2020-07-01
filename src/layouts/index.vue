@@ -20,6 +20,7 @@
         </div>
       </div>
       <div class="vab-main main-padding">
+        <ad></ad>
         <app-main></app-main>
       </div>
     </div>
@@ -42,6 +43,7 @@
           <nav-bar></nav-bar>
           <tags-bar v-if="tagsBar === 'true' || tagsBar === true" />
         </div>
+        <ad></ad>
         <app-main></app-main>
       </div>
     </div>
@@ -50,13 +52,21 @@
 </template>
 
 <script>
-import { Media, AppMain, NavBar, SideBar, TagsBar, TopBar } from "./components";
+import {
+  Ad,
+  Media,
+  AppMain,
+  NavBar,
+  SideBar,
+  TagsBar,
+  TopBar,
+} from "./components";
 import { mapActions, mapGetters } from "vuex";
 import { tokenName } from "@/config/settings";
-
 export default {
   name: "Layout",
   components: {
+    Ad,
     TopBar,
     NavBar,
     SideBar,
@@ -150,11 +160,9 @@ export default {
       }
 
       .main-padding {
-        margin-top: 15px;
-        margin-bottom: 15px;
-
         .app-main-container {
-          min-height: calc(100vh - 180px);
+          margin-top: $base-padding;
+          margin-bottom: $base-padding;
           background: $base-color-white;
         }
       }
