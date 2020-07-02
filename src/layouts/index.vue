@@ -52,15 +52,7 @@
 </template>
 
 <script>
-import {
-  Ad,
-  Media,
-  AppMain,
-  NavBar,
-  SideBar,
-  TagsBar,
-  TopBar,
-} from "./components";
+import { Ad, AppMain, NavBar, SideBar, TagsBar, TopBar } from "./components";
 import { mapActions, mapGetters } from "vuex";
 import { tokenName } from "@/config/settings";
 export default {
@@ -73,7 +65,6 @@ export default {
     AppMain,
     TagsBar,
   },
-  mixins: [Media],
   data() {
     return {};
   },
@@ -91,7 +82,28 @@ export default {
       };
     },
   },
+  beforeMount() {
+    window.addEventListener("resize", this.handleResize);
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.handleResize);
+  },
   mounted() {
+    const userAgent = navigator.userAgent;
+    if (userAgent.includes("Juejin")) {
+      this.$baseAlert(
+        "vue-admin-beautiful不支持在掘金内置浏览器演示，请手动复制以下地址到浏览器中查看http://mpfhrd48.sanxing.uz7.cn/vue-admin-beautiful"
+      );
+    }
+    const isMobile = this.handleIsMobile();
+    if (isMobile) {
+      this.$store.dispatch("settings/toggleDevice", "mobile");
+      setTimeout(() => {
+        this.$store.dispatch("settings/foldSideBar");
+      }, 2000);
+    } else {
+      this.$store.dispatch("settings/openSideBar");
+    }
     this.$nextTick(() => {
       window.addEventListener(
         "storage",
@@ -107,6 +119,18 @@ export default {
     ...mapActions({
       handleFoldSideBar: "settings/foldSideBar",
     }),
+    handleIsMobile() {
+      return document.body.getBoundingClientRect().width - 1 < 992;
+    },
+    handleResize() {
+      if (!document.hidden) {
+        const isMobile = this.handleIsMobile();
+        this.$store.dispatch(
+          "settings/toggleDevice",
+          isMobile ? "mobile" : "desktop"
+        );
+      }
+    },
   },
 };
 </script>
