@@ -66,7 +66,7 @@ export default {
     TagsBar,
   },
   data() {
-    return {};
+    return { oldLayout: "" };
   },
   computed: {
     ...mapGetters({
@@ -89,6 +89,7 @@ export default {
     window.removeEventListener("resize", this.handleResize);
   },
   mounted() {
+    this.oldLayout = this.layout;
     const userAgent = navigator.userAgent;
     if (userAgent.includes("Juejin")) {
       this.$baseAlert(
@@ -97,6 +98,12 @@ export default {
     }
     const isMobile = this.handleIsMobile();
     if (isMobile) {
+      if (isMobile) {
+        //横向布局时如果是手机端访问那么改成纵向版
+        this.$store.dispatch("settings/changeLayout", "vertical");
+      } else {
+        this.$store.dispatch("settings/changeLayout", this.oldLayout);
+      }
       this.$store.dispatch("settings/toggleDevice", "mobile");
       setTimeout(() => {
         this.$store.dispatch("settings/foldSideBar");
@@ -125,6 +132,13 @@ export default {
     handleResize() {
       if (!document.hidden) {
         const isMobile = this.handleIsMobile();
+        if (isMobile) {
+          //横向布局时如果是手机端访问那么改成纵向版
+          this.$store.dispatch("settings/changeLayout", "vertical");
+        } else {
+          this.$store.dispatch("settings/changeLayout", this.oldLayout);
+        }
+
         this.$store.dispatch(
           "settings/toggleDevice",
           isMobile ? "mobile" : "desktop"
