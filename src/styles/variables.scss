@@ -68,7 +68,7 @@ $base-left-menu-width-min: 65px;
 //纵向布局时左侧导航已折叠时右侧内容的宽度
 $base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
 //默认动画
-$base-transition: all 0.3s;
+$base-transition: all 0.2s;
 
 :export {
   //菜单文字颜色变量导出
