@@ -66,11 +66,11 @@
     "zx-keel": "^0.9.3",
     "zx-layouts": "^0.5.3",
     "zx-magnifie": "^0.4.0",
-    "zx-markdown-editor": "^0.0.1",
+    "zx-markdown-editor": "^0.0.2",
     "zx-player": "^0.9.6",
     "zx-quill": "^0.0.2",
     "zx-templates": "^0.0.7",
-    "zx-verify": "^0.0.1"
+    "zx-verify": "^0.0.2"
   },
   "devDependencies": {
     "@babel/register": "^7.10.4",
