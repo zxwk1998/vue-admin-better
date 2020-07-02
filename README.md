@@ -44,6 +44,6 @@ cnpm run serve
 
 ![img](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
 
-## 付费技术支持，自定义框架版权，商务合作，加入 vip 群
+## 付费学习，付费技术支持，商务合作
 
 联系：QQ 1204505056
