@@ -6,7 +6,10 @@ import store from "./store";
 import router from "./router";
 import "./plugins";
 
-if (process.env.NODE_ENV === "production") {
+if (
+  process.env.VUE_APP_PREVIEW === "true" ||
+  process.env.NODE_ENV === "development"
+) {
   const { mockXHR } = require("../mock/static");
   mockXHR();
 }
