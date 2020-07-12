@@ -97,7 +97,7 @@ module.exports = {
       .options({ symbolId: "colorful-icon-[name]" })
       .end();
     config.when(process.env.NODE_ENV === "development", (config) => {
-      config.devtool("cheap-source-map");
+      config.devtool("source-map");
     });
     config.when(process.env.NODE_ENV !== "development", (config) => {
       config.performance.set("hints", false);

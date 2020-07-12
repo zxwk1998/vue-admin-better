@@ -98,22 +98,6 @@ html {
 
     /* el-tag结束 */
 
-    /* 右侧主题配置、拷贝代码开始 */
-    .theme-bar-setting {
-      div {
-        border-bottom: 0 !important;
-
-        & + div {
-          border-top: 1px solid $base-color-white;
-        }
-
-        p {
-          padding: 0;
-          margin: 0;
-        }
-      }
-    }
-
     /* markdown编辑器开始 */
     .editor-toolbar {
       .no-mobile,
