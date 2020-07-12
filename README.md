@@ -6,7 +6,7 @@
 
 ## 演示地址
 
-#### - [🚀 演示地址 1：vue-admin-beautiful （横向纵向布局无缝切换）](http://beautiful.panm.cn/vue-admin-beautiful/)
+#### - [🚀 演示地址：vue-admin-beautiful （横向纵向布局无缝切换）](http://beautiful.panm.cn/vue-admin-beautiful/)
 
 #### - [🚀 国内备份地址：vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/)
 
@@ -14,7 +14,7 @@
 
 ## 跨平台效果演示
 
-#### - [🚀 jquery 插件地址： vue-admin-beautiful](http://www.jq22.com/yanshi23029)
+#### - [🚀 演示地址： vue-admin-beautiful](http://www.jq22.com/yanshi23029)
 
 ## 安装
 
