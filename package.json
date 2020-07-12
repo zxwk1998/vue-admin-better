@@ -1,10 +1,12 @@
 {
   "name": "vue-admin-beautiful",
   "version": "1.0.0",
-  "private": true,
   "author": "chuzhixin",
   "participants": [],
   "homepage": "https://chu1204505056.gitee.io/vue-admin-beautiful",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "serve": "npm run helper&&vue-cli-service serve",
     "build": "npm run helper&&vue-cli-service build",
@@ -114,6 +116,17 @@
     "vue-template-compiler": "^2.6.11",
     "webpackbar": "^4.0.0"
   },
+  "keywords": [
+    "vue",
+    "admin",
+    "dashboard",
+    "element-ui",
+    "vue-admin",
+    "element-admin",
+    "boilerplate",
+    "admin-template",
+    "management-system"
+  ],
   "engines": {
     "node": ">=8.9",
     "npm": ">= 3.0.0"
