@@ -18,9 +18,9 @@ cnpm i
 cnpm run serve
 ```
 
-## vue-admin-beautiful 前端讨论群-1 972435319（详细文档加群获取）
+## vue-admin-beautiful 前端讨论群-1 972435319
 
-不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 感谢您的信任 群内提供 vue-admin-beautiful-template 基础版本 群内提供详细的基础文档 适合框架快速入门
+不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautiful-template 基础版本和详细的基础使用文档适合框架快速入门
 
 ![img](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
 
