@@ -8,6 +8,10 @@
 
 #### - [🚀 演示地址 2： vue-admin-clever （常规后台管理布局）](http://beautiful.panm.cn/vue-admin-clever/)
 
+## 跨平台效果演示
+
+<iframe height="509" width="905" src='http://www.jq22.com/yanshi23029' frameborder="0"> </iframe>
+
 ## 安装
 
 ```bash
