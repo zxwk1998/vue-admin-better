@@ -1,4 +1,4 @@
-<div align="center"><a href="https://www.iviewui.com"><img width="200" src="https://gitee.com/chu1204505056/vue-admin-beautiful/raw/master/src/colorfulIcon/svg/vab.svg"></a>
+<div align="center"><a href=""><img width="200" src="https://gitee.com/chu1204505056/vue-admin-beautiful/raw/master/src/colorfulIcon/svg/vab.svg"></a>
 <h1> vue-admin-beautiful </h1>
 <h3>一款基于 vue+element-ui 的绝佳的通用型、中后台前端框架</h3>
 <h3>An excellent general-purpose, middle and background front-end framework based on Vue + element UI</h3>
