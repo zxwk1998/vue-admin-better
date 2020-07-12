@@ -1,12 +1,16 @@
-<div align="center"><a href="https://www.iviewui.com"><img width="200" src="https://gitee.com/chu1204505056/vue-admin-beautiful/raw/master/src/colorfulIcon/svg/vab.svg"></a><h1> vue-admin-beautiful </h1><h3>一款基于 vue+element-ui 的绝佳的通用型、中后台前端框架</h3></div>
+<div align="center"><a href="https://www.iviewui.com"><img width="200" src="https://gitee.com/chu1204505056/vue-admin-beautiful/raw/master/src/colorfulIcon/svg/vab.svg"></a>
+<h1> vue-admin-beautiful </h1>
+<h3>一款基于 vue+element-ui 的绝佳的通用型、中后台前端框架</h3>>
+<h3>An excellent general-purpose, middle and background front-end framework based on Vue + element UI</h3>
+</div>
 
 ## 演示地址
 
-#### - [🚀 演示地址 1： vue-admin-beautiful （横向纵向布局无缝切换）](http://beautiful.panm.cn/vue-admin-beautiful/)
+#### - [🚀 演示地址 1：vue-admin-beautiful （横向纵向布局无缝切换）](http://beautiful.panm.cn/vue-admin-beautiful/)
 
-#### - [🚀 国内备份地址： vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/)
+#### - [🚀 国内备份地址：vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/)
 
-#### - [🚀 演示地址 2： vue-admin-clever （常规后台管理布局）](http://beautiful.panm.cn/vue-admin-clever/)
+#### - [🚀 English backup address:vue-admin-beautiful）](https://chuzhixin.github.io/vue-admin-beautiful/)
 
 ## 跨平台效果演示
 
@@ -15,12 +19,26 @@
 ## 安装
 
 ```bash
-
+# 克隆项目
+git clone https://github.com/chuzhixin/vue-admin-beautiful.git
 # 进入项目目录
 cd vue-admin-beautiful
 # 安装依赖
 cnpm i
 # 本地开发 启动项目
+cnpm run serve
+```
+
+## install
+
+```bash
+# Clone project
+git clone https://github.com/chuzhixin/vue-admin-beautiful.git
+# Enter project directory
+cd vue-admin-beautiful
+# Installation dependency
+cnpm i
+# Start project
 cnpm run serve
 ```
 
