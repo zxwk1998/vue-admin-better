@@ -42,18 +42,6 @@ cnpm i
 cnpm run serve
 ```
 
-## vue-admin-beautiful 前端讨论群-1 972435319
-
-不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautiful-template 基础版本和详细的基础使用文档适合框架快速入门
-
-![img](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
-
-<!-- ## vue-admin-beautiful 前端讨论群-VIP 805808910
-
-群内问题优先回答 群主每周在线授课 提供脚手架搭建在线指导 组件封装方法指导 NPM 发包开发组件指导（需付费 100，帮助你的同时也帮了群主，感谢信任）群内提供专属 VIP 文档 能快速掌握脚手架搭建 开发工具配置的技巧（其实 50%的重复工作都可以靠工具来完成） 如有需要加作者 QQ 1204505056（加作者的前提是您愿意尊重知识，为人谦逊，不糟蹋开原作者的善良，如果你习惯了白嫖，那我尊重不同的声音，如果你觉得贵，请忽略。。。）
-
-![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm_vip.png) -->
-
 ## 友情链接
 
 #### - [uView 文档（超棒的移动跨端框架，文档详细，上手容易）](https://uviewui.com/)
@@ -66,9 +54,11 @@ cnpm run serve
 
 #### - [pl-table 完美解决 element 万级表格数据渲染卡顿问题](https://github.com/livelyPeng/pl-table)
 
-## 捐赠
+## vue-admin-beautiful 前端讨论群-1 972435319
 
-![img](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
+不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautiful-template 基础版本和详细的基础使用文档适合框架快速入门
+
+![img](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
 
 ## setting.js 配置
 
@@ -296,6 +286,14 @@ Vue.use(ElementUI, {
 });
 ```
 
-## 付费学习，付费技术支持，商务合作
+## 付费技术支持，商务合作
 
 ### 联系：QQ 1204505056
+
+## 捐赠
+
+![img](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
+
+#### github 标星增长量统计
+
+[![Stargazers over time](https://starcharts.herokuapp.com/chuzhixin/vue-admin-beautiful.svg)](https://github.com/chuzhixin/vue-admin-beautiful)
