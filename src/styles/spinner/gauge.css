@@ -1,0 +1,104 @@
+.gauge-loader:not(:required) {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 32px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: #6ca;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+}
+
+.gauge-loader:not(:required)::before {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  width: 4px;
+  height: 27px;
+  content: "";
+  background: white;
+  border-radius: 2px;
+  transform-origin: 50% 100%;
+  animation: gauge-loader 4000ms infinite ease;
+}
+
+.gauge-loader:not(:required)::after {
+  position: absolute;
+  top: 26px;
+  left: 26px;
+  width: 13px;
+  height: 13px;
+  content: "";
+  background: white;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+@keyframes gauge-loader {
+  0% {
+    transform: rotate(-50deg);
+  }
+
+  10% {
+    transform: rotate(20deg);
+  }
+
+  20% {
+    transform: rotate(60deg);
+  }
+
+  24% {
+    transform: rotate(60deg);
+  }
+
+  40% {
+    transform: rotate(-20deg);
+  }
+
+  54% {
+    transform: rotate(70deg);
+  }
+
+  56% {
+    transform: rotate(78deg);
+  }
+
+  58% {
+    transform: rotate(73deg);
+  }
+
+  60% {
+    transform: rotate(75deg);
+  }
+
+  62% {
+    transform: rotate(70deg);
+  }
+
+  70% {
+    transform: rotate(-20deg);
+  }
+
+  80% {
+    transform: rotate(20deg);
+  }
+
+  83% {
+    transform: rotate(25deg);
+  }
+
+  86% {
+    transform: rotate(20deg);
+  }
+
+  89% {
+    transform: rotate(25deg);
+  }
+
+  100% {
+    transform: rotate(-50deg);
+  }
+}
