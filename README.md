@@ -10,7 +10,7 @@
 
 ## 跨平台效果演示
 
-<iframe height="509" width="905" src='http://www.jq22.com/yanshi23029' frameborder="0"> </iframe>
+#### - [🚀 jquery 插件地址： vue-admin-beautiful](http://www.jq22.com/yanshi23029)
 
 ## 安装
 
