@@ -13,7 +13,7 @@
         <el-form :inline="true" :model="queryForm" @submit.native.prevent>
           <el-form-item>
             <el-input
-              v-model.trim="queryForm.userName"
+              v-model.trim="queryForm.username"
               placeholder="请输入用户名"
               clearable
             />
@@ -41,7 +41,7 @@
       ></el-table-column>
       <el-table-column
         show-overflow-tooltip
-        prop="userName"
+        prop="username"
         label="用户名"
       ></el-table-column>
       <el-table-column
@@ -111,7 +111,7 @@ export default {
       queryForm: {
         pageNo: 1,
         pageSize: 10,
-        userName: "",
+        username: "",
       },
     };
   },

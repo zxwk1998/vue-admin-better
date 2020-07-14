@@ -23,12 +23,12 @@
             hello !
           </div>
           <div class="title-tips">欢迎来到{{ title }}！</div>
-          <el-form-item style="margin-top: 40px;" prop="userName">
+          <el-form-item style="margin-top: 40px;" prop="username">
             <span class="svg-container svg-container-admin">
               <vab-icon :icon="['fas', 'user']" />
             </span>
             <el-input
-              v-model.trim="form.userName"
+              v-model.trim="form.username"
               v-focus
               placeholder="请输入用户名"
               tabindex="1"
@@ -88,7 +88,7 @@ export default {
     },
   },
   data() {
-    const validateUserName = (rule, value, callback) => {
+    const validateusername = (rule, value, callback) => {
       if ("" == value) {
         callback(new Error("用户名不能为空"));
       } else {
@@ -106,15 +106,15 @@ export default {
       nodeEnv: process.env.NODE_ENV,
       title: this.$baseTitle,
       form: {
-        userName: "",
+        username: "",
         password: "",
       },
       rules: {
-        userName: [
+        username: [
           {
             required: true,
             trigger: "blur",
-            validator: validateUserName,
+            validator: validateusername,
           },
         ],
         password: [
@@ -140,7 +140,7 @@ export default {
   },
   mounted() {
     if ("production" !== process.env.NODE_ENV) {
-      this.form.userName = "admin";
+      this.form.username = "admin";
       this.form.password = "123456";
     }
   },

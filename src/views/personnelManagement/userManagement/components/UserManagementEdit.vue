@@ -6,8 +6,8 @@
     @close="close"
   >
     <el-form ref="form" :model="form" :rules="rules" label-width="80px">
-      <el-form-item label="用户名" prop="userName">
-        <el-input v-model.trim="form.userName" autocomplete="off"></el-input>
+      <el-form-item label="用户名" prop="username">
+        <el-input v-model.trim="form.username" autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item label="密码" prop="password">
         <el-input
@@ -41,13 +41,13 @@ export default {
   data() {
     return {
       form: {
-        userName: "",
+        username: "",
         password: "",
         email: "",
         permissions: [],
       },
       rules: {
-        userName: [
+        username: [
           { required: true, trigger: "blur", message: "请输入用户名" },
         ],
         password: [{ required: true, trigger: "blur", message: "请输入密码" }],

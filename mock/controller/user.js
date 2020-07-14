@@ -23,8 +23,8 @@ export default [
     url: "/login",
     type: "post",
     response: (config) => {
-      const { userName } = config.body;
-      const accessToken = accessTokens[userName];
+      const { username } = config.body;
+      const accessToken = accessTokens[username];
       if (!accessToken) {
         return {
           code: 500,
@@ -54,25 +54,25 @@ export default [
     response: (config) => {
       const { accessToken } = config.body;
       let permissions = ["admin"];
-      let userName = "admin";
+      let username = "admin";
       if ("admin-accessToken" === accessToken) {
         permissions = ["admin"];
-        userName = "admin";
+        username = "admin";
       }
       if ("editor-accessToken" === accessToken) {
         permissions = ["editor"];
-        userName = "editor";
+        username = "editor";
       }
       if ("test-accessToken" === accessToken) {
         permissions = ["admin", "editor"];
-        userName = "test";
+        username = "test";
       }
       return {
         code: 200,
         msg: "success",
         data: {
           permissions,
-          userName,
+          username,
           "avatar|1": [
             "https://i.gtimg.cn/club/item/face/img/2/15922_100.gif",
             "https://i.gtimg.cn/club/item/face/img/8/15918_100.gif",

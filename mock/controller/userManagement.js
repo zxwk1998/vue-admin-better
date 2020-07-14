@@ -2,7 +2,7 @@ const totalCount = 3;
 const List = [
   {
     id: "@id",
-    userName: "admin",
+    username: "admin",
     password: "admin",
     email: "@email",
     permissions: ["admin"],
@@ -10,7 +10,7 @@ const List = [
   },
   {
     id: "@id",
-    userName: "editor",
+    username: "editor",
     password: "editor",
     email: "@email",
     permissions: ["editor"],
@@ -18,7 +18,7 @@ const List = [
   },
   {
     id: "@id",
-    userName: "test",
+    username: "test",
     password: "test",
     email: "@email",
     permissions: ["admin", "editor"],

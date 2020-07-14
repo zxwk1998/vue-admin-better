@@ -19,9 +19,9 @@
           :rules="registerRules"
           size="mini"
         >
-          <el-form-item prop="userName">
+          <el-form-item prop="username">
             <el-input
-              v-model.trim="form.userName"
+              v-model.trim="form.username"
               v-focus
               style="margin-top: 20px;"
               type="text"
@@ -91,7 +91,7 @@
 import { isPassword, isPhone } from "@/utils/validate";
 import { register } from "@/api/user";
 export default {
-  userName: "Register",
+  username: "Register",
   directives: {
     focus: {
       inserted(el) {
@@ -100,7 +100,7 @@ export default {
     },
   },
   data() {
-    const validateUserName = (rule, value, callback) => {
+    const validateusername = (rule, value, callback) => {
       if ("" == value) {
         callback(new Error("用户名不能为空"));
       } else {
@@ -130,10 +130,10 @@ export default {
       title: this.$baseTitle,
       form: {},
       registerRules: {
-        userName: [
+        username: [
           { required: true, trigger: "blur", message: "请输入用户名" },
           { max: 20, trigger: "blur", message: "最多不能超过20个字" },
-          { validator: validateUserName, trigger: "blur" },
+          { validator: validateusername, trigger: "blur" },
         ],
         phone: [
           { required: true, trigger: "blur", message: "请输入手机号码" },
@@ -177,7 +177,7 @@ export default {
       this.$refs["registerForm"].validate(async (valid) => {
         if (valid) {
           const param = {
-            userName: this.form.userName,
+            username: this.form.username,
             phone: this.form.phone,
             password: this.form.password,
             phoneCode: this.form.phoneCode,

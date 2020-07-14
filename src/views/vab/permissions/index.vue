@@ -140,7 +140,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      userName: "user/userName",
+      username: "user/username",
       permissions: "user/permissions",
     }),
   },
@@ -148,7 +148,7 @@ export default {
     this.fetchData();
   },
   mounted() {
-    this.form.account = this.userName;
+    this.form.account = this.username;
   },
   methods: {
     handleChangePermission() {

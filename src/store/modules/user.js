@@ -15,13 +15,13 @@ import { title, tokenName } from "@/config/settings";
 
 const state = {
   accessToken: getAccessToken(),
-  userName: "",
+  username: "",
   avatar: "",
   permissions: [],
 };
 const getters = {
   accessToken: (state) => state.accessToken,
-  userName: (state) => state.userName,
+  username: (state) => state.username,
   avatar: (state) => state.avatar,
   permissions: (state) => state.permissions,
 };
@@ -30,8 +30,8 @@ const mutations = {
     state.accessToken = accessToken;
     setAccessToken(accessToken);
   },
-  setUserName(state, userName) {
-    state.userName = userName;
+  setusername(state, username) {
+    state.username = username;
   },
   setAvatar(state, avatar) {
     state.avatar = avatar;
@@ -74,10 +74,10 @@ const actions = {
       Vue.prototype.$baseMessage("验证失败，请重新登录...", "error");
       return false;
     }
-    let { permissions, userName, avatar } = data;
-    if (permissions && userName) {
+    let { permissions, username, avatar } = data;
+    if (permissions && username) {
       commit("setPermissions", permissions);
-      commit("setUserName", userName);
+      commit("setusername", username);
       commit("setAvatar", avatar);
       return permissions;
     } else {
