@@ -5,6 +5,7 @@
       title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
       type="success"
       :closable="false"
+      style="position: fixed;"
     >
     </el-alert>
     <el-row>
