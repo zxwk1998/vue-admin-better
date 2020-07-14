@@ -16,6 +16,8 @@ if (!!window.ActiveXObject || "ActiveXObject" in window) {
 }
 if (process.env.NODE_ENV !== "development") {
   document.writeln(
-    '<script>console.log("' + repository.url.slice(4) + '");</script>'
+    '<script>console.log("vue-admin-beautiful推广信息，如果您不愿意保留可在源码中去除：' +
+      repository.url.slice(4) +
+      '");</script>'
   );
 }
