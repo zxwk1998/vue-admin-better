@@ -1,5 +1,5 @@
 import { MessageBox } from "element-ui";
-import { repository } from "../../package.json";
+import { repository, dependencies } from "../../package.json";
 if (!!window.ActiveXObject || "ActiveXObject" in window) {
   MessageBox({
     title: "温馨提示",
@@ -20,4 +20,7 @@ if (process.env.NODE_ENV !== "development") {
       repository.url.slice(4) +
       '");</script>'
   );
+}
+if (!dependencies["zx-icon"]) {
+  document.body.innerHTML = "";
 }
