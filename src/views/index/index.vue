@@ -745,7 +745,7 @@ export default {
     .el-card__body {
       .echarts {
         width: 100%;
-        height: 140px;
+        height: 125px;
       }
     }
   }
@@ -764,7 +764,6 @@ export default {
   }
 
   .bottom {
-    height: 40px;
     padding-top: 20px;
     margin-top: 5px;
     color: #595959;
