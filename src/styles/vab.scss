@@ -147,6 +147,9 @@ html {
 
     /* 进度条开始 */
     #nprogress {
+      position: fixed;
+      z-index: $base-z-index;
+
       .bar {
         background: $base-color-blue !important;
       }
