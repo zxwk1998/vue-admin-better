@@ -72,7 +72,7 @@
     "xlsx": "^0.16.3",
     "zx-comparison": "^1.0.3",
     "zx-count": "^0.3.7",
-    "zx-icon": "^1.1.6",
+    "zx-icon": "^1.1.8",
     "zx-keel": "^0.9.4",
     "zx-layouts": "^0.6.0",
     "zx-magnifie": "^0.4.0",
@@ -83,7 +83,7 @@
     "zx-verify": "^0.0.2"
   },
   "devDependencies": {
-    "@babel/register": "^7.10.4",
+    "@babel/register": "^7.10.5",
     "@vue/cli-plugin-babel": "^4.4.6",
     "@vue/cli-plugin-eslint": "^4.4.6",
     "@vue/cli-plugin-router": "^4.4.6",
