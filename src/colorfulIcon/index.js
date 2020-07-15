@@ -1,5 +1,5 @@
 import Vue from "vue";
-import ColorfullIcon from "@/components/ColorfullIcon";
+import ColorfullIcon from "zx-layouts/ColorfullIcon";
 
 Vue.component("vab-colorful-icon", ColorfullIcon);
 const req = require.context("./svg", false, /\.svg$/),
