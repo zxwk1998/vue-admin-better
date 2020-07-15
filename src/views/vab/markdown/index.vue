@@ -16,8 +16,7 @@
 <script>
 import marked from "marked";
 import "github-markdown-css/github-markdown.css";
-import md from "./js/markdown";
-
+import { getList } from "@/api/markdown";
 export default {
   name: "Markdown",
   data() {
@@ -43,11 +42,12 @@ export default {
       this.value = val;
       this.fetchData();
     },
-    fetchData() {
+    async fetchData() {
       this.listLoading = true;
       switch (this.value) {
         case "0":
-          this.prettierList = marked(md || "", {
+          const { data } = await getList();
+          this.prettierList = marked(data || "", {
             renderer: new marked.Renderer(),
             gfm: true,
             tables: true,
