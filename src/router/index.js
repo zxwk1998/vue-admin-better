@@ -383,42 +383,6 @@ export const asyncRoutes = [
         meta: { title: "上传", permissions: ["admin"] },
       },
       {
-        path: "excel",
-        component: EmptyLayout,
-        redirect: "noRedirect",
-        name: "Excel",
-        meta: {
-          title: "Excel",
-          permissions: ["admin"],
-        },
-        children: [
-          {
-            path: "exportExcel",
-            component: () => import("@/views/vab/excel/exportExcel"),
-            name: "ExportExcel",
-            meta: { title: "导出Excel" },
-          },
-          {
-            path: "exportSelectedExcel",
-            component: () => import("@/views/vab/excel/exportSelectExcel"),
-            name: "ExportSelectedExcel",
-            meta: { title: "导出选中行" },
-          },
-          {
-            path: "exportMergeHeaderExcel",
-            component: () => import("@/views/vab/excel/exportMergeHeaderExcel"),
-            name: "ExportMergeHeaderExcel",
-            meta: { title: "导出合并" },
-          },
-          {
-            path: "uploadExcel",
-            component: () => import("@/views/vab/excel/uploadExcel"),
-            name: "UploadExcel",
-            meta: { title: "上传Excel" },
-          },
-        ],
-      },
-      {
         path: "sticky",
         name: "Sticky",
         component: () => import("@/views/vab/sticky/index"),

@@ -69,7 +69,6 @@
     "vue-router": "^3.3.4",
     "vuedraggable": "^2.24.0",
     "vuex": "^3.5.1",
-    "xlsx": "^0.16.3",
     "zx-comparison": "^1.0.3",
     "zx-count": "^0.3.7",
     "zx-icon": "^1.1.8",
