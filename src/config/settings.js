@@ -68,8 +68,8 @@ module.exports = {
   messageDuration: 3000,
   //最长请求时间
   requestTimeout: 5000,
-  //操作正常code
-  successCode: 200,
+  //操作正常code，支持String、Array两种方式
+  successCode: [200, 0],
   //登录失效code
   invalidCode: 402,
   //无权限code

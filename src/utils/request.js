@@ -15,6 +15,7 @@ import store from "@/store";
 import qs from "qs";
 import router from "@/router";
 import _ from "lodash";
+import { isArray, isNumber } from "@/utils/validate";
 
 const service = axios.create({
   baseURL,
@@ -30,9 +31,10 @@ service.interceptors.request.use(
       config.headers[tokenName] = store.getters["user/accessToken"];
     }
     if (config.data) {
+      //这里会过滤所有为空、0、fasle的key，如果不需要请自行注释
       config.data = _.pickBy(config.data, _.identity);
     }
-    if (process.env.NODE_ENV !== "test") {
+    if (process.env.NODE_ENV !== "preview") {
       if (contentType === "application/x-www-form-urlencoded;charset=UTF-8") {
         if (config.data && !config.data.param) {
           config.data = qs.stringify(config.data);
@@ -74,7 +76,21 @@ service.interceptors.response.use(
     }
     const { status, data, config } = response;
     const { code, msg } = data;
-    if (code !== successCode) {
+    let codeVerification = false;
+
+    if (isNumber(successCode)) {
+      codeVerification = code !== successCode;
+    }
+    if (isArray(successCode)) {
+      for (let i = 0; i < successCode.length; i++) {
+        if (code === i) {
+          codeVerification = code !== i;
+          break;
+        }
+      }
+    }
+
+    if (codeVerification) {
       switch (code) {
         case invalidCode:
           errorMsg(msg || `后端接口${code}异常`);
