@@ -6,6 +6,12 @@ const data = [
   },
   {
     title:
+      "近日发现有人打着福州客家网络科技的名义发布了一款名为芊雅admin的项目，不仅完全照搬了vab基础版并对授权文件进行破解并进行二次改造二次收费，将vab的作者信息完全替换，同时也将框架原来存在的bug完整的拷贝了过去",
+    url:
+      "//shang.qq.com/wpa/qunwpa?idkey=14f123ac6d4ef3122bbb60d4693f1d8c951a50be2296951efb12d5ab1642f36b",
+  },
+  {
+    title:
       "近日发现一个名为OKMG芒果源码的网站公然出售vue-admin-beautiful的开源代码，在此向大家说明，框架开源版本永久免费，请勿上当受骗。",
     url:
       "//shang.qq.com/wpa/qunwpa?idkey=14f123ac6d4ef3122bbb60d4693f1d8c951a50be2296951efb12d5ab1642f36b",
