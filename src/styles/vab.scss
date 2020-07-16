@@ -74,9 +74,12 @@ html {
     height: 100vh;
     padding: 0;
     margin: 0;
-    font-family: "PingFang SC", Arial, "Microsoft YaHei", sans-serif;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
     font-size: $base-font-size-default;
+    color: #2c3e50;
     background: #f6f8f9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     @include base-scrollbar;
 
