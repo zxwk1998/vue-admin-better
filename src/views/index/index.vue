@@ -1,7 +1,14 @@
 <template>
   <div class="index-container">
     <el-row :gutter="20">
-      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+      <el-col
+        v-if="nodeEnv !== 'development'"
+        :xs="24"
+        :sm="24"
+        :md="24"
+        :lg="24"
+        :xl="24"
+      >
         <el-alert
           v-if="noticeList[0]"
           :title="noticeList[0].title"

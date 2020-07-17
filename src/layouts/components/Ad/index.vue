@@ -1,5 +1,5 @@
 <template>
-  <div class="vab-ad">
+  <div v-if="nodeEnv !== 'development'" class="vab-ad">
     <el-carousel
       v-if="adList"
       height="30px"
@@ -20,6 +20,7 @@ import { getList } from "@/api/ad";
 export default {
   data() {
     return {
+      nodeEnv: process.env.NODE_ENV,
       adList: [],
     };
   },
