@@ -12,7 +12,7 @@
         >
           <iframe
             class="element-iframe"
-            src="https://chu1204505056.gitee.io/element/#/zh-CN/component/installation"
+            src="https://element.eleme.cn/#/zh-CN/component/installation"
             frameborder="0"
           ></iframe>
         </el-dialog>
@@ -20,7 +20,7 @@
           >Tag 标签
           <a
             target="_blank"
-            href="https://chu1204505056.gitee.io/element/#/zh-CN/component/tag"
+            href="https://element.eleme.cn/#/zh-CN/component/tag"
           >
             文档
           </a>
@@ -40,7 +40,7 @@
           >进度条
           <a
             target="_blank"
-            href="https://chu1204505056.gitee.io/element/#/zh-CN/component/progress"
+            href="https://element.eleme.cn/#/zh-CN/component/progress"
           >
             文档
           </a>
@@ -94,7 +94,7 @@
           >按钮
           <a
             target="_blank"
-            href="https://chu1204505056.gitee.io/element/#/zh-CN/component/button"
+            href="https://element.eleme.cn/#/zh-CN/component/button"
           >
             文档
           </a>
@@ -142,7 +142,7 @@
           >文字链接
           <a
             target="_blank"
-            href="https://chu1204505056.gitee.io/element/#/zh-CN/component/link"
+            href="https://element.eleme.cn/#/zh-CN/component/link"
           >
             文档
           </a>
@@ -167,7 +167,7 @@
           >头像
           <a
             target="_blank"
-            href="https://chu1204505056.gitee.io/element/#/zh-CN/component/avatar"
+            href="https://element.eleme.cn/#/zh-CN/component/avatar"
           >
             文档
           </a>
@@ -177,7 +177,7 @@
           >页头
           <a
             target="_blank"
-            href="https://chu1204505056.gitee.io/element/#/zh-CN/component/page-header"
+            href="https://element.eleme.cn/#/zh-CN/component/page-header"
           >
             文档
           </a>
@@ -187,7 +187,7 @@
           >面包屑
           <a
             target="_blank"
-            href="https://chu1204505056.gitee.io/element/#/zh-CN/component/breadcrumb"
+            href="https://element.eleme.cn/#/zh-CN/component/breadcrumb"
           >
             文档
           </a>
