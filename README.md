@@ -300,6 +300,10 @@ Vue.use(ElementUI, {
 
 [![Stargazers over time](https://starcharts.herokuapp.com/chuzhixin/vue-admin-beautiful.svg)](https://github.com/chuzhixin/vue-admin-beautiful)
 
+#### 开发者评级
+
+[![chuzhixin's github stats](https://github-readme-stats.vercel.app/api?username=chuzhixin)](https://github.com/chuzhixin/vue-admin-beautiful)
+
 ## 关于框架的声明
 
 框架在保留作者版权信息的前提下可免费用于商业使用，框架所有代码包含 npm 包中的源码内容均为免费开放，如果您愿意支持我、或者希望完全变成自己的版权信息，需支付 299 元，如果您愿意加入 VIP 群学习需支付 100 元，这一切都是在您自愿的基础上，如果您觉得框架一文不值，请直接略过，高抬贵手放我一马，不要恶意刷差评，希望每个使用 vue-admin-beautiful 的人无论过程怎样，结局都是美好的，联系方式 QQ 1204505056
