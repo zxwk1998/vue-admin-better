@@ -30,9 +30,9 @@
 # 克隆项目
 git clone https://github.com/chuzhixin/vue-admin-beautiful.git
 # 进入项目目录
-cd vue-admin-beautiful
+npm vue-admin-beautiful
 # 安装依赖
-cnpm i
+npm i
 # 本地开发 启动项目
 cnpm run serve
 ```
@@ -45,9 +45,9 @@ git clone https://github.com/chuzhixin/vue-admin-beautiful.git
 # Enter project directory
 cd vue-admin-beautiful
 # Installation dependency
-cnpm i
+npm i
 # Start project
-cnpm run serve
+npm run serve
 ```
 
 ## 关于框架的声明
