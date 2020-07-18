@@ -14,6 +14,10 @@
 
 #### - [🚀 English backup address:vue-admin-beautiful）](https://chuzhixin.github.io/vue-admin-beautiful/)
 
+#### - [🚀 基础版下载地址](https://ext.dcloud.net.cn/plugin?id=2022)
+
+#### - [🚀 unicloud 版下载地址](https://ext.dcloud.net.cn/plugin?id=2327)
+
 ## 跨平台效果演示
 
 #### - [🚀 演示地址： vue-admin-beautiful](http://www.jq22.com/yanshi23029)
@@ -229,7 +233,7 @@ $base-menu-item-height: 50px;
 //app-main的高度
 $base-app-main-height: calc(
   100vh - #{$base-nav-bar-height} - #{$base-tags-bar-height} -
-  #{$base-padding} - #{$base-padding} - 55px - 30px
+    #{$base-padding} - #{$base-padding} - 55px - 30px
 );
 //纵向布局时左侧导航未折叠时的宽度
 $base-left-menu-width: 230px;

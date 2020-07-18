@@ -31,5 +31,5 @@ module.exports = {
     "no-descending-specificity": null,
     "declaration-colon-newline-after": null,
   },
-  ignoreFiles: ["**/*.js", "dist/*.*", "node_modules", "**/*.ts"],
+  ignoreFiles: ["**/*.js", "dist/*.*", "node_modules", "**/*.ts", "**/*.md"],
 };
