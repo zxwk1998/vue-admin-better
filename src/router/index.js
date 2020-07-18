@@ -129,7 +129,7 @@ export const asyncRoutes = [
           "https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension",
         name: "ExternalLink",
         meta: {
-          title: "外链多开",
+          title: "外链",
           target: "_blank",
           permissions: ["admin", "editor"],
           badge: "New",
