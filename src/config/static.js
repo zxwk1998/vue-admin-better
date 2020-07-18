@@ -3,10 +3,10 @@
  * @description 导入所有 controller 模块，浏览器环境中自动输出controller文件夹下Mock接口，请勿修改。
  */
 import Mock from "mockjs";
-import { paramObj } from "../src/utils";
+import { paramObj } from "@/utils";
 
 const mocks = [];
-const files = require.context("./controller", false, /\.js$/);
+const files = require.context("../../mock/controller", false, /\.js$/);
 
 files.keys().forEach((key) => {
   const obj = files(key).default;

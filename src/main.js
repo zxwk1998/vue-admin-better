@@ -14,7 +14,7 @@ if (
   process.env.NODE_ENV === "preview" ||
   process.env.NODE_ENV === "production"
 ) {
-  const { mockXHR } = require("../mock/static");
+  const { mockXHR } = require("@/config/static");
   mockXHR();
 }
 

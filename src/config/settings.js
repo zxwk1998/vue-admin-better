@@ -17,7 +17,7 @@ module.exports = {
   baseURL:
     process.env.NODE_ENV === "development" || process.env.NODE_ENV === "preview"
       ? "vab-mock-server"
-      : "http://your.website.com",
+      : "vab-mock-server",
   //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
   title: "vue-admin-beautiful",
   //简写
