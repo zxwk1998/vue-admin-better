@@ -125,13 +125,23 @@ export const asyncRoutes = [
     meta: { title: "组件", icon: "box-open" },
     children: [
       {
+        path:
+          "https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension",
+        name: "ExternalLink",
+        meta: {
+          title: "外链多开",
+          target: "_blank",
+          permissions: ["admin", "editor"],
+          badge: "New",
+        },
+      },
+      {
         path: "permissions",
         name: "Permission",
         component: () => import("@/views/vab/permissions/index"),
         meta: {
           title: "权限控制",
           permissions: ["admin", "editor"],
-          badge: "New",
         },
       },
       {

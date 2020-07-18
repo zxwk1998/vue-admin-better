@@ -145,6 +145,15 @@ const data = [
     content: "添加vue-amap组件",
     timestamp: "2020-07-11",
   },
+  {
+    content: "修改zx-layouts引入方式",
+    timestamp: "2020-07-15",
+  },
+  {
+    content:
+      "记录这一天vue-admin-beautiful在插件市场、百度已花费超过1万元广告费用，希望一切都值得",
+    timestamp: "2020-07-18",
+  },
 ];
 
 export default [

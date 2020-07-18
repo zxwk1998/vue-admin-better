@@ -281,6 +281,15 @@
           </el-alert>
           <br />
         </el-card>
+        <el-card shadow="never">
+          <div slot="header">
+            <span>关于开发者</span>
+          </div>
+          <img
+            src="https://github-readme-stats.vercel.app/api?username=chuzhixin"
+            alt=""
+          />
+        </el-card>
       </el-col>
     </el-row>
   </div>
