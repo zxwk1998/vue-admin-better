@@ -4,7 +4,8 @@
 <h3>An excellent general-purpose, middle and background front-end framework based on Vue + element UI</h3>
 </div>
 
-![](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&label=Stars&logo=github)
+[![](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&label=Stars&logo=github)
+](https://github.com/chuzhixin/vue-admin-beautiful)
 
 ## 演示地址
 
