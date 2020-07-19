@@ -79,12 +79,4 @@ $base-transition-time: 0.2s;
   menu-color-active: $base-menu-color-active;
   //菜单背景色变量导出
   menu-background: $base-menu-background;
-  //菜单选中背景色变量导出
-  menu-background-active: $base-menu-background-active;
-  //多标签页选中背景色变量导出
-  tag-background-active: $base-color-blue;
-  //默认按钮背景色变量导出
-  button-background: $base-color-blue;
-  //分页选中背景色变量导出
-  pagination-background-active: $base-color-blue;
 }
