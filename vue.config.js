@@ -1,4 +1,3 @@
-const { webpackBarName, webpackBanner } = require("zx-layouts");
 const path = require("path");
 const {
   publicPath,
@@ -11,7 +10,15 @@ const {
   devPort,
   providePlugin,
   build7z,
+  donation,
 } = require("./src/config/settings");
+const {
+  webpackBarName,
+  webpackBanner,
+  donationConsole,
+} = require("./src/layouts/components/zx-layouts");
+
+if (donation) donationConsole();
 const { version, author } = require("./package.json");
 const Webpack = require("webpack");
 const WebpackBar = require("webpackbar");
