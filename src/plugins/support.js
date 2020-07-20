@@ -21,6 +21,6 @@ if (process.env.NODE_ENV !== "development") {
       '");</script>'
   );
 }
-if (!dependencies["zx-icon"]) {
+if (!dependencies["zx-icon"] || !dependencies["zx-layouts"]) {
   document.body.innerHTML = "";
 }
