@@ -16,7 +16,7 @@ const {
   webpackBarName,
   webpackBanner,
   donationConsole,
-} = require("./src/layouts/components/zx-layouts");
+} = require("zx-layouts");
 
 if (donation) donationConsole();
 const { version, author } = require("./package.json");
