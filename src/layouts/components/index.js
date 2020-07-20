@@ -16,6 +16,6 @@ export { default as SideBar } from "zx-layouts/SideBar";
 export { default as Breadcrumb } from "zx-layouts/Breadcrumb";
 export { default as FullScreenBar } from "zx-layouts/FullScreenBar";
 export { default as ErrorLog } from "zx-layouts/ErrorLog";
-export { default as ThemeBar } from "zx-layouts/ThemeBar";
+export { default as ThemeBar } from "./zx-layouts/ThemeBar";
 export { default as TopBar } from "zx-layouts/TopBar";
 export { default as NavBar } from "zx-layouts/NavBar";
