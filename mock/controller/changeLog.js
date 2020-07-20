@@ -154,6 +154,10 @@ const data = [
       "记录这一天vue-admin-beautiful在插件市场、百度已花费超过1万元广告费用，希望一切都值得",
     timestamp: "2020-07-18",
   },
+  {
+    content: "主题配置添加海洋之心、绿荫草场、荣耀典藏、暗黑之子模式",
+    timestamp: "2020-07-18",
+  },
 ];
 
 export default [
