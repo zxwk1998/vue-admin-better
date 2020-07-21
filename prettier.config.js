@@ -10,6 +10,7 @@ module.exports = {
   bracketSpacing: true,
   jsxBracketSameLine: false,
   arrowParens: "always",
-  vueIndentScriptAndStyle: false,
+  htmlWhitespaceSensitivity: "ignore",
+  vueIndentScriptAndStyle: true,
   endOfLine: "lf",
 };

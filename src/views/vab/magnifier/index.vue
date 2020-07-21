@@ -24,12 +24,12 @@
 </template>
 
 <script>
-import VabMagnifier from "@/plugins/vabMagnifier.js";
+  import VabMagnifier from "@/plugins/vabMagnifier.js";
 
-export default {
-  name: "Magnifier",
-  components: {
-    VabMagnifier,
-  },
-};
+  export default {
+    name: "Magnifier",
+    components: {
+      VabMagnifier,
+    },
+  };
 </script>

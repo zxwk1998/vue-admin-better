@@ -19,42 +19,41 @@
       background
       layout="total, sizes, prev, pager, next, jumper"
       :total="1000"
-    >
-    </el-pagination>
+    ></el-pagination>
   </div>
 </template>
 
 <script>
-export default {
-  props: {
-    list: {
-      type: null,
-      required: true,
-    },
-    headers: {
-      type: Array,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      query: {
-        limit: 20,
-        cursor: 1,
+  export default {
+    props: {
+      list: {
+        type: null,
+        required: true,
       },
-      table_key: 0,
-      total: 0,
-    };
-  },
-  watch: {
-    headers() {
-      this.table_key++;
+      headers: {
+        type: Array,
+        required: true,
+      },
     },
-  },
-  created() {},
-  methods: {
-    editdata() {},
-    test(val) {},
-  },
-};
+    data() {
+      return {
+        query: {
+          limit: 20,
+          cursor: 1,
+        },
+        table_key: 0,
+        total: 0,
+      };
+    },
+    watch: {
+      headers() {
+        this.table_key++;
+      },
+    },
+    created() {},
+    methods: {
+      editdata() {},
+      test(val) {},
+    },
+  };
 </script>

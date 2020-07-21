@@ -36,7 +36,7 @@ service.interceptors.request.use(
     }
     if (process.env.NODE_ENV !== "preview") {
       if (contentType === "application/x-www-form-urlencoded;charset=UTF-8") {
-        if (config.data && !config.data.param) {
+        if (config.data) {
           config.data = qs.stringify(config.data);
         }
       }

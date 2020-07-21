@@ -66,44 +66,44 @@
 </template>
 
 <script>
-import { getList } from "@/api/table";
+  import { getList } from "@/api/table";
 
-export default {
-  name: "InlineEditTable",
-  data() {
-    return {
-      list: null,
-      listLoading: true,
-      elementLoadingText: "正在加载...",
-      queryForm: {
-        pageNo: 1,
-        pageSize: 20,
-        title: "",
+  export default {
+    name: "InlineEditTable",
+    data() {
+      return {
+        list: null,
+        listLoading: true,
+        elementLoadingText: "正在加载...",
+        queryForm: {
+          pageNo: 1,
+          pageSize: 20,
+          title: "",
+        },
+      };
+    },
+    created() {
+      this.getList();
+    },
+    methods: {
+      async getList() {
+        this.listLoading = true;
+        const { data } = await getList(this.queryForm);
+        this.list = data.map((v) => {
+          this.$set(v, "edit", false);
+          v.originalTitle = v.title;
+          return v;
+        });
+        this.listLoading = false;
       },
-    };
-  },
-  created() {
-    this.getList();
-  },
-  methods: {
-    async getList() {
-      this.listLoading = true;
-      const { data } = await getList(this.queryForm);
-      this.list = data.map((v) => {
-        this.$set(v, "edit", false);
-        v.originalTitle = v.title;
-        return v;
-      });
-      this.listLoading = false;
+      cancelEdit(row) {
+        row.title = row.originalTitle;
+        row.edit = false;
+      },
+      confirmEdit(row) {
+        row.edit = false;
+        row.originalTitle = row.title;
+      },
     },
-    cancelEdit(row) {
-      row.title = row.originalTitle;
-      row.edit = false;
-    },
-    confirmEdit(row) {
-      row.edit = false;
-      row.originalTitle = row.title;
-    },
-  },
-};
+  };
 </script>

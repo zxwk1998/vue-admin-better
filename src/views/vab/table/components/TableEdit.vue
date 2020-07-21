@@ -21,55 +21,55 @@
 </template>
 
 <script>
-import { doEdit } from "@/api/table";
+  import { doEdit } from "@/api/table";
 
-export default {
-  name: "TableEdit",
-  data() {
-    return {
-      form: {
+  export default {
+    name: "TableEdit",
+    data() {
+      return {
+        form: {
+          title: "",
+          author: "",
+        },
+        rules: {
+          title: [{ required: true, trigger: "blur", message: "请输入标题" }],
+          author: [{ required: true, trigger: "blur", message: "请输入作者" }],
+        },
         title: "",
-        author: "",
-      },
-      rules: {
-        title: [{ required: true, trigger: "blur", message: "请输入标题" }],
-        author: [{ required: true, trigger: "blur", message: "请输入作者" }],
-      },
-      title: "",
-      dialogFormVisible: false,
-    };
-  },
-  created() {},
-  methods: {
-    showEdit(row) {
-      if (!row) {
-        this.title = "添加";
-      } else {
-        this.title = "编辑";
-        this.form = Object.assign({}, row);
-      }
-      this.dialogFormVisible = true;
+        dialogFormVisible: false,
+      };
     },
-    close() {
-      this.$refs["form"].resetFields();
-      this.form = this.$options.data().form;
-      this.dialogFormVisible = false;
-      this.$emit("fetchData");
-    },
-    save() {
-      this.$refs["form"].validate(async (valid) => {
-        if (valid) {
-          const { msg } = await doEdit(this.form);
-          this.$baseMessage(msg, "success");
-          this.$refs["form"].resetFields();
-          this.dialogFormVisible = false;
-          this.$emit("fetchData");
-          this.form = this.$options.data().form;
+    created() {},
+    methods: {
+      showEdit(row) {
+        if (!row) {
+          this.title = "添加";
         } else {
-          return false;
+          this.title = "编辑";
+          this.form = Object.assign({}, row);
         }
-      });
+        this.dialogFormVisible = true;
+      },
+      close() {
+        this.$refs["form"].resetFields();
+        this.form = this.$options.data().form;
+        this.dialogFormVisible = false;
+        this.$emit("fetchData");
+      },
+      save() {
+        this.$refs["form"].validate(async (valid) => {
+          if (valid) {
+            const { msg } = await doEdit(this.form);
+            this.$baseMessage(msg, "success");
+            this.$refs["form"].resetFields();
+            this.dialogFormVisible = false;
+            this.$emit("fetchData");
+            this.form = this.$options.data().form;
+          } else {
+            return false;
+          }
+        });
+      },
     },
-  },
-};
+  };
 </script>

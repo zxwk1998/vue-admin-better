@@ -4,13 +4,13 @@
   </div>
 </template>
 <script>
-export default {
-  name: "Test",
-  data() {
-    return { show: true };
-  },
-  created() {},
-  mounted() {},
-  methods: {},
-};
+  export default {
+    name: "Test",
+    data() {
+      return { show: true };
+    },
+    created() {},
+    mounted() {},
+    methods: {},
+  };
 </script>

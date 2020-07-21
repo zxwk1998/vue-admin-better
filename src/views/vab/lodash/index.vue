@@ -7,7 +7,8 @@
             type="primary"
             href="https://www.lodashjs.com/"
             target="_blank"
-            >lodashjs官网
+          >
+            lodashjs官网
           </el-link>
         </el-card>
       </el-col>
@@ -187,24 +188,24 @@
 </template>
 
 <script>
-export default {
-  name: "Lodash",
-  data() {
-    return {};
-  },
-  created() {},
-  mounted() {},
-  methods: {},
-};
+  export default {
+    name: "Lodash",
+    data() {
+      return {};
+    },
+    created() {},
+    mounted() {},
+    methods: {},
+  };
 </script>
 <style lang="scss" scoped>
-.lodash-container {
-  text-align: left;
+  .lodash-container {
+    text-align: left;
 
-  ::v-deep {
-    .lodash-content {
-      min-height: 150px;
+    ::v-deep {
+      .lodash-content {
+        min-height: 150px;
+      }
     }
   }
-}
 </style>

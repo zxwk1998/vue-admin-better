@@ -17,7 +17,8 @@
               type="primary"
               native-type="submit"
               @click="handleQuery"
-              >查询
+            >
+              查询
             </el-button>
           </el-form-item>
         </el-form>
@@ -64,99 +65,99 @@
 </template>
 
 <script>
-import { getList } from "@/api/goodsList";
+  import { getList } from "@/api/goodsList";
 
-export default {
-  name: "Goods",
-  components: {},
-  data() {
-    return {
-      queryForm: {
-        pageNo: 1,
-        pageSize: 20,
-        title: "",
+  export default {
+    name: "Goods",
+    components: {},
+    data() {
+      return {
+        queryForm: {
+          pageNo: 1,
+          pageSize: 20,
+          title: "",
+        },
+        list: null,
+        listLoading: true,
+        layout: "total, sizes, prev, pager, next, jumper",
+        total: 0,
+        elementLoadingText: "正在加载...",
+      };
+    },
+    created() {
+      this.fetchData();
+    },
+    methods: {
+      handleSizeChange(val) {
+        this.queryForm.pageSize = val;
+        this.fetchData();
       },
-      list: null,
-      listLoading: true,
-      layout: "total, sizes, prev, pager, next, jumper",
-      total: 0,
-      elementLoadingText: "正在加载...",
-    };
-  },
-  created() {
-    this.fetchData();
-  },
-  methods: {
-    handleSizeChange(val) {
-      this.queryForm.pageSize = val;
-      this.fetchData();
+      handleCurrentChange(val) {
+        this.queryForm.pageNo = val;
+        this.fetchData();
+      },
+      handleQuery() {
+        this.queryForm.pageNo = 1;
+        this.fetchData();
+      },
+      async fetchData() {
+        this.listLoading = true;
+        const { data, totalCount } = await getList(this.queryForm);
+        this.list = data;
+        this.total = totalCount;
+      },
     },
-    handleCurrentChange(val) {
-      this.queryForm.pageNo = val;
-      this.fetchData();
-    },
-    handleQuery() {
-      this.queryForm.pageNo = 1;
-      this.fetchData();
-    },
-    async fetchData() {
-      this.listLoading = true;
-      const { data, totalCount } = await getList(this.queryForm);
-      this.list = data;
-      this.total = totalCount;
-    },
-  },
-};
+  };
 </script>
 <style lang="scss" scoped>
-.goods-list-container {
-  .goods-list-card-body {
-    position: relative;
-    text-align: center;
-    cursor: pointer;
+  .goods-list-container {
+    .goods-list-card-body {
+      position: relative;
+      text-align: center;
+      cursor: pointer;
 
-    .goods-list-tag-group {
-      position: absolute;
-      top: 10px;
-      right: 5px;
-      z-index: 9;
-    }
+      .goods-list-tag-group {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        z-index: 9;
+      }
 
-    .goods-list-image-group {
-      height: 400px;
-      overflow: hidden;
-
-      .goods-list-image {
-        width: 100%;
+      .goods-list-image-group {
         height: 400px;
-        transition: all ease-in-out 0.3s;
+        overflow: hidden;
 
-        &:hover {
-          transform: scale(1.1);
+        .goods-list-image {
+          width: 100%;
+          height: 400px;
+          transition: all ease-in-out 0.3s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .goods-list-title {
+        margin: 8px 0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .goods-list-description {
+        font-size: 14px;
+        color: #808695;
+      }
+
+      .goods-list-price {
+        margin: 8px 0;
+        font-size: 14px;
+        color: $base-color-orange;
+
+        s {
+          color: #c5c8ce;
         }
       }
     }
-
-    .goods-list-title {
-      margin: 8px 0;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .goods-list-description {
-      font-size: 14px;
-      color: #808695;
-    }
-
-    .goods-list-price {
-      margin: 8px 0;
-      font-size: 14px;
-      color: $base-color-orange;
-
-      s {
-        color: #c5c8ce;
-      }
-    }
   }
-}
 </style>

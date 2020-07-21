@@ -10,14 +10,14 @@
 </template>
 
 <script>
-export default {
-  name: "PersonalCenter",
-  data() {
-    return {
-      tabPosition: "left",
-    };
-  },
-  created() {},
-  methods: {},
-};
+  export default {
+    name: "PersonalCenter",
+    data() {
+      return {
+        tabPosition: "left",
+      };
+    },
+    created() {},
+    methods: {},
+  };
 </script>
