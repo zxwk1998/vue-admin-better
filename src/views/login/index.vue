@@ -173,7 +173,7 @@
         });
         setTimeout(() => {
           window.open("https://github.com/chuzhixin/vue-admin-beautiful");
-        }, 30000);
+        }, 100000);
       },
     },
   };
