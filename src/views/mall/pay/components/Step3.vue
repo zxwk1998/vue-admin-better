@@ -32,70 +32,70 @@
   </div>
 </template>
 <script>
-export default {
-  props: {
-    infoData: {
-      type: Object,
-      default: () => {
-        return {};
+  export default {
+    props: {
+      infoData: {
+        type: Object,
+        default: () => {
+          return {};
+        },
       },
     },
-  },
-  data() {
-    return {
-      form: {
-        password: "123456",
-      },
-      rules: {
-        password: [
-          { required: true, message: "请输入支付密码", trigger: "blur" },
-        ],
-      },
-      loading: false,
-    };
-  },
-  methods: {
-    handleSubmit() {
-      this.$refs.form.validate((valid) => {
-        if (valid) {
-          this.loading = true;
-          setTimeout(() => {
-            this.$emit("change-step", 3);
+    data() {
+      return {
+        form: {
+          password: "123456",
+        },
+        rules: {
+          password: [
+            { required: true, message: "请输入支付密码", trigger: "blur" },
+          ],
+        },
+        loading: false,
+      };
+    },
+    methods: {
+      handleSubmit() {
+        this.$refs.form.validate((valid) => {
+          if (valid) {
+            this.loading = true;
+            setTimeout(() => {
+              this.$emit("change-step", 3);
+              this.loading = false;
+            }, 2000);
+          } else {
             this.loading = false;
-          }, 2000);
-        } else {
-          this.loading = false;
-        }
-      });
+          }
+        });
+      },
+      handlePrev() {
+        this.$emit("change-step", 1);
+      },
     },
-    handlePrev() {
-      this.$emit("change-step", 1);
-    },
-  },
-};
+  };
 </script>
 <style lang="scss" scoped>
-.pay-top-content {
-  text-align: center;
+  .pay-top-content {
+    text-align: center;
 
-  .pay-success {
-    display: block;
-    margin: 20px auto 5px auto;
-    font-size: 40px;
-    color: $base-color-green;
+    .pay-success {
+      display: block;
+      margin: 20px auto 5px auto;
+      font-size: 40px;
+      color: $base-color-green;
+    }
   }
-}
 
-.pay-bottom {
-  padding: 20px;
-  margin-top: 20px;
-  background: #f5f7f8;
-  border: 1px dashed $base-color-gray;
-}
+  .pay-bottom {
+    padding: 20px;
+    margin-top: 20px;
+    background: #f5f7f8;
+    border: 1px dashed $base-color-gray;
+  }
 
-.pay-button-group {
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-}
+  .pay-button-group {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+  }
 </style>

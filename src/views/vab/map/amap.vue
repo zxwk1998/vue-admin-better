@@ -7,21 +7,21 @@
 </template>
 
 <script>
-export default {
-  name: "Amap",
-  data() {
-    return {};
-  },
-  created() {},
-  mounted() {},
-  methods: {},
-};
+  export default {
+    name: "Amap",
+    data() {
+      return {};
+    },
+    created() {},
+    mounted() {},
+    methods: {},
+  };
 </script>
 <style lang="scss" scoped>
-.amap-container {
-  .container {
-    width: 100%;
-    height: calc(100vh - 214px);
+  .amap-container {
+    .container {
+      width: 100%;
+      height: calc(100vh - 214px);
+    }
   }
-}
 </style>

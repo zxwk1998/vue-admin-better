@@ -4,10 +4,10 @@
 </template>
 
 <script>
-export default {
-  name: "ErrorTest",
-  data() {
-    return {};
-  },
-};
+  export default {
+    name: "ErrorTest",
+    data() {
+      return {};
+    },
+  };
 </script>

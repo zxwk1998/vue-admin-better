@@ -11,8 +11,8 @@
           node-key="id"
           :default-expanded-keys="['root']"
           @node-click="handleNodeClick"
-        ></el-tree
-      ></el-col>
+        ></el-tree>
+      </el-col>
       <el-col :xs="24" :sm="24" :md="16" :lg="20" :xl="20">
         <vab-query-form>
           <vab-query-form-top-panel :span="12">
@@ -107,11 +107,11 @@
             width="200"
           >
             <template v-slot="scope">
-              <el-button type="text" @click="handleEdit(scope.row)"
-                >编辑
+              <el-button type="text" @click="handleEdit(scope.row)">
+                编辑
               </el-button>
-              <el-button type="text" @click="handleDelete(scope.row)"
-                >删除
+              <el-button type="text" @click="handleDelete(scope.row)">
+                删除
               </el-button>
             </template>
           </el-table-column>
@@ -124,59 +124,59 @@
 </template>
 
 <script>
-import { getRouterList as getList } from "@/api/router";
-import { getTree, doDelete } from "@/api/menuManagement";
-import Edit from "./components/MenuManagementEdit";
+  import { getRouterList as getList } from "@/api/router";
+  import { getTree, doDelete } from "@/api/menuManagement";
+  import Edit from "./components/MenuManagementEdit";
 
-export default {
-  name: "MenuManagement",
-  components: { Edit },
-  data() {
-    return {
-      data: [],
-      defaultProps: {
-        children: "children",
-        label: "label",
-      },
-      list: [],
-      listLoading: true,
-      elementLoadingText: "正在加载...",
-    };
-  },
-  async created() {
-    const roleData = await getTree();
-    this.data = roleData.data;
-    this.fetchData();
-  },
-  methods: {
-    handleEdit(row) {
-      if (row.path) {
-        this.$refs["edit"].showEdit(row);
-      } else {
-        this.$refs["edit"].showEdit();
-      }
+  export default {
+    name: "MenuManagement",
+    components: { Edit },
+    data() {
+      return {
+        data: [],
+        defaultProps: {
+          children: "children",
+          label: "label",
+        },
+        list: [],
+        listLoading: true,
+        elementLoadingText: "正在加载...",
+      };
     },
-    handleDelete(row) {
-      if (row.id) {
-        this.$baseConfirm("你确定要删除当前项吗", null, async () => {
-          const { msg } = await doDelete({ ids: row.id });
-          this.$baseMessage(msg, "success");
-          this.fetchData();
-        });
-      }
-    },
-    async fetchData() {
-      this.listLoading = true;
-
-      const { data } = await getList();
-      this.list = data;
-      setTimeout(() => {
-        this.listLoading = false;
-      }, 300);
-    },
-    handleNodeClick(data) {
+    async created() {
+      const roleData = await getTree();
+      this.data = roleData.data;
       this.fetchData();
     },
-  },
-};
+    methods: {
+      handleEdit(row) {
+        if (row.path) {
+          this.$refs["edit"].showEdit(row);
+        } else {
+          this.$refs["edit"].showEdit();
+        }
+      },
+      handleDelete(row) {
+        if (row.id) {
+          this.$baseConfirm("你确定要删除当前项吗", null, async () => {
+            const { msg } = await doDelete({ ids: row.id });
+            this.$baseMessage(msg, "success");
+            this.fetchData();
+          });
+        }
+      },
+      async fetchData() {
+        this.listLoading = true;
+
+        const { data } = await getList();
+        this.list = data;
+        setTimeout(() => {
+          this.listLoading = false;
+        }, 300);
+      },
+      handleNodeClick(data) {
+        this.fetchData();
+      },
+    },
+  };
 </script>

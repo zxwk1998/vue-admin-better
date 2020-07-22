@@ -11,8 +11,7 @@
         :closable="false"
         :title="`支持jpg、jpeg、png格式，单次可最多选择${limit}张图片，每张不可大于${size}M，如果大于${size}M会自动为您过滤`"
         type="info"
-      >
-      </el-alert>
+      ></el-alert>
       <br />
       <el-upload
         ref="upload"
@@ -68,155 +67,66 @@
         type="success"
         :loading="loading"
         @click="submitUpload"
-        >开始上传
+      >
+        开始上传
       </el-button>
     </div>
   </el-dialog>
 </template>
 
 <script>
-import { tokenName } from "@/config/settings";
+  import { tokenName } from "@/config/settings";
 
-export default {
-  name: "VabUpload",
-  props: {
-    url: {
-      type: String,
-      default: "/upload",
-      required: true,
+  export default {
+    name: "VabUpload",
+    props: {
+      url: {
+        type: String,
+        default: "/upload",
+        required: true,
+      },
+      name: {
+        type: String,
+        default: "file",
+        required: true,
+      },
+      limit: {
+        type: Number,
+        default: 50,
+        required: true,
+      },
+      size: {
+        type: Number,
+        default: 1,
+        required: true,
+      },
     },
-    name: {
-      type: String,
-      default: "file",
-      required: true,
+    data() {
+      return {
+        show: false,
+        loading: false,
+        dialogVisible: false,
+        dialogImageUrl: "",
+        action: "",
+        headers: {},
+        fileList: [],
+        picture: "picture",
+        imgNum: 0,
+        imgSuccessNum: 0,
+        imgErrorNum: 0,
+        typeList: null,
+        title: "上传",
+        dialogFormVisible: false,
+        data: {},
+      };
     },
-    limit: {
-      type: Number,
-      default: 50,
-      required: true,
+    computed: {
+      percentage() {
+        if (this.allImgNum == 0) return 0;
+        return this.$baseLodash.round(this.imgNum / this.allImgNum, 2) * 100;
+      },
     },
-    size: {
-      type: Number,
-      default: 1,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      show: false,
-      loading: false,
-      dialogVisible: false,
-      dialogImageUrl: "",
-      action: "",
-      headers: {},
-      fileList: [],
-      picture: "picture",
-      imgNum: 0,
-      imgSuccessNum: 0,
-      imgErrorNum: 0,
-      typeList: null,
-      title: "上传",
-      dialogFormVisible: false,
-      data: {},
-    };
-  },
-  computed: {
-    percentage() {
-      if (this.allImgNum == 0) return 0;
-      return this.$baseLodash.round(this.imgNum / this.allImgNum, 2) * 100;
-    },
-  },
-  created() {
-    if ("development" === process.env.NODE_ENV) {
-      this.api = process.env.VUE_APP_BASE_API;
-    } else {
-      this.api = `${window.location.protocol}//${window.location.host}`;
-    }
-
-    this.action = this.api + this.url;
-    this.headers[tokenName] = this.$baseAccessToken();
-  },
-  methods: {
-    submitUpload() {
-      this.$refs.upload.submit();
-    },
-    handleProgress(event, file, fileList) {
-      this.loading = true;
-      this.show = true;
-    },
-    handleChange(file, fileList) {
-      if (file.size > 1048576 * this.size) {
-        fileList.map((item, index) => {
-          if (item === file) {
-            fileList.splice(index, 1);
-          }
-        });
-        this.fileList = fileList;
-      } else {
-        this.allImgNum = fileList.length;
-      }
-    },
-    handleSuccess(response, file, fileList) {
-      this.imgNum = this.imgNum + 1;
-      this.imgSuccessNum = this.imgSuccessNum + 1;
-      if (fileList.length === this.imgNum) {
-        setTimeout(() => {
-          this.$emit("fetchDatas");
-          this.$baseMessage(
-            `上传完成! 共上传${fileList.length}张图片`,
-            "success"
-          );
-        }, 1000);
-      }
-
-      setTimeout(() => {
-        this.loading = false;
-        this.show = false;
-      }, 1000);
-    },
-    handleError(err, file, fileList) {
-      this.imgNum = this.imgNum + 1;
-      this.imgErrorNum = this.imgErrorNum + 1;
-      this.$baseMessage(
-        `文件[${file.raw.name}]上传失败,文件大小为${this.$baseLodash.round(
-          file.raw.size / 1024,
-          0
-        )}KB`,
-        "error"
-      );
-      setTimeout(() => {
-        this.loading = false;
-        this.show = false;
-      }, 1000);
-    },
-    handleRemove(file, fileList) {
-      this.imgNum = this.imgNum - 1;
-      this.allNum = this.allNum - 1;
-    },
-    handlePreview(file) {
-      this.dialogImageUrl = file.url;
-      this.dialogVisible = true;
-    },
-    handleExceed(files, fileList) {
-      this.$baseMessage(
-        `当前限制选择 ${this.limit} 个文件，本次选择了
-             ${files.length}
-             个文件`,
-        "error"
-      );
-    },
-    handleShow(data) {
-      this.title = "上传";
-      this.data = data;
-      this.dialogFormVisible = true;
-    },
-    handleClose() {
-      this.fileList = [];
-      this.picture = "picture";
-      this.allImgNum = 0;
-      this.imgNum = 0;
-      this.imgSuccessNum = 0;
-      this.imgErrorNum = 0;
+    created() {
       if ("development" === process.env.NODE_ENV) {
         this.api = process.env.VUE_APP_BASE_API;
       } else {
@@ -225,43 +135,133 @@ export default {
 
       this.action = this.api + this.url;
       this.headers[tokenName] = this.$baseAccessToken();
-      this.dialogFormVisible = false;
     },
-  },
-};
+    methods: {
+      submitUpload() {
+        this.$refs.upload.submit();
+      },
+      handleProgress(event, file, fileList) {
+        this.loading = true;
+        this.show = true;
+      },
+      handleChange(file, fileList) {
+        if (file.size > 1048576 * this.size) {
+          fileList.map((item, index) => {
+            if (item === file) {
+              fileList.splice(index, 1);
+            }
+          });
+          this.fileList = fileList;
+        } else {
+          this.allImgNum = fileList.length;
+        }
+      },
+      handleSuccess(response, file, fileList) {
+        this.imgNum = this.imgNum + 1;
+        this.imgSuccessNum = this.imgSuccessNum + 1;
+        if (fileList.length === this.imgNum) {
+          setTimeout(() => {
+            this.$emit("fetchDatas");
+            this.$baseMessage(
+              `上传完成! 共上传${fileList.length}张图片`,
+              "success"
+            );
+          }, 1000);
+        }
+
+        setTimeout(() => {
+          this.loading = false;
+          this.show = false;
+        }, 1000);
+      },
+      handleError(err, file, fileList) {
+        this.imgNum = this.imgNum + 1;
+        this.imgErrorNum = this.imgErrorNum + 1;
+        this.$baseMessage(
+          `文件[${file.raw.name}]上传失败,文件大小为${this.$baseLodash.round(
+            file.raw.size / 1024,
+            0
+          )}KB`,
+          "error"
+        );
+        setTimeout(() => {
+          this.loading = false;
+          this.show = false;
+        }, 1000);
+      },
+      handleRemove(file, fileList) {
+        this.imgNum = this.imgNum - 1;
+        this.allNum = this.allNum - 1;
+      },
+      handlePreview(file) {
+        this.dialogImageUrl = file.url;
+        this.dialogVisible = true;
+      },
+      handleExceed(files, fileList) {
+        this.$baseMessage(
+          `当前限制选择 ${this.limit} 个文件，本次选择了
+             ${files.length}
+             个文件`,
+          "error"
+        );
+      },
+      handleShow(data) {
+        this.title = "上传";
+        this.data = data;
+        this.dialogFormVisible = true;
+      },
+      handleClose() {
+        this.fileList = [];
+        this.picture = "picture";
+        this.allImgNum = 0;
+        this.imgNum = 0;
+        this.imgSuccessNum = 0;
+        this.imgErrorNum = 0;
+        if ("development" === process.env.NODE_ENV) {
+          this.api = process.env.VUE_APP_BASE_API;
+        } else {
+          this.api = `${window.location.protocol}//${window.location.host}`;
+        }
+
+        this.action = this.api + this.url;
+        this.headers[tokenName] = this.$baseAccessToken();
+        this.dialogFormVisible = false;
+      },
+    },
+  };
 </script>
 
 <style lang="scss" scoped>
-.upload {
-  height: 600px;
+  .upload {
+    height: 600px;
 
-  .upload-content {
-    .el-upload__tip {
-      display: block;
-      height: 30px;
-      line-height: 30px;
-    }
-
-    ::v-deep {
-      .el-upload--picture-card {
-        width: 128px;
-        height: 128px;
-        margin: 3px 8px 8px 8px;
-        border: 2px dashed #c0ccda;
+    .upload-content {
+      .el-upload__tip {
+        display: block;
+        height: 30px;
+        line-height: 30px;
       }
 
-      .el-upload-list--picture {
-        margin-bottom: 20px;
-      }
-
-      .el-upload-list--picture-card {
-        .el-upload-list__item {
+      ::v-deep {
+        .el-upload--picture-card {
           width: 128px;
           height: 128px;
           margin: 3px 8px 8px 8px;
+          border: 2px dashed #c0ccda;
+        }
+
+        .el-upload-list--picture {
+          margin-bottom: 20px;
+        }
+
+        .el-upload-list--picture-card {
+          .el-upload-list__item {
+            width: 128px;
+            height: 128px;
+            margin: 3px 8px 8px 8px;
+          }
         }
       }
     }
   }
-}
 </style>

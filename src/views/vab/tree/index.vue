@@ -32,21 +32,24 @@
                 class="vab-tree-btn"
                 title="添加"
                 @click="() => append(node, data, 0)"
-                ><i class="el-icon-plus"></i
-              ></a>
+              >
+                <i class="el-icon-plus"></i>
+              </a>
               <a
                 class="vab-tree-btn"
                 title="编辑"
                 @click="() => edit(node, data, 1)"
-                ><i class="el-icon-edit"></i
-              ></a>
+              >
+                <i class="el-icon-edit"></i>
+              </a>
               <a
                 v-if="node.data.rank !== 1"
                 class="vab-tree-btn"
                 title="刪除"
                 @click="() => remove(node, data)"
-                ><i class="el-icon-delete"></i
-              ></a>
+              >
+                <i class="el-icon-delete"></i>
+              </a>
             </span>
           </span>
         </el-tree>
@@ -85,9 +88,9 @@
                 >
                   <i class="el-icon-plus"></i>
                 </a>
-                <a class="vab-tree-btn" title="编辑"
-                  ><i class="el-icon-edit"></i
-                ></a>
+                <a class="vab-tree-btn" title="编辑">
+                  <i class="el-icon-edit"></i>
+                </a>
                 <a
                   v-if="node.data.rank !== 1"
                   class="vab-tree-btn"
@@ -119,12 +122,16 @@
               </span>
               <span class="vab-tree-options">
                 <!-- <a v-if="node.data.rank !== 4" class="vab-tree-btn" title="添加""><i class="el-icon-plus"></i></a> -->
-                <a class="vab-tree-btn" title="编辑"
-                  ><i class="el-icon-edit"></i
-                ></a>
-                <a v-if="node.data.rank !== 1" class="vab-tree-btn" title="刪除"
-                  ><i class="el-icon-delete"></i
-                ></a>
+                <a class="vab-tree-btn" title="编辑">
+                  <i class="el-icon-edit"></i>
+                </a>
+                <a
+                  v-if="node.data.rank !== 1"
+                  class="vab-tree-btn"
+                  title="刪除"
+                >
+                  <i class="el-icon-delete"></i>
+                </a>
               </span>
             </span>
           </el-tree>
@@ -214,258 +221,258 @@
 </template>
 
 <script>
-import { getTreeList } from "@/api/tree";
+  import { getTreeList } from "@/api/tree";
 
-export default {
-  name: "Tree",
-  data() {
-    return {
-      dialogTitle: "添加节点",
-      treeFlag: 0,
-      treeDialogVisible: false,
-      treeForm: {
-        id: "",
-        name: "",
-      },
-      checkNodeKeys: [],
-      filterText: "",
-      data2: [],
-      defaultProps: {
-        children: "children",
-        label: "name",
-      },
-      defaultExpendedKeys: [],
-      defaultCheckedKeys: [],
-      loading: true,
-      keyW: "",
-      filterDevLlist: [],
-      isShow: false,
-      updateTree: true,
-      /* 单选树-多选树---------开始 */
-      selectLevel: 4, // 树可选叶子level等级
-      singleSelectTreeVal: "", //单选树默认label值
-      singleSelectTreeKey: "", //单选树默认key值
-      selectTreeData: [], //单选树的值
-      selectTreeDefaultSelectedKeys: [], //单选树默认展开的key值数组
-      selectTreeDefaultProps: {
-        children: "children",
-        label: "name",
-      },
-      multipleSelectTreeVal: [], //多选树默认label值
-      multipleSelectTreeKey: "", //多选树默认key值
-      /* 单选树-多选树---------结束 */
-    };
-  },
-  watch: {
-    filterText(val) {
-      this.$refs.demoTree.filter(val);
+  export default {
+    name: "Tree",
+    data() {
+      return {
+        dialogTitle: "添加节点",
+        treeFlag: 0,
+        treeDialogVisible: false,
+        treeForm: {
+          id: "",
+          name: "",
+        },
+        checkNodeKeys: [],
+        filterText: "",
+        data2: [],
+        defaultProps: {
+          children: "children",
+          label: "name",
+        },
+        defaultExpendedKeys: [],
+        defaultCheckedKeys: [],
+        loading: true,
+        keyW: "",
+        filterDevLlist: [],
+        isShow: false,
+        updateTree: true,
+        /* 单选树-多选树---------开始 */
+        selectLevel: 4, // 树可选叶子level等级
+        singleSelectTreeVal: "", //单选树默认label值
+        singleSelectTreeKey: "", //单选树默认key值
+        selectTreeData: [], //单选树的值
+        selectTreeDefaultSelectedKeys: [], //单选树默认展开的key值数组
+        selectTreeDefaultProps: {
+          children: "children",
+          label: "name",
+        },
+        multipleSelectTreeVal: [], //多选树默认label值
+        multipleSelectTreeKey: "", //多选树默认key值
+        /* 单选树-多选树---------结束 */
+      };
     },
-  },
-  mounted() {
-    this.$nextTick(() => {
-      this.getTreeListFuc(1);
-      this.setCheckedKeys();
-      // 初始化单选树
-      this.initSingleTree("single");
-      // 初始化多选树
-      this.initSingleTree("multiple");
-    });
-  },
-  methods: {
-    // 树level小于n级展开方法
-    openTree(treeData, n) {
-      const each = (data) => {
-        data.forEach((e) => {
-          if (e.rank <= n) {
-            this.defaultExpendedKeys.push(e.id);
-          }
-          if (e.children.length > 0) {
-            each(e.children);
+    watch: {
+      filterText(val) {
+        this.$refs.demoTree.filter(val);
+      },
+    },
+    mounted() {
+      this.$nextTick(() => {
+        this.getTreeListFuc(1);
+        this.setCheckedKeys();
+        // 初始化单选树
+        this.initSingleTree("single");
+        // 初始化多选树
+        this.initSingleTree("multiple");
+      });
+    },
+    methods: {
+      // 树level小于n级展开方法
+      openTree(treeData, n) {
+        const each = (data) => {
+          data.forEach((e) => {
+            if (e.rank <= n) {
+              this.defaultExpendedKeys.push(e.id);
+            }
+            if (e.children.length > 0) {
+              each(e.children);
+            }
+          });
+        };
+
+        each(treeData);
+      },
+      // 获取tree数据
+      async getTreeListFuc(flag) {
+        const { data } = await getTreeList();
+        this.data2 = data;
+        if (flag) {
+          this.openTree(this.data2, 2);
+        }
+      },
+      // 节点过滤操作
+      filterNode(value, data) {
+        if (!value) return true;
+        return data.name.indexOf(value) !== -1;
+      },
+      // 添加节点操作
+      append(node, data, flag) {
+        this.treeFlag = flag;
+        this.dialogTitle = "添加节点";
+        this.treeForm = {
+          id: "",
+          name: "",
+        };
+        this.treeDialogVisible = true;
+      },
+      // 编辑节点操作
+      edit(node, data, flag) {
+        this.treeFlag = flag;
+        this.dialogTitle = "编辑节点";
+        this.treeForm = {
+          id: data.id,
+          name: data.name,
+        };
+        this.treeDialogVisible = true;
+      },
+      // 删除节点操作
+      remove(node, data) {
+        this.$baseConfirm("你确定要删除该节点?", null, async () => {
+          const { msg } = getTreeList();
+          this.$baseMessage(msg, "success");
+          this.getTreeListFuc(0);
+        });
+      },
+      // 保存添加和编辑
+      saveTree() {
+        this.$refs.treeForm.validate(async (valid) => {
+          if (valid) {
+            const { msg } = await getTreeList();
+            this.$baseMessage(msg, "success");
+            this.treeDialogVisible = false;
+            this.getTreeListFuc(0);
           }
         });
-      };
-
-      each(treeData);
-    },
-    // 获取tree数据
-    async getTreeListFuc(flag) {
-      const { data } = await getTreeList();
-      this.data2 = data;
-      if (flag) {
-        this.openTree(this.data2, 2);
-      }
-    },
-    // 节点过滤操作
-    filterNode(value, data) {
-      if (!value) return true;
-      return data.name.indexOf(value) !== -1;
-    },
-    // 添加节点操作
-    append(node, data, flag) {
-      this.treeFlag = flag;
-      this.dialogTitle = "添加节点";
-      this.treeForm = {
-        id: "",
-        name: "",
-      };
-      this.treeDialogVisible = true;
-    },
-    // 编辑节点操作
-    edit(node, data, flag) {
-      this.treeFlag = flag;
-      this.dialogTitle = "编辑节点";
-      this.treeForm = {
-        id: data.id,
-        name: data.name,
-      };
-      this.treeDialogVisible = true;
-    },
-    // 删除节点操作
-    remove(node, data) {
-      this.$baseConfirm("你确定要删除该节点?", null, async () => {
-        const { msg } = getTreeList();
-        this.$baseMessage(msg, "success");
-        this.getTreeListFuc(0);
-      });
-    },
-    // 保存添加和编辑
-    saveTree() {
-      this.$refs.treeForm.validate(async (valid) => {
-        if (valid) {
-          const { msg } = await getTreeList();
-          this.$baseMessage(msg, "success");
-          this.treeDialogVisible = false;
-          this.getTreeListFuc(0);
-        }
-      });
-    },
-    // 设置节点选中
-    setCheckedKeys() {
-      this.$refs.demoTree.setCheckedKeys([1]);
-    },
-    // 点击叶子节点
-    nodeClick(data, node, el) {},
-    // 节点选中操作
-    checkNode(data, node, el) {
-      this.checkNodeKeys = node.checkedKeys;
-    },
-    // 节点展开操作
-    nodeExpand(data, node, el) {
-      this.defaultExpendedKeys.push(data.id);
-    },
-    // 节点关闭操作
-    nodeCollapse(data, node, el) {
-      this.defaultExpendedKeys.splice(
-        this.defaultExpendedKeys.findIndex((item) => item.id === data.id),
-        1
-      );
-    },
-    async loadNode(node, resolve) {
-      if (node.level === 0) {
-        const { data } = await getTreeList();
-        this.loading = false;
-        return resolve(data);
-      } else {
-        const { data } = await getTreeList();
-        return resolve(res.data);
-      }
-    },
-    //懒加载树输入框筛选方法
-    async showTreeList(value) {
-      if (typeof value === "string") {
-        this.keyW = value.trim();
-      }
-      if (this.keyW.length !== 0) {
-        // 请求后台返回查询结果
-        let treeOption = {};
-        treeOption = {
-          keyWord: this.keyW,
-        };
-        const { data } = await getTreeList();
-        this.filterDevLlist = data;
-        this.isShow = true;
-      } else {
-        this.isShow = false;
-      }
-    },
-    /* 单选/多选树方法-------------------开始 */
-    // 初始化单选树的值
-    async initSingleTree(treeType) {
-      const { data } = await getTreeList();
-      this.selectTreeData = data;
-      this.$nextTick(() => {
-        this.selectTreeDefaultSelectedKeys = this.singleSelectTreeKey.split(
-          ","
-        ); // 设置默认展开
-        if (treeType == "single") {
-          //单选树
-          this.$refs.singleSelectTree.setCurrentKey(this.singleSelectTreeKey); // 设置默认选中
+      },
+      // 设置节点选中
+      setCheckedKeys() {
+        this.$refs.demoTree.setCheckedKeys([1]);
+      },
+      // 点击叶子节点
+      nodeClick(data, node, el) {},
+      // 节点选中操作
+      checkNode(data, node, el) {
+        this.checkNodeKeys = node.checkedKeys;
+      },
+      // 节点展开操作
+      nodeExpand(data, node, el) {
+        this.defaultExpendedKeys.push(data.id);
+      },
+      // 节点关闭操作
+      nodeCollapse(data, node, el) {
+        this.defaultExpendedKeys.splice(
+          this.defaultExpendedKeys.findIndex((item) => item.id === data.id),
+          1
+        );
+      },
+      async loadNode(node, resolve) {
+        if (node.level === 0) {
+          const { data } = await getTreeList();
+          this.loading = false;
+          return resolve(data);
         } else {
-          // 多选树
-          this.$refs.multipleSelectTree.setCheckedKeys(
-            this.selectTreeDefaultSelectedKeys
-          );
+          const { data } = await getTreeList();
+          return resolve(res.data);
         }
-      });
-    },
-    // 清除单选树选中
-    selectTreeClearHandle(type) {
-      this.selectTreeDefaultSelectedKeys = [];
-      this.clearSelected();
-      if (type == "single") {
-        this.singleSelectTreeVal = "";
-        this.singleSelectTreeKey = "";
-        this.$refs.singleSelectTree.setCurrentKey(""); // 设置默认选中
-      } else {
-        this.multipleSelectTreeVal = [];
-        this.multipleSelectTreeKey = "";
-        this.$refs.multipleSelectTree.setCheckedKeys([]);
-      }
-    },
-    /* 清空选中样式 */
-    clearSelected() {
-      const allNode = document.querySelectorAll(
-        "#singleSelectTree .el-tree-node"
-      );
-      allNode.forEach((element) => element.classList.remove("is-current"));
-    },
-    // select多选时移除某项操作
-    removeSelectTreeTag(val) {
-      const stack = JSON.parse(JSON.stringify(this.selectTreeData));
-      while (stack.length) {
-        const curr = stack.shift();
-        if (curr.name == val) {
-          return this.$refs.multipleSelectTree.setChecked(curr.id, false);
+      },
+      //懒加载树输入框筛选方法
+      async showTreeList(value) {
+        if (typeof value === "string") {
+          this.keyW = value.trim();
         }
-        if (curr.children && curr.children.length) {
-          stack.unshift(...curr.children);
+        if (this.keyW.length !== 0) {
+          // 请求后台返回查询结果
+          let treeOption = {};
+          treeOption = {
+            keyWord: this.keyW,
+          };
+          const { data } = await getTreeList();
+          this.filterDevLlist = data;
+          this.isShow = true;
+        } else {
+          this.isShow = false;
         }
-      }
-    },
-    changeMultipleSelectTreeHandle(val) {},
-    // 点击叶子节点
-    selectTreeNodeClick(data, node, el) {
-      if (data.rank >= this.selectLevel) {
-        this.singleSelectTreeVal = data.name;
-        this.singleSelectTreeKey = data.id;
-        this.$refs.singleTree.blur();
-      }
-    },
-    // 节点选中操作
-    multipleSelectTreeCheckNode(data, node, el) {
-      const checkedNodes = this.$refs.multipleSelectTree.getCheckedNodes();
-      const keyArr = [];
-      const valueArr = [];
-      checkedNodes.forEach((item) => {
-        if (item.rank >= this.selectLevel) {
-          keyArr.push(item.id);
-          valueArr.push(item.name);
+      },
+      /* 单选/多选树方法-------------------开始 */
+      // 初始化单选树的值
+      async initSingleTree(treeType) {
+        const { data } = await getTreeList();
+        this.selectTreeData = data;
+        this.$nextTick(() => {
+          this.selectTreeDefaultSelectedKeys = this.singleSelectTreeKey.split(
+            ","
+          ); // 设置默认展开
+          if (treeType == "single") {
+            //单选树
+            this.$refs.singleSelectTree.setCurrentKey(this.singleSelectTreeKey); // 设置默认选中
+          } else {
+            // 多选树
+            this.$refs.multipleSelectTree.setCheckedKeys(
+              this.selectTreeDefaultSelectedKeys
+            );
+          }
+        });
+      },
+      // 清除单选树选中
+      selectTreeClearHandle(type) {
+        this.selectTreeDefaultSelectedKeys = [];
+        this.clearSelected();
+        if (type == "single") {
+          this.singleSelectTreeVal = "";
+          this.singleSelectTreeKey = "";
+          this.$refs.singleSelectTree.setCurrentKey(""); // 设置默认选中
+        } else {
+          this.multipleSelectTreeVal = [];
+          this.multipleSelectTreeKey = "";
+          this.$refs.multipleSelectTree.setCheckedKeys([]);
         }
-      });
-      this.multipleSelectTreeVal = valueArr;
-      this.multipleSelectTreeKey = keyArr.join(",");
+      },
+      /* 清空选中样式 */
+      clearSelected() {
+        const allNode = document.querySelectorAll(
+          "#singleSelectTree .el-tree-node"
+        );
+        allNode.forEach((element) => element.classList.remove("is-current"));
+      },
+      // select多选时移除某项操作
+      removeSelectTreeTag(val) {
+        const stack = JSON.parse(JSON.stringify(this.selectTreeData));
+        while (stack.length) {
+          const curr = stack.shift();
+          if (curr.name == val) {
+            return this.$refs.multipleSelectTree.setChecked(curr.id, false);
+          }
+          if (curr.children && curr.children.length) {
+            stack.unshift(...curr.children);
+          }
+        }
+      },
+      changeMultipleSelectTreeHandle(val) {},
+      // 点击叶子节点
+      selectTreeNodeClick(data, node, el) {
+        if (data.rank >= this.selectLevel) {
+          this.singleSelectTreeVal = data.name;
+          this.singleSelectTreeKey = data.id;
+          this.$refs.singleTree.blur();
+        }
+      },
+      // 节点选中操作
+      multipleSelectTreeCheckNode(data, node, el) {
+        const checkedNodes = this.$refs.multipleSelectTree.getCheckedNodes();
+        const keyArr = [];
+        const valueArr = [];
+        checkedNodes.forEach((item) => {
+          if (item.rank >= this.selectLevel) {
+            keyArr.push(item.id);
+            valueArr.push(item.name);
+          }
+        });
+        this.multipleSelectTreeVal = valueArr;
+        this.multipleSelectTreeKey = keyArr.join(",");
+      },
+      /* 单选/多选树方法-------------------结束 */
     },
-    /* 单选/多选树方法-------------------结束 */
-  },
-};
+  };
 </script>

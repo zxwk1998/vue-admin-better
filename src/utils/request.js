@@ -36,7 +36,7 @@ service.interceptors.request.use(
     }
     if (process.env.NODE_ENV !== "preview") {
       if (contentType === "application/x-www-form-urlencoded;charset=UTF-8") {
-        if (config.data && !config.data.param) {
+        if (config.data) {
           config.data = qs.stringify(config.data);
         }
       }
@@ -76,21 +76,20 @@ service.interceptors.response.use(
     }
     const { status, data, config } = response;
     const { code, msg } = data;
-    let codeVerification = false;
+    let codeVerification = "";
 
     if (isNumber(successCode)) {
-      codeVerification = code !== successCode;
+      codeVerification = successCode;
     }
     if (isArray(successCode)) {
       for (let i = 0; i < successCode.length; i++) {
-        if (code === i) {
-          codeVerification = code !== i;
+        if (code === successCode[i]) {
+          codeVerification = successCode[i];
           break;
         }
       }
     }
-
-    if (codeVerification) {
+    if (code != codeVerification) {
       switch (code) {
         case invalidCode:
           errorMsg(msg || `后端接口${code}异常`);

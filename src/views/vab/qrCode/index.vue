@@ -14,33 +14,33 @@
 </template>
 
 <script>
-import VabQrCode from "@/components/VabQrCode";
+  import VabQrCode from "@/components/VabQrCode";
 
-export default {
-  name: "QrCode",
-  components: {
-    VabQrCode,
-  },
-  data() {
-    return {
-      url: "https://www.baidu.com",
-      imagePath: require("@/assets/qr_logo/lqr_logo.png"),
-    };
-  },
-  created() {},
-  mounted() {},
-  methods: {},
-};
+  export default {
+    name: "QrCode",
+    components: {
+      VabQrCode,
+    },
+    data() {
+      return {
+        url: "https://www.baidu.com",
+        imagePath: require("@/assets/qr_logo/lqr_logo.png"),
+      };
+    },
+    created() {},
+    mounted() {},
+    methods: {},
+  };
 </script>
 
 <style lang="scss" scoped>
-.qr-code-container {
-  ::v-deep {
-    .el-card__body {
-      display: flex;
-      align-content: center;
-      justify-content: center;
+  .qr-code-container {
+    ::v-deep {
+      .el-card__body {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
     }
   }
-}
 </style>

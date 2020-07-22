@@ -20,7 +20,8 @@
               style="float: right; padding: 3px 0;"
               type="text"
               @click="handleProfile"
-              >重载
+            >
+              重载
             </el-button>
           </div>
           <vab-profile
@@ -43,67 +44,67 @@
 </template>
 
 <script>
-import VabSnow from "@/components/VabSnow";
-import VabProfile from "@/components/VabProfile";
-import VabCharge from "@/components/VabCharge";
+  import VabSnow from "@/components/VabSnow";
+  import VabProfile from "@/components/VabProfile";
+  import VabCharge from "@/components/VabCharge";
 
-export default {
-  name: "Sticky",
-  components: {
-    VabSnow,
-    VabProfile,
-    VabCharge,
-  },
-  data() {
-    return {
-      profileShow: true,
-      faultTextShow: true,
-      solidTextShow: true,
-      startVal: 0,
-      endVal: 20,
-      timeInterval: null,
-    };
-  },
-  mounted() {
-    this.handleProfile();
-    this.handleSolidText();
-    this.timeInterval = setInterval(() => {
-      if (this.endVal < 100) {
-        this.startVal = this.endVal;
-        this.endVal++;
+  export default {
+    name: "Sticky",
+    components: {
+      VabSnow,
+      VabProfile,
+      VabCharge,
+    },
+    data() {
+      return {
+        profileShow: true,
+        faultTextShow: true,
+        solidTextShow: true,
+        startVal: 0,
+        endVal: 20,
+        timeInterval: null,
+      };
+    },
+    mounted() {
+      this.handleProfile();
+      this.handleSolidText();
+      this.timeInterval = setInterval(() => {
+        if (this.endVal < 100) {
+          this.startVal = this.endVal;
+          this.endVal++;
+        }
+      }, 5000);
+    },
+    beforeDestroy() {
+      if (this.clearInterval) {
+        clearInterval(this.timeInterval);
       }
-    }, 5000);
-  },
-  beforeDestroy() {
-    if (this.clearInterval) {
-      clearInterval(this.timeInterval);
-    }
-  },
-  methods: {
-    handleProfile() {
-      this.profileShow = false;
-      setTimeout(() => {
-        this.profileShow = true;
-      });
     },
-    handleSolidText() {
-      this.solidTextShow = false;
-      setTimeout(() => {
-        this.solidTextShow = true;
-      });
+    methods: {
+      handleProfile() {
+        this.profileShow = false;
+        setTimeout(() => {
+          this.profileShow = true;
+        });
+      },
+      handleSolidText() {
+        this.solidTextShow = false;
+        setTimeout(() => {
+          this.solidTextShow = true;
+        });
+      },
     },
-  },
-};
+  };
 </script>
 <style lang="scss" scoped>
-.small-components-container {
-  ::v-deep {
-    .el-card__body {
-      display: flex;
-      align-items: center; /* 垂直居中 */
-      justify-content: center; /* 水平居中 */
-      height: 430px;
+  .small-components-container {
+    ::v-deep {
+      .el-card__body {
+        display: flex;
+        align-items: center; /* 垂直居中 */
+        justify-content: center; /* 水平居中 */
+        height: 430px;
+      }
     }
   }
-}
 </style>

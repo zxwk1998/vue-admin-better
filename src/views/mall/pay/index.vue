@@ -30,31 +30,31 @@
 </template>
 
 <script>
-import Step1 from "./components/Step1";
-import Step2 from "./components/Step2";
-import Step3 from "./components/Step3";
-export default {
-  name: "Pay",
-  components: { Step1, Step2, Step3 },
-  data() {
-    return {
-      active: 1,
-      form: {},
-    };
-  },
-  methods: {
-    handleSetStep(active, form) {
-      this.active = active;
-      if (form) this.form = Object.assign(this.form, form);
+  import Step1 from "./components/Step1";
+  import Step2 from "./components/Step2";
+  import Step3 from "./components/Step3";
+  export default {
+    name: "Pay",
+    components: { Step1, Step2, Step3 },
+    data() {
+      return {
+        active: 1,
+        form: {},
+      };
     },
-  },
-};
+    methods: {
+      handleSetStep(active, form) {
+        this.active = active;
+        if (form) this.form = Object.assign(this.form, form);
+      },
+    },
+  };
 </script>
 <style lang="scss" scoped>
-.pay-container {
-  .steps {
-    justify-content: center;
-    margin-bottom: 20px;
+  .pay-container {
+    .steps {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
   }
-}
 </style>

@@ -79,7 +79,7 @@ module.exports = {
   //是否开启登录拦截
   loginInterception: true,
   //是否开启登录RSA加密
-  loginRSA: false,
+  loginRSA: true,
   //是否依据mock数据生成webstorm HTTP Request请求文件
   httpRequestFile: false,
   //intelligence和all两种方式，前者后端权限只控制permissions不控制view文件的import（前后端配合，减轻后端工作量），all方式完全交给后端前端只负责加载

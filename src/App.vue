@@ -5,8 +5,8 @@
 </template>
 
 <script>
-export default {
-  name: "App",
-  mounted() {},
-};
+  export default {
+    name: "App",
+    mounted() {},
+  };
 </script>

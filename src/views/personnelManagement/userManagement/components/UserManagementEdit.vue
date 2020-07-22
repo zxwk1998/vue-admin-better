@@ -34,60 +34,62 @@
 </template>
 
 <script>
-import { doEdit } from "@/api/userManagement";
+  import { doEdit } from "@/api/userManagement";
 
-export default {
-  name: "UserManagementEdit",
-  data() {
-    return {
-      form: {
-        username: "",
-        password: "",
-        email: "",
-        permissions: [],
-      },
-      rules: {
-        username: [
-          { required: true, trigger: "blur", message: "请输入用户名" },
-        ],
-        password: [{ required: true, trigger: "blur", message: "请输入密码" }],
-        email: [{ required: true, trigger: "blur", message: "请输入邮箱" }],
-        permissions: [
-          { required: true, trigger: "blur", message: "请选择权限" },
-        ],
-      },
-      title: "",
-      dialogFormVisible: false,
-    };
-  },
-  created() {},
-  methods: {
-    showEdit(row) {
-      if (!row) {
-        this.title = "添加";
-      } else {
-        this.title = "编辑";
-        this.form = Object.assign({}, row);
-      }
-      this.dialogFormVisible = true;
+  export default {
+    name: "UserManagementEdit",
+    data() {
+      return {
+        form: {
+          username: "",
+          password: "",
+          email: "",
+          permissions: [],
+        },
+        rules: {
+          username: [
+            { required: true, trigger: "blur", message: "请输入用户名" },
+          ],
+          password: [
+            { required: true, trigger: "blur", message: "请输入密码" },
+          ],
+          email: [{ required: true, trigger: "blur", message: "请输入邮箱" }],
+          permissions: [
+            { required: true, trigger: "blur", message: "请选择权限" },
+          ],
+        },
+        title: "",
+        dialogFormVisible: false,
+      };
     },
-    close() {
-      this.$refs["form"].resetFields();
-      this.form = this.$options.data().form;
-      this.dialogFormVisible = false;
-    },
-    save() {
-      this.$refs["form"].validate(async (valid) => {
-        if (valid) {
-          const { msg } = await doEdit(this.form);
-          this.$baseMessage(msg, "success");
-          this.$emit("fetchData");
-          this.close();
+    created() {},
+    methods: {
+      showEdit(row) {
+        if (!row) {
+          this.title = "添加";
         } else {
-          return false;
+          this.title = "编辑";
+          this.form = Object.assign({}, row);
         }
-      });
+        this.dialogFormVisible = true;
+      },
+      close() {
+        this.$refs["form"].resetFields();
+        this.form = this.$options.data().form;
+        this.dialogFormVisible = false;
+      },
+      save() {
+        this.$refs["form"].validate(async (valid) => {
+          if (valid) {
+            const { msg } = await doEdit(this.form);
+            this.$baseMessage(msg, "success");
+            this.$emit("fetchData");
+            this.close();
+          } else {
+            return false;
+          }
+        });
+      },
     },
-  },
-};
+  };
 </script>

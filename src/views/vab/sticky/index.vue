@@ -280,35 +280,35 @@
 </template>
 
 <script>
-import VabSticky from "@/components/VabSticky";
+  import VabSticky from "@/components/VabSticky";
 
-export default {
-  name: "Sticky",
-  components: { VabSticky },
-  data() {
-    return {
-      time: "",
-      url: "",
-      platforms: ["a-platform"],
-      platformsOptions: [
-        { key: "a-platform", name: "platformA" },
-        { key: "b-platform", name: "platformB" },
-        { key: "c-platform", name: "platformC" },
-      ],
-      pickerOptions: {
-        disabledDate(time) {
-          return time.getTime() > Date.now();
+  export default {
+    name: "Sticky",
+    components: { VabSticky },
+    data() {
+      return {
+        time: "",
+        url: "",
+        platforms: ["a-platform"],
+        platformsOptions: [
+          { key: "a-platform", name: "platformA" },
+          { key: "b-platform", name: "platformB" },
+          { key: "c-platform", name: "platformC" },
+        ],
+        pickerOptions: {
+          disabledDate(time) {
+            return time.getTime() > Date.now();
+          },
         },
-      },
-    };
-  },
-};
+      };
+    },
+  };
 </script>
 <style lang="scss" scoped>
-.sticky-container {
-  div {
-    height: 40px;
-    line-height: 40px;
+  .sticky-container {
+    div {
+      height: 40px;
+      line-height: 40px;
+    }
   }
-}
 </style>

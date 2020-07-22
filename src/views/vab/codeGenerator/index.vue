@@ -12,25 +12,25 @@
 </template>
 
 <script>
-import TableEditor from "./components/TableEditor";
-import TableExhibition from "./components/TableExhibition";
+  import TableEditor from "./components/TableEditor";
+  import TableExhibition from "./components/TableExhibition";
 
-export default {
-  name: "Index",
-  components: {
-    TableEditor,
-    TableExhibition,
-  },
-  data() {
-    return {
-      tableData: {},
-      getTableAPI: "",
-    };
-  },
-  methods: {
-    setTableData(val) {
-      this.tableData = JSON.parse(val);
+  export default {
+    name: "Index",
+    components: {
+      TableEditor,
+      TableExhibition,
     },
-  },
-};
+    data() {
+      return {
+        tableData: {},
+        getTableAPI: "",
+      };
+    },
+    methods: {
+      setTableData(val) {
+        this.tableData = JSON.parse(val);
+      },
+    },
+  };
 </script>

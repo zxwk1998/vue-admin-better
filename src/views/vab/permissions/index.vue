@@ -14,8 +14,8 @@
       </el-form-item>
 
       <el-form-item>
-        <el-button type="primary" @click="handleChangePermission"
-          >切换权限
+        <el-button type="primary" @click="handleChangePermission">
+          切换权限
         </el-button>
       </el-form-item>
       <el-form-item label="当前账号拥有的权限">
@@ -119,47 +119,50 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import { tokenTableName } from "@/config/settings";
-import { getRouterList } from "@/api/router";
-import JsonEditor from "@/components/JsonEditor";
+  import { mapGetters } from "vuex";
+  import { tokenTableName } from "@/config/settings";
+  import { getRouterList } from "@/api/router";
+  import JsonEditor from "@/components/JsonEditor";
 
-export default {
-  name: "Permissions",
-  components: {
-    JsonEditor,
-  },
-  data() {
-    return {
-      form: {
-        account: "",
+  export default {
+    name: "Permissions",
+    components: {
+      JsonEditor,
+    },
+    data() {
+      return {
+        form: {
+          account: "",
+        },
+        tableData: [],
+        res: [],
+      };
+    },
+    computed: {
+      ...mapGetters({
+        username: "user/username",
+        permissions: "user/permissions",
+      }),
+    },
+    created() {
+      this.fetchData();
+    },
+    mounted() {
+      this.form.account = this.username;
+    },
+    methods: {
+      handleChangePermission() {
+        localStorage.setItem(
+          tokenTableName,
+          `${this.form.account}-accessToken`
+        );
+        location.reload();
       },
-      tableData: [],
-      res: [],
-    };
-  },
-  computed: {
-    ...mapGetters({
-      username: "user/username",
-      permissions: "user/permissions",
-    }),
-  },
-  created() {
-    this.fetchData();
-  },
-  mounted() {
-    this.form.account = this.username;
-  },
-  methods: {
-    handleChangePermission() {
-      localStorage.setItem(tokenTableName, `${this.form.account}-accessToken`);
-      location.reload();
+      async fetchData() {
+        const res = await getRouterList();
+        this.tableData = res.data;
+        this.res = res;
+      },
     },
-    async fetchData() {
-      const res = await getRouterList();
-      this.tableData = res.data;
-      this.res = res;
-    },
-  },
-};
+  };
 </script>

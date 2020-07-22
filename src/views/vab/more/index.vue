@@ -8,8 +8,8 @@
         <el-card>
           <div slot="header">
             开源版本
-            <el-button style="float: right; padding: 3px 0;" type="text"
-              >永久免费 个人/商业使用
+            <el-button style="float: right; padding: 3px 0;" type="text">
+              永久免费 个人/商业使用
             </el-button>
           </div>
           <div>
@@ -21,8 +21,9 @@
                 <a
                   target="_blank"
                   href="https://github.com/chuzhixin/vue-admin-beautiful"
-                  >支持白嫖，也请给个star</a
                 >
+                  支持白嫖，也请给个star
+                </a>
               </li>
               <li>
                 提供讨论群专属文档，QQ群 972435319
@@ -36,9 +37,9 @@
         <el-card>
           <div slot="header">
             VIP群
-            <el-button style="float: right; padding: 3px 0;" type="text"
-              >￥100</el-button
-            >
+            <el-button style="float: right; padding: 3px 0;" type="text">
+              ￥100
+            </el-button>
           </div>
           <div>
             <ul>
@@ -56,9 +57,9 @@
         <el-card>
           <div slot="header">
             商业用途 完全自定义版权
-            <el-button style="float: right; padding: 3px 0;" type="text"
-              >￥299</el-button
-            >
+            <el-button style="float: right; padding: 3px 0;" type="text">
+              ￥299
+            </el-button>
           </div>
           <div>
             <ul>
@@ -78,38 +79,38 @@
 </template>
 
 <script>
-export default {
-  name: "More",
-  components: {},
-  data() {
-    return { nodeEnv: process.env.NODE_ENV };
-  },
-  created() {},
-  mounted() {},
-  methods: {},
-};
+  export default {
+    name: "More",
+    components: {},
+    data() {
+      return { nodeEnv: process.env.NODE_ENV };
+    },
+    created() {},
+    mounted() {},
+    methods: {},
+  };
 </script>
 <style lang="scss" scoped>
-.more-container {
-  ::v-deep {
-    .el-card__body {
-      > div {
-        min-height: 70vh;
-        padding: 20px;
+  .more-container {
+    ::v-deep {
+      .el-card__body {
+        > div {
+          min-height: 70vh;
+          padding: 20px;
 
-        > ul {
-          > li {
-            line-height: 30px;
+          > ul {
+            > li {
+              line-height: 30px;
+            }
           }
-        }
 
-        > img {
-          display: block;
-          margin: 40px auto;
-          border: 1px solid #dedede;
+          > img {
+            display: block;
+            margin: 40px auto;
+            border: 1px solid #dedede;
+          }
         }
       }
     }
   }
-}
 </style>

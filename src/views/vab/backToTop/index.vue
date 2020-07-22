@@ -8,15 +8,15 @@
 </template>
 
 <script>
-export default {
-  name: "BackToTop",
-  data() {
-    return {};
-  },
-};
+  export default {
+    name: "BackToTop",
+    data() {
+      return {};
+    },
+  };
 </script>
 <style lang="scss" scoped>
-.placeholder-container div {
-  margin: 10px;
-}
+  .placeholder-container div {
+    margin: 10px;
+  }
 </style>
