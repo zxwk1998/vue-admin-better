@@ -139,6 +139,12 @@
         immediate: true,
       },
     },
+    created() {
+      document.body.style.overflow = "hidden";
+    },
+    beforeDestroy() {
+      document.body.style.overflow = "auto";
+    },
     mounted() {
       if ("production" !== process.env.NODE_ENV) {
         this.form.username = "admin";

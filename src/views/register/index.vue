@@ -154,9 +154,11 @@
         passwordType: "password",
       };
     },
-    created() {},
-    mounted() {},
+    created() {
+      document.body.style.overflow = "hidden";
+    },
     beforeDestroy() {
+      document.body.style.overflow = "auto";
       this.getPhoneIntval = null;
       clearInterval(this.getPhoneIntval);
     },
