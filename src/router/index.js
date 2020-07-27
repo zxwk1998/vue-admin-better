@@ -410,6 +410,12 @@ export const asyncRoutes = [
         component: () => import("@/views/vab/more/index"),
         meta: { title: "更多组件", permissions: ["admin"] },
       },
+      {
+        path: "blacklist",
+        name: "Blacklist",
+        component: () => import("@/views/vab/blacklist/index"),
+        meta: { title: "黑名单", permissions: ["admin"] },
+      },
     ],
   },
   {
