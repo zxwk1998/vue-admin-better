@@ -45,7 +45,7 @@ router.beforeResolve(async (to, from, next) => {
             store.dispatch("user/setPermissions", ["admin"]);
             permissions = ["admin"];
           } else {
-            permissions = await store.dispatch("user/getInfo");
+            permissions = await store.dispatch("user/getUserInfo");
           }
 
           let accessRoutes = [];

@@ -13,7 +13,7 @@ export async function login(data) {
   });
 }
 
-export function getInfo(accessToken) {
+export function getUserInfo(accessToken) {
   return request({
     url: "/userInfo",
     method: "post",

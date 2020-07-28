@@ -4,7 +4,7 @@
  */
 
 import Vue from "vue";
-import { getInfo, login, logout } from "@/api/user";
+import { getUserInfo, login, logout } from "@/api/user";
 import {
   getAccessToken,
   removeAccessToken,
@@ -68,8 +68,8 @@ const actions = {
       );
     }
   },
-  async getInfo({ commit, state }) {
-    const { data } = await getInfo(state.accessToken);
+  async getUserInfo({ commit, state }) {
+    const { data } = await getUserInfo(state.accessToken);
     if (!data) {
       Vue.prototype.$baseMessage("验证失败，请重新登录...", "error");
       return false;
