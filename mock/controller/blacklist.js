@@ -17,7 +17,7 @@ const data = [
   {
     name: "Mr、无涯",
     qq: "2198457489",
-    excuse: "跟我道歉可以选择原谅",
+    excuse: "感谢理解",
   },
 ];
 export default [
