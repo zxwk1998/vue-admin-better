@@ -75,13 +75,13 @@ const actions = {
       return false;
     }
     let { permissions, username, avatar } = data;
-    if (permissions && username) {
+    if (permissions && username && Array.isArray(permissions)) {
       commit("setPermissions", permissions);
       commit("setusername", username);
       commit("setAvatar", avatar);
       return permissions;
     } else {
-      Vue.prototype.$baseMessage("获取用户信息接口异常", "error");
+      Vue.prototype.$baseMessage("用户信息接口异常", "error");
       return false;
     }
   },
