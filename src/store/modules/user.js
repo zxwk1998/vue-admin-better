@@ -68,8 +68,8 @@ const actions = {
       );
     }
   },
-  async getUserInfo({ commit, state }) {
-    const { data } = await getUserInfo(state.accessToken);
+  async getUserInfo({ commit }) {
+    const { data } = await getUserInfo();
     if (!data) {
       Vue.prototype.$baseMessage("验证失败，请重新登录...", "error");
       return false;
@@ -87,7 +87,6 @@ const actions = {
   },
   async logout({ dispatch }) {
     await logout(state.accessToken);
-    await dispatch("tagsBar/delAllRoutes", null, { root: true });
     await dispatch("resetAccessToken");
     await resetRouter();
   },
