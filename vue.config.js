@@ -24,26 +24,27 @@ const Webpack = require("webpack");
 const WebpackBar = require("webpackbar");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 const dayjs = require("dayjs");
-const date = new dayjs().format("YYYY_M_D");
-const time = new dayjs().format("YYYY-M-D HH:mm:ss");
+const date = dayjs().format("YYYY_M_D");
+const time = dayjs().format("YYYY-M-D HH:mm:ss");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const productionGzipExtensions = ["html", "js", "css", "svg"];
 process.env.VUE_APP_TITLE = title || "vue-admin-beautiful";
 process.env.VUE_APP_AUTHOR = author || "chuzhixin";
 process.env.VUE_APP_UPDATE_TIME = time;
 process.env.VUE_APP_VERSION = version;
-function resolve(dir) {
-  return path.join(__dirname, dir);
-}
 
-function mockServer() {
+const resolve = (dir) => {
+  return path.join(__dirname, dir);
+};
+
+const mockServer = () => {
   if (process.env.NODE_ENV === "development") {
     const mockServer = require("./mock/mockServer.js");
     return mockServer;
   } else {
     return "";
   }
-}
+};
 
 module.exports = {
   publicPath,

@@ -158,6 +158,10 @@ const data = [
     content: "主题配置添加海洋之心、绿荫草场、荣耀典藏、暗黑之子模式",
     timestamp: "2020-07-18",
   },
+  {
+    content: "全局axios请求全面支持Status Code拦截处理",
+    timestamp: "2020-07-29",
+  },
 ];
 
 export default [

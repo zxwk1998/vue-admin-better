@@ -11,7 +11,7 @@ const mockDir = path.join(process.cwd(), "mock");
  * @param app
  * @returns {{mockStartIndex: number, mockRoutesLength: number}}
  */
-function registerRoutes(app) {
+const registerRoutes = (app) => {
   let mockLastIndex;
   const { default: mocks } = require("./index.js");
   const mocksForServer = mocks.map((route) => {
@@ -26,7 +26,7 @@ function registerRoutes(app) {
     mockRoutesLength: mockRoutesLength,
     mockStartIndex: mockLastIndex - mockRoutesLength,
   };
-}
+};
 
 /**
  *
@@ -40,6 +40,7 @@ const responseFake = (url, type, respond) => {
     url: new RegExp(`${baseURL}${url}`),
     type: type || "get",
     response(req, res) {
+      res.status(200);
       if (JSON.stringify(req.body) !== "{}") {
         console.log(chalk.green(`> 请求地址：${req.path}`));
         console.log(chalk.green(`> 请求参数：${JSON.stringify(req.body)}\n`));

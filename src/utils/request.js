@@ -127,6 +127,10 @@ service.interceptors.response.use(
     if (message.includes("Request failed with status code")) {
       message = "后端接口" + message.substr(message.length - 3) + "异常";
     }
+    if (error.response) {
+      const { data } = error.response;
+      message = data.msg;
+    }
     errorMsg(message || "后端接口未知异常");
     return Promise.reject(error);
   }
