@@ -68,8 +68,8 @@ const actions = {
       );
     }
   },
-  async getUserInfo({ commit }) {
-    const { data } = await getUserInfo();
+  async getUserInfo({ commit, state }) {
+    const { data } = await getUserInfo(state.accessToken);
     if (!data) {
       Vue.prototype.$baseMessage("验证失败，请重新登录...", "error");
       return false;
