@@ -24,7 +24,7 @@ export default [
   {
     url: "/table/getList",
     type: "post",
-    response: (config) => {
+    response(config) {
       if (!config.body) {
         return {
           code: 200,
@@ -68,7 +68,7 @@ export default [
   {
     url: "/table/doEdit",
     type: "post",
-    response: (config) => {
+    response(config) {
       return {
         code: 200,
         msg: "模拟保存成功",
@@ -78,7 +78,7 @@ export default [
   {
     url: "/table/doDelete",
     type: "post",
-    response: (config) => {
+    response(config) {
       return {
         code: 200,
         msg: "模拟删除成功",

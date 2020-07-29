@@ -24,7 +24,7 @@ export default [
   {
     url: "/blacklist/getList",
     type: "post",
-    response: () => {
+    response() {
       return {
         code: 200,
         msg: "success",

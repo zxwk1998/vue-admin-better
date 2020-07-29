@@ -13,10 +13,13 @@ export async function login(data) {
   });
 }
 
-export function getUserInfo() {
+export function getUserInfo(accessToken) {
   return request({
     url: "/userInfo",
     method: "post",
+    data: {
+      accessToken,
+    },
   });
 }
 

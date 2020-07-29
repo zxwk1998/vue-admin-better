@@ -2,7 +2,7 @@ export default [
   {
     url: "/menuManagement/getTree",
     type: "post",
-    response: (config) => {
+    response(config) {
       return {
         code: 200,
         msg: "success",
@@ -31,7 +31,7 @@ export default [
   {
     url: "/menuManagement/doEdit",
     type: "post",
-    response: (config) => {
+    response(config) {
       return {
         code: 200,
         msg: "模拟保存成功",
@@ -41,7 +41,7 @@ export default [
   {
     url: "/menuManagement/doDelete",
     type: "post",
-    response: (config) => {
+    response(config) {
       return {
         code: 200,
         msg: "模拟删除成功",

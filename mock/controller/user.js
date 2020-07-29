@@ -9,7 +9,7 @@ export default [
   {
     url: "/publicKey",
     type: "post",
-    response: (config) => {
+    response(config) {
       return {
         code: 200,
         msg: "success",
@@ -24,7 +24,7 @@ export default [
   {
     url: "/login",
     type: "post",
-    response: (config) => {
+    response(config) {
       const { username } = config.body;
       const accessToken = accessTokens[username];
       if (!accessToken) {
@@ -43,7 +43,7 @@ export default [
   {
     url: "/register",
     type: "post",
-    response: () => {
+    response() {
       return {
         code: 200,
         msg: "模拟注册成功",
@@ -53,7 +53,7 @@ export default [
   {
     url: "/userInfo",
     type: "post",
-    response: (config) => {
+    response(config) {
       const { accessToken } = config.body;
       let permissions = ["admin"];
       let username = "admin";
@@ -87,7 +87,7 @@ export default [
   {
     url: "/logout",
     type: "post",
-    response: () => {
+    response() {
       return {
         code: 200,
         msg: "success",

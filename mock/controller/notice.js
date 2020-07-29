@@ -29,7 +29,7 @@ export default [
   {
     url: "/notice/getList",
     type: "post",
-    response: () => {
+    response() {
       return {
         code: 200,
         msg: "success",

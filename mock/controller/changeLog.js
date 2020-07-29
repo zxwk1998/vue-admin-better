@@ -164,7 +164,7 @@ export default [
   {
     url: "/changeLog/getList",
     type: "post",
-    response: (config) => {
+    response(config) {
       return {
         code: 200,
         msg: "success",

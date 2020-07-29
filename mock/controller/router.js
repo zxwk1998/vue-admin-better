@@ -383,7 +383,7 @@ export default [
   {
     url: "/menu/navigate",
     type: "post",
-    response: () => {
+    response() {
       return { code: 200, msg: "success", data: data };
     },
   },

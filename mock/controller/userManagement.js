@@ -29,7 +29,7 @@ export default [
   {
     url: "/userManagement/getList",
     type: "post",
-    response: (config) => {
+    response(config) {
       const { title = "", pageNo = 1, pageSize = 20 } = config.body;
       let mockList = List.filter((item) => {
         if (title && item.title.indexOf(title) < 0) return false;
@@ -50,7 +50,7 @@ export default [
   {
     url: "/userManagement/doEdit",
     type: "post",
-    response: () => {
+    response() {
       return {
         code: 200,
         msg: "模拟保存成功",
@@ -60,7 +60,7 @@ export default [
   {
     url: "/userManagement/doDelete",
     type: "post",
-    response: () => {
+    response() {
       return {
         code: 200,
         msg: "模拟删除成功",

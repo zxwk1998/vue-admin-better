@@ -4,7 +4,7 @@ export default [
   {
     url: "/goodsDetail/getList",
     type: "post",
-    response: (config) => {
+    response(config) {
       return {
         code: 200,
         msg: "success",
@@ -22,7 +22,7 @@ export default [
   {
     url: "/goodsDetail/doEdit",
     type: "post",
-    response: (config) => {
+    response(config) {
       return {
         code: 200,
         msg: "模拟保存成功",
@@ -32,7 +32,7 @@ export default [
   {
     url: "/goodsDetail/doDelete",
     type: "post",
-    response: (config) => {
+    response(config) {
       return {
         code: 200,
         msg: "模拟删除成功",

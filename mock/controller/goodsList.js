@@ -22,7 +22,7 @@ export default [
   {
     url: "/goodsList/getList",
     type: "post",
-    response: (config) => {
+    response(config) {
       const { title = "", pageNo = 1, pageSize = 20 } = config.body;
       let mockList = List.filter((item) => {
         if (title && item.title.indexOf(title) < 0) return false;
