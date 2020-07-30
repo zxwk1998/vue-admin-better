@@ -3,7 +3,7 @@
  * @description 全局变量配置
  */
 module.exports = {
-  // 开发以及部署时的URL
+  // 开发以及部署时的URL 如"/test/"
   publicPath: "",
   // 生产环境构建文件的目录名
   outputDir: "dist",
@@ -29,9 +29,9 @@ module.exports = {
   //烦请保留package.json作者信息 保留版权可免费商用 如需去除并自定义为自己企业的版权请联系群主QQ 1204505056 需支付299元 恶意修改发生纠纷及出现任何问题 由修改人自行承担
   copyright: process.env.VUE_APP_AUTHOR,
   //是否显示页面底部版权信息，建议您显示，当然您也可以选择不显示，不管您是付费用户还是未付费用户您都有选择显示或者不显示的权利
-  footerCopyright: process.env.NODE_ENV !== "development" ? true : false,
+  footerCopyright: process.env.NODE_ENV !== "development",
   //是否显示右上角github图标
-  githubCorner: process.env.NODE_ENV !== "development" ? true : false,
+  githubCorner: process.env.NODE_ENV !== "development",
   //是否显示顶部进度条
   progressBar: true,
   //缓存路由的最大数量
