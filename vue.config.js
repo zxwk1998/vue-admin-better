@@ -68,7 +68,6 @@ module.exports = {
       resolve: {
         alias: {
           "@": resolve("src"),
-          "^": resolve("src/components"),
         },
       },
       plugins: [
@@ -87,6 +86,7 @@ module.exports = {
       .exclude.add(resolve("src/remixIcon"))
       .add(resolve("src/colorfulIcon"))
       .end();
+
     config.module
       .rule("remixIcon")
       .test(/\.svg$/)
@@ -96,6 +96,7 @@ module.exports = {
       .loader("svg-sprite-loader")
       .options({ symbolId: "remix-icon-[name]" })
       .end();
+
     config.module
       .rule("colorfulIcon")
       .test(/\.svg$/)
@@ -105,6 +106,7 @@ module.exports = {
       .loader("svg-sprite-loader")
       .options({ symbolId: "colorful-icon-[name]" })
       .end();
+
     config.when(process.env.NODE_ENV === "development", (config) => {
       config.devtool("source-map");
     });
