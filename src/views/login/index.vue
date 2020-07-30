@@ -171,7 +171,7 @@
                   this.redirect === "/404" || this.redirect === "/401"
                     ? "/"
                     : this.redirect;
-                this.$router.push(sssrouterPath).catch(() => {});
+                this.$router.push(routerPath).catch(() => {});
                 this.loading = false;
               })
               .catch(() => {
