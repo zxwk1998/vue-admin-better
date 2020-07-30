@@ -7,7 +7,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Layout from "@/layouts";
 import EmptyLayout from "@/layouts/EmptyLayout";
-import { routerMode } from "@/config/settings";
+import { publicPath, routerMode } from "@/config/settings";
 
 Vue.use(VueRouter);
 export const constantRoutes = [
@@ -468,6 +468,7 @@ export const asyncRoutes = [
 ];
 
 const router = new VueRouter({
+  base: routerMode === "history" ? publicPath : "",
   mode: routerMode,
   scrollBehavior: () => ({
     y: 0,
@@ -484,6 +485,7 @@ VueRouter.prototype.push = function push(location, onResolve, onReject) {
 
 export function resetRouter() {
   router.matcher = new VueRouter({
+    base: routerMode === "history" ? publicPath : "",
     mode: routerMode,
     scrollBehavior: () => ({
       y: 0,

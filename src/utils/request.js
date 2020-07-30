@@ -15,7 +15,7 @@ import store from "@/store";
 import qs from "qs";
 import router from "@/router";
 import _ from "lodash";
-import { isArray, isNumber } from "@/utils/validate";
+import { isArray } from "@/utils/validate";
 
 const service = axios.create({
   baseURL,
@@ -31,7 +31,7 @@ service.interceptors.request.use(
       config.headers[tokenName] = store.getters["user/accessToken"];
     }
     if (config.data) {
-      //这里会过滤所有为空、0、fasle的key，如果不需要请自行注释
+      //这里会过滤所有为空、0、false的key，如果不需要请自行注释
       config.data = _.pickBy(config.data, _.identity);
     }
     if (process.env.NODE_ENV !== "preview") {
@@ -76,29 +76,21 @@ service.interceptors.response.use(
     }
     const { status, data, config } = response;
     const { code, msg } = data;
-    let codeVerification = "";
-
-    if (isNumber(successCode)) {
-      codeVerification = successCode;
-    }
-    if (isArray(successCode)) {
-      for (let i = 0; i < successCode.length; i++) {
-        if (code === successCode[i]) {
-          codeVerification = successCode[i];
-          break;
-        }
-      }
-    }
-    if (code != codeVerification) {
+    // 操作正常Code数组
+    let codeVerificationArray = isArray(successCode)
+      ? [...successCode]
+      : [...[successCode]];
+    // 是否操作正常
+    if (codeVerificationArray.includes(code)) {
+      return data;
+    } else {
       switch (code) {
         case invalidCode:
           errorMsg(msg || `后端接口${code}异常`);
-          store.dispatch("user/resetAccessToken");
+          store.dispatch("user/resetAccessToken").catch(() => {});
           break;
         case noPermissionCode:
-          router.push({
-            path: "/401",
-          });
+          router.push({ path: "/401" }).catch(() => {});
           break;
         default:
           errorMsg(msg || `后端接口${code}异常`);
@@ -108,8 +100,6 @@ service.interceptors.response.use(
         "vue-admin-beautiful请求异常拦截:" +
           JSON.stringify({ url: config.url, code, msg }) || "Error"
       );
-    } else {
-      return data;
     }
   },
   (error) => {
@@ -118,7 +108,7 @@ service.interceptors.response.use(
     }
     /*网络连接过程异常处理*/
     let { message } = error;
-    if (message == "Network Error") {
+    if (message === "Network Error") {
       message = "后端接口连接异常";
     }
     if (message.includes("timeout")) {
