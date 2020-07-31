@@ -4,7 +4,7 @@
 <h3>An excellent general-purpose, middle and background front-end framework based on Vue + element UI</h3>
 </div>
 
-## 演示地址
+## 地址
 
 #### - [🚀 演示地址：vue-admin-beautiful （横向纵向布局无缝切换）](https://www.baidu.com/link?url=g8AD9FObBQKCAEVMkOIhK2P1v9Yjjcqign6cQsOmtH7TSesAdq400yusuQ7qckbO&wd=&eqid=f5485e51004057b9000000035f110345)
 
@@ -14,9 +14,9 @@
 
 #### - [🚀 English backup address:vue-admin-beautiful](https://chuzhixin.github.io/vue-admin-beautiful/)
 
-## 跨平台效果演示
+#### - [🚀 跨平台演示地址： vue-admin-beautiful](http://www.jq22.com/yanshi23029)
 
-#### - [🚀 演示地址： vue-admin-beautiful](http://www.jq22.com/yanshi23029)
+#### - [🚀 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful/)
 
 ## 安装
 
