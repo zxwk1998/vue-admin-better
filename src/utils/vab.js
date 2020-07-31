@@ -17,7 +17,7 @@ const install = (Vue, opts = {}) => {
     return title;
   })();
   /* 全局加载层 */
-  Vue.prototype.$baseLoading = (index, text, callback) => {
+  Vue.prototype.$baseLoading = (index, text) => {
     let loading;
     if (!index) {
       loading = Loading.service({
@@ -33,16 +33,10 @@ const install = (Vue, opts = {}) => {
         background: "hsla(0,0%,100%,.8)",
       });
     }
-    if (callback) {
-      callback(loading);
-    } else {
-      setTimeout(() => {
-        loading.close();
-      }, messageDuration);
-    }
+    return loading;
   };
   /* 全局多彩加载层 */
-  Vue.prototype.$baseColorfullLoading = (index, text, callback) => {
+  Vue.prototype.$baseColorfullLoading = (index, text) => {
     let loading;
     if (!index) {
       loading = Loading.service({
@@ -73,13 +67,7 @@ const install = (Vue, opts = {}) => {
         background: "hsla(0,0%,100%,.8)",
       });
     }
-    if (callback) {
-      callback(loading);
-    } else {
-      setTimeout(() => {
-        loading.close();
-      }, messageDuration);
-    }
+    return loading;
   };
   /* 全局Message */
   Vue.prototype.$baseMessage = (message, type) => {

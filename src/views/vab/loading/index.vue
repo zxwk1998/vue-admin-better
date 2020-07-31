@@ -11,9 +11,6 @@
     <el-button type="primary" @click="handleLoading(7)">效果7</el-button>
     <el-button type="primary" @click="handleLoading(8)">效果8</el-button>
     <el-button type="primary" @click="handleLoading(9)">效果9</el-button>
-    <el-button type="primary" @click="test()">
-      全局默认骨架屏(仿支付宝)
-    </el-button>
     <br />
     <br />
     <br />
@@ -41,13 +38,16 @@
     },
     methods: {
       handleLoading(index) {
-        this.$baseLoading(index);
+        const Loading = this.$baseLoading(index);
+        setTimeout(() => {
+          Loading.close();
+        }, 3000);
       },
       handleColorfullLoading(index) {
-        this.$baseColorfullLoading(index);
-      },
-      test() {
-        location.reload();
+        const Loading = this.$baseColorfullLoading(index);
+        setTimeout(() => {
+          Loading.close();
+        }, 3000);
       },
     },
   };

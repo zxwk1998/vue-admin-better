@@ -162,13 +162,17 @@ const data = [
     content: "全局axios请求全面支持Status Code拦截处理",
     timestamp: "2020-07-29",
   },
+  {
+    content: "重构全局loadding加载代码",
+    timestamp: "2020-07-31",
+  },
 ];
 
 export default [
   {
     url: "/changeLog/getList",
     type: "post",
-    response(config) {
+    response() {
       return {
         code: 200,
         msg: "success",
