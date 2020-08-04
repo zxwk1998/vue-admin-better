@@ -120,6 +120,20 @@ instance.interceptors.response.use(
       const { status, data } = response;
       handleCode(status, data.msg || message);
       return Promise.reject(error);
+    } else {
+      let { message } = error;
+      if (message === "Network Error") {
+        message = "后端接口连接异常";
+      }
+      if (message.includes("timeout")) {
+        message = "后端接口请求超时";
+      }
+      if (message.includes("Request failed with status code")) {
+        const code = message.substr(message.length - 3);
+        message = "后端接口" + code + "异常";
+      }
+      Vue.prototype.$baseMessage(message || `后端接口未知异常`, "error");
+      return Promise.reject(error);
     }
   }
 );
