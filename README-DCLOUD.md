@@ -19,7 +19,7 @@
 
 #### - [🚀 国内备份地址：vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/)
 
-#### - [🚀 pro 版（正在全力开发、不代表最终效果）](https://gitee.com/chu1204505056/vue-admin-beautiful-pro/)
+#### - [🚀 pro 版（正在全力开发、不代表最终效果）](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/)
 
 #### - [🚀 unicloud 版下载地址](https://ext.dcloud.net.cn/plugin?id=2327)
 
