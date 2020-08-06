@@ -30,7 +30,7 @@ const mutations = {
     state.accessToken = accessToken;
     setAccessToken(accessToken);
   },
-  setusername(state, username) {
+  setUsername(state, username) {
     state.username = username;
   },
   setAvatar(state, avatar) {
@@ -77,7 +77,7 @@ const actions = {
     let { permissions, username, avatar } = data;
     if (permissions && username && Array.isArray(permissions)) {
       commit("setPermissions", permissions);
-      commit("setusername", username);
+      commit("setUsername", username);
       commit("setAvatar", avatar);
       return permissions;
     } else {

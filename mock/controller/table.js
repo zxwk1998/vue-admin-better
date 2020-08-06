@@ -1,5 +1,6 @@
 import { mock } from "mockjs";
 import { handleRandomImage } from "../utils";
+
 const List = [];
 const count = 999;
 for (let i = 0; i < count; i++) {
@@ -50,8 +51,7 @@ export default [
       }
       const { title = "", pageNo = 1, pageSize = 20 } = config.body;
       let mockList = List.filter((item) => {
-        if (title && item.title.indexOf(title) < 0) return false;
-        return true;
+        return !(title && item.title.indexOf(title) < 0);
       });
       const pageList = mockList.filter(
         (item, index) =>
@@ -68,7 +68,7 @@ export default [
   {
     url: "/table/doEdit",
     type: "post",
-    response(config) {
+    response() {
       return {
         code: 200,
         msg: "模拟保存成功",
@@ -78,7 +78,7 @@ export default [
   {
     url: "/table/doDelete",
     type: "post",
-    response(config) {
+    response() {
       return {
         code: 200,
         msg: "模拟删除成功",
