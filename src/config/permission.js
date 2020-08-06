@@ -10,9 +10,9 @@ import getPageTitle from "@/utils/pageTitle";
 import {
   authentication,
   loginInterception,
-  routesWhiteList,
   progressBar,
   recordRoute,
+  routesWhiteList,
 } from "./settings";
 
 VabProgress.configure({

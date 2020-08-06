@@ -608,9 +608,6 @@
             text: "2099年世界GDP（亿元）",
             subtext: "数据来自vue-admin-beautiful杜撰",
           },
-          tooltip: {
-            trigger: "item",
-          },
           dataRange: {
             orient: "horizontal",
             min: 0,
