@@ -39,8 +39,7 @@ const resolve = (dir) => {
 
 const mockServer = () => {
   if (process.env.NODE_ENV === "development") {
-    const mockServer = require("./mock/mockServer.js");
-    return mockServer;
+    return require("./mock/mockServer.js");
   } else {
     return "";
   }

@@ -1,4 +1,3 @@
-import { mock } from "mockjs";
 const totalCount = 2;
 const List = [
   {
@@ -17,8 +16,7 @@ export default [
     response(config) {
       const { title = "", pageNo = 1, pageSize = 20 } = config.body;
       let mockList = List.filter((item) => {
-        if (title && item.title.indexOf(title) < 0) return false;
-        return true;
+        return !(title && item.title.indexOf(title) < 0);
       });
       const pageList = mockList.filter(
         (item, index) =>
@@ -35,7 +33,7 @@ export default [
   {
     url: "/roleManagement/doEdit",
     type: "post",
-    response(config) {
+    response() {
       return {
         code: 200,
         msg: "模拟保存成功",
@@ -45,7 +43,7 @@ export default [
   {
     url: "/roleManagement/doDelete",
     type: "post",
-    response(config) {
+    response() {
       return {
         code: 200,
         msg: "模拟删除成功",
