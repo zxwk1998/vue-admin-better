@@ -1,0 +1,46 @@
+package com.deelon.util;
+
+import org.quartz.*;
+
+import javax.annotation.Resource;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+public class job {
+    @Resource
+    Scheduler scheduler;
+
+    public boolean isTriggerExists(String var1) throws SchedulerException {
+        if (this.scheduler == null) {
+            return false;
+        } else {
+            TriggerKey var2 = new TriggerKey(var1, "group1");
+            return this.scheduler.checkExists(var2);
+        }
+    }
+
+    private void setJob(int time,int type, String data,String trigName) throws SchedulerException, ParseException {
+        String jobName = "定时任务";//定时任务所属项目名称：qrtz_job_details的JOB_NAME值
+        if (scheduler == null) {
+            return;
+        }
+        boolean rtn = this.isTriggerExists(trigName);//判断该任务名称是否添加过
+        if (rtn) {
+            return;
+        }
+        Date date = new Date();
+        Calendar now = Calendar.getInstance();
+        now.setTime(date);
+        now.add(type, time);
+        JobKey jobKey = new JobKey(jobName, "group1");
+        TriggerBuilder<Trigger> tb = TriggerBuilder.newTrigger();
+        tb.withIdentity(trigName, "group1");//定时任务名称
+        tb.startAt(now.getTime());//定时任务开始执行时间
+        tb.forJob(jobKey);//定时任务属所组
+        Trigger trig = tb.build();//定时任务参数
+        trig.getJobDataMap().put("data", data);
+        this.scheduler.scheduleJob(trig);//创建定时任务
+    }
+}
