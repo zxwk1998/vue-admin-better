@@ -1,5 +1,5 @@
 <template>
-  <div v-if="nodeEnv !== 'development'" class="vab-ad">
+  <div class="vab-ad">
     <el-carousel
       v-if="adList"
       height="30px"

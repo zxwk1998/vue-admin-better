@@ -1,14 +1,7 @@
 <template>
   <div class="index-container">
     <el-row :gutter="20">
-      <el-col
-        v-if="nodeEnv !== 'development'"
-        :xs="24"
-        :sm="24"
-        :md="24"
-        :lg="24"
-        :xl="24"
-      >
+      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
         <el-alert
           v-if="noticeList[0]"
           :title="noticeList[0].title"
@@ -32,6 +25,11 @@
             />
           </a>
         </el-alert>
+      </el-col>
+      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+        <el-card shadow="never">
+          <center>广告位招商</center>
+        </el-card>
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
         <el-card shadow="never">
@@ -132,6 +130,43 @@
             <span>更新日志</span>
             <div style="float: right;">部署时间:{{ updateTime }}</div>
           </div>
+          <div class="bottom-btn">
+            <el-popover placement="top" width="250" trigger="hover">
+              <p>
+                这是一个付费群，谢谢您愿意支持开源，加群获取详细文档，群内提供vue-admin-beautiful-template基础模板
+              </p>
+              <el-image :src="require('@/assets/ewm.png')"></el-image>
+              <a slot="reference" target="_blank">
+                <el-button type="primary">QQ讨论群</el-button>
+              </a>
+            </el-popover>
+            <a @click="handleChangeTheme">
+              <el-button type="danger">修改主题和布局</el-button>
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/chuzhixin/vue-admin-beautiful"
+            >
+              <el-button type="warning">
+                github下载源码点star（实时更新）
+              </el-button>
+            </a>
+            <a
+              target="_blank"
+              href="https://gitee.com/chu1204505056/vue-admin-beautiful"
+            >
+              <el-button type="warning">码云下载源码点star</el-button>
+            </a>
+            <el-popover placement="top" width="250" trigger="hover">
+              <p>
+                谢谢您愿意支持开源，加群获取详细教程，群内提供vue-admin-beautiful-template基础模板
+              </p>
+              <el-image :src="require('@/assets/ewm.png')"></el-image>
+              <a slot="reference" target="_blank">
+                <el-button type="warning">文档</el-button>
+              </a>
+            </el-popover>
+          </div>
           <table class="table">
             <tr>
               <td>@vue/cli版本</td>
@@ -170,44 +205,6 @@
               <td>{{ dependencies["lodash"] }}</td>
             </tr>
           </table>
-
-          <div v-if="nodeEnv !== 'development'" class="bottom-btn">
-            <el-popover placement="top" width="250" trigger="hover">
-              <p>
-                这是一个付费群，谢谢您愿意支持开源，加群获取详细文档，群内提供vue-admin-beautiful-template基础模板
-              </p>
-              <el-image :src="require('@/assets/ewm.png')"></el-image>
-              <a slot="reference" target="_blank">
-                <el-button type="primary">QQ讨论群 972435319</el-button>
-              </a>
-            </el-popover>
-            <a @click="handleChangeTheme">
-              <el-button type="danger">修改主题和布局</el-button>
-            </a>
-            <a
-              target="_blank"
-              href="https://github.com/chuzhixin/vue-admin-beautiful"
-            >
-              <el-button type="warning">
-                github下载源码点star（实时更新）
-              </el-button>
-            </a>
-            <a
-              target="_blank"
-              href="https://gitee.com/chu1204505056/vue-admin-beautiful"
-            >
-              <el-button type="warning">码云下载源码点star</el-button>
-            </a>
-            <el-popover placement="top" width="250" trigger="hover">
-              <p>
-                谢谢您愿意支持开源，加群获取详细教程，群内提供vue-admin-beautiful-template基础模板
-              </p>
-              <el-image :src="require('@/assets/ewm.png')"></el-image>
-              <a slot="reference" target="_blank">
-                <el-button type="warning">文档</el-button>
-              </a>
-            </el-popover>
-          </div>
         </el-card>
       </el-col>
 
@@ -782,7 +779,7 @@
     }
 
     .card {
-      min-height: 420px;
+      min-height: 400px;
 
       ::v-deep {
         .el-card__body {
@@ -839,10 +836,8 @@
     }
 
     .bottom-btn {
-      margin-top: 5px;
-
       button {
-        margin: 5px 10px 5px 0;
+        margin: 5px 10px 15px 0;
       }
     }
   }
