@@ -20,6 +20,8 @@
 
 #### - [🚀 pro 版（正在全力开发、不代表最终效果）](http://beautiful.panm.cn/vue-admin-beautiful-pro/)
 
+#### - [🚀 pro 版国内备份地址（正在全力开发、不代表最终效果）](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/)
+
 ## 安装
 
 ```bash
