@@ -75,7 +75,6 @@ instance.interceptors.request.use(
       );
 
     if (
-      process.env.NODE_ENV !== "preview" &&
       contentType === "application/x-www-form-urlencoded;charset=UTF-8" &&
       config.data
     ) {
