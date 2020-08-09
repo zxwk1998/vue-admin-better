@@ -146,10 +146,8 @@
       document.body.style.overflow = "auto";
     },
     mounted() {
-      if ("production" !== process.env.NODE_ENV) {
-        this.form.username = "admin";
-        this.form.password = "123456";
-      }
+      this.form.username = "admin";
+      this.form.password = "123456";
     },
     methods: {
       handlePassword() {
