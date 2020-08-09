@@ -5,13 +5,10 @@ import router from "./router";
 import "./plugins";
 /**
  * @copyright chuzhixin 1204505056@qq.com
- * @description 生产环境与演示环境默认都使用mock，如果正式用于生产环境时，记得去掉
+ * @description 生产环境默认都使用mock，如果正式用于生产环境时，记得去掉
  */
 
-if (
-  process.env.NODE_ENV === "preview" ||
-  process.env.NODE_ENV === "production"
-) {
+if (process.env.NODE_ENV === "production") {
   const { mockXHR } = require("@/config/static");
   mockXHR();
 }
