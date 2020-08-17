@@ -1,5 +1,5 @@
-import { mock } from "mockjs";
-import { handleRandomImage } from "../utils";
+const { mock } = require("mockjs");
+const { handleRandomImage } = require("../utils");
 
 const List = [];
 const count = 999;
@@ -21,7 +21,7 @@ for (let i = 0; i < count; i++) {
   );
 }
 
-export default [
+module.exports = [
   {
     url: "/table/getList",
     type: "post",

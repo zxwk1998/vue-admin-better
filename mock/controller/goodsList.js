@@ -1,4 +1,4 @@
-import { mock } from "mockjs";
+const { mock } = require("mockjs");
 
 const List = [];
 const count = 999;
@@ -18,7 +18,7 @@ for (let i = 0; i < count; i++) {
   );
 }
 
-export default [
+module.exports = [
   {
     url: "/goodsList/getList",
     type: "post",

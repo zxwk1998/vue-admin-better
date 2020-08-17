@@ -24,8 +24,7 @@ const data = [
     type: "success",
   },
 ];
-
-export default [
+module.exports = [
   {
     url: "/notice/getList",
     type: "post",

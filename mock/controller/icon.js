@@ -964,7 +964,7 @@ const data = [
   "yen-sign",
   "yin-yang",
 ];
-export default [
+module.exports = [
   {
     url: "/icon/getList",
     type: "post",

@@ -1,6 +1,6 @@
-import { Random } from "mockjs";
-import { join } from "path";
-import fs from "fs";
+const { Random } = require("mockjs");
+const { join } = require("path");
+const fs = require("fs");
 
 /**
  * @copyright chuzhixin 1204505056@qq.com
@@ -9,7 +9,7 @@ import fs from "fs";
  * @param height
  * @returns {string}
  */
-export function handleRandomImage(width = 50, height = 50) {
+function handleRandomImage(width = 50, height = 50) {
   return `https://picsum.photos/${width}/${height}?random=${Random.guid()}`;
 }
 
@@ -18,7 +18,7 @@ export function handleRandomImage(width = 50, height = 50) {
  * @description 处理所有 controller 模块，npm run serve时在node环境中自动输出controller文件夹下Mock接口，请勿修改。
  * @returns {[]}
  */
-export function handleMockArray() {
+function handleMockArray() {
   const mockArray = [];
   const getFiles = (jsonPath) => {
     const jsonFiles = [];
@@ -37,3 +37,7 @@ export function handleMockArray() {
   getFiles("mock/controller");
   return mockArray;
 }
+module.exports = {
+  handleRandomImage,
+  handleMockArray,
+};

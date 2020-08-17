@@ -303,7 +303,7 @@ const data = [
   "add_database",
   "add_row",
 ];
-export default [
+module.exports = [
   {
     url: "/colorfulIcon/getList",
     type: "post",

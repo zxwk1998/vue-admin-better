@@ -9,7 +9,7 @@ const List = [
     permission: "editor",
   },
 ];
-export default [
+module.exports = [
   {
     url: "/roleManagement/getList",
     type: "post",

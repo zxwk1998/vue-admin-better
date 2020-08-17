@@ -2271,7 +2271,7 @@ const data = [
   "zzz-fill",
   "zzz-line",
 ];
-export default [
+module.exports = [
   {
     url: "/remixIcon/getList",
     type: "post",

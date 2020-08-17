@@ -13,7 +13,7 @@ const mockDir = path.join(process.cwd(), "mock");
  */
 const registerRoutes = (app) => {
   let mockLastIndex;
-  const { default: mocks } = require("./index.js");
+  const { mocks } = require("./index.js");
   const mocksForServer = mocks.map((route) => {
     return responseFake(route.url, route.type, route.response);
   });
@@ -58,7 +58,6 @@ const responseFake = (url, type, respond) => {
  * @param app
  */
 module.exports = (app) => {
-  require("@babel/register");
   app.use(bodyParser.json());
   app.use(
     bodyParser.urlencoded({

@@ -4,7 +4,7 @@ const accessTokens = {
   test: "test-accessToken",
 };
 
-export default [
+module.exports = [
   {
     url: "/publicKey",
     type: "post",

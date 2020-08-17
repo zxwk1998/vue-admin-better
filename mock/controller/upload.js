@@ -1,5 +1,5 @@
 const data = [];
-export default [
+module.exports = [
   {
     url: "/upload",
     type: "post",

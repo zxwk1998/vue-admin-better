@@ -1,6 +1,6 @@
-import { mock } from "mockjs";
+const { mock } = require("mockjs");
 
-export default [
+module.exports = [
   {
     url: "/goodsDetail/getList",
     type: "post",

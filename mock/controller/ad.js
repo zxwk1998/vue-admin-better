@@ -14,7 +14,7 @@ const data = [
       "//shang.qq.com/wpa/qunwpa?idkey=14f123ac6d4ef3122bbb60d4693f1d8c951a50be2296951efb12d5ab1642f36b",
   },
 ];
-export default [
+module.exports = [
   {
     url: "/ad/getList",
     type: "get",

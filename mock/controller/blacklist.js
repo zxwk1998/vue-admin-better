@@ -32,7 +32,7 @@ const data = [
   },
   ,
 ];
-export default [
+module.exports = [
   {
     url: "/blacklist/getList",
     type: "post",

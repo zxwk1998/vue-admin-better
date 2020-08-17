@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   {
     url: "/menuManagement/getTree",
     type: "post",

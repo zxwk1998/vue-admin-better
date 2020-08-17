@@ -25,7 +25,7 @@ const List = [
     datatime: "@datetime",
   },
 ];
-export default [
+module.exports = [
   {
     url: "/userManagement/getList",
     type: "post",

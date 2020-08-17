@@ -9,7 +9,7 @@ const mocks = [];
 const files = require.context("../../mock/controller", false, /\.js$/);
 
 files.keys().forEach((key) => {
-  const obj = files(key).default;
+  const obj = files(key);
   mocks.push(...obj);
 });
 

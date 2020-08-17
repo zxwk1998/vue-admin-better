@@ -168,7 +168,7 @@ const data = [
   },
 ];
 
-export default [
+module.exports = [
   {
     url: "/changeLog/getList",
     type: "post",

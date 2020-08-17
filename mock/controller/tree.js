@@ -43,7 +43,7 @@ const data = [
     ],
   },
 ];
-export default [
+module.exports = [
   {
     url: "/tree/list",
     type: "post",
