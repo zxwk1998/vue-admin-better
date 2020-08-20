@@ -36,6 +36,11 @@ const data = [
     excuse:
       "上来就开骂道：You and your git submit are just a rubbish，不可原谅",
   },
+  {
+    name: "7(赵海鹏)",
+    qq: "252334666",
+    excuse: "欺骗两个善良的小姑娘，做完项目不付70%的尾款，强烈抵制",
+  },
 ];
 module.exports = [
   {
