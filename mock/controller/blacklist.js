@@ -30,7 +30,12 @@ const data = [
     excuse:
       "剽窃、破解框架授权并发布到网上还伪装成善人，公开道歉并尊重我的劳动成果可以选择原谅",
   },
-  ,
+  {
+    name: "willina",
+    qq: "405522648",
+    excuse:
+      "上来就开骂道：You and your git submit are just a rubbish，不可原谅",
+  },
 ];
 module.exports = [
   {
