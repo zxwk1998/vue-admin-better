@@ -46,6 +46,11 @@ const data = [
     qq: "252667193",
     excuse: "30多岁，不学无术，造谣抹黑，不可原谅",
   },
+  {
+    name: "AIRLOO",
+    qq: "5971794",
+    excuse: "已原谅",
+  },
 ];
 module.exports = [
   {
