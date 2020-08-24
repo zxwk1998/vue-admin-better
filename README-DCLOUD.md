@@ -7,21 +7,19 @@
 [![](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&label=Stars&logo=github)
 ](https://github.com/chuzhixin/vue-admin-beautiful)
 
+## 演示地址
+
+### - [🚀 演示地址：vue-admin-beautiful （横向纵向布局无缝切换）](https://chu1204505056.gitee.io/vue-admin-beautiful/?hmsr=%E6%8F%92%E4%BB%B6%E5%B8%82%E5%9C%BA&hmpl=&hmcu=&hmkw=&hmci=)
+
+### - [🚀 vue-admin-beautiful-pro 版演示地址](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/?hmsr=%E6%8F%92%E4%BB%B6%E5%B8%82%E5%9C%BA&hmpl=&hmcu=&hmkw=&hmci=)
+
+### - [🚀 unicloud 版下载地址](https://ext.dcloud.net.cn/plugin?id=2327)
+
 ## vue-admin-beautiful 前端讨论群-1 972435319
 
 不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautiful-template 基础版本和详细的基础使用文档适合框架快速入门
 
 ![img](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
-
-## 演示地址
-
-#### - [🚀 演示地址：vue-admin-beautiful （横向纵向布局无缝切换）](http://beautiful.panm.cn/vue-admin-beautiful/)
-
-#### - [🚀 国内备份地址：vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/)
-
-#### - [🚀 unicloud 版下载地址](https://ext.dcloud.net.cn/plugin?id=2327)
-
-#### - [🚀 pro 版演示地址](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/)
 
 ## 安装
 
