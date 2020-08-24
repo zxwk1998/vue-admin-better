@@ -6,19 +6,19 @@
 
 ## 地址
 
-#### - [🚀 演示地址：vue-admin-beautiful](http://beautiful.panm.cn/vue-admin-beautiful/)
+#### - [🚀 演示地址：vue-admin-beautiful](http://beautiful.panm.cn/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-#### - [🚀 国内备份地址：vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/)
+#### - [🚀 国内备份地址：vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-#### - [🚀 English backup address:vue-admin-beautiful](https://chuzhixin.github.io/vue-admin-beautiful/)
+#### - [🚀 English backup address:vue-admin-beautiful](https://chuzhixin.github.io/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-#### - [🚀 跨平台演示地址： vue-admin-beautiful](http://www.jq22.com/yanshi23029)
+#### - [🚀 跨平台演示地址： vue-admin-beautiful](http://www.jq22.com/yanshi23029?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-#### - [🚀 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful/)
+#### - [🚀 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-#### - [🚀 pro 版演示地址](http://beautiful.panm.cn/vue-admin-beautiful-pro/)
+#### - [🚀 pro 版演示地址](http://beautiful.panm.cn/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-#### - [🚀 pro 版国内备份地址](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/)
+#### - [🚀 pro 版国内备份地址](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 ## 安装
 

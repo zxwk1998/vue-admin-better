@@ -13,6 +13,8 @@
 
 ### - [🚀 vue-admin-beautiful-pro 版演示地址](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/?hmsr=%E6%8F%92%E4%BB%B6%E5%B8%82%E5%9C%BA&hmpl=&hmcu=&hmkw=&hmci=)
 
+### - [🚀 vue-admin-beautiful-pro 版演示地址](http://beautiful.panm.cn/vue-admin-beautiful-pro/?hmsr=%E6%8F%92%E4%BB%B6%E5%B8%82%E5%9C%BA&hmpl=&hmcu=&hmkw=&hmci=)
+
 ### - [🚀 unicloud 版下载地址](https://ext.dcloud.net.cn/plugin?id=2327)
 
 ## vue-admin-beautiful 前端讨论群-1 972435319
