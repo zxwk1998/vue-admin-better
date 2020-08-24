@@ -51,6 +51,11 @@ const data = [
     qq: "5971794",
     excuse: "已原谅",
   },
+  {
+    name: "master Z",
+    qq: "1832819123",
+    excuse: "不尊重别人的劳动成果，认为开源就得无偿替他服务，不可原谅",
+  },
 ];
 module.exports = [
   {
