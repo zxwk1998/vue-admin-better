@@ -2,9 +2,7 @@
   <div>
     <el-form ref="form" :model="form" :rules="rules" label-width="120px">
       <el-form-item label-width="0">
-        <el-alert show-icon>
-          请务必仔细填写并核对
-        </el-alert>
+        <el-alert show-icon>请务必仔细填写并核对</el-alert>
       </el-form-item>
       <el-form-item label="付款账户" prop="payAccount">
         <el-input v-model="form.payAccount"></el-input>

@@ -18,7 +18,7 @@
       <el-table-column show-overflow-tooltip min-width="300px" label="标题">
         <template slot-scope="{ row }">
           <template v-if="row.edit">
-            <el-input v-model="row.title" style="width: 300px;" />
+            <el-input v-model="row.title" style="width: 300px" />
             <el-button
               class="cancel-btn"
               type="warning"

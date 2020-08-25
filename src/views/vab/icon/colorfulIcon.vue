@@ -34,7 +34,7 @@
       >
         <el-card
           shadow="hover"
-          style="cursor: pointer;"
+          style="cursor: pointer"
           @click.native="handleCopyIcon(index, $event)"
         >
           <vab-colorful-icon

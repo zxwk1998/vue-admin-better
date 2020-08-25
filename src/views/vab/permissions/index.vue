@@ -22,9 +22,7 @@
         {{ JSON.stringify(permissions) }}
       </el-form-item>
     </el-form>
-    <el-divider content-position="left">
-      按钮级权限演示
-    </el-divider>
+    <el-divider content-position="left">按钮级权限演示</el-divider>
     <el-button v-permissions="['admin']" type="primary">
       我是拥有["admin"]权限的按钮
     </el-button>

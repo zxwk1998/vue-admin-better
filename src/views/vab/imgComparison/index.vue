@@ -12,7 +12,7 @@
       >
         <vab-comparison
           :id="'silder-' + index"
-          style="margin-bottom: 12px;"
+          style="margin-bottom: 12px"
           :width="comparison.width"
           :height="comparison.height"
           :src1="comparison.src1"

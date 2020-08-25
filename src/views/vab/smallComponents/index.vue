@@ -17,7 +17,7 @@
           <div slot="header">
             <span>profile</span>
             <el-button
-              style="float: right; padding: 3px 0;"
+              style="float: right; padding: 3px 0"
               type="text"
               @click="handleProfile"
             >

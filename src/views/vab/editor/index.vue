@@ -19,7 +19,7 @@
       </el-form-item>
     </el-form>
     <el-dialog title="预览效果" :visible.sync="dialogTableVisible">
-      <div style="min-height: 60vh;">
+      <div style="min-height: 60vh">
         <h1 class="news-title">{{ form.title }}</h1>
         <div class="news-content" v-html="form.content"></div>
       </div>

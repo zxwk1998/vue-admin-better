@@ -3,7 +3,7 @@
     <el-image
       :src="bigSrc"
       fit="cover"
-      style="width: 100%; height: 100%;"
+      style="width: 100%; height: 100%"
       @click="clickBig"
     ></el-image>
     <el-image

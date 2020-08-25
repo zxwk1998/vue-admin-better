@@ -14,7 +14,7 @@
           <div slot="header">
             <span>{{ item.title }}</span>
           </div>
-          <div style="width: 100%; height: 200px;">
+          <div style="width: 100%; height: 200px">
             <vab-image
               :big-src="item.img"
               :percent="item.percent"

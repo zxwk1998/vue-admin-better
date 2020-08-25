@@ -5,11 +5,11 @@
       title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
       type="success"
       :closable="false"
-      style="position: fixed;"
+      style="position: fixed"
     ></el-alert>
     <el-row>
       <el-col :xs="24" :sm="24" :md="12" :lg="16" :xl="16">
-        <div style="color: transparent;">占位符</div>
+        <div style="color: transparent">占位符</div>
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
         <el-form
@@ -19,11 +19,9 @@
           class="login-form"
           label-position="left"
         >
-          <div class="title">
-            hello !
-          </div>
+          <div class="title">hello !</div>
           <div class="title-tips">欢迎来到{{ title }}！</div>
-          <el-form-item style="margin-top: 40px;" prop="username">
+          <el-form-item style="margin-top: 40px" prop="username">
             <span class="svg-container svg-container-admin">
               <vab-icon :icon="['fas', 'user']" />
             </span>
@@ -68,7 +66,7 @@
             登录
           </el-button>
           <router-link to="/register">
-            <div style="margin-top: 20px;">注册</div>
+            <div style="margin-top: 20px">注册</div>
           </router-link>
         </el-form>
       </el-col>

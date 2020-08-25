@@ -41,7 +41,7 @@
           append-to-body
           :visible.sync="dialogVisible"
         >
-          <div style="padding-bottom: 20px !important;">
+          <div style="padding-bottom: 20px !important">
             <img width="100%" :src="dialogImageUrl" alt="" />
           </div>
         </el-dialog>
@@ -50,11 +50,11 @@
     <div
       slot="footer"
       class="dialog-footer"
-      style="position: relative; padding-right: 15px; text-align: right;"
+      style="position: relative; padding-right: 15px; text-align: right"
     >
       <div
         v-if="show"
-        style="position: absolute; top: 10px; left: 15px; color: #999;"
+        style="position: absolute; top: 10px; left: 15px; color: #999"
       >
         正在上传中... 当前上传成功数:{{ imgSuccessNum }}张 当前上传失败数:{{
           imgErrorNum
@@ -62,7 +62,7 @@
       </div>
       <el-button type="primary" @click="handleClose">关闭</el-button>
       <el-button
-        style="margin-left: 10px;"
+        style="margin-left: 10px"
         size="small"
         type="success"
         :loading="loading"

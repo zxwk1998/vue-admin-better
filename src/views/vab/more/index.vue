@@ -8,7 +8,7 @@
         <el-card>
           <div slot="header">
             开源版本
-            <el-button style="float: right; padding: 3px 0;" type="text">
+            <el-button style="float: right; padding: 3px 0" type="text">
               永久免费 个人/商业使用
             </el-button>
           </div>
@@ -25,9 +25,7 @@
                   支持白嫖，也请给个star
                 </a>
               </li>
-              <li>
-                提供讨论群专属文档，QQ群 972435319
-              </li>
+              <li>提供讨论群专属文档，QQ群 972435319</li>
             </ul>
           </div>
         </el-card>
@@ -36,7 +34,7 @@
         <el-card>
           <div slot="header">
             VIP群
-            <el-button style="float: right; padding: 3px 0;" type="text">
+            <el-button style="float: right; padding: 3px 0" type="text">
               ￥100
             </el-button>
           </div>
@@ -57,7 +55,7 @@
         <el-card>
           <div slot="header">
             开源版授权 商业用途 完全自定义版权
-            <el-button style="float: right; padding: 3px 0;" type="text">
+            <el-button style="float: right; padding: 3px 0" type="text">
               ￥299
             </el-button>
           </div>
@@ -78,7 +76,7 @@
         <el-card>
           <div slot="header">
             PRO版
-            <el-button style="float: right; padding: 3px 0;" type="text">
+            <el-button style="float: right; padding: 3px 0" type="text">
               ￥599
             </el-button>
           </div>
@@ -94,9 +92,7 @@
                 </a>
               </li>
               <li>PRO独立版本与开源版本不同</li>
-              <li>
-                无开源版限制，无版权限制，无需额外配置，拿来即用
-              </li>
+              <li>无开源版限制，无版权限制，无需额外配置，拿来即用</li>
               <li>免费加入vue-admin-beautifl github团队</li>
               <li>提供16种布局主题搭配</li>
               <li>图标使用方式大为简化</li>

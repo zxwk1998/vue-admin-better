@@ -7,7 +7,7 @@
       这世界嘲笑你的人有很多，你又不是圣人，干嘛对每个人都仁慈，面对无端的辱骂和攻击，你只能选择将他记在这里，时刻提醒自己。
     </el-alert>
     <br />
-    <el-table :data="tableData" style="width: 100%;">
+    <el-table :data="tableData" style="width: 100%">
       <el-table-column prop="name" label="QQ昵称" width="180"></el-table-column>
       <el-table-column prop="qq" label="QQ号" width="180"></el-table-column>
       <el-table-column prop="excuse" label="是否可原谅"></el-table-column>

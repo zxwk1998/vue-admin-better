@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div slot="header" class="clearfix" style="margin-bottom: 15px;">
+    <div slot="header" class="clearfix" style="margin-bottom: 15px">
       <el-button type="primary" @click="prettierJSON">生成表格</el-button>
     </div>
     <json-editor v-model="value" @change="prettierNewJSON" />

@@ -5,7 +5,7 @@
         动画时长
         <el-slider
           v-model="time"
-          style="width: 300px;"
+          style="width: 300px"
           :min="100"
           :max="3000"
         ></el-slider>
