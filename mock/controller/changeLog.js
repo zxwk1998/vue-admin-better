@@ -166,6 +166,10 @@ const data = [
     content: "重构全局loadding加载代码",
     timestamp: "2020-07-31",
   },
+  {
+    content: "升级stylelint自动排序功能",
+    timestamp: "2020-08-25",
+  },
 ];
 
 module.exports = [
