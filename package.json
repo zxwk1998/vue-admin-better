@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "axios": "^0.20.0",
-    "better-scroll": "^1.15.2",
+    "better-scroll": "^2.0.0",
     "clipboard": "^2.0.6",
     "codemirror": "^5.57.0",
     "core-js": "^3.6.5",
@@ -75,7 +75,7 @@
     "zx-layouts": "^0.6.12",
     "zx-magnifie": "^0.4.0",
     "zx-markdown-editor": "^0.0.2",
-    "zx-player": "^0.9.8",
+    "zx-player": "^1.0.0",
     "zx-quill": "^0.0.2",
     "zx-templates": "^0.0.14",
     "zx-verify": "^0.0.2"
@@ -104,7 +104,7 @@
     "plop": "^2.7.4",
     "prettier": "^2.0.5",
     "sass": "^1.26.10",
-    "sass-loader": "^9.0.3",
+    "sass-loader": "^10.0.1",
     "script-loader": "^0.7.2",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",
