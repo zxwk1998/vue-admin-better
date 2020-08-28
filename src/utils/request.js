@@ -103,7 +103,7 @@ instance.interceptors.response.use(
       ? [...successCode]
       : [...[successCode]];
     // 是否操作正常
-    if (codeVerificationArray.includes(code)) {
+    if (codeVerificationArray.includes(status)) {
       return data;
     } else {
       handleCode(code, msg);
