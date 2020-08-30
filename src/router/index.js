@@ -468,7 +468,7 @@ export const asyncRoutes = [
 ];
 
 const router = new VueRouter({
-  base: routerMode === "history" ? publicPath : "",
+  base: publicPath,
   mode: routerMode,
   scrollBehavior: () => ({
     y: 0,
@@ -485,7 +485,7 @@ VueRouter.prototype.push = function push(location, onResolve, onReject) {
 
 export function resetRouter() {
   router.matcher = new VueRouter({
-    base: routerMode === "history" ? publicPath : "",
+    base: publicPath,
     mode: routerMode,
     scrollBehavior: () => ({
       y: 0,
