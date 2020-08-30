@@ -3,22 +3,23 @@
 <h3>一款基于 vue+element-ui 的绝佳的通用型、中后台前端框架</h3>
 <h3>An excellent general-purpose, middle and background front-end framework based on Vue + element UI</h3>
 </div>
+## vue-admin-beautiful 前端讨论群-1 972435319
+
+不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautiful-template 基础版本和详细的基础使用文档适合框架快速入门
+
+![img](https://gitee.com/chu1204505056/byui-bookmarks/raw/gh-pages/img/ewm.png)
 
 ## 地址
 
 #### - [🚀 演示地址：vue-admin-beautiful](http://beautiful.panm.cn/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
+#### - [🚀🚀🚀 pro 版演示地址](http://beautiful.panm.cn/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+
 #### - [🚀 国内备份地址：vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-#### - [🚀 English backup address:vue-admin-beautiful](https://chuzhixin.github.io/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
-
-#### - [🚀 跨平台演示地址： vue-admin-beautiful](http://www.jq22.com/yanshi23029?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+#### - [🚀🚀🚀 pro 版国内备份地址](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 #### - [🚀 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
-
-#### - [🚀 pro 版演示地址](http://beautiful.panm.cn/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
-
-#### - [🚀 pro 版国内备份地址](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 ## 安装
 
@@ -45,12 +46,6 @@ npm i
 # Start project
 npm run serve
 ```
-
-## vue-admin-beautiful 前端讨论群-1 972435319
-
-不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautiful-template 基础版本和详细的基础使用文档适合框架快速入门
-
-![img](https://gitee.com/chu1204505056/byui-bookmarks/raw/gh-pages/img/ewm.png)
 
 ## 友情链接
 
