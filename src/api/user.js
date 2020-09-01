@@ -1,6 +1,6 @@
 import request from "@/utils/request";
 import { encryptedData } from "@/utils/encrypt";
-import { loginRSA } from "@/config/settings";
+import { loginRSA, tokenName } from "@/config/settings";
 
 export async function login(data) {
   if (loginRSA) {
@@ -18,7 +18,7 @@ export function getUserInfo(accessToken) {
     url: "/userInfo",
     method: "post",
     data: {
-      accessToken,
+      [tokenName]: accessToken,
     },
   });
 }
