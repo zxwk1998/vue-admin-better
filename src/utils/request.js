@@ -44,6 +44,7 @@ const handleCode = (code, msg) => {
     case invalidCode:
       Vue.prototype.$baseMessage(msg || `后端接口${code}异常`, "error");
       store.dispatch("user/resetAccessToken").catch(() => {});
+      location.reload();
       break;
     case noPermissionCode:
       router.push({ path: "/401" }).catch(() => {});
