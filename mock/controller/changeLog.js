@@ -170,6 +170,10 @@ const data = [
     content: "升级stylelint自动排序功能",
     timestamp: "2020-08-25",
   },
+  {
+    content: "修复视频播放器组件重载路由失效的bug",
+    timestamp: "2020-09-03",
+  },
 ];
 
 module.exports = [
