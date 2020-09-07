@@ -24,12 +24,18 @@
               src="https://img.shields.io/github/last-commit/chuzhixin/vue-admin-beautiful?style=flat-square&label=Last Commit&logo=vue.js"
             />
           </a>
+          <a
+            target="_blank"
+            href="https://chu1204505056.gitee.io/vue-admin-beautiful-pro/"
+          >
+            <img
+              style="position: absolute; top: 0; right: 0"
+              src="@/assets/pro.png"
+              alt=""
+              srcset=""
+            />
+          </a>
         </el-alert>
-      </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-        <el-card shadow="never">
-          <center>广告位招商</center>
-        </el-card>
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
         <el-card shadow="never">
