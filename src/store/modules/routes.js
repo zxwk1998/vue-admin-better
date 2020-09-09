@@ -24,13 +24,11 @@ const mutations = {
 };
 const actions = {
   async setRoutes({ commit }, permissions) {
-    //防止污染路由
-    const baseRoutes = [...asyncRoutes];
     let accessedRoutes = [];
     if (permissions.includes("admin")) {
-      accessedRoutes = baseRoutes;
+      accessedRoutes = asyncRoutes;
     } else {
-      accessedRoutes = await filterAsyncRoutes(baseRoutes, permissions);
+      accessedRoutes = await filterAsyncRoutes(asyncRoutes, permissions);
     }
     commit("setRoutes", accessedRoutes);
     return accessedRoutes;
