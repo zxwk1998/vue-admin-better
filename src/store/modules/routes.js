@@ -1,10 +1,10 @@
 /**
- * @author chuzhixin 1204505056@qq.com
+ * @copyright chuzhixin 1204505056@qq.com
  * @description 路由拦截状态管理，目前两种模式：all模式与intelligence模式，其中partialRoutes是菜单暂未使用
  */
 import { asyncRoutes, constantRoutes } from "@/router";
 import { getRouterList } from "@/api/router";
-import { convertRouter, filterRoutes } from "@/utils/routes";
+import { filterAllRoutes, filterAsyncRoutes } from "@/utils/handleRoutes";
 
 const state = { routes: [], partialRoutes: [] };
 const getters = {
@@ -13,46 +13,35 @@ const getters = {
 };
 const mutations = {
   setRoutes(state, routes) {
-    state.routes = routes;
+    state.routes = constantRoutes.concat(routes);
+  },
+  setAllRoutes(state, routes) {
+    state.routes = constantRoutes.concat(routes);
   },
   setPartialRoutes(state, routes) {
-    state.partialRoutes = routes;
+    state.partialRoutes = constantRoutes.concat(routes);
   },
 };
 const actions = {
-  /**
-   * @author chuzhixin 1204505056@qq.com
-   * @description intelligence模式设置路由
-   * @param {*} { commit }
-   * @returns
-   */
-  async setRoutes({ commit }) {
-    const finallyRoutes = filterRoutes([...constantRoutes, ...asyncRoutes]);
-    commit("setRoutes", finallyRoutes);
-    return [...asyncRoutes];
+  async setRoutes({ commit }, permissions) {
+    //开源版只过滤动态路由permissions，admin不再默认拥有全部权限
+    const finallyAsyncRoutes = await filterAsyncRoutes(
+      [...asyncRoutes],
+      permissions
+    );
+    commit("setRoutes", finallyAsyncRoutes);
+    return finallyAsyncRoutes;
   },
-  /**
-   * @author chuzhixin 1204505056@qq.com
-   * @description all模式设置路由
-   * @param {*} { commit }
-   * @returns
-   */
   async setAllRoutes({ commit }) {
     let { data } = await getRouterList();
-    if (data[data.length - 1].path !== "*")
-      data.push({ path: "*", redirect: "/404", hidden: true });
-    const finallyRoutes = filterRoutes(convertRouter(data));
-    commit("setRoutes", finallyRoutes);
-    return finallyRoutes;
+    data.push({ path: "*", redirect: "/404", hidden: true });
+    let accessRoutes = filterAllRoutes(data);
+    commit("setAllRoutes", accessRoutes);
+    return accessRoutes;
   },
-  /**
-   * @author chuzhixin 1204505056@qq.com
-   * @description 画廊布局、综合布局设置路由
-   * @param {*} { commit }
-   * @param accessedRoutes 画廊布局、综合布局设置路由
-   */
-  setPartialRoutes({ commit }, accessedRoutes) {
-    commit("setPartialRoutes", accessedRoutes);
+  setPartialRoutes({ commit }, accessRoutes) {
+    commit("setPartialRoutes", accessRoutes);
+    return accessRoutes;
   },
 };
 export default { state, getters, mutations, actions };
