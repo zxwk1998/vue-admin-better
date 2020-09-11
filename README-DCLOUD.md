@@ -43,4 +43,3 @@ cnpm run serve
 #### 开发者评级
 
 [![chuzhixin's github stats](https://github-readme-stats.vercel.app/api?username=chuzhixin)](https://github.com/chuzhixin/vue-admin-beautiful)
-<font color="#fff">

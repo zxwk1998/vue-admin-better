@@ -24,7 +24,7 @@
               src="https://img.shields.io/github/last-commit/chuzhixin/vue-admin-beautiful?style=flat-square&label=Last Commit&logo=vue.js"
             />
           </a>
-          <a
+          <!--  <a
             target="_blank"
             href="https://chu1204505056.gitee.io/vue-admin-beautiful-pro/"
           >
@@ -34,7 +34,7 @@
               alt=""
               srcset=""
             />
-          </a>
+          </a> -->
         </el-alert>
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
