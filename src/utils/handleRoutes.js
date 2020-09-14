@@ -22,7 +22,7 @@ export function filterAllRoutes(constantRoutes) {
         } else if (new RegExp("^/.*$").test(route.component)) {
           path = "views" + route.component;
         } else if (new RegExp("^@views/.*$").test(route.component)) {
-          path = route.component.str.slice(2);
+          path = route.component.slice(1);
         } else {
           path = "views/" + route.component;
         }
