@@ -174,6 +174,10 @@ const data = [
     content: "修复视频播放器组件重载路由失效的bug",
     timestamp: "2020-09-03",
   },
+  {
+    content: "修复极个别情况image-loader打包报错",
+    timestamp: "2020-09-18",
+  },
 ];
 
 module.exports = [
