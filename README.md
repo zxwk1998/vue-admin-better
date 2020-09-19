@@ -1,8 +1,13 @@
+#
+
 <div align="center"><img width="200" src="https://gitee.com/chu1204505056/vue-admin-beautiful/raw/master/src/colorfulIcon/svg/vab.svg"/>
 <h1> vue-admin-beautiful </h1>
 <h3>一款基于 vue+element-ui 的绝佳的通用型、中后台前端框架</h3>
 <h3>An excellent general-purpose, middle and background front-end framework based on Vue + element UI</h3>
 </div>
+
+![image](https://repository-images.githubusercontent.com/249342059/8ff9d000-bef5-11ea-837f-8c265b79e3db)
+
 ## vue-admin-beautiful 前端讨论群-1 972435319
 
 不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautiful-template 基础版本和详细的基础使用文档适合框架快速入门
@@ -11,20 +16,22 @@
 
 ## 地址
 
-#### - [🚀🚀🚀 演示地址：vue-admin-beautiful](http://beautiful.panm.cn/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+### - [🎉 演示地址 1：vue-admin-beautiful](http://beautiful.panm.cn/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-#### - [🚀🚀🚀 国内备份地址：vue-admin-beautiful：vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+### - [🎉 演示地址 2：vue-admin-beautiful：vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-#### - [🚀🚀🚀 pro 版演示地址：vue-admin-beautiful-pro](http://beautiful.panm.cn/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+### - [🚀 pro 版演示地址 1：vue-admin-beautiful-pro](http://beautiful.panm.cn/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-#### - [🚀🚀🚀 pro 版国内备份地址：vue-admin-beautiful-pro](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+### - [🚀 pro 版演示地址 2：vue-admin-beautiful-pro](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-#### - [🚀🚀🚀 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+### - [🌐 github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+
+### - [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 ## 效果图
 
-![](https://oscimg.oschina.net/oscnet/up-0d098308d834f605c459b770676027b4332.png)
-![](https://oscimg.oschina.net/oscnet/up-c9bca3359fd7bff40ef41d3a34d0a954643.png)
+![image](https://oscimg.oschina.net/oscnet/up-0d098308d834f605c459b770676027b4332.png)
+![image](https://oscimg.oschina.net/oscnet/up-c9bca3359fd7bff40ef41d3a34d0a954643.png)
 
 ## 安装
 
@@ -54,13 +61,13 @@ npm run serve
 
 ## 友情链接
 
-#### - [uView 文档（超棒的移动跨端框架，文档详细，上手容易）](https://uviewui.com/)
+### - [uView 文档（超棒的移动跨端框架，文档详细，上手容易）](https://uviewui.com/)
 
-#### - [umyui 文档（开发者准备的基于 Vue 2.0 的桌面端组件库; 流畅渲染表格万级数据）](http://www.umyui.com/)
+### - [Element UI 表单设计及代码生成器（可视化表单设计器，一键生成 element 表单）](https://github.com/JakHuang/form-generator/)
 
-#### - [Element UI 表单设计及代码生成器（可视化表单设计器，一键生成 element 表单）](https://github.com/JakHuang/form-generator/)
+### - [luch-request（基于 Promise 开发的 uni-app 跨平台、项目级别的请求库，它有更小的体积，易用的 api，方便简单的自定义能力）](https://www.quanzhan.co/luch-request/)
 
-#### - [luch-request（基于 Promise 开发的 uni-app 跨平台、项目级别的请求库，它有更小的体积，易用的 api，方便简单的自定义能力）](https://www.quanzhan.co/luch-request/)
+### - [umyui 文档（开发者准备的基于 Vue 2.0 的桌面端组件库; 流畅渲染表格万级数据）](http://www.umyui.com/)
 
 ## setting.js 配置
 
