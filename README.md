@@ -28,11 +28,6 @@
 
 ### - [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-## 效果图
-
-![image](https://oscimg.oschina.net/oscnet/up-0d098308d834f605c459b770676027b4332.png)
-![image](https://oscimg.oschina.net/oscnet/up-c9bca3359fd7bff40ef41d3a34d0a954643.png)
-
 ## 安装
 
 ```bash
