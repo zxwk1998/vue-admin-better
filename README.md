@@ -14,6 +14,8 @@
 
 ![img](https://gitee.com/chu1204505056/byui-bookmarks/raw/gh-pages/img/ewm.png)
 
+## 🎉🎉🎉 基于 vue3.0 + ant design 的 vue-admin-beautiful-mini 正在快马加鞭的开发，敬请期待！！！
+
 ## 地址
 
 ### - [🎉 演示地址 1：vue-admin-beautiful](http://beautiful.panm.cn/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
