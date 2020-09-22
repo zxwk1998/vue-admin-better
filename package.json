@@ -1,7 +1,7 @@
 {
   "name": "vue-admin-beautiful",
   "version": "1.0.0",
-  "author": "chuzhixin",
+  "author": "chuzhixin 1204505056@qq.com",
   "participants": [],
   "homepage": "https://chu1204505056.gitee.io/vue-admin-beautiful",
   "publishConfig": {
@@ -70,7 +70,7 @@
     "vuex": "^3.5.1",
     "zx-comparison": "^1.0.3",
     "zx-count": "^0.3.7",
-    "zx-icon": "^1.1.8",
+    "zx-icon": "^1.1.9",
     "zx-keel": "^0.9.4",
     "zx-layouts": "^0.6.13",
     "zx-magnifie": "^0.4.0",
