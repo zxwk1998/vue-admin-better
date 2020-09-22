@@ -45,7 +45,7 @@
     "axios": "^0.20.0",
     "better-scroll": "^2.0.4",
     "clipboard": "^2.0.6",
-    "codemirror": "^5.57.0",
+    "codemirror": "^5.58.0",
     "core-js": "^3.6.5",
     "dayjs": "^1.8.36",
     "echarts": "^4.9.0",
