@@ -178,6 +178,10 @@ const data = [
     content: "修复极个别情况image-loader打包报错",
     timestamp: "2020-09-18",
   },
+  {
+    content: "全网首个基于vue3.0开发的admin框架已发布，具体请访问github",
+    timestamp: "2020-09-22",
+  },
 ];
 
 module.exports = [
