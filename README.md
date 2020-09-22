@@ -30,7 +30,7 @@
 
 ### - [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-### - [🌐 vue3.0 版本研发进度展示](https://chu1204505056.gitee.io/vue-admin-beautiful-mini/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+### - [🌐 vue3.0 版本研发进度展示（基础版本已全部贯通、适配电脑、手机、平板）](https://chu1204505056.gitee.io/vue-admin-beautiful-mini/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 ## 安装
 
