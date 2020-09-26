@@ -12,7 +12,7 @@
 
 不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautiful-template 基础版本和详细的基础使用文档适合框架快速入门
 
-![img](https://gitee.com/chu1204505056/byui-bookmarks/raw/gh-pages/img/ewm.png)
+![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm.png)
 
 ## 🎉🎉🎉 基于 vue3.0 的 vue-admin-beautiful-mini 正在快马加鞭的开发，敬请期待！！！
 
@@ -300,7 +300,7 @@ Vue.use(ElementUI, {
 
 ## 捐赠
 
-![img](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
+![img](https://chu1204505056.gitee.io/vabBooks/img/donation.png)
 
 #### github 标星增长量统计
 
@@ -318,4 +318,4 @@ Vue.use(ElementUI, {
 
 不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautiful-template 基础版本和详细的基础使用文档适合框架快速入门
 
-![img](https://gitee.com/chu1204505056/byui-bookmarks/raw/gh-pages/img/ewm_2.png)
+![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm_2.png)

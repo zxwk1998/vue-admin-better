@@ -1,7 +1,6 @@
 const data = [
   {
-    title:
-      "认认真真编程，踏踏实实做人；静坐常思己过，闲谈不论人非；希望使用vue-admin-beautiful框架的每个人，无论过程怎样，结局都是美好的。。。",
+    title: "究竟是什么样的终点，才配得上这一路的颠沛流离。。。",
     closable: false,
     type: "success",
   },
