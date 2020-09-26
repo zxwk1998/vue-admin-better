@@ -65,7 +65,7 @@
     "vue-amap": "^0.5.10",
     "vue-echarts": "^5.0.0-beta.0",
     "vue-qart": "^2.2.0",
-    "vue-router": "^3.4.3",
+    "vue-router": "^3.4.4",
     "vuedraggable": "^2.24.1",
     "vuex": "^3.5.1",
     "zx-comparison": "^1.0.3",
@@ -77,7 +77,7 @@
     "zx-markdown-editor": "^0.0.2",
     "zx-player": "^1.0.1",
     "zx-quill": "^0.0.2",
-    "zx-templates": "^0.0.21",
+    "zx-templates": "^0.0.22",
     "zx-verify": "^0.0.2"
   },
   "devDependencies": {
@@ -106,7 +106,7 @@
     "sass": "^1.26.11",
     "sass-loader": "^10.0.2",
     "script-loader": "^0.7.2",
-    "stylelint": "^13.7.1",
+    "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recess-order": "^2.1.0",
     "svg-sprite-loader": "^5.0.0",
