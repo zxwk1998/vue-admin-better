@@ -1,0 +1,51 @@
+.inner-circles-loader:not(:required) {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: rgba(25, 165, 152, 0.5);
+  border-radius: 50%;
+  transform: translate3d(0, 0, 0);
+}
+
+.inner-circles-loader:not(:required)::before,
+.inner-circles-loader:not(:required)::after {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  content: "";
+  border-radius: 50%;
+}
+
+.inner-circles-loader:not(:required)::before {
+  left: 0;
+  background: #c7efcf;
+  transform-origin: 0 50%;
+  animation: inner-circles-loader 3s infinite;
+}
+
+.inner-circles-loader:not(:required)::after {
+  right: 0;
+  background: #eef5db;
+  transform-origin: 100% 50%;
+  animation: inner-circles-loader 3s 0.2s reverse infinite;
+}
+
+@keyframes inner-circles-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

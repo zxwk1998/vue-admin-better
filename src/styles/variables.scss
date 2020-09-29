@@ -1,0 +1,82 @@
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description 全局主题变量配置，VIP文档内提供多种好看的配色方案（ant-design风格、layui风格、iview风格），请查看VIP文档主题配置篇
+ */
+/* stylelint-disable */
+@charset "utf-8";
+//框架默认主题色
+$base-color-default: #1890ff;
+//默认层级
+$base-z-index: 999;
+//横向布局纵向布局时菜单背景色
+$base-menu-background: #001529;
+//菜单文字颜色
+$base-menu-color: hsla(0, 0%, 100%, 0.95);
+//菜单选中文字颜色
+$base-menu-color-active: hsla(0, 0%, 100%, 0.95);
+//菜单选中背景色
+$base-menu-background-active: $base-color-default;
+//标题颜色
+$base-title-color: #fff;
+//字体大小配置
+$base-font-size-small: 12px;
+$base-font-size-default: 14px;
+$base-font-size-big: 16px;
+$base-font-size-bigger: 18px;
+$base-font-size-max: 22px;
+$base-font-color: #606266;
+$base-color-blue: $base-color-default;
+$base-color-green: #13ce66;
+$base-color-white: #fff;
+$base-color-black: #000;
+$base-color-yellow: #ffba00;
+$base-color-orange: #ff6700;
+$base-color-red: #ff4d4f;
+$base-color-gray: rgba(0, 0, 0, 0.65);
+$base-main-width: 1279px;
+$base-border-radius: 2px;
+$base-border-color: #dcdfe6;
+//输入框高度
+$base-input-height: 32px;
+//默认paddiing
+$base-padding: 20px;
+//默认阴影
+$base-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+//横向布局时top-bar、logo、一级菜单的高度
+$base-top-bar-height: 65px;
+//纵向布局时logo的高度
+$base-logo-height: 75px;
+//顶部nav-bar的高度
+$base-nav-bar-height: 60px;
+//顶部多标签页tags-bar的高度
+$base-tags-bar-height: 55px;
+//顶部多标签页tags-bar中每一个item的高度
+$base-tag-item-height: 34px;
+//菜单li标签的高度
+$base-menu-item-height: 50px;
+//app-main的高度
+$base-app-main-height: calc(
+  100vh - #{$base-nav-bar-height} - #{$base-tags-bar-height} - #{$base-padding} -
+  #{$base-padding} - 55px - 30px
+);
+//纵向布局时左侧导航未折叠时的宽度
+$base-left-menu-width: 256px;
+//纵向布局时左侧导航未折叠时右侧内容的宽度
+$base-right-content-width: calc(100% - #{$base-left-menu-width});
+//纵向布局时左侧导航已折叠时的宽度
+$base-left-menu-width-min: 65px;
+//纵向布局时左侧导航已折叠时右侧内容的宽度
+$base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
+//默认动画
+$base-transition: all 0.2s;
+//默认动画时长
+$base-transition-time: 0.2s;
+
+:export {
+  //菜单文字颜色变量导出
+  menu-color: $base-menu-color;
+  //菜单选中文字颜色变量导出
+  menu-color-active: $base-menu-color-active;
+  //菜单背景色变量导出
+  menu-background: $base-menu-background;
+}

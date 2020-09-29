@@ -1,0 +1,21 @@
+/**
+ * @copyright chuzhixin 1204505056@qq.com
+ * @description vue过渡动画
+ */
+
+@charset "utf-8";
+
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: $base-transition;
+}
+
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
