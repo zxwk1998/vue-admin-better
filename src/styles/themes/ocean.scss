@@ -2,3 +2,97 @@
  * @copyright chuzhixin 1204505056@qq.com
  * @description 海洋之心主题（VIP群专享）
  */
+@charset "utf-8";
+
+.vue-admin-beautiful-theme-ocean {
+  $base-menu-background: #0366d6;
+  $base-menu-background-active: #0054b3;
+  $base-color-blue: #0366d6;
+
+  @mixin container {
+    background: $base-menu-background !important;
+  }
+
+  @mixin active {
+    &:hover {
+      background-color: $base-menu-background-active !important;
+    }
+
+    &.is-active {
+      background-color: $base-menu-background-active !important;
+    }
+  }
+
+  .logo-container-horizontal {
+    @include container;
+  }
+
+  .logo-container-vertical {
+    @include container;
+  }
+
+  .el-menu {
+    @include container;
+
+    .el-submenu__title {
+      @include container;
+    }
+
+    .el-menu-item {
+      @include container;
+    }
+  }
+
+  .side-bar-container {
+    @include container;
+
+    .el-menu-item {
+      @include active;
+    }
+  }
+
+  .top-bar-container {
+    @include container;
+
+    .vab-main {
+      @include container;
+
+      .el-menu {
+        &--horizontal {
+          .el-submenu,
+          .el-menu-item {
+            &.is-active {
+              background-color: $base-menu-background-active !important;
+            }
+          }
+
+          > .el-menu-item {
+            &.is-active {
+              border-bottom: 3px solid $base-menu-background-active !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tags-bar-container {
+    background: $base-color-white;
+    border-top: 1px solid #f6f6f6;
+
+    .tags-content {
+      .el-tabs__header {
+        .el-tabs__item {
+          &.is-active {
+            background: $base-color-blue !important;
+            border: 1px solid $base-color-blue !important;
+          }
+        }
+      }
+    }
+  }
+
+  .theme-bar-setting {
+    background: $base-color-blue !important;
+  }
+}

@@ -9,7 +9,7 @@ $base-color-default: #1890ff;
 //默认层级
 $base-z-index: 999;
 //横向布局纵向布局时菜单背景色
-$base-menu-background: #001529;
+$base-menu-background: rgb(40, 44, 52);
 //菜单文字颜色
 $base-menu-color: hsla(0, 0%, 100%, 0.95);
 //菜单选中文字颜色
@@ -57,10 +57,10 @@ $base-menu-item-height: 50px;
 //app-main的高度
 $base-app-main-height: calc(
   100vh - #{$base-nav-bar-height} - #{$base-tags-bar-height} - #{$base-padding} -
-  #{$base-padding} - 55px - 30px
+    #{$base-padding} - 55px - 30px
 );
 //纵向布局时左侧导航未折叠时的宽度
-$base-left-menu-width: 256px;
+$base-left-menu-width: 240px;
 //纵向布局时左侧导航未折叠时右侧内容的宽度
 $base-right-content-width: calc(100% - #{$base-left-menu-width});
 //纵向布局时左侧导航已折叠时的宽度
