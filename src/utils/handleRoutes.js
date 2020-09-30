@@ -4,8 +4,8 @@
  * @param constantRoutes
  * @returns {*}
  */
-export function filterAllRoutes(constantRoutes) {
-  return constantRoutes.filter((route) => {
+export function convertRouter(asyncRoutes) {
+  return asyncRoutes.map((route) => {
     if (route.component) {
       if (route.component === "Layout") {
         route.component = (resolve) => require(["@/layouts"], resolve);
@@ -13,29 +13,16 @@ export function filterAllRoutes(constantRoutes) {
         route.component = (resolve) =>
           require(["@/layouts/EmptyLayout"], resolve);
       } else {
-        let path = "views/" + route.component;
-        if (
-          new RegExp("^/views/.*$").test(route.component) ||
-          new RegExp("^views/.*$").test(route.component)
-        ) {
-          path = route.component;
-        } else if (new RegExp("^/.*$").test(route.component)) {
-          path = "views" + route.component;
-        } else if (new RegExp("^@views/.*$").test(route.component)) {
-          path = route.component.slice(1);
-        } else {
-          path = "views/" + route.component;
-        }
+        const index = route.component.indexOf("views");
+        const path =
+          index > 0 ? route.component.slice(index) : `views/${route.component}`;
         route.component = (resolve) => require([`@/${path}`], resolve);
       }
     }
-    if (route.children && route.children.length) {
-      route.children = filterAllRoutes(route.children);
-    }
-    if (route.children && route.children.length === 0) {
-      delete route.children;
-    }
-    return true;
+    if (route.children && route.children.length)
+      route.children = convertRouter(route.children);
+    if (route.children && route.children.length === 0) delete route.children;
+    return route;
   });
 }
 
