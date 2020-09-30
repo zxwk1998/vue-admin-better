@@ -182,6 +182,10 @@ const data = [
     content: "全网首个基于vue3.0开发的admin框架已发布，具体请访问github",
     timestamp: "2020-09-22",
   },
+  {
+    content: "完善路由后端渲染方案，弃用之前写法",
+    timestamp: "2020-09-30",
+  },
 ];
 
 module.exports = [
