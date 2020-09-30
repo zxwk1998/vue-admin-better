@@ -233,14 +233,7 @@
           </el-card>
         </router-link>
       </el-col>
-      <el-col
-        v-if="nodeEnv !== 'development'"
-        :xs="24"
-        :sm="24"
-        :md="12"
-        :lg="12"
-        :xl="12"
-      >
+      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <el-card class="card" shadow="never">
           <div slot="header">
             <span>更新日志</span>
@@ -257,14 +250,7 @@
           </el-timeline>
         </el-card>
       </el-col>
-      <el-col
-        v-if="nodeEnv !== 'development'"
-        :xs="24"
-        :sm="24"
-        :md="12"
-        :lg="12"
-        :xl="12"
-      >
+      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <el-card shadow="never">
           <div slot="header">
             <span>其他信息</span>
