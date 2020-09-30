@@ -41,10 +41,10 @@
     mounted() {},
     methods: {
       clickBig() {
-        this.$emit("clickBig");
+        this.$emit("click-big");
       },
       clickSmall() {
-        this.$emit("clickSmall");
+        this.$emit("click-small");
       },
     },
   };

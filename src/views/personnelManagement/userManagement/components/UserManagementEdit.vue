@@ -83,7 +83,7 @@
           if (valid) {
             const { msg } = await doEdit(this.form);
             this.$baseMessage(msg, "success");
-            this.$emit("fetchData");
+            this.$emit("fetch-data");
             this.close();
           } else {
             return false;

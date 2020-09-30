@@ -98,7 +98,7 @@ const data = [
     timestamp: "2020-05-16",
   },
   {
-    content: "又被人骂了 挺好的 让我下定决心重写了tagsBar",
+    content: "又被人骂了 挺好的 让我下定决心重写了tabsBar",
     timestamp: "2020-05-20",
   },
   {
@@ -122,7 +122,7 @@ const data = [
     timestamp: "2020-06-19",
   },
   {
-    content: "彻底完成了tagsbar多标签页的重构",
+    content: "彻底完成了tabsBar多标签页的重构",
     timestamp: "2020-06-22",
   },
   {
@@ -184,6 +184,10 @@ const data = [
   },
   {
     content: "完善路由后端渲染方案，弃用之前写法",
+    timestamp: "2020-09-30",
+  },
+  {
+    content: "大版本迭代，请关注github tag",
     timestamp: "2020-09-30",
   },
 ];

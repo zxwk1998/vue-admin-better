@@ -5,17 +5,17 @@
       class="layout-container-horizontal"
       :class="{
         fixed: header === 'fixed',
-        'no-tags-bar': tagsBar === 'false' || tagsBar === false,
+        'no-tabs-bar': tabsBar === 'false' || tabsBar === false,
       }"
     >
       <div :class="header === 'fixed' ? 'fixed-header' : ''">
         <top-bar></top-bar>
         <div
-          v-if="tagsBar === 'true' || tagsBar === true"
-          :class="{ 'tag-view-show': tagsBar }"
+          v-if="tabsBar === 'true' || tabsBar === true"
+          :class="{ 'tag-view-show': tabsBar }"
         >
           <div class="vab-main">
-            <tags-bar></tags-bar>
+            <tabs-bar></tabs-bar>
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@
       class="layout-container-vertical"
       :class="{
         fixed: header === 'fixed',
-        'no-tags-bar': tagsBar === 'false' || tagsBar === false,
+        'no-tabs-bar': tabsBar === 'false' || tabsBar === false,
       }"
     >
       <div
@@ -41,7 +41,7 @@
       <div class="vab-main" :class="collapse ? 'is-collapse-main' : ''">
         <div :class="header === 'fixed' ? 'fixed-header' : ''">
           <nav-bar></nav-bar>
-          <tags-bar v-if="tagsBar === 'true' || tagsBar === true" />
+          <tabs-bar v-if="tabsBar === 'true' || tabsBar === true" />
         </div>
         <ad></ad>
         <app-main></app-main>
@@ -52,7 +52,7 @@
 </template>
 
 <script>
-  import { Ad, AppMain, NavBar, SideBar, TagsBar, TopBar } from "./components";
+  import { Ad, AppMain, NavBar, SideBar, TabsBar, TopBar } from "./components";
   import { mapActions, mapGetters } from "vuex";
   import { tokenName } from "@/config/settings";
   export default {
@@ -63,7 +63,7 @@
       NavBar,
       SideBar,
       AppMain,
-      TagsBar,
+      TabsBar,
     },
     data() {
       return { oldLayout: "" };
@@ -71,7 +71,7 @@
     computed: {
       ...mapGetters({
         layout: "settings/layout",
-        tagsBar: "settings/tagsBar",
+        tabsBar: "settings/tabsBar",
         collapse: "settings/collapse",
         header: "settings/header",
         device: "settings/device",
@@ -170,10 +170,10 @@
       position: relative;
 
       &.fixed {
-        padding-top: calc(#{$base-top-bar-height} + #{$base-tags-bar-height});
+        padding-top: calc(#{$base-top-bar-height} + #{$base-tabs-bar-height});
       }
 
-      &.fixed.no-tags-bar {
+      &.fixed.no-tabs-bar {
         padding-top: $base-top-bar-height;
       }
 
@@ -226,10 +226,10 @@
       }
 
       &.fixed {
-        padding-top: calc(#{$base-nav-bar-height} + #{$base-tags-bar-height});
+        padding-top: calc(#{$base-nav-bar-height} + #{$base-tabs-bar-height});
       }
 
-      &.fixed.no-tags-bar {
+      &.fixed.no-tabs-bar {
         padding-top: $base-nav-bar-height;
       }
 
@@ -255,7 +255,7 @@
             box-sizing: border-box;
           }
 
-          .tags-bar-container {
+          .tabs-bar-container {
             box-sizing: border-box;
           }
 

@@ -5,11 +5,11 @@
 
 import defaultSettings from "@/config/settings";
 
-const { tagsBar, logo, layout, header, themeBar, skeleton } = defaultSettings;
+const { tabsBar, logo, layout, header, themeBar, skeleton } = defaultSettings;
 const theme =
   JSON.parse(localStorage.getItem("vue-admin-beautiful-theme")) || "";
 const state = {
-  tagsBar: theme.tagsBar || tagsBar,
+  tabsBar: theme.tabsBar || tabsBar,
   logo,
   collapse: false,
   layout: theme.layout || layout,
@@ -24,7 +24,7 @@ const getters = {
   header: (state) => state.header,
   layout: (state) => state.layout,
   logo: (state) => state.logo,
-  tagsBar: (state) => state.tagsBar,
+  tabsBar: (state) => state.tabsBar,
   themeBar: (state) => state.themeBar,
   skeleton: (state) => state.skeleton,
 };
@@ -35,8 +35,8 @@ const mutations = {
   changeHeader: (state, header) => {
     if (header) state.header = header;
   },
-  changeTagsBar: (state, tagsBar) => {
-    if (tagsBar) state.tagsBar = tagsBar;
+  changeTabsBar: (state, tabsBar) => {
+    if (tabsBar) state.tabsBar = tabsBar;
   },
   changeCollapse: (state) => {
     state.collapse = !state.collapse;
@@ -58,8 +58,8 @@ const actions = {
   changeHeader({ commit }, header) {
     commit("changeHeader", header);
   },
-  changeTagsBar({ commit }, tagsBar) {
-    commit("changeTagsBar", tagsBar);
+  changeTabsBar({ commit }, tabsBar) {
+    commit("changeTabsBar", tabsBar);
   },
   changeCollapse({ commit }) {
     commit("changeCollapse");

@@ -59,7 +59,7 @@ module.exports = {
   //是否开启主题配置按钮
   themeBar: true,
   //是否显示多标签页
-  tagsBar: true,
+  tabsBar: true,
   //是否显示骨架屏
   skeleton: false,
   //配后端数据的接收方式application/json;charset=UTF-8或者application/x-www-form-urlencoded;charset=UTF-8

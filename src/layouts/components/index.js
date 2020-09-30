@@ -11,7 +11,7 @@ export { default as Logo } from "zx-layouts/Logo";
 export { default as Avatar } from "zx-layouts/Avatar";
 export { default as Ad } from "./Ad";
 export { default as AppMain } from "zx-layouts/AppMain";
-export { default as TagsBar } from "zx-layouts/TagsBar";
+export { default as TabsBar } from "zx-layouts/TabsBar";
 export { default as SideBar } from "zx-layouts/SideBar";
 export { default as Breadcrumb } from "zx-layouts/Breadcrumb";
 export { default as FullScreenBar } from "zx-layouts/FullScreenBar";

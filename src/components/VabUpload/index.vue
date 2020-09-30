@@ -161,7 +161,7 @@
         this.imgSuccessNum = this.imgSuccessNum + 1;
         if (fileList.length === this.imgNum) {
           setTimeout(() => {
-            this.$emit("fetchDatas");
+            this.$emit("fetch-datas");
             this.$baseMessage(
               `上传完成! 共上传${fileList.length}张图片`,
               "success"

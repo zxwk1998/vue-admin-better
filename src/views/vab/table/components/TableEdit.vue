@@ -54,7 +54,7 @@
         this.$refs["form"].resetFields();
         this.form = this.$options.data().form;
         this.dialogFormVisible = false;
-        this.$emit("fetchData");
+        this.$emit("fetch-data");
       },
       save() {
         this.$refs["form"].validate(async (valid) => {
@@ -63,7 +63,7 @@
             this.$baseMessage(msg, "success");
             this.$refs["form"].resetFields();
             this.dialogFormVisible = false;
-            this.$emit("fetchData");
+            this.$emit("fetch-data");
             this.form = this.$options.data().form;
           } else {
             return false;

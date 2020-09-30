@@ -51,7 +51,7 @@
       ></el-table-column>
 
       <el-table-column show-overflow-tooltip label="权限">
-        <template v-slot="{ row }">
+        <template #default="{ row }">
           <el-tag v-for="(item, index) in row.permissions" :key="index">
             {{ item }}
           </el-tag>
@@ -69,7 +69,7 @@
         label="操作"
         width="200"
       >
-        <template v-slot="scope">
+        <template #default="scope">
           <el-button type="text" @click="handleEdit(scope.row)">编辑</el-button>
           <el-button type="text" @click="handleDelete(scope.row)">
             删除
@@ -86,7 +86,7 @@
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
     ></el-pagination>
-    <edit ref="edit" @fetchData="fetchData"></edit>
+    <edit ref="edit" @fetch-data="fetchData"></edit>
   </div>
 </template>
 
