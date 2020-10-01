@@ -315,12 +315,6 @@ export const asyncRoutes = [
         },
       },
       {
-        path: "qrCode",
-        name: "QrCode",
-        component: () => import("@/views/vab/qrCode/index"),
-        meta: { title: "二维码", permissions: ["admin"] },
-      },
-      {
         path: "backToTop",
         name: "BackToTop",
         component: () => import("@/views/vab/backToTop/index"),
@@ -356,12 +350,6 @@ export const asyncRoutes = [
         name: "Upload",
         component: () => import("@/views/vab/upload/index"),
         meta: { title: "上传", permissions: ["admin"] },
-      },
-      {
-        path: "sticky",
-        name: "Sticky",
-        component: () => import("@/views/vab/sticky/index"),
-        meta: { title: "sticky吸附", permissions: ["admin"] },
       },
       {
         path: "log",

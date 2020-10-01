@@ -57,7 +57,6 @@
     "screenfull": "^5.0.2",
     "vue": "^2.6.12",
     "vue-echarts": "^5.0.0-beta.0",
-    "vue-qart": "^2.2.0",
     "vue-router": "^3.4.5",
     "vuex": "^3.5.1",
     "zx-comparison": "^1.0.3",
