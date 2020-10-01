@@ -75,7 +75,7 @@ module.exports = {
   //无权限code
   noPermissionCode: 401,
   //是否显示在页面高亮错误
-  errorLog: ["development", "test", "production"],
+  errorLog: ["development"],
   //是否开启登录拦截
   loginInterception: true,
   //是否开启登录RSA加密
