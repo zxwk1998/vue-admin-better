@@ -30,25 +30,25 @@
 
 - [uView 文档（超棒的移动跨端框架，文档详细，上手容易）](https://uviewui.com/)
 
-- [uView 开源地址（uView UI，是 uni-app 生态优秀的 UI 框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水）](https://github.com/YanxinNet/uView/)
+- [uView 开源地址（uni-app 生态优秀的 UI 框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水）](https://github.com/YanxinNet/uView/)
 
 - [Element UI 表单设计及代码生成器（可视化表单设计器，一键生成 element 表单）](https://github.com/JakHuang/form-generator/)
 
-- [luch-request（基于 Promise 开发的 uni-app 跨平台、项目级别的请求库，它有更小的体积，易用的 api，方便简单的自定义能力）](https://www.quanzhan.co/luch-request/)
+- [luch-request（基于 Promise 开发的 uni-app 跨平台、项目级别的请求库）](https://www.quanzhan.co/luch-request/)
 
 - [umyui 文档（开发者准备的基于 Vue 2.0 的桌面端组件库; 流畅渲染表格万级数据）](http://www.umyui.com/)
 
 ## 鸣谢
 
-| Project | 
-|------------------------------------------------------ |
-| [vue](https://github.com/vuejs/vue) |
-| [element-ui](https://github.com/ElemeFE/element) |
-| [ant-design-vue](https://github.com/vueComponent/ant-design-vue) |
-| [mock](https://github.com/nuysoft/Mock) |
-| [axios](https://github.com/axios/axios) |
+| Project                                                              |
+| -------------------------------------------------------------------- |
+| [vue](https://github.com/vuejs/vue)                                  |
+| [element-ui](https://github.com/ElemeFE/element)                     |
+| [ant-design-vue](https://github.com/vueComponent/ant-design-vue)     |
+| [mock](https://github.com/nuysoft/Mock)                              |
+| [axios](https://github.com/axios/axios)                              |
 | [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) |
-| [iview-admin](https://github.com/iview/iview-admin) |
+| [iview-admin](https://github.com/iview/iview-admin)                  |
 
 ## 框架杰出贡献者（排名不分先后）
 
