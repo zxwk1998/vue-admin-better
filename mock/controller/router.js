@@ -167,16 +167,6 @@ const data = [
         component: "@/views/vab/card/index",
         meta: { title: "卡片", permissions: ["admin"] },
       },
-
-      {
-        path: "betterScroll",
-        name: "BetterScroll",
-        component: "@/views/vab/betterScroll/index",
-        meta: {
-          title: "滚动侦测",
-          permissions: ["admin"],
-        },
-      },
       {
         path: "verify",
         name: "Verify",
@@ -271,12 +261,6 @@ const data = [
         name: "ImgComparison",
         component: "@/views/vab/imgComparison/index",
         meta: { title: "图像拖拽比对", permissions: ["admin"] },
-      },
-      {
-        path: "codeGenerator",
-        name: "CodeGenerator",
-        component: "@/views/vab/codeGenerator/index",
-        meta: { title: "代码生成机", permissions: ["admin"] },
       },
       {
         path: "markdown",

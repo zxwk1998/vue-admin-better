@@ -109,9 +109,6 @@
           </el-table-column>
         </el-table>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
-        <json-editor :value="res"></json-editor>
-      </el-col>
     </el-row>
   </div>
 </template>
@@ -120,13 +117,9 @@
   import { mapGetters } from "vuex";
   import { tokenTableName } from "@/config/settings";
   import { getRouterList } from "@/api/router";
-  import JsonEditor from "@/components/JsonEditor";
 
   export default {
     name: "Permissions",
-    components: {
-      JsonEditor,
-    },
     data() {
       return {
         form: {
