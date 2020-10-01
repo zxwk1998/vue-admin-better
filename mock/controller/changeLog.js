@@ -190,6 +190,11 @@ const data = [
     content: "大版本迭代，请关注github tag",
     timestamp: "2020-09-30",
   },
+  {
+    content:
+      "面对自称加拿大华人的捕蛇者说作者laike9m的发帖诋毁，和人身攻击，本想去知乎找他理论，可奈何他的知乎已经由于经常发布错误言论被官方封号了https://www.zhihu.com/people/laike9m，既然自己都不是中国人了，就不要妄加揣测国产的开源项目了，一切都交给时间吧",
+    timestamp: "2020-10-01",
+  },
 ];
 
 module.exports = [
