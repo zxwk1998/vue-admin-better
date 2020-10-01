@@ -31,7 +31,7 @@ module.exports = {
   //是否显示页面底部版权信息，建议您显示，当然您也可以选择不显示，不管您是付费用户还是未付费用户您都有选择显示或者不显示的权利
   footerCopyright: process.env.NODE_ENV !== "development",
   //是否显示右上角github图标
-  githubCorner: process.env.NODE_ENV !== "development",
+  githubCorner: false,
   //是否显示顶部进度条
   progressBar: true,
   //缓存路由的最大数量
