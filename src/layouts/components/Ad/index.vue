@@ -40,10 +40,9 @@
     height: 30px;
     padding-right: $base-padding;
     padding-left: $base-padding;
+    margin-bottom: -20px;
     line-height: 30px;
     cursor: pointer;
-    background: #eef1f6;
-    box-shadow: 0 -1px 2px rgba(0, 21, 41, 0.08) inset;
 
     a {
       color: #999;
