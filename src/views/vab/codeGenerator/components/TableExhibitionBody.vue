@@ -9,7 +9,7 @@
           :label="header.label"
           align="center"
         >
-          <template slot-scope="{ row }">
+          <template #default="{ row }">
             {{ row[header.key] }}
           </template>
         </el-table-column>

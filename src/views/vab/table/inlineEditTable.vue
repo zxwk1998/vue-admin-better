@@ -11,12 +11,12 @@
         width="55"
       ></el-table-column>
       <el-table-column show-overflow-tooltip label="序号" width="95">
-        <template slot-scope="scope">
+        <template #default="scope">
           {{ scope.$index + 1 }}
         </template>
       </el-table-column>
       <el-table-column show-overflow-tooltip min-width="300px" label="标题">
-        <template slot-scope="{ row }">
+        <template #default="{ row }">
           <template v-if="row.edit">
             <el-input v-model="row.title" style="width: 300px" />
             <el-button
@@ -41,7 +41,7 @@
         label="操作"
         width="200"
       >
-        <template slot-scope="{ row }">
+        <template #default="{ row }">
           <el-button
             v-if="row.edit"
             type="success"

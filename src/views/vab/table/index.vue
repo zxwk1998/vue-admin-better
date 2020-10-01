@@ -51,7 +51,7 @@
         width="55"
       ></el-table-column>
       <el-table-column show-overflow-tooltip label="序号" width="95">
-        <template slot-scope="scope">
+        <template #default="scope">
           {{ scope.$index + 1 }}
         </template>
       </el-table-column>
@@ -66,11 +66,11 @@
         prop="author"
       ></el-table-column>
       <el-table-column show-overflow-tooltip label="头像">
-        <template slot-scope="scope">
+        <template #default="{ row }">
           <el-image
             v-if="imgShow"
             :preview-src-list="imageList"
-            :src="scope.row.img"
+            :src="row.img"
           ></el-image>
         </template>
       </el-table-column>
@@ -81,15 +81,15 @@
         sortable
       ></el-table-column>
       <el-table-column show-overflow-tooltip label="状态">
-        <template slot-scope="scope">
+        <template #default="{ row }">
           <el-tooltip
-            :content="scope.row.status"
+            :content="row.status"
             class="item"
             effect="dark"
             placement="top-start"
           >
-            <el-tag :type="scope.row.status | statusFilter">
-              {{ scope.row.status }}
+            <el-tag :type="row.status | statusFilter">
+              {{ row.status }}
             </el-tag>
           </el-tooltip>
         </template>
@@ -100,17 +100,10 @@
         prop="datetime"
         width="200"
       ></el-table-column>
-      <el-table-column
-        show-overflow-tooltip
-        label="操作"
-        width="180px"
-        fixed="right"
-      >
-        <template slot-scope="scope">
-          <el-button type="text" @click="handleEdit(scope.row)">编辑</el-button>
-          <el-button type="text" @click="handleDelete(scope.row)">
-            删除
-          </el-button>
+      <el-table-column show-overflow-tooltip label="操作" width="180px">
+        <template #default="{ row }">
+          <el-button type="text" @click="handleEdit(row)">编辑</el-button>
+          <el-button type="text" @click="handleDelete(row)">删除</el-button>
         </template>
       </el-table-column>
     </el-table>

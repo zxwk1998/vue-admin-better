@@ -18,7 +18,7 @@ const genTabeleColumnSinppetTemplate = (key, label) => {
     val = `row.${key}`;
   }
   return `<el-table-column show-overflow-tooltip label="${label}">
-          <template v-slot={row}>
+          <template #default={row}>
             {{ ${val} }}
           </template>
         </el-table-column>`;

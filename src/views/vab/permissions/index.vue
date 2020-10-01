@@ -77,33 +77,33 @@
             label="标题"
           ></el-table-column>
           <el-table-column show-overflow-tooltip label="图标">
-            <template slot-scope="scope">
-              <span v-if="scope.row.meta">
+            <template #default="{ row }">
+              <span v-if="row.meta">
                 <vab-icon
-                  v-if="scope.row.meta.icon"
-                  :icon="['fas', scope.row.meta.icon]"
+                  v-if="row.meta.icon"
+                  :icon="['fas', row.meta.icon]"
                 ></vab-icon>
               </span>
             </template>
           </el-table-column>
           <el-table-column show-overflow-tooltip label="是否固定">
-            <template slot-scope="scope">
-              <span v-if="scope.row.meta">
-                {{ scope.row.meta.affix }}
+            <template #default="{ row }">
+              <span v-if="row.meta">
+                {{ row.meta.affix }}
               </span>
             </template>
           </el-table-column>
           <el-table-column show-overflow-tooltip label="是否无缓存">
-            <template slot-scope="scope">
-              <span v-if="scope.row.meta">
-                {{ scope.row.meta.noKeepAlive }}
+            <template #default="{ row }">
+              <span v-if="row.meta">
+                {{ row.meta.noKeepAlive }}
               </span>
             </template>
           </el-table-column>
           <el-table-column show-overflow-tooltip label="badge">
-            <template slot-scope="scope">
-              <span v-if="scope.row.meta">
-                {{ scope.row.meta.badge }}
+            <template #default="{ row }">
+              <span v-if="row.meta">
+                {{ row.meta.badge }}
               </span>
             </template>
           </el-table-column>

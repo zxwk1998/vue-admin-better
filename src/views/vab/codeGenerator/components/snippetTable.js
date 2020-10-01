@@ -46,13 +46,13 @@ export const genTableSnippet = (headers = "getList") => {
     >
       <el-table-column show-overflow-tooltip type="selection"></el-table-column>
       ${genTableColumnSnippet(headers)}
-      <el-table-column show-overflow-tooltip fixed="right" label="操作" width="200">
-        <template v-slot="scope">
-          <el-button type="text" @click="editList(scope.row)"
+      <el-table-column show-overflow-tooltip label="操作" width="200">
+        <template #default="{row}">
+          <el-button type="text" @click="editList(row)"
           >编辑
           </el-button
           >
-          <el-button type="text" @click="tableDelete(scope.row)"
+          <el-button type="text" @click="tableDelete(row)"
           >删除
           </el-button
           >

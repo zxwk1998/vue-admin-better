@@ -41,16 +41,16 @@
             label="路径"
           ></el-table-column>
           <el-table-column show-overflow-tooltip label="是否隐藏">
-            <template slot-scope="scope">
+            <template #default="{ row }">
               <span>
-                {{ scope.row.hidden ? "是" : "否" }}
+                {{ row.hidden ? "是" : "否" }}
               </span>
             </template>
           </el-table-column>
           <el-table-column show-overflow-tooltip label="是否一直显示当前节点">
-            <template slot-scope="scope">
+            <template #default="{ row }">
               <span>
-                {{ scope.row.alwaysShow ? "是" : "否" }}
+                {{ row.alwaysShow ? "是" : "否" }}
               </span>
             </template>
           </el-table-column>
@@ -70,49 +70,40 @@
             label="标题"
           ></el-table-column>
           <el-table-column show-overflow-tooltip label="图标">
-            <template slot-scope="scope">
-              <span v-if="scope.row.meta">
+            <template #default="{ row }">
+              <span v-if="row.meta">
                 <vab-icon
-                  v-if="scope.row.meta.icon"
-                  :icon="['fas', scope.row.meta.icon]"
+                  v-if="row.meta.icon"
+                  :icon="['fas', row.meta.icon]"
                 ></vab-icon>
               </span>
             </template>
           </el-table-column>
           <el-table-column show-overflow-tooltip label="是否固定">
-            <template slot-scope="scope">
-              <span v-if="scope.row.meta">
-                {{ scope.row.meta.affix ? "是" : "否" }}
+            <template #default="{ row }">
+              <span v-if="row.meta">
+                {{ row.meta.affix ? "是" : "否" }}
               </span>
             </template>
           </el-table-column>
           <el-table-column show-overflow-tooltip label="是否无缓存">
-            <template slot-scope="scope">
-              <span v-if="scope.row.meta">
-                {{ scope.row.meta.noKeepAlive ? "是" : "否" }}
+            <template #default="{ row }">
+              <span v-if="row.meta">
+                {{ row.meta.noKeepAlive ? "是" : "否" }}
               </span>
             </template>
           </el-table-column>
           <el-table-column show-overflow-tooltip label="badge">
-            <template slot-scope="scope">
-              <span v-if="scope.row.meta">
-                {{ scope.row.meta.badge }}
+            <template #default="{ row }">
+              <span v-if="row.meta">
+                {{ row.meta.badge }}
               </span>
             </template>
           </el-table-column>
-          <el-table-column
-            show-overflow-tooltip
-            fixed="right"
-            label="操作"
-            width="200"
-          >
-            <template #default="scope">
-              <el-button type="text" @click="handleEdit(scope.row)">
-                编辑
-              </el-button>
-              <el-button type="text" @click="handleDelete(scope.row)">
-                删除
-              </el-button>
+          <el-table-column show-overflow-tooltip label="操作" width="200">
+            <template #default="{ row }">
+              <el-button type="text" @click="handleEdit(row)">编辑</el-button>
+              <el-button type="text" @click="handleDelete(row)">删除</el-button>
             </template>
           </el-table-column>
         </el-table>

@@ -21,7 +21,7 @@
           @node-collapse="nodeCollapse"
           @node-expand="nodeExpand"
         >
-          <span slot-scope="{ node, data }" class="vab-custom-tree-node">
+          <template #defalut="{ node, data }" class="vab-custom-tree-node">
             <span class="vab-tree-item">
               <i v-if="node.data.rank == 4" class="el-icon-s-custom"></i>
               {{ node.label }}
@@ -51,7 +51,7 @@
                 <i class="el-icon-delete"></i>
               </a>
             </span>
-          </span>
+          </template>
         </el-tree>
       </el-col>
       <el-col :xs="24" :sm="24" :md="24" :lg="6" :xl="6">
@@ -75,7 +75,7 @@
             node-key="indexCode"
             @node-click="nodeClick"
           >
-            <span slot-scope="{ node }" class="vab-custom-tree-node">
+            <template #defalut="{ node }" class="vab-custom-tree-node">
               <span class="vab-tree-item">
                 <i v-if="node.data.rank == 4" class="el-icon-s-custom"></i>
                 {{ node.label }}
@@ -99,7 +99,7 @@
                   <i class="el-icon-delete"></i>
                 </a>
               </span>
-            </span>
+            </template>
           </el-tree>
         </div>
         <div v-show="!isShow" class="el-tree-wrap">
@@ -115,7 +115,7 @@
             node-key="indexCode"
             @node-click="nodeClick"
           >
-            <span slot-scope="{ node }" class="vab-custom-tree-node">
+            <template #defalut="{ node }" class="vab-custom-tree-node">
               <span class="vab-tree-item">
                 <i v-if="node.data.rank == 4" class="el-icon-s-custom"></i>
                 {{ node.label }}
@@ -133,7 +133,7 @@
                   <i class="el-icon-delete"></i>
                 </a>
               </span>
-            </span>
+            </template>
           </el-tree>
         </div>
       </el-col>
@@ -160,9 +160,9 @@
               node-key="id"
               @node-click="selectTreeNodeClick"
             >
-              <span slot-scope="{ node }" class="vab-custom-tree-node">
+              <template #defalut="{ node }" class="vab-custom-tree-node">
                 <span class="vab-tree-item">{{ node.label }}</span>
-              </span>
+              </template>
             </el-tree>
           </el-option>
         </el-select>
