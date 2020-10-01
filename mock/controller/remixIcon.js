@@ -20,8 +20,6 @@ const data = [
   "add-line",
   "admin-fill",
   "admin-line",
-  "advertisement-fill",
-  "advertisement-line",
   "airplay-fill",
   "airplay-line",
   "alarm-fill",

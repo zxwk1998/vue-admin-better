@@ -1,4 +1,0 @@
-plugins:
-  - removeAttrs:
-      attrs:
-        - "fill-rule"

@@ -1,9 +1,6 @@
 const data = [
   "alphabetical_sorting",
-  "advance",
-  "address_book",
   "alphabetical_sorting",
-  "advertising",
   "alarm_clock",
   "area_chart",
   "approval",

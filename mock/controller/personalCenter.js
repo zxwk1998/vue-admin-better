@@ -22,7 +22,7 @@ module.exports = [
   {
     url: "/personalCenter/doEdit",
     type: "post",
-    response(config) {
+    response() {
       return {
         code: 200,
         msg: "模拟保存成功",
@@ -32,7 +32,7 @@ module.exports = [
   {
     url: "/personalCenter/doDelete",
     type: "post",
-    response(config) {
+    response() {
       return {
         code: 200,
         msg: "模拟删除成功",

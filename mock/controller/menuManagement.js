@@ -2,7 +2,7 @@ module.exports = [
   {
     url: "/menuManagement/getTree",
     type: "post",
-    response(config) {
+    response() {
       return {
         code: 200,
         msg: "success",
@@ -31,7 +31,7 @@ module.exports = [
   {
     url: "/menuManagement/doEdit",
     type: "post",
-    response(config) {
+    response() {
       return {
         code: 200,
         msg: "模拟保存成功",
@@ -41,7 +41,7 @@ module.exports = [
   {
     url: "/menuManagement/doDelete",
     type: "post",
-    response(config) {
+    response() {
       return {
         code: 200,
         msg: "模拟删除成功",

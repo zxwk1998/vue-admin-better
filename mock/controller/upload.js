@@ -3,7 +3,7 @@ module.exports = [
   {
     url: "/upload",
     type: "post",
-    response(config) {
+    response() {
       return {
         code: 200,
         msg: "success",

@@ -33,16 +33,11 @@ process.env.VUE_APP_AUTHOR = author || "chuzhixin 1204505056@qq.com";
 process.env.VUE_APP_UPDATE_TIME = time;
 process.env.VUE_APP_VERSION = version;
 
-const resolve = (dir) => {
-  return path.join(__dirname, dir);
-};
-
+const resolve = (dir) => path.join(__dirname, dir);
 const mockServer = () => {
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.NODE_ENV === "development")
     return require("./mock/mockServer.js");
-  } else {
-    return "";
-  }
+  else return "";
 };
 
 module.exports = {
@@ -78,8 +73,8 @@ module.exports = {
     };
   },
   chainWebpack(config) {
-    /* config.plugins.delete("preload");
-    config.plugins.delete("prefetch"); */
+    config.plugins.delete("preload");
+    config.plugins.delete("prefetch");
     config.module
       .rule("svg")
       .exclude.add(resolve("src/remixIcon"))
@@ -106,9 +101,9 @@ module.exports = {
       .options({ symbolId: "colorful-icon-[name]" })
       .end();
 
-    config.when(process.env.NODE_ENV === "development", (config) => {
+    /*  config.when(process.env.NODE_ENV === "development", (config) => {
       config.devtool("source-map");
-    });
+    }); */
     config.when(process.env.NODE_ENV !== "development", (config) => {
       config.performance.set("hints", false);
       config.devtool("none");
@@ -130,13 +125,6 @@ module.exports = {
             name: "chunk-fortawesome",
             priority: 20,
             test: /[\\/]node_modules[\\/]_?@fortawesome(.*)/,
-          },
-          commons: {
-            name: "chunk-commons",
-            test: resolve("src/components"),
-            minChunks: 3,
-            priority: 5,
-            reuseExistingChunk: true,
           },
         },
       });

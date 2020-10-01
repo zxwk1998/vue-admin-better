@@ -1,8 +1,4 @@
 const data = [
-  "ad",
-  "address-book",
-  "address-card",
-  "adjust",
   "air-freshener",
   "align-center",
   "align-justify",
