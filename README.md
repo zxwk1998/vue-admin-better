@@ -40,7 +40,8 @@
 
 ## 鸣谢
 
-| Project | ------------------------------------------------------ |
+| Project | 
+|------------------------------------------------------ |
 | [vue](https://github.com/vuejs/vue) |
 | [element-ui](https://github.com/ElemeFE/element) |
 | [ant-design-vue](https://github.com/vueComponent/ant-design-vue) |
