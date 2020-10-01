@@ -10,9 +10,9 @@
 
 ## 地址
 
-- [🎉 开源版演示地址（免费商用）](https://chu1204505056.gitee.io/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🎉 开源版演示地址（免费商用，支持 PC、平板、手机）](https://chu1204505056.gitee.io/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-- [🚀 pro 版演示地址](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🚀 pro 版演示地址（支持 PC、平板、手机）](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 - [⚡️ vue3.0 版本开发进度展示（基础版本已全部贯通、适配电脑、手机、平板）](https://chu1204505056.gitee.io/vue-admin-beautiful-mini/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
