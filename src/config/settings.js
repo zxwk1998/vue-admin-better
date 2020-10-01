@@ -12,7 +12,7 @@ module.exports = {
   // 开发环境每次保存时是否输出为eslint编译警告
   lintOnSave: true,
   // 进行编译的依赖
-  transpileDependencies: ["vue-echarts", "resize-detector", "zx-layouts"],
+  transpileDependencies: ["vue-echarts", "resize-detector"],
   // 默认的接口地址 如果是开发环境和生产环境走vab-mock-server，当然你也可以选择自己配置成需要的接口地址
   baseURL:
     process.env.NODE_ENV === "development"
