@@ -125,6 +125,15 @@ export const asyncRoutes = [
     meta: { title: "组件", icon: "box-open" },
     children: [
       {
+        path: "permissions",
+        name: "Permission",
+        component: () => import("@/views/vab/permissions/index"),
+        meta: {
+          title: "角色权限",
+          permissions: ["admin", "editor"],
+        },
+      },
+      {
         path:
           "https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension",
         name: "ExternalLink",
@@ -133,15 +142,6 @@ export const asyncRoutes = [
           target: "_blank",
           permissions: ["admin", "editor"],
           badge: "New",
-        },
-      },
-      {
-        path: "permissions",
-        name: "Permission",
-        component: () => import("@/views/vab/permissions/index"),
-        meta: {
-          title: "权限控制",
-          permissions: ["admin", "editor"],
         },
       },
       {
@@ -393,14 +393,6 @@ export const asyncRoutes = [
         component: () => import("@/views/mall/goodsList/index"),
         meta: {
           title: "商品列表",
-        },
-      },
-      {
-        path: "goodsDetail",
-        name: "GoodsDetail",
-        component: () => import("@/views/mall/goodsDetail/index"),
-        meta: {
-          title: "商品详情",
         },
       },
     ],

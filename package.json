@@ -70,7 +70,6 @@
     "zx-verify": "^0.0.2"
   },
   "devDependencies": {
-    "@babel/register": "^7.11.5",
     "@vue/cli-plugin-babel": "^4.5.6",
     "@vue/cli-plugin-eslint": "^4.5.6",
     "@vue/cli-plugin-router": "^4.5.6",
@@ -78,7 +77,6 @@
     "@vue/cli-service": "^4.5.6",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
-    "babel-plugin-dynamic-import-node": "^2.3.3",
     "compression-webpack-plugin": "^6.0.2",
     "eslint": "^7.10.0",
     "eslint-plugin-prettier": "^3.1.4",

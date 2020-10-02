@@ -319,14 +319,6 @@ const data = [
           title: "商品列表",
         },
       },
-      {
-        path: "goodsDetail",
-        name: "GoodsDetail",
-        component: "@/views/mall/goodsDetail/index",
-        meta: {
-          title: "商品详情",
-        },
-      },
     ],
   },
   {
