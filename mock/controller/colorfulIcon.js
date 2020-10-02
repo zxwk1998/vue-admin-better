@@ -7,7 +7,6 @@ const data = [
   "answers",
   "approve",
   "assistant",
-  "audio_file",
   "automotive",
   "automatic",
   "bad_decision",
