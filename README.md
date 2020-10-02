@@ -6,8 +6,6 @@
 <h3>An excellent general-purpose, middle and background front-end framework based on Vue + element UI</h3>
 </div>
 
-![image](https://repository-images.githubusercontent.com/249342059/8ff9d000-bef5-11ea-837f-8c265b79e3db)
-
 ## 地址
 
 - [🎉 开源版演示地址（免费商用，支持 PC、平板、手机）](https://chu1204505056.gitee.io/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
