@@ -6,6 +6,22 @@
 <h3>An excellent general-purpose, middle and background front-end framework based on Vue + element UI</h3>
 </div>
 
+## 优势
+
+```
+vue-admin-beautiful 对比其他开源 admin 框架有如下优势:
+
+1. 支持前端控制路由权限 intelligence、后端控制路由权限 all 模式
+2. 已知开源 vue admin 框架中首家支持 mock 自动生成自动导出功能
+3. 提供 50 余项全局精细化配置
+4. 支持 scss 自动排序，eslint 自动修复
+5. axios 精细化封装，支持多数据源、多成功 code 数组，支持 application/json;charset=UTF-8、application/x-www-form-urlencoded;charset=UTF-8 多种传参方式
+6. 支持登录RSA加密
+7. 支持打包自动生成7Z压缩包
+8. 支持errorlog错误拦截
+9. 支持多主题、多布局切换
+```
+
 ## 地址
 
 - [🎉 开源版演示地址（免费商用，支持 PC、平板、手机）](https://chu1204505056.gitee.io/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
@@ -62,6 +78,10 @@ npm run serve
 
 <a>![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm.png)</a>
 <a>![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm_2.png)</a>
+
+## vue-admin-beautiful 承诺定期捐赠的开源项目（感谢巨人）
+
+[ant-design-vue](https://github.com/vueComponent/ant-design-vue#backers)
 
 ## 鸣谢
 
