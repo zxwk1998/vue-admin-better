@@ -332,7 +332,7 @@ export const asyncRoutes = [
         path: "more",
         name: "More",
         component: () => import("@/views/vab/more/index"),
-        meta: { title: "更多组件", permissions: ["admin"] },
+        meta: { title: "关于", permissions: ["admin"] },
       },
     ],
   },

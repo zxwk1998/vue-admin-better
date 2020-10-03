@@ -285,7 +285,7 @@ const data = [
         path: "more",
         name: "More",
         component: "@/views/vab/more/index",
-        meta: { title: "更多组件", permissions: ["admin"] },
+        meta: { title: "关于", permissions: ["admin"] },
       },
     ],
   },
