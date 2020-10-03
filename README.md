@@ -30,30 +30,6 @@
 
 - [umyui 文档（开发者准备的基于 Vue 2.0 的桌面端组件库; 流畅渲染表格万级数据）](http://www.umyui.com/)
 
-## 鸣谢
-
-| Project                                                              |
-| -------------------------------------------------------------------- |
-| [vue](https://github.com/vuejs/vue)                                  |
-| [element-ui](https://github.com/ElemeFE/element)                     |
-| [ant-design-vue](https://github.com/vueComponent/ant-design-vue)     |
-| [mock](https://github.com/nuysoft/Mock)                              |
-| [axios](https://github.com/axios/axios)                              |
-| [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) |
-| [iview-admin](https://github.com/iview/iview-admin)                  |
-
-## 框架杰出贡献者（排名不分先后）
-
-<a href="https://github.com/buuing" target="_blank">
-<img style="border-radius:999px" src="https://avatars1.githubusercontent.com/u/36689704?s=50&u=7a4049f10010a115b8dd35f159bb81726bc0ac20&v=4"/>
-</a>
-<a href="https://github.com/cyea" target="_blank">
-<img style="border-radius:999px" src="https://avatars1.githubusercontent.com/u/22478003?s=50&u=121126473328c04cbf3cff5516110814ca1010e4&v=4"/>
-</a>
-<a href="https://github.com/fwfmiao" target="_blank">
-<img style="border-radius:999px" src="https://avatars3.githubusercontent.com/u/29328241?s=50&u=bb0977b405ccf1a101ce4e18e4fb8d958854ca60&v=4"/>
-</a>
-
 ## 🌱vue2.x master 分支（element-ui）
 
 ```bash
@@ -86,3 +62,27 @@ npm run serve
 
 <a>![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm.png)</a>
 <a>![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm_2.png)</a>
+
+## 鸣谢
+
+| Project                                                              |
+| -------------------------------------------------------------------- |
+| [vue](https://github.com/vuejs/vue)                                  |
+| [element-ui](https://github.com/ElemeFE/element)                     |
+| [ant-design-vue](https://github.com/vueComponent/ant-design-vue)     |
+| [mock](https://github.com/nuysoft/Mock)                              |
+| [axios](https://github.com/axios/axios)                              |
+| [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) |
+| [iview-admin](https://github.com/iview/iview-admin)                  |
+
+## 框架杰出贡献者（排名不分先后）
+
+<a href="https://github.com/buuing" target="_blank">
+<img style="border-radius:999px" src="https://avatars1.githubusercontent.com/u/36689704?s=50&u=7a4049f10010a115b8dd35f159bb81726bc0ac20&v=4"/>
+</a>
+<a href="https://github.com/cyea" target="_blank">
+<img style="border-radius:999px" src="https://avatars1.githubusercontent.com/u/22478003?s=50&u=121126473328c04cbf3cff5516110814ca1010e4&v=4"/>
+</a>
+<a href="https://github.com/fwfmiao" target="_blank">
+<img style="border-radius:999px" src="https://avatars3.githubusercontent.com/u/29328241?s=50&u=bb0977b405ccf1a101ce4e18e4fb8d958854ca60&v=4"/>
+</a>
