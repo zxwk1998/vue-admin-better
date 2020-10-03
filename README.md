@@ -54,7 +54,7 @@
 <img style="border-radius:999px" src="https://avatars3.githubusercontent.com/u/29328241?s=50&u=bb0977b405ccf1a101ce4e18e4fb8d958854ca60&v=4"/>
 </a>
 
-## 安装
+## 🌱vue2.x master 分支（element-ui）
 
 ```bash
 # 克隆项目
@@ -67,16 +67,16 @@ npm i
 npm run serve
 ```
 
-## install
+## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）
 
 ```bash
-# Clone project
-git clone https://github.com/chuzhixin/vue-admin-beautiful.git
-# Enter project directory
+# 克隆项目
+git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-beautiful.git
+# 进入项目目录
 cd vue-admin-beautiful
-# Installation dependency
+# 安装依赖
 npm i
-# Start project
+# 本地开发 启动项目
 npm run serve
 ```
 
