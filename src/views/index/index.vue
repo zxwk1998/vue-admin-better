@@ -205,7 +205,7 @@
               <td>sass版本</td>
               <td>{{ devDependencies["sass"] }}</td>
               <td>mockjs版本</td>
-              <td>{{ devDependencies["mockjs"] }}</td>
+              <td>{{ dependencies["mockjs"] }}</td>
             </tr>
             <tr>
               <td>zx-layouts版本</td>
