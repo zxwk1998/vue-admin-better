@@ -35,7 +35,7 @@
       <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
         <el-card>
           <div slot="header">
-            VIP群
+            VIP群（自愿原则）
             <el-button style="float: right; padding: 3px 0" type="text">
               ￥100
             </el-button>
@@ -55,7 +55,7 @@
       <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
         <el-card>
           <div slot="header">
-            开源版授权 商业用途 完全自定义版权
+            开源版不保留MIT协议，变更作者（自愿原则）
             <el-button style="float: right; padding: 3px 0" type="text">
               ￥299
             </el-button>
@@ -63,9 +63,6 @@
           <div>
             <ul>
               <li>支持以上所有特权，不包含VIP群</li>
-              <li>
-                可随意变更版权，但仅限自己团队使用，禁止恶意传播，禁止二次售卖
-              </li>
               <li>包含开源基础版授权与开源集成版授权</li>
               <li>永久更新</li>
               <li>提供低价外包合作机会</li>
