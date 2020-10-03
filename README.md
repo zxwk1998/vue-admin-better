@@ -81,7 +81,9 @@ npm run serve
 
 ## vue-admin-beautiful 承诺定期捐赠的开源项目（感谢巨人）
 
-![https://gitee.com/chu1204505056/image/raw/master/antdv.svg](https://github.com/vueComponent/ant-design-vue#backers)
+<a href="https://github.com/vueComponent/ant-design-vue#backers" target="_blank">
+<img style="border-radius:999px" src="https://gitee.com/chu1204505056/image/raw/master/antdv.svg"/>
+</a>
 
 ## 鸣谢
 
