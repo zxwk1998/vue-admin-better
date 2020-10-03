@@ -93,27 +93,12 @@ const data = [
       },
       {
         path: "table",
-        component: "EmptyLayout",
-        redirect: "noRedirect",
+        component: "@/views/vab/table/index",
         name: "Table",
         meta: {
           title: "表格",
           permissions: ["admin"],
         },
-        children: [
-          {
-            path: "comprehensiveTable",
-            name: "ComprehensiveTable",
-            component: "@/views/vab/table/index",
-            meta: { title: "综合表格" },
-          },
-          {
-            path: "inlineEditTable",
-            name: "InlineEditTable",
-            component: "@/views/vab/table/inlineEditTable",
-            meta: { title: "行内编辑" },
-          },
-        ],
       },
       {
         path: "map",
@@ -239,12 +224,6 @@ const data = [
         name: "ImgComparison",
         component: "@/views/vab/imgComparison/index",
         meta: { title: "图像拖拽比对", permissions: ["admin"] },
-      },
-      {
-        path: "markdown",
-        name: "Markdown",
-        component: "@/views/vab/markdown/index",
-        meta: { title: "markdown阅读器", permissions: ["admin"] },
       },
       {
         path: "smallComponents",

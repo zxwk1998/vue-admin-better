@@ -131,27 +131,12 @@ export const asyncRoutes = [
       },
       {
         path: "table",
-        component: EmptyLayout,
-        redirect: "noRedirect",
+        component: () => import("@/views/vab/table/index"),
         name: "Table",
         meta: {
           title: "表格",
           permissions: ["admin"],
         },
-        children: [
-          {
-            path: "comprehensiveTable",
-            name: "ComprehensiveTable",
-            component: () => import("@/views/vab/table/index"),
-            meta: { title: "综合表格" },
-          },
-          {
-            path: "inlineEditTable",
-            name: "InlineEditTable",
-            component: () => import("@/views/vab/table/inlineEditTable"),
-            meta: { title: "行内编辑" },
-          },
-        ],
       },
       {
         path: "map",
@@ -286,12 +271,6 @@ export const asyncRoutes = [
         name: "ImgComparison",
         component: () => import("@/views/vab/imgComparison/index"),
         meta: { title: "图像拖拽比对", permissions: ["admin"] },
-      },
-      {
-        path: "markdown",
-        name: "Markdown",
-        component: () => import("@/views/vab/markdown/index"),
-        meta: { title: "markdown阅读器", permissions: ["admin"] },
       },
       {
         path: "smallComponents",
