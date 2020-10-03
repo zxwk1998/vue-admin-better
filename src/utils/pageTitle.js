@@ -1,7 +1,7 @@
 import { title } from "@/config/settings";
 
 /**
- * @copyright chuzhixin 1204505056@qq.com
+ * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
  * @description 设置标题
  * @param pageTitle
  * @returns {string}

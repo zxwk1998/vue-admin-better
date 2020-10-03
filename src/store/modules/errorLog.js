@@ -1,5 +1,5 @@
 /**
- * @copyright chuzhixin 1204505056@qq.com
+ * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
  * @description 异常捕获的状态拦截，请勿修改
  */
 

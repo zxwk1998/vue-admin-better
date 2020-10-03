@@ -1,5 +1,5 @@
 /**
- * @copyright chuzhixin 1204505056@qq.com
+ * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
  * @description 公共布局导出，已封装成npm，便于此后在线升级，
  * 当然也存在一定的弊端，给开发者自定义增加了一定的困难，
  * 如果您一定要进行高度自定义，请仔细阅读讨论群文档，layouts本地化篇。

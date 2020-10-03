@@ -1,5 +1,5 @@
 /**
- * @copyright chuzhixin 1204505056@qq.com
+ * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
  * @description 登录、获取用户信息、退出登录、清除accessToken逻辑，不建议修改
  */
 
