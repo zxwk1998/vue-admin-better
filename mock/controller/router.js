@@ -17,22 +17,6 @@ const data = [
     ],
   },
   {
-    path: "/personalCenter",
-    component: "Layout",
-    hidden: true,
-    redirect: "personalCenter",
-    children: [
-      {
-        path: "personalCenter",
-        name: "PersonalCenter",
-        component: "@/views/personalCenter/index",
-        meta: {
-          title: "个人中心",
-        },
-      },
-    ],
-  },
-  {
     path: "/personnelManagement",
     component: "Layout",
     redirect: "noRedirect",
