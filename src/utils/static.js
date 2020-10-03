@@ -1,16 +1,15 @@
 /**
- * @copyright chuzhixin 1204505056@qq.com
+ * @author chuzhixin 1204505056@qq.com
  * @description 导入所有 controller 模块，浏览器环境中自动输出controller文件夹下Mock接口，请勿修改。
  */
 import Mock from "mockjs";
-import { paramObj } from "@/utils";
+import { paramObj } from "@/utils/index";
 
 const mocks = [];
 const files = require.context("../../mock/controller", false, /\.js$/);
 
 files.keys().forEach((key) => {
-  const obj = files(key);
-  mocks.push(...obj);
+  mocks.push(...files(key));
 });
 
 export function mockXHR() {
@@ -26,9 +25,9 @@ export function mockXHR() {
     this.proxy_send(...arguments);
   };
 
-  function XHR2ExpressReqWrap(respond) {
+  function XHRHttpRequst(respond) {
     return function (options) {
-      let result = null;
+      let result;
       if (respond instanceof Function) {
         const { body, type, url } = options;
         result = respond({
@@ -43,11 +42,11 @@ export function mockXHR() {
     };
   }
 
-  for (const i of mocks) {
+  mocks.forEach((item) => {
     Mock.mock(
-      new RegExp(i.url),
-      i.type || "get",
-      XHR2ExpressReqWrap(i.response)
+      new RegExp(item.url),
+      item.type || "get",
+      XHRHttpRequst(item.response)
     );
-  }
+  });
 }

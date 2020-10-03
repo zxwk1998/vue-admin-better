@@ -1,10 +1,10 @@
 <template>
   <el-dialog
+    :before-close="handleClose"
+    :close-on-click-modal="false"
     :title="title"
     :visible.sync="dialogFormVisible"
     width="909px"
-    :before-close="handleClose"
-    :close-on-click-modal="false"
   >
     <div class="upload">
       <el-alert
@@ -15,34 +15,34 @@
       <br />
       <el-upload
         ref="upload"
-        class="upload-content"
-        :name="name"
-        :data="data"
         :action="action"
-        :headers="headers"
-        :on-change="handleChange"
-        :on-preview="handlePreview"
-        :on-remove="handleRemove"
-        :on-exceed="handleExceed"
-        :on-success="handleSuccess"
-        :on-progress="handleProgress"
-        :on-error="handleError"
-        :file-list="fileList"
-        :multiple="true"
         :auto-upload="false"
-        accept="image/png, image/jpeg"
-        :limit="limit"
-        list-type="picture-card"
         :close-on-click-modal="false"
+        :data="data"
+        :file-list="fileList"
+        :headers="headers"
+        :limit="limit"
+        :multiple="true"
+        :name="name"
+        :on-change="handleChange"
+        :on-error="handleError"
+        :on-exceed="handleExceed"
+        :on-preview="handlePreview"
+        :on-progress="handleProgress"
+        :on-remove="handleRemove"
+        :on-success="handleSuccess"
+        accept="image/png, image/jpeg"
+        class="upload-content"
+        list-type="picture-card"
       >
         <i slot="trigger" class="el-icon-plus"></i>
         <el-dialog
-          title="查看大图"
-          append-to-body
           :visible.sync="dialogVisible"
+          append-to-body
+          title="查看大图"
         >
-          <div style="padding-bottom: 20px !important">
-            <img width="100%" :src="dialogImageUrl" alt="" />
+          <div>
+            <img :src="dialogImageUrl" alt="" width="100%" />
           </div>
         </el-dialog>
       </el-upload>
@@ -62,10 +62,10 @@
       </div>
       <el-button type="primary" @click="handleClose">关闭</el-button>
       <el-button
-        style="margin-left: 10px"
-        size="small"
-        type="success"
         :loading="loading"
+        size="small"
+        style="margin-left: 10px"
+        type="success"
         @click="submitUpload"
       >
         开始上传
@@ -75,7 +75,7 @@
 </template>
 
 <script>
-  import { tokenName } from "@/config/settings";
+  import { baseURL, tokenName } from "@/config/settings";
 
   export default {
     name: "VabUpload",
@@ -107,7 +107,7 @@
         loading: false,
         dialogVisible: false,
         dialogImageUrl: "",
-        action: "",
+        action: "https://vab-unicloud-3a9da9.service.tcloudbase.com/upload",
         headers: {},
         fileList: [],
         picture: "picture",
@@ -125,16 +125,6 @@
         if (this.allImgNum == 0) return 0;
         return this.$baseLodash.round(this.imgNum / this.allImgNum, 2) * 100;
       },
-    },
-    created() {
-      if ("development" === process.env.NODE_ENV) {
-        this.api = process.env.VUE_APP_BASE_API;
-      } else {
-        this.api = `${window.location.protocol}//${window.location.host}`;
-      }
-
-      this.action = this.api + this.url;
-      this.headers[tokenName] = this.$baseAccessToken();
     },
     methods: {
       submitUpload() {
@@ -161,7 +151,6 @@
         this.imgSuccessNum = this.imgSuccessNum + 1;
         if (fileList.length === this.imgNum) {
           setTimeout(() => {
-            this.$emit("fetch-datas");
             this.$baseMessage(
               `上传完成! 共上传${fileList.length}张图片`,
               "success"
@@ -217,14 +206,13 @@
         this.imgNum = 0;
         this.imgSuccessNum = 0;
         this.imgErrorNum = 0;
-        if ("development" === process.env.NODE_ENV) {
+        /* if ("development" === process.env.NODE_ENV) {
           this.api = process.env.VUE_APP_BASE_API;
         } else {
           this.api = `${window.location.protocol}//${window.location.host}`;
         }
 
-        this.action = this.api + this.url;
-        this.headers[tokenName] = this.$baseAccessToken();
+        this.action = this.api + this.url; */
         this.dialogFormVisible = false;
       },
     },
@@ -233,7 +221,7 @@
 
 <style lang="scss" scoped>
   .upload {
-    height: 600px;
+    height: 500px;
 
     .upload-content {
       .el-upload__tip {

@@ -70,7 +70,6 @@ module.exports = (app) => {
   let mockStartIndex = mockRoutes.mockStartIndex;
   chokidar
     .watch(mockDir, {
-      ignored: /mock-server/,
       ignoreInitial: true,
     })
     .on("all", (event) => {

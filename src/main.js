@@ -9,7 +9,7 @@ import "./plugins";
  */
 
 if (process.env.NODE_ENV === "production") {
-  const { mockXHR } = require("@/config/static");
+  const { mockXHR } = require("@/utils/static");
   mockXHR();
 }
 
