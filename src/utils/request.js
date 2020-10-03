@@ -20,22 +20,6 @@ let loadingInstance;
 
 /**
  * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
- * @description 判断当前url是否需要加loading
- * @param {*} config
- * @returns
- */
-const needLoading = (config) => {
-  let status = false;
-  debounce.forEach((item) => {
-    if (Vue.prototype.$baseLodash.includes(config.url, item)) {
-      status = true;
-    }
-  });
-  return status;
-};
-
-/**
- * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
  * @description 处理code异常
  * @param {*} code
  * @param {*} msg
@@ -77,17 +61,14 @@ instance.interceptors.request.use(
         config.data,
         Vue.prototype.$baseLodash.identity
       );
-
     if (
-      contentType === "application/x-www-form-urlencoded;charset=UTF-8" &&
-      config.data
-    ) {
+      config.data &&
+      config.headers["Content-Type"] ===
+        "application/x-www-form-urlencoded;charset=UTF-8"
+    )
       config.data = qs.stringify(config.data);
-    }
-
-    if (needLoading(config)) {
+    if (debounce.some((item) => config.url.includes(item)))
       loadingInstance = Vue.prototype.$baseLoading();
-    }
     return config;
   },
   (error) => {
@@ -99,7 +80,7 @@ instance.interceptors.response.use(
   (response) => {
     if (loadingInstance) loadingInstance.close();
 
-    const { status, data, config } = response;
+    const { data, config } = response;
     const { code, msg } = data;
     // 操作正常Code数组
     const codeVerificationArray = isArray(successCode)
