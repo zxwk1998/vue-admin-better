@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta
+      content="vab,vab官网,后台管理框架,vue后台管理框架,vue-admin-beautiful,vue-admin-beautiful-pro,vue-admin-beautiful官网,vue-admin-beautiful文档,vue-element-admin,vue-element-admin官网,vue-element-admin文档,vue-admin,vue-admin官网,vue-admin文档"
+      name="keywords"
+    />
+    <meta
+      content="<%= VUE_APP_TITLE %>官网与文档基于vue-admin-beautiful-pro构建，简称vab（是一款超棒的vue+element中后台前端快速开发框架），QQ群972435319，作者：<%= VUE_APP_AUTHOR %>"
+      name="description"
+    />
+    <meta content="<%= VUE_APP_AUTHOR %>" name="author" />
+    <link href="<%= BASE_URL %>static/css/loading.css" rel="stylesheet" />
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>
+        We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to continue.
+      </strong>
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <div class="first-loading-wrp">
+        <div class="loading-wrp">
+          <span class="dot dot-spin">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+        </div>
+        <h1><%= VUE_APP_TITLE %></h1>
+      </div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>

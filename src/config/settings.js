@@ -21,7 +21,7 @@ module.exports = {
   //是否显示logo，不显示时设置false，显示时请填写remixIcon图标名称，暂时只支持设置remixIcon
   logo: "vuejs-fill",
   //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
-  title: "vue-admin-beautiful",
+  title: "vue-admin-beautiful-antdv",
   //标题分隔符
   titleSeparator: " - ",
   //标题是否反转 如果为false:"page - title"，如果为ture:"title - page"

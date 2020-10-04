@@ -6,6 +6,7 @@
       @click="handleFoldSideBar"
     ></div>
     <a-layout-sider
+      width="250"
       v-model:collapsed="collapse"
       :trigger="null"
       collapsible
