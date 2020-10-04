@@ -14,7 +14,6 @@
 </template>
 
 <script>
-  import { VabKeel, VabKeelHeading, VabKeelText } from "@/plugins/vabKeel";
   import { mapActions, mapGetters } from "vuex";
   import {
     copyright,
