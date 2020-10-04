@@ -29,7 +29,6 @@
             <el-form-item label="主题">
               <el-radio-group v-model="theme.name">
                 <el-radio-button label="default">默认</el-radio-button>
-                <el-radio-button label="ocean">海洋之心</el-radio-button>
                 <el-radio-button label="green">绿荫草场</el-radio-button>
                 <el-radio-button label="glory">荣耀典藏</el-radio-button>
                 <el-radio-button label="dark">暗黑之子</el-radio-button>
