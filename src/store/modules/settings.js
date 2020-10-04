@@ -5,7 +5,7 @@
 
 import defaultSettings from "@/config/settings";
 
-const { tabsBar, logo, layout, header, themeBar, skeleton } = defaultSettings;
+const { tabsBar, logo, layout, header, themeBar } = defaultSettings;
 const theme =
   JSON.parse(localStorage.getItem("vue-admin-beautiful-theme")) || "";
 const state = {
@@ -14,7 +14,6 @@ const state = {
   collapse: false,
   layout: theme.layout || layout,
   header: theme.header || header,
-  skeleton,
   device: "desktop",
   themeBar,
 };
@@ -26,7 +25,6 @@ const getters = {
   logo: (state) => state.logo,
   tabsBar: (state) => state.tabsBar,
   themeBar: (state) => state.themeBar,
-  skeleton: (state) => state.skeleton,
 };
 const mutations = {
   changeLayout: (state, layout) => {

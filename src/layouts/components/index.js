@@ -15,12 +15,16 @@ export { default as Logo } from "./Logo";
 export { default as Avatar } from "./Avatar";
 //本地化广告组件，如不需要全局搜索ad组件删掉即可
 export { default as Ad } from "./Ad";
-export { default as AppMain } from "zx-layouts/AppMain";
+//本地化AppMain组件
+export { default as AppMain } from "./AppMain";
 export { default as TabsBar } from "zx-layouts/TabsBar";
 export { default as SideBar } from "zx-layouts/SideBar";
-export { default as Breadcrumb } from "zx-layouts/Breadcrumb";
+//本地化Breadcrumb组件
+export { default as Breadcrumb } from "./Breadcrumb";
 export { default as FullScreenBar } from "zx-layouts/FullScreenBar";
 export { default as ErrorLog } from "zx-layouts/ErrorLog";
-export { default as ThemeBar } from "zx-layouts/ThemeBar";
+//本地化ThemeBar组件
+export { default as ThemeBar } from "./ThemeBar";
 export { default as TopBar } from "zx-layouts/TopBar";
-export { default as NavBar } from "zx-layouts/NavBar";
+//本地化NavBar组件
+export { default as NavBar } from "./NavBar";
