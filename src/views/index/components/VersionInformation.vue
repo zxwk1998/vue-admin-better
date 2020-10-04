@@ -1,8 +1,9 @@
 <template>
   <div class="index-container">
     <h3>
-      欢迎体验全网首个基于vue3.0开发的vue
-      admin框架vue-admin-beautiful-mini，vue3.0的流畅超乎了我们的想象。。。
+      欢迎体验全网首个基于vue{{ dependencies["vue"] }} + ant-design-vue{{
+        dependencies["ant-design-vue"]
+      }}开发的admin框架vue-admin-beautiful-antdv，vue3.0的流畅超乎了我们的想象。。。
     </h3>
     <a-card class="version-information" title="">
       <template v-slot:extra>
