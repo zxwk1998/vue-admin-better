@@ -23,7 +23,7 @@
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-beta.13",
     "vuex": "^4.0.0-beta.4",
-    "zx-layouts": "^0.6.14"
+    "zx-layouts": "^0.6.15"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.6",
