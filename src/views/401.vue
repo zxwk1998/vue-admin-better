@@ -71,7 +71,7 @@
 <style lang="less" scoped>
   .error-container {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
 
     .error-content {
       position: absolute;

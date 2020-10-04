@@ -45,7 +45,10 @@
     margin: @vab-margin;
     background: #fff;
     .error-container {
-      min-height: 100% !important;
+      height: calc(
+        100vh - @vab-header-height - @vab-padding - @vab-padding - @vab-padding -
+          @vab-padding - @vab-padding - @vab-margin
+      ) !important;
     }
   }
 </style>

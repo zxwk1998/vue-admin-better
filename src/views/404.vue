@@ -61,15 +61,16 @@
             this.delOthersVisitedRoutes({ path: "/" });
             clearInterval(this.timer);
           }
-        }, 1000);
+        }, 1000000);
       },
     },
   };
 </script>
+
 <style lang="less" scoped>
   .error-container {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
 
     .error-content {
       position: absolute;
