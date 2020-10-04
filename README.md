@@ -1,39 +1,16 @@
 #
 
 <div align="center"><img width="200" src="https://gitee.com/chu1204505056/vue-admin-beautiful/raw/master/src/colorfulIcon/svg/vab.svg"/>
-<h1> vue-admin-beautiful </h1>
-<h3>一款基于 vue+element-ui 的绝佳的通用型、中后台前端框架</h3>
-<h3>An excellent general-purpose, middle and background front-end framework based on Vue + element UI</h3>
+<h1> vue-admin-beautiful（element-ui） </h1>
 </div>
-
-## 优势及注意事项
-
-```
-vue-admin-beautiful 对比其他开源 admin 框架有如下优势:
-1. 支持前端控制路由权限 intelligence、后端控制路由权限 all 模式
-2. 已知开源 vue admin 框架中首家支持 mock 自动生成自动导出功能
-3. 提供 50 余项全局精细化配置
-4. 支持 scss 自动排序，eslint 自动修复
-5. axios 精细化封装，支持多数据源、多成功 code 数组，支持 application/json;charset=UTF-8、application/x-www-form-urlencoded;charset=UTF-8 多种传参方式
-6. 支持登录RSA加密
-7. 支持打包自动生成7Z压缩包
-8. 支持errorlog错误拦截
-9. 支持多主题、多布局切换
-
-vue-admin-beautiful 使用注意事项:
-1. 项目默认使用lf换行符而非crlf换行符，新建文件时请注意选择文件换行符
-2. 项目默认使用的最严格的eslint校验规范（plugin:vue/recommended），使用之前建议配置开发工具实现自动修复（建议使用vscode开发）
-3. 项目使用的是要求最宽泛的MIT开源协议，保留MIT开源协议即可免费商用
-
-```
 
 ## 地址
 
-- [🎉 开源版演示地址（免费商用，支持 PC、平板、手机）](https://chu1204505056.gitee.io/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🎉 vue2.x + element-ui（免费商用，支持 PC、平板、手机）](https://chu1204505056.gitee.io/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-- [🚀 pro 版演示地址（支持 PC、平板、手机）](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [⚡️ vue3.x + ant-design-vue（beta 版本，免费商用，支持 PC、平板、手机）](https://chu1204505056.gitee.io/vue-admin-beautiful-mini/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-- [⚡️ vue3.0 版本开发进度展示（基础版本已全部贯通、适配电脑、手机、平板）](https://chu1204505056.gitee.io/vue-admin-beautiful-mini/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🚀 pro 版演示地址（付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 - [🌐 github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
@@ -51,7 +28,7 @@ vue-admin-beautiful 使用注意事项:
 
 - [umyui 文档（开发者准备的基于 Vue 2.0 的桌面端组件库; 流畅渲染表格万级数据）](http://www.umyui.com/)
 
-## 🌱vue2.x master 分支（element-ui）
+## 🌱vue2.x master 分支（element-ui）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful/tree/master)
 
 ```bash
 # 克隆项目
@@ -64,7 +41,7 @@ npm i
 npm run serve
 ```
 
-## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）
+## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful/tree/vue3.0-antdv)
 
 ```bash
 # 克隆项目
@@ -113,3 +90,24 @@ npm run serve
 <a href="https://github.com/fwfmiao" target="_blank">
 <img style="border-radius:999px" src="https://avatars3.githubusercontent.com/u/29328241?s=50&u=bb0977b405ccf1a101ce4e18e4fb8d958854ca60&v=4"/>
 </a>
+
+## 优势及注意事项
+
+```
+vue-admin-beautiful 对比其他开源 admin 框架有如下优势:
+1. 支持前端控制路由权限 intelligence、后端控制路由权限 all 模式
+2. 已知开源 vue admin 框架中首家支持 mock 自动生成自动导出功能
+3. 提供 50 余项全局精细化配置
+4. 支持 scss 自动排序，eslint 自动修复
+5. axios 精细化封装，支持多数据源、多成功 code 数组，支持 application/json;charset=UTF-8、application/x-www-form-urlencoded;charset=UTF-8 多种传参方式
+6. 支持登录RSA加密
+7. 支持打包自动生成7Z压缩包
+8. 支持errorlog错误拦截
+9. 支持多主题、多布局切换
+
+vue-admin-beautiful 使用注意事项:
+1. 项目默认使用lf换行符而非crlf换行符，新建文件时请注意选择文件换行符
+2. 项目默认使用的最严格的eslint校验规范（plugin:vue/recommended），使用之前建议配置开发工具实现自动修复（建议使用vscode开发）
+3. 项目使用的是要求最宽泛的MIT开源协议，保留MIT开源协议即可免费商用
+
+```
