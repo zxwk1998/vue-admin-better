@@ -61,7 +61,7 @@
             this.delOthersVisitedRoutes({ path: "/" });
             clearInterval(this.timer);
           }
-        }, 1000000);
+        }, 1000);
       },
     },
   };
