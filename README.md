@@ -61,10 +61,10 @@ npm run serve
 <a>![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm.png)</a>
 <a>![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm_2.png)</a>
 
-## vue-admin-beautiful 承诺定期捐赠的开源项目（感谢巨人）
+## 我们定期赞助的开源项目（感谢巨人）
 
-<a href="https://github.com/vueComponent/ant-design-vue#backers" target="_blank">
-<img style="border-radius:999px" src="https://gitee.com/chu1204505056/image/raw/master/antdv.svg"/>
+<a title="ant-design-vue" href="https://github.com/vueComponent/ant-design-vue#backers" target="_blank">
+<img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/antdv.svg"/>
 </a>
 
 ## 鸣谢
