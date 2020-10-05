@@ -87,7 +87,9 @@
     watch: {
       $route: {
         handler({ fullPath }) {
+          //暂未研究清楚此处，待改进
           if (fullPath === "/index") fullPath = "/";
+          if (fullPath === "/test/test") fullPath = "/test";
           this.selectedKeys = [fullPath];
         },
         immediate: true,

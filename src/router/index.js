@@ -44,6 +44,26 @@ export const asyncRoutes = [
     ],
   },
   {
+    path: "/test",
+    component: Layout,
+    redirect: "/test/test",
+    meta: {
+      title: "动态路由测试",
+      icon: "test-tube-line",
+    },
+    children: [
+      {
+        path: "test",
+        name: "Test",
+        component: () => import("@/views/test"),
+        meta: {
+          title: "动态路由测试",
+          icon: "test-tube-line",
+        },
+      },
+    ],
+  },
+  {
     path: "/error",
     name: "Error",
     component: Layout,
