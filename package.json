@@ -20,10 +20,10 @@
     "js-cookie": "^3.0.0-rc.1",
     "mockjs": "^1.1.0",
     "remixicon": "^2.5.0",
+    "vab-config": "0.0.2",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-beta.13",
-    "vuex": "^4.0.0-beta.4",
-    "zx-layouts": "^0.6.15"
+    "vuex": "^4.0.0-beta.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.6",

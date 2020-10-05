@@ -3,5 +3,6 @@
  **/
 const config = {
   layout: "gallery",
+  donation: true,
 };
 module.exports = config;

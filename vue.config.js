@@ -21,7 +21,7 @@ const {
   webpackBarName,
   webpackBanner,
   donationConsole,
-} = require("zx-layouts");
+} = require("vab-config");
 
 if (donation) donationConsole();
 const { version, author } = require("./package.json");
