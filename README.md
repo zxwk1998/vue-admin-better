@@ -28,11 +28,11 @@
 
 - [umyui 文档（开发者准备的基于 Vue 2.0 的桌面端组件库; 流畅渲染表格万级数据）](http://www.umyui.com/)
 
-## 🌱vue2.x master 分支（element-ui）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful/tree/master)
+## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful/tree/vue3.0-antdv)
 
 ```bash
 # 克隆项目
-git clone https://github.com/chuzhixin/vue-admin-beautiful.git
+git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-beautiful.git
 # 进入项目目录
 cd vue-admin-beautiful
 # 安装依赖
@@ -41,11 +41,11 @@ npm i
 npm run serve
 ```
 
-## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful/tree/vue3.0-antdv)
+## 🌱vue2.x master 分支（element-ui）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful/tree/master)
 
 ```bash
 # 克隆项目
-git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-beautiful.git
+git clone -b master https://github.com/chuzhixin/vue-admin-beautiful.git
 # 进入项目目录
 cd vue-admin-beautiful
 # 安装依赖
