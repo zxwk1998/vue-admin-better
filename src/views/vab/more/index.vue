@@ -55,24 +55,6 @@
       <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
         <el-card>
           <div slot="header">
-            开源版不保留MIT协议，变更作者（自愿原则）
-            <el-button style="float: right; padding: 3px 0" type="text">
-              ￥299
-            </el-button>
-          </div>
-          <div>
-            <ul>
-              <li>支持以上所有特权，不包含VIP群</li>
-              <li>包含开源基础版授权与开源集成版授权</li>
-              <li>永久更新</li>
-              <li>提供低价外包合作机会</li>
-            </ul>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
-        <el-card>
-          <div slot="header">
             PRO版
             <el-button style="float: right; padding: 3px 0" type="text">
               ￥599
