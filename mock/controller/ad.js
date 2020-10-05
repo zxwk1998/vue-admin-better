@@ -4,8 +4,8 @@ const data = [
     url: "https://chu1204505056.gitee.io/vue-admin-beautiful-pro/#/index",
   },
   {
-    title: "vue-admin-beautiful-mini vue3.0版本已发布，点我提前体验",
-    url: "https://chu1204505056.gitee.io/vue-admin-beautiful-pro-mini/#/index",
+    title: "vue-admin-beautiful（antdv） vue3.0版本已发布，点我提前体验",
+    url: "https://chu1204505056.gitee.io/vue-admin-beautiful-mini/#/index",
   },
 ];
 module.exports = [
