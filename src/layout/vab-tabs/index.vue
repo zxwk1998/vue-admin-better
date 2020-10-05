@@ -1,29 +1,61 @@
 <template>
   <div class="vab-tabs">
-    <a-tabs
-      @tab-click="handleTabClick"
-      @edit="handleTabRemove"
-      v-model:activeKey="tabActive"
-      hide-add
-      type="editable-card"
-    >
-      <a-tab-pane
-        v-for="item in visitedRoutes"
-        :key="item.fullPath"
-        :closable="!isAffix(item)"
-        :tab="item.meta.title"
-      ></a-tab-pane>
-    </a-tabs>
+    <a-row type="flex">
+      <a-col flex="auto">
+        <a-tabs
+          @tab-click="handleTabClick"
+          @edit="handleTabRemove"
+          v-model:activeKey="tabActive"
+          hide-add
+          type="editable-card"
+        >
+          <a-tab-pane
+            v-for="item in visitedRoutes"
+            :key="item.fullPath"
+            :closable="!isAffix(item)"
+            :tab="item.meta.title"
+          ></a-tab-pane>
+        </a-tabs>
+      </a-col>
+      <a-col flex="88px">
+        <a-dropdown>
+          <template v-slot:overlay>
+            <a-menu @click="handleClick">
+              <a-menu-item key="closeOthersTabs">
+                <a>关闭其他</a>
+              </a-menu-item>
+              <a-menu-item key="closeLeftTabs">
+                <a>关闭左侧</a>
+              </a-menu-item>
+              <a-menu-item key="closeRightTabs">
+                <a>关闭右侧</a>
+              </a-menu-item>
+              <a-menu-item key="closeAllTabs">
+                <a>关闭全部</a>
+              </a-menu-item>
+            </a-menu>
+          </template>
+          <a-button style="margin-left: 8px">
+            更多
+            <DownOutlined />
+          </a-button>
+        </a-dropdown>
+      </a-col>
+    </a-row>
   </div>
 </template>
 
 <script>
+  import { DownOutlined } from "@ant-design/icons-vue";
   import { mapActions, mapGetters } from "vuex";
   export default {
     name: "VabTabs",
+    components: {
+      DownOutlined,
+    },
     data() {
       return {
-        affixTags: [],
+        affixTabs: [],
         tabActive: null,
         created: false,
       };
@@ -37,13 +69,13 @@
     watch: {
       $route: {
         handler(route) {
-          this.addTags(route);
+          this.addTabs(route);
         },
       },
     },
     created() {
-      this.initAffixTags(this.routes);
-      this.addTags(this.$route);
+      this.initAffixTabs(this.routes);
+      this.addTabs(this.$route);
     },
     methods: {
       ...mapActions({
@@ -54,13 +86,13 @@
         delRightVisitedRoutes: "tagsBar/delRightVisitedRoutes",
         delAllVisitedRoutes: "tagsBar/delAllVisitedRoutes",
       }),
-      initAffixTags(routes) {
+      initAffixTabs(routes) {
         routes.forEach((route) => {
-          if (route.meta && route.meta.affix) this.addTags(route);
-          if (route.children) this.initAffixTags(route.children);
+          if (route.meta && route.meta.affix) this.addTabs(route);
+          if (route.children) this.initAffixTabs(route.children);
         });
       },
-      async addTags(tag) {
+      async addTabs(tag) {
         if (tag.name && tag.meta && tag.meta.tagHidden !== true) {
           let matched = [tag.name];
           if (tag.matched) matched = tag.matched.map((item) => item.name);
@@ -92,19 +124,19 @@
         await this.delVisitedRoute(view);
         if (this.isActive(view)) this.toLastTag();
       },
-      handleCommand(command) {
-        switch (command) {
-          case "closeOthersTags":
-            this.closeOthersTags();
+      handleClick({ key }) {
+        switch (key) {
+          case "closeOthersTabs":
+            this.closeOthersTabs();
             break;
-          case "closeLeftTags":
-            this.closeLeftTags();
+          case "closeLeftTabs":
+            this.closeLeftTabs();
             break;
-          case "closeRightTags":
-            this.closeRightTags();
+          case "closeRightTabs":
+            this.closeRightTabs();
             break;
-          case "closeAllTags":
-            this.closeAllTags();
+          case "closeAllTabs":
+            this.closeAllTabs();
             break;
         }
       },
@@ -114,36 +146,30 @@
           this.toLastTag();
         }
       },
-      async closeOthersTags() {
-        const view = this.toThisTag();
-        await this.delOthersVisitedRoutes(view);
+      async closeOthersTabs() {
+        await this.delOthersVisitedRoutes(this.toThisTag());
       },
-      async closeLeftTags() {
-        const view = this.toThisTag();
-        await this.delLeftVisitedRoutes(view);
+      async closeLeftTabs() {
+        await this.delLeftVisitedRoutes(this.toThisTag());
       },
-      async closeRightTags() {
-        const view = this.toThisTag();
-        await this.delRightVisitedRoutes(view);
+      async closeRightTabs() {
+        await this.delRightVisitedRoutes(this.toThisTag());
       },
-      async closeAllTags() {
-        const view = this.toThisTag();
+      async closeAllTabs() {
         await this.delAllVisitedRoutes();
-        if (this.affixTags.some((tag) => tag.path === view.path)) return;
+        if (this.affixTabs.some((tag) => tag.path === this.toThisTag().path))
+          return;
         this.toLastTag();
       },
       toLastTag() {
         const latestView = this.visitedRoutes.slice(-1)[0];
-        if (latestView) {
-          this.$router.push(latestView);
-        } else {
-          this.$router.push("/");
-        }
+        if (latestView) this.$router.push(latestView);
+        else this.$router.push("/");
       },
       toThisTag() {
-        const view = this.visitedRoutes.find((item) => {
-          return item.fullPath === this.$route.fullPath;
-        });
+        const view = this.visitedRoutes.find(
+          (item) => item.fullPath === this.$route.fullPath
+        );
         if (this.$route.path !== view.path) this.$router.push(view);
         return view;
       },
@@ -152,8 +178,25 @@
 </script>
 <style lang="less">
   .vab-tabs {
-    .ant-tabs-bar {
-      margin: 0 !important;
+    padding: 0 @vab-margin;
+    background: #ffffff;
+    .ant-tabs {
+      &-bar {
+        margin: 0 !important;
+      }
+      &-tab {
+        height: 32px !important;
+        margin-right: 5px !important;
+        line-height: 32px !important;
+        background: #ffffff !important;
+        border: 1px solid #dedede !important;
+      }
+      &-tab-active {
+        border: 1px solid #1890ff !important;
+        .ant-tabs-close-x {
+          color: #1890ff !important;
+        }
+      }
     }
   }
 </style>
