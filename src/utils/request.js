@@ -8,11 +8,12 @@ import {
   requestTimeout,
   successCode,
   tokenName,
-} from "@/config/settings";
+} from "@/config";
 import store from "@/store";
 import qs from "qs";
 import router from "@/router";
 import { isArray } from "@/utils/validate";
+import { message } from "ant-design-vue";
 
 let loadingInstance;
 
@@ -25,14 +26,14 @@ let loadingInstance;
 const handleCode = (code, msg) => {
   switch (code) {
     case invalidCode:
-      alert(msg || `后端接口${code}异常`, "error");
+      message.error(msg || `后端接口${code}异常`);
       store.dispatch("user/resetAll").catch(() => {});
       break;
     case noRoleCode:
       router.push({ path: "/401" }).catch(() => {});
       break;
     default:
-      alert(msg || `后端接口${code}异常`, "error");
+      message.error(msg || `后端接口${code}异常`);
       break;
   }
 };
@@ -117,7 +118,7 @@ instance.interceptors.response.use(
         const code = message.substr(message.length - 3);
         message = "后端接口" + code + "异常";
       }
-      alert(message || `后端接口未知异常`, "error");
+      message.error(message || `后端接口未知异常`);
       return Promise.reject(error);
     }
   }

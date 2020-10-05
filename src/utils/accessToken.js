@@ -1,4 +1,4 @@
-import { storage, tokenTableName } from "@/config/settings";
+import { storage, tokenTableName } from "@/config";
 import cookie from "js-cookie";
 
 /**

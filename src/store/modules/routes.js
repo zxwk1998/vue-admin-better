@@ -29,7 +29,6 @@ const actions = {
   async setRoutes({ commit }) {
     const finallyRoutes = filterRoutes([...constantRoutes, ...asyncRoutes]);
     commit("setRoutes", finallyRoutes);
-    console.log(asyncRoutes);
     return [...asyncRoutes];
   },
   /**

@@ -2,7 +2,7 @@
  * @author chuzhixin 1204505056@qq.com
  * @description 所有全局配置的状态管理，如无必要请勿修改
  */
-import defaultSettings from "@/config/settings";
+import defaultSettings from "@/config";
 import { isJson } from "@/utils/validate";
 
 const {

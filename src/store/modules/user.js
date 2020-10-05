@@ -8,7 +8,8 @@ import {
   removeAccessToken,
   setAccessToken,
 } from "@/utils/accessToken";
-import { tokenName } from "@/config/settings";
+import { title, tokenName } from "@/config";
+import { message, notification } from "ant-design-vue";
 
 const state = {
   accessToken: getAccessToken(),
@@ -75,11 +76,23 @@ const actions = {
     const accessToken = data[tokenName];
     if (accessToken) {
       commit("setAccessToken", accessToken);
+      const hour = new Date().getHours();
+      const thisTime =
+        hour < 8
+          ? "早上好"
+          : hour <= 11
+          ? "上午好"
+          : hour <= 13
+          ? "中午好"
+          : hour < 18
+          ? "下午好"
+          : "晚上好";
+      notification.open({
+        message: `欢迎登录${title}`,
+        description: `${thisTime}！`,
+      });
     } else {
-      /*  Vue.prototype.$baseMessage(
-        `登录接口异常，未正确返回${tokenName}...`,
-        "error"
-      ); */
+      message.error(`登录接口异常，未正确返回${tokenName}...`);
     }
   },
   /**
@@ -91,7 +104,7 @@ const actions = {
   async getUserInfo({ commit, dispatch, state }) {
     const { data } = await getUserInfo(state.accessToken);
     if (!data) {
-      /*  Vue.prototype.$baseMessage("验证失败，请重新登录...", "error"); */
+      message.error(`验证失败，请重新登录...`);
       return false;
     }
     let { username, avatar, roles, ability } = data;
@@ -102,7 +115,7 @@ const actions = {
       commit("setUsername", username);
       commit("setAvatar", avatar);
     } else {
-      console.log("用户信息接口异常");
+      message.error("用户信息接口异常");
     }
   },
 

@@ -1,6 +1,6 @@
 import router from "@/router";
 import path from "path";
-import { rolesControl } from "@/config/settings";
+import { rolesControl } from "@/config";
 import { isExternal } from "@/utils/validate";
 import { hasRole } from "@/utils/hasRole";
 

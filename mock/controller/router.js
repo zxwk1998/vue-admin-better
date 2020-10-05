@@ -6,7 +6,7 @@
  * name:"Demo"                    首字母大写，一定要与vue文件的name对应起来，用于noKeepAlive缓存控制（该项特别重要）
  * meta:{
     title:"title"                 菜单、面包屑、多标签页显示的名称
-    roles:["admin","..."]         当config/settings.js中rolesControl配置开启时，用于控制角色
+    roles:["admin","..."]         当config/index.js中rolesControl配置开启时，用于控制角色
     roles: {
       role: ["admin"],
       ability: ["READ","WRITE","DELETE"],         ability: ["READ","WRITE"],

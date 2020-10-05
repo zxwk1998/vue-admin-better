@@ -1,5 +1,5 @@
 import request from "@/utils/request";
-import { tokenName } from "@/config/settings";
+import { tokenName } from "@/config";
 
 export async function login(data) {
   return request({

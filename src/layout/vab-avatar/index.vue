@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  import { recordRoute } from "@/config/settings";
+  import { recordRoute } from "@/config";
   import { DownOutlined } from "@ant-design/icons-vue";
 
   import { mapGetters } from "vuex";

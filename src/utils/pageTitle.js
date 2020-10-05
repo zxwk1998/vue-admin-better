@@ -1,4 +1,4 @@
-import { title, titleReverse, titleSeparator } from "@/config/settings";
+import { title, titleReverse, titleSeparator } from "@/config";
 
 /**
  * @author chuzhixin 1204505056@qq.com

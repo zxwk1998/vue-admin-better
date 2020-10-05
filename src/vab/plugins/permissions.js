@@ -10,7 +10,7 @@ import {
   loginInterception,
   recordRoute,
   routesWhiteList,
-} from "@/config/settings";
+} from "@/config";
 
 router.beforeEach(async (to, from, next) => {
   let hasToken = store.getters["user/accessToken"];
@@ -32,7 +32,7 @@ router.beforeEach(async (to, from, next) => {
           if (loginInterception) {
             await store.dispatch("user/getUserInfo");
           } else {
-            //settings.js loginInterception为false（关闭登录拦截时）时，创建虚拟角色
+            //loginInterception为false（关闭登录拦截时）时，创建虚拟角色
             await store.dispatch("user/setVirtualRoles");
           }
 
