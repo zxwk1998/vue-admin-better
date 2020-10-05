@@ -1,11 +1,11 @@
 <template>
   <a-alert
     :message="
-      '欢迎体验全网首个基于vue' +
+      '欢迎体验全网首个基于 vue ' +
       dependencies['vue'] +
-      'ant-design-vue' +
+      ' + ant-design-vue ' +
       dependencies['ant-design-vue'] +
-      '开发的admin框架vue-admin-beautiful-antdv，vue3.0的流畅超乎了我们的想象。。。'
+      ' 开发的admin框架vue-admin-beautiful-antdv，vue3.0的流畅超乎了我们的想象。。。'
     "
     type="success"
     show-icon
