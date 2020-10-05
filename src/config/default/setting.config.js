@@ -16,7 +16,7 @@ const setting = {
   baseURL:
     process.env.NODE_ENV === "development" ? "mock-server" : "mock-server",
   //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
-  title: "vue-admin-beautiful-pro",
+  title: "vue-admin-beautiful-antdv",
   //标题分隔符
   titleSeparator: " - ",
   //标题是否反转 如果为false:"page - title"，如果为ture:"title - page"
