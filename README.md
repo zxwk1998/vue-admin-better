@@ -28,11 +28,11 @@
 
 - [umyui 文档（开发者准备的基于 Vue 2.0 的桌面端组件库; 流畅渲染表格万级数据）](http://www.umyui.com/)
 
-## 🌱vue2.x master 分支（element-ui）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful/tree/master)
+## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful/tree/vue3.0-antdv)
 
 ```bash
 # 克隆项目
-git clone https://github.com/chuzhixin/vue-admin-beautiful.git
+git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-beautiful.git
 # 进入项目目录
 cd vue-admin-beautiful
 # 安装依赖
@@ -41,11 +41,11 @@ npm i
 npm run serve
 ```
 
-## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful/tree/vue3.0-antdv)
+## 🌱vue2.x master 分支（element-ui）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful/tree/master)
 
 ```bash
 # 克隆项目
-git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-beautiful.git
+git clone -b master https://github.com/chuzhixin/vue-admin-beautiful.git
 # 进入项目目录
 cd vue-admin-beautiful
 # 安装依赖
@@ -61,10 +61,10 @@ npm run serve
 <a>![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm.png)</a>
 <a>![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm_2.png)</a>
 
-## vue-admin-beautiful 承诺定期捐赠的开源项目（感谢巨人）
+## 我们定期赞助的开源项目（感谢巨人）
 
-<a href="https://github.com/vueComponent/ant-design-vue#backers" target="_blank">
-<img style="border-radius:999px" src="https://gitee.com/chu1204505056/image/raw/master/antdv.svg"/>
+<a title="ant-design-vue" href="https://github.com/vueComponent/ant-design-vue#backers" target="_blank">
+<img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/antdv.svg"/>
 </a>
 
 ## 鸣谢
