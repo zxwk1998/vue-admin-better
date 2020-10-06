@@ -44,6 +44,27 @@ export const asyncRoutes = [
     ],
   },
   {
+    path: "/vab",
+    component: Layout,
+    redirect: "/vab/table",
+    alwaysShow: true,
+    meta: {
+      title: "组件",
+      icon: "apps-line",
+    },
+    children: [
+      {
+        path: "table",
+        name: "Table",
+        component: () => import("@/views/vab/table"),
+        meta: {
+          title: "表格",
+          icon: "table-2",
+        },
+      },
+    ],
+  },
+  {
     path: "/test",
     component: Layout,
     redirect: "/test/test",

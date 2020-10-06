@@ -5,7 +5,7 @@
       dependencies['vue'] +
       ' + ant-design-vue ' +
       dependencies['ant-design-vue'] +
-      ' 开发的admin框架vue-admin-beautiful-antdv，vue3.0的流畅超乎了我们的想象，感谢尤雨溪、唐金州的开源项目对框架带来的灵感和帮助，vue-admin-beautiful-antdv同时支持电脑、平板、手机，希望实现一套代码帮助中小微企业快速实现项目落地，帮助前端小白快速入门vue前端框架搭建技术，迅速在工作中占据主导地位。'
+      ' 开发的admin框架vue-admin-beautiful-antdv，vue3.0的流畅超乎了我们的想象，感谢尤雨溪、唐金州的开源项目我带来的灵感和帮助，vue-admin-beautiful-antdv同时支持电脑、平板、手机，希望实现一套代码即可帮助中小微企业快速实现项目落地，帮助前端小白快速入门vue前端框架搭建技术，迅速在工作中占据主导地位。'
     "
     type="success"
     show-icon
