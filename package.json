@@ -20,7 +20,6 @@
     "js-cookie": "^3.0.0-rc.1",
     "mockjs": "^1.1.0",
     "remixicon": "^2.5.0",
-    "vab-config": "0.0.3",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-beta.13",
     "vuex": "^4.0.0-beta.4"
@@ -48,6 +47,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recess-order": "^2.1.0",
     "svg-sprite-loader": "^5.0.0",
+    "vab-config": "0.0.5",
     "webpackbar": "^4.0.0"
   },
   "gitHooks": {
