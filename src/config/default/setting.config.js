@@ -34,7 +34,7 @@ const setting = {
   //路由模式，可选值为 history 或 hash
   routerMode: "hash",
   //不经过token校验的路由
-  routesWhiteList: ["/login", "/register", "/callback", "/404", "/401"],
+  routesWhiteList: ["/login", "/register", "/callback", "/404", "/403"],
   //加载时显示文字
   loadingText: "正在加载中...",
   //token名称

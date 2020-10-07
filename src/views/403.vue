@@ -4,7 +4,7 @@
       <a-row :gutter="20">
         <a-col :lg="12" :md="12" :sm="24" :xl="12" :xs="24">
           <div class="pic-error">
-            <img class="pic-error-parent" src="@/assets/error_images/401.png" />
+            <img class="pic-error-parent" src="@/assets/error_images/403.png" />
             <img
               class="pic-error-child left"
               src="@/assets/error_images/cloud.png"
@@ -31,7 +31,7 @@
   import { mapActions } from "vuex";
 
   export default {
-    name: "Page401",
+    name: "Page403",
     data() {
       return {
         jumpTime: 5,

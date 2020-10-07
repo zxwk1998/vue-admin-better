@@ -8,9 +8,9 @@ export const constantRoutes = [
     hidden: true,
   },
   {
-    path: "/401",
-    name: "401",
-    component: () => import("@/views/401"),
+    path: "/403",
+    name: "403",
+    component: () => import("@/views/403"),
     hidden: true,
   },
   {
@@ -88,18 +88,18 @@ export const asyncRoutes = [
     path: "/error",
     name: "Error",
     component: Layout,
-    redirect: "/error/401",
+    redirect: "/error/403",
     meta: {
       title: "错误页",
       icon: "error-warning-line",
     },
     children: [
       {
-        path: "401",
-        name: "Error401",
-        component: () => import("@/views/401"),
+        path: "403",
+        name: "Error403",
+        component: () => import("@/views/403"),
         meta: {
-          title: "401",
+          title: "403",
           icon: "error-warning-line",
         },
       },

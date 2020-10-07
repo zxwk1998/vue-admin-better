@@ -95,7 +95,7 @@
         login: "user/login",
       }),
       handleRoute() {
-        return this.redirect === "/404" || this.redirect === "/401"
+        return this.redirect === "/404" || this.redirect === "/403"
           ? "/"
           : this.redirect;
       },
