@@ -61,8 +61,38 @@
         <tr>
           <td>v2.x版演示地址（MIT协议，商用免费）</td>
           <td colspan="3">
-            <a href="https://chu1204505056.gitee.io/vue-admin-beautiful/">
+            <a
+              href="https://chu1204505056.gitee.io/vue-admin-beautiful-element/"
+            >
+              https://chu1204505056.gitee.io/vue-admin-beautiful-element/
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>v2.x版开源地址（MIT协议，商用免费）</td>
+          <td colspan="3">
+            <a
+              href="https://github.com/chuzhixin/vue-admin-beautiful/tree/master"
+            >
+              https://github.com/chuzhixin/vue-admin-beautiful/tree/master
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>v3.x版演示地址（MIT协议，商用免费）</td>
+          <td colspan="3">
+            <a href="https://chu1204505056.gitee.io/vue-admin-beautiful-antdv/">
               https://chu1204505056.gitee.io/vue-admin-beautiful/
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>v3.x版开源地址（MIT协议，商用免费）</td>
+          <td colspan="3">
+            <a
+              href="https://github.com/chuzhixin/vue-admin-beautiful/tree/vue3.0-antdv"
+            >
+              https://github.com/chuzhixin/vue-admin-beautiful/tree/vue3.0-antdv
             </a>
           </td>
         </tr>
