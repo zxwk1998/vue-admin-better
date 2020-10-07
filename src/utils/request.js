@@ -1,4 +1,3 @@
-import Vue from "vue";
 import axios from "axios";
 import {
   baseURL,
@@ -12,10 +11,12 @@ import store from "@/store";
 import qs from "qs";
 import router from "@/router";
 import { isArray } from "@/utils/validate";
+import { message } from "ant-design-vue";
 
 let loadingInstance;
 
 /**
+ * @author chuzhixin 1204505056@qq.com
  * @description 处理code异常
  * @param {*} code
  * @param {*} msg
@@ -23,22 +24,20 @@ let loadingInstance;
 const handleCode = (code, msg) => {
   switch (code) {
     case 401:
-      Vue.prototype.$baseMessage(msg || `无权限访问`, "error");
+      message.error(msg || "登录失效");
       store.dispatch("user/resetAll").catch(() => {});
       break;
     case 403:
-      router.push({ path: "/403" }).catch(() => {});
-      break;
-    case undefined:
-      Vue.prototype.$baseMessage(`后端接口未返回code`, "error");
+      router.push({ path: "/401" }).catch(() => {});
       break;
     default:
-      Vue.prototype.$baseMessage(msg || `后端接口${code}异常`, "error");
+      message.error(msg || `后端接口${code}异常`);
       break;
   }
 };
 
 /**
+ * @author chuzhixin 1204505056@qq.com
  * @description axios初始化
  */
 const instance = axios.create({
@@ -50,6 +49,7 @@ const instance = axios.create({
 });
 
 /**
+ * @author chuzhixin 1204505056@qq.com
  * @description axios请求拦截器
  */
 instance.interceptors.request.use(
@@ -62,8 +62,9 @@ instance.interceptors.request.use(
         "application/x-www-form-urlencoded;charset=UTF-8"
     )
       config.data = qs.stringify(config.data);
-    if (debounce.some((item) => config.url.includes(item)))
-      loadingInstance = Vue.prototype.$baseLoading();
+    if (debounce.some((item) => config.url.includes(item))) {
+      //这里写加载动画
+    }
     return config;
   },
   (error) => {
@@ -72,6 +73,7 @@ instance.interceptors.request.use(
 );
 
 /**
+ * @author chuzhixin 1204505056@qq.com
  * @description axios响应拦截器
  */
 instance.interceptors.response.use(
@@ -90,7 +92,7 @@ instance.interceptors.response.use(
     } else {
       handleCode(code, msg);
       return Promise.reject(
-        "vue-admin-beautiful-pro请求异常拦截:" +
+        "vue-admin-beautiful请求异常拦截:" +
           JSON.stringify({ url: config.url, code, msg }) || "Error"
       );
     }
@@ -114,7 +116,7 @@ instance.interceptors.response.use(
         const code = message.substr(message.length - 3);
         message = "后端接口" + code + "异常";
       }
-      Vue.prototype.$baseMessage(message || `后端接口未知异常`, "error");
+      message.error(message || `后端接口未知异常`);
       return Promise.reject(error);
     }
   }
