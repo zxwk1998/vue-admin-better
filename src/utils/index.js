@@ -1,5 +1,5 @@
-import { dependencies } from "../../package.json";
-if (!dependencies["vab-config"]) document.body.innerHTML = "";
+import { devDependencies } from "../../package.json";
+if (!devDependencies["vab-config"]) document.body.innerHTML = "";
 /**
  * @author chuzhixin 1204505056@qq.com
  * @description 格式化时间
