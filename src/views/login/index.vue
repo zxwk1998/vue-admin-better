@@ -35,9 +35,9 @@
                 登录
               </a-button>
               <div class="login-container-tips">
-                基于vue{{ dependencies["vue"] }}
+                基于vue{{ dependencies['vue'] }}
                 + ant-design-vue
-                {{ dependencies["ant-design-vue"] }}开发
+                {{ dependencies['ant-design-vue'] }}开发
               </div>
             </a-form-item>
           </a-form>
@@ -48,12 +48,12 @@
   </div>
 </template>
 <script>
-  import { dependencies, devDependencies } from "*/package.json";
-  import { mapActions, mapGetters } from "vuex";
-  import { UserOutlined, LockOutlined } from "@ant-design/icons-vue";
+  import { dependencies, devDependencies } from '*/package.json'
+  import { mapActions, mapGetters } from 'vuex'
+  import { UserOutlined, LockOutlined } from '@ant-design/icons-vue'
 
   export default {
-    name: "Login",
+    name: 'Login',
     components: {
       UserOutlined,
       LockOutlined,
@@ -61,55 +61,55 @@
     data() {
       return {
         form: {
-          username: "",
-          password: "",
+          username: '',
+          password: '',
         },
         redirect: undefined,
         dependencies: dependencies,
         devDependencies: devDependencies,
-      };
+      }
     },
     computed: {
       ...mapGetters({
-        logo: "settings/logo",
-        title: "settings/title",
+        logo: 'settings/logo',
+        title: 'settings/title',
       }),
     },
     watch: {
       $route: {
         handler(route) {
-          this.redirect = (route.query && route.query.redirect) || "/";
+          this.redirect = (route.query && route.query.redirect) || '/'
         },
         immediate: true,
       },
     },
     mounted() {
-      this.form.username = "admin";
-      this.form.password = "123456";
+      this.form.username = 'admin'
+      this.form.password = '123456'
       setTimeout(() => {
-        this.handleSubmit();
-      }, 500000);
+        this.handleSubmit()
+      }, 500000)
     },
     methods: {
       ...mapActions({
-        login: "user/login",
+        login: 'user/login',
       }),
       handleRoute() {
-        return this.redirect === "/404" || this.redirect === "/403"
-          ? "/"
-          : this.redirect;
+        return this.redirect === '/404' || this.redirect === '/403'
+          ? '/'
+          : this.redirect
       },
       async handleSubmit() {
-        await this.login(this.form);
-        await this.$router.push(this.handleRoute());
+        await this.login(this.form)
+        await this.$router.push(this.handleRoute())
       },
     },
-  };
+  }
 </script>
 <style lang="less">
   .login-container {
     height: 100vh;
-    background: url("~@/assets/login_images/login_background.png");
+    background: url('~@/assets/login_images/login_background.png');
     background-size: cover;
     &-form {
       width: calc(100% - 40px);
@@ -118,7 +118,7 @@
       margin-top: calc((100vh - 380px) / 2);
       margin-right: 20px;
       margin-left: 20px;
-      background: url("~@/assets/login_images/login_form.png");
+      background: url('~@/assets/login_images/login_form.png');
       background-size: 100% 100%;
       border-radius: 10px;
       box-shadow: 0 2px 8px 0 rgba(7, 17, 27, 0.06);

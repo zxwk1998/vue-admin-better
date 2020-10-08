@@ -28,44 +28,44 @@
 </template>
 
 <script>
-  import { mapActions } from "vuex";
+  import { mapActions } from 'vuex'
 
   export default {
-    name: "Page403",
+    name: 'Page403',
     data() {
       return {
         jumpTime: 5,
-        oops: "抱歉!",
-        headline: "您没有操作角色...",
-        info: "当前帐号没有操作角色,请联系管理员。",
-        btn: "返回首页",
+        oops: '抱歉!',
+        headline: '您没有操作角色...',
+        info: '当前帐号没有操作角色,请联系管理员。',
+        btn: '返回首页',
         timer: 0,
-      };
+      }
     },
     mounted() {
-      this.timeChange();
+      this.timeChange()
     },
     beforeUnmount() {
-      clearInterval(this.timer);
+      clearInterval(this.timer)
     },
     methods: {
       ...mapActions({
-        delVisitedRoute: "tagsBar/delVisitedRoute",
-        delOthersVisitedRoutes: "tagsBar/delOthersVisitedRoutes",
+        delVisitedRoute: 'tagsBar/delVisitedRoute',
+        delOthersVisitedRoutes: 'tagsBar/delOthersVisitedRoutes',
       }),
       timeChange() {
         this.timer = setInterval(() => {
           if (this.jumpTime) {
-            this.jumpTime--;
+            this.jumpTime--
           } else {
-            this.$router.push({ path: "/" });
-            this.delOthersVisitedRoutes({ path: "/" });
-            clearInterval(this.timer);
+            this.$router.push({ path: '/' })
+            this.delOthersVisitedRoutes({ path: '/' })
+            clearInterval(this.timer)
           }
-        }, 1000);
+        }, 1000)
       },
     },
-  };
+  }
 </script>
 
 <style lang="less" scoped>

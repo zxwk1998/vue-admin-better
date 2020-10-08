@@ -10,18 +10,18 @@
 
 <script>
   export default {
-    name: "VabContent",
+    name: 'VabContent',
     watch: {
       $route: {
         handler() {
-          if ("mobile" === this.device) {
-            this.$store.dispatch("settings/foldSideBar");
+          if ('mobile' === this.device) {
+            this.$store.dispatch('settings/foldSideBar')
           }
         },
         immediate: true,
       },
     },
-  };
+  }
 </script>
 
 <style lang="less">

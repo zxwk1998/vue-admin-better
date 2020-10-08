@@ -5,9 +5,9 @@
 </template>
 
 <script>
-  import VersionInformation from "./components/VersionInformation";
+  import VersionInformation from './components/VersionInformation'
   export default {
-    name: "Index",
+    name: 'Index',
     components: { VersionInformation },
-  };
+  }
 </script>

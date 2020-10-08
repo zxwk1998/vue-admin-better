@@ -5,10 +5,10 @@
 
 const state = {
   visitedRoutes: [],
-};
+}
 const getters = {
   visitedRoutes: (state) => state.visitedRoutes,
-};
+}
 const mutations = {
   /**
    * @author chuzhixin 1204505056@qq.com
@@ -18,12 +18,12 @@ const mutations = {
    * @returns
    */
   addVisitedRoute(state, route) {
-    let target = state.visitedRoutes.find((item) => item.path === route.path);
+    let target = state.visitedRoutes.find((item) => item.path === route.path)
     if (target) {
-      if (route.fullPath !== target.fullPath) Object.assign(target, route);
-      return;
+      if (route.fullPath !== target.fullPath) Object.assign(target, route)
+      return
     }
-    state.visitedRoutes.push(Object.assign({}, route));
+    state.visitedRoutes.push(Object.assign({}, route))
   },
   /**
    * @author chuzhixin 1204505056@qq.com
@@ -34,8 +34,8 @@ const mutations = {
    */
   delVisitedRoute(state, route) {
     state.visitedRoutes.forEach((item, index) => {
-      if (item.path === route.path) state.visitedRoutes.splice(index, 1);
-    });
+      if (item.path === route.path) state.visitedRoutes.splice(index, 1)
+    })
   },
   /**
    * @author chuzhixin 1204505056@qq.com
@@ -47,7 +47,7 @@ const mutations = {
   delOthersVisitedRoutes(state, route) {
     state.visitedRoutes = state.visitedRoutes.filter(
       (item) => item.meta.affix || item.path === route.path
-    );
+    )
   },
   /**
    * @author chuzhixin 1204505056@qq.com
@@ -57,11 +57,11 @@ const mutations = {
    * @returns
    */
   delLeftVisitedRoutes(state, route) {
-    let index = state.visitedRoutes.length;
+    let index = state.visitedRoutes.length
     state.visitedRoutes = state.visitedRoutes.filter((item) => {
-      if (item.name === route.name) index = state.visitedRoutes.indexOf(item);
-      return item.meta.affix || index <= state.visitedRoutes.indexOf(item);
-    });
+      if (item.name === route.name) index = state.visitedRoutes.indexOf(item)
+      return item.meta.affix || index <= state.visitedRoutes.indexOf(item)
+    })
   },
   /**
    * @author chuzhixin 1204505056@qq.com
@@ -71,11 +71,11 @@ const mutations = {
    * @returns
    */
   delRightVisitedRoutes(state, route) {
-    let index = state.visitedRoutes.length;
+    let index = state.visitedRoutes.length
     state.visitedRoutes = state.visitedRoutes.filter((item) => {
-      if (item.name === route.name) index = state.visitedRoutes.indexOf(item);
-      return item.meta.affix || index >= state.visitedRoutes.indexOf(item);
-    });
+      if (item.name === route.name) index = state.visitedRoutes.indexOf(item)
+      return item.meta.affix || index >= state.visitedRoutes.indexOf(item)
+    })
   },
   /**
    * @author chuzhixin 1204505056@qq.com
@@ -85,9 +85,9 @@ const mutations = {
    * @returns
    */
   delAllVisitedRoutes(state) {
-    state.visitedRoutes = state.visitedRoutes.filter((item) => item.meta.affix);
+    state.visitedRoutes = state.visitedRoutes.filter((item) => item.meta.affix)
   },
-};
+}
 const actions = {
   /**
    * @author chuzhixin 1204505056@qq.com
@@ -96,7 +96,7 @@ const actions = {
    * @param {*} route
    */
   addVisitedRoute({ commit }, route) {
-    commit("addVisitedRoute", route);
+    commit('addVisitedRoute', route)
   },
   /**
    * @author chuzhixin 1204505056@qq.com
@@ -105,7 +105,7 @@ const actions = {
    * @param {*} route
    */
   delVisitedRoute({ commit }, route) {
-    commit("delVisitedRoute", route);
+    commit('delVisitedRoute', route)
   },
   /**
    * @author chuzhixin 1204505056@qq.com
@@ -114,7 +114,7 @@ const actions = {
    * @param {*} route
    */
   delOthersVisitedRoutes({ commit }, route) {
-    commit("delOthersVisitedRoutes", route);
+    commit('delOthersVisitedRoutes', route)
   },
   /**
    * @author chuzhixin 1204505056@qq.com
@@ -123,7 +123,7 @@ const actions = {
    * @param {*} route
    */
   delLeftVisitedRoutes({ commit }, route) {
-    commit("delLeftVisitedRoutes", route);
+    commit('delLeftVisitedRoutes', route)
   },
   /**
    * @author chuzhixin 1204505056@qq.com
@@ -132,7 +132,7 @@ const actions = {
    * @param {*} route
    */
   delRightVisitedRoutes({ commit }, route) {
-    commit("delRightVisitedRoutes", route);
+    commit('delRightVisitedRoutes', route)
   },
   /**
    * @author chuzhixin 1204505056@qq.com
@@ -140,7 +140,7 @@ const actions = {
    * @param {*} { commit }
    */
   delAllVisitedRoutes({ commit }) {
-    commit("delAllVisitedRoutes");
+    commit('delAllVisitedRoutes')
   },
-};
-export default { state, getters, mutations, actions };
+}
+export default { state, getters, mutations, actions }

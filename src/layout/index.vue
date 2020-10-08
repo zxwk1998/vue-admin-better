@@ -48,13 +48,13 @@
   </a-layout>
 </template>
 <script>
-  import VabLogo from "./vab-logo";
-  import VabAvatar from "./vab-avatar";
-  import VabMenu from "./vab-menu";
-  import VabTabs from "./vab-tabs";
-  import VabContent from "./vab-content";
-  import { mapActions, mapGetters } from "vuex";
-  import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons-vue";
+  import VabLogo from './vab-logo'
+  import VabAvatar from './vab-avatar'
+  import VabMenu from './vab-menu'
+  import VabTabs from './vab-tabs'
+  import VabContent from './vab-content'
+  import { mapActions, mapGetters } from 'vuex'
+  import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue'
 
   export default {
     components: {
@@ -68,58 +68,58 @@
     },
     data() {
       return {
-        selectedKeys: ["/index"],
-      };
+        selectedKeys: ['/index'],
+      }
     },
     computed: {
       ...mapGetters({
-        collapse: "settings/collapse",
-        routes: "routes/routes",
-        device: "settings/device",
+        collapse: 'settings/collapse',
+        routes: 'routes/routes',
+        device: 'settings/device',
       }),
       classObj() {
         return {
-          "vab-mobile": this.device === "mobile",
-          "vab-collapse": this.collapse,
-        };
+          'vab-mobile': this.device === 'mobile',
+          'vab-collapse': this.collapse,
+        }
       },
     },
     watch: {
       $route: {
         handler({ fullPath }) {
           //暂未研究清楚此处，待改进
-          if (fullPath === "/index") fullPath = "/";
-          if (fullPath === "/test/test") fullPath = "/test";
-          this.selectedKeys = [fullPath];
+          if (fullPath === '/index') fullPath = '/'
+          if (fullPath === '/test/test') fullPath = '/test'
+          this.selectedKeys = [fullPath]
         },
         immediate: true,
       },
     },
     beforeMount() {
-      window.addEventListener("resize", this.handleLayouts);
+      window.addEventListener('resize', this.handleLayouts)
     },
     beforeUnmount() {
-      window.removeEventListener("resize", this.handleLayouts);
+      window.removeEventListener('resize', this.handleLayouts)
     },
     mounted() {
-      this.handleLayouts();
+      this.handleLayouts()
     },
     methods: {
       ...mapActions({
-        toggleDevice: "settings/toggleDevice",
-        handleFoldSideBar: "settings/foldSideBar",
-        toggleCollapse: "settings/toggleCollapse",
+        toggleDevice: 'settings/toggleDevice',
+        handleFoldSideBar: 'settings/foldSideBar',
+        toggleCollapse: 'settings/toggleCollapse',
       }),
       handleLayouts() {
-        const width = document.body.getBoundingClientRect().width;
+        const width = document.body.getBoundingClientRect().width
         if (this.width !== width) {
-          const isMobile = width - 1 < 992;
-          this.toggleDevice(isMobile ? "mobile" : "desktop");
-          this.width = width;
+          const isMobile = width - 1 < 992
+          this.toggleDevice(isMobile ? 'mobile' : 'desktop')
+          this.width = width
         }
       },
     },
-  };
+  }
 </script>
 <style lang="less">
   .ant-layout-content {

@@ -11,24 +11,24 @@
 </template>
 
 <script>
-  import VabIcon from "@/layout/vab-icon";
+  import VabIcon from '@/layout/vab-icon'
   export default {
-    name: "Submenu",
+    name: 'Submenu',
     components: { VabIcon },
     props: {
       item: {
         type: Object,
         default() {
-          return null;
+          return null
         },
       },
       routeChildren: {
         type: Object,
         default() {
-          return null;
+          return null
         },
       },
     },
     methods: {},
-  };
+  }
 </script>

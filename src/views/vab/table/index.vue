@@ -9,25 +9,25 @@
   ></a-table>
 </template>
 <script>
-  import { getList } from "@/api/table";
+  import { getList } from '@/api/table'
   const columns = [
     {
-      title: "title",
-      dataIndex: "title",
+      title: 'title',
+      dataIndex: 'title',
     },
     {
-      title: "description",
-      dataIndex: "description",
+      title: 'description',
+      dataIndex: 'description',
     },
     {
-      title: "author",
-      dataIndex: "author",
+      title: 'author',
+      dataIndex: 'author',
     },
     {
-      title: "datetime",
-      dataIndex: "datetime",
+      title: 'datetime',
+      dataIndex: 'datetime',
     },
-  ];
+  ]
 
   export default {
     data() {
@@ -41,31 +41,31 @@
         query: {},
         loading: false,
         columns,
-      };
+      }
     },
     mounted() {
-      this.fetch();
+      this.fetch()
     },
     methods: {
       handleTableChange(pagination) {
-        const pager = { ...this.pagination };
-        pager.current = pagination.current;
-        this.pagination = pager;
-        this.fetch();
+        const pager = { ...this.pagination }
+        pager.current = pagination.current
+        this.pagination = pager
+        this.fetch()
       },
       fetch() {
-        this.loading = true;
+        this.loading = true
         getList({
           pageSize: this.pagination.pageSize,
           current: this.pagination.current,
         }).then(({ data, total }) => {
-          const pagination = { ...this.pagination };
-          pagination.total = total;
-          this.loading = false;
-          this.data = data;
-          this.pagination = pagination;
-        });
+          const pagination = { ...this.pagination }
+          pagination.total = total
+          this.loading = false
+          this.data = data
+          this.pagination = pagination
+        })
       },
     },
-  };
+  }
 </script>

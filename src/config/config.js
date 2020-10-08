@@ -2,8 +2,8 @@
  * @description 导出自定义配置
  **/
 const config = {
-  layout: "vertical",
+  layout: 'vertical',
   donation: true,
-  templateFolder: "project",
-};
-module.exports = config;
+  templateFolder: 'project',
+}
+module.exports = config

@@ -7,18 +7,18 @@
 </template>
 
 <script>
-  import VabIcon from "@/layout/vab-icon";
-  import { mapGetters } from "vuex";
+  import VabIcon from '@/layout/vab-icon'
+  import { mapGetters } from 'vuex'
   export default {
-    name: "VabLogo",
+    name: 'VabLogo',
     components: { VabIcon },
     computed: {
       ...mapGetters({
-        logo: "settings/logo",
-        title: "settings/title",
+        logo: 'settings/logo',
+        title: 'settings/title',
       }),
     },
-  };
+  }
 </script>
 <style lang="less" scoped>
   .vab-logo {

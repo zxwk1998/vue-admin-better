@@ -16,31 +16,31 @@
 </template>
 
 <script>
-  import { recordRoute } from "@/config";
-  import { DownOutlined } from "@ant-design/icons-vue";
+  import { recordRoute } from '@/config'
+  import { DownOutlined } from '@ant-design/icons-vue'
 
-  import { mapGetters } from "vuex";
+  import { mapGetters } from 'vuex'
   export default {
-    name: "VabAvatar",
+    name: 'VabAvatar',
     components: { DownOutlined },
     computed: {
       ...mapGetters({
-        avatar: "user/avatar",
-        username: "user/username",
+        avatar: 'user/avatar',
+        username: 'user/username',
       }),
     },
     methods: {
       async logout() {
-        await this.$store.dispatch("user/logout");
+        await this.$store.dispatch('user/logout')
         if (recordRoute) {
-          const fullPath = this.$route.fullPath;
-          this.$router.push(`/login?redirect=${fullPath}`);
+          const fullPath = this.$route.fullPath
+          this.$router.push(`/login?redirect=${fullPath}`)
         } else {
-          this.$router.push("/login");
+          this.$router.push('/login')
         }
       },
     },
-  };
+  }
 </script>
 <style lang="less">
   .vab-avatar {

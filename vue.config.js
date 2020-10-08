@@ -2,7 +2,7 @@
  * @author chuzhixin 1204505056@qq.com
  * @description vue.config.js全局配置
  */
-const path = require("path");
+const path = require('path')
 const {
   /* baseURL, */
   publicPath,
@@ -16,39 +16,35 @@ const {
   providePlugin,
   build7z,
   donation,
-} = require("./src/config");
-const {
-  webpackBarName,
-  webpackBanner,
-  donationConsole,
-} = require("vab-config");
+} = require('./src/config')
+const { webpackBarName, webpackBanner, donationConsole } = require('vab-config')
 
-if (donation) donationConsole();
-const { version, author } = require("./package.json");
-const Webpack = require("webpack");
-const WebpackBar = require("webpackbar");
-const FileManagerPlugin = require("filemanager-webpack-plugin");
-const dayjs = require("dayjs");
-const date = dayjs().format("YYYY_M_D");
-const time = dayjs().format("YYYY-M-D HH:mm:ss");
-const CompressionWebpackPlugin = require("compression-webpack-plugin");
-const productionGzipExtensions = ["html", "js", "css", "svg"];
-process.env.VUE_APP_TITLE = title || "vue-admin-beautiful";
-process.env.VUE_APP_AUTHOR = author || "chuzhixin";
-process.env.VUE_APP_UPDATE_TIME = time;
-process.env.VUE_APP_VERSION = version;
+if (donation) donationConsole()
+const { version, author } = require('./package.json')
+const Webpack = require('webpack')
+const WebpackBar = require('webpackbar')
+const FileManagerPlugin = require('filemanager-webpack-plugin')
+const dayjs = require('dayjs')
+const date = dayjs().format('YYYY_M_D')
+const time = dayjs().format('YYYY-M-D HH:mm:ss')
+const CompressionWebpackPlugin = require('compression-webpack-plugin')
+const productionGzipExtensions = ['html', 'js', 'css', 'svg']
+process.env.VUE_APP_TITLE = title || 'vue-admin-beautiful'
+process.env.VUE_APP_AUTHOR = author || 'chuzhixin'
+process.env.VUE_APP_UPDATE_TIME = time
+process.env.VUE_APP_VERSION = version
 
 const resolve = (dir) => {
-  return path.join(__dirname, dir);
-};
+  return path.join(__dirname, dir)
+}
 
 const mockServer = () => {
-  if (process.env.NODE_ENV === "development") {
-    return require("./mock/mockServer.js");
+  if (process.env.NODE_ENV === 'development') {
+    return require('./mock/mockServer.js')
   } else {
-    return "";
+    return ''
   }
-};
+}
 
 module.exports = {
   publicPath,
@@ -82,8 +78,8 @@ module.exports = {
     return {
       resolve: {
         alias: {
-          "@": resolve("src"),
-          "*": resolve(""),
+          '@': resolve('src'),
+          '*': resolve(''),
         },
       },
       plugins: [
@@ -92,64 +88,64 @@ module.exports = {
           name: webpackBarName,
         }),
       ],
-    };
+    }
   },
   chainWebpack(config) {
-    config.resolve.symlinks(true);
-    config.module.rule("svg").exclude.add(resolve("src/icon/remixIcon")).end();
+    config.resolve.symlinks(true)
+    config.module.rule('svg').exclude.add(resolve('src/icon/remixIcon')).end()
 
     config.module
-      .rule("remixIcon")
+      .rule('remixIcon')
       .test(/\.svg$/)
-      .include.add(resolve("src/icon/remixIcon"))
+      .include.add(resolve('src/icon/remixIcon'))
       .end()
-      .use("svg-sprite-loader")
-      .loader("svg-sprite-loader")
-      .options({ symbolId: "remix-icon-[name]" })
-      .end();
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({ symbolId: 'remix-icon-[name]' })
+      .end()
 
-    config.when(process.env.NODE_ENV === "development", (config) => {
-      config.devtool("source-map");
-    });
+    config.when(process.env.NODE_ENV === 'development', (config) => {
+      config.devtool('source-map')
+    })
 
-    config.when(process.env.NODE_ENV !== "development", (config) => {
-      config.performance.set("hints", false);
-      config.devtool("none");
+    config.when(process.env.NODE_ENV !== 'development', (config) => {
+      config.performance.set('hints', false)
+      config.devtool('none')
       config.optimization.splitChunks({
-        chunks: "all",
+        chunks: 'all',
         cacheGroups: {
           libs: {
-            name: "vue-admin-beautiful-libs",
+            name: 'vue-admin-beautiful-libs',
             test: /[\\/]node_modules[\\/]/,
             priority: 10,
-            chunks: "initial",
+            chunks: 'initial',
           },
         },
-      });
+      })
       config
-        .plugin("banner")
+        .plugin('banner')
         .use(Webpack.BannerPlugin, [`${webpackBanner}${time}`])
-        .end();
+        .end()
       config
-        .plugin("compression")
+        .plugin('compression')
         .use(CompressionWebpackPlugin, [
           {
-            filename: "[path].gz[query]",
-            algorithm: "gzip",
+            filename: '[path].gz[query]',
+            algorithm: 'gzip',
             test: new RegExp(
-              "\\.(" + productionGzipExtensions.join("|") + ")$"
+              '\\.(' + productionGzipExtensions.join('|') + ')$'
             ),
             threshold: 8192,
             minRatio: 0.8,
           },
         ])
-        .end();
-    });
+        .end()
+    })
 
     if (build7z) {
-      config.when(process.env.NODE_ENV === "production", (config) => {
+      config.when(process.env.NODE_ENV === 'production', (config) => {
         config
-          .plugin("fileManager")
+          .plugin('fileManager')
           .use(FileManagerPlugin, [
             {
               onEnd: {
@@ -163,8 +159,8 @@ module.exports = {
               },
             },
           ])
-          .end();
-      });
+          .end()
+      })
     }
   },
   runtimeCompiler: true,
@@ -177,13 +173,13 @@ module.exports = {
         lessOptions: {
           javascriptEnabled: true,
           modifyVars: {
-            "vab-color-blue": "#1890ff",
-            "vab-margin": "20px",
-            "vab-padding": "20px",
-            "vab-header-height": "65px",
+            'vab-color-blue': '#1890ff',
+            'vab-margin': '20px',
+            'vab-padding': '20px',
+            'vab-header-height': '65px',
           },
         },
       },
     },
   },
-};
+}

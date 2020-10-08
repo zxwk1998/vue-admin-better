@@ -8,16 +8,16 @@
 </template>
 
 <script>
-  import { isExternal } from "@/utils/validate";
-  import VabIcon from "@/layout/vab-icon";
+  import { isExternal } from '@/utils/validate'
+  import VabIcon from '@/layout/vab-icon'
   export default {
-    name: "MenuItem",
+    name: 'MenuItem',
     components: { VabIcon },
     props: {
       item: {
         type: Object,
         default() {
-          return null;
+          return null
         },
       },
       routeChildren: {
@@ -27,16 +27,16 @@
     },
     methods: {
       handleLink() {
-        const routePath = this.routeChildren.fullPath;
-        const target = this.routeChildren.meta.target;
-        if (target === "_blank") {
-          if (isExternal(routePath)) window.open(routePath);
-          else if (this.$route.path !== routePath) window.open(routePath.href);
+        const routePath = this.routeChildren.fullPath
+        const target = this.routeChildren.meta.target
+        if (target === '_blank') {
+          if (isExternal(routePath)) window.open(routePath)
+          else if (this.$route.path !== routePath) window.open(routePath.href)
         } else {
-          if (isExternal(routePath)) window.location.href = routePath;
-          else if (this.$route.path !== routePath) this.$router.push(routePath);
+          if (isExternal(routePath)) window.location.href = routePath
+          else if (this.$route.path !== routePath) this.$router.push(routePath)
         }
       },
     },
-  };
+  }
 </script>

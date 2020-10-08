@@ -1,4 +1,4 @@
-import { title, titleReverse, titleSeparator } from "@/config";
+import { title, titleReverse, titleSeparator } from '@/config'
 
 /**
  * @author chuzhixin 1204505056@qq.com
@@ -7,9 +7,9 @@ import { title, titleReverse, titleSeparator } from "@/config";
  * @returns {string}
  */
 export default function getPageTitle(pageTitle) {
-  let newTitles = [];
-  if (pageTitle) newTitles.push(pageTitle);
-  if (title) newTitles.push(title);
-  if (titleReverse) newTitles = newTitles.reverse();
-  return newTitles.join(titleSeparator);
+  let newTitles = []
+  if (pageTitle) newTitles.push(pageTitle)
+  if (title) newTitles.push(title)
+  if (titleReverse) newTitles = newTitles.reverse()
+  return newTitles.join(titleSeparator)
 }

@@ -36,27 +36,27 @@
         </tr>
         <tr>
           <td>vue</td>
-          <td>{{ dependencies["vue"] }}</td>
+          <td>{{ dependencies['vue'] }}</td>
           <td>@vue/cli</td>
-          <td>{{ devDependencies["@vue/cli-service"] }}</td>
+          <td>{{ devDependencies['@vue/cli-service'] }}</td>
         </tr>
         <tr>
           <td>vuex</td>
-          <td>{{ dependencies["vuex"] }}</td>
+          <td>{{ dependencies['vuex'] }}</td>
           <td>vue-router</td>
-          <td>{{ dependencies["vue-router"] }}</td>
+          <td>{{ dependencies['vue-router'] }}</td>
         </tr>
         <tr>
           <td>eslint-plugin-vue</td>
-          <td>{{ devDependencies["eslint-plugin-vue"] }}</td>
+          <td>{{ devDependencies['eslint-plugin-vue'] }}</td>
           <td>axios</td>
-          <td>{{ dependencies["axios"] }}</td>
+          <td>{{ dependencies['axios'] }}</td>
         </tr>
         <tr>
           <td>babel-eslint</td>
-          <td>{{ devDependencies["babel-eslint"] }}</td>
+          <td>{{ devDependencies['babel-eslint'] }}</td>
           <td>ant-design-vue</td>
-          <td>{{ dependencies["ant-design-vue"] }}</td>
+          <td>{{ dependencies['ant-design-vue'] }}</td>
         </tr>
         <tr>
           <td>v2.x版演示地址（MIT协议，商用免费）</td>
@@ -113,7 +113,7 @@
   </a-card>
 </template>
 <script>
-  import { dependencies, devDependencies } from "*/package.json";
+  import { dependencies, devDependencies } from '*/package.json'
 
   export default {
     data() {
@@ -121,9 +121,9 @@
         updateTime: process.env.VUE_APP_UPDATE_TIME,
         dependencies: dependencies,
         devDependencies: devDependencies,
-      };
+      }
     },
-  };
+  }
 </script>
 <style lang="less" scoped>
   .version-information {

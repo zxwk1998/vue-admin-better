@@ -44,10 +44,10 @@
 </template>
 
 <script>
-  import { DownOutlined } from "@ant-design/icons-vue";
-  import { mapActions, mapGetters } from "vuex";
+  import { DownOutlined } from '@ant-design/icons-vue'
+  import { mapActions, mapGetters } from 'vuex'
   export default {
-    name: "VabTabs",
+    name: 'VabTabs',
     components: {
       DownOutlined,
     },
@@ -56,44 +56,44 @@
         affixTabs: [],
         tabActive: null,
         created: false,
-      };
+      }
     },
     computed: {
       ...mapGetters({
-        visitedRoutes: "tagsBar/visitedRoutes",
-        routes: "routes/routes",
+        visitedRoutes: 'tagsBar/visitedRoutes',
+        routes: 'routes/routes',
       }),
     },
     watch: {
       $route: {
         handler(route) {
-          this.addTabs(route);
+          this.addTabs(route)
         },
       },
     },
     created() {
-      this.initAffixTabs(this.routes);
-      this.addTabs(this.$route);
+      this.initAffixTabs(this.routes)
+      this.addTabs(this.$route)
     },
     methods: {
       ...mapActions({
-        addVisitedRoute: "tagsBar/addVisitedRoute",
-        delVisitedRoute: "tagsBar/delVisitedRoute",
-        delOthersVisitedRoutes: "tagsBar/delOthersVisitedRoutes",
-        delLeftVisitedRoutes: "tagsBar/delLeftVisitedRoutes",
-        delRightVisitedRoutes: "tagsBar/delRightVisitedRoutes",
-        delAllVisitedRoutes: "tagsBar/delAllVisitedRoutes",
+        addVisitedRoute: 'tagsBar/addVisitedRoute',
+        delVisitedRoute: 'tagsBar/delVisitedRoute',
+        delOthersVisitedRoutes: 'tagsBar/delOthersVisitedRoutes',
+        delLeftVisitedRoutes: 'tagsBar/delLeftVisitedRoutes',
+        delRightVisitedRoutes: 'tagsBar/delRightVisitedRoutes',
+        delAllVisitedRoutes: 'tagsBar/delAllVisitedRoutes',
       }),
       initAffixTabs(routes) {
         routes.forEach((route) => {
-          if (route.meta && route.meta.affix) this.addTabs(route);
-          if (route.children) this.initAffixTabs(route.children);
-        });
+          if (route.meta && route.meta.affix) this.addTabs(route)
+          if (route.children) this.initAffixTabs(route.children)
+        })
       },
       async addTabs(tag) {
         if (tag.name && tag.meta && tag.meta.tagHidden !== true) {
-          let matched = [tag.name];
-          if (tag.matched) matched = tag.matched.map((item) => item.name);
+          let matched = [tag.name]
+          if (tag.matched) matched = tag.matched.map((item) => item.name)
           await this.addVisitedRoute({
             path: tag.path,
             fullPath: tag.fullPath,
@@ -101,78 +101,78 @@
             name: tag.name,
             matched: matched,
             meta: { ...tag.meta },
-          });
-          this.tabActive = tag.fullPath;
+          })
+          this.tabActive = tag.fullPath
         }
       },
       isActive(route) {
-        return route.path === this.$route.path;
+        return route.path === this.$route.path
       },
       isAffix(tag) {
-        return tag.meta && tag.meta.affix;
+        return tag.meta && tag.meta.affix
       },
       handleTabClick(tab) {
-        const route = this.visitedRoutes.filter((item) => item.path === tab)[0];
-        if (this.$route.fullPath !== route.fullPath) this.$router.push(route);
+        const route = this.visitedRoutes.filter((item) => item.path === tab)[0]
+        if (this.$route.fullPath !== route.fullPath) this.$router.push(route)
       },
       async handleTabRemove(fullPath) {
         const view = this.visitedRoutes.find((item) => {
-          return fullPath === item.fullPath;
-        });
-        await this.delVisitedRoute(view);
-        if (this.isActive(view)) this.toLastTag();
+          return fullPath === item.fullPath
+        })
+        await this.delVisitedRoute(view)
+        if (this.isActive(view)) this.toLastTag()
       },
       handleClick({ key }) {
         switch (key) {
-          case "closeOthersTabs":
-            this.closeOthersTabs();
-            break;
-          case "closeLeftTabs":
-            this.closeLeftTabs();
-            break;
-          case "closeRightTabs":
-            this.closeRightTabs();
-            break;
-          case "closeAllTabs":
-            this.closeAllTabs();
-            break;
+          case 'closeOthersTabs':
+            this.closeOthersTabs()
+            break
+          case 'closeLeftTabs':
+            this.closeLeftTabs()
+            break
+          case 'closeRightTabs':
+            this.closeRightTabs()
+            break
+          case 'closeAllTabs':
+            this.closeAllTabs()
+            break
         }
       },
       async closeSelectedTag(view) {
-        await this.delVisitedRoute(view);
+        await this.delVisitedRoute(view)
         if (this.isActive(view)) {
-          this.toLastTag();
+          this.toLastTag()
         }
       },
       async closeOthersTabs() {
-        await this.delOthersVisitedRoutes(this.toThisTag());
+        await this.delOthersVisitedRoutes(this.toThisTag())
       },
       async closeLeftTabs() {
-        await this.delLeftVisitedRoutes(this.toThisTag());
+        await this.delLeftVisitedRoutes(this.toThisTag())
       },
       async closeRightTabs() {
-        await this.delRightVisitedRoutes(this.toThisTag());
+        await this.delRightVisitedRoutes(this.toThisTag())
       },
       async closeAllTabs() {
-        await this.delAllVisitedRoutes();
+        await this.delAllVisitedRoutes()
         if (this.affixTabs.some((tag) => tag.path === this.toThisTag().path))
-          return;
-        this.toLastTag();
+          return
+        this.toLastTag()
       },
       toLastTag() {
-        const latestView = this.visitedRoutes.slice(-1)[0];
-        if (latestView) this.$router.push(latestView);
-        else this.$router.push("/");
+        const latestView = this.visitedRoutes.slice(-1)[0]
+        if (latestView) this.$router.push(latestView)
+        else this.$router.push('/')
       },
       toThisTag() {
         const view = this.visitedRoutes.find(
           (item) => item.fullPath === this.$route.fullPath
-        );
-        if (this.$route.path !== view.path) this.$router.push(view);
-        return view;
+        )
+        if (this.$route.path !== view.path) this.$router.push(view)
+        return view
       },
     },
-  };
+  }
 </script>
 <style lang="less">
   .vab-tabs {
