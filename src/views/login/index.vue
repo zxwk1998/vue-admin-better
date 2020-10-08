@@ -74,120 +74,120 @@
 </template>
 
 <script>
-  import { isPassword } from "@/utils/validate";
+  import { isPassword } from '@/utils/validate'
 
   export default {
-    name: "Login",
+    name: 'Login',
     directives: {
       focus: {
         inserted(el) {
-          el.querySelector("input").focus();
+          el.querySelector('input').focus()
         },
       },
     },
     data() {
       const validateusername = (rule, value, callback) => {
-        if ("" == value) {
-          callback(new Error("用户名不能为空"));
+        if ('' == value) {
+          callback(new Error('用户名不能为空'))
         } else {
-          callback();
+          callback()
         }
-      };
+      }
       const validatePassword = (rule, value, callback) => {
         if (!isPassword(value)) {
-          callback(new Error("密码不能少于6位"));
+          callback(new Error('密码不能少于6位'))
         } else {
-          callback();
+          callback()
         }
-      };
+      }
       return {
         nodeEnv: process.env.NODE_ENV,
         title: this.$baseTitle,
         form: {
-          username: "",
-          password: "",
+          username: '',
+          password: '',
         },
         rules: {
           username: [
             {
               required: true,
-              trigger: "blur",
+              trigger: 'blur',
               validator: validateusername,
             },
           ],
           password: [
             {
               required: true,
-              trigger: "blur",
+              trigger: 'blur',
               validator: validatePassword,
             },
           ],
         },
         loading: false,
-        passwordType: "password",
+        passwordType: 'password',
         redirect: undefined,
-      };
+      }
     },
     watch: {
       $route: {
         handler(route) {
-          this.redirect = (route.query && route.query.redirect) || "/";
+          this.redirect = (route.query && route.query.redirect) || '/'
         },
         immediate: true,
       },
     },
     created() {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden'
     },
     beforeDestroy() {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = 'auto'
     },
     mounted() {
-      this.form.username = "admin";
-      this.form.password = "123456";
+      this.form.username = 'admin'
+      this.form.password = '123456'
       setTimeout(() => {
-        this.handleLogin();
-      }, 3000);
+        this.handleLogin()
+      }, 3000)
     },
     methods: {
       handlePassword() {
-        this.passwordType === "password"
-          ? (this.passwordType = "")
-          : (this.passwordType = "password");
+        this.passwordType === 'password'
+          ? (this.passwordType = '')
+          : (this.passwordType = 'password')
         this.$nextTick(() => {
-          this.$refs.password.focus();
-        });
+          this.$refs.password.focus()
+        })
       },
       handleLogin() {
         this.$refs.form.validate((valid) => {
           if (valid) {
-            this.loading = true;
+            this.loading = true
             this.$store
-              .dispatch("user/login", this.form)
+              .dispatch('user/login', this.form)
               .then(() => {
                 const routerPath =
-                  this.redirect === "/404" || this.redirect === "/401"
-                    ? "/"
-                    : this.redirect;
-                this.$router.push(routerPath).catch(() => {});
-                this.loading = false;
+                  this.redirect === '/404' || this.redirect === '/401'
+                    ? '/'
+                    : this.redirect
+                this.$router.push(routerPath).catch(() => {})
+                this.loading = false
               })
               .catch(() => {
-                this.loading = false;
-              });
+                this.loading = false
+              })
           } else {
-            return false;
+            return false
           }
-        });
+        })
       },
     },
-  };
+  }
 </script>
 
 <style lang="scss" scoped>
   .login-container {
     height: 100vh;
-    background: url("~@/assets/login_images/background.jpg") center center fixed
+    background: url('~@/assets/login_images/background.jpg') center center fixed
       no-repeat;
     background-size: cover;
 

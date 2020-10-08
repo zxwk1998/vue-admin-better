@@ -91,114 +91,114 @@
   </div>
 </template>
 <script>
-  import { isPassword, isPhone } from "@/utils/validate";
-  import { register } from "@/api/user";
+  import { isPassword, isPhone } from '@/utils/validate'
+  import { register } from '@/api/user'
   export default {
-    username: "Register",
+    username: 'Register',
     directives: {
       focus: {
         inserted(el) {
-          el.querySelector("input").focus();
+          el.querySelector('input').focus()
         },
       },
     },
     data() {
       const validateusername = (rule, value, callback) => {
-        if ("" == value) {
-          callback(new Error("用户名不能为空"));
+        if ('' == value) {
+          callback(new Error('用户名不能为空'))
         } else {
-          callback();
+          callback()
         }
-      };
+      }
       const validatePassword = (rule, value, callback) => {
         if (!isPassword(value)) {
-          callback(new Error("密码不能少于6位"));
+          callback(new Error('密码不能少于6位'))
         } else {
-          callback();
+          callback()
         }
-      };
+      }
       const validatePhone = (rule, value, callback) => {
         if (!isPhone(value)) {
-          callback(new Error("请输入正确的手机号"));
+          callback(new Error('请输入正确的手机号'))
         } else {
-          callback();
+          callback()
         }
-      };
+      }
       return {
         isGetphone: false,
         getPhoneIntval: null,
-        phoneCode: "获取验证码",
+        phoneCode: '获取验证码',
         showRegister: false,
         nodeEnv: process.env.NODE_ENV,
         title: this.$baseTitle,
         form: {},
         registerRules: {
           username: [
-            { required: true, trigger: "blur", message: "请输入用户名" },
-            { max: 20, trigger: "blur", message: "最多不能超过20个字" },
-            { validator: validateusername, trigger: "blur" },
+            { required: true, trigger: 'blur', message: '请输入用户名' },
+            { max: 20, trigger: 'blur', message: '最多不能超过20个字' },
+            { validator: validateusername, trigger: 'blur' },
           ],
           phone: [
-            { required: true, trigger: "blur", message: "请输入手机号码" },
-            { validator: validatePhone, trigger: "blur" },
+            { required: true, trigger: 'blur', message: '请输入手机号码' },
+            { validator: validatePhone, trigger: 'blur' },
           ],
           password: [
-            { required: true, trigger: "blur", message: "请输入密码" },
-            { validator: validatePassword, trigger: "blur" },
+            { required: true, trigger: 'blur', message: '请输入密码' },
+            { validator: validatePassword, trigger: 'blur' },
           ],
           phoneCode: [
-            { required: true, trigger: "blur", message: "请输入手机验证码" },
+            { required: true, trigger: 'blur', message: '请输入手机验证码' },
           ],
         },
         loading: false,
-        passwordType: "password",
-      };
+        passwordType: 'password',
+      }
     },
     created() {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden'
     },
     beforeDestroy() {
-      document.body.style.overflow = "auto";
-      this.getPhoneIntval = null;
-      clearInterval(this.getPhoneIntval);
+      document.body.style.overflow = 'auto'
+      this.getPhoneIntval = null
+      clearInterval(this.getPhoneIntval)
     },
     methods: {
       getPhoneCode() {
-        this.isGetphone = true;
-        let n = 60;
+        this.isGetphone = true
+        let n = 60
         this.getPhoneIntval = setInterval(() => {
           if (n > 0) {
-            n--;
-            this.phoneCode = "重新获取(" + n + "s)";
+            n--
+            this.phoneCode = '重新获取(' + n + 's)'
           } else {
-            this.getPhoneIntval = null;
-            clearInterval(this.getPhoneIntval);
-            this.phoneCode = "获取验证码";
-            this.isGetphone = false;
+            this.getPhoneIntval = null
+            clearInterval(this.getPhoneIntval)
+            this.phoneCode = '获取验证码'
+            this.isGetphone = false
           }
-        }, 1000);
+        }, 1000)
       },
       handleReister() {
-        this.$refs["registerForm"].validate(async (valid) => {
+        this.$refs['registerForm'].validate(async (valid) => {
           if (valid) {
             const param = {
               username: this.form.username,
               phone: this.form.phone,
               password: this.form.password,
               phoneCode: this.form.phoneCode,
-            };
-            const { msg } = await register(param);
-            this.$baseMessage(msg, "success");
+            }
+            const { msg } = await register(param)
+            this.$baseMessage(msg, 'success')
           }
-        });
+        })
       },
     },
-  };
+  }
 </script>
 <style lang="scss" scoped>
   .register-container {
     height: 100vh;
-    background: url("~@/assets/login_images/background.jpg") center center fixed
+    background: url('~@/assets/login_images/background.jpg') center center fixed
       no-repeat;
     background-size: cover;
 

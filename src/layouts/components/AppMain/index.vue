@@ -14,16 +14,16 @@
 </template>
 
 <script>
-  import { mapActions, mapGetters } from "vuex";
+  import { mapActions, mapGetters } from 'vuex'
   import {
     copyright,
     footerCopyright,
     keepAliveMaxNum,
     title,
-  } from "@/config/settings";
+  } from '@/config/settings'
 
   export default {
-    name: "AppMain",
+    name: 'AppMain',
     data() {
       return {
         show: false,
@@ -33,50 +33,50 @@
         keepAliveMaxNum,
         routerView: true,
         footerCopyright,
-      };
+      }
     },
     computed: {
       ...mapGetters({
-        visitedRoutes: "tabsBar/visitedRoutes",
-        device: "settings/device",
+        visitedRoutes: 'tabsBar/visitedRoutes',
+        device: 'settings/device',
       }),
       cachedRoutes() {
-        const cachedRoutesArr = [];
+        const cachedRoutesArr = []
         this.visitedRoutes.forEach((item) => {
           if (!item.meta.noKeepAlive) {
-            cachedRoutesArr.push(item.name);
+            cachedRoutesArr.push(item.name)
           }
-        });
-        return cachedRoutesArr;
+        })
+        return cachedRoutesArr
       },
       key() {
-        return this.$route.path;
+        return this.$route.path
       },
     },
     watch: {
       $route: {
         handler(route) {
-          if ("mobile" === this.device) this.foldSideBar();
+          if ('mobile' === this.device) this.foldSideBar()
         },
         immediate: true,
       },
     },
     created() {
       //重载所有路由
-      this.$baseEventBus.$on("reload-routerview", () => {
-        this.routerView = false;
+      this.$baseEventBus.$on('reload-routerview', () => {
+        this.routerView = false
         this.$nextTick(() => {
-          this.routerView = true;
-        });
-      });
+          this.routerView = true
+        })
+      })
     },
     mounted() {},
     methods: {
       ...mapActions({
-        foldSideBar: "settings/foldSideBar",
+        foldSideBar: 'settings/foldSideBar',
       }),
     },
-  };
+  }
 </script>
 
 <style lang="scss" scoped>

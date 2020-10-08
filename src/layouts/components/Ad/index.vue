@@ -16,24 +16,24 @@
   </div>
 </template>
 <script>
-  import { getList } from "@/api/ad";
+  import { getList } from '@/api/ad'
   export default {
     data() {
       return {
         nodeEnv: process.env.NODE_ENV,
         adList: [],
-      };
+      }
     },
     created() {
-      this.fetchData();
+      this.fetchData()
     },
     methods: {
       async fetchData() {
-        const { data } = await getList();
-        this.adList = data;
+        const { data } = await getList()
+        this.adList = data
       },
     },
-  };
+  }
 </script>
 <style lang="scss" scoped>
   .vab-ad {

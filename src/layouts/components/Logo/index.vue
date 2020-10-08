@@ -14,23 +14,23 @@
   </div>
 </template>
 <script>
-  import { mapGetters } from "vuex";
-  import { logo } from "@/config/settings";
+  import { mapGetters } from 'vuex'
+  import { logo } from '@/config/settings'
 
   export default {
-    name: "Logo",
+    name: 'Logo',
     data() {
       return {
         title: this.$baseTitle,
-      };
+      }
     },
     computed: {
       ...mapGetters({
-        logo: "settings/logo",
-        layout: "settings/layout",
+        logo: 'settings/logo',
+        layout: 'settings/layout',
       }),
     },
-  };
+  }
 </script>
 <style lang="scss" scoped>
   @mixin container {

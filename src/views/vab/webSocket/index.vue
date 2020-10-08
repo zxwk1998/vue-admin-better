@@ -27,61 +27,61 @@
 
 <script>
   export default {
-    name: "WebSocket",
+    name: 'WebSocket',
     components: {},
     data() {
       return {
-        url: "ws://123.207.136.134:9010/ajaxchattest",
+        url: 'ws://123.207.136.134:9010/ajaxchattest',
         webSocket: null,
         data: [],
-        status: "",
+        status: '',
         form: { message: null },
         rules: {
-          message: [{ required: true, message: "请输入消息", trigger: "blur" }],
+          message: [{ required: true, message: '请输入消息', trigger: 'blur' }],
         },
-      };
+      }
     },
     created() {
-      this.init();
+      this.init()
     },
     destroyed() {
-      this.webSocket.close();
+      this.webSocket.close()
     },
     methods: {
       submit() {
-        this.$refs["form"].validate((valid) => {
+        this.$refs['form'].validate((valid) => {
           if (valid) {
-            this.send(this.form.message);
+            this.send(this.form.message)
           } else {
-            return false;
+            return false
           }
-        });
+        })
       },
       init() {
-        const wsuri = this.url;
-        this.webSocket = new WebSocket(wsuri);
-        this.webSocket.onmessage = this.onmessage;
-        this.webSocket.onopen = this.onopen;
-        this.webSocket.onerror = this.onerror;
-        this.webSocket.onclose = this.onclose;
+        const wsuri = this.url
+        this.webSocket = new WebSocket(wsuri)
+        this.webSocket.onmessage = this.onmessage
+        this.webSocket.onopen = this.onopen
+        this.webSocket.onerror = this.onerror
+        this.webSocket.onclose = this.onclose
       },
       onopen() {
-        this.status = "成功";
+        this.status = '成功'
       },
       onerror() {
-        this.status = "失败";
-        this.initWebSocket();
+        this.status = '失败'
+        this.initWebSocket()
       },
       onmessage({ data }) {
         //截掉测试webSocket地址广告
-        this.data.push(data.substring(0, data.length - 66));
+        this.data.push(data.substring(0, data.length - 66))
       },
       send(Data) {
-        this.webSocket.send(Data);
+        this.webSocket.send(Data)
       },
       onclose(e) {
-        this.status = "断开";
+        this.status = '断开'
       },
     },
-  };
+  }
 </script>

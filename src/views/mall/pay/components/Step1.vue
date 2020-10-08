@@ -27,39 +27,39 @@
     data() {
       return {
         form: {
-          payAccount: "XXXXXXXXXXXXXXXX",
-          gatheringAccount: "1204505056@qq.com",
-          gatheringName: "chuzhixin",
-          price: "100",
+          payAccount: 'XXXXXXXXXXXXXXXX',
+          gatheringAccount: '1204505056@qq.com',
+          gatheringName: 'chuzhixin',
+          price: '100',
         },
         rules: {
           payAccount: [
-            { required: true, message: "请选择付款账户", trigger: "blur" },
+            { required: true, message: '请选择付款账户', trigger: 'blur' },
           ],
           gatheringAccount: [
-            { required: true, message: "请输入收款账户", trigger: "blur" },
-            { type: "email", message: "账户名应为邮箱格式", trigger: "blur" },
+            { required: true, message: '请输入收款账户', trigger: 'blur' },
+            { type: 'email', message: '账户名应为邮箱格式', trigger: 'blur' },
           ],
           gatheringName: [
-            { required: true, message: "请输入收款人姓名", trigger: "blur" },
+            { required: true, message: '请输入收款人姓名', trigger: 'blur' },
           ],
           price: [
-            { required: true, message: "请输入转账金额", trigger: "blur" },
-            { pattern: /^(\d+)((?:\.\d+)?)$/, message: "请输入合法金额数字" },
+            { required: true, message: '请输入转账金额', trigger: 'blur' },
+            { pattern: /^(\d+)((?:\.\d+)?)$/, message: '请输入合法金额数字' },
           ],
         },
-      };
+      }
     },
     methods: {
       handleSubmit() {
         this.$refs.form.validate((valid) => {
           if (valid) {
-            this.$emit("change-step", 2, this.form);
+            this.$emit('change-step', 2, this.form)
           }
-        });
+        })
       },
     },
-  };
+  }
 </script>
 <style lang="scss" scoped>
   .pay-button-group {

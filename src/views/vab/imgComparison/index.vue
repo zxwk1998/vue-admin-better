@@ -25,29 +25,29 @@
 </template>
 
 <script>
-  import VabComparison from "@/plugins/vabComparison";
-  import { random } from "@/utils";
+  import VabComparison from '@/plugins/vabComparison'
+  import { random } from '@/utils'
 
   export default {
-    name: "ImgComparison",
+    name: 'ImgComparison',
     components: { VabComparison },
     data() {
       return {
         comparison: {
-          width: "100%",
-          height: "auto",
-          src1: require("@/assets/comparison/left.jpg"),
-          src2: require("@/assets/comparison/right.jpg"),
+          width: '100%',
+          height: 'auto',
+          src1: require('@/assets/comparison/left.jpg'),
+          src2: require('@/assets/comparison/right.jpg'),
           start: random(0, 100),
         },
-      };
+      }
     },
     created() {},
     mounted() {},
     methods: {
       random(m, n) {
-        return random(m, n).toString();
+        return random(m, n).toString()
       },
     },
-  };
+  }
 </script>

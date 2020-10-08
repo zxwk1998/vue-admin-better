@@ -15,20 +15,20 @@
 </template>
 
 <script>
-  import VabUpload from "@/components/VabUpload";
+  import VabUpload from '@/components/VabUpload'
 
   export default {
-    name: "Upload",
+    name: 'Upload',
     components: {
       VabUpload,
     },
     data() {
-      return {};
+      return {}
     },
     methods: {
       handleShow(data) {
-        this.$refs["vabUpload"].handleShow(data);
+        this.$refs['vabUpload'].handleShow(data)
       },
     },
-  };
+  }
 </script>

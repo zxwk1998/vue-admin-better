@@ -60,58 +60,58 @@
 </template>
 
 <script>
-  import { getIconList } from "@/api/colorfulIcon";
-  import clip from "@/utils/clipboard";
+  import { getIconList } from '@/api/colorfulIcon'
+  import clip from '@/utils/clipboard'
 
   export default {
-    name: "ColorfulIcon",
+    name: 'ColorfulIcon',
     data() {
       return {
-        copyText: "",
-        layout: "total, sizes, prev, pager, next, jumper",
+        copyText: '',
+        layout: 'total, sizes, prev, pager, next, jumper',
         total: 0,
         background: true,
         height: 0,
-        selectRows: "",
-        elementLoadingText: "正在加载...",
+        selectRows: '',
+        elementLoadingText: '正在加载...',
         queryIcon: [],
         queryForm: {
           pageNo: 1,
           pageSize: 72,
-          title: "",
+          title: '',
         },
-      };
+      }
     },
     created() {
-      this.fetchData();
+      this.fetchData()
     },
     methods: {
       handleSizeChange(val) {
-        this.queryForm.pageSize = val;
-        this.fetchData();
+        this.queryForm.pageSize = val
+        this.fetchData()
       },
       handleCurrentChange(val) {
-        this.queryForm.pageNo = val;
-        this.fetchData();
+        this.queryForm.pageNo = val
+        this.fetchData()
       },
       queryData() {
-        this.queryForm.pageNo = 1;
-        this.fetchData();
+        this.queryForm.pageNo = 1
+        this.fetchData()
       },
       async fetchData() {
-        const { data, totalCount } = await getIconList(this.queryForm);
-        this.queryIcon = data;
-        this.allIcon = data;
-        this.total = totalCount;
+        const { data, totalCount } = await getIconList(this.queryForm)
+        this.queryIcon = data
+        this.allIcon = data
+        this.total = totalCount
       },
       handleCopyIcon(index, event) {
         //const copyText = `<vab-colorful-icon icon-class="https://cdn.jsdelivr.net/gh/chuzhixin/zx-colorful-icon@master/${this.queryIcon[index]}.svg" />`;
-        const copyText = `<vab-colorful-icon icon-class="${this.queryIcon[index]}" />`;
-        this.copyText = copyText;
-        clip(copyText, event);
+        const copyText = `<vab-colorful-icon icon-class="${this.queryIcon[index]}" />`
+        this.copyText = copyText
+        clip(copyText, event)
       },
     },
-  };
+  }
 </script>
 
 <style lang="scss" scoped>

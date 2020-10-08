@@ -32,25 +32,25 @@
 
 <script>
   export default {
-    name: "Loading",
+    name: 'Loading',
     data() {
-      return {};
+      return {}
     },
     methods: {
       handleLoading(index) {
-        const Loading = this.$baseLoading(index);
+        const Loading = this.$baseLoading(index)
         setTimeout(() => {
-          Loading.close();
-        }, 3000);
+          Loading.close()
+        }, 3000)
       },
       handleColorfullLoading(index) {
-        const Loading = this.$baseColorfullLoading(index);
+        const Loading = this.$baseColorfullLoading(index)
         setTimeout(() => {
-          Loading.close();
-        }, 3000);
+          Loading.close()
+        }, 3000)
       },
     },
-  };
+  }
 </script>
 
 <style lang="scss" scoped>

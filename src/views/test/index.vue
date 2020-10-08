@@ -5,12 +5,12 @@
 </template>
 <script>
   export default {
-    name: "Test",
+    name: 'Test',
     data() {
-      return { show: true };
+      return { show: true }
     },
     created() {},
     mounted() {},
     methods: {},
-  };
+  }
 </script>

@@ -206,17 +206,17 @@
 
 <script>
   export default {
-    name: "Element",
+    name: 'Element',
     components: {},
     data() {
       return {
         dialogVisible: false,
-      };
+      }
     },
     created() {},
     mounted() {},
     methods: {},
-  };
+  }
 </script>
 
 <style lang="scss" scoped>

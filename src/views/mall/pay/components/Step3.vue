@@ -37,42 +37,42 @@
       infoData: {
         type: Object,
         default: () => {
-          return {};
+          return {}
         },
       },
     },
     data() {
       return {
         form: {
-          password: "123456",
+          password: '123456',
         },
         rules: {
           password: [
-            { required: true, message: "请输入支付密码", trigger: "blur" },
+            { required: true, message: '请输入支付密码', trigger: 'blur' },
           ],
         },
         loading: false,
-      };
+      }
     },
     methods: {
       handleSubmit() {
         this.$refs.form.validate((valid) => {
           if (valid) {
-            this.loading = true;
+            this.loading = true
             setTimeout(() => {
-              this.$emit("change-step", 3);
-              this.loading = false;
-            }, 2000);
+              this.$emit('change-step', 3)
+              this.loading = false
+            }, 2000)
           } else {
-            this.loading = false;
+            this.loading = false
           }
-        });
+        })
       },
       handlePrev() {
-        this.$emit("change-step", 1);
+        this.$emit('change-step', 1)
       },
     },
-  };
+  }
 </script>
 <style lang="scss" scoped>
   .pay-top-content {

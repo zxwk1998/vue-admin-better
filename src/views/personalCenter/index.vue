@@ -11,13 +11,13 @@
 
 <script>
   export default {
-    name: "PersonalCenter",
+    name: 'PersonalCenter',
     data() {
       return {
-        tabPosition: "left",
-      };
+        tabPosition: 'left',
+      }
     },
     created() {},
     methods: {},
-  };
+  }
 </script>

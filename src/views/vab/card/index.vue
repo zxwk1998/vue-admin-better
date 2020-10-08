@@ -39,11 +39,11 @@
 </template>
 
 <script>
-  import { getList } from "@/api/table";
-  import VabImage from "@/components/VabImage";
+  import { getList } from '@/api/table'
+  import VabImage from '@/components/VabImage'
 
   export default {
-    name: "Card",
+    name: 'Card',
     components: {
       VabImage,
     },
@@ -55,45 +55,45 @@
         listLoading: true,
         pageNo: 1,
         pageSize: 10,
-        layout: "total, sizes, prev, pager, next, jumper",
+        layout: 'total, sizes, prev, pager, next, jumper',
         total: 0,
         background: true,
         height: 0,
-        elementLoadingText: "正在加载...",
+        elementLoadingText: '正在加载...',
         dialogFormVisible: false,
-      };
+      }
     },
     created() {
-      this.fetchData();
-      this.height = this.$baseTableHeight(1);
+      this.fetchData()
+      this.height = this.$baseTableHeight(1)
     },
     methods: {
       bigClick(val) {
-        this.$baseAlert("点击了大图");
+        this.$baseAlert('点击了大图')
       },
       smallClick(val) {
-        this.$baseAlert("点击了小图");
+        this.$baseAlert('点击了小图')
       },
       handleSizeChange(val) {
-        this.pageSize = val;
-        this.fetchData();
+        this.pageSize = val
+        this.fetchData()
       },
       handleCurrentChange(val) {
-        this.pageNo = val;
-        this.fetchData();
+        this.pageNo = val
+        this.fetchData()
       },
       async fetchData() {
-        this.listLoading = true;
+        this.listLoading = true
         const { data, totalCount } = await getList({
           pageNo: this.pageNo,
           pageSize: this.pageSize,
-        });
-        this.list = data;
-        this.total = totalCount;
+        })
+        this.list = data
+        this.total = totalCount
         setTimeout(() => {
-          this.listLoading = false;
-        }, 300);
+          this.listLoading = false
+        }, 300)
       },
     },
-  };
+  }
 </script>

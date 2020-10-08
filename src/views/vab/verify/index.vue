@@ -12,24 +12,24 @@
 </template>
 
 <script>
-  import VabVerify from "@/plugins/vabVerify";
+  import VabVerify from '@/plugins/vabVerify'
   export default {
-    name: "Verify",
+    name: 'Verify',
     components: { VabVerify },
     data() {
       return {
-        text: "向右滑动",
-      };
+        text: '向右滑动',
+      }
     },
     created() {},
     mounted() {},
     methods: {
       handleSuccess() {
-        this.$baseMessage("校验成功", "success");
+        this.$baseMessage('校验成功', 'success')
       },
       handleError() {
-        this.$baseMessage("校验失败", "error");
+        this.$baseMessage('校验失败', 'error')
       },
     },
-  };
+  }
 </script>

@@ -28,72 +28,72 @@
 </template>
 
 <script>
-  import vabQuill from "@/plugins/vabQuill";
+  import vabQuill from '@/plugins/vabQuill'
   export default {
-    name: "Editor",
+    name: 'Editor',
     components: { vabQuill },
     data() {
       return {
-        borderColor: "#dcdfe6",
+        borderColor: '#dcdfe6',
         dialogTableVisible: false,
         form: {
-          title: "",
-          module: "",
-          content: "",
+          title: '',
+          module: '',
+          content: '',
         },
         rules: {
           title: [
             {
               required: true,
-              message: "请输入标题",
-              trigger: "blur",
+              message: '请输入标题',
+              trigger: 'blur',
             },
           ],
           module: [
             {
               required: true,
-              message: "请选择模块",
-              trigger: "change",
+              message: '请选择模块',
+              trigger: 'change',
             },
           ],
           content: [
             {
               required: true,
-              message: "请输入内容",
-              trigger: "blur",
+              message: '请输入内容',
+              trigger: 'blur',
             },
           ],
         },
-      };
+      }
     },
     methods: {
       handleSee() {
-        this.$refs["form"].validate((valid) => {
-          this.$refs.form.validateField("content", (errorMsg) => {});
+        this.$refs['form'].validate((valid) => {
+          this.$refs.form.validateField('content', (errorMsg) => {})
           if (valid) {
-            this.dialogTableVisible = true;
+            this.dialogTableVisible = true
           } else {
-            return false;
+            return false
           }
-        });
+        })
       },
       handleSave() {
-        this.$refs["form"].validate((valid) => {
-          this.$refs.form.validateField("content", (errorMsg) => {
-            this.borderColor = "#dcdfe6";
+        this.$refs['form'].validate((valid) => {
+          this.$refs.form.validateField('content', (errorMsg) => {
+            this.borderColor = '#dcdfe6'
             if (errorMsg) {
-              this.borderColor = "#F56C6C";
+              this.borderColor = '#F56C6C'
             }
-          });
+          })
           if (valid) {
-            this.$baseMessage("submit!", "success");
+            this.$baseMessage('submit!', 'success')
           } else {
-            return false;
+            return false
           }
-        });
+        })
       },
     },
-  };
+  }
 </script>
 <style lang="scss" scoped>
   .editor-container {

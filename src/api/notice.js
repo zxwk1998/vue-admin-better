@@ -1,8 +1,8 @@
-import request from "@/utils/request";
+import request from '@/utils/request'
 
 export function getNoticeList() {
   return request({
-    url: "/notice/getList",
-    method: "post",
-  });
+    url: '/notice/getList',
+    method: 'post',
+  })
 }

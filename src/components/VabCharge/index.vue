@@ -24,12 +24,12 @@
 
 <script>
   export default {
-    name: "VabCharge",
+    name: 'VabCharge',
     props: {
       styleObj: {
         type: Object,
         default: () => {
-          return {};
+          return {}
         },
       },
       startVal: {
@@ -44,16 +44,16 @@
     data() {
       return {
         decimals: 2,
-        prefix: "",
-        suffix: "%",
-        separator: ",",
+        prefix: '',
+        suffix: '%',
+        separator: ',',
         duration: 3000,
-      };
+      }
     },
     created() {},
     mounted() {},
     methods: {},
-  };
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -104,7 +104,7 @@
         left: 50%;
         width: 200px;
         height: 200px;
-        content: "";
+        content: '';
         background-color: #00ff6f;
         border-radius: 42% 38% 62% 49% / 45%;
         transform: translate(-50%, -50%) rotate(0);
@@ -118,7 +118,7 @@
         z-index: 99;
         width: 176px;
         height: 176px;
-        content: "";
+        content: '';
         background-color: #000;
         border-radius: 50%;
         transform: translate(-50%, -50%);

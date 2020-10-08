@@ -1,42 +1,42 @@
-const { mock } = require("mockjs");
+const { mock } = require('mockjs')
 
 module.exports = [
   {
-    url: "/personalCenter/getList",
-    type: "post",
+    url: '/personalCenter/getList',
+    type: 'post',
     response(config) {
       return {
         code: 200,
-        msg: "success",
+        msg: 'success',
         totalCount: 999,
         data: mock({
-          "data|10": [
+          'data|10': [
             {
-              id: "@id",
+              id: '@id',
             },
           ],
         }).data,
-      };
+      }
     },
   },
   {
-    url: "/personalCenter/doEdit",
-    type: "post",
+    url: '/personalCenter/doEdit',
+    type: 'post',
     response() {
       return {
         code: 200,
-        msg: "模拟保存成功",
-      };
+        msg: '模拟保存成功',
+      }
     },
   },
   {
-    url: "/personalCenter/doDelete",
-    type: "post",
+    url: '/personalCenter/doDelete',
+    type: 'post',
     response() {
       return {
         code: 200,
-        msg: "模拟删除成功",
-      };
+        msg: '模拟删除成功',
+      }
     },
   },
-];
+]

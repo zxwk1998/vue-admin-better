@@ -16,7 +16,7 @@
     "lint:style": "stylelint-config-prettier-check",
     "inspect": "vue-cli-service inspect",
     "template": "plop",
-    "clear": "rimraf node_modules&&cnpm i",
+    "clear": "rimraf node_modules&&npm install --registry=https://registry.npm.taobao.org&&cnpm i image-webpack-loader -D",
     "use:npm": "nrm use npm",
     "use:taobao": "nrm use taobao",
     "update": "ncu -u&&cnpm i",

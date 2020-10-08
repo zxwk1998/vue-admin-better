@@ -26,40 +26,40 @@
 
 <script>
   export default {
-    name: "VabProfile",
+    name: 'VabProfile',
     props: {
       styleObj: {
         type: Object,
         default: () => {
-          return {};
+          return {}
         },
       },
       username: {
         type: String,
-        default: "",
+        default: '',
       },
       avatar: {
         type: String,
-        default: "",
+        default: '',
       },
       iconArray: {
         type: Array,
         default: () => {
           return [
-            { icon: "bell", url: "" },
-            { icon: "bookmark", url: "" },
-            { icon: "cloud-sun", url: "" },
-          ];
+            { icon: 'bell', url: '' },
+            { icon: 'bookmark', url: '' },
+            { icon: 'cloud-sun', url: '' },
+          ]
         },
       },
     },
     data() {
-      return {};
+      return {}
     },
     created() {},
     mounted() {},
     methods: {},
-  };
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -161,7 +161,7 @@
           width: 100%;
           height: 100%;
           color: black;
-          content: "";
+          content: '';
           background: #35b9f1;
           transform: scaleX(0);
           transform-origin: left;
@@ -207,7 +207,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            content: "";
+            content: '';
             border-radius: inherit;
             transform: scale(0);
           }

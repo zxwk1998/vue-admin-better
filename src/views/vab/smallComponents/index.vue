@@ -44,12 +44,12 @@
 </template>
 
 <script>
-  import VabSnow from "@/components/VabSnow";
-  import VabProfile from "@/components/VabProfile";
-  import VabCharge from "@/components/VabCharge";
+  import VabSnow from '@/components/VabSnow'
+  import VabProfile from '@/components/VabProfile'
+  import VabCharge from '@/components/VabCharge'
 
   export default {
-    name: "Sticky",
+    name: 'Sticky',
     components: {
       VabSnow,
       VabProfile,
@@ -63,38 +63,38 @@
         startVal: 0,
         endVal: 20,
         timeInterval: null,
-      };
+      }
     },
     mounted() {
-      this.handleProfile();
-      this.handleSolidText();
+      this.handleProfile()
+      this.handleSolidText()
       this.timeInterval = setInterval(() => {
         if (this.endVal < 100) {
-          this.startVal = this.endVal;
-          this.endVal++;
+          this.startVal = this.endVal
+          this.endVal++
         }
-      }, 5000);
+      }, 5000)
     },
     beforeDestroy() {
       if (this.clearInterval) {
-        clearInterval(this.timeInterval);
+        clearInterval(this.timeInterval)
       }
     },
     methods: {
       handleProfile() {
-        this.profileShow = false;
+        this.profileShow = false
         setTimeout(() => {
-          this.profileShow = true;
-        });
+          this.profileShow = true
+        })
       },
       handleSolidText() {
-        this.solidTextShow = false;
+        this.solidTextShow = false
         setTimeout(() => {
-          this.solidTextShow = true;
-        });
+          this.solidTextShow = true
+        })
       },
     },
-  };
+  }
 </script>
 <style lang="scss" scoped>
   .small-components-container {

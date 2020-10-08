@@ -66,119 +66,119 @@
 </template>
 
 <script>
-  import variables from "@/styles/variables.scss";
-  import { mapActions, mapGetters } from "vuex";
-  import { layout as defaultLayout } from "@/config/settings";
+  import variables from '@/styles/variables.scss'
+  import { mapActions, mapGetters } from 'vuex'
+  import { layout as defaultLayout } from '@/config/settings'
   export default {
-    name: "ThemeBar",
+    name: 'ThemeBar',
     data() {
       return {
         drawerVisible: false,
         theme: {
-          name: "default",
-          layout: "",
-          header: "",
-          tabsBar: "",
+          name: 'default',
+          layout: '',
+          header: '',
+          tabsBar: '',
         },
-      };
+      }
     },
     computed: {
       ...mapGetters({
-        layout: "settings/layout",
-        header: "settings/header",
-        tabsBar: "settings/tabsBar",
-        themeBar: "settings/themeBar",
+        layout: 'settings/layout',
+        header: 'settings/header',
+        tabsBar: 'settings/tabsBar',
+        themeBar: 'settings/themeBar',
       }),
     },
     created() {
-      this.$baseEventBus.$on("theme", () => {
-        this.handleOpenThemeBar();
-      });
-      const theme = localStorage.getItem("vue-admin-beautiful-theme");
+      this.$baseEventBus.$on('theme', () => {
+        this.handleOpenThemeBar()
+      })
+      const theme = localStorage.getItem('vue-admin-beautiful-theme')
       if (null !== theme) {
-        this.theme = JSON.parse(theme);
-        this.handleSetTheme();
+        this.theme = JSON.parse(theme)
+        this.handleSetTheme()
       } else {
-        this.theme.layout = this.layout;
-        this.theme.header = this.header;
-        this.theme.tabsBar = this.tabsBar;
+        this.theme.layout = this.layout
+        this.theme.header = this.header
+        this.theme.tabsBar = this.tabsBar
       }
     },
     methods: {
       ...mapActions({
-        changeLayout: "settings/changeLayout",
-        changeHeader: "settings/changeHeader",
-        changeTabsBar: "settings/changeTabsBar",
+        changeLayout: 'settings/changeLayout',
+        changeHeader: 'settings/changeHeader',
+        changeTabsBar: 'settings/changeTabsBar',
       }),
       handleIsMobile() {
-        return document.body.getBoundingClientRect().width - 1 < 992;
+        return document.body.getBoundingClientRect().width - 1 < 992
       },
       handleOpenThemeBar() {
-        this.drawerVisible = true;
+        this.drawerVisible = true
       },
       handleSetTheme() {
-        let { name, layout, header, tabsBar } = this.theme;
+        let { name, layout, header, tabsBar } = this.theme
         localStorage.setItem(
-          "vue-admin-beautiful-theme",
+          'vue-admin-beautiful-theme',
           `{
             "name":"${name}",
             "layout":"${layout}",
             "header":"${header}",
             "tabsBar":"${tabsBar}"
           }`
-        );
-        if (!this.handleIsMobile()) this.changeLayout(layout);
-        this.changeHeader(header);
-        this.changeTabsBar(tabsBar);
+        )
+        if (!this.handleIsMobile()) this.changeLayout(layout)
+        this.changeHeader(header)
+        this.changeTabsBar(tabsBar)
         document.getElementsByTagName(
-          "body"
-        )[0].className = `vue-admin-beautiful-theme-${name}`;
-        this.drawerVisible = false;
+          'body'
+        )[0].className = `vue-admin-beautiful-theme-${name}`
+        this.drawerVisible = false
       },
       handleSaveTheme() {
-        this.handleSetTheme();
+        this.handleSetTheme()
       },
       handleSetDfaultTheme() {
-        let { name } = this.theme;
+        let { name } = this.theme
         document
-          .getElementsByTagName("body")[0]
-          .classList.remove(`vue-admin-beautiful-theme-${name}`);
-        localStorage.removeItem("vue-admin-beautiful-theme");
-        this.$refs["form"].resetFields();
-        Object.assign(this.$data, this.$options.data());
-        this.changeHeader(defaultLayout);
-        this.theme.name = "default";
-        this.theme.layout = this.layout;
-        this.theme.header = this.header;
-        this.theme.tabsBar = this.tabsBar;
-        this.drawerVisible = false;
+          .getElementsByTagName('body')[0]
+          .classList.remove(`vue-admin-beautiful-theme-${name}`)
+        localStorage.removeItem('vue-admin-beautiful-theme')
+        this.$refs['form'].resetFields()
+        Object.assign(this.$data, this.$options.data())
+        this.changeHeader(defaultLayout)
+        this.theme.name = 'default'
+        this.theme.layout = this.layout
+        this.theme.header = this.header
+        this.theme.tabsBar = this.tabsBar
+        this.drawerVisible = false
       },
       handleGetCode() {
         const url =
-          "https://github.com/chuzhixin/vue-admin-beautiful/tree/master/src/views";
-        let path = this.$route.path + "/index.vue";
-        if (path === "/vab/menu1/menu1-1/menu1-1-1/index.vue") {
-          path = "/vab/nested/menu1/menu1-1/menu1-1-1/index.vue";
+          'https://github.com/chuzhixin/vue-admin-beautiful/tree/master/src/views'
+        let path = this.$route.path + '/index.vue'
+        if (path === '/vab/menu1/menu1-1/menu1-1-1/index.vue') {
+          path = '/vab/nested/menu1/menu1-1/menu1-1-1/index.vue'
         }
-        if (path === "/vab/icon/awesomeIcon/index.vue") {
-          path = "/vab/icon/index.vue";
+        if (path === '/vab/icon/awesomeIcon/index.vue') {
+          path = '/vab/icon/index.vue'
         }
-        if (path === "/vab/icon/remixIcon/index.vue") {
-          path = "/vab/icon/remixIcon.vue";
+        if (path === '/vab/icon/remixIcon/index.vue') {
+          path = '/vab/icon/remixIcon.vue'
         }
-        if (path === "/vab/icon/colorfulIcon/index.vue") {
-          path = "/vab/icon/colorfulIcon.vue";
+        if (path === '/vab/icon/colorfulIcon/index.vue') {
+          path = '/vab/icon/colorfulIcon.vue'
         }
-        if (path === "/vab/table/comprehensiveTable/index.vue") {
-          path = "/vab/table/index.vue";
+        if (path === '/vab/table/comprehensiveTable/index.vue') {
+          path = '/vab/table/index.vue'
         }
-        if (path === "/vab/table/inlineEditTable/index.vue") {
-          path = "/vab/table/inlineEditTable.vue";
+        if (path === '/vab/table/inlineEditTable/index.vue') {
+          path = '/vab/table/inlineEditTable.vue'
         }
-        window.open(url + path);
+        window.open(url + path)
       },
     },
-  };
+  }
 </script>
 
 <style lang="scss" scoped>

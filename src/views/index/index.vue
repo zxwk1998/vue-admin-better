@@ -179,39 +179,39 @@
           <table class="table">
             <tr>
               <td>@vue/cli版本</td>
-              <td>{{ devDependencies["@vue/cli-service"] }}</td>
+              <td>{{ devDependencies['@vue/cli-service'] }}</td>
               <td>vue版本</td>
-              <td>{{ dependencies["vue"] }}</td>
+              <td>{{ dependencies['vue'] }}</td>
             </tr>
             <tr>
               <td>vuex版本</td>
-              <td>{{ dependencies["vuex"] }}</td>
+              <td>{{ dependencies['vuex'] }}</td>
               <td>vue-router版本</td>
-              <td>{{ dependencies["vue-router"] }}</td>
+              <td>{{ dependencies['vue-router'] }}</td>
             </tr>
             <tr>
               <td>element-ui版本</td>
-              <td>{{ dependencies["element-ui"] }}</td>
+              <td>{{ dependencies['element-ui'] }}</td>
               <td>axios版本</td>
-              <td>{{ dependencies["axios"] }}</td>
+              <td>{{ dependencies['axios'] }}</td>
             </tr>
             <tr>
               <td>eslint版本</td>
-              <td>{{ devDependencies["eslint"] }}</td>
+              <td>{{ devDependencies['eslint'] }}</td>
               <td>prettier版本</td>
-              <td>{{ devDependencies["prettier"] }}</td>
+              <td>{{ devDependencies['prettier'] }}</td>
             </tr>
             <tr>
               <td>sass版本</td>
-              <td>{{ devDependencies["sass"] }}</td>
+              <td>{{ devDependencies['sass'] }}</td>
               <td>mockjs版本</td>
-              <td>{{ dependencies["mockjs"] }}</td>
+              <td>{{ dependencies['mockjs'] }}</td>
             </tr>
             <tr>
               <td>zx-layouts版本</td>
-              <td>{{ dependencies["zx-layouts"] }}</td>
+              <td>{{ dependencies['zx-layouts'] }}</td>
               <td>lodash版本</td>
-              <td>{{ dependencies["lodash"] }}</td>
+              <td>{{ dependencies['lodash'] }}</td>
             </tr>
           </table>
         </el-card>
@@ -270,13 +270,13 @@
 </template>
 
 <script>
-  import VabChart from "@/plugins/echarts";
-  import { dependencies, devDependencies } from "../../../package.json";
-  import { getList } from "@/api/changeLog";
-  import { getNoticeList } from "@/api/notice";
-  import { getRepos, getStargazers } from "@/api/github";
+  import VabChart from '@/plugins/echarts'
+  import { dependencies, devDependencies } from '../../../package.json'
+  import { getList } from '@/api/changeLog'
+  import { getNoticeList } from '@/api/notice'
+  import { getRepos, getStargazers } from '@/api/github'
   export default {
-    name: "Index",
+    name: 'Index',
     components: {
       VabChart,
     },
@@ -291,42 +291,42 @@
           startVal: 0,
           endVal: this.$baseLodash.random(20000, 60000),
           decimals: 0,
-          prefix: "",
-          suffix: "",
-          separator: ",",
+          prefix: '',
+          suffix: '',
+          separator: ',',
           duration: 8000,
         },
         config2: {
           startVal: 0,
           endVal: this.$baseLodash.random(1000, 20000),
           decimals: 0,
-          prefix: "",
-          suffix: "",
-          separator: ",",
+          prefix: '',
+          suffix: '',
+          separator: ',',
           duration: 8000,
         },
         config3: {
           startVal: 0,
           endVal: this.$baseLodash.random(1000, 20000),
           decimals: 0,
-          prefix: "",
-          suffix: "",
-          separator: ",",
+          prefix: '',
+          suffix: '',
+          separator: ',',
           duration: 8000,
         },
 
         //访问量
         fwl: {
           grid: {
-            top: "4%",
-            left: "2%",
-            right: "4%",
-            bottom: "0%",
+            top: '4%',
+            left: '2%',
+            right: '4%',
+            bottom: '0%',
             containLabel: true,
           },
           xAxis: [
             {
-              type: "category",
+              type: 'category',
               boundaryGap: false,
               data: [],
               axisTick: {
@@ -336,13 +336,13 @@
           ],
           yAxis: [
             {
-              type: "value",
+              type: 'value',
             },
           ],
           series: [
             {
-              name: "访问量",
-              type: "line",
+              name: '访问量',
+              type: 'line',
               data: [],
               smooth: true,
               areaStyle: {},
@@ -352,17 +352,17 @@
         //授权数
         sqs: {
           grid: {
-            top: "4%",
-            left: "2%",
-            right: "4%",
-            bottom: "0%",
+            top: '4%',
+            left: '2%',
+            right: '4%',
+            bottom: '0%',
             containLabel: true,
           },
           xAxis: [
             {
-              type: "category",
+              type: 'category',
               /*boundaryGap: false,*/
-              data: ["0时", "4时", "8时", "12时", "16时", "20时", "24时"],
+              data: ['0时', '4时', '8时', '12时', '16时', '20时', '24时'],
               axisTick: {
                 alignWithLabel: true,
               },
@@ -370,14 +370,14 @@
           ],
           yAxis: [
             {
-              type: "value",
+              type: 'value',
             },
           ],
           series: [
             {
-              name: "授权数",
-              type: "bar",
-              barWidth: "60%",
+              name: '授权数',
+              type: 'bar',
+              barWidth: '60%',
               data: [10, 52, 20, 33, 39, 33, 22],
             },
           ],
@@ -385,131 +385,131 @@
         //词云
         cy: {
           grid: {
-            top: "4%",
-            left: "2%",
-            right: "4%",
-            bottom: "0%",
+            top: '4%',
+            left: '2%',
+            right: '4%',
+            bottom: '0%',
           },
           series: [
             {
-              type: "wordCloud",
+              type: 'wordCloud',
               gridSize: 15,
               sizeRange: [12, 40],
               rotationRange: [0, 0],
-              width: "100%",
-              height: "100%",
+              width: '100%',
+              height: '100%',
               textStyle: {
                 normal: {
                   color() {
                     const arr = [
-                      "#1890FF",
-                      "#36CBCB",
-                      "#4ECB73",
-                      "#FBD437",
-                      "#F2637B",
-                      "#975FE5",
-                    ];
-                    let index = Math.floor(Math.random() * arr.length);
-                    return arr[index];
+                      '#1890FF',
+                      '#36CBCB',
+                      '#4ECB73',
+                      '#FBD437',
+                      '#F2637B',
+                      '#975FE5',
+                    ]
+                    let index = Math.floor(Math.random() * arr.length)
+                    return arr[index]
                   },
                 },
               },
               data: [
                 {
-                  name: "vue-admin-beautiful",
+                  name: 'vue-admin-beautiful',
                   value: 15000,
                 },
                 {
-                  name: "element",
+                  name: 'element',
                   value: 10081,
                 },
                 {
-                  name: "beautiful",
+                  name: 'beautiful',
                   value: 9386,
                 },
 
                 {
-                  name: "vue",
+                  name: 'vue',
                   value: 6500,
                 },
                 {
-                  name: "chuzhixin",
+                  name: 'chuzhixin',
                   value: 6000,
                 },
                 {
-                  name: "good",
+                  name: 'good',
                   value: 4500,
                 },
                 {
-                  name: "success",
+                  name: 'success',
                   value: 3800,
                 },
                 {
-                  name: "never",
+                  name: 'never',
                   value: 3000,
                 },
                 {
-                  name: "boy",
+                  name: 'boy',
                   value: 2500,
                 },
                 {
-                  name: "girl",
+                  name: 'girl',
                   value: 2300,
                 },
                 {
-                  name: "github",
+                  name: 'github',
                   value: 2000,
                 },
                 {
-                  name: "hbuilder",
+                  name: 'hbuilder',
                   value: 1900,
                 },
                 {
-                  name: "dcloud",
+                  name: 'dcloud',
                   value: 1800,
                 },
                 {
-                  name: "china",
+                  name: 'china',
                   value: 1700,
                 },
                 {
-                  name: "1204505056",
+                  name: '1204505056',
                   value: 1600,
                 },
                 {
-                  name: "972435319",
+                  name: '972435319',
                   value: 1500,
                 },
                 {
-                  name: "young",
+                  name: 'young',
                   value: 1200,
                 },
                 {
-                  name: "old",
+                  name: 'old',
                   value: 1100,
                 },
                 {
-                  name: "vuex",
+                  name: 'vuex',
                   value: 900,
                 },
                 {
-                  name: "router",
+                  name: 'router',
                   value: 800,
                 },
                 {
-                  name: "money",
+                  name: 'money',
                   value: 700,
                 },
                 {
-                  name: "qingdao",
+                  name: 'qingdao',
                   value: 800,
                 },
                 {
-                  name: "yantai",
+                  name: 'yantai',
                   value: 9000,
                 },
                 {
-                  name: "author is very cool",
+                  name: 'author is very cool',
                   value: 9200,
                 },
               ],
@@ -519,30 +519,30 @@
         //中国地图
         zgdt: {
           title: {
-            text: "2099年全国GDP分布",
-            subtext: "数据来自vue-admin-beautiful杜撰",
+            text: '2099年全国GDP分布',
+            subtext: '数据来自vue-admin-beautiful杜撰',
           },
           tooltip: {
-            trigger: "item",
+            trigger: 'item',
           },
           dataRange: {
-            orient: "horizontal",
+            orient: 'horizontal',
             min: 0,
             max: 55000,
-            text: ["高", "低"],
+            text: ['高', '低'],
             splitNumber: 0,
           },
           series: [
             {
-              name: "2099年全国GDP分布",
-              type: "map",
+              name: '2099年全国GDP分布',
+              type: 'map',
               roam: false,
               zoom: 1.25,
-              mapType: "china",
+              mapType: 'china',
               mapLocation: {
-                x: "center",
+                x: 'center',
               },
-              selectedMode: "multiple",
+              selectedMode: 'multiple',
               itemStyle: {
                 normal: {
                   label: {
@@ -556,37 +556,37 @@
                 },
               },
               data: [
-                { name: "西藏", value: 605.83 },
-                { name: "青海", value: 1670.44 },
-                { name: "宁夏", value: 2102.21 },
-                { name: "海南", value: 2522.66 },
-                { name: "甘肃", value: 5020.37 },
-                { name: "贵州", value: 5701.84 },
-                { name: "新疆", value: 6610.05 },
-                { name: "云南", value: 8893.12 },
-                { name: "重庆", value: 10011.37 },
-                { name: "吉林", value: 10568.83 },
-                { name: "山西", value: 11237.55 },
-                { name: "天津", value: 11307.28 },
-                { name: "江西", value: 11702.82 },
-                { name: "广西", value: 11720.87 },
-                { name: "陕西", value: 12512.3 },
-                { name: "黑龙江", value: 12582 },
-                { name: "内蒙古", value: 14359.88 },
-                { name: "安徽", value: 15300.65 },
-                { name: "北京", value: 16251.93 },
-                { name: "福建", value: 17560.18 },
-                { name: "上海", value: 19195.69 },
-                { name: "湖北", value: 19632.26 },
-                { name: "湖南", value: 19669.56 },
-                { name: "四川", value: 21026.68 },
-                { name: "辽宁", value: 22226.7 },
-                { name: "河北", value: 24515.76 },
-                { name: "河南", value: 26931.03 },
-                { name: "浙江", value: 32318.85 },
-                { name: "山东", value: 45361.85, selected: true },
-                { name: "江苏", value: 49110.27 },
-                { name: "广东", value: 53210.28 },
+                { name: '西藏', value: 605.83 },
+                { name: '青海', value: 1670.44 },
+                { name: '宁夏', value: 2102.21 },
+                { name: '海南', value: 2522.66 },
+                { name: '甘肃', value: 5020.37 },
+                { name: '贵州', value: 5701.84 },
+                { name: '新疆', value: 6610.05 },
+                { name: '云南', value: 8893.12 },
+                { name: '重庆', value: 10011.37 },
+                { name: '吉林', value: 10568.83 },
+                { name: '山西', value: 11237.55 },
+                { name: '天津', value: 11307.28 },
+                { name: '江西', value: 11702.82 },
+                { name: '广西', value: 11720.87 },
+                { name: '陕西', value: 12512.3 },
+                { name: '黑龙江', value: 12582 },
+                { name: '内蒙古', value: 14359.88 },
+                { name: '安徽', value: 15300.65 },
+                { name: '北京', value: 16251.93 },
+                { name: '福建', value: 17560.18 },
+                { name: '上海', value: 19195.69 },
+                { name: '湖北', value: 19632.26 },
+                { name: '湖南', value: 19669.56 },
+                { name: '四川', value: 21026.68 },
+                { name: '辽宁', value: 22226.7 },
+                { name: '河北', value: 24515.76 },
+                { name: '河南', value: 26931.03 },
+                { name: '浙江', value: 32318.85 },
+                { name: '山东', value: 45361.85, selected: true },
+                { name: '江苏', value: 49110.27 },
+                { name: '广东', value: 53210.28 },
               ],
             },
           ],
@@ -601,114 +601,114 @@
         //卡片图标
         iconList: [
           {
-            icon: "video",
-            title: "视频播放器",
-            link: "/vab/player",
-            color: "#ffc069",
+            icon: 'video',
+            title: '视频播放器',
+            link: '/vab/player',
+            color: '#ffc069',
           },
           {
-            icon: "table",
-            title: "表格",
-            link: "/vab/table/comprehensiveTable",
-            color: "#5cdbd3",
+            icon: 'table',
+            title: '表格',
+            link: '/vab/table/comprehensiveTable',
+            color: '#5cdbd3',
           },
           {
-            icon: "laptop-code",
-            title: "源码",
-            link: "https://github.com/chuzhixin/vue-admin-beautiful",
-            color: "#b37feb",
+            icon: 'laptop-code',
+            title: '源码',
+            link: 'https://github.com/chuzhixin/vue-admin-beautiful',
+            color: '#b37feb',
           },
           {
-            icon: "book",
-            title: "书籍",
-            link: "",
-            color: "#69c0ff",
+            icon: 'book',
+            title: '书籍',
+            link: '',
+            color: '#69c0ff',
           },
           {
-            icon: "bullhorn",
-            title: "公告",
-            link: "",
-            color: "#ff85c0",
+            icon: 'bullhorn',
+            title: '公告',
+            link: '',
+            color: '#ff85c0',
           },
           {
-            icon: "gift",
-            title: "礼物",
-            link: "",
-            color: "#ffd666",
+            icon: 'gift',
+            title: '礼物',
+            link: '',
+            color: '#ffd666',
           },
 
           {
-            icon: "balance-scale-left",
-            title: "公平的世界",
-            link: "",
-            color: "#ff9c6e",
+            icon: 'balance-scale-left',
+            title: '公平的世界',
+            link: '',
+            color: '#ff9c6e',
           },
           {
-            icon: "coffee",
-            title: "休息一下",
-            link: "",
-            color: "#95de64",
+            icon: 'coffee',
+            title: '休息一下',
+            link: '',
+            color: '#95de64',
           },
         ],
-      };
+      }
     },
     created() {
-      this.fetchData();
+      this.fetchData()
     },
     beforeDestroy() {
-      clearInterval(this.timer);
+      clearInterval(this.timer)
     },
     mounted() {
-      let base = +new Date(2020, 1, 1);
-      let oneDay = 24 * 3600 * 1000;
-      let date = [];
+      let base = +new Date(2020, 1, 1)
+      let oneDay = 24 * 3600 * 1000
+      let date = []
 
-      let data = [Math.random() * 1500];
-      let now = new Date(base);
+      let data = [Math.random() * 1500]
+      let now = new Date(base)
 
       const addData = (shift) => {
-        now = [now.getFullYear(), now.getMonth() + 1, now.getDate()].join("/");
-        date.push(now);
-        data.push(this.$baseLodash.random(20000, 60000));
+        now = [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/')
+        date.push(now)
+        data.push(this.$baseLodash.random(20000, 60000))
 
         if (shift) {
-          date.shift();
-          data.shift();
+          date.shift()
+          data.shift()
         }
 
-        now = new Date(+new Date(now) + oneDay);
-      };
+        now = new Date(+new Date(now) + oneDay)
+      }
 
       for (let i = 1; i < 6; i++) {
-        addData();
+        addData()
       }
-      addData(true);
-      this.fwl.xAxis[0].data = date;
-      this.fwl.series[0].data = data;
+      addData(true)
+      this.fwl.xAxis[0].data = date
+      this.fwl.series[0].data = data
       this.timer = setInterval(() => {
-        addData(true);
-        this.fwl.xAxis[0].data = date;
-        this.fwl.series[0].data = data;
-      }, 3000);
+        addData(true)
+        this.fwl.xAxis[0].data = date
+        this.fwl.series[0].data = data
+      }, 3000)
     },
     methods: {
       handleClick(e) {
-        this.$baseMessage(`点击了${e.name},这里可以写跳转`);
+        this.$baseMessage(`点击了${e.name},这里可以写跳转`)
       },
       handleZrClick(e) {},
       handleChangeTheme() {
-        this.$baseEventBus.$emit("theme");
+        this.$baseEventBus.$emit('theme')
       },
       async fetchData() {
-        const { data } = await getList();
+        const { data } = await getList()
         data.map((item, index) => {
           if (index === data.length - 1) {
-            item.color = "#0bbd87";
+            item.color = '#0bbd87'
           }
-        });
-        this.activities = data;
-        const res = await getNoticeList();
-        this.noticeList = res.data;
+        })
+        this.activities = data
+        const res = await getNoticeList()
+        this.noticeList = res.data
         /* getRepos({
         token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
       }).then((res) => {
@@ -724,7 +724,7 @@
       }); */
       },
     },
-  };
+  }
 </script>
 <style lang="scss" scoped>
   .index-container {

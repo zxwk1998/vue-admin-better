@@ -18,54 +18,54 @@
 </template>
 
 <script>
-  import { mapGetters } from "vuex";
-  import { recordRoute } from "@/config/settings";
+  import { mapGetters } from 'vuex'
+  import { recordRoute } from '@/config/settings'
 
   export default {
-    name: "Avatar",
+    name: 'Avatar',
     computed: {
       ...mapGetters({
-        avatar: "user/avatar",
-        username: "user/username",
+        avatar: 'user/avatar',
+        username: 'user/username',
       }),
     },
     methods: {
       handleCommand(command) {
         switch (command) {
-          case "logout":
-            this.logout();
-            break;
-          case "personalCenter":
-            this.personalCenter();
-            break;
-          case "github":
-            window.open("https://github.com/chuzhixin/vue-admin-beautiful");
-            break;
-          case "gitee":
-            window.open("https://gitee.com/chu1204505056/vue-admin-beautiful");
-            break;
+          case 'logout':
+            this.logout()
+            break
+          case 'personalCenter':
+            this.personalCenter()
+            break
+          case 'github':
+            window.open('https://github.com/chuzhixin/vue-admin-beautiful')
+            break
+          case 'gitee':
+            window.open('https://gitee.com/chu1204505056/vue-admin-beautiful')
+            break
         }
       },
       personalCenter() {
-        this.$router.push("/personalCenter/personalCenter");
+        this.$router.push('/personalCenter/personalCenter')
       },
       logout() {
         this.$baseConfirm(
-          "您确定要退出" + this.$baseTitle + "吗?",
+          '您确定要退出' + this.$baseTitle + '吗?',
           null,
           async () => {
-            await this.$store.dispatch("user/logout");
+            await this.$store.dispatch('user/logout')
             if (recordRoute) {
-              const fullPath = this.$route.fullPath;
-              this.$router.push(`/login?redirect=${fullPath}`);
+              const fullPath = this.$route.fullPath
+              this.$router.push(`/login?redirect=${fullPath}`)
             } else {
-              this.$router.push("/login");
+              this.$router.push('/login')
             }
           }
-        );
+        )
       },
     },
-  };
+  }
 </script>
 <style lang="scss" scoped>
   .avatar-dropdown {

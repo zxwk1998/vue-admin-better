@@ -1,4 +1,4 @@
-import store from "@/store";
+import store from '@/store'
 
 /**
  * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
@@ -8,13 +8,13 @@ import store from "@/store";
  */
 export default function checkPermission(value) {
   if (value && value instanceof Array && value.length > 0) {
-    const permissions = store.getters["user/permissions"];
-    const permissionPermissions = value;
+    const permissions = store.getters['user/permissions']
+    const permissionPermissions = value
 
     return permissions.some((role) => {
-      return permissionPermissions.includes(role);
-    });
+      return permissionPermissions.includes(role)
+    })
   } else {
-    return false;
+    return false
   }
 }

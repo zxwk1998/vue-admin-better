@@ -6,22 +6,22 @@
 
 <script>
   export default {
-    name: "VabSnow",
+    name: 'VabSnow',
     props: {
       styleObj: {
         type: Object,
         default: () => {
-          return {};
+          return {}
         },
       },
     },
     data() {
-      return {};
+      return {}
     },
     created() {},
     mounted() {},
     methods: {},
-  };
+  }
 </script>
 
 <style lang="scss" scoped>

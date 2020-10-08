@@ -1,3 +1,3 @@
-import VabMagnifier from "zx-magnifie";
+import VabMagnifier from 'zx-magnifie'
 
-export default VabMagnifier;
+export default VabMagnifier

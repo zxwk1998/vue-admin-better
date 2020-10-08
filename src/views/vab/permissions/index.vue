@@ -114,46 +114,43 @@
 </template>
 
 <script>
-  import { mapGetters } from "vuex";
-  import { tokenTableName } from "@/config/settings";
-  import { getRouterList } from "@/api/router";
+  import { mapGetters } from 'vuex'
+  import { tokenTableName } from '@/config/settings'
+  import { getRouterList } from '@/api/router'
 
   export default {
-    name: "Permissions",
+    name: 'Permissions',
     data() {
       return {
         form: {
-          account: "",
+          account: '',
         },
         tableData: [],
         res: [],
-      };
+      }
     },
     computed: {
       ...mapGetters({
-        username: "user/username",
-        permissions: "user/permissions",
+        username: 'user/username',
+        permissions: 'user/permissions',
       }),
     },
     created() {
-      this.fetchData();
+      this.fetchData()
     },
     mounted() {
-      this.form.account = this.username;
+      this.form.account = this.username
     },
     methods: {
       handleChangePermission() {
-        localStorage.setItem(
-          tokenTableName,
-          `${this.form.account}-accessToken`
-        );
-        location.reload();
+        localStorage.setItem(tokenTableName, `${this.form.account}-accessToken`)
+        location.reload()
       },
       async fetchData() {
-        const res = await getRouterList();
-        this.tableData = res.data;
-        this.res = res;
+        const res = await getRouterList()
+        this.tableData = res.data
+        this.res = res
       },
     },
-  };
+  }
 </script>

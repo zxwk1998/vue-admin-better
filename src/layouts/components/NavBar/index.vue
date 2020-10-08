@@ -36,7 +36,7 @@
 </template>
 
 <script>
-  import { mapActions, mapGetters } from "vuex";
+  import { mapActions, mapGetters } from 'vuex'
 
   import {
     Avatar,
@@ -44,10 +44,10 @@
     ErrorLog,
     FullScreenBar,
     ThemeBar,
-  } from "@/layouts/components";
+  } from '@/layouts/components'
 
   export default {
-    name: "NavBar",
+    name: 'NavBar',
     components: {
       Avatar,
       Breadcrumb,
@@ -58,32 +58,32 @@
     data() {
       return {
         pulse: false,
-      };
+      }
     },
     computed: {
       ...mapGetters({
-        collapse: "settings/collapse",
-        visitedRoutes: "tabsBar/visitedRoutes",
-        device: "settings/device",
-        routes: "routes/routes",
+        collapse: 'settings/collapse',
+        visitedRoutes: 'tabsBar/visitedRoutes',
+        device: 'settings/device',
+        routes: 'routes/routes',
       }),
     },
     methods: {
       ...mapActions({
-        changeCollapse: "settings/changeCollapse",
+        changeCollapse: 'settings/changeCollapse',
       }),
       handleCollapse() {
-        this.changeCollapse();
+        this.changeCollapse()
       },
       async refreshRoute() {
-        this.$baseEventBus.$emit("reload-routerview");
-        this.pulse = true;
+        this.$baseEventBus.$emit('reload-routerview')
+        this.pulse = true
         setTimeout(() => {
-          this.pulse = false;
-        }, 1000);
+          this.pulse = false
+        }, 1000)
       },
     },
-  };
+  }
 </script>
 
 <style lang="scss" scoped>

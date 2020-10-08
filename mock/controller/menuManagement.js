@@ -1,51 +1,51 @@
 module.exports = [
   {
-    url: "/menuManagement/getTree",
-    type: "post",
+    url: '/menuManagement/getTree',
+    type: 'post',
     response() {
       return {
         code: 200,
-        msg: "success",
+        msg: 'success',
         totalCount: 999,
         data: [
           {
-            id: "root",
-            label: "全部角色",
+            id: 'root',
+            label: '全部角色',
             children: [
               {
-                id: "@id",
-                permission: "admin",
-                label: "admin角色",
+                id: '@id',
+                permission: 'admin',
+                label: 'admin角色',
               },
               {
-                id: "@id",
-                permission: "editor",
-                label: "editor角色",
+                id: '@id',
+                permission: 'editor',
+                label: 'editor角色',
               },
             ],
           },
         ],
-      };
+      }
     },
   },
   {
-    url: "/menuManagement/doEdit",
-    type: "post",
+    url: '/menuManagement/doEdit',
+    type: 'post',
     response() {
       return {
         code: 200,
-        msg: "模拟保存成功",
-      };
+        msg: '模拟保存成功',
+      }
     },
   },
   {
-    url: "/menuManagement/doDelete",
-    type: "post",
+    url: '/menuManagement/doDelete',
+    type: 'post',
     response() {
       return {
         code: 200,
-        msg: "模拟删除成功",
-      };
+        msg: '模拟删除成功',
+      }
     },
   },
-];
+]

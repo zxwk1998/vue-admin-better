@@ -1,23 +1,23 @@
 const data = [
   {
-    title: "vue-admin-beautiful-pro 1.7版本已发布，点我提前体验",
-    url: "https://chu1204505056.gitee.io/vue-admin-beautiful-pro/#/index",
+    title: 'vue-admin-beautiful-pro 1.7版本已发布，点我提前体验',
+    url: 'https://chu1204505056.gitee.io/vue-admin-beautiful-pro/#/index',
   },
   {
-    title: "vue-admin-beautiful（antdv） vue3.0版本已发布，点我提前体验",
-    url: "https://chu1204505056.gitee.io/vue-admin-beautiful-mini/#/index",
+    title: 'vue-admin-beautiful（antdv） vue3.0版本已发布，点我提前体验',
+    url: 'https://chu1204505056.gitee.io/vue-admin-beautiful-mini/#/index',
   },
-];
+]
 module.exports = [
   {
-    url: "/ad/getList",
-    type: "get",
+    url: '/ad/getList',
+    type: 'get',
     response() {
       return {
         code: 200,
-        msg: "success",
+        msg: 'success',
         data,
-      };
+      }
     },
   },
-];
+]

@@ -8,7 +8,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
-  [class*="-container"] {
+  [class*='-container'] {
     padding: 15px;
     background: $base-color-white;
   }

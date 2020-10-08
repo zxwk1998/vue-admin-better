@@ -121,21 +121,21 @@
 </template>
 
 <script>
-  import { getList, doDelete } from "@/api/table";
-  import TableEdit from "./components/TableEdit";
+  import { getList, doDelete } from '@/api/table'
+  import TableEdit from './components/TableEdit'
   export default {
-    name: "ComprehensiveTable",
+    name: 'ComprehensiveTable',
     components: {
       TableEdit,
     },
     filters: {
       statusFilter(status) {
         const statusMap = {
-          published: "success",
-          draft: "gray",
-          deleted: "danger",
-        };
-        return statusMap[status];
+          published: 'success',
+          draft: 'gray',
+          deleted: 'danger',
+        }
+        return statusMap[status]
       },
     },
     data() {
@@ -144,102 +144,102 @@
         list: [],
         imageList: [],
         listLoading: true,
-        layout: "total, sizes, prev, pager, next, jumper",
+        layout: 'total, sizes, prev, pager, next, jumper',
         total: 0,
         background: true,
-        selectRows: "",
-        elementLoadingText: "正在加载...",
+        selectRows: '',
+        elementLoadingText: '正在加载...',
         queryForm: {
           pageNo: 1,
           pageSize: 20,
-          title: "",
+          title: '',
         },
-      };
+      }
     },
     created() {
-      this.fetchData();
+      this.fetchData()
     },
     beforeDestroy() {},
     mounted() {},
     methods: {
       tableSortChange() {
-        const imageList = [];
+        const imageList = []
         this.$refs.tableSort.tableData.forEach((item, index) => {
-          imageList.push(item.img);
-        });
-        this.imageList = imageList;
+          imageList.push(item.img)
+        })
+        this.imageList = imageList
       },
       setSelectRows(val) {
-        this.selectRows = val;
+        this.selectRows = val
       },
       handleAdd() {
-        this.$refs["edit"].showEdit();
+        this.$refs['edit'].showEdit()
       },
       handleEdit(row) {
-        this.$refs["edit"].showEdit(row);
+        this.$refs['edit'].showEdit(row)
       },
       handleDelete(row) {
         if (row.id) {
-          this.$baseConfirm("你确定要删除当前项吗", null, async () => {
-            const { msg } = await doDelete({ ids: row.id });
-            this.$baseMessage(msg, "success");
-            this.fetchData();
-          });
+          this.$baseConfirm('你确定要删除当前项吗', null, async () => {
+            const { msg } = await doDelete({ ids: row.id })
+            this.$baseMessage(msg, 'success')
+            this.fetchData()
+          })
         } else {
           if (this.selectRows.length > 0) {
-            const ids = this.selectRows.map((item) => item.id).join();
-            this.$baseConfirm("你确定要删除选中项吗", null, async () => {
-              const { msg } = await doDelete({ ids: ids });
-              this.$baseMessage(msg, "success");
-              this.fetchData();
-            });
+            const ids = this.selectRows.map((item) => item.id).join()
+            this.$baseConfirm('你确定要删除选中项吗', null, async () => {
+              const { msg } = await doDelete({ ids: ids })
+              this.$baseMessage(msg, 'success')
+              this.fetchData()
+            })
           } else {
-            this.$baseMessage("未选中任何行", "error");
-            return false;
+            this.$baseMessage('未选中任何行', 'error')
+            return false
           }
         }
       },
       handleSizeChange(val) {
-        this.queryForm.pageSize = val;
-        this.fetchData();
+        this.queryForm.pageSize = val
+        this.fetchData()
       },
       handleCurrentChange(val) {
-        this.queryForm.pageNo = val;
-        this.fetchData();
+        this.queryForm.pageNo = val
+        this.fetchData()
       },
       handleQuery() {
-        this.queryForm.pageNo = 1;
-        this.fetchData();
+        this.queryForm.pageNo = 1
+        this.fetchData()
       },
       async fetchData() {
-        this.listLoading = true;
-        const { data, totalCount } = await getList(this.queryForm);
-        this.list = data;
-        const imageList = [];
+        this.listLoading = true
+        const { data, totalCount } = await getList(this.queryForm)
+        this.list = data
+        const imageList = []
         data.forEach((item, index) => {
-          imageList.push(item.img);
-        });
-        this.imageList = imageList;
-        this.total = totalCount;
+          imageList.push(item.img)
+        })
+        this.imageList = imageList
+        this.total = totalCount
         setTimeout(() => {
-          this.listLoading = false;
-        }, 500);
+          this.listLoading = false
+        }, 500)
       },
       testMessage() {
-        this.$baseMessage("test1", "success");
+        this.$baseMessage('test1', 'success')
       },
       testALert() {
-        this.$baseAlert("11");
-        this.$baseAlert("11", "自定义标题", () => {
+        this.$baseAlert('11')
+        this.$baseAlert('11', '自定义标题', () => {
           /* 可以写回调; */
-        });
-        this.$baseAlert("11", null, () => {
+        })
+        this.$baseAlert('11', null, () => {
           /* 可以写回调; */
-        });
+        })
       },
       testConfirm() {
         this.$baseConfirm(
-          "你确定要执行该操作?",
+          '你确定要执行该操作?',
           null,
           () => {
             /* 可以写回调; */
@@ -247,11 +247,11 @@
           () => {
             /* 可以写回调; */
           }
-        );
+        )
       },
       testNotify() {
-        this.$baseNotify("测试消息提示", "test", "success", "bottom-right");
+        this.$baseNotify('测试消息提示', 'test', 'success', 'bottom-right')
       },
     },
-  };
+  }
 </script>

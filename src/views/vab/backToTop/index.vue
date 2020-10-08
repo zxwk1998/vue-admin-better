@@ -9,11 +9,11 @@
 
 <script>
   export default {
-    name: "BackToTop",
+    name: 'BackToTop',
     data() {
-      return {};
+      return {}
     },
-  };
+  }
 </script>
 <style lang="scss" scoped>
   .placeholder-container div {

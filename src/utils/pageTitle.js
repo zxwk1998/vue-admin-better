@@ -1,4 +1,4 @@
-import { title } from "@/config/settings";
+import { title } from '@/config/settings'
 
 /**
  * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
@@ -8,7 +8,7 @@ import { title } from "@/config/settings";
  */
 export default function getPageTitle(pageTitle) {
   if (pageTitle) {
-    return `${pageTitle}-${title}`;
+    return `${pageTitle}-${title}`
   }
-  return `${title}`;
+  return `${title}`
 }

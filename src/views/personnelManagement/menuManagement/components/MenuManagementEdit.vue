@@ -24,48 +24,48 @@
 </template>
 
 <script>
-  import { doEdit } from "@/api/menuManagement";
+  import { doEdit } from '@/api/menuManagement'
 
   export default {
-    name: "MenuManagementEdit",
+    name: 'MenuManagementEdit',
     data() {
       return {
         form: {},
         rules: {
-          id: [{ required: true, trigger: "blur", message: "请输入路径" }],
+          id: [{ required: true, trigger: 'blur', message: '请输入路径' }],
         },
-        title: "",
+        title: '',
         dialogFormVisible: false,
-      };
+      }
     },
     created() {},
     methods: {
       showEdit(row) {
         if (!row) {
-          this.title = "添加";
+          this.title = '添加'
         } else {
-          this.title = "编辑";
-          this.form = Object.assign({}, row);
+          this.title = '编辑'
+          this.form = Object.assign({}, row)
         }
-        this.dialogFormVisible = true;
+        this.dialogFormVisible = true
       },
       close() {
-        this.$refs["form"].resetFields();
-        this.form = this.$options.data().form;
-        this.dialogFormVisible = false;
+        this.$refs['form'].resetFields()
+        this.form = this.$options.data().form
+        this.dialogFormVisible = false
       },
       save() {
-        this.$refs["form"].validate(async (valid) => {
+        this.$refs['form'].validate(async (valid) => {
           if (valid) {
-            const { msg } = await doEdit(this.form);
-            this.$baseMessage(msg, "success");
-            this.$emit("fetch-data");
-            this.close();
+            const { msg } = await doEdit(this.form)
+            this.$baseMessage(msg, 'success')
+            this.$emit('fetch-data')
+            this.close()
           } else {
-            return false;
+            return false
           }
-        });
+        })
       },
     },
-  };
+  }
 </script>

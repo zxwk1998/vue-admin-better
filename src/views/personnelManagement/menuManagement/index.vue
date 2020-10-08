@@ -43,14 +43,14 @@
           <el-table-column show-overflow-tooltip label="是否隐藏">
             <template #default="{ row }">
               <span>
-                {{ row.hidden ? "是" : "否" }}
+                {{ row.hidden ? '是' : '否' }}
               </span>
             </template>
           </el-table-column>
           <el-table-column show-overflow-tooltip label="是否一直显示当前节点">
             <template #default="{ row }">
               <span>
-                {{ row.alwaysShow ? "是" : "否" }}
+                {{ row.alwaysShow ? '是' : '否' }}
               </span>
             </template>
           </el-table-column>
@@ -82,14 +82,14 @@
           <el-table-column show-overflow-tooltip label="是否固定">
             <template #default="{ row }">
               <span v-if="row.meta">
-                {{ row.meta.affix ? "是" : "否" }}
+                {{ row.meta.affix ? '是' : '否' }}
               </span>
             </template>
           </el-table-column>
           <el-table-column show-overflow-tooltip label="是否无缓存">
             <template #default="{ row }">
               <span v-if="row.meta">
-                {{ row.meta.noKeepAlive ? "是" : "否" }}
+                {{ row.meta.noKeepAlive ? '是' : '否' }}
               </span>
             </template>
           </el-table-column>
@@ -115,59 +115,59 @@
 </template>
 
 <script>
-  import { getRouterList as getList } from "@/api/router";
-  import { getTree, doDelete } from "@/api/menuManagement";
-  import Edit from "./components/MenuManagementEdit";
+  import { getRouterList as getList } from '@/api/router'
+  import { getTree, doDelete } from '@/api/menuManagement'
+  import Edit from './components/MenuManagementEdit'
 
   export default {
-    name: "MenuManagement",
+    name: 'MenuManagement',
     components: { Edit },
     data() {
       return {
         data: [],
         defaultProps: {
-          children: "children",
-          label: "label",
+          children: 'children',
+          label: 'label',
         },
         list: [],
         listLoading: true,
-        elementLoadingText: "正在加载...",
-      };
+        elementLoadingText: '正在加载...',
+      }
     },
     async created() {
-      const roleData = await getTree();
-      this.data = roleData.data;
-      this.fetchData();
+      const roleData = await getTree()
+      this.data = roleData.data
+      this.fetchData()
     },
     methods: {
       handleEdit(row) {
         if (row.path) {
-          this.$refs["edit"].showEdit(row);
+          this.$refs['edit'].showEdit(row)
         } else {
-          this.$refs["edit"].showEdit();
+          this.$refs['edit'].showEdit()
         }
       },
       handleDelete(row) {
         if (row.id) {
-          this.$baseConfirm("你确定要删除当前项吗", null, async () => {
-            const { msg } = await doDelete({ ids: row.id });
-            this.$baseMessage(msg, "success");
-            this.fetchData();
-          });
+          this.$baseConfirm('你确定要删除当前项吗', null, async () => {
+            const { msg } = await doDelete({ ids: row.id })
+            this.$baseMessage(msg, 'success')
+            this.fetchData()
+          })
         }
       },
       async fetchData() {
-        this.listLoading = true;
+        this.listLoading = true
 
-        const { data } = await getList();
-        this.list = data;
+        const { data } = await getList()
+        this.list = data
         setTimeout(() => {
-          this.listLoading = false;
-        }, 300);
+          this.listLoading = false
+        }, 300)
       },
       handleNodeClick(data) {
-        this.fetchData();
+        this.fetchData()
       },
     },
-  };
+  }
 </script>

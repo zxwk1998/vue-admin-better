@@ -1,3 +1,3 @@
-import VabComparison from "zx-comparison";
+import VabComparison from 'zx-comparison'
 
-export default VabComparison;
+export default VabComparison

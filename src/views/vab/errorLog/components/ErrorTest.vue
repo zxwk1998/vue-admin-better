@@ -5,9 +5,9 @@
 
 <script>
   export default {
-    name: "ErrorTest",
+    name: 'ErrorTest',
     data() {
-      return {};
+      return {}
     },
-  };
+  }
 </script>

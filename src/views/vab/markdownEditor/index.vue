@@ -23,29 +23,29 @@
 </template>
 
 <script>
-  import VabMarkdownEditor from "@/plugins/vabMarkdownEditor";
+  import VabMarkdownEditor from '@/plugins/vabMarkdownEditor'
 
   export default {
-    name: "MarkdownEditor",
+    name: 'MarkdownEditor',
     components: { VabMarkdownEditor },
     data() {
       return {
-        value: "# vue-admin-beautiful",
+        value: '# vue-admin-beautiful',
         html: '<h1 id="vue-admin-beautiful">vue-admin-beautiful</h1>',
-      };
+      }
     },
     methods: {
       handleAddText() {
-        this.$refs.mde.add("\n### 新增加的内容");
+        this.$refs.mde.add('\n### 新增加的内容')
       },
       handleAddImg() {
         this.$refs.mde.add(
-          "\n![](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)"
-        );
+          '\n![](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)'
+        )
       },
       handleShowHtml(html) {
-        this.html = html;
+        this.html = html
       },
     },
-  };
+  }
 </script>

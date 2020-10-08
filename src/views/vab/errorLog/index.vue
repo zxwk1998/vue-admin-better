@@ -11,18 +11,18 @@
 </template>
 
 <script>
-  import ErrorTest from "./components/ErrorTest";
+  import ErrorTest from './components/ErrorTest'
 
   export default {
-    name: "ErrorLog",
+    name: 'ErrorLog',
     components: { ErrorTest },
     data() {
-      return { show: false };
+      return { show: false }
     },
     methods: {
       handleError() {
-        this.show = true;
+        this.show = true
       },
     },
-  };
+  }
 </script>

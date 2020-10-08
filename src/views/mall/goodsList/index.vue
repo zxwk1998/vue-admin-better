@@ -65,49 +65,49 @@
 </template>
 
 <script>
-  import { getList } from "@/api/goodsList";
+  import { getList } from '@/api/goodsList'
 
   export default {
-    name: "Goods",
+    name: 'Goods',
     components: {},
     data() {
       return {
         queryForm: {
           pageNo: 1,
           pageSize: 20,
-          title: "",
+          title: '',
         },
         list: null,
         listLoading: true,
-        layout: "total, sizes, prev, pager, next, jumper",
+        layout: 'total, sizes, prev, pager, next, jumper',
         total: 0,
-        elementLoadingText: "正在加载...",
-      };
+        elementLoadingText: '正在加载...',
+      }
     },
     created() {
-      this.fetchData();
+      this.fetchData()
     },
     methods: {
       handleSizeChange(val) {
-        this.queryForm.pageSize = val;
-        this.fetchData();
+        this.queryForm.pageSize = val
+        this.fetchData()
       },
       handleCurrentChange(val) {
-        this.queryForm.pageNo = val;
-        this.fetchData();
+        this.queryForm.pageNo = val
+        this.fetchData()
       },
       handleQuery() {
-        this.queryForm.pageNo = 1;
-        this.fetchData();
+        this.queryForm.pageNo = 1
+        this.fetchData()
       },
       async fetchData() {
-        this.listLoading = true;
-        const { data, totalCount } = await getList(this.queryForm);
-        this.list = data;
-        this.total = totalCount;
+        this.listLoading = true
+        const { data, totalCount } = await getList(this.queryForm)
+        this.list = data
+        this.total = totalCount
       },
     },
-  };
+  }
 </script>
 <style lang="scss" scoped>
   .goods-list-container {

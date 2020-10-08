@@ -189,14 +189,14 @@
 
 <script>
   export default {
-    name: "Lodash",
+    name: 'Lodash',
     data() {
-      return {};
+      return {}
     },
     created() {},
     mounted() {},
     methods: {},
-  };
+  }
 </script>
 <style lang="scss" scoped>
   .lodash-container {
