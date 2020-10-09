@@ -91,6 +91,26 @@ npm run serve
 <img style="border-radius:999px" src="https://avatars3.githubusercontent.com/u/29328241?s=50&u=bb0977b405ccf1a101ce4e18e4fb8d958854ca60&v=4"/>
 </a>
 
+## 谁在使用
+
+- 如果您正在使用 vue-admin-beautiful 希望展示到 README 中请联系1204505056@qq.com
+
+  <a title="360数科" href="https://www.360shuke.com/" target="_blank">
+  <img style="width:120px;" src="https://gitee.com/chu1204505056/image/raw/master/360.png"/>
+  </a>
+  <br/>
+  <a title="京东" href="https://www.jd.com/" target="_blank">
+  <img style="width:120px" src="https://gitee.com/chu1204505056/image/raw/master/jingdong.png"/>
+  </a>
+  <br/>
+  <a title="若谷" href="https://ruogu.speakin.mobi/" target="_blank">
+  <img style="width:120px" src="https://gitee.com/chu1204505056/image/raw/master/ruogu.png"/>
+  </a>
+  <br/>
+  <a title="千鸟云商" href="https://www.qianniaovip.com/" target="_blank">
+  <img style="width:120px" src="https://gitee.com/chu1204505056/image/raw/master/qianniaoyunshang.png"/>
+  </a>
+
 ## 优势及注意事项
 
 ```
