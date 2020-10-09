@@ -132,7 +132,7 @@ const install = (Vue, opts = {}) => {
     const formHeight = 50
 
     if (layout === 'vertical') {
-      paddingHeight = 340
+      paddingHeight = 365
     }
 
     if ('number' == typeof formType) {
