@@ -1,8 +1,5 @@
 <template>
   <div class="more-container">
-    <el-divider content-position="left">
-      看到这里，你心动了吗？如果你心动了那就加入我们的qq群吧（972435319），谢谢你愿意尊重作者的心血，希望我们每个人都变得优秀，如果你愿意跟随作者一起学习技术，作者QQ（1204505056白嫖党勿扰）
-    </el-divider>
     <el-row :gutter="20">
       <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
         <el-card>
