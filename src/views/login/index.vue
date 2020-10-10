@@ -4,9 +4,8 @@
       <a-col :xs="24" :md="11" :sm="24" :lg="14" :xl="14"></a-col>
       <a-col :xs="24" :sm="24" :md="12" :lg="9" :xl="6">
         <div class="login-container-form">
-          <div class="login-container-title">
-            {{ title }}
-          </div>
+          <div class="login-container-hello">hello!</div>
+          <div class="login-container-title">欢迎来到 {{ title }}</div>
           <a-form :model="form" @submit="handleSubmit" @submit.prevent>
             <a-form-item>
               <a-input v-model:value="form.username" placeholder="Username">
@@ -34,17 +33,17 @@
               >
                 登录
               </a-button>
-              <div class="login-container-tips">
-                基于vue{{ dependencies['vue'] }}
-                + ant-design-vue
-                {{ dependencies['ant-design-vue'] }}开发
-              </div>
             </a-form-item>
           </a-form>
         </div>
       </a-col>
       <a-col :xs="24" :md="11" :sm="24" :lg="14" :xl="14"></a-col>
     </a-row>
+    <div class="login-container-tips">
+      基于vue{{ dependencies['vue'] }}
+      + ant-design-vue
+      {{ dependencies['ant-design-vue'] }}开发
+    </div>
   </div>
 </template>
 <script>
@@ -123,15 +122,20 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px 0 rgba(7, 17, 27, 0.06);
     }
+    &-hello {
+      font-size: 32px;
+      color: #fff;
+    }
     &-title {
       margin-bottom: 30px;
-      font-size: 28px;
-      font-weight: bold;
+      font-size: 20px;
       color: #fff;
-      text-align: center;
     }
     &-tips {
-      margin-top: 10px;
+      position: fixed;
+      bottom: @vab-margin;
+      width: 100%;
+      height: 40px;
       color: rgba(255, 255, 255, 0.856);
       text-align: center;
     }
