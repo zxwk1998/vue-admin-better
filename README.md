@@ -110,6 +110,10 @@ npm run serve
   <a title="千鸟云商" href="https://www.qianniaovip.com/" target="_blank">
   <img width="120px" src="https://gitee.com/chu1204505056/image/raw/master/qianniaoyunshang.png"/>
   </a>
+  <br/>
+  <a title="OPSLI" href="https://www.opsli.com/" target="_blank">
+  <img width="120px" src="https://gitee.com/chu1204505056/image/raw/master/opsli.png"/>
+  </a>
 
 ## 优势及注意事项
 
