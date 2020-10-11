@@ -1,8 +1,8 @@
 <template>
   <div class="login-container">
     <a-row>
-      <a-col :xs="24" :md="11" :sm="24" :lg="14" :xl="14"></a-col>
-      <a-col :xs="24" :sm="24" :md="12" :lg="9" :xl="6">
+      <a-col :xs="0" :md="0" :sm="12" :lg="14" :xl="16"></a-col>
+      <a-col :xs="24" :sm="24" :md="12" :lg="10" :xl="6">
         <div class="login-container-form">
           <div class="login-container-hello">hello!</div>
           <div class="login-container-title">欢迎来到 {{ title }}</div>
@@ -37,7 +37,6 @@
           </a-form>
         </div>
       </a-col>
-      <a-col :xs="24" :md="11" :sm="24" :lg="14" :xl="14"></a-col>
     </a-row>
     <div class="login-container-tips">
       基于vue{{ dependencies['vue'] }}
@@ -87,7 +86,7 @@
       this.form.password = '123456'
       setTimeout(() => {
         this.handleSubmit()
-      }, 500000)
+      }, 5000)
     },
     methods: {
       ...mapActions({

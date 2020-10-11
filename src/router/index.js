@@ -62,6 +62,15 @@ export const asyncRoutes = [
           icon: 'table-2',
         },
       },
+      {
+        path: 'icon',
+        name: 'Icon',
+        component: () => import('@/views/vab/icon'),
+        meta: {
+          title: '图标',
+          icon: 'remixicon-line',
+        },
+      },
     ],
   },
   {

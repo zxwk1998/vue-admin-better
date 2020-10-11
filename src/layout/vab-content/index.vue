@@ -1,5 +1,5 @@
 <template>
-  <a-layout-content class="content">
+  <a-layout-content class="vab-content">
     <router-view v-slot="{ Component }">
       <transition mode="out-in" name="fade-transform">
         <component :is="Component" />
@@ -40,7 +40,11 @@
     transform: translateX(30px);
   }
 
-  .content {
+  .vab-content {
+    min-height: calc(
+      100vh - @vab-header-height - @vab-padding - @vab-padding - @vab-padding -
+        @vab-padding
+    ) !important;
     padding: @vab-padding;
     margin: @vab-margin;
     background: #fff;
