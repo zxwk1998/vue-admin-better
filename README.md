@@ -111,10 +111,6 @@ npm run serve
   <img width="120px" src="https://gitee.com/chu1204505056/image/raw/master/jingdong.png"/>
   </a>
   <br/>
-  <a title="若谷" href="https://ruogu.speakin.mobi/" target="_blank">
-  <img width="120px" src="https://gitee.com/chu1204505056/image/raw/master/ruogu.png"/>
-  </a>
-  <br/>
   <a title="千鸟云商" href="https://www.qianniaovip.com/" target="_blank">
   <img width="120px" src="https://gitee.com/chu1204505056/image/raw/master/qianniaoyunshang.png"/>
   </a>
