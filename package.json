@@ -21,7 +21,7 @@
     "js-cookie": "^3.0.0-rc.1",
     "mockjs": "^1.1.0",
     "remixicon": "^2.5.0",
-    "vue": "^3.0.0",
+    "vue": "^3.0.1",
     "vue-router": "^4.0.0-beta.13",
     "vuex": "^4.0.0-beta.4"
   },
@@ -29,7 +29,7 @@
     "@vue/cli-plugin-babel": "^4.5.7",
     "@vue/cli-plugin-eslint": "^4.5.7",
     "@vue/cli-service": "^4.5.7",
-    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/compiler-sfc": "^3.0.1",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^11.0.0-beta.2",
     "body-parser": "^1.19.0",
