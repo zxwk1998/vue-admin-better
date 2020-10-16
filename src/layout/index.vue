@@ -19,6 +19,7 @@
         theme="dark"
         mode="inline"
         v-model:selectedKeys="selectedKeys"
+        v-model:openKeys="openKeys"
       >
         <vab-menu v-for="route in routes" :key="route.path" :item="route" />
       </a-menu>
@@ -72,7 +73,8 @@
     },
     data() {
       return {
-        selectedKeys: ['/index'],
+        selectedKeys: [],
+        openKeys: [],
       }
     },
     computed: {
@@ -90,11 +92,12 @@
     },
     watch: {
       $route: {
-        handler({ fullPath }) {
+        handler({ fullPath, matched }) {
           //暂未研究清楚此处，待改进
           if (fullPath === '/index') fullPath = '/'
           if (fullPath === '/test/test') fullPath = '/test'
           this.selectedKeys = [fullPath]
+          this.openKeys = [matched[0].path]
         },
         immediate: true,
       },
