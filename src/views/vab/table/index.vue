@@ -159,7 +159,6 @@
     },
     computed: {
       height() {
-        alert(this.$baseTableHeight())
         return this.$baseTableHeight()
       },
     },

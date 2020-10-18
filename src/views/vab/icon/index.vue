@@ -116,8 +116,7 @@
         justify-content: center; /* 水平居中 */
 
         svg:not(:root).svg-inline--fa {
-          font-size: 35px;
-          font-weight: bold;
+          font-size: 18px;
           color: $base-color-gray;
           text-align: center;
           vertical-align: middle;

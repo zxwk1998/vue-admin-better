@@ -125,7 +125,7 @@
         justify-content: center; /* 水平居中 */
 
         svg:not(:root) {
-          font-size: 35px;
+          font-size: 16px;
           font-weight: bold;
           color: $base-color-gray;
           text-align: center;
@@ -135,8 +135,8 @@
         }
 
         .svg-external-icon {
-          width: 35px;
-          height: 35px;
+          width: 20px;
+          height: 18px;
         }
       }
     }
