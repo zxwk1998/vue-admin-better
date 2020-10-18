@@ -88,7 +88,6 @@
       position: relative;
       margin-left: 5px;
       margin-left: 5px;
-      font-weight: 600;
       cursor: pointer;
     }
   }
