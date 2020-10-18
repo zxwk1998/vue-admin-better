@@ -12,7 +12,7 @@
   color: #fff !important;
   background-color: #2e2f34 !important;
 
-  *:not(a):not([class*="svg"]):not(.el-drawer__wrapper):not(.el-drawer__container) {
+  *:not(a):not([class*='svg']):not(.el-drawer__wrapper):not(.el-drawer__container) {
     color: #fff !important;
     background-color: #2e2f34 !important;
     border-color: #999 !important;
@@ -20,7 +20,7 @@
   }
 
   .is-active:not(li) {
-    *:not(a):not([class*="svg"]) {
+    *:not(a):not([class*='svg']) {
       color: #fff !important;
       background-color: #000 !important;
       border-color: #999 !important;
@@ -106,7 +106,7 @@
     background: $base-color-white;
     border-top: 1px solid #f6f6f6;
 
-    .tags-content {
+    .tabs-content {
       .el-tabs__header {
         .el-tabs__item {
           &.is-active {
