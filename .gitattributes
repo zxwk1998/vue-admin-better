@@ -1,6 +1,6 @@
 *.html text eol=lf
 *.css text eol=lf
-*.js text eol=lf linguist-language=vue
+*.js text eol=lf
 *.scss text eol=lf
 *.vue text eol=lf
 *.hbs text eol=lf
@@ -8,3 +8,4 @@
 *.md text eol=lf
 *.json text eol=lf
 *.yml text eol=lf
+*.js linguist-language=vue
