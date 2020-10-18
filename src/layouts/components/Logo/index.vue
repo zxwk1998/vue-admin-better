@@ -54,7 +54,6 @@
     display: inline-block;
     overflow: hidden;
     font-size: 20px;
-    font-weight: 600;
     line-height: 55px;
     color: $base-title-color;
     text-overflow: ellipsis;
