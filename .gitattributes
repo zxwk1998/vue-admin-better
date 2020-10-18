@@ -1,6 +1,6 @@
 *.html text eol=lf
 *.css text eol=lf
-*.js text eol=lf
+*.js text eol=lf linguist-language=vue
 *.scss text eol=lf
 *.vue text eol=lf
 *.hbs text eol=lf
