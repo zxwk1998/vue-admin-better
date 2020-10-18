@@ -22,7 +22,7 @@
 
 - [⚡️ vue3.x + ant-design-vue（beta 版本，免费商用，支持 PC、平板、手机）](http://beautiful.panm.cn/vue-admin-beautiful-antdv/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-- [🚀 pro 版演示地址（付费版本，支持 PC、平板、手机）](http://beautiful.panm.cn/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🚀 pro 版演示地址（付费版本，支持 PC、平板、手机 QQ 1204505056）](http://beautiful.panm.cn/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 ## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful/tree/vue3.0-antdv)
 
