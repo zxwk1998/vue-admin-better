@@ -104,7 +104,6 @@
       height: $base-nav-bar-height;
 
       .fold-unfold {
-        font-size: 20px;
         color: $base-color-gray;
         cursor: pointer;
       }
@@ -128,7 +127,7 @@
           width: 1em;
           height: 1em;
           margin-right: 15px;
-          font-size: $base-font-size-big;
+          font-size: $base-font-size-small;
           color: $base-color-gray;
           cursor: pointer;
           fill: $base-color-gray;
