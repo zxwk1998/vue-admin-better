@@ -130,7 +130,7 @@ module.exports = {
         .plugin('compression')
         .use(CompressionWebpackPlugin, [
           {
-            filename: '[path].gz[query]',
+            filename: '[path][base].gz[query]',
             algorithm: 'gzip',
             test: new RegExp(
               '\\.(' + productionGzipExtensions.join('|') + ')$'
