@@ -199,6 +199,10 @@ const data = [
     content: '凌晨两点，我累了，移除无用组件，精简package',
     timestamp: '2020-10-02',
   },
+  {
+    content: '富文本编辑器支持精细化配置',
+    timestamp: '2020-10-20',
+  },
 ]
 
 module.exports = [
