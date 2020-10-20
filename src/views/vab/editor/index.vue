@@ -11,7 +11,11 @@
         </el-select>
       </el-form-item>
       <el-form-item label="内容" prop="content" class="vab-quill-content">
-        <vab-quill v-model="form.content" :min-height="400"></vab-quill>
+        <vab-quill
+          v-model="form.content"
+          :min-height="400"
+          :options="options"
+        ></vab-quill>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="handleSee">预览效果</el-button>
@@ -34,6 +38,30 @@
     components: { vabQuill },
     data() {
       return {
+        options: {
+          theme: 'snow',
+          bounds: document.body,
+          debug: 'warn',
+          modules: {
+            toolbar: [
+              ['bold', 'italic', 'underline', 'strike'],
+              [{ header: [1, 2, 3, 4, 5, 6, false] }],
+              [{ size: ['small', false, 'large', 'huge'] }],
+              [{ color: [] }, { background: [] }],
+              ['blockquote', 'code-block'],
+              [{ list: 'ordered' }, { list: 'bullet' }],
+              [{ script: 'sub' }, { script: 'super' }],
+              [{ indent: '-1' }, { indent: '+1' }],
+              [{ align: [] }],
+              [{ direction: 'rtl' }],
+              [{ font: [] }],
+              ['clean'],
+              ['link', 'image'],
+            ],
+          },
+          placeholder: '内容...',
+          readOnly: false,
+        },
         borderColor: '#dcdfe6',
         dialogTableVisible: false,
         form: {
