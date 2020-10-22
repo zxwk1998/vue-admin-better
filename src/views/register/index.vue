@@ -164,6 +164,11 @@
     },
     methods: {
       getPhoneCode() {
+        if (!isPhone(this.form.phone)) {
+          //this.$baseMessage('请输入手机号', 'error')
+          this.$refs['registerForm'].validateField('phone')
+          return
+        }
         this.isGetphone = true
         let n = 60
         this.getPhoneIntval = setInterval(() => {
