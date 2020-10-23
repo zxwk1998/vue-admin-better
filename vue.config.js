@@ -1,3 +1,8 @@
+/**
+ * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
+ * @description cli配置
+ */
+
 const path = require('path')
 const {
   publicPath,
