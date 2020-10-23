@@ -1,3 +1,5 @@
+# .eslintignore
+
 src/assets
 src/icons
 public
