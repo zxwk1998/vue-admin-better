@@ -52,19 +52,10 @@
 </template>
 
 <script>
-  import { Ad, AppMain, NavBar, SideBar, TabsBar, TopBar } from './components'
   import { mapActions, mapGetters } from 'vuex'
   import { tokenName } from '@/config/settings'
   export default {
     name: 'Layout',
-    components: {
-      Ad,
-      TopBar,
-      NavBar,
-      SideBar,
-      AppMain,
-      TabsBar,
-    },
     data() {
       return { oldLayout: '' }
     },

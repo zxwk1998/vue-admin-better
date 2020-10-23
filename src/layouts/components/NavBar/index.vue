@@ -38,23 +38,8 @@
 <script>
   import { mapActions, mapGetters } from 'vuex'
 
-  import {
-    Avatar,
-    Breadcrumb,
-    ErrorLog,
-    FullScreenBar,
-    ThemeBar,
-  } from '@/layouts/components'
-
   export default {
     name: 'NavBar',
-    components: {
-      Avatar,
-      Breadcrumb,
-      ErrorLog,
-      FullScreenBar,
-      ThemeBar,
-    },
     data() {
       return {
         pulse: false,

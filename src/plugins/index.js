@@ -8,13 +8,12 @@ import '@/colorfulIcon'
 import '@/config/permission'
 import '@/utils/errorLog'
 import './vabIcon'
-
+import VabDrag from 'zx-layouts/Drag'
+import VabPermissions from 'zx-layouts/Permissions'
 import Vab from '@/utils/vab'
-import { VabDrag, VabPermissions, VabQueryForm } from '@/layouts/components'
 import VabCount from 'zx-count'
 
 Vue.use(Vab)
 Vue.use(VabPermissions)
 Vue.use(VabDrag)
-Vue.use(VabQueryForm)
 Vue.use(VabCount)

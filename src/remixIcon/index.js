@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { RemixIcon } from '@/layouts/components'
+import RemixIcon from 'zx-layouts/RemixIcon'
 
 Vue.component('VabRemixIcon', RemixIcon)
 const req = require.context('./svg', false, /\.svg$/),
