@@ -67,7 +67,7 @@ npm run serve
 
 - [luch-request（基于 Promise 开发的 uni-app 跨平台、项目级别的请求库）](https://www.quanzhan.co/luch-request/)
 
-- [umyui 文档（开发者准备的基于 Vue 2.0 的桌面端组件库; 流畅渲染表格万级数据）](http://www.umyui.com/)
+- [umyui](http://www.umyui.com/)
 
 ## 我们定期赞助的开源项目（感谢巨人）
 
