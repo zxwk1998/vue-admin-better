@@ -1,3 +1,6 @@
+/**
+ * @description 雪花屏代码，基于ant-design修改
+ **/
 .first-loading-wrp {
   display: flex;
   flex-direction: column;

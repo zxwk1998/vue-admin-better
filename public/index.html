@@ -16,15 +16,6 @@
     />
     <meta name="author" content="<%= VUE_APP_AUTHOR %>" />
     <link rel="stylesheet" href="<%= BASE_URL %>static/css/loading.css" />
-    <script>
-      var _hmt = _hmt || []
-      ;(function () {
-        var hm = document.createElement('script')
-        hm.src = 'https://hm.baidu.com/hm.js?7174bade1219f9cc272e7978f9523fc8'
-        var s = document.getElementsByTagName('script')[0]
-        s.parentNode.insertBefore(hm, s)
-      })()
-    </script>
   </head>
   <body>
     <noscript>
@@ -47,6 +38,15 @@
     <script>
       ;/^http(s*):\/\//.test(location.href) ||
         alert('基于vue-admin-beautiful开发的项目需要部署到服务器下访问')
+    </script>
+    <script>
+      var _hmt = _hmt || []
+      ;(function () {
+        var hm = document.createElement('script')
+        hm.src = 'https://hm.baidu.com/hm.js?7174bade1219f9cc272e7978f9523fc8'
+        var s = document.getElementsByTagName('script')[0]
+        s.parentNode.insertBefore(hm, s)
+      })()
     </script>
   </body>
 </html>
