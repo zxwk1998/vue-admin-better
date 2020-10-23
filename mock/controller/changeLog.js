@@ -203,6 +203,10 @@ const data = [
     content: '富文本编辑器支持精细化配置',
     timestamp: '2020-10-20',
   },
+  {
+    content: '公共布局支持自动导出',
+    timestamp: '2020-10-23',
+  },
 ]
 
 module.exports = [
