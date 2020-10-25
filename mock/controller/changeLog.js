@@ -207,6 +207,10 @@ const data = [
     content: '公共布局支持自动导出',
     timestamp: '2020-10-23',
   },
+  {
+    content: '遮罩添加高斯模糊',
+    timestamp: '2020-10-25',
+  },
 ]
 
 module.exports = [
