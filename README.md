@@ -85,6 +85,7 @@ npm run serve
 | -------------------------------------------------------------------- |
 | [vue](https://github.com/vuejs/vue)                                  |
 | [element-ui](https://github.com/ElemeFE/element)                     |
+| [element-plus](https://github.com/element-plus/element-plus)         |
 | [ant-design-vue](https://github.com/vueComponent/ant-design-vue)     |
 | [mock](https://github.com/nuysoft/Mock)                              |
 | [axios](https://github.com/axios/axios)                              |
