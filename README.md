@@ -69,10 +69,14 @@ npm run serve
 
 - [umyui](http://www.umyui.com/)
 
-## 我们定期赞助的开源项目（感谢巨人）
+## 我们承诺将定期赞助的开源项目（感谢巨人）
 
 <a title="ant-design-vue" href="https://github.com/vueComponent/ant-design-vue#backers" target="_blank">
 <img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/antdv.svg"/>
+</a>
+
+<a title="element-plus" href="https://github.com/element-plus/element-plus" target="_blank">
+<img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/element-plus.png"/>
 </a>
 
 ## 鸣谢
