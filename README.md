@@ -76,7 +76,7 @@ npm run serve
 </a>
 
 <a title="element-plus" href="https://github.com/element-plus/element-plus" target="_blank">
-<img height="64px" src="https://gitee.com/chu1204505056/image/raw/master/element-plus.png"/>
+<img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/element-plus.png"/>
 </a>
 
 ## 鸣谢
