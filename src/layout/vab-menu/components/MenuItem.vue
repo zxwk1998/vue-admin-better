@@ -1,5 +1,5 @@
 <template>
-  <a-menu-item :key="routeChildren.fullPath" @click="handleLink">
+  <a-menu-item :key="routeChildren.path" @click="handleLink">
     <span class="anticon">
       <vab-icon :icon="routeChildren.meta.icon"></vab-icon>
     </span>

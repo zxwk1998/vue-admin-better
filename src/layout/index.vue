@@ -92,11 +92,10 @@
     },
     watch: {
       $route: {
-        handler({ fullPath, matched }) {
-          //暂未研究清楚此处，待改进
-          if (fullPath === '/index') fullPath = '/'
-          if (fullPath === '/test/test') fullPath = '/test'
-          this.selectedKeys = [fullPath]
+        handler({ path, matched }) {
+          matched[0].children.length > 1
+            ? (this.selectedKeys = [path])
+            : (this.selectedKeys = [matched[0].path])
           this.openKeys = [matched[0].path]
         },
         immediate: true,

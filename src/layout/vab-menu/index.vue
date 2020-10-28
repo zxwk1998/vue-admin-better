@@ -8,7 +8,7 @@
     <template v-if="item.children && item.children.length">
       <vab-menu
         v-for="route in item.children"
-        :key="route.fullPath"
+        :key="route.path"
         :item="route"
       ></vab-menu>
     </template>
