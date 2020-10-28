@@ -91,28 +91,26 @@
   }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
   .icon-container {
-    ::v-deep {
-      .ant-input-search,
-      .ant-alert {
-        margin-bottom: @vab-padding;
-      }
-      .ant-card-body {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 68px;
-        cursor: pointer;
+    .ant-input-search,
+    .ant-alert {
+      margin-bottom: @vab-padding;
+    }
+    .ant-card-body {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 68px;
+      cursor: pointer;
 
-        i {
-          font-size: 28px;
-          text-align: center;
-          pointer-events: none;
-          cursor: pointer;
-        }
+      i {
+        font-size: 28px;
+        text-align: center;
+        pointer-events: none;
+        cursor: pointer;
       }
     }
 
