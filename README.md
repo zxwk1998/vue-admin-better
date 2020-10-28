@@ -120,7 +120,7 @@ npm run serve
   <img width="120px" src="https://gitee.com/chu1204505056/image/raw/master/uview.png"/>
   </a>
   <br/>
-  <a title="千鸟云商" href="https://www.qianniaovip.com/" target="_blank">
+  <a title="千鸟云商" href="https://www.qianniao.vip/#/login" target="_blank">
   <img width="120px" src="https://gitee.com/chu1204505056/image/raw/master/qianniaoyunshang.png"/>
   </a>
   <br/>
