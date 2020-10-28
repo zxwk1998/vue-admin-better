@@ -140,6 +140,14 @@ module.exports = {
           },
         ])
         .end()
+      config.module
+        .rule('images')
+        .use('image-webpack-loader')
+        .loader('image-webpack-loader')
+        .options({
+          bypassOnDebug: true,
+        })
+        .end()
     })
 
     if (build7z) {
