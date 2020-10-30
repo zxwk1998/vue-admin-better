@@ -54,7 +54,7 @@
           <div slot="header">
             PRO版
             <el-button style="float: right; padding: 3px 0" type="text">
-              ￥599
+              ￥699
             </el-button>
           </div>
           <div>
