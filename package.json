@@ -13,7 +13,7 @@
     "deploy": "start ./deploy.sh"
   },
   "dependencies": {
-    "ant-design-vue": "^2.0.0-beta.10",
+    "ant-design-vue": "^2.0.0-beta.11",
     "axios": "^0.21.0",
     "clipboard": "^2.0.6",
     "core-js": "^3.6.5",
@@ -23,7 +23,7 @@
     "remixicon": "^2.5.0",
     "vue": "^3.0.2",
     "vue-router": "^4.0.0-rc.1",
-    "vuex": "^4.0.0-beta.4"
+    "vuex": "^4.0.0-rc.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.8",
@@ -43,7 +43,7 @@
     "image-webpack-loader": "^7.0.1",
     "less": "^3.13.1-alpha.1",
     "less-loader": "^7.0.2",
-    "lint-staged": "^10.5.0",
+    "lint-staged": "^10.5.1",
     "prettier": "^2.1.2",
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
