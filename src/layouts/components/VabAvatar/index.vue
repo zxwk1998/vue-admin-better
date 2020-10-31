@@ -22,7 +22,7 @@
   import { recordRoute } from '@/config/settings'
 
   export default {
-    name: 'Avatar',
+    name: 'VabAvatar',
     computed: {
       ...mapGetters({
         avatar: 'user/avatar',

@@ -9,19 +9,19 @@
       }"
     >
       <div :class="header === 'fixed' ? 'fixed-header' : ''">
-        <top-bar></top-bar>
+        <vab-top-bar />
         <div
           v-if="tabsBar === 'true' || tabsBar === true"
           :class="{ 'tag-view-show': tabsBar }"
         >
           <div class="vab-main">
-            <tabs-bar></tabs-bar>
+            <vab-tabs-bar />
           </div>
         </div>
       </div>
       <div class="vab-main main-padding">
-        <ad></ad>
-        <app-main></app-main>
+        <vab-ad />
+        <vab-app-main />
       </div>
     </div>
     <div
@@ -37,17 +37,17 @@
         class="mask"
         @click="handleFoldSideBar"
       />
-      <side-bar></side-bar>
+      <vab-side-bar />
       <div class="vab-main" :class="collapse ? 'is-collapse-main' : ''">
         <div :class="header === 'fixed' ? 'fixed-header' : ''">
-          <nav-bar></nav-bar>
-          <tabs-bar v-if="tabsBar === 'true' || tabsBar === true" />
+          <vab-nav-bar />
+          <vab-tabs-bar v-if="tabsBar === 'true' || tabsBar === true" />
         </div>
-        <ad></ad>
-        <app-main></app-main>
+        <vab-ad />
+        <vab-app-main />
       </div>
     </div>
-    <el-backtop></el-backtop>
+    <el-backtop />
   </div>
 </template>
 

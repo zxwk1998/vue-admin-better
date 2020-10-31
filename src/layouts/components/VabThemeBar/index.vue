@@ -70,7 +70,7 @@
   import { mapActions, mapGetters } from 'vuex'
   import { layout as defaultLayout } from '@/config/settings'
   export default {
-    name: 'ThemeBar',
+    name: 'VabThemeBar',
     data() {
       return {
         drawerVisible: false,

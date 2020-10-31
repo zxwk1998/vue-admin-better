@@ -1,6 +1,6 @@
 <template>
   <div v-if="routerView" class="app-main-container">
-    <github-corner />
+    <vab-github-corner />
     <transition mode="out-in" name="fade-transform">
       <keep-alive :include="cachedRoutes" :max="keepAliveMaxNum">
         <router-view :key="key" class="app-main-height" />
@@ -24,7 +24,7 @@
   } from '@/config/settings'
 
   export default {
-    name: 'AppMain',
+    name: 'VabAppMain',
     data() {
       return {
         show: false,

@@ -18,7 +18,7 @@
   import { logo } from '@/config/settings'
 
   export default {
-    name: 'Logo',
+    name: 'VabLogo',
     data() {
       return {
         title: this.$baseTitle,

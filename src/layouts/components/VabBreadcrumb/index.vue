@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: 'Breadcrumb',
+    name: 'VabBreadcrumb',
     data() {
       return {
         list: this.getBreadcrumb(),
