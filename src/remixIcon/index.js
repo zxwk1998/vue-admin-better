@@ -1,7 +1,3 @@
-import Vue from 'vue'
-import RemixIcon from 'zx-layouts/RemixIcon'
-
-Vue.component('VabRemixIcon', RemixIcon)
 const req = require.context('./svg', false, /\.svg$/),
   requireAll = (requireContext) => {
     /*let a = requireContext.keys().map(requireContext);
