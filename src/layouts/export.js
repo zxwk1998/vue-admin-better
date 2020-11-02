@@ -1,6 +1,6 @@
 /**
  * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
- * @description 公共布局自动导出
+ * @description 公共布局及样式自动引入
  */
 
 import Vue from 'vue'
@@ -17,4 +17,10 @@ requireZxLayouts.keys().forEach((fileName) => {
   const componentConfig = requireZxLayouts(fileName)
   const componentName = componentConfig.default.name
   Vue.component(componentName, componentConfig.default || componentConfig)
+})
+
+const requireThemes = require.context('@/styles/themes', true, /\.scss$/)
+requireThemes.keys().forEach((fileName) => {
+  console.log(fileName)
+  require(`@/styles/themes/${fileName.slice(2)}`)
 })
