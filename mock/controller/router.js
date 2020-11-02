@@ -305,6 +305,28 @@ const data = [
       },
     ],
   },
+  // {
+  //   path: '/carmap',
+  //   component: 'Layout',
+  //   redirect: 'noRedirect',
+  //   name: 'Carmap',
+  //   meta: {
+  //     title: '地图',
+  //     icon: 'shopping-cart',
+  //     permissions: ['admin'],
+  //   },
+  //   children: [
+  //     {
+  //       path: 'carmapDetail',
+  //       name: 'CarmapDetail',
+  //       component: '@/views/carmap/carmapDetail/index',
+  //       meta: {
+  //         title: '车地图',
+  //         noKeepAlive: true,
+  //       },
+  //     },
+  //   ],
+  // },
 ]
 module.exports = [
   {

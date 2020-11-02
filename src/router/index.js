@@ -382,6 +382,28 @@ export const asyncRoutes = [
       },
     ],
   },
+  // {
+  //   path: '/carmap',
+  //   component: Layout,
+  //   redirect: 'noRedirect',
+  //   name: 'Carmap',
+  //   meta: {
+  //     title: '地图',
+  //     icon: 'shopping-cart',
+  //     permissions: ['admin'],
+  //   },
+  //   children: [
+  //     {
+  //       path: 'carmapDetail',
+  //       name: 'CarmapDetail',
+  //       component: () => import('@/views/carmap/carmapDetail/index'),
+  //       meta: {
+  //         title: '车地图',
+  //         noKeepAlive: true,
+  //       },
+  //     },
+  //   ],
+  // },
   {
     path: '*',
     redirect: '/404',
