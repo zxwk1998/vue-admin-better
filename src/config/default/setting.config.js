@@ -25,7 +25,7 @@ const setting = {
   devPort: '80',
   //版本号
   version: process.env.VUE_APP_VERSION,
-  //烦请保留package.json作者信息 即可免费商用
+  //这一项非常重要！烦请保留package.json作者信息 即可免费商用，如需自定义版权信息请联系QQ1204505056
   copyright: process.env.VUE_APP_AUTHOR,
   //是否显示页面底部自定义版权信息
   footerCopyright: true,

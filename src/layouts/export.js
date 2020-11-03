@@ -21,6 +21,5 @@ requireZxLayouts.keys().forEach((fileName) => {
 
 const requireThemes = require.context('@/styles/themes', true, /\.scss$/)
 requireThemes.keys().forEach((fileName) => {
-  console.log(fileName)
   require(`@/styles/themes/${fileName.slice(2)}`)
 })
