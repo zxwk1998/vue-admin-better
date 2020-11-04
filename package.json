@@ -13,7 +13,7 @@
     "deploy": "start ./deploy.sh"
   },
   "dependencies": {
-    "ant-design-vue": "2.0.0-beta.11",
+    "ant-design-vue": "2.0.0-beta.13",
     "axios": "^0.21.0",
     "clipboard": "^2.0.6",
     "core-js": "^3.6.5",
@@ -35,7 +35,7 @@
     "body-parser": "^1.19.0",
     "chalk": "^4.1.0",
     "chokidar": "^3.4.3",
-    "compression-webpack-plugin": "^6.0.4",
+    "compression-webpack-plugin": "^6.0.5",
     "eslint": "^7.12.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^7.1.0",
@@ -50,7 +50,7 @@
     "stylelint-config-recess-order": "^2.3.0",
     "svg-sprite-loader": "^5.0.0",
     "vab-config": "0.0.5",
-    "webpackbar": "^4.0.0"
+    "webpackbar": "^5.0.0-3"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

@@ -1,9 +1,11 @@
 <template>
-  <a-menu-item :key="routeChildren.path" @click="handleLink">
-    <span class="anticon">
-      <vab-icon :icon="routeChildren.meta.icon"></vab-icon>
-    </span>
-    <span>{{ routeChildren.meta.title }}</span>
+  <a-menu-item :key="routeChildren.path">
+    <div @click="handleLink">
+      <span class="anticon">
+        <vab-icon :icon="routeChildren.meta.icon"></vab-icon>
+      </span>
+      <span>{{ routeChildren.meta.title }}</span>
+    </div>
   </a-menu-item>
 </template>
 
