@@ -84,9 +84,9 @@
     mounted() {
       this.form.username = 'admin'
       this.form.password = '123456'
-      setTimeout(() => {
+      /*  setTimeout(() => {
         this.handleSubmit()
-      }, 5000)
+      }, 5000) */
     },
     methods: {
       ...mapActions({
@@ -139,11 +139,11 @@
       text-align: center;
     }
     .ant-input {
-      width: 100%;
-      height: 45px;
+      width: 400px;
+      height: 35px;
     }
     .ant-btn {
-      width: 100%;
+      width: 365px;
       height: 45px;
       border-radius: 99px;
     }
