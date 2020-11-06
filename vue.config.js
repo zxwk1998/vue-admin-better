@@ -16,7 +16,7 @@ const {
   providePlugin,
   build7z,
   donation,
-} = require('./src/config/settings')
+} = require('./src/config')
 const { webpackBarName, webpackBanner, donationConsole } = require('zx-layouts')
 
 if (donation) donationConsole()

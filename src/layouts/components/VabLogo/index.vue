@@ -15,7 +15,7 @@
 </template>
 <script>
   import { mapGetters } from 'vuex'
-  import { logo } from '@/config/settings'
+  import { logo } from '@/config'
 
   export default {
     name: 'VabLogo',

@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const chalk = require('chalk')
 const path = require('path')
 const Mock = require('mockjs')
-const { baseURL } = require('../src/config/settings')
+const { baseURL } = require('../src/config')
 const mockDir = path.join(process.cwd(), 'mock')
 
 /**

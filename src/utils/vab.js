@@ -1,4 +1,4 @@
-import { loadingText, messageDuration, title } from '@/config/settings'
+import { loadingText, messageDuration, title } from '@/config'
 import * as lodash from 'lodash'
 import { Loading, Message, MessageBox, Notification } from 'element-ui'
 import store from '@/store'

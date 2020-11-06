@@ -11,7 +11,7 @@ import {
   setAccessToken,
 } from '@/utils/accessToken'
 import { resetRouter } from '@/router'
-import { title, tokenName } from '@/config/settings'
+import { title, tokenName } from '@/config'
 
 const state = {
   accessToken: getAccessToken(),

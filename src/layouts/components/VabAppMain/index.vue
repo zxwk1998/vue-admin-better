@@ -16,12 +16,7 @@
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
-  import {
-    copyright,
-    footerCopyright,
-    keepAliveMaxNum,
-    title,
-  } from '@/config/settings'
+  import { copyright, footerCopyright, keepAliveMaxNum, title } from '@/config'
 
   export default {
     name: 'VabAppMain',

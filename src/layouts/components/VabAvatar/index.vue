@@ -19,7 +19,7 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import { recordRoute } from '@/config/settings'
+  import { recordRoute } from '@/config'
 
   export default {
     name: 'VabAvatar',

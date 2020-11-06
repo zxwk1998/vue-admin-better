@@ -53,7 +53,7 @@
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
-  import { tokenName } from '@/config/settings'
+  import { tokenName } from '@/config'
   export default {
     name: 'Layout',
     data() {

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import store from '@/store'
 import { isArray, isString } from '@/utils/validate'
-import { errorLog } from '@/config/settings'
+import { errorLog } from '@/config'
 
 const needErrorLog = errorLog
 const checkNeed = () => {

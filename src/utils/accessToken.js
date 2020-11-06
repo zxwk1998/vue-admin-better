@@ -1,4 +1,4 @@
-import { storage, tokenTableName } from '@/config/settings'
+import { storage, tokenTableName } from '@/config'
 
 /**
  * @author chuzhixin 1204505056@qq.com （不想保留author可删除）

@@ -68,7 +68,7 @@
 <script>
   import variables from '@/styles/variables.scss'
   import { mapActions, mapGetters } from 'vuex'
-  import { layout as defaultLayout } from '@/config/settings'
+  import { layout as defaultLayout } from '@/config'
   export default {
     name: 'VabThemeBar',
     data() {
