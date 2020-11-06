@@ -50,12 +50,12 @@ npm i
 npm run serve
 ```
 
-## vue-admin-beautiful 前端讨论群 972435319，1139183756
+## vue-admin-beautiful 前端讨论 QQ 群 972435319，1139183756
 
 不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautiful-template 基础版本、开发工具配置及使用手册、提供问题解答。
 
-<a>![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm.png)</a>
-<a>![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm_2.png)</a>
+<a>![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm.png?utm_source=gold_browser_extension)</a>
+<a>![img](https://gitee.com/chu1204505056/vabBooks/raw/gh-pages/img/ewm_2.png?utm_source=gold_browser_extension)</a>
 
 ## 友情链接
 
