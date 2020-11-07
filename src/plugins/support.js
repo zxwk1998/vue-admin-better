@@ -16,6 +16,5 @@ if (!!window.ActiveXObject || 'ActiveXObject' in window) {
     dangerouslyUseHTMLString: true,
   })
 }
-if (!dependencies['zx-icon'] || !dependencies['zx-layouts']) {
+if (!dependencies['vab-icon'] || !dependencies['zx-layouts'])
   document.body.innerHTML = ''
-}
