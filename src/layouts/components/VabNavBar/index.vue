@@ -61,7 +61,7 @@
         this.changeCollapse()
       },
       async refreshRoute() {
-        this.$baseEventBus.$emit('reload-routerview')
+        this.$baseEventBus.$emit('reload-router-view')
         this.pulse = true
         setTimeout(() => {
           this.pulse = false

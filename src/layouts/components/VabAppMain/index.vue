@@ -59,7 +59,7 @@
     },
     created() {
       //重载所有路由
-      this.$baseEventBus.$on('reload-routerview', () => {
+      this.$baseEventBus.$on('reload-router-view', () => {
         this.routerView = false
         this.$nextTick(() => {
           this.routerView = true
