@@ -167,9 +167,7 @@
               <el-button type="warning">码云下载源码点star</el-button>
             </a>
             <el-popover placement="top" width="250" trigger="hover">
-              <p>
-                谢谢您愿意支持开源，加群获取详细教程，群内提供vue-admin-beautiful-template基础模板
-              </p>
+              <p>谢谢您愿意支持开源，加群获取文档，群内提供基础模板</p>
               <el-image :src="require('@/assets/ewm.png')"></el-image>
               <a slot="reference" target="_blank">
                 <el-button type="warning">文档</el-button>
