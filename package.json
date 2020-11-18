@@ -70,9 +70,9 @@
     "zx-verify": "^0.0.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.8",
-    "@vue/cli-plugin-eslint": "^4.5.8",
-    "@vue/cli-service": "^4.5.8",
+    "@vue/cli-plugin-babel": "^4.5.9",
+    "@vue/cli-plugin-eslint": "^4.5.9",
+    "@vue/cli-service": "^4.5.9",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
     "body-parser": "^1.19.0",
@@ -88,7 +88,7 @@
     "prettier": "^2.1.2",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
-    "stylelint": "^13.7.2",
+    "stylelint": "^13.8.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recess-order": "^2.3.0",
     "svg-sprite-loader": "^5.0.0",
