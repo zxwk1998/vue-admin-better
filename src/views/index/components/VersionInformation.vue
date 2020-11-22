@@ -59,6 +59,14 @@
           <td>{{ dependencies['ant-design-vue'] }}</td>
         </tr>
         <tr>
+          <td>PRO版演示地址（付费版）</td>
+          <td colspan="3">
+            <a href="https://chu1204505056.gitee.io/vue-admin-beautiful-pro/">
+              https://chu1204505056.gitee.io/vue-admin-beautiful-pro/
+            </a>
+          </td>
+        </tr>
+        <tr>
           <td>v2.x版演示地址（MIT协议，商用免费）</td>
           <td colspan="3">
             <a
@@ -93,14 +101,6 @@
               href="https://github.com/chuzhixin/vue-admin-beautiful/tree/vue3.0-antdv"
             >
               https://github.com/chuzhixin/vue-admin-beautiful/tree/vue3.0-antdv
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>PRO版演示地址</td>
-          <td colspan="3">
-            <a href="https://chu1204505056.gitee.io/vue-admin-beautiful-pro/">
-              https://chu1204505056.gitee.io/vue-admin-beautiful-pro/
             </a>
           </td>
         </tr>
