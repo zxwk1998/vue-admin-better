@@ -84,9 +84,9 @@
     mounted() {
       this.form.username = 'admin'
       this.form.password = '123456'
-      /*  setTimeout(() => {
+      setTimeout(() => {
         this.handleSubmit()
-      }, 5000) */
+      }, 3000)
     },
     methods: {
       ...mapActions({
