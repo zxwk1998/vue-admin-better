@@ -77,7 +77,7 @@
         theme: {
           name: 'default',
           layout: '',
-          header: '',
+          header: 'fixed',
           tabsBar: '',
         },
       }
