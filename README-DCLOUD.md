@@ -85,7 +85,7 @@ npm run serve
 <a href="https://github.com/buuing" target="_blank">
 <img style="border-radius:999px" src="https://avatars1.githubusercontent.com/u/36689704?s=50&u=7a4049f10010a115b8dd35f159bb81726bc0ac20&v=4"/>
 </a>
-<a href="https://github.com/cyea" target="_blank">
+<a href="https://github.com/hipi" target="_blank">
 <img style="border-radius:999px" src="https://avatars1.githubusercontent.com/u/22478003?s=50&u=121126473328c04cbf3cff5516110814ca1010e4&v=4"/>
 </a>
 <a href="https://github.com/fwfmiao" target="_blank">
