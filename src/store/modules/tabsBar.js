@@ -3,9 +3,9 @@
  * @description tabsBar多标签页逻辑，前期借鉴了很多开源项目发现都有个共同的特点很繁琐并不符合框架设计的初衷，后来在github用户cyea的启发下完成了重构，请勿修改
  */
 
-const state = {
+const state = () => ({
   visitedRoutes: [],
-}
+})
 const getters = {
   visitedRoutes: (state) => state.visitedRoutes,
 }

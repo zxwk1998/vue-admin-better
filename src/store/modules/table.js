@@ -3,7 +3,9 @@
  * @description 代码生成机状态管理
  */
 
-const state = { srcCode: '' }
+const state = () => ({
+  srcCode: '',
+})
 const getters = {
   srcTableCode: (state) => state.srcCode,
 }

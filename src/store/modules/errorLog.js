@@ -3,7 +3,9 @@
  * @description 异常捕获的状态拦截，请勿修改
  */
 
-const state = { errorLogs: [] }
+const state = () => ({
+  errorLogs: [],
+})
 const getters = {
   errorLogs: (state) => state.errorLogs,
 }
