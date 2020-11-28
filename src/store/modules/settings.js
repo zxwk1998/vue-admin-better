@@ -38,7 +38,7 @@ const toggleBoolean = (key) => {
   return typeof theme[key] !== 'undefined' ? theme[key] : key
 }
 
-const state = {
+const state = () => ({
   logo,
   title,
   collapse,
@@ -55,7 +55,7 @@ const state = {
   showTagsBar: toggleBoolean(showTagsBar),
   showNotice: toggleBoolean(showNotice),
   showFullScreen: toggleBoolean(showFullScreen),
-}
+})
 const getters = {
   collapse: (state) => state.collapse,
   device: (state) => state.device,

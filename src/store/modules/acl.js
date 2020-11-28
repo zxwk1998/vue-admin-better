@@ -1,8 +1,8 @@
-const state = {
+const state = () => ({
   admin: false,
   role: [],
   ability: [],
-}
+})
 const getters = {
   admin: (state) => state.admin,
   role: (state) => state.role,

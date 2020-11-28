@@ -11,11 +11,11 @@ import {
 import { title, tokenName } from '@/config'
 import { message, notification } from 'ant-design-vue'
 
-const state = {
+const state = () => ({
   accessToken: getAccessToken(),
   username: '',
   avatar: '',
-}
+})
 const getters = {
   accessToken: (state) => state.accessToken,
   username: (state) => state.username,
