@@ -85,7 +85,7 @@
     "image-webpack-loader": "^7.0.1",
     "lint-staged": "^10.5.2",
     "plop": "^2.7.4",
-    "prettier": "^2.2.0",
+    "prettier": "^2.2.1",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
     "stylelint": "^13.8.0",
