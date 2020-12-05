@@ -16,6 +16,13 @@
 
 - [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
+## vue-admin-beautiful 前端讨论 QQ 群 972435319，1139183756
+
+不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautifu 基础版本、开发工具自动配置教程及项目开发文档。
+
+<a>![img](https://gitee.com/chu1204505056/image/raw/master/ewm.png)</a>
+<a>![img](https://gitee.com/chu1204505056/image/raw/master/ewm_2.png)</a>
+
 ## 备份地址（以上地址无法使用时请访问备份站）
 
 - [🎉 vue2.x + element-ui（免费商用，支持 PC、平板、手机）](https://chu1204505056.gitee.io/vue-admin-beautiful-element/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
@@ -49,13 +56,6 @@ npm i
 # 本地开发 启动项目
 npm run serve
 ```
-
-## vue-admin-beautiful 前端讨论 QQ 群 972435319，1139183756
-
-不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautifu 基础版本、开发工具自动配置教程及项目开发文档。
-
-<a>![img](https://gitee.com/chu1204505056/image/raw/master/ewm.png)</a>
-<a>![img](https://gitee.com/chu1204505056/image/raw/master/ewm_2.png)</a>
 
 ## 友情链接
 
