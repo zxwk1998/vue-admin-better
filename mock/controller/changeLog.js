@@ -216,7 +216,7 @@ const data = [
     timestamp: '2020-12-5',
   },
   {
-    content: '完成首页重构，根据echarts 5.0',
+    content: '完成首页重构，跟进echarts 5.0',
     timestamp: '2020-12-7',
   },
 ]
