@@ -72,34 +72,6 @@
           </div>
         </el-card>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-        <el-card shadow="never">
-          <div slot="header">
-            <span>词云</span>
-          </div>
-          <vab-chart
-            :autoresize="true"
-            theme="vab-echarts-theme"
-            :options="cy"
-            @zr:click="handleZrClick"
-            @click="handleClick"
-          />
-          <div class="bottom">
-            <span>
-              词云数量:
-              <vab-count
-                :start-val="config3.startVal"
-                :end-val="config3.endVal"
-                :duration="config3.duration"
-                :separator="config3.separator"
-                :prefix="config3.prefix"
-                :suffix="config3.suffix"
-                :decimals="config3.decimals"
-              />
-            </span>
-          </div>
-        </el-card>
-      </el-col>
 
       <el-col
         v-for="(item, index) in iconList"
@@ -121,18 +93,6 @@
         </router-link>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="24" :lg="13" :xl="13">
-        <el-card class="card" shadow="never">
-          <div slot="header">
-            <span>GDP分布图</span>
-          </div>
-          <vab-chart
-            :autoresize="true"
-            theme="vab-echarts-theme"
-            :options="zgdt"
-          />
-        </el-card>
-      </el-col>
       <el-col :xs="24" :sm="24" :md="24" :lg="11" :xl="11">
         <el-card class="card" shadow="never">
           <div slot="header">
@@ -213,26 +173,7 @@
             </tr>
           </table>
         </el-card>
-      </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
-        <el-card class="card" shadow="never">
-          <div slot="header">
-            <span>更新日志</span>
-          </div>
-          <el-timeline :reverse="reverse">
-            <el-timeline-item
-              v-for="(activity, index) in activities"
-              :key="index"
-              :timestamp="activity.timestamp"
-              :color="activity.color"
-            >
-              {{ activity.content }}
-            </el-timeline-item>
-          </el-timeline>
-        </el-card>
-      </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <el-card shadow="never">
           <div slot="header">
             <span>其他信息</span>
@@ -252,6 +193,24 @@
           </div>
           <el-alert :closable="false" :title="userAgent" type="info"></el-alert>
           <br />
+        </el-card>
+      </el-col>
+
+      <el-col :xs="24" :sm="24" :md="13" :lg="13" :xl="13">
+        <el-card class="card" shadow="never">
+          <div slot="header">
+            <span>更新日志</span>
+          </div>
+          <el-timeline :reverse="reverse">
+            <el-timeline-item
+              v-for="(activity, index) in activities"
+              :key="index"
+              :timestamp="activity.timestamp"
+              :color="activity.color"
+            >
+              {{ activity.content }}
+            </el-timeline-item>
+          </el-timeline>
         </el-card>
       </el-col>
     </el-row>
@@ -738,14 +697,12 @@
       .el-card__body {
         .echarts {
           width: 100%;
-          height: 125px;
+          height: 115px;
         }
       }
     }
 
     .card {
-      min-height: 400px;
-
       ::v-deep {
         .el-card__body {
           .echarts {
@@ -787,7 +744,7 @@
     }
 
     .icon-panel {
-      height: 100px;
+      height: 117px;
       text-align: center;
       cursor: pointer;
 

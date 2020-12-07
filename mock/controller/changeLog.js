@@ -211,6 +211,14 @@ const data = [
     content: '遮罩添加高斯模糊',
     timestamp: '2020-10-25',
   },
+  {
+    content: 'vue3.0 + element-plus版本正式上线',
+    timestamp: '2020-12-5',
+  },
+  {
+    content: '完成首页重构，根据echarts 5.0',
+    timestamp: '2020-12-7',
+  },
 ]
 
 module.exports = [

@@ -1,5 +1,5 @@
 {
-  "color": ["#1890FF", "#36CBCB", "#4ECB73"],
+  "color": ["#1890FF", "#36CBCB", "#4ECB73", "#FBD437", "#F2637B", "#975FE5"],
   "backgroundColor": "rgba(252,252,252,0)",
   "textStyle": {},
   "title": {
@@ -12,9 +12,7 @@
   },
   "line": {
     "itemStyle": {
-      "normal": {
-        "borderWidth": "2"
-      }
+      "borderWidth": "2"
     },
     "lineStyle": {
       "normal": {
@@ -27,9 +25,7 @@
   },
   "radar": {
     "itemStyle": {
-      "normal": {
-        "borderWidth": "2"
-      }
+      "borderWidth": "2"
     },
     "lineStyle": {
       "normal": {
@@ -42,117 +38,65 @@
   },
   "bar": {
     "itemStyle": {
-      "normal": {
-        "barBorderWidth": 0,
-        "barBorderColor": "#ccc"
-      },
-      "emphasis": {
-        "barBorderWidth": 0,
-        "barBorderColor": "#ccc"
-      }
+      "barBorderWidth": 0,
+      "barBorderColor": "#ccc"
     }
   },
   "pie": {
     "itemStyle": {
-      "normal": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      },
-      "emphasis": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      }
+      "borderWidth": 0,
+      "borderColor": "#ccc"
     }
   },
   "scatter": {
     "itemStyle": {
-      "normal": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      },
-      "emphasis": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      }
+      "borderWidth": 0,
+      "borderColor": "#ccc"
     }
   },
   "boxplot": {
     "itemStyle": {
-      "normal": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      },
-      "emphasis": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      }
+      "borderWidth": 0,
+      "borderColor": "#ccc"
     }
   },
   "parallel": {
     "itemStyle": {
-      "normal": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      },
-      "emphasis": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      }
+      "borderWidth": 0,
+      "borderColor": "#ccc"
     }
   },
   "sankey": {
     "itemStyle": {
-      "normal": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      },
-      "emphasis": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      }
+      "borderWidth": 0,
+      "borderColor": "#ccc"
     }
   },
   "funnel": {
     "itemStyle": {
-      "normal": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      },
-      "emphasis": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      }
+      "borderWidth": 0,
+      "borderColor": "#ccc"
     }
   },
   "gauge": {
     "itemStyle": {
-      "normal": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      },
-      "emphasis": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      }
+      "borderWidth": 0,
+      "borderColor": "#ccc"
     }
   },
   "candlestick": {
     "itemStyle": {
-      "normal": {
-        "color": "#e6a0d2",
-        "color0": "transparent",
-        "borderColor": "#e6a0d2",
-        "borderColor0": "#1890FF",
-        "borderWidth": "2"
-      }
+      "color": "#e6a0d2",
+      "color0": "transparent",
+      "borderColor": "#e6a0d2",
+      "borderColor0": "#1890FF",
+      "borderWidth": "2"
     }
   },
   "graph": {
     "itemStyle": {
-      "normal": {
-        "borderWidth": 0,
-        "borderColor": "#ccc"
-      }
+      "borderWidth": 0,
+      "borderColor": "#ccc"
     },
     "lineStyle": {
       "normal": {
@@ -165,63 +109,27 @@
     "smooth": false,
     "color": ["#1890FF", "#36CBCB", "#4ECB73", "#FBD437", "#F2637B", "#975FE5"],
     "label": {
-      "normal": {
-        "textStyle": {
-          "color": "#ffffff"
-        }
-      }
+      "color": "#ffffff"
     }
   },
   "map": {
     "itemStyle": {
-      "normal": {
-        "areaColor": "#eeeeee",
-        "borderColor": "#aaaaaa",
-        "borderWidth": 0.5
-      },
-      "emphasis": {
-        "areaColor": "rgba(63,177,227,0.25)",
-        "borderColor": "#1890FF",
-        "borderWidth": 1
-      }
+      "areaColor": "#eeeeee",
+      "borderColor": "#aaaaaa",
+      "borderWidth": 0.5
     },
     "label": {
-      "normal": {
-        "textStyle": {
-          "color": "#ffffff"
-        }
-      },
-      "emphasis": {
-        "textStyle": {
-          "color": "#1890FF"
-        }
-      }
+      "color": "#ffffff"
     }
   },
   "geo": {
     "itemStyle": {
-      "normal": {
-        "areaColor": "#eeeeee",
-        "borderColor": "#aaaaaa",
-        "borderWidth": 0.5
-      },
-      "emphasis": {
-        "areaColor": "rgba(63,177,227,0.25)",
-        "borderColor": "#1890FF",
-        "borderWidth": 1
-      }
+      "areaColor": "#eeeeee",
+      "borderColor": "#aaaaaa",
+      "borderWidth": 0.5
     },
     "label": {
-      "normal": {
-        "textStyle": {
-          "color": "#ffffff"
-        }
-      },
-      "emphasis": {
-        "textStyle": {
-          "color": "#1890FF"
-        }
-      }
+      "color": "#ffffff"
     }
   },
   "categoryAxis": {
@@ -239,9 +147,7 @@
     },
     "axisLabel": {
       "show": true,
-      "textStyle": {
-        "color": "#999999"
-      }
+      "color": "#999999"
     },
     "splitLine": {
       "show": true,
@@ -271,9 +177,7 @@
     },
     "axisLabel": {
       "show": true,
-      "textStyle": {
-        "color": "#999999"
-      }
+      "color": "#999999"
     },
     "splitLine": {
       "show": true,
@@ -303,9 +207,7 @@
     },
     "axisLabel": {
       "show": true,
-      "textStyle": {
-        "color": "#999999"
-      }
+      "color": "#999999"
     },
     "splitLine": {
       "show": true,
@@ -335,9 +237,7 @@
     },
     "axisLabel": {
       "show": true,
-      "textStyle": {
-        "color": "#999999"
-      }
+      "color": "#999999"
     },
     "splitLine": {
       "show": true,
@@ -354,12 +254,7 @@
   },
   "toolbox": {
     "iconStyle": {
-      "normal": {
-        "borderColor": "#999999"
-      },
-      "emphasis": {
-        "borderColor": "#666666"
-      }
+      "borderColor": "#999999"
     }
   },
   "legend": {
@@ -385,41 +280,20 @@
       "width": 1
     },
     "itemStyle": {
-      "normal": {
-        "color": "#4ECB73",
-        "borderWidth": 1
-      },
-      "emphasis": {
-        "color": "#4ECB73"
-      }
+      "color": "#4ECB73",
+      "borderWidth": 1
     },
     "controlStyle": {
-      "normal": {
-        "color": "#4ECB73",
-        "borderColor": "#4ECB73",
-        "borderWidth": 0.5
-      },
-      "emphasis": {
-        "color": "#4ECB73",
-        "borderColor": "#4ECB73",
-        "borderWidth": 0.5
-      }
+      "color": "#4ECB73",
+      "borderColor": "#4ECB73",
+      "borderWidth": 0.5
     },
     "checkpointStyle": {
       "color": "#1890FF",
       "borderColor": "rgba(63,177,227,0.15)"
     },
     "label": {
-      "normal": {
-        "textStyle": {
-          "color": "#4ECB73"
-        }
-      },
-      "emphasis": {
-        "textStyle": {
-          "color": "#4ECB73"
-        }
-      }
+      "color": "#4ECB73"
     }
   },
   "visualMap": {
@@ -437,16 +311,7 @@
   },
   "markPoint": {
     "label": {
-      "normal": {
-        "textStyle": {
-          "color": "#ffffff"
-        }
-      },
-      "emphasis": {
-        "textStyle": {
-          "color": "#ffffff"
-        }
-      }
+      "color": "#ffffff"
     }
   }
 }
