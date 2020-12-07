@@ -13,7 +13,7 @@ const data = [
   {
     title: 'vue-admin-beautiful（element-plus） vue3.0版本已发布，点我提前体验',
     url:
-      'http://http://beautiful.panm.cn/vue-admin-beautiful-element-plus?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=',
+      'http://beautiful.panm.cn/vue-admin-beautiful-element-plus?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=',
   },
 ]
 module.exports = [
