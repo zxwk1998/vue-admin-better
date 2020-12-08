@@ -61,46 +61,46 @@
         <tr>
           <td>PRO版演示地址（付费版）</td>
           <td colspan="3">
-            <a href="https://chu1204505056.gitee.io/vue-admin-beautiful-pro/">
-              https://chu1204505056.gitee.io/vue-admin-beautiful-pro/
+            <a
+              href="https://beautiful.panm.cn/vue-admin-beautiful-pro?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
+            >
+              点我
             </a>
+          </td>
+        </tr>
+        <tr>
+          <td>开源地址（切换分支可查看各个vue版本）</td>
+          <td colspan="3">
+            <a href="https://github.com/chuzhixin/vue-admin-beautiful">点我</a>
           </td>
         </tr>
         <tr>
           <td>v2.x版演示地址（MIT协议，商用免费）</td>
           <td colspan="3">
             <a
-              href="https://chu1204505056.gitee.io/vue-admin-beautiful-element/"
+              href="https://beautiful.panm.cn/vue-admin-beautiful-element?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
             >
-              https://chu1204505056.gitee.io/vue-admin-beautiful-element/
+              点我
             </a>
           </td>
         </tr>
         <tr>
-          <td>v2.x版开源地址（MIT协议，商用免费）</td>
+          <td>v3.element-plus MIT协议，商用免费）</td>
           <td colspan="3">
             <a
-              href="https://github.com/chuzhixin/vue-admin-beautiful/tree/master"
+              href="https://beautiful.panm.cn/vue-admin-beautiful-element-plus?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
             >
-              https://github.com/chuzhixin/vue-admin-beautiful/tree/master
+              点我
             </a>
           </td>
         </tr>
         <tr>
-          <td>v3.x版演示地址（MIT协议，商用免费）</td>
-          <td colspan="3">
-            <a href="https://chu1204505056.gitee.io/vue-admin-beautiful-antdv/">
-              https://chu1204505056.gitee.io/vue-admin-beautiful/
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>v3.x版开源地址（MIT协议，商用免费）</td>
+          <td>v3.x版演示地址（antdv MIT协议，商用免费）</td>
           <td colspan="3">
             <a
-              href="https://github.com/chuzhixin/vue-admin-beautiful/tree/vue3.0-antdv"
+              href="https://beautiful.panm.cn/vue-admin-beautiful-antdv?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
             >
-              https://github.com/chuzhixin/vue-admin-beautiful/tree/vue3.0-antdv
+              点我
             </a>
           </td>
         </tr>

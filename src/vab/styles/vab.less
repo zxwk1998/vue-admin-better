@@ -1,30 +1,10 @@
 @import "./normalize.less";
 
-/* 滚动条样式 */
-.base-scrollbar {
-  &::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(144, 147, 153, 0.3);
-    border: 3px solid transparent;
-    border-radius: 7px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(144, 147, 153, 0.5);
-  }
-}
-
 html {
   body {
-    .base-scrollbar;
 
     * {
       box-sizing: border-box;
-      .base-scrollbar;
     }
 
     /* ant-input-search搜索框 */
