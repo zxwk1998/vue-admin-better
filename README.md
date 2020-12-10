@@ -79,7 +79,7 @@ npm run serve
 <img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/antdv.svg"/>
 </a>
 
-<a title="element-plus" href="https://github.com/element-plus/element-plus" target="_blank">
+<a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
 <img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/element-plus.png"/>
 </a>
 
