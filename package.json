@@ -13,7 +13,7 @@
     "deploy": "start ./deploy.sh"
   },
   "dependencies": {
-    "ant-design-vue": "2.0.0-rc.3",
+    "ant-design-vue": "2.0.0-rc.4",
     "axios": "^0.21.0",
     "clipboard": "^2.0.6",
     "core-js": "^3.8.1",
