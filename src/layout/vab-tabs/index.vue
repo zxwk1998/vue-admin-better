@@ -98,6 +98,7 @@
             path: tag.path,
             fullPath: tag.fullPath,
             query: tag.query,
+            params: tag.params,
             name: tag.name,
             matched: matched,
             meta: { ...tag.meta },
