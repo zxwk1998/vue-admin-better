@@ -79,7 +79,7 @@
     "chalk": "^4.1.0",
     "chokidar": "^3.4.3",
     "eslint": "^7.15.0",
-    "eslint-plugin-prettier": "^3.2.0",
+    "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-vue": "^7.2.0",
     "filemanager-webpack-plugin": "^2.0.5",
     "image-webpack-loader": "^7.0.1",
