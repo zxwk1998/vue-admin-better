@@ -84,9 +84,9 @@
     mounted() {
       this.form.username = 'admin'
       this.form.password = '123456'
-      setTimeout(() => {
+      /*  setTimeout(() => {
         this.handleSubmit()
-      }, 3000)
+      }, 3000) */
     },
     methods: {
       ...mapActions({
@@ -106,6 +106,7 @@
 </script>
 <style lang="less">
   .login-container {
+    width: 100%;
     height: 100vh;
     background: url('~@/assets/login_images/login_background.png');
     background-size: cover;
@@ -138,12 +139,15 @@
       color: rgba(255, 255, 255, 0.856);
       text-align: center;
     }
+    .ant-col {
+      width: 100%;
+      padding: 0 10px 0 10px;
+    }
     .ant-input {
-      width: 400px;
       height: 35px;
     }
     .ant-btn {
-      width: 365px;
+      width: 100%;
       height: 45px;
       border-radius: 99px;
     }
