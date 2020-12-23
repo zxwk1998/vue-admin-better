@@ -39,7 +39,7 @@
     ]
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "clipboard": "^2.0.6",
     "core-js": "^3.8.1",
     "dayjs": "^1.9.7",
@@ -49,7 +49,7 @@
     "jsencrypt": "^3.0.0-rc.1",
     "lodash": "^4.17.20",
     "maptalks": "^0.49.1",
-    "mapv": "^2.0.59",
+    "mapv": "^2.0.60",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "qs": "^6.9.4",
