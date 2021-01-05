@@ -177,13 +177,6 @@ const data = [
         meta: { title: '放大镜', permissions: ['admin'] },
       },
       {
-        path: 'echarts',
-        name: 'Echarts',
-        component: '@/views/vab/echarts/index',
-        meta: { title: '图表', permissions: ['admin'] },
-      },
-
-      {
         path: 'loading',
         name: 'Loading',
         component: '@/views/vab/loading/index',

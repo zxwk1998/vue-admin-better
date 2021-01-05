@@ -210,38 +210,3 @@ export function isNum(str) {
   const reg = /^\d+(\.\d{1,2})?$/
   return reg.test(str)
 }
-
-/**
- * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
- * @description 判断经度 -180.0～+180.0（整数部分为0～180，必须输入1到5位小数）
- * @param str
- * @returns {boolean}
- */
-export function isLongitude(str) {
-  const reg = /^[-|+]?(0?\d{1,2}\.\d{1,5}|1[0-7]?\d{1}\.\d{1,5}|180\.0{1,5})$/
-  return reg.test(str)
-}
-
-/**
- * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
- * @description 判断纬度 -90.0～+90.0（整数部分为0～90，必须输入1到5位小数）
- * @param str
- * @returns {boolean}
- */
-export function isLatitude(str) {
-  const reg = /^[-|+]?([0-8]?\d{1}\.\d{1,5}|90\.0{1,5})$/
-  return reg.test(str)
-}
-
-/**
- * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
- * @description rtsp校验，只要有rtsp://
- * @param str
- * @returns {boolean}
- */
-export function isRTSP(str) {
-  const reg = /^rtsp:\/\/([a-z]{0,10}:.{0,10}@)?(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/
-  const reg1 = /^rtsp:\/\/([a-z]{0,10}:.{0,10}@)?(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5]):[0-9]{1,5}/
-  const reg2 = /^rtsp:\/\/([a-z]{0,10}:.{0,10}@)?(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\//
-  return reg.test(str) || reg1.test(str) || reg2.test(str)
-}

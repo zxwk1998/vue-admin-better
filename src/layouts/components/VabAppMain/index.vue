@@ -1,5 +1,6 @@
 <template>
-  <section v-if="routerView" class="app-main-container">
+  <div v-if="routerView" class="app-main-container">
+    <vab-github-corner />
     <transition mode="out-in" name="fade-transform">
       <keep-alive :include="cachedRoutes" :max="keepAliveMaxNum">
         <router-view :key="key" class="app-main-height" />
@@ -10,20 +11,15 @@
       <vab-icon :icon="['fas', 'copyright']"></vab-icon>
       xxx-项目 {{ fullYear }}
     </footer>
-  </section>
+  </div>
 </template>
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
-  import {
-    copyright,
-    footerCopyright,
-    keepAliveMaxNum,
-    title,
-  } from '@/config/settings'
+  import { copyright, footerCopyright, keepAliveMaxNum, title } from '@/config'
 
   export default {
-    name: 'AppMain',
+    name: 'VabAppMain',
     data() {
       return {
         show: false,
@@ -63,7 +59,7 @@
     },
     created() {
       //重载所有路由
-      this.$baseEventBus.$on('reload-routerview', () => {
+      this.$baseEventBus.$on('reload-router-view', () => {
         this.routerView = false
         this.$nextTick(() => {
           this.routerView = true

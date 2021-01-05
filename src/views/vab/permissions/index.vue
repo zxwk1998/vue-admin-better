@@ -115,7 +115,7 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import { tokenTableName } from '@/config/settings'
+  import { tokenTableName } from '@/config'
   import { getRouterList } from '@/api/router'
 
   export default {

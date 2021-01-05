@@ -16,7 +16,7 @@ const {
   providePlugin,
   build7z,
   donation,
-} = require('./src/config/settings')
+} = require('./src/config')
 const { webpackBarName, webpackBanner, donationConsole } = require('zx-layouts')
 
 if (donation) donationConsole()
@@ -35,8 +35,7 @@ process.env.VUE_APP_VERSION = version
 
 const resolve = (dir) => path.join(__dirname, dir)
 const mockServer = () => {
-  if (process.env.NODE_ENV === 'development')
-    return require('./mock/mockServer.js')
+  if (process.env.NODE_ENV === 'development') return require('./mock')
   else return ''
 }
 

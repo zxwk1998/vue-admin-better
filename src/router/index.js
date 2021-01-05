@@ -7,7 +7,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Layout from '@/layouts'
 import EmptyLayout from '@/layouts/EmptyLayout'
-import { publicPath, routerMode } from '@/config/settings'
+import { publicPath, routerMode } from '@/config'
 
 Vue.use(VueRouter)
 export const constantRoutes = [
@@ -208,13 +208,6 @@ export const asyncRoutes = [
         component: () => import('@/views/vab/magnifier/index'),
         meta: { title: '放大镜', permissions: ['admin'] },
       },
-      {
-        path: 'echarts',
-        name: 'Echarts',
-        component: () => import('@/views/vab/echarts/index'),
-        meta: { title: '图表', permissions: ['admin'] },
-      },
-
       {
         path: 'loading',
         name: 'Loading',

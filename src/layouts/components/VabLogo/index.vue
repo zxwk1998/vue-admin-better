@@ -15,10 +15,10 @@
 </template>
 <script>
   import { mapGetters } from 'vuex'
-  import { logo } from '@/config/settings'
+  import { logo } from '@/config'
 
   export default {
-    name: 'Logo',
+    name: 'VabLogo',
     data() {
       return {
         title: this.$baseTitle,

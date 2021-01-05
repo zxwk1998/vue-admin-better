@@ -18,7 +18,7 @@
 <script>
   import { getList } from '@/api/ad'
   export default {
-    name: 'Ad',
+    name: 'VabAd',
     data() {
       return {
         nodeEnv: process.env.NODE_ENV,

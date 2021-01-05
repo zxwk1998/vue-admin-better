@@ -11,14 +11,14 @@ import {
   setAccessToken,
 } from '@/utils/accessToken'
 import { resetRouter } from '@/router'
-import { title, tokenName } from '@/config/settings'
+import { title, tokenName } from '@/config'
 
-const state = {
+const state = () => ({
   accessToken: getAccessToken(),
   username: '',
   avatar: '',
   permissions: [],
-}
+})
 const getters = {
   accessToken: (state) => state.accessToken,
   username: (state) => state.username,

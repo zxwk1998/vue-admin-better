@@ -3,12 +3,12 @@
  * @description 所有全局配置的状态管理，如无必要请勿修改
  */
 
-import defaultSettings from '@/config/settings'
+import defaultSettings from '@/config'
 
 const { tabsBar, logo, layout, header, themeBar } = defaultSettings
 const theme =
   JSON.parse(localStorage.getItem('vue-admin-beautiful-theme')) || ''
-const state = {
+const state = () => ({
   tabsBar: theme.tabsBar || tabsBar,
   logo,
   collapse: false,
@@ -16,7 +16,7 @@ const state = {
   header: theme.header || header,
   device: 'desktop',
   themeBar,
-}
+})
 const getters = {
   collapse: (state) => state.collapse,
   device: (state) => state.device,

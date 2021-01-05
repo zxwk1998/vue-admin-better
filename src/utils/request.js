@@ -10,7 +10,7 @@ import {
   successCode,
   tokenName,
   loginInterception,
-} from '@/config/settings'
+} from '@/config'
 import store from '@/store'
 import qs from 'qs'
 import router from '@/router'

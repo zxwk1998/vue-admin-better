@@ -8,9 +8,6 @@
 @import './normalize.scss';
 @import './transition.scss';
 @import './loading.scss';
-@import './themes/green.scss';
-@import './themes/glory.scss';
-@import './themes/dark.scss';
 $base: '.vab';
 
 @mixin scrollbar {
@@ -68,6 +65,16 @@ a {
   color: $base-color-blue;
   text-decoration: none;
   cursor: pointer;
+}
+
+* {
+  transition: $base-transition;
+}
+svg {
+  transition: none;
+  * {
+    transition: none;
+  }
 }
 
 html {
@@ -148,6 +155,9 @@ html {
         @include base-scrollbar;
 
         > [class*='-container'] {
+          * {
+            transition: none;
+          }
           padding: $base-padding;
           background: $base-color-white;
         }

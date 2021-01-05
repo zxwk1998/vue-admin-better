@@ -6,7 +6,10 @@ import { asyncRoutes, constantRoutes } from '@/router'
 import { getRouterList } from '@/api/router'
 import { convertRouter, filterAsyncRoutes } from '@/utils/handleRoutes'
 
-const state = { routes: [], partialRoutes: [] }
+const state = () => ({
+  routes: [],
+  partialRoutes: [],
+})
 const getters = {
   routes: (state) => state.routes,
   partialRoutes: (state) => state.partialRoutes,

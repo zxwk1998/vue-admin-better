@@ -75,7 +75,7 @@
 </template>
 
 <script>
-  import { baseURL, tokenName } from '@/config/settings'
+  import { baseURL, tokenName } from '@/config'
 
   export default {
     name: 'VabUpload',

@@ -13,7 +13,7 @@ import {
   progressBar,
   recordRoute,
   routesWhiteList,
-} from './settings'
+} from '@/config'
 
 VabProgress.configure({
   easing: 'ease',
