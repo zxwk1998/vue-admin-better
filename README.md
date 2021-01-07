@@ -10,9 +10,9 @@
 
 - [⚡️ vue3.x + ant-design-vue（beta 版本，免费商用，支持 PC、平板、手机）](http://beautiful.panm.cn/vue-admin-beautiful-antdv/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-- [🚀 pro 版演示地址（vue2.x 付费版本，支持 PC、平板、手机）](http://beautiful.panm.cn/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🚀 pro 版演示地址（vue2.x 付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/admin-pro/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-- [🚀 plus 版演示地址（vue3.x 付费版本，支持 PC、平板、手机）](http://beautiful.panm.cn/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🚀 plus 版演示地址（vue3.x 付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 - [📌 pro 及 plus 购买地址 authorization](http://beautiful.panm.cn/authorization/)
 
@@ -62,8 +62,6 @@ npm run serve
 - [Element UI 表单设计及代码生成器（可视化表单设计器，一键生成 element 表单）](https://github.com/JakHuang/form-generator/)
 
 - [luch-request（基于 Promise 开发的 uni-app 跨平台、项目级别的请求库）](https://www.quanzhan.co/luch-request/)
-
-- [umyui](http://www.umyui.com/)
 
 ## 我们承诺将定期赞助的开源项目（感谢巨人）
 
