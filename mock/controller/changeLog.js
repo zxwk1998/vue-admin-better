@@ -219,6 +219,10 @@ const data = [
     content: '完成首页重构，跟进echarts 5.0',
     timestamp: '2020-12-7',
   },
+  {
+    content: '更新sass版本至最新',
+    timestamp: '2021-1-7',
+  },
 ]
 
 module.exports = [
