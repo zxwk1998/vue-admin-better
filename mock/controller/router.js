@@ -213,12 +213,6 @@ const data = [
         meta: { title: 'lodash', permissions: ['admin'] },
       },
       {
-        path: 'imgComparison',
-        name: 'ImgComparison',
-        component: '@/views/vab/imgComparison/index',
-        meta: { title: '图像拖拽比对', permissions: ['admin'] },
-      },
-      {
         path: 'smallComponents',
         name: 'SmallComponents',
         component: '@/views/vab/smallComponents/index',
