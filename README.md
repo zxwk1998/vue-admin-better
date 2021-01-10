@@ -1,4 +1,4 @@
-<div align="center"><img width="200" src="https://gitee.com/chu1204505056/vue-admin-beautiful-pro/raw/master/src/colorfulIcon/svg/vab.svg"/>
+<div align="center"><img width="200" src="https://gitee.com/chu1204505056/vue-admin-beautiful/raw/master/src/colorfulIcon/svg/vab.svg"/>
 <h1> vue-admin-beautiful-pro源码（开源免费 + element-ui） </h1>
 </div>
 
