@@ -63,7 +63,7 @@
                 演示地址：
                 <a
                   target="_blank"
-                  href="https://chu1204505056.gitee.io/vue-admin-beautiful-pro"
+                  href="https://chu1204505056.gitee.io/admin-pro"
                 >
                   点我
                 </a>
