@@ -18,7 +18,7 @@ const setting = {
       ? 'vab-mock-server'
       : 'vab-mock-server',
   //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
-  title: 'vue-admin-beautiful',
+  title: 'vue-admin-beautiful-pro',
   //简写
   abbreviation: 'vab',
   //开发环境端口号
@@ -42,7 +42,7 @@ const setting = {
   //token名称
   tokenName: 'accessToken',
   //token在localStorage、sessionStorage存储的key的名称
-  tokenTableName: 'vue-admin-beautiful',
+  tokenTableName: 'vue-admin-beautiful-2021',
   //token存储位置localStorage sessionStorage
   storage: 'localStorage',
   //token失效回退到登录页时是否记录本次的路由
@@ -50,7 +50,7 @@ const setting = {
   //是否显示logo，不显示时设置false，显示时请填写remixIcon图标名称，暂时只支持设置remixIcon
   logo: 'vuejs-fill',
   //是否显示在页面高亮错误
-  errorLog: ['development'],
+  errorLog: ['development', 'production'],
   //是否开启登录拦截
   loginInterception: true,
   //是否开启登录RSA加密

@@ -223,6 +223,11 @@ const data = [
     content: '更新sass版本至最新',
     timestamp: '2021-1-7',
   },
+  {
+    content:
+      '开源版品牌名升级为vue-admin-beautiful-pro，付费版vue2.x品牌升级为Admin Pro，付费版vue3.x品牌名升级为Admin Plus',
+    timestamp: '2021-1-10',
+  },
 ]
 
 module.exports = [
