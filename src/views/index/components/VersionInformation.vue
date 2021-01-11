@@ -62,7 +62,7 @@
           <td>PRO版演示地址（付费版）</td>
           <td colspan="3">
             <a
-              href="https://beautiful.panm.cn/vue-admin-beautiful-pro?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
+              href="http://beautiful.panm.cn/vue-admin-beautiful-pro?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
             >
               点我
             </a>
@@ -78,7 +78,7 @@
           <td>v2.x版演示地址（MIT协议，商用免费）</td>
           <td colspan="3">
             <a
-              href="https://beautiful.panm.cn/vue-admin-beautiful-element?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
+              href="http://beautiful.panm.cn/vue-admin-beautiful-element?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
             >
               点我
             </a>
@@ -88,7 +88,7 @@
           <td>v3.element-plus MIT协议，商用免费）</td>
           <td colspan="3">
             <a
-              href="https://beautiful.panm.cn/vue-admin-beautiful-element-plus?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
+              href="http://beautiful.panm.cn/vue-admin-beautiful-element-plus?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
             >
               点我
             </a>
@@ -98,7 +98,7 @@
           <td>v3.x版演示地址（antdv MIT协议，商用免费）</td>
           <td colspan="3">
             <a
-              href="https://beautiful.panm.cn/vue-admin-beautiful-antdv?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
+              href="http://beautiful.panm.cn/vue-admin-beautiful-antdv?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
             >
               点我
             </a>
