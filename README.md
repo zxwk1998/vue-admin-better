@@ -1,5 +1,5 @@
 <div align="center"><img width="200" src="https://gitee.com/chu1204505056/vue-admin-beautiful/raw/master/src/colorfulIcon/svg/vab.svg"/>
-<h1> vue-admin-beautiful-pro源码（开源免费 + element-ui） </h1>
+<h1> vue-admin-beautiful（element-ui） </h1>
 </div>
 
 ## 地址
@@ -20,7 +20,7 @@
 
 - [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-## vue-admin-beautiful-pro 前端讨论 QQ 群 972435319，1139183756
+## vue-admin-beautiful 前端讨论 QQ 群 972435319，1139183756
 
 不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautifu 基础版本、开发工具自动配置教程及项目开发文档。
 
