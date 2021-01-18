@@ -552,7 +552,7 @@
             icon: 'video',
             title: '视频播放器',
             link: '/vab/player',
-            color: '91cc75',
+            color: '#91cc75',
           },
           {
             icon: 'table',
@@ -582,14 +582,14 @@
             icon: 'gift',
             title: '礼物',
             link: '',
-            color: '#73c0de',
+            color: '#ffe68f',
           },
 
           {
             icon: 'balance-scale-left',
             title: '公平的世界',
             link: '',
-            color: 'ee6666',
+            color: '#a4e0f7',
           },
           {
             icon: 'coffee',
