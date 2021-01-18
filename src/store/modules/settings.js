@@ -12,8 +12,8 @@ const state = () => ({
   tabsBar: theme.tabsBar || tabsBar,
   logo,
   collapse: false,
-  layout: theme.layout || { ...layout },
-  header: theme.header || { ...header },
+  layout: theme.layout || layout,
+  header: theme.header || header,
   device: 'desktop',
   themeBar,
 })
