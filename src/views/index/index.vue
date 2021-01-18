@@ -350,11 +350,11 @@
                 normal: {
                   color() {
                     const arr = [
-                      '#1890FF',
-                      '#36CBCB',
-                      '#4ECB73',
-                      '#FBD437',
-                      '#F2637B',
+                      '#5470c6',
+                      '#91cc75',
+                      '#fac858',
+                      '#ee6666',
+                      '#73c0de',
                       '#975FE5',
                     ]
                     let index = Math.floor(Math.random() * arr.length)
@@ -552,25 +552,25 @@
             icon: 'video',
             title: '视频播放器',
             link: '/vab/player',
-            color: '#ffc069',
+            color: '91cc75',
           },
           {
             icon: 'table',
             title: '表格',
             link: '/vab/table/comprehensiveTable',
-            color: '#5cdbd3',
+            color: '#5470c6',
           },
           {
             icon: 'laptop-code',
             title: '源码',
             link: 'https://github.com/chuzhixin/vue-admin-beautiful',
-            color: '#b37feb',
+            color: '#fac858',
           },
           {
             icon: 'book',
             title: '书籍',
             link: '',
-            color: '#69c0ff',
+            color: '#ee6666',
           },
           {
             icon: 'bullhorn',
@@ -582,14 +582,14 @@
             icon: 'gift',
             title: '礼物',
             link: '',
-            color: '#ffd666',
+            color: '#73c0de',
           },
 
           {
             icon: 'balance-scale-left',
             title: '公平的世界',
             link: '',
-            color: '#ff9c6e',
+            color: 'ee6666',
           },
           {
             icon: 'coffee',
