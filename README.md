@@ -110,6 +110,9 @@ npm run serve
 <a href="https://github.com/hdtopku" target="_blank">
 <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/14859466?s=50"/>
 </a>
+<a href="https://github.com/shaonialife" target="_blank">
+<img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/16135960?s=50"/>
+</a>
 
 ## 优势及注意事项
 
