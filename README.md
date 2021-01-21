@@ -20,12 +20,12 @@
 
 - [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-## vue-admin-beautiful 前端讨论 QQ 群 972435319（即将满员），1139183756（新成立）
+## vue-admin-beautiful 前端讨论 QQ 群 1139183756，972435319
 
 不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautifu 基础版本、开发工具自动配置教程及项目开发文档。
 
-<a>![img](https://gitee.com/chu1204505056/image/raw/master/qq_group/vab-2.png)</a>
 <a>![img](https://gitee.com/chu1204505056/image/raw/master/qq_group/vab-3.png)</a>
+<a>![img](https://gitee.com/chu1204505056/image/raw/master/qq_group/vab-2.png)</a>
 
 ## 备份地址（以上地址无法使用时请访问备份站）
 
