@@ -12,7 +12,7 @@ const data = [
   {
     title: 'vue-admin-beautiful（antdv） vue3.0版本已发布，点我提前体验',
     url:
-      'http://beautiful.panm.cn/vue-admin-beautiful-antdv?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=',
+      'http://vue-admin-beautiful.com/vue-admin-beautiful-antdv?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=',
   },
   {
     title: 'vue-admin-beautiful（element-plus） vue3.0版本已发布，点我提前体验',
