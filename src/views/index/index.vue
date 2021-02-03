@@ -552,25 +552,25 @@
             icon: 'video',
             title: '视频播放器',
             link: '/vab/player',
-            color: '#91cc75',
+            color: '#ffc069',
           },
           {
             icon: 'table',
             title: '表格',
             link: '/vab/table/comprehensiveTable',
-            color: '#5470c6',
+            color: '#5cdbd3',
           },
           {
             icon: 'laptop-code',
             title: '源码',
             link: 'https://github.com/chuzhixin/vue-admin-beautiful',
-            color: '#fac858',
+            color: '#b37feb',
           },
           {
             icon: 'book',
             title: '书籍',
             link: '',
-            color: '#ee6666',
+            color: '#69c0ff',
           },
           {
             icon: 'bullhorn',
@@ -582,14 +582,14 @@
             icon: 'gift',
             title: '礼物',
             link: '',
-            color: '#ffe68f',
+            color: '#ffd666',
           },
 
           {
             icon: 'balance-scale-left',
             title: '公平的世界',
             link: '',
-            color: '#a4e0f7',
+            color: '#ff9c6e',
           },
           {
             icon: 'coffee',
