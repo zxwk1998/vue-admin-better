@@ -16,9 +16,9 @@
 
 - [📌 pro 及 plus 购买地址 authorization](https://chu1204505056.gitee.io/authorization/)
 
-- [🌐 github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🌐 github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension)
 
-- [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful?_from=gitee_search)
 
 ## vue-admin-beautiful 前端讨论 QQ 群 1139183756，972435319
 
