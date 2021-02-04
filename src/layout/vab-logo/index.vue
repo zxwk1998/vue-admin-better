@@ -7,16 +7,19 @@
 </template>
 
 <script>
+  import { computed } from 'vue'
   import VabIcon from '@/layout/vab-icon'
-  import { mapGetters } from 'vuex'
+  import { useStore } from 'vuex'
+
   export default {
     name: 'VabLogo',
     components: { VabIcon },
-    computed: {
-      ...mapGetters({
-        logo: 'settings/logo',
-        title: 'settings/title',
-      }),
+    setup() {
+      const store = useStore()
+      return {
+        logo: computed(() => store.getters['settings/logo']),
+        title: computed(() => store.getters['settings/title']),
+      }
     },
   }
 </script>
