@@ -131,12 +131,6 @@ const data = [
         meta: { title: '树', permissions: ['admin'] },
       },
       {
-        path: 'card',
-        name: 'Card',
-        component: '@/views/vab/card/index',
-        meta: { title: '卡片', permissions: ['admin'] },
-      },
-      {
         path: 'verify',
         name: 'Verify',
         component: '@/views/vab/verify/index',

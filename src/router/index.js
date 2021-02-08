@@ -162,12 +162,6 @@ export const asyncRoutes = [
         meta: { title: '树', permissions: ['admin'] },
       },
       {
-        path: 'card',
-        name: 'Card',
-        component: () => import('@/views/vab/card/index'),
-        meta: { title: '卡片', permissions: ['admin'] },
-      },
-      {
         path: 'verify',
         name: 'Verify',
         component: () => import('@/views/vab/verify/index'),
