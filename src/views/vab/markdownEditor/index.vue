@@ -40,7 +40,7 @@
       },
       handleAddImg() {
         this.$refs.mde.add(
-          '\n![](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)'
+          '\n![](https://gitee.com/chu1204505056/image/raw/master/qq_group/vab-2.png)'
         )
       },
       handleShowHtml(html) {
