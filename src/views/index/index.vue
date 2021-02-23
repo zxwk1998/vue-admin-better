@@ -27,7 +27,7 @@
           <vab-chart
             :autoresize="true"
             theme="vab-echarts-theme"
-            :options="fwl"
+            :option="fwl"
           />
           <div class="bottom">
             <span>
@@ -54,7 +54,7 @@
           <vab-chart
             :autoresize="true"
             theme="vab-echarts-theme"
-            :options="sqs"
+            :option="sqs"
           />
           <div class="bottom">
             <span>

@@ -1,4 +1,4 @@
-import { JSEncrypt } from 'jsencrypt'
+import { JSEncrypt } from 'jsencrypt/bin/jsencrypt.min'
 import { getPublicKey } from '@/api/publicKey'
 
 const privateKey =
