@@ -1,5 +1,4 @@
-import * as echarts from 'echarts'
+import 'echarts'
 import VabChart from 'vue-echarts'
 
-VabChart.graphic = echarts.graphic
 export default VabChart
