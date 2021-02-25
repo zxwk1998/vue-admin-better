@@ -20,7 +20,7 @@
     "image-webpack-loader": "cnpm i image-webpack-loader -D",
     "use:npm": "nrm use npm",
     "use:taobao": "nrm use taobao",
-    "update": "ncu -u --reject sass-loader&&cnpm i",
+    "update": "ncu -u --reject sass-loader,vue-echarts&&cnpm i",
     "update:globle": "ncu -g --concurrency 10 --timeout 80000",
     "push": "start ./push.sh",
     "deploy": "start ./deploy.sh"
@@ -72,7 +72,6 @@
     "@vue/cli-plugin-babel": "^4.5.11",
     "@vue/cli-plugin-eslint": "^4.5.11",
     "@vue/cli-service": "^4.5.11",
-    "@vue/composition-api": "^1.0.0-rc.2",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
     "body-parser": "^1.19.0",
