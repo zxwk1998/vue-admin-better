@@ -1,7 +1,7 @@
 const data = [
   {
     title:
-      '温馨提示：集成版虽功能丰富，但冗余依赖过多，建议开发时使用基础版进行开发。鸣谢：尤雨溪、蒋豪群、element-ui、唐金州、花裤衩、贤心、iView、uView的开源项目给我带来的很多的灵感，弱小的人才习惯嘲讽与否定，内心强大的人从不吝啬赞美与鼓励，人生在世，得到每个人的认可几乎是痴心妄想，我也只是一条略懂前端的咸鱼，可我仍一直怀揣着改变世界的梦想，希望我们每个人，不管过程怎样，结局都是美好的。',
+      '温馨提示：集成版虽功能丰富，但冗余依赖过多，建议开发时使用基础版进行开发 Vab Admin Plus（vue3.0 + element-plus）已发布，欢迎体验：<a target="_blank" href="https://chu1204505056.gitee.io/admin-plus/?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=#/index">Vab Admin PLus</a>',
     closable: false,
     type: 'success',
   },

@@ -15,7 +15,7 @@
                 src="https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&label=Stars&logo=github"
               />
             </a>
-            {{ noticeList[0].title }}
+            <p v-html="noticeList[0].title"></p>
           </div>
         </el-alert>
       </el-col>
