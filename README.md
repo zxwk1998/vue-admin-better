@@ -39,7 +39,7 @@
 
 ```bash
 # 克隆项目
-git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-beautiful-pro.git
+git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-beautiful.git
 # 进入项目目录
 cd vue-admin-beautiful-pro
 # 安装依赖
@@ -52,7 +52,7 @@ npm run serve
 
 ```bash
 # 克隆项目
-git clone -b master https://github.com/chuzhixin/vue-admin-beautiful-pro.git
+git clone -b master https://github.com/chuzhixin/vue-admin-beautiful.git
 # 进入项目目录
 cd vue-admin-beautiful-pro
 # 安装依赖
