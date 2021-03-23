@@ -196,6 +196,7 @@
         </el-card>
 
         <plan></plan>
+        <version-information></version-information>
       </el-col>
 
       <el-col :xs="24" :sm="24" :md="13" :lg="13" :xl="13">
@@ -226,11 +227,14 @@
   import { getNoticeList } from '@/api/notice'
   import { getRepos, getStargazers } from '@/api/github'
   import Plan from './components/Plan'
+  import VersionInformation from './components/VersionInformation'
+
   export default {
     name: 'Index',
     components: {
       VabChart,
       Plan,
+      VersionInformation,
     },
     data() {
       return {
