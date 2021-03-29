@@ -25,13 +25,12 @@
     >
       <el-scrollbar style="height: 94vh; overflow: hidden">
         <div class="el-drawer__body">
-          <el-form ref="form" :model="theme">
+          <el-form ref="form" :model="theme" label-position="top">
             <el-form-item label="主题">
               <el-radio-group v-model="theme.name">
                 <el-radio-button label="default">默认</el-radio-button>
                 <el-radio-button label="green">绿荫草场</el-radio-button>
                 <el-radio-button label="glory">荣耀典藏</el-radio-button>
-                <el-radio-button label="dark">暗黑之子</el-radio-button>
               </el-radio-group>
             </el-form-item>
             <el-form-item label="布局">
@@ -53,7 +52,6 @@
               </el-radio-group>
             </el-form-item>
             <el-form-item>
-              <el-button @click="handleSetDfaultTheme">恢复默认</el-button>
               <el-button type="primary" @click="handleSaveTheme">
                 保存
               </el-button>
@@ -152,6 +150,7 @@
         this.theme.header = this.header
         this.theme.tabsBar = this.tabsBar
         this.drawerVisible = false
+        location.reload()
       },
       handleGetCode() {
         const url =
