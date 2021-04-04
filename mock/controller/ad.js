@@ -19,6 +19,12 @@ const data = [
     url:
       'https://chu1204505056.gitee.io/admin-plus?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=',
   },
+  {
+    title:
+      '程序无国界，但程序员有国界，中国国家尊严不容挑衅，如果您在特殊时期继续购买HM、耐克、阿迪达斯等品牌那么您将无权继续使用Vab',
+    url:
+      'https://chu1204505056.gitee.io/admin-pro?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=',
+  },
 ]
 module.exports = [
   {
