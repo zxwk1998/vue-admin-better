@@ -31,10 +31,21 @@
 
 ## vue-admin-beautiful 前端讨论 QQ 群 1139183756，972435319
 
-不管您加或者不加，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautifu 基础版本、开发工具自动配置教程及项目开发文档。
+- 请我们喝杯咖啡，支付后联系 QQ 783963206 邀请您进入讨论群，不管您请还是不请，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautifu 基础版本、开发工具自动配置教程及项目开发文档。
 
-<a>![img](https://gitee.com/chu1204505056/image/raw/master/qq_group/vab-2.png)</a>
-<a>![img](https://gitee.com/chu1204505056/image/raw/master/qq_group/vab-3.png)</a>
+<table>
+<tr>
+<td>
+<img width="200px" src="https://gitee.com/chu1204505056/image/raw/master/zfb_kf.jpg">
+</td>
+<td>
+<img width="200px" src="https://gitee.com/chu1204505056/image/raw/master/qq_group/vab-2.jpg">
+</td>
+<td>
+<img width="200px" src="https://gitee.com/chu1204505056/image/raw/master/qq_group/vab-3.jpg">
+</td>
+</tr>
+</table>
 
 ## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful-pro/tree/vue3.0-antdv)
 
@@ -136,6 +147,61 @@ vue-admin-beautiful-pro 使用注意事项:
 
 ```
 
+## 适合人群
+
+- 正在以及想使用 element-ui/element-plus 开发，前端开发经验 1 年+。
+- 熟悉 Vue.js 技术栈，使用它开发过几个实际项目。
+- 对原理技术感兴趣，想进阶和提升的同学。
+
+## 功能地图：
+
+![img](https://gitee.com/chu1204505056/image/raw/master/vip/flow.drawio.png)
+
+## 特性：
+
+- 支持 PC、手机端、平板；
+- 提供超过 50 余项全局精细化配置；
+- 支持后端渲染动态路由
+- 拥有完整的登录鉴权和前后端多种配置的动态路由流程
+- 支持前端控制路由权限 intelligence、后端控制路由权限 all 模式
+- 支持 mock 自动生成自动导出功能
+- 支持 scss 自动排序，eslint 自动修复
+- 支持登录 RSA 加密
+- 支持打包自动生成 7Z 压缩包以及自动化部署
+- 支持 errorlog 错误拦截
+- 支持多主题、多布局切换
+
+## 效果图
+
+以下是截取的是 pro 版的效果图展示：
+
+<table>
+<tr>
+<td>
+<img src="https://gitee.com/chu1204505056/image/raw/master/2.png">
+</td>
+<td>
+<img src="https://gitee.com/chu1204505056/image/raw/master/6.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://gitee.com/chu1204505056/image/raw/master/8.png">
+</td>
+<td>
+<img src="https://gitee.com/chu1204505056/image/raw/master/9.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://gitee.com/chu1204505056/image/raw/master/3.png">
+</td>
+<td>
+<img src="https://gitee.com/chu1204505056/image/raw/master/5.png">
+</td>
+</tr>
+</table>
+
 ## 商用注意事项
 
-此项目可免费用于商业用途，请遵守 MIT 协议并保留作者技术支持声明，如需自定义版权信息请联系客服 QQ1204505056。
+此项目可免费用于商业用途，请遵守 MIT 协议并保留作者技术支持声明，如需自定义版权信息请联系客服 QQ 783963206。
