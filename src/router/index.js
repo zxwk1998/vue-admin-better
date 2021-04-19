@@ -105,12 +105,6 @@ export const asyncRoutes = [
             meta: { title: '常规图标' },
           },
           {
-            path: 'remixIcon',
-            name: 'RemixIcon',
-            component: () => import('@/views/vab/icon/remixIcon'),
-            meta: { title: '小清新图标' },
-          },
-          {
             path: 'colorfulIcon',
             name: 'ColorfulIcon',
             component: () => import('@/views/vab/icon/colorfulIcon'),

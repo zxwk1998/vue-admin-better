@@ -78,12 +78,6 @@ const data = [
             meta: { title: '常规图标' },
           },
           {
-            path: 'remixIcon',
-            name: 'RemixIcon',
-            component: '@/views/vab/icon/remixIcon',
-            meta: { title: '小清新图标' },
-          },
-          {
             path: 'colorfulIcon',
             name: 'ColorfulIcon',
             component: '@/views/vab/icon/colorfulIcon',
