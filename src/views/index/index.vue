@@ -102,23 +102,19 @@
           <div class="bottom-btn">
             <el-popover placement="top" width="250" trigger="hover">
               <p>
-                这是一个付费群，谢谢您愿意支持开源，加群获取详细文档，群内提供vue-admin-beautiful-template基础模板
+                请我们喝杯咖啡，付款后联系qq
+                783963206，我们将邀请您加入我们的讨论群，谢谢您愿意支持开源，加群获取文档、及基础模板，群内大佬众多，希望能帮到大家（如情况不允许，请勿勉强）。
               </p>
-              <el-image :src="require('@/assets/ewm.png')"></el-image>
+              <el-image :src="require('@/assets/zfb_kf.jpg')"></el-image>
               <a slot="reference" target="_blank">
-                <el-button type="primary">QQ讨论群</el-button>
+                <el-button type="primary">QQ讨论群、基础版、文档</el-button>
               </a>
             </el-popover>
-            <a @click="handleChangeTheme">
-              <el-button type="danger">修改主题和布局</el-button>
-            </a>
             <a
               target="_blank"
               href="https://github.com/chuzhixin/vue-admin-beautiful"
             >
-              <el-button type="warning">
-                github下载源码点star（实时更新）
-              </el-button>
+              <el-button type="warning">github下载源码点star</el-button>
             </a>
             <a
               target="_blank"
@@ -126,13 +122,16 @@
             >
               <el-button type="warning">码云下载源码点star</el-button>
             </a>
-            <el-popover placement="top" width="250" trigger="hover">
+            <a @click="handleChangeTheme">
+              <el-button type="danger">修改主题和布局</el-button>
+            </a>
+            <!--  <el-popover placement="top" width="250" trigger="hover">
               <p>谢谢您愿意支持开源，加群获取文档，群内提供基础模板</p>
               <el-image :src="require('@/assets/ewm.png')"></el-image>
               <a slot="reference" target="_blank">
                 <el-button type="warning">文档</el-button>
               </a>
-            </el-popover>
+            </el-popover> -->
           </div>
           <table class="table">
             <tr>
