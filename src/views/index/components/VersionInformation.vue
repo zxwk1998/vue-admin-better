@@ -77,7 +77,7 @@
             <el-popover trigger="hover" width="400">
               <div style="text-align: center">
                 <el-image
-                  :src="require('@/assets//zfb_799.jpg')"
+                  :src="require('@/assets/zfb_100.jpg')"
                   style="width: 200px"
                 />
                 <p style="font-size: 13px">
