@@ -20,7 +20,7 @@
     "image-webpack-loader": "cnpm i image-webpack-loader -D",
     "use:npm": "nrm use npm",
     "use:taobao": "nrm use taobao",
-    "update": "ncu -u --reject sass-loader,vue-echarts&&cnpm i",
+    "update": "ncu -u --reject sass-loader,sass,vue-echarts&&cnpm i",
     "update:globle": "ncu -g --concurrency 10 --timeout 80000",
     "push": "start ./push.sh",
     "deploy": "start ./deploy.sh"
@@ -78,7 +78,7 @@
     "body-parser": "^1.19.0",
     "chalk": "^4.1.1",
     "chokidar": "^3.5.1",
-    "eslint": "^7.26.0",
+    "eslint": "^7.27.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.9.0",
     "filemanager-webpack-plugin": "^5.0.0",
