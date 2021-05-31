@@ -1,7 +1,7 @@
 const data = [
   {
     title: '618惊喜福利，付费版本全年最低价，点我购买',
-    url: '"https://chu1204505056.gitee.io/authorization',
+    url: 'https://chu1204505056.gitee.io/authorization',
   },
   /*   {
     title: 'Admin Pro 3.0付费版本已发布，增加多项贴心功能，点我提前体验',
