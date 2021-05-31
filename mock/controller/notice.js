@@ -1,7 +1,7 @@
 const data = [
   {
     title:
-      '温馨提示：集成版虽功能丰富，但冗余依赖过多，建议开发时使用基础版进行开发 Vab Admin Plus（vue3.0 + element-plus）已发布，欢迎体验：<a target="_blank" href="https://chu1204505056.gitee.io/admin-plus/?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=#/index">Vab Admin Plus</a>',
+      '温馨提示：集成版虽功能丰富，但冗余依赖过多，建议开发时使用基础版进行开发， 付费版618惊喜福利，全年最低价，一年仅此一次：<a target="_blank" href="https://chu1204505056.gitee.io/authorization">点我获取优惠福利</a>',
     closable: false,
     type: 'success',
   },
