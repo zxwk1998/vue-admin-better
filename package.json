@@ -56,7 +56,7 @@
     "screenfull": "^5.1.0",
     "sortablejs": "^1.13.0",
     "vab-icon": "^0.0.1",
-    "vue": "^2.6.12",
+    "vue": "^2.6.13",
     "vue-echarts": "5.0.0-beta.0",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2",
@@ -92,7 +92,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recess-order": "^2.4.0",
     "svg-sprite-loader": "^6.0.7",
-    "vue-template-compiler": "^2.6.12",
+    "vue-template-compiler": "^2.6.13",
     "webpackbar": "^4.0.0"
   },
   "keywords": [
