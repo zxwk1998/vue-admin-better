@@ -11,8 +11,7 @@ export function getRepos(params) {
 
 export function getStargazers(params) {
   return request({
-    url:
-      'https://api.github.com/repos/chuzhixin/vue-admin-beautiful/stargazers',
+    url: 'https://api.github.com/repos/chuzhixin/vue-admin-beautiful/stargazers',
     method: 'get',
     params,
     timeout: 10000,

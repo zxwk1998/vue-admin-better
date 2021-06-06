@@ -401,9 +401,8 @@
         const { data } = await getTreeList()
         this.selectTreeData = data
         this.$nextTick(() => {
-          this.selectTreeDefaultSelectedKeys = this.singleSelectTreeKey.split(
-            ','
-          ) // 设置默认展开
+          this.selectTreeDefaultSelectedKeys =
+            this.singleSelectTreeKey.split(',') // 设置默认展开
           if (treeType == 'single') {
             //单选树
             this.$refs.singleSelectTree.setCurrentKey(this.singleSelectTreeKey) // 设置默认选中
