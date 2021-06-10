@@ -26,7 +26,7 @@
 
 - [🚀 plus 版付费版备份演示地址（vue3.x 付费版本，支持 PC、平板、手机）](http://vue-admin-beautiful.com/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-- [📌 pro 及 plus 购买地址 authorization](https://chu1204505056.gitee.io/authorization/)
+- [📌 pro 及 plus 购买地址 authorization](http://vue-admin-beautiful.com/authorization/)
 
 - [📌 pro 及 plus 购买备份地址 authorization](http://vue-admin-beautiful.com/authorization/)
 

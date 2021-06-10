@@ -43,7 +43,7 @@
               <template #reference>
                 <a
                   target="_blank"
-                  href="https://chu1204505056.gitee.io/authorization"
+                  href="http://vue-admin-beautiful.com/authorization"
                 >
                   <el-button style="margin-left: 10px" type="primary">
                     PRO付费版本 购买源码 ￥699
@@ -66,7 +66,7 @@
               <template #reference>
                 <a
                   target="_blank"
-                  href="https://chu1204505056.gitee.io/authorization"
+                  href="http://vue-admin-beautiful.com/authorization"
                 >
                   <el-button style="margin-left: 10px" type="primary">
                     Plus付费版本 购买源码 ￥799
