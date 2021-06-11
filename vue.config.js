@@ -43,6 +43,7 @@ module.exports = {
   assetsDir,
   outputDir,
   lintOnSave,
+
   transpileDependencies,
   devServer: {
     hot: true,
@@ -106,23 +107,33 @@ module.exports = {
       config.performance.set('hints', false)
       config.devtool('none')
       config.optimization.splitChunks({
+        automaticNameDelimiter: '-',
         chunks: 'all',
         cacheGroups: {
-          libs: {
-            name: 'chunk-libs',
+          chunk: {
+            name: 'vab-chunk',
             test: /[\\/]node_modules[\\/]/,
+            minSize: 131072,
+            maxSize: 524288,
+            chunks: 'async',
+            minChunks: 2,
             priority: 10,
+          },
+          vue: {
+            name: 'vue',
+            test: /[\\/]node_modules[\\/](vue(.*)|core-js)[\\/]/,
             chunks: 'initial',
+            priority: 20,
           },
           elementUI: {
-            name: 'chunk-elementUI',
-            priority: 20,
-            test: /[\\/]node_modules[\\/]_?element-ui(.*)/,
+            name: 'element-ui',
+            test: /[\\/]node_modules[\\/]element-ui(.*)[\\/]/,
+            priority: 30,
           },
-          fortawesome: {
-            name: 'chunk-fortawesome',
-            priority: 20,
-            test: /[\\/]node_modules[\\/]_?@fortawesome(.*)/,
+          extra: {
+            name: 'vab-layouts',
+            test: resolve('src/layouts'),
+            priority: 40,
           },
         },
       })
