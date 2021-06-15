@@ -18,21 +18,21 @@
 
 - [⚡️ vue3.x + ant-design-vue（beta 版本，免费商用，支持 PC、平板、手机）](http://vue-admin-beautiful.com/vue-admin-beautiful-antdv/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-- [🚀 pro 版演示地址（付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🚀 admin pro 演示地址（付费版本，支持 PC、平板、手机）](http://vue-admin-beautiful.com/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-- [🚀 plus 版付费版演示地址（vue3.x 付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
-
-- [🚀 pro 版演示备份地址（付费版本，支持 PC、平板、手机）](http://vue-admin-beautiful.com/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
-
-- [🚀 plus 版付费版备份演示地址（vue3.x 付费版本，支持 PC、平板、手机）](http://vue-admin-beautiful.com/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🚀 admin plus 演示地址（vue3.x 付费版本，支持 PC、平板、手机）](http://vue-admin-beautiful.com/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 - [📌 pro 及 plus 购买地址 authorization](http://vue-admin-beautiful.com/authorization/)
-
-- [📌 pro 及 plus 购买备份地址 authorization](http://vue-admin-beautiful.com/authorization/)
 
 - [🌐 github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension)
 
 - [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-beautiful?_from=gitee_search)
+
+## 备份地址
+
+- [🚀 admin pro 演示地址（付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+
+- [🚀 admin plus 演示地址（vue3.x 付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 ## vue-admin-beautiful 前端讨论 QQ 群
 
