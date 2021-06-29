@@ -24,11 +24,7 @@
           <div slot="header">
             <span>访问量</span>
           </div>
-          <vab-chart
-            :autoresize="true"
-            theme="vab-echarts-theme"
-            :options="fwl"
-          />
+          <vab-chart auto-resize theme="vab-echarts-theme" :option="fwl" />
           <div class="bottom">
             <span>
               日均访问量:
@@ -51,11 +47,7 @@
           <div slot="header">
             <span>授权数</span>
           </div>
-          <vab-chart
-            :autoresize="true"
-            theme="vab-echarts-theme"
-            :options="sqs"
-          />
+          <vab-chart auto-resize theme="vab-echarts-theme" :option="sqs" />
           <div class="bottom">
             <span>
               总授权数:
