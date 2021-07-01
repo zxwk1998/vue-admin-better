@@ -1,8 +1,5 @@
 <div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.svg"/>
 <h1> vue-admin-beautiful-pro（element-ui） </h1>
-<p>程序无国界，但程序员有国界，中国国家尊严不容挑衅，如果您在特殊时期继续购买HM、耐克、阿迪达斯等品牌那么您将无权继续使用Vab</p>
-<p>Programs have no borders, but programmers have borders. China's national dignity can not be challenged. If you continue to buy HM, Nike, Adidas and other brands in a special period, you will not have the right to continue to use Vab
-</p>
 </div>
 
 [![Website](<https://img.shields.io/badge/ good luck - vue admin beautiful -blue?style=flat-square>)](https://vue-admin-beautiful.com)
