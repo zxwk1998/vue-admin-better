@@ -1,6 +1,6 @@
 const data = [
   {
-    title: '618惊喜福利，付费版本全年最低价，点我购买',
+    title: '建党百年惊喜福利，付费版本买一得二全年最低价，点我购买',
     url: 'http://vue-admin-beautiful.com/authorization',
   },
   /*   {
