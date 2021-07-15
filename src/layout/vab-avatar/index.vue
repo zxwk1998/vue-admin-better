@@ -19,18 +19,16 @@
   import { recordRoute } from '@/config'
   import { DownOutlined } from '@ant-design/icons-vue'
 
-  import { mapGetters } from 'vuex'
+  import { useStore } from 'vuex'
+  import { computed } from 'vue'
+
   export default {
     name: 'VabAvatar',
     components: { DownOutlined },
-    computed: {
-      ...mapGetters({
-        avatar: 'user/avatar',
-        username: 'user/username',
-      }),
-    },
-    methods: {
-      async logout() {
+    setup() {
+      const store = useStore()
+
+      const logout = async function () {
         await this.$store.dispatch('user/logout')
         if (recordRoute) {
           const fullPath = this.$route.fullPath
@@ -38,7 +36,13 @@
         } else {
           this.$router.push('/login')
         }
-      },
+      }
+
+      return {
+        avatar: computed(() => store.getters['user/avatar']),
+        username: computed(() => store.getters['user/avatar']),
+        logout,
+      }
     },
   }
 </script>
