@@ -59,10 +59,20 @@
           <td>{{ dependencies['ant-design-vue'] }}</td>
         </tr>
         <tr>
-          <td>PRO版演示地址（付费版）</td>
+          <td>Admin Pro版演示地址（付费版）</td>
           <td colspan="3">
             <a
-              href="http://vue-admin-beautiful.com/vue-admin-beautiful-pro?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
+              href="http://vue-admin-beautiful.com/admin-pro?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
+            >
+              点我
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Admin Plus版演示地址（付费版）</td>
+          <td colspan="3">
+            <a
+              href="http://vue-admin-beautiful.com/admin-plus?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
             >
               点我
             </a>
@@ -73,40 +83,6 @@
           <td colspan="3">
             <a href="https://github.com/chuzhixin/vue-admin-beautiful">点我</a>
           </td>
-        </tr>
-        <tr>
-          <td>v2.x版演示地址（MIT协议，商用免费）</td>
-          <td colspan="3">
-            <a
-              href="http://vue-admin-beautiful.com/vue-admin-beautiful-element?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
-            >
-              点我
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>v3.element-plus MIT协议，商用免费）</td>
-          <td colspan="3">
-            <a
-              href="http://vue-admin-beautiful.com/vue-admin-beautiful-element-plus?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
-            >
-              点我
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>v3.x版演示地址（antdv MIT协议，商用免费）</td>
-          <td colspan="3">
-            <a
-              href="http://vue-admin-beautiful.com/vue-admin-beautiful-antdv?hmsr=mwsqj&hmpl=&hmcu=&hmkw=&hmci="
-            >
-              点我
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>官方QQ群</td>
-          <td colspan="3">972435319、1139183756</td>
         </tr>
       </table>
     </div>

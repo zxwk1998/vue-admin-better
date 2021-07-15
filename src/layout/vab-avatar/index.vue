@@ -8,6 +8,7 @@
       </span>
       <template v-slot:overlay>
         <a-menu>
+          <a-menu-item @click="buy">付费版购买</a-menu-item>
           <a-menu-item @click="logout">退出登录</a-menu-item>
         </a-menu>
       </template>
@@ -28,7 +29,7 @@
     setup() {
       const store = useStore()
 
-      const logout = async function () {
+      const logout = async () => {
         await this.$store.dispatch('user/logout')
         if (recordRoute) {
           const fullPath = this.$route.fullPath
@@ -38,10 +39,15 @@
         }
       }
 
+      const buy = () => {
+        window.open('http://vue-admin-beautiful.com/authorization/')
+      }
+
       return {
         avatar: computed(() => store.getters['user/avatar']),
         username: computed(() => store.getters['user/username']),
         logout,
+        buy,
       }
     },
   }
