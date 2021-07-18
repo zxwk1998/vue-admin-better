@@ -3,7 +3,7 @@
     <el-row :gutter="20">
       <el-col :span="24">
         <el-divider content-position="left">
-          多彩图标在演示环境中使用的是cdn加速服务，开发时需存储到本地，使用方法可查看群文档，点击图标即可复制源码
+          多彩图标在演示环境中使用的是cdn加速服务，开发时需存储到本地，点击图标即可复制源码
         </el-divider>
       </el-col>
       <el-col :span="24">

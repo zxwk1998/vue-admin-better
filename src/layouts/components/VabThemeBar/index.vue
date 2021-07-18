@@ -31,6 +31,8 @@
                 <el-radio-button label="default">默认</el-radio-button>
                 <el-radio-button label="green">绿荫草场</el-radio-button>
                 <el-radio-button label="glory">荣耀典藏</el-radio-button>
+                <!-- <el-radio-button label="orean">海洋之心</el-radio-button>
+                <el-radio-button label="red">月上重火</el-radio-button> -->
               </el-radio-group>
             </el-form-item>
             <el-form-item label="布局">

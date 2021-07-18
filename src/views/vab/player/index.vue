@@ -1,7 +1,7 @@
 <template>
   <div class="player-container">
     <el-divider content-position="left">
-      视频地址采用cdn加速服务，开发时需部署到到本地，使用方法可查看群文档
+      视频地址采用cdn加速服务，开发时需部署到到本地
     </el-divider>
     <el-row :gutter="20">
       <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
