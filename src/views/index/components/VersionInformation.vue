@@ -2,7 +2,7 @@
   <el-card class="version-information" shadow="hover">
     <template #header>
       <vab-icon icon="information-line" />
-      信息
+      <!--  信息 -->
       <el-tag class="card-header-tag">部署时间:{{ updateTime }}</el-tag>
     </template>
     <el-scrollbar>

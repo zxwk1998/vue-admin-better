@@ -2,7 +2,7 @@
   <el-card shadow="hover">
     <template #header>
       <vab-icon icon="send-plane-2-line" />
-      计划
+      <!-- 计划 -->
       <el-tag class="card-header-tag" type="success">
         祝用框架的小伙伴都能住上别墅，开上保时捷
       </el-tag>

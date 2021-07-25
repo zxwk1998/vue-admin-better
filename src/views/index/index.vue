@@ -185,9 +185,6 @@
           <el-alert :closable="false" :title="userAgent" type="info"></el-alert>
           <br />
         </el-card>
-
-        <plan></plan>
-        <version-information></version-information>
       </el-col>
 
       <el-col :xs="24" :sm="24" :md="13" :lg="13" :xl="13">
@@ -206,6 +203,8 @@
             </el-timeline-item>
           </el-timeline>
         </el-card>
+        <plan></plan>
+        <version-information></version-information>
       </el-col>
     </el-row>
   </div>
