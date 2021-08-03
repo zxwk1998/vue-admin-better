@@ -1,6 +1,6 @@
 <div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.svg"/>
 <h1> vue-admin-beautiful-pro（element-ui） </h1>
-<p>暴雨无情人有情，风雨面前我们一起扛，如果vab开源版有幸帮到了您或您的公司，您通过使用vab开发的项目获得了可观的收入，那么在您自愿原则的基础上我们鼓励您为河南贡献自己的一份心意，谢谢大家
+<p>团结一心，共抗疫情，烟台加油！！！
 </p>
 </div>
 
