@@ -29,11 +29,7 @@
 
 - 近期 vab 官网频繁遭到 ddos 攻击，我们已采取相关防范措施，如网站无法访问请访问备份地址
 
-## 备份地址
-
-- [🚀 admin pro 演示地址（付费版本，支持 PC、平板、手机）](https://serverless-page-bucket-ueqfc0g8-1303493320.cos-website.ap-hongkong.myqcloud.com?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
-
-- [🚀 admin plus 演示地址（vue3.x 付费版本，支持 PC、平板、手机）](https://serverless-page-bucket-t6qyb05d-1303493320.cos-website.ap-hongkong.myqcloud.com?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+## 备份地址（支持 https 网站自动更新）
 
 - [🚀 admin pro 演示地址（付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
