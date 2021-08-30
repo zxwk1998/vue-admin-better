@@ -41,7 +41,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "clipboard": "^2.0.8",
-    "core-js": "^3.16.2",
+    "core-js": "^3.16.4",
     "dayjs": "^1.10.6",
     "echarts": "^5.1.2",
     "element-ui": "^2.15.5",
@@ -80,7 +80,7 @@
     "chokidar": "^3.5.2",
     "eslint": "^7.32.0",
     "eslint-plugin-prettier": "^3.4.1",
-    "eslint-plugin-vue": "^7.16.0",
+    "eslint-plugin-vue": "^7.17.0",
     "filemanager-webpack-plugin": "^6.1.6",
     "image-webpack-loader": "^7.0.1",
     "lint-staged": "^11.1.2",
