@@ -74,7 +74,7 @@
                 </a>
               </template>
             </el-popover>
-            <el-popover trigger="hover" width="400">
+            <!--  <el-popover trigger="hover" width="400">
               <div style="text-align: center">
                 <el-image
                   :src="require('@/assets/zfb_100.jpg')"
@@ -90,7 +90,7 @@
                   开源版技术支持
                 </el-button>
               </template>
-            </el-popover>
+            </el-popover> -->
             <a
               href="https://github.com/chuzhixin/vue-admin-beautiful/"
               target="_blank"

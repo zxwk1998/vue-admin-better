@@ -32,47 +32,14 @@
       <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
         <el-card>
           <div slot="header">
-            VIP群（自愿原则）
+            VIP群
             <el-button style="float: right; padding: 3px 0" type="text">
-              ￥100
+              ￥100（2021年1月起不再提供此服务）
             </el-button>
           </div>
           <div>
             <ul>
-              <li>支持以上所有特权</li>
-              <li>vip群提供技术支持、专属vip文档</li>
-              <li>QQ咨询 1204505056</li>
-            </ul>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
-        <el-card>
-          <div slot="header">
-            PRO版
-            <el-button style="float: right; padding: 3px 0" type="text">
-              ￥699
-            </el-button>
-          </div>
-          <div>
-            <ul>
-              <li>
-                演示地址：
-                <a
-                  target="_blank"
-                  href="https://chu1204505056.gitee.io/admin-pro"
-                >
-                  点我
-                </a>
-              </li>
-              <li>PRO独立版本与开源版本不同</li>
-              <li>
-                无版权限制，无需额外配置，拿来即用，支持权限精确到权限点，按钮级权限取反，支持代码一键生成
-              </li>
-              <li>免费加入vue-admin-beautifl github团队</li>
-              <li>提供100余种布局主题搭配</li>
-              <li>图标使用方式大为简化</li>
-              <li>支持国际化语言包、中英文无缝切换</li>
+              <li>为避免引起误解，不再针对开源用户提供付费vip群</li>
             </ul>
           </div>
         </el-card>
