@@ -22,20 +22,23 @@
 
   import { useStore } from 'vuex'
   import { computed } from 'vue'
+  import { useRoute, useRouter } from 'vue-router'
 
   export default {
     name: 'VabAvatar',
     components: { DownOutlined },
     setup() {
       const store = useStore()
-
+      const router = useRouter();
+      const route = useRoute();
+      
       const logout = async () => {
-        await this.$store.dispatch('user/logout')
+        await store.dispatch('user/logout')
         if (recordRoute) {
-          const fullPath = this.$route.fullPath
-          this.$router.push(`/login?redirect=${fullPath}`)
+          const fullPath = route.fullPath
+          router.push(`/login?redirect=${fullPath}`)
         } else {
-          this.$router.push('/login')
+          router.push('/login')
         }
       }
 
