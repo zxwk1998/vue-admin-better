@@ -1,6 +1,6 @@
 <div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.svg"/>
 <h1> vue-admin-beautiful-pro（element-ui） </h1>
-<p>中秋遇见国庆，家与国撞了个满怀，月光所照，皆是故乡，红旗飘扬，皆是华夏，月亮是我们抛的硬币，面面都是祝福你。
+<p>中秋遇见国庆，家与国撞了个满怀，月光所照，皆是故乡，红旗飘扬，皆是华夏，月亮是我们抛的硬币，面面都是祝福你，愿五星红旗高高飘扬，愿大国小家繁荣富裕。
 </p>
 </div>
 
