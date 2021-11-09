@@ -53,10 +53,11 @@
                 <el-radio-button label="false">不开启</el-radio-button>
               </el-radio-group>
             </el-form-item>
-            <el-form-item>
+            <el-form-item label="操作">
               <el-button type="primary" @click="handleSaveTheme">
                 保存
               </el-button>
+              <el-button type="" @click="drawerVisible = false">取消</el-button>
             </el-form-item>
           </el-form>
         </div>
@@ -66,7 +67,6 @@
 </template>
 
 <script>
-  import variables from '@/styles/variables.scss'
   import { mapActions, mapGetters } from 'vuex'
   import { layout as defaultLayout } from '@/config'
   export default {
