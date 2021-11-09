@@ -14,6 +14,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'vue/no-v-html': 'off',
     'vue/multi-word-component-names': 'off',
+    'vue/no-useless-template-attributes': 'off',
   },
   parserOptions: {
     parser: 'babel-eslint',
