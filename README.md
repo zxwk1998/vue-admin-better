@@ -43,27 +43,6 @@
 
 - [🚀 admin plus 演示地址（vue3.x 付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-## 前端讨论 QQ 群
-
-- 请我们喝杯咖啡，支付后联系 QQ 783963206 邀请您进入讨论群（由于用户数较多，如果您打赏后未通过好友请求，请在支付宝支付页面选择联系商家），不管您请还是不请，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautifu 基础版本、开发工具自动配置教程及项目开发文档。
-
-<table>
-<tr>
-<!-- <td>
-<img width="200px" src="https://gitee.com/chu1204505056/image/raw/master/qq_group/hbm.jpg">
-</td> -->
-<td>
-<img width="200px" src="https://gitee.com/chu1204505056/image/raw/master/zfb_kf.jpg">
-</td>
-<td>
-<img width="200px" src="https://gitee.com/chu1204505056/image/raw/master/qq_group/vab-2.jpg">
-</td>
-<td>
-<img width="200px" src="https://gitee.com/chu1204505056/image/raw/master/qq_group/vab-3.jpg">
-</td>
-</tr>
-</table>
-
 ## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful-pro/tree/vue3.0-antdv)
 
 ```bash
@@ -89,6 +68,27 @@ npm i
 # 本地开发 启动项目
 npm run serve
 ```
+
+## 前端讨论 QQ 群
+
+- 请我们喝杯咖啡，支付后联系 QQ 783963206 邀请您进入讨论群（由于用户数较多，如果您打赏后未通过好友请求，请在支付宝支付页面选择联系商家），不管您请还是不请，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautifu 基础版本、开发工具自动配置教程及项目开发文档。
+
+<table>
+<tr>
+<!-- <td>
+<img width="200px" src="https://gitee.com/chu1204505056/image/raw/master/qq_group/hbm.jpg">
+</td> -->
+<td>
+<img width="200px" src="https://gitee.com/chu1204505056/image/raw/master/zfb_kf.jpg">
+</td>
+<td>
+<img width="200px" src="https://gitee.com/chu1204505056/image/raw/master/qq_group/vab-2.jpg">
+</td>
+<td>
+<img width="200px" src="https://gitee.com/chu1204505056/image/raw/master/qq_group/vab-3.jpg">
+</td>
+</tr>
+</table>
 
 ## 友情链接
 
