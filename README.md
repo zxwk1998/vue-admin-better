@@ -1,6 +1,8 @@
+简体中文 | [English](./README.en.md)
+
 <div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.svg"/>
 <h1> vue-admin-beautiful-pro（element-ui） </h1>
-<p>中秋遇见国庆，家与国撞了个满怀，月光所照，皆是故乡，红旗飘扬，皆是华夏，月亮是我们抛的硬币，面面都是祝福你，愿五星红旗高高飘扬，愿大国小家繁荣富裕。
+<p>漫天的飞雪，是飞舞的音符，用祝福奏出期盼，愿疫情早日消散，愿明年的你不再有遗憾，愿你三冬暖，愿你春不寒，愿你天黑有灯，下雨有伞。
 </p>
 </div>
 
@@ -16,8 +18,10 @@
 - 🌍 10 万+ 项目实际应用
 - 👏 良好的类型定义
 - 🥳 开源版本支持免费商用
+- 🚀 跨平台 PC、手机端、平板
+- 📦️ 后端路由动态渲染
 
-## 地址
+## 🌐 地址
 
 - [🎉 vue2.x + element-ui（免费商用，支持 PC、平板、手机）](http://vue-admin-beautiful.com/vue-admin-beautiful-element/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
@@ -37,7 +41,7 @@
 
 - 近期 vab 官网频繁遭到 ddos 攻击，我们已采取相关防范措施，如网站无法访问请访问备份地址
 
-## 备份地址（支持 https 网站自动更新）
+## 🌐 备份地址（支持 https 网站自动更新）
 
 - [🚀 admin pro 演示地址（付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
@@ -48,8 +52,6 @@
 ```bash
 # 克隆项目
 git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-beautiful.git
-# 进入项目目录
-cd vue-admin-beautiful-pro
 # 安装依赖
 npm i
 # 本地开发 启动项目
@@ -61,15 +63,13 @@ npm run serve
 ```bash
 # 克隆项目
 git clone -b master https://github.com/chuzhixin/vue-admin-beautiful.git
-# 进入项目目录
-cd vue-admin-beautiful-pro
 # 安装依赖
 npm i
 # 本地开发 启动项目
 npm run serve
 ```
 
-## 前端讨论 QQ 群
+## 🍻 前端讨论 QQ 群
 
 - 请我们喝杯咖啡，支付后联系 QQ 783963206 邀请您进入讨论群（由于用户数较多，如果您打赏后未通过好友请求，请在支付宝支付页面选择联系商家），不管您请还是不请，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautifu 基础版本、开发工具自动配置教程及项目开发文档。
 
@@ -90,7 +90,7 @@ npm run serve
 </tr>
 </table>
 
-## 友情链接
+## 🔊 友情链接
 
 - [uView 文档（超棒的移动跨端框架，文档详细，上手容易）](https://uviewui.com/)
 
@@ -100,7 +100,7 @@ npm run serve
 
 - [luch-request（基于 Promise 开发的 uni-app 跨平台、项目级别的请求库）](https://www.quanzhan.co/luch-request/)
 
-## 我们承诺将定期赞助的开源项目（感谢巨人）
+## 🙈 我们承诺将定期赞助的开源项目（感谢巨人）
 
 <a title="vue" href="https://cn.vuejs.org/" target="_blank">
 <img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/vue.png"/>
@@ -114,7 +114,7 @@ npm run serve
 <img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/element-plus.png"/>
 </a>
 
-## 鸣谢
+## 🎨 鸣谢
 
 | Project                                                          |
 | ---------------------------------------------------------------- |
@@ -125,7 +125,7 @@ npm run serve
 | [mock](https://github.com/nuysoft/Mock)                          |
 | [axios](https://github.com/axios/axios)                          |
 
-## 框架杰出贡献者（排名不分先后）
+## 👷 框架杰出贡献者（排名不分先后）
 
 <a href="https://github.com/buuing" target="_blank">
 <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/36689704?s=50"/>
@@ -143,7 +143,7 @@ npm run serve
 <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/16135960?s=50"/>
 </a>
 
-## 优势及注意事项
+## 📌 优势及注意事项
 
 ```
 对比其他开源 admin 框架有如下优势:
@@ -164,31 +164,17 @@ npm run serve
 
 ```
 
-## 适合人群
+## 💚 适合人群
 
 - 正在以及想使用 element-ui/element-plus 开发，前端开发经验 1 年+。
 - 熟悉 Vue.js 技术栈，使用它开发过几个实际项目。
 - 对原理技术感兴趣，想进阶和提升的同学。
 
-## 功能地图：
+## 🎉 功能地图
 
 ![img](https://gitee.com/chu1204505056/image/raw/master/vip/flow.drawio.png)
 
-## 特性：
-
-- 支持 PC、手机端、平板；
-- 提供超过 50 余项全局精细化配置；
-- 支持后端渲染动态路由
-- 拥有完整的登录鉴权和前后端多种配置的动态路由流程
-- 支持前端控制路由权限 intelligence、后端控制路由权限 all 模式
-- 支持 mock 自动生成自动导出功能
-- 支持 scss 自动排序，eslint 自动修复
-- 支持登录 RSA 加密
-- 支持打包自动生成 7Z 压缩包以及自动化部署
-- 支持 errorlog 错误拦截
-- 支持多主题、多布局切换
-
-## 效果图
+## 🗃️ 效果图
 
 以下是截取的是 pro 版的效果图展示：
 
@@ -219,7 +205,7 @@ npm run serve
 </tr>
 </table>
 
-## 商用注意事项
+## 📄 商用注意事项
 
 此项目可免费用于商业用途，请遵守 MIT 协议并保留作者技术支持声明，如需自定义源码版权信息请联系客服 QQ 783963206。
 
