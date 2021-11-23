@@ -1,7 +1,7 @@
 const data = [
   {
     title: '建党百年惊喜福利，付费版本买一得二全年最低价，点我购买',
-    url: 'http://vue-admin-beautiful.com/authorization',
+    url: 'https://vue-admin-beautiful.com/authorization',
   },
   /*   {
     title: 'Admin Pro 3.0付费版本已发布，增加多项贴心功能，点我提前体验',
@@ -13,7 +13,7 @@ const data = [
   },
   {
     title: 'vue-admin-beautiful（antdv） vue3.0版本已发布，点我提前体验',
-    url: 'http://vue-admin-beautiful.com/vue-admin-beautiful-antdv?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=',
+    url: 'https://vue-admin-beautiful.com/vue-admin-beautiful-antdv?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=',
   },
   {
     title: 'vue-admin-beautiful（element-plus） vue3.0版本已发布，点我提前体验',
