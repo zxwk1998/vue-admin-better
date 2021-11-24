@@ -29,9 +29,9 @@
 
 - [⚡️ Vue3. X + ant design Vue (beta version, free commercial, supporting PC, tablet and mobile phone)](https://vue-admin-beautiful.com/vue-admin-beautiful-antdv/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-- [🚀 Admin Pro demo address (paid version, supporting PC, tablet and mobile phone)](https://vue-admin-beautiful.com/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🚀 Admin Pro demo address (vue2.x paid version, supporting PC, tablet and mobile phone)](https://vue-admin-beautiful.com/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-- [🚀 Admin plus demo address (vue3. X paid version, supporting PC, tablet and mobile phone)](https://vue-admin-beautiful.com/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🚀 Admin plus demo address (vue3.x paid version, supporting PC, tablet and mobile phone)](https://vue-admin-beautiful.com/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 - [📌 Pro and plus purchase address authorization](https://vue-admin-beautiful.com/authorization/)
 
