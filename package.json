@@ -78,7 +78,7 @@
     "body-parser": "^1.19.0",
     "chalk": "^4.1.2",
     "chokidar": "^3.5.2",
-    "eslint": "^8.3.0",
+    "eslint": "^7.32.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.1.1",
     "filemanager-webpack-plugin": "^6.1.7",
