@@ -1,4 +1,4 @@
-[简体中文](./README.md) | English
+[简体中文](./) | English
 
 <div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.svg"/>
 <h1> vue-admin-beautiful-pro（element-ui） </h1>
@@ -11,7 +11,7 @@
 [![star](https://gitee.com/chu1204505056/vue-admin-beautiful/badge/star.svg?theme=gray)](https://gitee.com/chu1204505056/vue-admin-beautiful)
 [![license](https://img.shields.io/github/license/chuzhixin/vue-admin-beautiful?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
 
-# 🎉 characteristic
+# 🎉 Characteristic
 
 - 💪 40 + high quality single page
 - 💅 RBAC model + JWT permission control
@@ -21,7 +21,7 @@
 - 🚀 Cross platform PC, mobile terminal and tablet
 - 📦 Back end route dynamic rendering
 
-## 🌐 地址
+## 🌐 Address
 
 - [🎉 Vue2. X + element UI (free commercial, PC, tablet and mobile phone supported)](https://vue-admin-beautiful.com/vue-admin-beautiful-element/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
@@ -41,11 +41,16 @@
 
 - Recently, the VAB official website has been frequently attacked by DDoS. We have taken relevant preventive measures. If the website cannot be accessed, please visit the backup address
 
-## 🌐 备份地址（支持 https 网站自动更新）
+## 🌐 Backup address (support automatic update of HTTPS website)
 
 - [🚀 Admin Pro demo address (paid version, supporting PC, tablet and mobile phone)](https://chu1204505056.gitee.io/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 - [🚀 Admin plus demo address (vue3. X paid version, supporting PC, tablet and mobile phone)](https://chu1204505056.gitee.io/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+
+## 📦️ Desktop applications
+
+- [Admin Pro](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
+- [Admin Plus](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
 
 ## 🌱 Vue3.x vue3.0-antdv [Click switch branch](https://github.com/chuzhixin/vue-admin-beautiful-pro/tree/vue3.0-antdv)
 
