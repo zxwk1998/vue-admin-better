@@ -11,6 +11,8 @@
 [![star](https://gitee.com/chu1204505056/vue-admin-beautiful/badge/star.svg?theme=gray)](https://gitee.com/chu1204505056/vue-admin-beautiful)
 [![license](https://img.shields.io/github/license/chuzhixin/vue-admin-beautiful?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
 
+---
+
 # 🎉 特性
 
 - 💪 40+高质量单页
