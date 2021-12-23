@@ -2,8 +2,9 @@
 
 <div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.svg"/>
 <h1> vue-admin-beautiful-pro（element-ui） </h1>
-<p>漫天的飞雪，是飞舞的音符，用祝福奏出期盼，愿疫情早日消散，愿明年的你不再有遗憾，愿你三冬暖，愿你春不寒，愿你天黑有灯，下雨有伞。
-</p>
+<!-- <p>漫天的飞雪，是飞舞的音符，用祝福奏出期盼，愿疫情早日消散，愿明年的你不再有遗憾，愿你三冬暖，愿你春不寒，愿你天黑有灯，下雨有伞。
+</p> -->
+<p>冬已至，春不远！众志成城，攻坚可能！愿长安，长长安！西安加油！</p>
 </div>
 
 [![Website](<https://img.shields.io/badge/ good luck - vue admin beautiful -blue?style=flat-square>)](https://vue-admin-beautiful.com)
