@@ -13,7 +13,7 @@ const setting = {
   // 进行编译的依赖
   transpileDependencies: [],
   //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
-  title: 'vue-admin-beautiful-pro',
+  title: 'vue-admin-better',
   //简写
   abbreviation: 'vab',
   //开发环境端口号

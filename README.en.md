@@ -1,7 +1,7 @@
 [简体中文](./README.md) | English
 
 <div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.svg"/>
-<h1> vue-admin-beautiful-pro（element-ui） </h1>
+<h1> vue-admin-better（element-ui） </h1>
 <p>The flying snow all over the sky is a flying note, playing out expectations with blessings. May the epidemic dissipate as soon as possible, may you no longer have regrets next year, may you be warm in winter, may you not be cold in spring, and may you have lights in the dark and an umbrella in the rain.
 </p>
 </div>
@@ -54,7 +54,7 @@
 - [Admin Pro](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
 - [Admin Plus](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
 
-## 🌱 Vue3.x vue3.0-antdv [Click switch branch](https://github.com/chuzhixin/vue-admin-beautiful-pro/tree/vue3.0-antdv)
+## 🌱 Vue3.x vue3.0-antdv [Click switch branch](https://github.com/chuzhixin/vue-admin-better/tree/vue3.0-antdv)
 
 ```bash
 git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-beautiful.git
@@ -62,7 +62,7 @@ npm i
 npm run serve
 ```
 
-## 🌱 Vue2.xmain [Click switch branch](https://github.com/chuzhixin/vue-admin-beautiful-pro/tree/master)
+## 🌱 Vue2.xmain [Click switch branch](https://github.com/chuzhixin/vue-admin-better/tree/master)
 
 ```bash
 git clone -b master https://github.com/chuzhixin/vue-admin-beautiful.git

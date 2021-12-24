@@ -1,7 +1,7 @@
 简体中文 | [English](./README.en.md)
 
 <div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.svg"/>
-<h1> vue-admin-beautiful-pro（element-ui） </h1>
+<h1> vue-admin-better（element-ui） </h1>
 <!-- <p>漫天的飞雪，是飞舞的音符，用祝福奏出期盼，愿疫情早日消散，愿明年的你不再有遗憾，愿你三冬暖，愿你春不寒，愿你天黑有灯，下雨有伞。
 </p> -->
 <p>冬已至，春不远！众志成城，攻坚克难！愿长安，长长安！西安加油！</p>
@@ -76,7 +76,7 @@
 </tr>
 </table>
 
-## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful-pro/tree/vue3.0-antdv)
+## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）[点击切换分支](https://github.com/chuzhixin/vue-admin-better/tree/vue3.0-antdv)
 
 ```bash
 # 克隆项目
@@ -87,7 +87,7 @@ npm i
 npm run serve
 ```
 
-## 🌱vue2.x master 分支（element-ui）[点击切换分支](https://github.com/chuzhixin/vue-admin-beautiful-pro/tree/master)
+## 🌱vue2.x master 分支（element-ui）[点击切换分支](https://github.com/chuzhixin/vue-admin-better/tree/master)
 
 ```bash
 # 克隆项目

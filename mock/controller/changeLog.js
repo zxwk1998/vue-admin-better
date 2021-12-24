@@ -229,7 +229,7 @@ const data = [
   },
   {
     content:
-      '开源版品牌名升级为vue-admin-beautiful-pro，付费版vue2.x品牌升级为Admin Pro，付费版vue3.x品牌名升级为Admin Plus',
+      '开源版品牌名升级为vue-admin-better，付费版vue2.x品牌升级为Admin Pro，付费版vue3.x品牌名升级为Admin Plus',
     timestamp: '最近更新',
   },
 ]
