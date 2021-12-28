@@ -8,7 +8,7 @@
 
 [![Website](<https://img.shields.io/badge/ good luck - vue admin beautiful -blue?style=flat-square>)](https://vue-admin-beautiful.com)
 [![stars](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&logo=GitHub)](https://github.com/chuzhixin/vue-admin-beautiful)
-[![star](https://gitee.com/chu1204505056/vue-admin-better/badge/star.svg?theme=gray)](https://gitee.com/chu1204505056/vue-admin-beautiful)
+[![star](https://gitee.com/chu1204505056/vue-admin-better/badge/star.svg?theme=gray)](https://gitee.com/chu1204505056/vue-admin-better)
 [![license](https://img.shields.io/github/license/chuzhixin/vue-admin-beautiful?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
 
 ---
@@ -39,7 +39,7 @@
 
 - [🌐 Github Warehouse address](https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension)
 
-- [🌐 Gitee Warehouse address](https://gitee.com/chu1204505056/vue-admin-beautiful?_from=gitee_search)
+- [🌐 Gitee Warehouse address](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
 
 - Recently, the VAB official website has been frequently attacked by DDoS. We have taken relevant preventive measures. If the website cannot be accessed, please visit the backup address
 
