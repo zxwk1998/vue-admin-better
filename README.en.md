@@ -57,7 +57,7 @@
 ## 🌱 Vue3.x vue3.0-antdv [Click switch branch](https://github.com/chuzhixin/vue-admin-better/tree/vue3.0-antdv)
 
 ```bash
-git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-beautiful.git
+git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-better.git
 npm i
 npm run serve
 ```
@@ -65,7 +65,7 @@ npm run serve
 ## 🌱 Vue2.xmain [Click switch branch](https://github.com/chuzhixin/vue-admin-better/tree/master)
 
 ```bash
-git clone -b master https://github.com/chuzhixin/vue-admin-beautiful.git
+git clone -b master https://github.com/chuzhixin/vue-admin-better.git
 npm i
 npm run serve
 ```

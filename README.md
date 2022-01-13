@@ -1,7 +1,7 @@
 简体中文 | [English](./README.en.md)
 
 <div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.svg"/>
-<h1> vue-admin-better（element-ui） </h1>
+<h1> vue-admin-better</h1>
 <!-- <p>漫天的飞雪，是飞舞的音符，用祝福奏出期盼，愿疫情早日消散，愿明年的你不再有遗憾，愿你三冬暖，愿你春不寒，愿你天黑有灯，下雨有伞。
 </p> -->
 <p>冬已至，春不远！众志成城，攻坚克难！愿疫情早日消散，祈愿华夏平安！</p>
@@ -50,14 +50,14 @@
 
 - [🚀 admin plus 演示地址（vue3.x 付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
+## 🍻 前端讨论 QQ 群
+
+- 请我们喝杯咖啡，打赏后联系 QQ 783963206 邀请您进入讨论群（由于用户数较多，如果您打赏后未通过好友请求，请在支付宝支付页面选择联系商家），不管您请还是不请，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-better 基础版本、开发工具自动配置教程及项目开发文档。
+
 ## 📦️ 桌面应用程序
 
 - [Admin Pro](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
 - [Admin Plus](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
-
-## 🍻 前端讨论 QQ 群
-
-- 请我们喝杯咖啡，打赏后联系 QQ 783963206 邀请您进入讨论群（由于用户数较多，如果您打赏后未通过好友请求，请在支付宝支付页面选择联系商家），不管您请还是不请，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-beautifu 基础版本、开发工具自动配置教程及项目开发文档。
 
 <table>
 <tr>
@@ -80,7 +80,7 @@
 
 ```bash
 # 克隆项目
-git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-beautiful.git
+git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-better.git
 # 安装依赖
 npm i
 # 本地开发 启动项目
@@ -91,7 +91,7 @@ npm run serve
 
 ```bash
 # 克隆项目
-git clone -b master https://github.com/chuzhixin/vue-admin-beautiful.git
+git clone -b master https://github.com/chuzhixin/vue-admin-better.git
 # 安装依赖
 npm i
 # 本地开发 启动项目
@@ -100,15 +100,17 @@ npm run serve
 
 ## 🔊 友情链接
 
-- [uView 文档（超棒的移动跨端框架，文档详细，上手容易）](https://uviewui.com/)
+- [OPSLI 基于 vue-admin-better 开源版的最佳实践](https://github.com/hiparker/opsli-boot)
 
-- [uView 开源地址（uni-app 生态优秀的 UI 框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水）](https://github.com/YanxinNet/uView/)
+- [uView uni-app 生态最优秀的 UI 框架](https://github.com/YanxinNet/uView/)
 
-- [Element UI 表单设计及代码生成器（可视化表单设计器，一键生成 element 表单）](https://github.com/JakHuang/form-generator/)
-
-- [luch-request（基于 Promise 开发的 uni-app 跨平台、项目级别的请求库）](https://www.quanzhan.co/luch-request/)
+- [Element UI 表单设计代码生成器](https://github.com/JakHuang/form-generator/)
 
 ## 🙈 我们承诺将定期赞助的开源项目（感谢巨人）
+
+<a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
+<img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/element-plus.png"/>
+</a>
 
 <a title="vue" href="https://cn.vuejs.org/" target="_blank">
 <img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/vue.png"/>
@@ -116,10 +118,6 @@ npm run serve
 
 <a title="ant-design-vue" href="https://github.com/vueComponent/ant-design-vue#backers" target="_blank">
 <img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/antdv.svg"/>
-</a>
-
-<a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
-<img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/element-plus.png"/>
 </a>
 
 ## 🎨 鸣谢
