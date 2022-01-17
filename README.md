@@ -129,6 +129,7 @@ npm run serve
 | [ant-design-vue](https://github.com/vueComponent/ant-design-vue) |
 | [mock](https://github.com/nuysoft/Mock)                          |
 | [axios](https://github.com/axios/axios)                          |
+| [wangEditor](https://github.com/wangeditor-team/wangEditor)      |
 
 ## 👷 框架杰出贡献者（排名不分先后）
 
