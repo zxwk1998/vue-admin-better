@@ -103,7 +103,7 @@ npm run serve
 
 - [uView uni-app 生态最优秀的 UI 框架](https://github.com/YanxinNet/uView/)
 
-- [Element UI 表单设计代码生成器](https://github.com/JakHuang/form-generator/)
+- [form-generator Element 表单设计代码生成器](https://github.com/JakHuang/form-generator/)
 
 ## 🙈 我们承诺将定期赞助的开源项目（感谢巨人）
 
