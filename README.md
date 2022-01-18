@@ -7,7 +7,6 @@
 <p>冬已至，春不远！众志成城，攻坚克难！愿疫情早日消散，祈愿华夏平安！</p>
 </div>
 
-[![Website](<https://img.shields.io/badge/ good luck - vue admin beautiful -blue?style=flat-square>)](https://vue-admin-beautiful.com)
 [![stars](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&logo=GitHub)](https://github.com/chuzhixin/vue-admin-beautiful)
 [![star](https://gitee.com/chu1204505056/vue-admin-better/badge/star.svg?theme=gray)](https://gitee.com/chu1204505056/vue-admin-better)
 [![license](https://img.shields.io/github/license/chuzhixin/vue-admin-beautiful?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
@@ -104,6 +103,8 @@ npm run serve
 - [uView uni-app 生态最优秀的 UI 框架](https://github.com/YanxinNet/uView/)
 
 - [form-generator Element 表单设计代码生成器](https://github.com/JakHuang/form-generator/)
+
+- [wangEditor 国产最强开源富文本编辑](https://github.com/wangeditor-team/wangEditor)
 
 ## 🙈 我们承诺将定期赞助的开源项目（感谢巨人）
 
