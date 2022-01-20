@@ -3,8 +3,8 @@
 set -e
 git init
 git add -A
-git commit -m '🎉deploy'
-git push -f "https://${access_token}@github.com/chuzhixin/vue-admin-beautiful.git" master
+git commit -m '🎉 feat: init project'
+git push -f "https://${access_token}@github.com/chuzhixin/vue-admin-better.git" master
 exec /bin/bash
 
 
