@@ -8,11 +8,11 @@
           >
             <a
               target="_blank"
-              href="https://github.com/chuzhixin/vue-admin-beautiful"
+              href="https://github.com/chuzhixin/vue-admin-better"
             >
               <img
                 style="margin-right: 10px"
-                src="https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&label=Stars&logo=github"
+                src="https://img.shields.io/github/stars/chuzhixin/vue-admin-better?style=flat-square&label=Stars&logo=github"
               />
             </a>
             <p v-html="noticeList[0].title"></p>
@@ -24,7 +24,7 @@
           <div slot="header">
             <span>访问量</span>
           </div>
-          <vab-chart autoresize theme="vab-echarts-theme" :option="fwl" />
+          <vab-chart autoresize theme="vab-echarts-theme" :options="fwl" />
           <div class="bottom">
             <span>
               日均访问量:
@@ -47,7 +47,7 @@
           <div slot="header">
             <span>授权数</span>
           </div>
-          <vab-chart autoresize theme="vab-echarts-theme" :option="sqs" />
+          <vab-chart autoresize theme="vab-echarts-theme" :options="sqs" />
           <div class="bottom">
             <span>
               总授权数:
@@ -104,13 +104,13 @@
             </el-popover>
             <a
               target="_blank"
-              href="https://github.com/chuzhixin/vue-admin-beautiful"
+              href="https://github.com/chuzhixin/vue-admin-better"
             >
               <el-button type="warning">github下载源码点star</el-button>
             </a>
             <a
               target="_blank"
-              href="https://gitee.com/chu1204505056/vue-admin-beautiful"
+              href="https://gitee.com/chu1204505056/vue-admin-better"
             >
               <el-button type="warning">码云下载源码点star</el-button>
             </a>
@@ -171,7 +171,7 @@
           </div>
           <div style="text-align: center">
             <vab-colorful-icon style="font-size: 140px" icon-class="vab" />
-            <h1 style="font-size: 30px">vue-admin-beautiful</h1>
+            <h1 style="font-size: 30px">vue-admin-better</h1>
           </div>
           <div v-for="(item, index) in noticeList" :key="index">
             <el-alert
@@ -362,7 +362,7 @@
               },
               data: [
                 {
-                  name: 'vue-admin-beautiful',
+                  name: 'vue-admin-better',
                   value: 15000,
                 },
                 {
@@ -486,7 +486,7 @@
           {
             icon: 'laptop-code',
             title: '源码',
-            link: 'https://github.com/chuzhixin/vue-admin-beautiful',
+            link: 'https://github.com/chuzhixin/vue-admin-better',
             color: '#b37feb',
           },
           {
