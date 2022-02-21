@@ -4,7 +4,7 @@
 <h1> vue-admin-better</h1>
 <!-- <p>漫天的飞雪，是飞舞的音符，用祝福奏出期盼，愿疫情早日消散，愿明年的你不再有遗憾，愿你三冬暖，愿你春不寒，愿你天黑有灯，下雨有伞。
 </p> -->
-<p>冬已至，春不远！众志成城，攻坚克难！愿疫情早日消散，祈愿华夏平安！</p>
+<p>春已至，万物始，愿所有美好纷沓而来！众志成城，攻坚克难！愿疫情早日消散，祈愿华夏平安！</p>
 </div>
 
 [![stars](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&logo=GitHub)](https://github.com/chuzhixin/vue-admin-beautiful)
