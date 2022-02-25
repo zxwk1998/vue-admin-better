@@ -42,8 +42,8 @@
 
   @mixin logo {
     display: inline-block;
-    width: 28px;
-    height: 28px;
+    width: 34px;
+    height: 34px;
     margin-right: 3px;
     color: $base-title-color;
     vertical-align: middle;
@@ -52,7 +52,7 @@
   @mixin title {
     display: inline-block;
     overflow: hidden;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 55px;
     color: $base-title-color;
     text-overflow: ellipsis;

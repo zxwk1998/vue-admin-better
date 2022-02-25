@@ -40,7 +40,7 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "prettier.htmlWhitespaceSensitivity": "ignore",
   "prettier.vueIndentScriptAndStyle": true,
-  "docthis.authorName": "chuzhixin 1204505056@qq.com",
+  "docthis.authorName": "https://gitee.com/chu1204505056/vue-admin-better",
   "docthis.includeAuthorTag": true,
   "docthis.includeDescriptionTag": true,
   "docthis.enableHungarianNotationEvaluation": true,

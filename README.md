@@ -1,6 +1,6 @@
 简体中文 | [English](./README.en.md)
 
-<div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.svg"/>
+<div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.png"/>
 <h1> vue-admin-better</h1>
 <!-- <p>漫天的飞雪，是飞舞的音符，用祝福奏出期盼，愿疫情早日消散，愿明年的你不再有遗憾，愿你三冬暖，愿你春不寒，愿你天黑有灯，下雨有伞。
 </p> -->

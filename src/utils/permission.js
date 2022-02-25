@@ -1,7 +1,7 @@
 import store from '@/store'
 
 /**
- * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
+ * @author https://gitee.com/chu1204505056/vue-admin-better （不想保留author可删除）
  * @description 检查权限
  * @param value
  * @returns {boolean}

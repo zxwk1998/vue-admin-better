@@ -1,16 +1,16 @@
 /**
- * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
+ * @author https://gitee.com/chu1204505056/vue-admin-better （不想保留author可删除）
  * @description 全局加载动画
  */
 
 @charset "utf-8";
 
-@import "./spinner/dots.css";
-@import "./spinner/gauge.css";
-@import "./spinner/inner-circles.css";
-@import "./spinner/plus.css";
+@import './spinner/dots.css';
+@import './spinner/gauge.css';
+@import './spinner/inner-circles.css';
+@import './spinner/plus.css';
 
-$base-loading: ".vab-loading-type";
+$base-loading: '.vab-loading-type';
 
 /* 自定义loading开始 */
 #{$base-loading}1 {
@@ -30,7 +30,7 @@ $base-loading: ".vab-loading-type";
   width: 8px;
   height: 8px;
   margin: auto;
-  content: "";
+  content: '';
   border: 3px solid $base-color-blue;
   border-radius: 50%;
   animation: vabLoading1 0.5s alternate ease-in infinite;
@@ -66,7 +66,7 @@ $base-loading: ".vab-loading-type";
   height: 36px;
   margin-top: -17px;
   margin-left: -18px;
-  content: "";
+  content: '';
   animation: vabLoading2 0.4s linear infinite;
 }
 
@@ -76,7 +76,7 @@ $base-loading: ".vab-loading-type";
   height: 8px;
   margin-top: -3px;
   margin-left: -4px;
-  content: "";
+  content: '';
   animation: vabLoading2 0.4s linear infinite;
 }
 
@@ -139,7 +139,7 @@ $base-loading: ".vab-loading-type";
   width: 15px;
   height: 15px;
   margin: 0;
-  content: " ";
+  content: ' ';
   border: 6px solid $base-color-blue;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -202,7 +202,7 @@ $base-loading: ".vab-loading-type";
   position: absolute;
   width: 20px;
   height: 20px;
-  content: "";
+  content: '';
   background: rgba(0, 0, 0, 0);
   animation: vabLoading6 0.5s infinite alternate;
 }
@@ -271,7 +271,7 @@ $base-loading: ".vab-loading-type";
   left: 9px;
   width: 10px;
   height: 10px;
-  content: "";
+  content: '';
   background-color: $base-color-white;
   border-radius: 50%;
   box-shadow: 30px 0 0 0 $base-color-white;
@@ -305,7 +305,7 @@ $base-loading: ".vab-loading-type";
   left: 0;
   width: 4px;
   height: 4px;
-  content: "";
+  content: '';
   background-color: $base-color-blue;
   animation: vabLoading9_check 1s ease-in-out infinite;
 }

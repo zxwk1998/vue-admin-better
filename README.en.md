@@ -1,6 +1,6 @@
 [简体中文](./README.md) | English
 
-<div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.svg"/>
+<div align="center"><img width="200" src="https://gitee.com/chu1204505056/image/raw/master/logo/vab.png"/>
 <h1> vue-admin-better（element-ui） </h1>
 <p>The flying snow all over the sky is a flying note, playing out expectations with blessings. May the epidemic dissipate as soon as possible, may you no longer have regrets next year, may you be warm in winter, may you not be cold in spring, and may you have lights in the dark and an umbrella in the rain.
 </p>

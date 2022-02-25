@@ -1,5 +1,5 @@
 /**
- * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
+ * @author https://gitee.com/chu1204505056/vue-admin-better （不想保留author可删除）
  * @description 全局样式
  */
 
@@ -291,5 +291,20 @@ html {
     }
 
     /* 下拉树样式-----------结束 */
+  }
+
+  .side-bar-container {
+    .el-menu-item,
+    .el-submenu {
+      margin: 7px !important;
+      border-radius: 5px !important;
+      &:hover {
+        border-radius: 5px !important;
+      }
+
+      &.is-active {
+        background: $base-color-default !important;
+      }
+    }
   }
 }
