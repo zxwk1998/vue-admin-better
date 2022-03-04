@@ -31,6 +31,8 @@
 
 - [⚡️ vue3.x + ant-design-vue（beta 版本，免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-antdv/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
+- [⚡️ vue3.x + vite + vue-admin-arco（字节跳动魔改版，仅供学习使用）](https://vue-admin-beautiful.com/vue-admin-arco/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+
 - [🚀 admin pro 演示地址（vue2.x 付费版本，支持 PC、平板、手机）](https://vue-admin-beautiful.com/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 - [🚀 admin plus 演示地址（vue3.x 付费版本，支持 PC、平板、手机）](https://vue-admin-beautiful.com/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
@@ -83,6 +85,17 @@ git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-better.git
 npm i
 # 本地开发 启动项目
 npm run serve
+```
+
+## 🌱 vue3.x vue-admin-arco [点击切换仓库](https://github.com/chuzhixin/vue-admin-arco)
+
+```bash
+# 克隆项目
+git clone  https://github.com/chuzhixin/vue-admin-arco.git
+# 安装依赖
+npm i
+# 本地开发 启动项目
+npm run dev
 ```
 
 ## 🌱vue2.x master 分支（element-ui）[点击切换分支](https://github.com/chuzhixin/vue-admin-better/tree/master)
