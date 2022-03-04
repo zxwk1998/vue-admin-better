@@ -31,7 +31,7 @@
 
 - [⚡️ vue3.x + ant-design-vue（beta 版本，免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-antdv/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
-- [⚡️ vue3.x + vite + vue-admin-arco（字节跳动魔改版，仅供学习使用）](https://vue-admin-beautiful.com/vue-admin-arco/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [⚡️ vue3.x + vite + vue-admin-arco（仅供参考）](https://vue-admin-beautiful.com/vue-admin-arco/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 - [🚀 admin pro 演示地址（vue2.x 付费版本，支持 PC、平板、手机）](https://vue-admin-beautiful.com/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
