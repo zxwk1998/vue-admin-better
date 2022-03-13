@@ -20,7 +20,7 @@
     "image-webpack-loader": "cnpm i image-webpack-loader -D",
     "use:npm": "nrm use npm",
     "use:taobao": "nrm use taobao",
-    "update": "ncu -u --reject sass-loader,sass,screenfull,eslint,chalk,vue-echarts&&cnpm i",
+    "update": "ncu -u --reject sass-loader,sass,screenfull,eslint,chalk,vue-echarts,vue,vue-router,vuex,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service&&cnpm i",
     "update:globle": "ncu -g --concurrency 10 --timeout 80000",
     "push": "start ./push.sh",
     "deploy": "start ./deploy.sh"
