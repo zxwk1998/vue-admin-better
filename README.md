@@ -115,16 +115,14 @@ npm run serve
 
 ## 🙈 我们承诺将定期赞助的开源项目（感谢巨人）
 
+<a title="vue" href="https://opencollective.com/vuejs" target="_blank">
+<img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/vue.png"/>
+</a>
 <a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
 <img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/element-plus.png"/>
 </a>
-
-<a title="vue" href="https://cn.vuejs.org/" target="_blank">
-<img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/vue.png"/>
-</a>
-
-<a title="ant-design-vue" href="https://github.com/vueComponent/ant-design-vue#backers" target="_blank">
-<img width="64px" src="https://gitee.com/chu1204505056/image/raw/master/antdv.svg"/>
+<a title="ant-design-vue" href="https://opencollective.com/element-plus" target="_blank">
+<img width="64px" src="https://images.opencollective.com/ant-design-vue/2ec179b/logo/256.png"/>
 </a>
 
 ## 🎨 鸣谢
