@@ -40,7 +40,7 @@
       },
       handleAddImg() {
         this.$refs.mde.add(
-          '\n![](https://vue-admin-beautiful.com/image/qq_group/vab-2.png)'
+          '\n![](https://cdn.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-2.png)'
         )
       },
       handleShowHtml(html) {

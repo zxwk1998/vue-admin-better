@@ -1,6 +1,6 @@
 [简体中文](./README.md) | English
 
-<div align="center"><img width="200" src="https://vue-admin-beautiful.com/image/logo/vab.png"/>
+<div align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/logo/vab.png"/>
 <h1> vue-admin-better（element-ui） </h1>
 <p>The flying snow all over the sky is a flying note, playing out expectations with blessings. May the epidemic dissipate as soon as possible, may you no longer have regrets next year, may you be warm in winter, may you not be cold in spring, and may you have lights in the dark and an umbrella in the rain.
 </p>
@@ -78,16 +78,16 @@ npm run serve
 <table>
 <tr>
 <!-- <td>
-<img width="200px" src="https://vue-admin-beautiful.com/image/qq_group/hbm.jpg">
+<img width="200px" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/qq_group/hbm.jpg">
 </td> -->
 <td>
-<img width="200px" src="https://vue-admin-beautiful.com/image/zfb_kf.jpg">
+<img width="200px" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/zfb_kf.jpg">
 </td>
 <td>
-<img width="200px" src="https://vue-admin-beautiful.com/image/qq_group/vab-2.jpg">
+<img width="200px" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-2.jpg">
 </td>
 <td>
-<img width="200px" src="https://vue-admin-beautiful.com/image/qq_group/vab-3.jpg">
+<img width="200px" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-3.jpg">
 </td>
 </tr>
 </table>
@@ -95,10 +95,10 @@ npm run serve
 ## 🙈 We promise to sponsor open source projects regularly (thank giant)
 
 <a title="vue" href="https://opencollective.com/vuejs" target="_blank">
-<img width="64px" src="https://vue-admin-beautiful.com/image/vue.png"/>
+<img width="64px" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/vue.png"/>
 </a>
 <a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
-<img width="64px" src="https://vue-admin-beautiful.com/image/element-plus.png"/>
+<img width="64px" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/element-plus.png"/>
 </a>
 <a title="ant-design-vue" href="https://opencollective.com/element-plus" target="_blank">
 <img width="64px" src="https://images.opencollective.com/ant-design-vue/2ec179b/logo/256.png"/>
@@ -161,7 +161,7 @@ Precautions for use:
 
 ## 🎉 Function map
 
-![img](https://vue-admin-beautiful.com/image/vip/flow.drawio.png)
+![img](https://cdn.jsdelivr.net/gh/chuzhixin/image/vip/flow.drawio.png)
 
 ## 🗃️ design sketch
 
@@ -170,26 +170,26 @@ The following is a screenshot of the pro version:
 <table>
 <tr>
 <td>
-<img src="https://vue-admin-beautiful.com/image/2.png">
+<img src="https://cdn.jsdelivr.net/gh/chuzhixin/image/2.png">
 </td>
 <td>
-<img src="https://vue-admin-beautiful.com/image/6.png">
-</td>
-</tr>
-<tr>
-<td>
-<img src="https://vue-admin-beautiful.com/image/8.png">
-</td>
-<td>
-<img src="https://vue-admin-beautiful.com/image/9.png">
+<img src="https://cdn.jsdelivr.net/gh/chuzhixin/image/6.png">
 </td>
 </tr>
 <tr>
 <td>
-<img src="https://vue-admin-beautiful.com/image/3.png">
+<img src="https://cdn.jsdelivr.net/gh/chuzhixin/image/8.png">
 </td>
 <td>
-<img src="https://vue-admin-beautiful.com/image/5.png">
+<img src="https://cdn.jsdelivr.net/gh/chuzhixin/image/9.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://cdn.jsdelivr.net/gh/chuzhixin/image/3.png">
+</td>
+<td>
+<img src="https://cdn.jsdelivr.net/gh/chuzhixin/image/5.png">
 </td>
 </tr>
 </table>
