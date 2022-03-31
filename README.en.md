@@ -100,7 +100,7 @@ npm run serve
 <a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
 <img width="64px" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/element-plus.png"/>
 </a>
-<a title="ant-design-vue" href="https://opencollective.com/element-plus" target="_blank">
+<a title="ant-design-vue" href="https://opencollective.com/ant-design-vue" target="_blank">
 <img width="64px" src="https://images.opencollective.com/ant-design-vue/2ec179b/logo/256.png"/>
 </a>
 
