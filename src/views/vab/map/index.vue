@@ -19,7 +19,7 @@
         const map = this.$baseMap()
         axios
           .get(
-            'https://cdn.jsdelivr.net/npm/mapv@2.0.12/examples/data/od-xierqi.txt'
+            'https://fastly.jsdelivr.net/npm/mapv@2.0.12/examples/data/od-xierqi.txt'
           )
           .then((rs) => {
             let data = []

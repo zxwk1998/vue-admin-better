@@ -40,7 +40,7 @@
       },
       handleAddImg() {
         this.$refs.mde.add(
-          '\n![](https://cdn.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-2.png)'
+          '\n![](https://fastly.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-2.png)'
         )
       },
       handleShowHtml(html) {

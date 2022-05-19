@@ -45,21 +45,21 @@
       return {
         config1: {
           id: 'mse1',
-          url: 'https://cdn.jsdelivr.net/gh/chuzhixin/videos@master/video.mp4',
+          url: 'https://fastly.jsdelivr.net/gh/chuzhixin/videos@master/video.mp4',
           volume: 1,
           autoplay: false,
         },
         Player1: null,
         config2: {
           id: 'mse2',
-          url: 'https://cdn.jsdelivr.net/gh/chuzhixin/videos@master/video.m3u8',
+          url: 'https://fastly.jsdelivr.net/gh/chuzhixin/videos@master/video.m3u8',
           volume: 1,
           autoplay: false,
         },
         Player2: null,
         config3: {
           id: 'mse3',
-          url: 'https://cdn.jsdelivr.net/gh/chuzhixin/videos@master/video.flv',
+          url: 'https://fastly.jsdelivr.net/gh/chuzhixin/videos@master/video.flv',
           volume: 1,
           autoplay: false,
         },

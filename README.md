@@ -1,6 +1,6 @@
 简体中文 | [English](./README.en.md)
 
-<div align="center"><img width="200" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/logo/vab.png"/>
+<div align="center"><img width="200" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/logo/vab.png"/>
 <h1> vue-admin-better</h1>
 
 <p>春已至，万物始，愿所有美好纷沓而来！</p>
@@ -54,13 +54,13 @@
 <table>
 <tr>
 <td>
-<img width="200px" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/zfb_kf.jpg">
+<img width="200px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/zfb_kf.jpg">
 </td>
 <td>
-<img width="200px" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-2.jpg">
+<img width="200px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-2.jpg">
 </td>
 <td>
-<img width="200px" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-3.jpg">
+<img width="200px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-3.jpg">
 </td>
 </tr>
 </table>
@@ -116,10 +116,10 @@ npm run serve
 ## 🙈 我们承诺将定期赞助的开源项目（感谢巨人）
 
 <a title="vue" href="https://opencollective.com/vuejs" target="_blank">
-<img width="64px" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/vue.png"/>
+<img width="64px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/vue.png"/>
 </a>
 <a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
-<img width="64px" src="https://cdn.jsdelivr.net/gh/chuzhixin/image/element-plus.png"/>
+<img width="64px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/element-plus.png"/>
 </a>
 <a title="ant-design-vue" href="https://opencollective.com/ant-design-vue" target="_blank">
 <img width="64px" src="https://images.opencollective.com/ant-design-vue/2ec179b/logo/256.png"/>
@@ -184,7 +184,7 @@ npm run serve
 
 ## 🎉 功能地图
 
-![img](https://cdn.jsdelivr.net/gh/chuzhixin/image/vip/flow.drawio.png)
+![img](https://fastly.jsdelivr.net/gh/chuzhixin/image/vip/flow.drawio.png)
 
 ## 🗃️ 效果图
 
@@ -193,26 +193,26 @@ npm run serve
 <table>
 <tr>
 <td>
-<img src="https://cdn.jsdelivr.net/gh/chuzhixin/image/2.png">
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/2.png">
 </td>
 <td>
-<img src="https://cdn.jsdelivr.net/gh/chuzhixin/image/6.png">
-</td>
-</tr>
-<tr>
-<td>
-<img src="https://cdn.jsdelivr.net/gh/chuzhixin/image/8.png">
-</td>
-<td>
-<img src="https://cdn.jsdelivr.net/gh/chuzhixin/image/9.png">
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/6.png">
 </td>
 </tr>
 <tr>
 <td>
-<img src="https://cdn.jsdelivr.net/gh/chuzhixin/image/3.png">
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/8.png">
 </td>
 <td>
-<img src="https://cdn.jsdelivr.net/gh/chuzhixin/image/5.png">
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/9.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/3.png">
+</td>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/5.png">
 </td>
 </tr>
 </table>
