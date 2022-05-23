@@ -12,7 +12,7 @@
 
 ---
 
-# 🎉 Characteristic
+## 🎉 Characteristic
 
 - 💪 40 + high quality single page
 - 💅 RBAC model + JWT permission control
