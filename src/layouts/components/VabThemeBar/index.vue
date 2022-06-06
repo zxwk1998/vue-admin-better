@@ -21,9 +21,9 @@
       :visible.sync="drawerVisible"
       direction="rtl"
       append-to-body
-      size="470px"
+      size="300px"
     >
-      <el-scrollbar style="height: 94vh; overflow: hidden">
+      <el-scrollbar style="height: 80vh; overflow: hidden">
         <div class="el-drawer__body">
           <el-form ref="form" :model="theme" label-position="top">
             <el-form-item label="主题">
@@ -31,8 +31,6 @@
                 <el-radio-button label="default">默认</el-radio-button>
                 <el-radio-button label="green">绿荫草场</el-radio-button>
                 <el-radio-button label="glory">荣耀典藏</el-radio-button>
-                <!-- <el-radio-button label="orean">海洋之心</el-radio-button>
-                <el-radio-button label="red">月上重火</el-radio-button> -->
               </el-radio-group>
             </el-form-item>
             <el-form-item label="布局">
@@ -53,15 +51,14 @@
                 <el-radio-button label="false">不开启</el-radio-button>
               </el-radio-group>
             </el-form-item>
-            <el-form-item label="操作">
-              <el-button type="primary" @click="handleSaveTheme">
-                保存
-              </el-button>
-              <el-button type="" @click="drawerVisible = false">取消</el-button>
-            </el-form-item>
           </el-form>
         </div>
       </el-scrollbar>
+
+      <div class="el-drawer__footer">
+        <el-button type="primary" @click="handleSaveTheme">保存</el-button>
+        <el-button type="" @click="drawerVisible = false">取消</el-button>
+      </div>
     </el-drawer>
   </span>
 </template>
@@ -242,6 +239,15 @@
 
   .el-drawer__body {
     padding: 20px;
+  }
+
+  .el-drawer__footer {
+    border-top: 1px solid #dedede;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0 0 20px;
+    height: 50px;
   }
 </style>
 <style lang="scss">
