@@ -24,7 +24,7 @@
           <div slot="header">
             <span>访问量</span>
           </div>
-          <vab-chart autoresize theme="vab-echarts-theme" :options="fwl" />
+          <vab-chart autoresize :options="fwl" />
           <div class="bottom">
             <span>
               日均访问量:
@@ -47,7 +47,7 @@
           <div slot="header">
             <span>授权数</span>
           </div>
-          <vab-chart autoresize theme="vab-echarts-theme" :options="sqs" />
+          <vab-chart autoresize :options="sqs" />
           <div class="bottom">
             <span>
               总授权数:
@@ -263,6 +263,15 @@
 
         //访问量
         fwl: {
+          color: [
+            '#1890FF',
+            '#36CBCB',
+            '#4ECB73',
+            '#FBD437',
+            '#F2637B',
+            '#975FE5',
+          ],
+          backgroundColor: 'rgba(252,252,252,0)',
           grid: {
             top: '4%',
             left: '2%',
@@ -297,6 +306,15 @@
         },
         //授权数
         sqs: {
+          color: [
+            '#1890FF',
+            '#36CBCB',
+            '#4ECB73',
+            '#FBD437',
+            '#F2637B',
+            '#975FE5',
+          ],
+          backgroundColor: 'rgba(252,252,252,0)',
           grid: {
             top: '4%',
             left: '2%',

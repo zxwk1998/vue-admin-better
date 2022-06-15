@@ -107,14 +107,10 @@ html {
       backdrop-filter: blur(10px);
     }
 
-    /* el-tag开始 */
     .el-tag + .el-tag {
       margin-left: 10px;
     }
 
-    /* el-tag结束 */
-
-    /* markdown编辑器开始 */
     .editor-toolbar {
       .no-mobile,
       .fa-question-circle {
@@ -122,9 +118,6 @@ html {
       }
     }
 
-    /* markdown编辑器结束 */
-
-    /* 间隔线开始 */
     .el-divider--horizontal {
       margin: 10px 0 25px 0;
 
@@ -137,9 +130,6 @@ html {
       }
     }
 
-    /* 间隔线结束 */
-
-    /* 大图展示开始 */
     .el-image-viewer {
       &__close {
         .el-icon-circle-close {
@@ -147,8 +137,6 @@ html {
         }
       }
     }
-
-    /* 大图展示结束 */
 
     .vue-admin-beautiful-wrapper {
       .app-main-container {
@@ -177,10 +165,6 @@ html {
         box-shadow: 0 0 10px $base-color-blue, 0 0 5px $base-color-blue !important;
       }
     }
-
-    /* 进度条结束 */
-
-    /* 表格开始 */
 
     .el-table {
       .el-table__body-wrapper {
@@ -211,9 +195,6 @@ html {
       }
     }
 
-    /* 表格结束 */
-
-    /* 分页开始 */
     .el-pagination {
       padding: 2px 5px;
       margin: 15px 0 0 0;
@@ -222,9 +203,6 @@ html {
       text-align: center;
     }
 
-    /* 分页结束 */
-
-    /* 菜单开始 */
     .el-menu.el-menu--popup.el-menu--popup-right-start {
       @include scrollbar;
     }
@@ -236,10 +214,6 @@ html {
     .el-submenu__title i {
       color: $base-color-white;
     }
-
-    /* 菜单结束 */
-
-    /* 弹窗开始 */
 
     .el-dialog,
     .el-message-box {
@@ -262,9 +236,6 @@ html {
       }
     }
 
-    /* 弹窗结束 */
-
-    /* 卡片开始 */
     .el-card {
       margin-bottom: 15px;
 
@@ -273,9 +244,6 @@ html {
       }
     }
 
-    /* 卡片结束 */
-
-    /* 下拉树样式-----------开始 */
     .select-tree-popper {
       .el-scrollbar {
         .el-scrollbar__view {
@@ -289,8 +257,6 @@ html {
         }
       }
     }
-
-    /* 下拉树样式-----------结束 */
   }
 
   .side-bar-container {
