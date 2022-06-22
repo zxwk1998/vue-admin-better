@@ -15,6 +15,7 @@ module.exports = {
     'vue/no-v-html': 'off',
     'vue/multi-word-component-names': 'off',
     'vue/no-useless-template-attributes': 'off',
+    'vue/no-reserved-component-names': 'off',
   },
   parserOptions: {
     parser: 'babel-eslint',
