@@ -9,4 +9,6 @@
 *.md text eol=lf
 *.json text eol=lf
 *.yml text eol=lf
+.browserslistrc text eol=lf
+.gitignore text eol=lf
 *.js linguist-language=vue
