@@ -41,7 +41,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "clipboard": "^2.0.11",
-    "core-js": "^3.24.0",
+    "core-js": "^3.24.1",
     "dayjs": "^1.11.4",
     "echarts": "5.3.3",
     "element-ui": "^2.15.9",
