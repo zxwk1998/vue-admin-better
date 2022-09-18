@@ -38,6 +38,8 @@
 
 - [📌 pro 及 plus 购买地址 authorization](https://vue-admin-beautiful.com/authorization/)
 
+- 🚀 Vue Shop Vite 商城（付费版本）即将发布，敬请期待！
+
 - [🌐 github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension)
 
 - [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
