@@ -8,7 +8,7 @@ export function isExternal(path) {
   return /^(https?:|mailto:|tel:)/.test(path)
 }
 /**
- * @author https://gitee.com/chu1204505056/vue-admin-better （不想保留author可删除）
+ * @author https://vue-admin-beautiful.com （不想保留author可删除）
  * @description 校验密码是否小于6位
  * @param str
  * @returns {boolean}

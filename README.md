@@ -7,7 +7,7 @@
 </div>
 
 [![stars](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&logo=GitHub)](https://github.com/chuzhixin/vue-admin-beautiful)
-[![star](https://gitee.com/chu1204505056/vue-admin-better/badge/star.svg?theme=gray)](https://gitee.com/chu1204505056/vue-admin-better)
+[![star](https://vue-admin-beautiful.com/badge/star.svg?theme=gray)](https://vue-admin-beautiful.com)
 [![license](https://img.shields.io/github/license/chuzhixin/vue-admin-beautiful?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
 
 ---
@@ -42,7 +42,7 @@
 
 - [🌐 github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension)
 
-- [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
+- [🌐 码云仓库地址](https://vue-admin-beautiful.com?_from=gitee_search)
 
 <!-- ## 🌐 备份地址（支持 https 网站自动更新）
 

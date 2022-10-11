@@ -1,5 +1,5 @@
 /**
- * @author https://gitee.com/chu1204505056/vue-admin-better （不想保留author可删除）
+ * @author https://vue-admin-beautiful.com （不想保留author可删除）
  * @description 路由守卫，目前两种模式：all模式与intelligence模式
  */
 import router from '@/router'

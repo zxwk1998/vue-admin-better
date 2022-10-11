@@ -40,7 +40,7 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "prettier.htmlWhitespaceSensitivity": "ignore",
   "prettier.vueIndentScriptAndStyle": true,
-  "docthis.authorName": "https://gitee.com/chu1204505056/vue-admin-better",
+  "docthis.authorName": "https://vue-admin-beautiful.com",
   "docthis.includeAuthorTag": true,
   "docthis.includeDescriptionTag": true,
   "docthis.enableHungarianNotationEvaluation": true,

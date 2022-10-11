@@ -108,10 +108,7 @@
             >
               <el-button type="warning">github下载源码点star</el-button>
             </a>
-            <a
-              target="_blank"
-              href="https://gitee.com/chu1204505056/vue-admin-better"
-            >
+            <a target="_blank" href="https://vue-admin-beautiful.com">
               <el-button type="warning">码云下载源码点star</el-button>
             </a>
             <a @click="handleChangeTheme">

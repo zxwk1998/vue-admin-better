@@ -5,7 +5,7 @@ import router from './router'
 import './plugins'
 import '@/layouts/export'
 /**
- * @author https://gitee.com/chu1204505056/vue-admin-better （不想保留author可删除）
+ * @author https://vue-admin-beautiful.com （不想保留author可删除）
  * @description 生产环境默认都使用mock，如果正式用于生产环境时，记得去掉
  */
 

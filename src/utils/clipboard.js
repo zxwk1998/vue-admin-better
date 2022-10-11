@@ -10,7 +10,7 @@ function clipboardError() {
 }
 
 /**
- * @author https://gitee.com/chu1204505056/vue-admin-better （不想保留author可删除）
+ * @author https://vue-admin-beautiful.com （不想保留author可删除）
  * @description 复制数据
  * @param text
  * @param event
