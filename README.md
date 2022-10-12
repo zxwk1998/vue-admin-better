@@ -3,11 +3,11 @@
 <div align="center"><img width="200" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/logo/vab.png"/>
 <h1> vue-admin-better</h1>
 
-<p>春已至，万物始，愿所有美好纷沓而来！</p>
+<p>众志成城，攻坚克难，愿所有美好纷沓而来！</p>
 </div>
 
 [![stars](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&logo=GitHub)](https://github.com/chuzhixin/vue-admin-beautiful)
-[![star](https://vue-admin-beautiful.com/badge/star.svg?theme=gray)](https://vue-admin-beautiful.com)
+[![star](https://gitee.com/chu1204505056/vue-admin-better/badge/star.svg?theme=gray)](https://gitee.com/chu1204505056/vue-admin-better)
 [![license](https://img.shields.io/github/license/chuzhixin/vue-admin-beautiful?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
 
 ---
@@ -38,11 +38,11 @@
 
 - [📌 pro 及 plus 购买地址 authorization](https://vue-admin-beautiful.com/authorization/)
 
-- 🚀 Vue Shop Vite 商城（付费版本）即将发布，敬请期待！
-
 - [🌐 github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension)
 
-- [🌐 码云仓库地址](https://vue-admin-beautiful.com?_from=gitee_search)
+- [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
+
+- 🚀 Vue Shop Vite 商城（付费版本）即将发布，敬请期待！
 
 <!-- ## 🌐 备份地址（支持 https 网站自动更新）
 
