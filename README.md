@@ -1,3 +1,4 @@
+<div style="filter: grayscale(100%)">
 简体中文 | [English](./README.en.md)
 
 <div align="center"><img width="200" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/logo/vab.png"/>
@@ -222,3 +223,5 @@ npm run serve
 ## 📄 商用注意事项
 
 此项目可免费用于商业用途，请遵守 MIT 协议并保留作者技术支持声明。
+
+</div>
