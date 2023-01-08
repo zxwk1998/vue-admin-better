@@ -16,6 +16,7 @@ const {
   providePlugin,
   build7z,
   donation,
+  imageCompression,
 } = require('./src/config')
 const { webpackBarName, webpackBanner, donationConsole } = require('zx-layouts')
 
@@ -141,14 +142,15 @@ module.exports = {
         .plugin('banner')
         .use(Webpack.BannerPlugin, [`${webpackBanner}${time}`])
         .end()
-      config.module
-        .rule('images')
-        .use('image-webpack-loader')
-        .loader('image-webpack-loader')
-        .options({
-          bypassOnDebug: true,
-        })
-        .end()
+      if (imageCompression)
+        config.module
+          .rule('images')
+          .use('image-webpack-loader')
+          .loader('image-webpack-loader')
+          .options({
+            bypassOnDebug: true,
+          })
+          .end()
     })
 
     if (build7z) {

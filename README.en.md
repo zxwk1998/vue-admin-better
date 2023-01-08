@@ -59,7 +59,7 @@
 
 ```bash
 git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-better.git
-npm i
+npm i --registry=http://mirrors.cloud.tencent.com/npm/
 npm run serve
 ```
 
@@ -67,7 +67,7 @@ npm run serve
 
 ```bash
 git clone -b master https://github.com/chuzhixin/vue-admin-better.git
-npm i
+npm i --registry=http://mirrors.cloud.tencent.com/npm/
 npm run serve
 ```
 
