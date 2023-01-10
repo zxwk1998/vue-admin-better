@@ -146,7 +146,7 @@ const data = [
     timestamp: '2020-07-11',
   },
   {
-    content: '修改zx-layouts引入方式',
+    content: '修改layouts引入方式',
     timestamp: '2020-07-15',
   },
   {

@@ -2,15 +2,7 @@
   <div class="content">
     <div class="g-container" :style="styleObj">
       <div class="g-number">
-        <vab-count
-          :start-val="startVal"
-          :end-val="endVal"
-          :duration="duration"
-          :separator="separator"
-          :prefix="prefix"
-          :suffix="suffix"
-          :decimals="decimals"
-        />
+        {{ endVal }}
       </div>
       <div class="g-contrast">
         <div class="g-circle"></div>

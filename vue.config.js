@@ -18,7 +18,7 @@ const {
   donation,
   imageCompression,
 } = require('./src/config')
-const { webpackBarName, webpackBanner, donationConsole } = require('zx-layouts')
+const { webpackBarName, webpackBanner, donationConsole } = require('layouts')
 
 if (donation) donationConsole()
 const { version, author } = require('./package.json')

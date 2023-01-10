@@ -12,7 +12,7 @@ requireComponents.keys().forEach((fileName) => {
   Vue.component(componentName, componentConfig.default || componentConfig)
 })
 
-const requireZxLayouts = require.context('zx-layouts', true, /\.vue$/)
+const requireZxLayouts = require.context('layouts', true, /\.vue$/)
 requireZxLayouts.keys().forEach((fileName) => {
   const componentConfig = requireZxLayouts(fileName)
   const componentName = componentConfig.default.name

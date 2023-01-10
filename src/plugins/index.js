@@ -8,10 +8,8 @@ import '@/colorfulIcon'
 import '@/config/permission'
 import '@/utils/errorLog'
 import './vabIcon'
-import VabPermissions from 'zx-layouts/Permissions'
+import VabPermissions from 'layouts/Permissions'
 import Vab from '@/utils/vab'
-import VabCount from 'zx-count'
 
 Vue.use(Vab)
 Vue.use(VabPermissions)
-Vue.use(VabCount)

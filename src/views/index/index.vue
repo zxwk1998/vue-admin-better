@@ -29,15 +29,7 @@
             <span>
               日均访问量:
 
-              <vab-count
-                :start-val="config1.startVal"
-                :end-val="config1.endVal"
-                :duration="config1.duration"
-                :separator="config1.separator"
-                :prefix="config1.prefix"
-                :suffix="config1.suffix"
-                :decimals="config1.decimals"
-              />
+              {{ config1.endVal }}
             </span>
           </div>
         </el-card>
@@ -51,15 +43,7 @@
           <div class="bottom">
             <span>
               总授权数:
-              <vab-count
-                :start-val="config2.startVal"
-                :end-val="config2.endVal"
-                :duration="config2.duration"
-                :separator="config2.separator"
-                :prefix="config2.prefix"
-                :suffix="config2.suffix"
-                :decimals="config2.decimals"
-              />
+              {{ config2.endVal }}
             </span>
           </div>
         </el-card>
@@ -154,8 +138,8 @@
               <td>{{ dependencies['mockjs'] }}</td>
             </tr>
             <tr>
-              <td>zx-layouts版本</td>
-              <td>{{ dependencies['zx-layouts'] }}</td>
+              <td>layouts版本</td>
+              <td>{{ dependencies['layouts'] }}</td>
               <td>lodash版本</td>
               <td>{{ dependencies['lodash'] }}</td>
             </tr>

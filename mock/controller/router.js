@@ -159,34 +159,10 @@ const data = [
         ],
       },
       {
-        path: 'magnifier',
-        name: 'Magnifier',
-        component: '@/views/vab/magnifier/index',
-        meta: { title: '放大镜', permissions: ['admin'] },
-      },
-      {
         path: 'loading',
         name: 'Loading',
         component: '@/views/vab/loading/index',
         meta: { title: 'loading', permissions: ['admin'] },
-      },
-      {
-        path: 'player',
-        name: 'Player',
-        component: '@/views/vab/player/index',
-        meta: { title: '视频播放器', permissions: ['admin'] },
-      },
-      {
-        path: 'markdownEditor',
-        name: 'MarkdownEditor',
-        component: '@/views/vab/markdownEditor/index',
-        meta: { title: 'markdown编辑器', permissions: ['admin'] },
-      },
-      {
-        path: 'editor',
-        name: 'Editor',
-        component: '@/views/vab/editor/index',
-        meta: { title: '富文本编辑器', permissions: ['admin'], badge: 'New' },
       },
       {
         path: 'backToTop',
