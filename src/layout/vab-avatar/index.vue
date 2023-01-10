@@ -29,9 +29,9 @@
     components: { DownOutlined },
     setup() {
       const store = useStore()
-      const router = useRouter();
-      const route = useRoute();
-      
+      const router = useRouter()
+      const route = useRoute()
+
       const logout = async () => {
         await store.dispatch('user/logout')
         if (recordRoute) {

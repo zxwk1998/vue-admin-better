@@ -47,7 +47,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recess-order": "^2.4.0",
     "svg-sprite-loader": "^6.0.9",
-    "vab-config": "0.0.8",
+    "vab-config": "file:vab-config",
     "webpackbar": "^5.0.0-3"
   },
   "gitHooks": {
