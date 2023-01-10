@@ -43,7 +43,7 @@
     "qs": "^6.11.0",
     "screenfull": "^5.2.0",
     "sortablejs": "^1.15.0",
-    "vab-icon": "^0.0.1",
+    "vab-icon": "file:vab-icon",
     "vue": "~2.6.14",
     "vue-echarts": "5.0.0-beta.0",
     "vue-router": "^3.5.3",
