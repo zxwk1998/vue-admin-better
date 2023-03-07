@@ -40,7 +40,7 @@
     "mapv": "^2.0.62",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
-    "qs": "^6.11.0",
+    "qs": "^6.11.1",
     "screenfull": "^5.2.0",
     "sortablejs": "^1.15.0",
     "vab-icon": "file:vab-icon",
