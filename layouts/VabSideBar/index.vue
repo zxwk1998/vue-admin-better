@@ -12,12 +12,8 @@
       :unique-opened="uniqueOpened"
       mode="vertical"
     >
-      <template v-for="route in routes">
-        <vab-side-bar-item
-          :key="route.path"
-          :full-path="route.path"
-          :item="route"
-        />
+      <template v-for="route in routes" :key="route.path">
+        <vab-side-bar-item :full-path="route.path" :item="route" />
       </template>
     </el-menu>
   </el-scrollbar>
@@ -126,10 +122,7 @@
       .el-menu-item,
       .el-submenu__title {
         height: $base-menu-item-height;
-        overflow: hidden;
         line-height: $base-menu-item-height;
-        text-overflow: ellipsis;
-        white-space: nowrap;
         vertical-align: middle;
       }
 
