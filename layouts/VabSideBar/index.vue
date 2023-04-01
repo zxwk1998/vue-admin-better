@@ -12,8 +12,12 @@
       :unique-opened="uniqueOpened"
       mode="vertical"
     >
-      <template v-for="route in routes" :key="route.path">
-        <vab-side-bar-item :full-path="route.path" :item="route" />
+      <template v-for="route in routes">
+        <vab-side-bar-item
+          :key="route.path"
+          :full-path="route.path"
+          :item="route"
+        />
       </template>
     </el-menu>
   </el-scrollbar>
@@ -96,6 +100,10 @@
             right: 10px;
             margin-top: -3px;
           }
+          .el-menu-item,
+          .el-submenu {
+            text-align: center;
+          }
         }
       }
     }
@@ -111,6 +119,8 @@
         .vab-fas-icon {
           padding-right: 3px;
           font-size: $base-font-size-default;
+          display: inline-block;
+          width: 14px;
         }
 
         .vab-remix-icon {
