@@ -8,6 +8,7 @@
     "serve": "vue-cli-service serve",
     "serve:node18": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:node18": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "lint": "vue-cli-service lint",
     "clear": "rimraf node_modules&&npm install  --registry=--registry=https://registry.npmmirror.com",
     "image-webpack-loader": "cnpm i image-webpack-loader -D",
