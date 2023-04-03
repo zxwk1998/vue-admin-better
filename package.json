@@ -72,7 +72,7 @@
     "prettier": "^2.8.7",
     "sass": "~1.32.13",
     "sass-loader": "^10.1.1",
-    "stylelint": "^15.3.0",
+    "stylelint": "^15.4.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recess-order": "^4.0.0",
     "svg-sprite-loader": "^6.0.11",
