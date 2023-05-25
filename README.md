@@ -42,15 +42,11 @@
 
 - [🚀 Vue Shop Vite 商城（付费版本）](https://vue-admin-beautiful.com/shop-vite/)
 
+- [📌 Shop Vite 购买地址 authorization](https://vue-admin-beautiful.com/authorization/shop-vite.html)
+
 - [🌐 github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension)
 
 - [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
-
-## 🌐 备份地址
-
-- [🚀 admin pro 演示地址（付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/admin-pro/)
-
-- [🚀 admin plus 演示地址（vue3.x 付费版本，支持 PC、平板、手机）](https://chu1204505056.gitee.io/admin-plus/)
 
 ## 🍻 前端讨论 QQ 群
 

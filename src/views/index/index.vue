@@ -24,7 +24,7 @@
           <div slot="header">
             <span>访问量</span>
           </div>
-          <vab-chart autoresize :options="fwl" />
+          <vab-chart autoresize :option="fwl" />
           <div class="bottom">
             <span>
               日均访问量:
@@ -39,7 +39,7 @@
           <div slot="header">
             <span>授权数</span>
           </div>
-          <vab-chart autoresize :options="sqs" />
+          <vab-chart autoresize :option="sqs" />
           <div class="bottom">
             <span>
               总授权数:
@@ -92,19 +92,15 @@
             >
               <el-button type="warning">github下载源码点star</el-button>
             </a>
-            <a target="_blank" href="https://vue-admin-beautiful.com">
+            <a
+              target="_blank"
+              href="https://gitee.com/chu1204505056/vue-admin-beautiful"
+            >
               <el-button type="warning">码云下载源码点star</el-button>
             </a>
             <a @click="handleChangeTheme">
               <el-button type="danger">修改主题和布局</el-button>
             </a>
-            <!--  <el-popover placement="top" width="250" trigger="hover">
-              <p>谢谢您愿意支持开源，加群获取文档，群内提供基础模板</p>
-              <el-image :src="require('@/assets/ewm.png')"></el-image>
-              <a slot="reference" target="_blank">
-                <el-button type="warning">文档</el-button>
-              </a>
-            </el-popover> -->
           </div>
           <table class="table">
             <tr>
