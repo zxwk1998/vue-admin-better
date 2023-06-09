@@ -34,15 +34,15 @@
 
 - [⚡️ vue3.x + vite + arco](https://vue-admin-beautiful.com/vue-admin-arco/)
 
-- [🚀 admin pro 演示地址（vue2.x 付费版本，支持 PC、平板、手机）](https://vue-admin-beautiful.com/admin-pro/)
+- [🚀 Vue Admin Pro 演示地址（vue2.x 付费版本，支持 PC、平板、手机）](https://vue-admin-beautiful.com/admin-pro/)
 
-- [🚀 admin plus 演示地址（vue3.x 付费版本，支持 PC、平板、手机）](https://vue-admin-beautiful.com/admin-plus/)
+- [🚀 Vue Admin Plus 演示地址（vue3.x 付费版本，支持 PC、平板、手机）](https://vue-admin-beautiful.com/admin-plus/)
 
-- [📌 pro 及 plus 购买地址 authorization](https://vue-admin-beautiful.com/authorization/)
+- [📌 Vue Admin Pro 及 Vue Admin Plus 购买地址](https://vue-admin-beautiful.com/authorization/)
 
-- [🚀 Vue Shop Vite 商城（付费版本）](https://vue-admin-beautiful.com/shop-vite/)
+- [🚀 Vue Shop Vite（vue3.x 付费版本）](https://vue-admin-beautiful.com/shop-vite/)
 
-- [📌 Shop Vite 购买地址 authorization](https://vue-admin-beautiful.com/authorization/shop-vite.html)
+- [📌 Vue Shop Vite 购买地址](https://vue-admin-beautiful.com/authorization/shop-vite.html)
 
 - [🌐 github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension)
 
