@@ -219,6 +219,14 @@ npm run serve
 
 ## 📄 商用注意事项
 
-此项目可免费用于商业用途，请遵守 MIT 协议并保留作者技术支持声明。
+此项目可免费用于商业用途，请遵守 MIT 协议并保留作者技术支持声明，当然如果不愿意保留可以删掉。
 
 </div>
+
+## `Star`
+
+[![Stargazers for vue-admin-better](https://reporoster.com/stars/chuzhixin/vue-admin-better)](https://github.com/chuzhixin/vue-admin-better/stargazers)
+
+## `Fork`
+
+[![Forkers repo roster for vue-admin-better](https://reporoster.com/forks/chuzhixin/vue-admin-better)](https://github.com/chuzhixin/vue-admin-better/network/members)
