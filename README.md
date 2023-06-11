@@ -182,6 +182,14 @@ npm run serve
 - 熟悉 Vue.js 技术栈，使用它开发过几个实际项目。
 - 对原理技术感兴趣，想进阶和提升的同学。
 
+## 🎨 Star
+
+[![Stargazers for vue-admin-better](https://reporoster.com/stars/chuzhixin/vue-admin-better)](https://github.com/chuzhixin/vue-admin-better/stargazers)
+
+## ✨ Fork
+
+[![Forkers repo roster for vue-admin-better](https://reporoster.com/forks/chuzhixin/vue-admin-better)](https://github.com/chuzhixin/vue-admin-better/network/members)
+
 ## 🎉 功能地图
 
 ![img](https://fastly.jsdelivr.net/gh/chuzhixin/image/vip/flow.drawio.png)
@@ -222,11 +230,3 @@ npm run serve
 此项目可免费用于商业用途，请遵守 MIT 协议并保留作者技术支持声明，当然如果不愿意保留可以删掉。
 
 </div>
-
-## `Star`
-
-[![Stargazers for vue-admin-better](https://reporoster.com/stars/chuzhixin/vue-admin-better)](https://github.com/chuzhixin/vue-admin-better/stargazers)
-
-## `Fork`
-
-[![Forkers repo roster for vue-admin-better](https://reporoster.com/forks/chuzhixin/vue-admin-better)](https://github.com/chuzhixin/vue-admin-better/network/members)
