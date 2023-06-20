@@ -40,7 +40,7 @@
 
 - [📌 Vue Admin Pro 及 Vue Admin Plus 购买地址](https://vue-admin-beautiful.com/authorization/)
 
-- [🚀 Vue Shop Vite 演示地址（vue3.x 付费版本）](https://vue-admin-beautiful.com/shop-vite/)
+- [🚀 Vue Shop Vite 演示地址（vue3.x + vite 4.x 付费版本）](https://vue-admin-beautiful.com/shop-vite/)
 
 - [📌 Vue Shop Vite 购买地址](https://vue-admin-beautiful.com/authorization/shop-vite.html)
 
@@ -130,7 +130,7 @@ npm run serve
 ## 🎨 鸣谢
 
 | Project                                                          |
-|------------------------------------------------------------------|
+| ---------------------------------------------------------------- |
 | [vue](https://github.com/vuejs/vue)                              |
 | [element-ui](https://github.com/ElemeFE/element)                 |
 | [element-plus](https://github.com/element-plus/element-plus)     |
