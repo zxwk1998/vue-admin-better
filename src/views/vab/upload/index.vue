@@ -3,10 +3,10 @@
     <el-divider content-position="left">演示环境可能无法模拟上传</el-divider>
     <vab-upload
       ref="vabUpload"
-      url="/upload"
-      name="file"
       :limit="50"
       :size="2"
+      name="file"
+      url="/upload"
     ></vab-upload>
     <el-button type="primary" @click="handleShow({ key: 'value' })">
       模拟上传

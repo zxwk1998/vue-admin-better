@@ -2,13 +2,13 @@
   <div class="pay-container">
     <el-row :gutter="20">
       <el-col
-        :xs="24"
-        :sm="{ span: 20, offset: 2 }"
-        :md="{ span: 20, offset: 2 }"
         :lg="{ span: 14, offset: 5 }"
+        :md="{ span: 20, offset: 2 }"
+        :sm="{ span: 20, offset: 2 }"
         :xl="{ span: 12, offset: 6 }"
+        :xs="24"
       >
-        <el-steps :space="200" :active="active" align-center class="steps">
+        <el-steps :active="active" :space="200" align-center class="steps">
           <el-step title="填写转账信息"></el-step>
           <el-step title="确认转账信息"></el-step>
           <el-step title="完成"></el-step>
@@ -33,6 +33,7 @@
   import Step1 from './components/Step1'
   import Step2 from './components/Step2'
   import Step3 from './components/Step3'
+
   export default {
     name: 'Pay',
     components: { Step1, Step2, Step3 },

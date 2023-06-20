@@ -1,30 +1,30 @@
 <template>
   <div class="index-container">
     <el-row :gutter="20">
-      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+      <el-col :lg="24" :md="24" :sm="24" :xl="24" :xs="24">
         <el-alert v-if="noticeList[0]" :closable="noticeList[0].closable">
           <div
             style="display: flex; align-items: center; justify-content: center"
           >
             <a
-              target="_blank"
               href="https://github.com/chuzhixin/vue-admin-better"
+              target="_blank"
             >
               <img
-                style="margin-right: 10px"
                 src="https://img.shields.io/github/stars/chuzhixin/vue-admin-better?style=flat-square&label=Stars&logo=github"
+                style="margin-right: 10px"
               />
             </a>
             <p v-html="noticeList[0].title"></p>
           </div>
         </el-alert>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
+      <el-col :lg="6" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="never">
           <div slot="header">
             <span>访问量</span>
           </div>
-          <vab-chart autoresize :option="fwl" />
+          <vab-chart :option="fwl" autoresize />
           <div class="bottom">
             <span>
               日均访问量:
@@ -34,12 +34,12 @@
           </div>
         </el-card>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="6" :xl="6">
+      <el-col :lg="6" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="never">
           <div slot="header">
             <span>授权数</span>
           </div>
-          <vab-chart autoresize :option="sqs" />
+          <vab-chart :option="sqs" autoresize />
           <div class="bottom">
             <span>
               总授权数:
@@ -52,31 +52,31 @@
       <el-col
         v-for="(item, index) in iconList"
         :key="index"
-        :xs="12"
-        :sm="6"
-        :md="3"
         :lg="3"
+        :md="3"
+        :sm="6"
         :xl="3"
+        :xs="12"
       >
         <router-link :to="item.link" target="_blank">
           <el-card class="icon-panel" shadow="never">
             <vab-icon
-              :style="{ color: item.color }"
               :icon="['fas', item.icon]"
+              :style="{ color: item.color }"
             ></vab-icon>
             <p>{{ item.title }}</p>
           </el-card>
         </router-link>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="24" :lg="11" :xl="11">
+      <el-col :lg="11" :md="24" :sm="24" :xl="11" :xs="24">
         <el-card class="card" shadow="never">
           <div slot="header">
             <span>依赖信息</span>
             <div style="float: right">部署时间:{{ updateTime }}</div>
           </div>
           <div class="bottom-btn">
-            <el-popover placement="top" width="250" trigger="hover">
+            <el-popover placement="top" trigger="hover" width="250">
               <p>
                 请我们喝杯咖啡，付款后联系qq
                 783963206，我们将邀请您加入我们的讨论群，谢谢您愿意支持开源，加群获取文档、及基础模板，群内大佬众多，希望能帮到大家（如情况不允许，请勿勉强）。
@@ -87,14 +87,14 @@
               </a>
             </el-popover>
             <a
-              target="_blank"
               href="https://github.com/chuzhixin/vue-admin-better"
+              target="_blank"
             >
               <el-button type="warning">github下载源码点star</el-button>
             </a>
             <a
-              target="_blank"
               href="https://gitee.com/chu1204505056/vue-admin-beautiful"
+              target="_blank"
             >
               <el-button type="warning">码云下载源码点star</el-button>
             </a>
@@ -147,15 +147,15 @@
             <span>其他信息</span>
           </div>
           <div style="text-align: center">
-            <vab-colorful-icon style="font-size: 140px" icon-class="vab" />
+            <vab-colorful-icon icon-class="vab" style="font-size: 140px" />
             <h1 style="font-size: 30px">vue-admin-better</h1>
           </div>
           <div v-for="(item, index) in noticeList" :key="index">
             <el-alert
               v-if="index !== 0"
+              :closable="item.closable"
               :title="item.title"
               :type="item.type"
-              :closable="item.closable"
             ></el-alert>
             <br />
           </div>
@@ -164,7 +164,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="13" :lg="13" :xl="13">
+      <el-col :lg="13" :md="13" :sm="24" :xl="13" :xs="24">
         <el-card class="card" shadow="never">
           <div slot="header">
             <span>更新日志</span>
@@ -173,8 +173,8 @@
             <el-timeline-item
               v-for="(activity, index) in activities"
               :key="index"
-              :timestamp="activity.timestamp"
               :color="activity.color"
+              :timestamp="activity.timestamp"
             >
               {{ activity.content }}
             </el-timeline-item>
@@ -192,7 +192,6 @@
   import { dependencies, devDependencies } from '../../../package.json'
   import { getList } from '@/api/changeLog'
   import { getNoticeList } from '@/api/notice'
-  import { getRepos, getStargazers } from '@/api/github'
   import Plan from './components/Plan'
   import VersionInformation from './components/VersionInformation'
 
@@ -576,18 +575,18 @@
         const res = await getNoticeList()
         this.noticeList = res.data
         /* getRepos({
+      token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+    }).then((res) => {
+      const per_page = Math.ceil(res.data.stargazers_count / 100);
+      alert(per_page);
+      getStargazers({
         token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+        page: 1,
+        per_page: res.per_page,
       }).then((res) => {
-        const per_page = Math.ceil(res.data.stargazers_count / 100);
-        alert(per_page);
-        getStargazers({
-          token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
-          page: 1,
-          per_page: res.per_page,
-        }).then((res) => {
-          alert(JSON.stringify(res));
-        });
-      }); */
+        alert(JSON.stringify(res));
+      });
+    }); */
       },
     },
   }

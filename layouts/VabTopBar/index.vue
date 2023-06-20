@@ -2,17 +2,17 @@
   <div class="top-bar-container">
     <div class="vab-main">
       <el-row>
-        <el-col :xl="7" :lg="7" :md="7" :sm="7" :xs="7">
+        <el-col :lg="7" :md="7" :sm="7" :xl="7" :xs="7">
           <vab-logo />
         </el-col>
-        <el-col :xl="12" :lg="12" :md="12" :sm="12" :xs="12">
+        <el-col :lg="12" :md="12" :sm="12" :xl="12" :xs="12">
           <el-menu
-            :background-color="variables['menu-background']"
-            :text-color="variables['menu-color']"
             :active-text-color="variables['menu-color-active']"
+            :background-color="variables['menu-background']"
             :default-active="activeMenu"
-            mode="horizontal"
+            :text-color="variables['menu-color']"
             menu-trigger="hover"
+            mode="horizontal"
           >
             <template v-for="route in routes">
               <vab-side-bar-item
@@ -24,15 +24,15 @@
             </template>
           </el-menu>
         </el-col>
-        <el-col :xl="5" :lg="5" :md="5" :sm="5" :xs="5">
+        <el-col :lg="5" :md="5" :sm="5" :xl="5" :xs="5">
           <div class="right-panel">
             <vab-error-log />
             <vab-full-screen-bar @refresh="refreshRoute" />
             <vab-theme-bar class="hidden-md-and-down" />
             <vab-icon
-              title="重载路由"
-              :pulse="pulse"
               :icon="['fas', 'redo']"
+              :pulse="pulse"
+              title="重载路由"
               @click="refreshRoute"
             />
             <vab-avatar />

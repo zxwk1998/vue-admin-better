@@ -1,16 +1,16 @@
 <template>
   <div class="login-container">
     <el-alert
-      title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
-      type="success"
       :closable="false"
       style="position: fixed"
+      title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
+      type="success"
     ></el-alert>
     <el-row>
-      <el-col :xs="24" :sm="24" :md="12" :lg="16" :xl="16">
+      <el-col :lg="16" :md="12" :sm="24" :xl="16" :xs="24">
         <div style="color: transparent">占位符</div>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
+      <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
         <el-form
           ref="form"
           :model="form"
@@ -20,7 +20,7 @@
         >
           <div class="title">hello !</div>
           <div class="title-tips">欢迎来到{{ title }}！</div>
-          <el-form-item style="margin-top: 40px" prop="username">
+          <el-form-item prop="username" style="margin-top: 40px">
             <span class="svg-container svg-container-admin">
               <vab-icon :icon="['fas', 'user']" />
             </span>
@@ -41,8 +41,8 @@
               ref="password"
               v-model.trim="form.password"
               :type="passwordType"
-              tabindex="2"
               placeholder="请输入密码"
+              tabindex="2"
               @keyup.enter.native="handleLogin"
             />
             <span

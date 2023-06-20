@@ -29,7 +29,7 @@
   right: 50%;
   width: 50%;
   height: 100%;
-  content: "";
+  content: '';
   background: #f86;
   -moz-border-radius: 24px 0 0 24px;
   -webkit-border-radius: 24px;
@@ -49,7 +49,7 @@
   right: 50%;
   width: 50%;
   height: 100%;
-  content: "";
+  content: '';
   background: #fc6;
   -moz-border-radius: 24px 0 0 24px;
   -webkit-border-radius: 24px;

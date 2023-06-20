@@ -1,14 +1,14 @@
 <template>
-  <el-scrollbar class="side-bar-container" :class="{ 'is-collapse': collapse }">
+  <el-scrollbar :class="{ 'is-collapse': collapse }" class="side-bar-container">
     <vab-logo />
     <el-menu
-      :background-color="variables['menu-background']"
-      :text-color="variables['menu-color']"
       :active-text-color="variables['menu-color-active']"
-      :default-active="activeMenu"
+      :background-color="variables['menu-background']"
       :collapse="collapse"
       :collapse-transition="false"
+      :default-active="activeMenu"
       :default-openeds="defaultOpens"
+      :text-color="variables['menu-color']"
       :unique-opened="uniqueOpened"
       mode="vertical"
     >
@@ -100,6 +100,7 @@
             right: 10px;
             margin-top: -3px;
           }
+
           .el-menu-item,
           .el-submenu {
             text-align: center;

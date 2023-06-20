@@ -5,11 +5,11 @@ import {
   contentType,
   debounce,
   invalidCode,
+  loginInterception,
   noPermissionCode,
   requestTimeout,
   successCode,
   tokenName,
-  loginInterception,
 } from '@/config'
 import store from '@/store'
 import qs from 'qs'

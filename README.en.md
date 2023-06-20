@@ -42,7 +42,8 @@
 
 - [🌐 Gitee Warehouse address](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
 
-- Recently, the VAB official website has been frequently attacked by DDoS. We have taken relevant preventive measures. If the website cannot be accessed, please visit the backup address
+- Recently, the VAB official website has been frequently attacked by DDoS. We have taken relevant preventive measures.
+  If the website cannot be accessed, please visit the backup address
 
 ## 🌐 Backup address (support automatic update of HTTPS website)
 
@@ -73,7 +74,11 @@ npm run serve
 
 ## 🍻 Front end discussion QQ group
 
-- Let's have a cup of coffee, and then contact QQ 783963206 to invite you to the discussion group. Because of the large number of users, if you haven't passed a friend's request, please contact Alipay on the Alipay payment page, whether you invite or not, you can enjoy the open source code, thank you for your support and trust, and provide the vue-admin-beautifu basic version in the group. Automatic configuration tutorial of development tools and project development documents.
+- Let's have a cup of coffee, and then contact QQ 783963206 to invite you to the discussion group. Because of the large
+  number of users, if you haven't passed a friend's request, please contact Alipay on the Alipay payment page, whether
+  you invite or not, you can enjoy the open source code, thank you for your support and trust, and provide the
+  vue-admin-beautifu basic version in the group. Automatic configuration tutorial of development tools and project
+  development documents.
 
 <table>
 <tr>
@@ -107,7 +112,7 @@ npm run serve
 ## 🎨 Acknowledge
 
 | Project                                                          |
-| ---------------------------------------------------------------- |
+|------------------------------------------------------------------|
 | [vue](https://github.com/vuejs/vue)                              |
 | [element-ui](https://github.com/ElemeFE/element)                 |
 | [element-plus](https://github.com/element-plus/element-plus)     |
@@ -196,7 +201,9 @@ The following is a screenshot of the pro version:
 
 ## 📄 Commercial considerations
 
-This project can be used for commercial purposes free of charge. Please abide by the MIT agreement and keep the author's technical support statement. For customized source code copyright information, please contact customer service QQ 783963206.
+This project can be used for commercial purposes free of charge. Please abide by the MIT agreement and keep the author's
+technical support statement. For customized source code copyright information, please contact customer service QQ
+783963206.
 
 <!-- ## 严正声明
 

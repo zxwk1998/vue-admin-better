@@ -1,26 +1,26 @@
 <template>
   <div class="element-container">
     <el-row :gutter="20">
-      <el-col :xs="24" :sm="24" :md="18" :lg="18" :xl="16">
+      <el-col :lg="18" :md="18" :sm="24" :xl="16" :xs="24">
         <el-button type="primary" @click="dialogVisible = !dialogVisible">
           element全部文档点这里
         </el-button>
         <el-dialog
           :fullscreen="true"
-          title="element文档"
           :visible.sync="dialogVisible"
+          title="element文档"
         >
           <iframe
             class="element-iframe"
-            src="https://element.eleme.cn/#/zh-CN/component/installation"
             frameborder="0"
+            src="https://element.eleme.cn/#/zh-CN/component/installation"
           ></iframe>
         </el-dialog>
         <el-divider content-position="left">
           Tag 标签
           <a
-            target="_blank"
             href="https://element.eleme.cn/#/zh-CN/component/tag"
+            target="_blank"
           >
             文档
           </a>
@@ -39,8 +39,8 @@
         <el-divider content-position="left">
           进度条
           <a
-            target="_blank"
             href="https://element.eleme.cn/#/zh-CN/component/progress"
+            target="_blank"
           >
             文档
           </a>
@@ -50,51 +50,51 @@
         <el-progress :percentage="100" status="warning"></el-progress>
         <el-progress :percentage="50" status="exception"></el-progress>
         <el-progress
-          :text-inside="true"
+          :percentage="70"
           :stroke-width="26"
-          :percentage="70"
+          :text-inside="true"
         ></el-progress>
         <el-progress
-          :text-inside="true"
+          :percentage="100"
           :stroke-width="24"
-          :percentage="100"
+          :text-inside="true"
           status="success"
         ></el-progress>
         <el-progress
-          :text-inside="true"
-          :stroke-width="22"
           :percentage="80"
+          :stroke-width="22"
+          :text-inside="true"
           status="warning"
         ></el-progress>
         <el-progress
-          :text-inside="true"
-          :stroke-width="20"
           :percentage="50"
+          :stroke-width="20"
+          :text-inside="true"
           status="exception"
         ></el-progress>
-        <el-progress type="circle" :percentage="0"></el-progress>
-        <el-progress type="circle" :percentage="25"></el-progress>
+        <el-progress :percentage="0" type="circle"></el-progress>
+        <el-progress :percentage="25" type="circle"></el-progress>
         <el-progress
-          type="circle"
           :percentage="100"
           status="success"
+          type="circle"
         ></el-progress>
         <el-progress
-          type="circle"
           :percentage="70"
           status="warning"
+          type="circle"
         ></el-progress>
         <el-progress
-          type="circle"
           :percentage="50"
           status="exception"
+          type="circle"
         ></el-progress>
 
         <el-divider content-position="left">
           按钮
           <a
-            target="_blank"
             href="https://element.eleme.cn/#/zh-CN/component/button"
+            target="_blank"
           >
             文档
           </a>
@@ -106,44 +106,44 @@
         <el-button type="warning">警告按钮</el-button>
         <el-button type="danger">危险按钮</el-button>
         <el-button plain>朴素按钮</el-button>
-        <el-button type="primary" plain>主要按钮</el-button>
-        <el-button type="success" plain>成功按钮</el-button>
-        <el-button type="info" plain>信息按钮</el-button>
-        <el-button type="warning" plain>警告按钮</el-button>
-        <el-button type="danger" plain>危险按钮</el-button>
+        <el-button plain type="primary">主要按钮</el-button>
+        <el-button plain type="success">成功按钮</el-button>
+        <el-button plain type="info">信息按钮</el-button>
+        <el-button plain type="warning">警告按钮</el-button>
+        <el-button plain type="danger">危险按钮</el-button>
         <el-button round>圆角按钮</el-button>
-        <el-button type="primary" round>主要按钮</el-button>
-        <el-button type="success" round>成功按钮</el-button>
-        <el-button type="info" round>信息按钮</el-button>
-        <el-button type="warning" round>警告按钮</el-button>
-        <el-button type="danger" round>危险按钮</el-button>
-        <el-button icon="el-icon-search" circle></el-button>
-        <el-button type="primary" icon="el-icon-edit" circle></el-button>
-        <el-button type="success" icon="el-icon-check" circle></el-button>
-        <el-button type="info" icon="el-icon-message" circle></el-button>
-        <el-button type="warning" icon="el-icon-star-off" circle></el-button>
-        <el-button type="danger" icon="el-icon-delete" circle></el-button>
+        <el-button round type="primary">主要按钮</el-button>
+        <el-button round type="success">成功按钮</el-button>
+        <el-button round type="info">信息按钮</el-button>
+        <el-button round type="warning">警告按钮</el-button>
+        <el-button round type="danger">危险按钮</el-button>
+        <el-button circle icon="el-icon-search"></el-button>
+        <el-button circle icon="el-icon-edit" type="primary"></el-button>
+        <el-button circle icon="el-icon-check" type="success"></el-button>
+        <el-button circle icon="el-icon-message" type="info"></el-button>
+        <el-button circle icon="el-icon-star-off" type="warning"></el-button>
+        <el-button circle icon="el-icon-delete" type="danger"></el-button>
         <el-button disabled>默认按钮</el-button>
-        <el-button type="primary" disabled>主要按钮</el-button>
-        <el-button type="success" disabled>成功按钮</el-button>
-        <el-button type="info" disabled>信息按钮</el-button>
-        <el-button type="warning" disabled>警告按钮</el-button>
-        <el-button type="danger" disabled>危险按钮</el-button>
-        <el-button type="primary" icon="el-icon-edit"></el-button>
-        <el-button type="primary" icon="el-icon-share"></el-button>
-        <el-button type="primary" icon="el-icon-delete"></el-button>
-        <el-button type="primary" icon="el-icon-search">搜索</el-button>
+        <el-button disabled type="primary">主要按钮</el-button>
+        <el-button disabled type="success">成功按钮</el-button>
+        <el-button disabled type="info">信息按钮</el-button>
+        <el-button disabled type="warning">警告按钮</el-button>
+        <el-button disabled type="danger">危险按钮</el-button>
+        <el-button icon="el-icon-edit" type="primary"></el-button>
+        <el-button icon="el-icon-share" type="primary"></el-button>
+        <el-button icon="el-icon-delete" type="primary"></el-button>
+        <el-button icon="el-icon-search" type="primary">搜索</el-button>
         <el-button type="primary">
           上传
           <i class="el-icon-upload el-icon--right"></i>
         </el-button>
-        <el-button type="primary" :loading="true">加载中</el-button>
+        <el-button :loading="true" type="primary">加载中</el-button>
 
         <el-divider content-position="left">
           文字链接
           <a
-            target="_blank"
             href="https://element.eleme.cn/#/zh-CN/component/link"
+            target="_blank"
           >
             文档
           </a>
@@ -157,18 +157,18 @@
         <el-link type="danger">危险链接</el-link>
         <el-link type="info">信息链接</el-link>
         <el-link disabled>默认链接</el-link>
-        <el-link type="primary" disabled>主要链接</el-link>
-        <el-link type="success" disabled>成功链接</el-link>
-        <el-link type="warning" disabled>警告链接</el-link>
-        <el-link type="danger" disabled>危险链接</el-link>
-        <el-link type="info" disabled>信息链接</el-link>
+        <el-link disabled type="primary">主要链接</el-link>
+        <el-link disabled type="success">成功链接</el-link>
+        <el-link disabled type="warning">警告链接</el-link>
+        <el-link disabled type="danger">危险链接</el-link>
+        <el-link disabled type="info">信息链接</el-link>
         <el-link :underline="false">无下划线</el-link>
         <el-link>有下划线</el-link>
         <el-divider content-position="left">
           头像
           <a
-            target="_blank"
             href="https://element.eleme.cn/#/zh-CN/component/avatar"
+            target="_blank"
           >
             文档
           </a>
@@ -177,8 +177,8 @@
         <el-divider content-position="left">
           页头
           <a
-            target="_blank"
             href="https://element.eleme.cn/#/zh-CN/component/page-header"
+            target="_blank"
           >
             文档
           </a>
@@ -187,8 +187,8 @@
         <el-divider content-position="left">
           面包屑
           <a
-            target="_blank"
             href="https://element.eleme.cn/#/zh-CN/component/breadcrumb"
+            target="_blank"
           >
             文档
           </a>

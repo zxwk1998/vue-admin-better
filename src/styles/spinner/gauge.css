@@ -17,7 +17,7 @@
   left: 30px;
   width: 4px;
   height: 27px;
-  content: "";
+  content: '';
   background: white;
   border-radius: 2px;
   transform-origin: 50% 100%;
@@ -30,7 +30,7 @@
   left: 26px;
   width: 13px;
   height: 13px;
-  content: "";
+  content: '';
   background: white;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;

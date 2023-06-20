@@ -20,11 +20,11 @@
       <el-col
         v-for="(item, index) in queryIcon"
         :key="index"
-        :xs="6"
-        :sm="8"
-        :md="3"
         :lg="2"
+        :md="3"
+        :sm="8"
         :xl="2"
+        :xs="6"
       >
         <el-card
           shadow="hover"
@@ -39,9 +39,9 @@
         <el-pagination
           :background="background"
           :current-page="queryForm.pageNo"
+          :layout="layout"
           :page-size="queryForm.pageSize"
           :page-sizes="[72, 144, 216, 288]"
-          :layout="layout"
           :total="total"
           @size-change="handleSizeChange"
           @current-change="handleCurrentChange"

@@ -1,12 +1,12 @@
 <template>
-  <div class="vue-admin-beautiful-wrapper" :class="classObj">
+  <div :class="classObj" class="vue-admin-beautiful-wrapper">
     <div
       v-if="'horizontal' === layout"
-      class="layout-container-horizontal"
       :class="{
         fixed: header === 'fixed',
         'no-tabs-bar': tabsBar === 'false' || tabsBar === false,
       }"
+      class="layout-container-horizontal"
     >
       <div :class="header === 'fixed' ? 'fixed-header' : ''">
         <vab-top-bar />
@@ -26,11 +26,11 @@
     </div>
     <div
       v-else
-      class="layout-container-vertical"
       :class="{
         fixed: header === 'fixed',
         'no-tabs-bar': tabsBar === 'false' || tabsBar === false,
       }"
+      class="layout-container-vertical"
     >
       <div
         v-if="device === 'mobile' && collapse === false"
@@ -38,7 +38,7 @@
         @click="handleFoldSideBar"
       />
       <vab-side-bar />
-      <div class="vab-main" :class="collapse ? 'is-collapse-main' : ''">
+      <div :class="collapse ? 'is-collapse-main' : ''" class="vab-main">
         <div :class="header === 'fixed' ? 'fixed-header' : ''">
           <vab-nav-bar />
           <vab-tabs-bar v-if="tabsBar === 'true' || tabsBar === true" />
@@ -54,6 +54,7 @@
 <script>
   import { mapActions, mapGetters } from 'vuex'
   import { tokenName } from '@/config'
+
   export default {
     name: 'Layout',
     data() {

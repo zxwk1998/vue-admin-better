@@ -4,8 +4,8 @@
       <vab-query-form-right-panel :span="24">
         <el-form
           ref="form"
-          :model="queryForm"
           :inline="true"
+          :model="queryForm"
           @submit.native.prevent
         >
           <el-form-item>
@@ -14,8 +14,8 @@
           <el-form-item>
             <el-button
               icon="el-icon-search"
-              type="primary"
               native-type="submit"
+              type="primary"
               @click="handleQuery"
             >
               查询
@@ -28,11 +28,11 @@
       <el-col
         v-for="(item, index) in list"
         :key="index"
-        :xs="24"
-        :sm="8"
-        :md="8"
         :lg="8"
+        :md="8"
+        :sm="8"
         :xl="6"
+        :xs="24"
       >
         <el-card :body-style="{ padding: '0px' }" shadow="hover">
           <div class="goods-list-card-body">
@@ -53,11 +53,11 @@
       </el-col>
     </el-row>
     <el-pagination
-      background
       :current-page="queryForm.pageNo"
       :layout="layout"
       :page-size="queryForm.pageSize"
       :total="total"
+      background
       @current-change="handleCurrentChange"
       @size-change="handleSizeChange"
     ></el-pagination>

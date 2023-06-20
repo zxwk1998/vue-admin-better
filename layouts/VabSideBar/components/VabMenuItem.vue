@@ -8,8 +8,8 @@
     <span>{{ routeChildren.meta.title }}</span>
     <el-tag
       v-if="routeChildren.meta && routeChildren.meta.badge"
-      type="danger"
       effect="dark"
+      type="danger"
     >
       {{ routeChildren.meta.badge }}
     </el-tag>

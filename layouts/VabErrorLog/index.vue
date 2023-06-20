@@ -12,8 +12,8 @@
     <el-dialog
       :visible.sync="dialogTableVisible"
       append-to-body
+      title="vue-admin-better异常捕获(温馨提示：错误必须解决)"
       width="70%"
-      title="vue-admin-beautiful异常捕获(温馨提示：错误必须解决)"
     >
       <el-table :data="errorLogs">
         <el-table-column label="报错路由">
@@ -38,7 +38,7 @@
             </el-popover>
           </template>
         </el-table-column>
-        <el-table-column width="380" label="操作">
+        <el-table-column label="操作" width="380">
           <template slot-scope="{ row }">
             <a
               v-for="(item, index) in searchList"
@@ -56,7 +56,7 @@
       </el-table>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogTableVisible = false">取 消</el-button>
-        <el-button type="danger" icon="el-icon-delete" @click="clearAll">
+        <el-button icon="el-icon-delete" type="danger" @click="clearAll">
           暂不显示
         </el-button>
       </span>

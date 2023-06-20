@@ -2,17 +2,17 @@
   <div id="tabs-bar-container" class="tabs-bar-container">
     <el-tabs
       v-model="tabActive"
-      type="card"
       class="tabs-content"
+      type="card"
       @tab-click="handleTabClick"
       @tab-remove="handleTabRemove"
     >
       <el-tab-pane
         v-for="item in visitedRoutes"
         :key="item.path"
+        :closable="!isAffix(item)"
         :label="item.meta.title"
         :name="item.path"
-        :closable="!isAffix(item)"
       ></el-tab-pane>
     </el-tabs>
 

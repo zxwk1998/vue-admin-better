@@ -7,29 +7,30 @@
         祝用框架的小伙伴都能住上别墅，开上保时捷
       </el-tag>
     </template>
-    <el-table :data="tableData" row-key="title" height="283px">
+    <el-table :data="tableData" height="283px" row-key="title">
       <el-table-column align="center" label="拖拽" width="50px">
         <template #default="{}">
           <vab-icon
-            style="cursor: pointer"
             :icon="['fas', 'arrows-alt']"
+            style="cursor: pointer"
           ></vab-icon>
         </template>
       </el-table-column>
       <el-table-column width="20px" />
-      <el-table-column prop="title" label="目标" width="230px" />
+      <el-table-column label="目标" prop="title" width="230px" />
       <el-table-column label="进度" width="220px">
         <template #default="{ row }">
-          <el-progress :percentage="row.percentage" :color="row.color" />
+          <el-progress :color="row.color" :percentage="row.percentage" />
         </template>
       </el-table-column>
       <el-table-column width="50px" />
-      <el-table-column prop="endTIme" label="完成时间" />
+      <el-table-column label="完成时间" prop="endTIme" />
     </el-table>
   </el-card>
 </template>
 <script>
   import Sortable from 'sortablejs'
+
   export default {
     data() {
       return {

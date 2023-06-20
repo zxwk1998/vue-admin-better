@@ -1,10 +1,10 @@
 <template>
   <div class="small-components-container">
     <el-row :gutter="20">
-      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+      <el-col :lg="24" :md="24" :sm="24" :xl="24" :xs="24">
         <el-divider content-position="left">小组件</el-divider>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
+      <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
         <el-card shadow="hover">
           <div slot="header">
             <span>snow</span>
@@ -12,7 +12,7 @@
           <vab-snow></vab-snow>
         </el-card>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
+      <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
         <el-card shadow="hover">
           <div slot="header">
             <span>profile</span>
@@ -31,12 +31,12 @@
           ></vab-profile>
         </el-card>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
+      <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
         <el-card shadow="hover">
           <div slot="header">
             <span>charge</span>
           </div>
-          <vab-charge :start-val="startVal" :end-val="endVal"></vab-charge>
+          <vab-charge :end-val="endVal" :start-val="startVal"></vab-charge>
         </el-card>
       </el-col>
     </el-row>

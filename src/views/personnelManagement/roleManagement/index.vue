@@ -17,8 +17,8 @@
           <el-form-item>
             <el-input
               v-model.trim="queryForm.permission"
-              placeholder="请输入查询条件"
               clearable
+              placeholder="请输入查询条件"
             />
           </el-form-item>
           <el-form-item>
@@ -38,16 +38,16 @@
     >
       <el-table-column show-overflow-tooltip type="selection"></el-table-column>
       <el-table-column
-        show-overflow-tooltip
-        prop="id"
         label="id"
+        prop="id"
+        show-overflow-tooltip
       ></el-table-column>
       <el-table-column
-        show-overflow-tooltip
-        prop="permission"
         label="权限码"
+        prop="permission"
+        show-overflow-tooltip
       ></el-table-column>
-      <el-table-column show-overflow-tooltip label="操作" width="200">
+      <el-table-column label="操作" show-overflow-tooltip width="200">
         <template #default="{ row }">
           <el-button type="text" @click="handleEdit(row)">编辑</el-button>
           <el-button type="text" @click="handleDelete(row)">删除</el-button>
@@ -55,11 +55,11 @@
       </el-table-column>
     </el-table>
     <el-pagination
-      background
       :current-page="queryForm.pageNo"
-      :page-size="queryForm.pageSize"
       :layout="layout"
+      :page-size="queryForm.pageSize"
       :total="total"
+      background
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
     ></el-pagination>
@@ -68,7 +68,7 @@
 </template>
 
 <script>
-  import { getList, doDelete } from '@/api/roleManagement'
+  import { doDelete, getList } from '@/api/roleManagement'
   import Edit from './components/RoleManagementEdit'
 
   export default {

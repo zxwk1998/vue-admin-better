@@ -14,8 +14,8 @@
           <el-form-item>
             <el-input
               v-model.trim="queryForm.username"
-              placeholder="请输入用户名"
               clearable
+              placeholder="请输入用户名"
             />
           </el-form-item>
           <el-form-item>
@@ -35,22 +35,22 @@
     >
       <el-table-column show-overflow-tooltip type="selection"></el-table-column>
       <el-table-column
-        show-overflow-tooltip
-        prop="id"
         label="id"
+        prop="id"
+        show-overflow-tooltip
       ></el-table-column>
       <el-table-column
-        show-overflow-tooltip
-        prop="username"
         label="用户名"
+        prop="username"
+        show-overflow-tooltip
       ></el-table-column>
       <el-table-column
-        show-overflow-tooltip
-        prop="email"
         label="邮箱"
+        prop="email"
+        show-overflow-tooltip
       ></el-table-column>
 
-      <el-table-column show-overflow-tooltip label="权限">
+      <el-table-column label="权限" show-overflow-tooltip>
         <template #default="{ row }">
           <el-tag v-for="(item, index) in row.permissions" :key="index">
             {{ item }}
@@ -59,11 +59,11 @@
       </el-table-column>
 
       <el-table-column
-        show-overflow-tooltip
-        prop="datatime"
         label="修改时间"
+        prop="datatime"
+        show-overflow-tooltip
       ></el-table-column>
-      <el-table-column show-overflow-tooltip label="操作" width="200">
+      <el-table-column label="操作" show-overflow-tooltip width="200">
         <template #default="{ row }">
           <el-button type="text" @click="handleEdit(row)">编辑</el-button>
           <el-button type="text" @click="handleDelete(row)">删除</el-button>
@@ -71,11 +71,11 @@
       </el-table-column>
     </el-table>
     <el-pagination
-      background
       :current-page="queryForm.pageNo"
-      :page-size="queryForm.pageSize"
       :layout="layout"
+      :page-size="queryForm.pageSize"
       :total="total"
+      background
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
     ></el-pagination>
@@ -84,7 +84,7 @@
 </template>
 
 <script>
-  import { getList, doDelete } from '@/api/userManagement'
+  import { doDelete, getList } from '@/api/userManagement'
   import Edit from './components/UserManagementEdit'
 
   export default {

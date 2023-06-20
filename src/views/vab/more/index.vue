@@ -1,7 +1,7 @@
 <template>
   <div class="more-container">
     <el-row :gutter="20">
-      <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
+      <el-col :lg="8" :md="24" :sm="24" :xl="8" :xs="24">
         <el-card>
           <div slot="header">
             开源版本
@@ -18,8 +18,8 @@
               <li>
                 开源地址
                 <a
-                  target="_blank"
                   href="https://github.com/chuzhixin/vue-admin-beautiful"
+                  target="_blank"
                 >
                   如果有幸帮到了你，麻烦给个star
                 </a>
@@ -29,7 +29,7 @@
           </div>
         </el-card>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
+      <el-col :lg="8" :md="24" :sm="24" :xl="8" :xs="24">
         <el-card>
           <div slot="header">
             VIP群

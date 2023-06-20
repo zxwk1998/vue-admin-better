@@ -2,7 +2,7 @@
   <el-dropdown @command="handleCommand">
     <span class="avatar-dropdown">
       <!--<el-avatar class="user-avatar" :src="avatar"></el-avatar>-->
-      <img class="user-avatar" :src="avatar" alt="" />
+      <img :src="avatar" alt="" class="user-avatar" />
       <div class="user-name">
         {{ username }}
         <i class="el-icon-arrow-down el-icon--right"></i>

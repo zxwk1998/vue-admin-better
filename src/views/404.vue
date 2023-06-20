@@ -2,7 +2,7 @@
   <div class="error-container">
     <div class="error-content">
       <el-row :gutter="20">
-        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+        <el-col :lg="12" :md="12" :sm="24" :xl="12" :xs="24">
           <div class="pic-error">
             <img
               alt="401"
@@ -27,7 +27,7 @@
           </div>
         </el-col>
 
-        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+        <el-col :lg="12" :md="12" :sm="24" :xl="12" :xs="24">
           <div class="bullshit">
             <div class="bullshit-oops">{{ oops }}</div>
             <div class="bullshit-headline">{{ headline }}</div>

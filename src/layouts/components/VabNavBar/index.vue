@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bar-container">
     <el-row :gutter="15">
-      <el-col :xs="4" :sm="12" :md="12" :lg="12" :xl="12">
+      <el-col :lg="12" :md="12" :sm="12" :xl="12" :xs="4">
         <div class="left-panel">
           <i
             :class="collapse ? 'el-icon-s-unfold' : 'el-icon-s-fold'"
@@ -12,15 +12,15 @@
           <vab-breadcrumb class="hidden-xs-only" />
         </div>
       </el-col>
-      <el-col :xs="20" :sm="12" :md="12" :lg="12" :xl="12">
+      <el-col :lg="12" :md="12" :sm="12" :xl="12" :xs="20">
         <div class="right-panel">
           <vab-error-log />
           <vab-full-screen-bar @refresh="refreshRoute" />
           <vab-theme-bar class="hidden-xs-only" />
           <vab-icon
-            title="重载所有路由"
-            :pulse="pulse"
             :icon="['fas', 'redo']"
+            :pulse="pulse"
+            title="重载所有路由"
             @click="refreshRoute"
           />
           <vab-avatar />

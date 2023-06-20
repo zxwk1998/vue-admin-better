@@ -2,31 +2,31 @@
   <div class="register-container">
     <el-alert
       v-if="nodeEnv !== 'development'"
-      title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
-      type="success"
       :closable="false"
       style="position: fixed"
+      title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
+      type="success"
     ></el-alert>
     <el-row>
-      <el-col :xs="24" :sm="24" :md="12" :lg="16" :xl="16">
+      <el-col :lg="16" :md="12" :sm="24" :xl="16" :xs="24">
         <div style="color: transparent">占位符</div>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
+      <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
         <el-form
           ref="registerForm"
           :model="form"
-          class="register-form"
           :rules="registerRules"
+          class="register-form"
           size="mini"
         >
           <el-form-item prop="username">
             <el-input
               v-model.trim="form.username"
               v-focus
+              auto-complete="off"
+              placeholder="请输入用户名"
               style="margin-top: 20px"
               type="text"
-              placeholder="请输入用户名"
-              auto-complete="off"
             >
               <vab-icon slot="prefix" :icon="['fas', 'user-alt']"></vab-icon>
             </el-input>
@@ -34,11 +34,11 @@
           <el-form-item prop="phone">
             <el-input
               v-model.trim="form.phone"
-              type="text"
-              placeholder="请输入手机号"
-              maxlength="11"
-              show-word-limit
               autocomplete="off"
+              maxlength="11"
+              placeholder="请输入手机号"
+              show-word-limit
+              type="text"
             >
               <vab-icon slot="prefix" :icon="['fas', 'mobile-alt']"></vab-icon>
             </el-input>
@@ -46,8 +46,8 @@
           <el-form-item prop="phoneCode" style="position: relative">
             <el-input
               v-model.trim="form.phoneCode"
-              type="text"
               placeholder="手机验证码"
+              type="text"
             >
               <vab-icon
                 slot="prefix"
@@ -55,9 +55,9 @@
               ></vab-icon>
             </el-input>
             <el-button
-              type="primary"
-              class="show-pwd phone-code"
               :disabled="isGetphone"
+              class="show-pwd phone-code"
+              type="primary"
               @click="getPhoneCode"
             >
               {{ phoneCode }}
@@ -66,9 +66,9 @@
           <el-form-item prop="password">
             <el-input
               v-model.trim="form.password"
-              type="password"
-              placeholder="设置密码"
               autocomplete="new-password"
+              placeholder="设置密码"
+              type="password"
             >
               <vab-icon slot="prefix" :icon="['fas', 'unlock']"></vab-icon>
             </el-input>
@@ -93,6 +93,7 @@
 <script>
   import { isPassword, isPhone } from '@/utils/validate'
   import { register } from '@/api/user'
+
   export default {
     username: 'Register',
     directives: {

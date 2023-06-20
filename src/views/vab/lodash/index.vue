@@ -4,16 +4,16 @@
       <el-col :span="24">
         <el-card shadow="hover">
           <el-link
-            type="primary"
             href="https://www.lodashjs.com/"
             target="_blank"
+            type="primary"
           >
             lodashjs官网
           </el-link>
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header">
             <span>去除数组array中的最后一个元素</span>
@@ -26,7 +26,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header">
             <span>返回数组 array的第一个元素</span>
@@ -39,7 +39,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header"><span>合并数组</span></div>
           <div class="lodash-content">
@@ -50,7 +50,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header"><span>左切片</span></div>
           <div class="lodash-content">
@@ -61,7 +61,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header"><span>右切片</span></div>
           <div class="lodash-content">
@@ -72,7 +72,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header"><span>修改拼接</span></div>
           <div class="lodash-content">
@@ -83,7 +83,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header"><span>获取数组最后一个元素</span></div>
           <div class="lodash-content">
@@ -94,7 +94,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header"><span>数组去重</span></div>
           <div class="lodash-content">
@@ -105,7 +105,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header"><span>获取数组的最大值</span></div>
           <div class="lodash-content">
@@ -116,7 +116,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header"><span>获取数组的最小值</span></div>
           <div class="lodash-content">
@@ -127,7 +127,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header">
             <span>四舍五入(保留任意位小数)</span>
@@ -140,7 +140,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header"><span>数组内数据相加</span></div>
           <div class="lodash-content">
@@ -151,7 +151,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header"><span>返回随机数</span></div>
           <div class="lodash-content">
@@ -162,7 +162,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header"><span>返回数组内的随机数</span></div>
           <div class="lodash-content">
@@ -173,7 +173,7 @@
         </el-card>
       </el-col>
 
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="6">
+      <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
           <div slot="header"><span>事件防抖动</span></div>
           <div class="lodash-content">

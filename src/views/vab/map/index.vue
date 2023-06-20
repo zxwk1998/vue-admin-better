@@ -7,6 +7,7 @@
 <script>
   import axios from 'axios'
   import * as mapv from 'mapv'
+
   export default {
     name: 'Map',
     components: {},

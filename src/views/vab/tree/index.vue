@@ -1,7 +1,7 @@
 <template>
   <div class="tree-container">
     <el-row :gutter="20">
-      <el-col :xs="24" :sm="24" :md="24" :lg="6" :xl="6">
+      <el-col :lg="6" :md="24" :sm="24" :xl="6" :xs="24">
         <el-divider content-position="left">常规树</el-divider>
         <el-input v-model="filterText" placeholder="输入关键字过滤" />
         <el-tree
@@ -54,7 +54,7 @@
           </template>
         </el-tree>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="6" :xl="6">
+      <el-col :lg="6" :md="24" :sm="24" :xl="6" :xs="24">
         <el-divider content-position="left">懒加载树</el-divider>
         <el-input
           v-model.lazy="keyW"
@@ -137,7 +137,7 @@
           </el-tree>
         </div>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="6" :xl="6">
+      <el-col :lg="6" :md="24" :sm="24" :xl="6" :xs="24">
         <el-divider content-position="left">单选树</el-divider>
         <el-select
           ref="singleTree"
@@ -167,7 +167,7 @@
           </el-option>
         </el-select>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="6" :xl="6">
+      <el-col :lg="6" :md="24" :sm="24" :xl="6" :xs="24">
         <el-divider content-position="left">多选树</el-divider>
         <el-select
           v-model="multipleSelectTreeVal"

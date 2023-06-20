@@ -191,11 +191,4 @@
     color: #606266;
   }
 </style>
-<style lang="scss">
-  /* .vab-tree-select{
-      .el-tag__close.el-icon-close{
-        width:0;
-        overflow:hidden;
-      }
-    } */
-</style>
+<style lang="scss"></style>

@@ -4,7 +4,7 @@
       intelligence模式,前端根据permissions拦截路由(演示环境,默认使用此方案)
     </el-divider>
 
-    <el-form ref="form" :model="form" :inline="true">
+    <el-form ref="form" :inline="true" :model="form">
       <el-form-item label="切换账号">
         <el-radio-group v-model="form.account">
           <el-radio label="admin">admin</el-radio>
@@ -43,40 +43,40 @@
     </p>
     <br />
     <el-row :gutter="20">
-      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+      <el-col :lg="12" :md="12" :sm="24" :xl="12" :xs="24">
         <el-table
           :data="tableData"
-          row-key="path"
+          :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
           border
           default-expand-all
-          :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
+          row-key="path"
         >
           <el-table-column
-            show-overflow-tooltip
-            prop="name"
             label="name"
+            prop="name"
+            show-overflow-tooltip
           ></el-table-column>
           <el-table-column
-            show-overflow-tooltip
-            prop="path"
             label="path"
+            prop="path"
+            show-overflow-tooltip
           ></el-table-column>
           <el-table-column
-            show-overflow-tooltip
-            prop="component"
             label="component"
+            prop="component"
+            show-overflow-tooltip
           ></el-table-column>
           <el-table-column
-            show-overflow-tooltip
-            prop="redirect"
             label="redirect"
+            prop="redirect"
+            show-overflow-tooltip
           ></el-table-column>
           <el-table-column
-            show-overflow-tooltip
-            prop="meta.title"
             label="标题"
+            prop="meta.title"
+            show-overflow-tooltip
           ></el-table-column>
-          <el-table-column show-overflow-tooltip label="图标">
+          <el-table-column label="图标" show-overflow-tooltip>
             <template #default="{ row }">
               <span v-if="row.meta">
                 <vab-icon
@@ -86,21 +86,21 @@
               </span>
             </template>
           </el-table-column>
-          <el-table-column show-overflow-tooltip label="是否固定">
+          <el-table-column label="是否固定" show-overflow-tooltip>
             <template #default="{ row }">
               <span v-if="row.meta">
                 {{ row.meta.affix }}
               </span>
             </template>
           </el-table-column>
-          <el-table-column show-overflow-tooltip label="是否无缓存">
+          <el-table-column label="是否无缓存" show-overflow-tooltip>
             <template #default="{ row }">
               <span v-if="row.meta">
                 {{ row.meta.noKeepAlive }}
               </span>
             </template>
           </el-table-column>
-          <el-table-column show-overflow-tooltip label="badge">
+          <el-table-column label="badge" show-overflow-tooltip>
             <template #default="{ row }">
               <span v-if="row.meta">
                 {{ row.meta.badge }}

@@ -25,7 +25,7 @@
       </el-form-item>
     </el-form>
     <div class="pay-button-group">
-      <el-button type="primary" :loading="loading" @click="handleSubmit">
+      <el-button :loading="loading" type="primary" @click="handleSubmit">
         提交
       </el-button>
       <el-button @click="handlePrev">上一步</el-button>

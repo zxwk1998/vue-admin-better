@@ -1,8 +1,8 @@
 <template>
   <span v-if="themeBar">
     <vab-icon
-      title="主题配置"
       :icon="['fas', 'palette']"
+      title="主题配置"
       @click="handleOpenThemeBar"
     />
     <div class="theme-bar-setting">
@@ -17,11 +17,11 @@
     </div>
 
     <el-drawer
-      title="主题配置"
       :visible.sync="drawerVisible"
-      direction="rtl"
       append-to-body
+      direction="rtl"
       size="300px"
+      title="主题配置"
     >
       <el-scrollbar style="height: 80vh; overflow: hidden">
         <div class="el-drawer__body">
@@ -66,6 +66,7 @@
 <script>
   import { mapActions, mapGetters } from 'vuex'
   import { layout as defaultLayout } from '@/config'
+
   export default {
     name: 'VabThemeBar',
     data() {

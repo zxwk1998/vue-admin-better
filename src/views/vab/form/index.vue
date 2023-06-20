@@ -1,13 +1,13 @@
 <template>
   <div class="form-container">
     <el-row :gutter="20">
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
+      <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
         <el-form
           ref="ruleForm"
           :model="ruleForm"
           :rules="rules"
-          label-width="100px"
           class="demo-ruleForm"
+          label-width="100px"
         >
           <el-form-item label="活动名称" prop="name">
             <el-input v-model="ruleForm.name"></el-input>

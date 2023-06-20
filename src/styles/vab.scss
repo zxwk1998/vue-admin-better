@@ -8,6 +8,7 @@
 @import './normalize.scss';
 @import './transition.scss';
 @import './loading.scss';
+
 $base: '.vab';
 
 @mixin scrollbar {
@@ -70,8 +71,10 @@ a {
 * {
   transition: $base-transition;
 }
+
 svg {
   transition: none;
+
   * {
     transition: none;
   }
@@ -146,6 +149,7 @@ html {
           * {
             transition: none;
           }
+
           padding: $base-padding;
           background: $base-color-white;
         }
@@ -264,6 +268,7 @@ html {
     .el-submenu {
       margin: 7px !important;
       border-radius: 5px !important;
+
       &:hover {
         border-radius: 5px !important;
       }

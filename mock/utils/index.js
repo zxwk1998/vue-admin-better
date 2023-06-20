@@ -37,6 +37,7 @@ function handleMockArray() {
   getFiles('mock/controller')
   return mockArray
 }
+
 module.exports = {
   handleRandomImage,
   handleMockArray,

@@ -2,8 +2,8 @@
   <component
     :is="menuComponent"
     v-if="!item.hidden"
-    :item="item"
     :full-path="fullPath"
+    :item="item"
     :route-children="routeChildren"
   >
     <template v-if="item.children && item.children.length">

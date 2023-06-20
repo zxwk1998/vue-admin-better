@@ -16,8 +16,8 @@
       <vab-query-form-right-panel>
         <el-form
           ref="form"
-          :model="queryForm"
           :inline="true"
+          :model="queryForm"
           @submit.native.prevent
         >
           <el-form-item>
@@ -26,8 +26,8 @@
           <el-form-item>
             <el-button
               icon="el-icon-search"
-              type="primary"
               native-type="submit"
+              type="primary"
               @click="handleQuery"
             >
               查询
@@ -51,22 +51,22 @@
         type="selection"
         width="55"
       ></el-table-column>
-      <el-table-column show-overflow-tooltip label="序号" width="95">
+      <el-table-column label="序号" show-overflow-tooltip width="95">
         <template #default="scope">
           {{ scope.$index + 1 }}
         </template>
       </el-table-column>
       <el-table-column
-        show-overflow-tooltip
-        prop="title"
         label="标题"
+        prop="title"
+        show-overflow-tooltip
       ></el-table-column>
       <el-table-column
-        show-overflow-tooltip
         label="作者"
         prop="author"
+        show-overflow-tooltip
       ></el-table-column>
-      <el-table-column show-overflow-tooltip label="头像">
+      <el-table-column label="头像" show-overflow-tooltip>
         <template #default="{ row }">
           <el-image
             v-if="imgShow"
@@ -76,12 +76,12 @@
         </template>
       </el-table-column>
       <el-table-column
-        show-overflow-tooltip
         label="点击量"
         prop="pageViews"
+        show-overflow-tooltip
         sortable
       ></el-table-column>
-      <el-table-column show-overflow-tooltip label="状态">
+      <el-table-column label="状态" show-overflow-tooltip>
         <template #default="{ row }">
           <el-tooltip
             :content="row.status"
@@ -96,12 +96,12 @@
         </template>
       </el-table-column>
       <el-table-column
-        show-overflow-tooltip
         label="时间"
         prop="datetime"
+        show-overflow-tooltip
         width="200"
       ></el-table-column>
-      <el-table-column show-overflow-tooltip label="操作" width="180px">
+      <el-table-column label="操作" show-overflow-tooltip width="180px">
         <template #default="{ row }">
           <el-button type="text" @click="handleEdit(row)">编辑</el-button>
           <el-button type="text" @click="handleDelete(row)">删除</el-button>
@@ -122,8 +122,9 @@
 </template>
 
 <script>
-  import { getList, doDelete } from '@/api/table'
+  import { doDelete, getList } from '@/api/table'
   import TableEdit from './components/TableEdit'
+
   export default {
     name: 'ComprehensiveTable',
     components: {

@@ -8,13 +8,13 @@
 
 <script>
   export default {
-    name: "VabQueryFormBottomPanel",
+    name: 'VabQueryFormBottomPanel',
     props: {},
     data() {
-      return {};
+      return {}
     },
     created() {},
     mounted() {},
     methods: {},
-  };
+  }
 </script>

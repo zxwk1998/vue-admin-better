@@ -2,11 +2,11 @@
   <div :class="'logo-container-' + layout">
     <router-link to="/">
       <!-- 这里是logo变更的位置 -->
-      <vab-remix-icon v-if="logo" class="logo" :icon-class="logo" />
+      <vab-remix-icon v-if="logo" :icon-class="logo" class="logo" />
       <span
-        class="title"
         :class="{ 'hidden-xs-only': layout === 'horizontal' }"
         :title="title"
+        class="title"
       >
         {{ title }}
       </span>

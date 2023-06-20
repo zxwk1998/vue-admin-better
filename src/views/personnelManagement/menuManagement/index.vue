@@ -4,16 +4,16 @@
       演示环境仅做基础功能展示，若想实现不同角色的真实菜单配置，需将settings.js路由加载模式改为all模式，由后端全面接管路由渲染与权限控制
     </el-divider>
     <el-row>
-      <el-col :xs="24" :sm="24" :md="8" :lg="4" :xl="4">
+      <el-col :lg="4" :md="8" :sm="24" :xl="4" :xs="24">
         <el-tree
           :data="data"
+          :default-expanded-keys="['root']"
           :props="defaultProps"
           node-key="id"
-          :default-expanded-keys="['root']"
           @node-click="handleNodeClick"
         ></el-tree>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="16" :lg="20" :xl="20">
+      <el-col :lg="20" :md="16" :sm="24" :xl="20" :xs="24">
         <vab-query-form>
           <vab-query-form-top-panel :span="12">
             <el-button icon="el-icon-plus" type="primary" @click="handleEdit">
@@ -25,29 +25,29 @@
           v-loading="listLoading"
           :data="list"
           :element-loading-text="elementLoadingText"
-          row-key="path"
+          :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
           border
           default-expand-all
-          :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
+          row-key="path"
         >
           <el-table-column
-            show-overflow-tooltip
-            prop="name"
             label="name"
+            prop="name"
+            show-overflow-tooltip
           ></el-table-column>
           <el-table-column
-            show-overflow-tooltip
-            prop="path"
             label="路径"
+            prop="path"
+            show-overflow-tooltip
           ></el-table-column>
-          <el-table-column show-overflow-tooltip label="是否隐藏">
+          <el-table-column label="是否隐藏" show-overflow-tooltip>
             <template #default="{ row }">
               <span>
                 {{ row.hidden ? '是' : '否' }}
               </span>
             </template>
           </el-table-column>
-          <el-table-column show-overflow-tooltip label="是否一直显示当前节点">
+          <el-table-column label="是否一直显示当前节点" show-overflow-tooltip>
             <template #default="{ row }">
               <span>
                 {{ row.alwaysShow ? '是' : '否' }}
@@ -55,21 +55,21 @@
             </template>
           </el-table-column>
           <el-table-column
-            show-overflow-tooltip
-            prop="component"
             label="vue文件路径"
+            prop="component"
+            show-overflow-tooltip
           ></el-table-column>
           <el-table-column
-            show-overflow-tooltip
-            prop="redirect"
             label="重定向"
+            prop="redirect"
+            show-overflow-tooltip
           ></el-table-column>
           <el-table-column
-            show-overflow-tooltip
-            prop="meta.title"
             label="标题"
+            prop="meta.title"
+            show-overflow-tooltip
           ></el-table-column>
-          <el-table-column show-overflow-tooltip label="图标">
+          <el-table-column label="图标" show-overflow-tooltip>
             <template #default="{ row }">
               <span v-if="row.meta">
                 <vab-icon
@@ -79,28 +79,28 @@
               </span>
             </template>
           </el-table-column>
-          <el-table-column show-overflow-tooltip label="是否固定">
+          <el-table-column label="是否固定" show-overflow-tooltip>
             <template #default="{ row }">
               <span v-if="row.meta">
                 {{ row.meta.affix ? '是' : '否' }}
               </span>
             </template>
           </el-table-column>
-          <el-table-column show-overflow-tooltip label="是否无缓存">
+          <el-table-column label="是否无缓存" show-overflow-tooltip>
             <template #default="{ row }">
               <span v-if="row.meta">
                 {{ row.meta.noKeepAlive ? '是' : '否' }}
               </span>
             </template>
           </el-table-column>
-          <el-table-column show-overflow-tooltip label="badge">
+          <el-table-column label="badge" show-overflow-tooltip>
             <template #default="{ row }">
               <span v-if="row.meta">
                 {{ row.meta.badge }}
               </span>
             </template>
           </el-table-column>
-          <el-table-column show-overflow-tooltip label="操作" width="200">
+          <el-table-column label="操作" show-overflow-tooltip width="200">
             <template #default="{ row }">
               <el-button type="text" @click="handleEdit(row)">编辑</el-button>
               <el-button type="text" @click="handleDelete(row)">删除</el-button>
@@ -116,7 +116,7 @@
 
 <script>
   import { getRouterList as getList } from '@/api/router'
-  import { getTree, doDelete } from '@/api/menuManagement'
+  import { doDelete, getTree } from '@/api/menuManagement'
   import Edit from './components/MenuManagementEdit'
 
   export default {

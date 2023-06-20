@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="pay-top-content">
-      <vab-icon class="pay-success" :icon="['fas', 'check-circle']"></vab-icon>
+      <vab-icon :icon="['fas', 'check-circle']" class="pay-success"></vab-icon>
       <p>支付成功</p>
     </div>
     <el-form
       ref="form"
       :model="form"
       :rules="rules"
-      label-width="120px"
       class="pay-bottom"
+      label-width="120px"
     >
       <el-form-item label="付款账户：">
         {{ infoData.payAccount }}

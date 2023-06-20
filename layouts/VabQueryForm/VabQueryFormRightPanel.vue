@@ -1,5 +1,5 @@
 <template>
-  <el-col :xs="24" :sm="24" :md="24" :lg="span" :xl="span">
+  <el-col :lg="span" :md="24" :sm="24" :xl="span" :xs="24">
     <div class="right-panel">
       <slot></slot>
     </div>
