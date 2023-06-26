@@ -4,8 +4,8 @@
     <vab-upload
       ref="vabUpload"
       :limit="50"
-      :size="2"
       name="file"
+      :size="2"
       url="/upload"
     ></vab-upload>
     <el-button type="primary" @click="handleShow({ key: 'value' })">

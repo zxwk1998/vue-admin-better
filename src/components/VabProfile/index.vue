@@ -1,5 +1,5 @@
 <template>
-  <div :style="styleObj" class="card">
+  <div class="card" :style="styleObj">
     <div class="card-borders">
       <div class="border-top"></div>
       <div class="border-right"></div>
@@ -7,14 +7,14 @@
       <div class="border-left"></div>
     </div>
     <div class="card-content">
-      <el-image :src="avatar" class="avatar"></el-image>
+      <el-image class="avatar" :src="avatar"></el-image>
       <div class="username">{{ username }}</div>
       <div class="social-icons">
         <a
           v-for="(item, index) in iconArray"
           :key="index"
-          :href="item.url"
           class="social-icon"
+          :href="item.url"
           target="_blank"
         >
           <vab-icon :icon="['fas', item.icon]" />

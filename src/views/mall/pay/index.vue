@@ -8,7 +8,7 @@
         :xl="{ span: 12, offset: 6 }"
         :xs="24"
       >
-        <el-steps :active="active" :space="200" align-center class="steps">
+        <el-steps :active="active" align-center class="steps" :space="200">
           <el-step title="填写转账信息"></el-step>
           <el-step title="确认转账信息"></el-step>
           <el-step title="完成"></el-step>

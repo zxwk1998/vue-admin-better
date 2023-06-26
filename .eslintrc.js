@@ -16,6 +16,12 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'vue/no-useless-template-attributes': 'off',
     'vue/no-reserved-component-names': 'off',
+    'vue/attributes-order': [
+      'warn',
+      {
+        alphabetical: true,
+      },
+    ],
   },
   parserOptions: {
     parser: 'babel-eslint',

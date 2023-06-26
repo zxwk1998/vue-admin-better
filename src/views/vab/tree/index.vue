@@ -6,15 +6,15 @@
         <el-input v-model="filterText" placeholder="输入关键字过滤" />
         <el-tree
           ref="demoTree"
+          class="vab-filter-tree"
           :data="data2"
           :default-checked-keys="defaultCheckedKeys"
           :default-expanded-keys="defaultExpendedKeys"
           :expand-on-click-node="false"
           :filter-node-method="filterNode"
           :highlight-current="true"
-          :props="defaultProps"
-          class="vab-filter-tree"
           node-key="id"
+          :props="defaultProps"
           show-checkbox
           @check="checkNode"
           @node-click="nodeClick"
@@ -58,21 +58,21 @@
         <el-divider content-position="left">懒加载树</el-divider>
         <el-input
           v-model.lazy="keyW"
-          :value="keyW"
           class="input-with-select"
           placeholder="请输入内容"
+          :value="keyW"
           @keyup.enter.native="showTreeList"
         ></el-input>
         <div v-show="isShow" class="blur-tree">
           <el-tree
             ref="treeFilter"
-            :data="filterDevLlist"
-            :expand-on-click-node="false"
-            :props="defaultProps"
             class="vab-filter-tree"
+            :data="filterDevLlist"
             default-expand-all
+            :expand-on-click-node="false"
             highlight-current
             node-key="indexCode"
+            :props="defaultProps"
             @node-click="nodeClick"
           >
             <template #defalut="{ node }" class="vab-custom-tree-node">
@@ -106,13 +106,13 @@
           <el-tree
             ref="tree"
             v-loading="loading"
-            :expand-on-click-node="false"
-            :load="loadNode"
-            :props="defaultProps"
             class="vab-filter-tree"
+            :expand-on-click-node="false"
             highlight-current
             lazy
+            :load="loadNode"
             node-key="indexCode"
+            :props="defaultProps"
             @node-click="nodeClick"
           >
             <template #defalut="{ node }" class="vab-custom-tree-node">
@@ -156,8 +156,8 @@
               :data="selectTreeData"
               :default-expanded-keys="selectTreeDefaultSelectedKeys"
               :highlight-current="true"
-              :props="selectTreeDefaultProps"
               node-key="id"
+              :props="selectTreeDefaultProps"
               @node-click="selectTreeNodeClick"
             >
               <template #defalut="{ node }" class="vab-custom-tree-node">
@@ -189,8 +189,8 @@
               :default-checked-keys="selectTreeDefaultSelectedKeys"
               :default-expanded-keys="selectTreeDefaultSelectedKeys"
               :highlight-current="true"
-              :props="selectTreeDefaultProps"
               node-key="id"
+              :props="selectTreeDefaultProps"
               show-checkbox
               @check="multipleSelectTreeCheckNode"
             ></el-tree>
@@ -200,9 +200,9 @@
     </el-row>
     <!--添加/编辑节点弹框-------------------start-->
     <el-dialog
+      class="tree-operate-dialog"
       :title="dialogTitle"
       :visible.sync="treeDialogVisible"
-      class="tree-operate-dialog"
       width="400px"
       @close="treeDialogVisible = false"
     >

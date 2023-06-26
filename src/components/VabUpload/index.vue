@@ -15,13 +15,16 @@
       <br />
       <el-upload
         ref="upload"
+        accept="image/png, image/jpeg"
         :action="action"
         :auto-upload="false"
+        class="upload-content"
         :close-on-click-modal="false"
         :data="data"
         :file-list="fileList"
         :headers="headers"
         :limit="limit"
+        list-type="picture-card"
         :multiple="true"
         :name="name"
         :on-change="handleChange"
@@ -31,18 +34,15 @@
         :on-progress="handleProgress"
         :on-remove="handleRemove"
         :on-success="handleSuccess"
-        accept="image/png, image/jpeg"
-        class="upload-content"
-        list-type="picture-card"
       >
         <i slot="trigger" class="el-icon-plus"></i>
         <el-dialog
-          :visible.sync="dialogVisible"
           append-to-body
           title="查看大图"
+          :visible.sync="dialogVisible"
         >
           <div>
-            <img :src="dialogImageUrl" alt="" width="100%" />
+            <img alt="" :src="dialogImageUrl" width="100%" />
           </div>
         </el-dialog>
       </el-upload>

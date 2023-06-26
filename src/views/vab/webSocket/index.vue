@@ -6,7 +6,7 @@
           webSocket连接{{ status }}！
         </el-alert>
         <br />
-        <el-form ref="form" :model="form" :rules="rules" label-width="100px">
+        <el-form ref="form" label-width="100px" :model="form" :rules="rules">
           <el-form-item label="地址">
             <el-input v-model="url" disabled></el-input>
           </el-form-item>

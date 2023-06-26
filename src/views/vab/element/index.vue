@@ -7,8 +7,8 @@
         </el-button>
         <el-dialog
           :fullscreen="true"
-          :visible.sync="dialogVisible"
           title="element文档"
+          :visible.sync="dialogVisible"
         >
           <iframe
             class="element-iframe"
@@ -56,21 +56,21 @@
         ></el-progress>
         <el-progress
           :percentage="100"
+          status="success"
           :stroke-width="24"
           :text-inside="true"
-          status="success"
         ></el-progress>
         <el-progress
           :percentage="80"
+          status="warning"
           :stroke-width="22"
           :text-inside="true"
-          status="warning"
         ></el-progress>
         <el-progress
           :percentage="50"
+          status="exception"
           :stroke-width="20"
           :text-inside="true"
-          status="exception"
         ></el-progress>
         <el-progress :percentage="0" type="circle"></el-progress>
         <el-progress :percentage="25" type="circle"></el-progress>

@@ -13,10 +13,10 @@
       <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
         <el-form
           ref="form"
-          :model="form"
-          :rules="rules"
           class="login-form"
           label-position="left"
+          :model="form"
+          :rules="rules"
         >
           <div class="title">hello !</div>
           <div class="title-tips">欢迎来到{{ title }}！</div>
@@ -40,9 +40,9 @@
               :key="passwordType"
               ref="password"
               v-model.trim="form.password"
-              :type="passwordType"
               placeholder="请输入密码"
               tabindex="2"
+              :type="passwordType"
               @keyup.enter.native="handleLogin"
             />
             <span
@@ -57,8 +57,8 @@
             </span>
           </el-form-item>
           <el-button
-            :loading="loading"
             class="login-btn"
+            :loading="loading"
             type="primary"
             @click="handleLogin"
           >

@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div :style="styleObj" class="g-container">
+    <div class="g-container" :style="styleObj">
       <div class="g-number">
         {{ endVal }}
       </div>

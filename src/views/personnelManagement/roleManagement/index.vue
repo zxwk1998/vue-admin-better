@@ -55,13 +55,13 @@
       </el-table-column>
     </el-table>
     <el-pagination
+      background
       :current-page="queryForm.pageNo"
       :layout="layout"
       :page-size="queryForm.pageSize"
       :total="total"
-      background
-      @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
+      @size-change="handleSizeChange"
     ></el-pagination>
     <edit ref="edit" @fetch-data="fetchData"></edit>
   </div>

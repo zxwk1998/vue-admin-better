@@ -24,7 +24,7 @@
           <div slot="header">
             <span>访问量</span>
           </div>
-          <vab-chart :option="fwl" autoresize />
+          <vab-chart autoresize :option="fwl" />
           <div class="bottom">
             <span>
               日均访问量:
@@ -39,7 +39,7 @@
           <div slot="header">
             <span>授权数</span>
           </div>
-          <vab-chart :option="sqs" autoresize />
+          <vab-chart autoresize :option="sqs" />
           <div class="bottom">
             <span>
               总授权数:
@@ -58,7 +58,7 @@
         :xl="3"
         :xs="12"
       >
-        <router-link :to="item.link" target="_blank">
+        <router-link target="_blank" :to="item.link">
           <el-card class="icon-panel" shadow="never">
             <vab-icon
               :icon="['fas', item.icon]"

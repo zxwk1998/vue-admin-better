@@ -2,10 +2,10 @@
   <div class="select-tree-template">
     <el-select
       v-model="selectValue"
+      class="vab-tree-select"
       :clearable="clearable"
       :collapse-tags="selectType == 'multiple'"
       :multiple="selectType == 'multiple'"
-      class="vab-tree-select"
       value-key="id"
       @clear="clearHandle"
       @remove-tag="removeTag"
@@ -19,9 +19,9 @@
           :default-checked-keys="defaultSelectedKeys"
           :default-expanded-keys="defaultSelectedKeys"
           :highlight-current="true"
+          node-key="id"
           :props="defaultProps"
           :show-checkbox="selectType == 'multiple'"
-          node-key="id"
           @check="checkNode"
           @node-click="nodeClick"
         ></el-tree>

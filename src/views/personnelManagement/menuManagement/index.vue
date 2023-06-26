@@ -8,8 +8,8 @@
         <el-tree
           :data="data"
           :default-expanded-keys="['root']"
-          :props="defaultProps"
           node-key="id"
+          :props="defaultProps"
           @node-click="handleNodeClick"
         ></el-tree>
       </el-col>
@@ -23,12 +23,12 @@
         </vab-query-form>
         <el-table
           v-loading="listLoading"
-          :data="list"
-          :element-loading-text="elementLoadingText"
-          :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
           border
+          :data="list"
           default-expand-all
+          :element-loading-text="elementLoadingText"
           row-key="path"
+          :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
         >
           <el-table-column
             label="name"

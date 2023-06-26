@@ -45,11 +45,11 @@
     <el-row :gutter="20">
       <el-col :lg="12" :md="12" :sm="24" :xl="12" :xs="24">
         <el-table
-          :data="tableData"
-          :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
           border
+          :data="tableData"
           default-expand-all
           row-key="path"
+          :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
         >
           <el-table-column
             label="name"

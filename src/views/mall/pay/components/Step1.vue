@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-form ref="form" :model="form" :rules="rules" label-width="120px">
+    <el-form ref="form" label-width="120px" :model="form" :rules="rules">
       <el-form-item label-width="0">
         <el-alert show-icon>请务必仔细填写并核对</el-alert>
       </el-form-item>

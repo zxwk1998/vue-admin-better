@@ -41,7 +41,7 @@
               <el-tag v-if="item.status === 0" hit type="danger">缺货</el-tag>
             </div>
             <div class="goods-list-image-group">
-              <img :src="item.image" class="goods-list-image" />
+              <img class="goods-list-image" :src="item.image" />
             </div>
             <div class="goods-list-title">{{ item.title }}</div>
             <div class="goods-list-description">{{ item.description }}</div>
@@ -53,11 +53,11 @@
       </el-col>
     </el-row>
     <el-pagination
+      background
       :current-page="queryForm.pageNo"
       :layout="layout"
       :page-size="queryForm.pageSize"
       :total="total"
-      background
       @current-change="handleCurrentChange"
       @size-change="handleSizeChange"
     ></el-pagination>

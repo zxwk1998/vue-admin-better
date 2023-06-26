@@ -84,8 +84,8 @@
       <el-table-column label="状态" show-overflow-tooltip>
         <template #default="{ row }">
           <el-tooltip
-            :content="row.status"
             class="item"
+            :content="row.status"
             effect="dark"
             placement="top-start"
           >

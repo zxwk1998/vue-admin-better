@@ -14,9 +14,9 @@
       <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
         <el-form
           ref="registerForm"
+          class="register-form"
           :model="form"
           :rules="registerRules"
-          class="register-form"
           size="mini"
         >
           <el-form-item prop="username">
@@ -55,8 +55,8 @@
               ></vab-icon>
             </el-input>
             <el-button
-              :disabled="isGetphone"
               class="show-pwd phone-code"
+              :disabled="isGetphone"
               type="primary"
               @click="getPhoneCode"
             >

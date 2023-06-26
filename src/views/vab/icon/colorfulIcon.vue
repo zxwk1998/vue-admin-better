@@ -51,8 +51,8 @@
           :page-size="queryForm.pageSize"
           :page-sizes="[72, 144, 216, 288]"
           :total="total"
-          @size-change="handleSizeChange"
           @current-change="handleCurrentChange"
+          @size-change="handleSizeChange"
         ></el-pagination>
       </el-col>
     </el-row>

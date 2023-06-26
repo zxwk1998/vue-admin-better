@@ -4,10 +4,10 @@
       <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
         <el-form
           ref="ruleForm"
-          :model="ruleForm"
-          :rules="rules"
           class="demo-ruleForm"
           label-width="100px"
+          :model="ruleForm"
+          :rules="rules"
         >
           <el-form-item label="活动名称" prop="name">
             <el-input v-model="ruleForm.name"></el-input>
