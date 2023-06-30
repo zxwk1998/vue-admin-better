@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "axios": "^1.4.0",
-    "caniuse-lite": "^1.0.30001508",
+    "caniuse-lite": "^1.0.30001509",
     "clipboard": "^2.0.11",
     "core-js": "^3.31.0",
     "dayjs": "^1.11.8",
@@ -68,7 +68,7 @@
     "eslint-plugin-vue": "^9.1.1",
     "filemanager-webpack-plugin": "^8.0.0",
     "image-webpack-loader": "^8.1.0",
-    "lint-staged": "^13.2.2",
+    "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
     "sass": "~1.32.13",
     "sass-loader": "^10.1.1",
