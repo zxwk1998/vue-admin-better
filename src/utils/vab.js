@@ -7,7 +7,7 @@ import { getAccessToken } from '@/utils/accessToken'
 const accessToken = store.getters['user/accessToken']
 const layout = store.getters['settings/layout']
 
-const install = (Vue, opts = {}) => {
+const install = (Vue) => {
   /* 全局accessToken */
   Vue.prototype.$baseAccessToken = () => {
     return accessToken || getAccessToken()
@@ -29,7 +29,7 @@ const install = (Vue, opts = {}) => {
       loading = Loading.service({
         lock: true,
         text: text || loadingText,
-        spinner: 'vab-loading-type' + index,
+        spinner: `vab-loading-type${index}`,
         background: 'hsla(0,0%,100%,.8)',
       })
     }
@@ -63,7 +63,7 @@ const install = (Vue, opts = {}) => {
       loading = Loading.service({
         lock: true,
         text: text || loadingText,
-        spinner: index + '-loader',
+        spinner: `${index}-loader`,
         background: 'hsla(0,0%,100%,.8)',
       })
     }
@@ -86,7 +86,7 @@ const install = (Vue, opts = {}) => {
     MessageBox.alert(content, title || '温馨提示', {
       confirmButtonText: '确定',
       dangerouslyUseHTMLString: true,
-      callback: (action) => {
+      callback: () => {
         if (callback) {
           callback()
         }

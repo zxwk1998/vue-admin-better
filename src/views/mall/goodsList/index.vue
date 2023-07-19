@@ -43,8 +43,12 @@
             <div class="goods-list-image-group">
               <img class="goods-list-image" :src="item.image" />
             </div>
-            <div class="goods-list-title">{{ item.title }}</div>
-            <div class="goods-list-description">{{ item.description }}</div>
+            <div class="goods-list-title">
+              {{ item.title }}
+            </div>
+            <div class="goods-list-description">
+              {{ item.description }}
+            </div>
             <div class="goods-list-price">
               <span>¥ {{ item.price }} 元</span>
             </div>
@@ -60,7 +64,7 @@
       :total="total"
       @current-change="handleCurrentChange"
       @size-change="handleSizeChange"
-    ></el-pagination>
+    />
   </div>
 </template>
 

@@ -33,22 +33,10 @@
       :element-loading-text="elementLoadingText"
       @selection-change="setSelectRows"
     >
-      <el-table-column show-overflow-tooltip type="selection"></el-table-column>
-      <el-table-column
-        label="id"
-        prop="id"
-        show-overflow-tooltip
-      ></el-table-column>
-      <el-table-column
-        label="用户名"
-        prop="username"
-        show-overflow-tooltip
-      ></el-table-column>
-      <el-table-column
-        label="邮箱"
-        prop="email"
-        show-overflow-tooltip
-      ></el-table-column>
+      <el-table-column show-overflow-tooltip type="selection" />
+      <el-table-column label="id" prop="id" show-overflow-tooltip />
+      <el-table-column label="用户名" prop="username" show-overflow-tooltip />
+      <el-table-column label="邮箱" prop="email" show-overflow-tooltip />
 
       <el-table-column label="权限" show-overflow-tooltip>
         <template #default="{ row }">
@@ -58,11 +46,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column
-        label="修改时间"
-        prop="datatime"
-        show-overflow-tooltip
-      ></el-table-column>
+      <el-table-column label="修改时间" prop="datatime" show-overflow-tooltip />
       <el-table-column label="操作" show-overflow-tooltip width="200">
         <template #default="{ row }">
           <el-button type="text" @click="handleEdit(row)">编辑</el-button>
@@ -78,8 +62,8 @@
       :total="total"
       @current-change="handleCurrentChange"
       @size-change="handleSizeChange"
-    ></el-pagination>
-    <edit ref="edit" @fetch-data="fetchData"></edit>
+    />
+    <edit ref="edit" @fetch-data="fetchData" />
   </div>
 </template>
 

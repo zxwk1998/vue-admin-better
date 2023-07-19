@@ -9,21 +9,21 @@
         :xs="24"
       >
         <el-steps :active="active" align-center class="steps" :space="200">
-          <el-step title="填写转账信息"></el-step>
-          <el-step title="确认转账信息"></el-step>
-          <el-step title="完成"></el-step>
+          <el-step title="填写转账信息" />
+          <el-step title="确认转账信息" />
+          <el-step title="完成" />
         </el-steps>
-        <step1 v-if="active === 1" @change-step="handleSetStep"></step1>
+        <step1 v-if="active === 1" @change-step="handleSetStep" />
         <step2
           v-if="active === 2"
           :info-data="form"
           @change-step="handleSetStep"
-        ></step2>
+        />
         <step3
           v-if="active === 3"
           :info-data="form"
           @change-step="handleSetStep"
-        ></step3>
+        />
       </el-col>
     </el-row>
   </div>

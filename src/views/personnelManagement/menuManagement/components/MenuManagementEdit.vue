@@ -10,10 +10,10 @@
     </el-divider>
     <el-form ref="form" label-width="80px" :model="form" :rules="rules">
       <el-form-item label="name" prop="name">
-        <el-input v-model="form.name" autocomplete="off"></el-input>
+        <el-input v-model="form.name" autocomplete="off" />
       </el-form-item>
       <el-form-item label="路径" prop="path">
-        <el-input v-model="form.path" autocomplete="off"></el-input>
+        <el-input v-model="form.path" autocomplete="off" />
       </el-form-item>
     </el-form>
     <div slot="footer" class="dialog-footer">

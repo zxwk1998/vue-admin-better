@@ -29,9 +29,15 @@
 
         <el-col :lg="12" :md="12" :sm="24" :xl="12" :xs="24">
           <div class="bullshit">
-            <div class="bullshit-oops">{{ oops }}</div>
-            <div class="bullshit-headline">{{ headline }}</div>
-            <div class="bullshit-info">{{ info }}</div>
+            <div class="bullshit-oops">
+              {{ oops }}
+            </div>
+            <div class="bullshit-headline">
+              {{ headline }}
+            </div>
+            <div class="bullshit-info">
+              {{ info }}
+            </div>
             <a class="bullshit-return-home" href="#/index">
               {{ jumpTime }}s&nbsp;{{ btn }}
             </a>

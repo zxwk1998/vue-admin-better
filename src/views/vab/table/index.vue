@@ -46,33 +46,21 @@
       @selection-change="setSelectRows"
       @sort-change="tableSortChange"
     >
-      <el-table-column
-        show-overflow-tooltip
-        type="selection"
-        width="55"
-      ></el-table-column>
+      <el-table-column show-overflow-tooltip type="selection" width="55" />
       <el-table-column label="序号" show-overflow-tooltip width="95">
         <template #default="scope">
           {{ scope.$index + 1 }}
         </template>
       </el-table-column>
-      <el-table-column
-        label="标题"
-        prop="title"
-        show-overflow-tooltip
-      ></el-table-column>
-      <el-table-column
-        label="作者"
-        prop="author"
-        show-overflow-tooltip
-      ></el-table-column>
+      <el-table-column label="标题" prop="title" show-overflow-tooltip />
+      <el-table-column label="作者" prop="author" show-overflow-tooltip />
       <el-table-column label="头像" show-overflow-tooltip>
         <template #default="{ row }">
           <el-image
             v-if="imgShow"
             :preview-src-list="imageList"
             :src="row.img"
-          ></el-image>
+          />
         </template>
       </el-table-column>
       <el-table-column
@@ -80,7 +68,7 @@
         prop="pageViews"
         show-overflow-tooltip
         sortable
-      ></el-table-column>
+      />
       <el-table-column label="状态" show-overflow-tooltip>
         <template #default="{ row }">
           <el-tooltip
@@ -100,7 +88,7 @@
         prop="datetime"
         show-overflow-tooltip
         width="200"
-      ></el-table-column>
+      />
       <el-table-column label="操作" show-overflow-tooltip width="180px">
         <template #default="{ row }">
           <el-button type="text" @click="handleEdit(row)">编辑</el-button>
@@ -116,8 +104,8 @@
       :total="total"
       @current-change="handleCurrentChange"
       @size-change="handleSizeChange"
-    ></el-pagination>
-    <table-edit ref="edit"></table-edit>
+    />
+    <table-edit ref="edit" />
   </div>
 </template>
 

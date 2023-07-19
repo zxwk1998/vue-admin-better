@@ -11,7 +11,7 @@
           node-key="id"
           :props="defaultProps"
           @node-click="handleNodeClick"
-        ></el-tree>
+        />
       </el-col>
       <el-col :lg="20" :md="16" :sm="24" :xl="20" :xs="24">
         <vab-query-form>
@@ -30,16 +30,8 @@
           row-key="path"
           :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
         >
-          <el-table-column
-            label="name"
-            prop="name"
-            show-overflow-tooltip
-          ></el-table-column>
-          <el-table-column
-            label="路径"
-            prop="path"
-            show-overflow-tooltip
-          ></el-table-column>
+          <el-table-column label="name" prop="name" show-overflow-tooltip />
+          <el-table-column label="路径" prop="path" show-overflow-tooltip />
           <el-table-column label="是否隐藏" show-overflow-tooltip>
             <template #default="{ row }">
               <span>
@@ -58,24 +50,21 @@
             label="vue文件路径"
             prop="component"
             show-overflow-tooltip
-          ></el-table-column>
+          />
           <el-table-column
             label="重定向"
             prop="redirect"
             show-overflow-tooltip
-          ></el-table-column>
+          />
           <el-table-column
             label="标题"
             prop="meta.title"
             show-overflow-tooltip
-          ></el-table-column>
+          />
           <el-table-column label="图标" show-overflow-tooltip>
             <template #default="{ row }">
               <span v-if="row.meta">
-                <vab-icon
-                  v-if="row.meta.icon"
-                  :icon="['fas', row.meta.icon]"
-                ></vab-icon>
+                <vab-icon v-if="row.meta.icon" :icon="['fas', row.meta.icon]" />
               </span>
             </template>
           </el-table-column>
@@ -110,7 +99,7 @@
       </el-col>
     </el-row>
 
-    <edit ref="edit" @fetch-data="fetchData"></edit>
+    <edit ref="edit" @fetch-data="fetchData" />
   </div>
 </template>
 
@@ -165,7 +154,7 @@
           this.listLoading = false
         }, 300)
       },
-      handleNodeClick(data) {
+      handleNodeClick() {
         this.fetchData()
       },
     },

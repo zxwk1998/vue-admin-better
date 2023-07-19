@@ -7,8 +7,10 @@
       <div class="border-left"></div>
     </div>
     <div class="card-content">
-      <el-image class="avatar" :src="avatar"></el-image>
-      <div class="username">{{ username }}</div>
+      <el-image class="avatar" :src="avatar" />
+      <div class="username">
+        {{ username }}
+      </div>
       <div class="social-icons">
         <a
           v-for="(item, index) in iconArray"

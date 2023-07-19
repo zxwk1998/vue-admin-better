@@ -10,10 +10,7 @@
     <el-table :data="tableData" height="283px" row-key="title">
       <el-table-column align="center" label="拖拽" width="50px">
         <template #default="{}">
-          <vab-icon
-            :icon="['fas', 'arrows-alt']"
-            style="cursor: pointer"
-          ></vab-icon>
+          <vab-icon :icon="['fas', 'arrows-alt']" style="cursor: pointer" />
         </template>
       </el-table-column>
       <el-table-column width="20px" />

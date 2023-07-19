@@ -51,38 +51,27 @@
           row-key="path"
           :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
         >
-          <el-table-column
-            label="name"
-            prop="name"
-            show-overflow-tooltip
-          ></el-table-column>
-          <el-table-column
-            label="path"
-            prop="path"
-            show-overflow-tooltip
-          ></el-table-column>
+          <el-table-column label="name" prop="name" show-overflow-tooltip />
+          <el-table-column label="path" prop="path" show-overflow-tooltip />
           <el-table-column
             label="component"
             prop="component"
             show-overflow-tooltip
-          ></el-table-column>
+          />
           <el-table-column
             label="redirect"
             prop="redirect"
             show-overflow-tooltip
-          ></el-table-column>
+          />
           <el-table-column
             label="标题"
             prop="meta.title"
             show-overflow-tooltip
-          ></el-table-column>
+          />
           <el-table-column label="图标" show-overflow-tooltip>
             <template #default="{ row }">
               <span v-if="row.meta">
-                <vab-icon
-                  v-if="row.meta.icon"
-                  :icon="['fas', row.meta.icon]"
-                ></vab-icon>
+                <vab-icon v-if="row.meta.icon" :icon="['fas', row.meta.icon]" />
               </span>
             </template>
           </el-table-column>

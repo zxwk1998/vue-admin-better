@@ -7,7 +7,7 @@
       name="file"
       :size="2"
       url="/upload"
-    ></vab-upload>
+    />
     <el-button type="primary" @click="handleShow({ key: 'value' })">
       模拟上传
     </el-button>

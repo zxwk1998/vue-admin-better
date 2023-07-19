@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="pay-top-content">
-      <vab-icon class="pay-success" :icon="['fas', 'check-circle']"></vab-icon>
+      <vab-icon class="pay-success" :icon="['fas', 'check-circle']" />
       <p>支付成功</p>
     </div>
     <el-form

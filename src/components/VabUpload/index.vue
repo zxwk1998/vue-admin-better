@@ -11,7 +11,7 @@
         :closable="false"
         :title="`支持jpg、jpeg、png格式，单次可最多选择${limit}张图片，每张不可大于${size}M，如果大于${size}M会自动为您过滤`"
         type="info"
-      ></el-alert>
+      />
       <br />
       <el-upload
         ref="upload"
@@ -128,7 +128,7 @@
       submitUpload() {
         this.$refs.upload.submit()
       },
-      handleProgress(event, file, fileList) {
+      handleProgress() {
         this.loading = true
         this.show = true
       },
@@ -161,7 +161,7 @@
           this.show = false
         }, 1000)
       },
-      handleError(err, file, fileList) {
+      handleError() {
         this.imgNum = this.imgNum + 1
         this.imgErrorNum = this.imgErrorNum + 1
         this.$baseMessage(
@@ -176,7 +176,7 @@
           this.show = false
         }, 1000)
       },
-      handleRemove(file, fileList) {
+      handleRemove() {
         this.imgNum = this.imgNum - 1
         this.allNum = this.allNum - 1
       },

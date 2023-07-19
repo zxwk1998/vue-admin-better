@@ -6,7 +6,7 @@
       style="position: fixed"
       title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
       type="success"
-    ></el-alert>
+    />
     <el-row>
       <el-col :lg="16" :md="12" :sm="24" :xl="16" :xs="24">
         <div style="color: transparent">占位符</div>
@@ -28,7 +28,7 @@
               style="margin-top: 20px"
               type="text"
             >
-              <vab-icon slot="prefix" :icon="['fas', 'user-alt']"></vab-icon>
+              <vab-icon slot="prefix" :icon="['fas', 'user-alt']" />
             </el-input>
           </el-form-item>
           <el-form-item prop="phone">
@@ -40,7 +40,7 @@
               show-word-limit
               type="text"
             >
-              <vab-icon slot="prefix" :icon="['fas', 'mobile-alt']"></vab-icon>
+              <vab-icon slot="prefix" :icon="['fas', 'mobile-alt']" />
             </el-input>
           </el-form-item>
           <el-form-item prop="phoneCode" style="position: relative">
@@ -49,10 +49,7 @@
               placeholder="手机验证码"
               type="text"
             >
-              <vab-icon
-                slot="prefix"
-                :icon="['fas', 'envelope-open']"
-              ></vab-icon>
+              <vab-icon slot="prefix" :icon="['fas', 'envelope-open']" />
             </el-input>
             <el-button
               class="show-pwd phone-code"
@@ -70,7 +67,7 @@
               placeholder="设置密码"
               type="password"
             >
-              <vab-icon slot="prefix" :icon="['fas', 'unlock']"></vab-icon>
+              <vab-icon slot="prefix" :icon="['fas', 'unlock']" />
             </el-input>
           </el-form-item>
           <el-form-item>
@@ -175,7 +172,7 @@
         this.getPhoneIntval = setInterval(() => {
           if (n > 0) {
             n--
-            this.phoneCode = '重新获取(' + n + 's)'
+            this.phoneCode = `重新获取(${n}s)`
           } else {
             clearInterval(this.getPhoneIntval)
             this.getPhoneIntval = null

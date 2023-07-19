@@ -36,17 +36,9 @@
       :element-loading-text="elementLoadingText"
       @selection-change="setSelectRows"
     >
-      <el-table-column show-overflow-tooltip type="selection"></el-table-column>
-      <el-table-column
-        label="id"
-        prop="id"
-        show-overflow-tooltip
-      ></el-table-column>
-      <el-table-column
-        label="权限码"
-        prop="permission"
-        show-overflow-tooltip
-      ></el-table-column>
+      <el-table-column show-overflow-tooltip type="selection" />
+      <el-table-column label="id" prop="id" show-overflow-tooltip />
+      <el-table-column label="权限码" prop="permission" show-overflow-tooltip />
       <el-table-column label="操作" show-overflow-tooltip width="200">
         <template #default="{ row }">
           <el-button type="text" @click="handleEdit(row)">编辑</el-button>
@@ -62,8 +54,8 @@
       :total="total"
       @current-change="handleCurrentChange"
       @size-change="handleSizeChange"
-    ></el-pagination>
-    <edit ref="edit" @fetch-data="fetchData"></edit>
+    />
+    <edit ref="edit" @fetch-data="fetchData" />
   </div>
 </template>
 

@@ -24,7 +24,7 @@
           :show-checkbox="selectType == 'multiple'"
           @check="checkNode"
           @node-click="nodeClick"
-        ></el-tree>
+        />
       </el-option>
     </el-select>
   </div>
@@ -96,7 +96,6 @@
       }
     },
     mounted() {
-      const that = this
       this.initTree()
     },
     methods: {
@@ -132,18 +131,18 @@
         allNode.forEach((element) => element.classList.remove('is-current'))
       },
       // select多选时移除某项操作
-      removeTag(val) {
+      removeTag() {
         this.$refs.treeOption.setCheckedKeys([])
       },
       // 点击叶子节点
-      nodeClick(data, node, el) {
+      nodeClick(data) {
         if (data.rank >= this.selectLevel) {
           this.selectValue = data.name
           this.selectKey = data.id
         }
       },
       // 节点选中操作
-      checkNode(data, node, el) {
+      checkNode() {
         const checkedNodes = this.$refs.treeOption.getCheckedNodes()
         const keyArr = []
         const valueArr = []

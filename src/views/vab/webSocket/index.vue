@@ -8,10 +8,10 @@
         <br />
         <el-form ref="form" label-width="100px" :model="form" :rules="rules">
           <el-form-item label="地址">
-            <el-input v-model="url" disabled></el-input>
+            <el-input v-model="url" disabled />
           </el-form-item>
           <el-form-item label="消息" prop="message">
-            <el-input v-model="form.message"></el-input>
+            <el-input v-model="form.message" />
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="submit">发送消息</el-button>

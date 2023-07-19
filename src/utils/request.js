@@ -92,8 +92,11 @@ instance.interceptors.response.use(
     } else {
       handleCode(code, msg)
       return Promise.reject(
-        'vue-admin-beautiful请求异常拦截:' +
-          JSON.stringify({ url: config.url, code, msg }) || 'Error'
+        `vue-admin-beautiful请求异常拦截:${JSON.stringify({
+          url: config.url,
+          code,
+          msg,
+        })}` || 'Error'
       )
     }
   },
@@ -114,7 +117,7 @@ instance.interceptors.response.use(
       }
       if (message.includes('Request failed with status code')) {
         const code = message.substr(message.length - 3)
-        message = '后端接口' + code + '异常'
+        message = `后端接口${code}异常`
       }
       Vue.prototype.$baseMessage(message || `后端接口未知异常`, 'error')
       return Promise.reject(error)

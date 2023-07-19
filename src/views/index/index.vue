@@ -63,7 +63,7 @@
             <vab-icon
               :icon="['fas', item.icon]"
               :style="{ color: item.color }"
-            ></vab-icon>
+            />
             <p>{{ item.title }}</p>
           </el-card>
         </router-link>
@@ -81,7 +81,7 @@
                 请我们喝杯咖啡，付款后联系qq
                 783963206，我们将邀请您加入我们的讨论群，谢谢您愿意支持开源，加群获取文档、及基础模板，群内大佬众多，希望能帮到大家（如情况不允许，请勿勉强）。
               </p>
-              <el-image :src="require('@/assets/zfb_kf.jpg')"></el-image>
+              <el-image :src="require('@/assets/zfb_kf.jpg')" />
               <a slot="reference" target="_blank">
                 <el-button type="primary">QQ讨论群、基础版、文档</el-button>
               </a>
@@ -156,10 +156,10 @@
               :closable="item.closable"
               :title="item.title"
               :type="item.type"
-            ></el-alert>
+            />
             <br />
           </div>
-          <el-alert :closable="false" :title="userAgent" type="info"></el-alert>
+          <el-alert :closable="false" :title="userAgent" type="info" />
           <br />
         </el-card>
       </el-col>
@@ -180,8 +180,8 @@
             </el-timeline-item>
           </el-timeline>
         </el-card>
-        <plan></plan>
-        <version-information></version-information>
+        <plan />
+        <version-information />
       </el-col>
     </el-row>
   </div>
@@ -560,7 +560,7 @@
       handleClick(e) {
         this.$baseMessage(`点击了${e.name},这里可以写跳转`)
       },
-      handleZrClick(e) {},
+      handleZrClick() {},
       handleChangeTheme() {
         this.$baseEventBus.$emit('theme')
       },

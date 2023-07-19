@@ -41,7 +41,9 @@
 
       <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
-          <div slot="header"><span>合并数组</span></div>
+          <div slot="header">
+            <span>合并数组</span>
+          </div>
           <div class="lodash-content">
             this.$baseLodash.concat([1],[2])
             <br />
@@ -52,7 +54,9 @@
 
       <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
-          <div slot="header"><span>左切片</span></div>
+          <div slot="header">
+            <span>左切片</span>
+          </div>
           <div class="lodash-content">
             this.$baseLodash.drop([1, 2, 3],2切除的数量)
             <br />
@@ -63,7 +67,9 @@
 
       <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
-          <div slot="header"><span>右切片</span></div>
+          <div slot="header">
+            <span>右切片</span>
+          </div>
           <div class="lodash-content">
             this.$baseLodash.dropRight([1, 2, 3],2切除的数量)
             <br />
@@ -74,7 +80,9 @@
 
       <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
-          <div slot="header"><span>修改拼接</span></div>
+          <div slot="header">
+            <span>修改拼接</span>
+          </div>
           <div class="lodash-content">
             this.$baseLodash.join(['a', 'b', 'c'], '~');
             <br />
@@ -85,7 +93,9 @@
 
       <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
-          <div slot="header"><span>获取数组最后一个元素</span></div>
+          <div slot="header">
+            <span>获取数组最后一个元素</span>
+          </div>
           <div class="lodash-content">
             this.$baseLodash.last(['a', 'b', 'c']);
             <br />
@@ -96,7 +106,9 @@
 
       <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
-          <div slot="header"><span>数组去重</span></div>
+          <div slot="header">
+            <span>数组去重</span>
+          </div>
           <div class="lodash-content">
             this.$baseLodash.uniq(['a', 'b', 'a']);
             <br />
@@ -107,7 +119,9 @@
 
       <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
-          <div slot="header"><span>获取数组的最大值</span></div>
+          <div slot="header">
+            <span>获取数组的最大值</span>
+          </div>
           <div class="lodash-content">
             this.$baseLodash.max([4, 2, 8, 6])
             <br />
@@ -118,7 +132,9 @@
 
       <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
-          <div slot="header"><span>获取数组的最小值</span></div>
+          <div slot="header">
+            <span>获取数组的最小值</span>
+          </div>
           <div class="lodash-content">
             this.$baseLodash.min([4, 2, 8, 6])
             <br />
@@ -142,7 +158,9 @@
 
       <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
-          <div slot="header"><span>数组内数据相加</span></div>
+          <div slot="header">
+            <span>数组内数据相加</span>
+          </div>
           <div class="lodash-content">
             this.$baseLodash.sum([4, 2, 8, 6])
             <br />
@@ -153,7 +171,9 @@
 
       <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
-          <div slot="header"><span>返回随机数</span></div>
+          <div slot="header">
+            <span>返回随机数</span>
+          </div>
           <div class="lodash-content">
             this.$baseLodash.random(0, 5)
             <br />
@@ -164,7 +184,9 @@
 
       <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
-          <div slot="header"><span>返回数组内的随机数</span></div>
+          <div slot="header">
+            <span>返回数组内的随机数</span>
+          </div>
           <div class="lodash-content">
             this.$baseLodash.sample([1, 2, 3, 4])
             <br />
@@ -175,7 +197,9 @@
 
       <el-col :lg="8" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="hover">
-          <div slot="header"><span>事件防抖动</span></div>
+          <div slot="header">
+            <span>事件防抖动</span>
+          </div>
           <div class="lodash-content">
             this.$baseLodash.debounce(@click的事件,延迟的毫秒数)
             <br />

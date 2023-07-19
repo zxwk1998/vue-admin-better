@@ -5,7 +5,7 @@
       style="position: fixed"
       title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
       type="success"
-    ></el-alert>
+    />
     <el-row>
       <el-col :lg="16" :md="12" :sm="24" :xl="16" :xs="24">
         <div style="color: transparent">占位符</div>
@@ -50,10 +50,10 @@
               class="show-password"
               @click="handlePassword"
             >
-              <vab-icon :icon="['fas', 'eye-slash']"></vab-icon>
+              <vab-icon :icon="['fas', 'eye-slash']" />
             </span>
             <span v-else class="show-password" @click="handlePassword">
-              <vab-icon :icon="['fas', 'eye']"></vab-icon>
+              <vab-icon :icon="['fas', 'eye']" />
             </span>
           </el-form-item>
           <el-button

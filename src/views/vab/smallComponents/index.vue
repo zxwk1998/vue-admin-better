@@ -9,7 +9,7 @@
           <div slot="header">
             <span>snow</span>
           </div>
-          <vab-snow></vab-snow>
+          <vab-snow />
         </el-card>
       </el-col>
       <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
@@ -28,7 +28,7 @@
             v-if="profileShow"
             avatar="https://picsum.photos/80/80?random=2"
             user-name="chuzhixin"
-          ></vab-profile>
+          />
         </el-card>
       </el-col>
       <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
@@ -36,7 +36,7 @@
           <div slot="header">
             <span>charge</span>
           </div>
-          <vab-charge :end-val="endVal" :start-val="startVal"></vab-charge>
+          <vab-charge :end-val="endVal" :start-val="startVal" />
         </el-card>
       </el-col>
     </el-row>

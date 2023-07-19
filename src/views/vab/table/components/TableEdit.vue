@@ -7,10 +7,10 @@
   >
     <el-form ref="form" label-width="80px" :model="form" :rules="rules">
       <el-form-item label="标题" prop="title">
-        <el-input v-model.trim="form.title" autocomplete="off"></el-input>
+        <el-input v-model.trim="form.title" autocomplete="off" />
       </el-form-item>
       <el-form-item label="作者" prop="author">
-        <el-input v-model.trim="form.author" autocomplete="off"></el-input>
+        <el-input v-model.trim="form.author" autocomplete="off" />
       </el-form-item>
     </el-form>
     <div slot="footer" class="dialog-footer">

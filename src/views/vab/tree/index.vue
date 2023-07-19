@@ -62,7 +62,7 @@
           placeholder="请输入内容"
           :value="keyW"
           @keyup.enter.native="showTreeList"
-        ></el-input>
+        />
         <div v-show="isShow" class="blur-tree">
           <el-tree
             ref="treeFilter"
@@ -193,7 +193,7 @@
               :props="selectTreeDefaultProps"
               show-checkbox
               @check="multipleSelectTreeCheckNode"
-            ></el-tree>
+            />
           </el-option>
         </el-select>
       </el-col>
@@ -208,7 +208,7 @@
     >
       <el-form ref="treeForm" :model="treeForm">
         <el-form-item label="节点名称" required>
-          <el-input v-model="treeForm.name"></el-input>
+          <el-input v-model="treeForm.name" />
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">

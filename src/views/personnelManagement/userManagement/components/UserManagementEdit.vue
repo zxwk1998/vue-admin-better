@@ -7,22 +7,22 @@
   >
     <el-form ref="form" label-width="80px" :model="form" :rules="rules">
       <el-form-item label="用户名" prop="username">
-        <el-input v-model.trim="form.username" autocomplete="off"></el-input>
+        <el-input v-model.trim="form.username" autocomplete="off" />
       </el-form-item>
       <el-form-item label="密码" prop="password">
         <el-input
           v-model.trim="form.password"
           autocomplete="off"
           type="password"
-        ></el-input>
+        />
       </el-form-item>
       <el-form-item label="邮箱" prop="email">
-        <el-input v-model.trim="form.email" autocomplete="off"></el-input>
+        <el-input v-model.trim="form.email" autocomplete="off" />
       </el-form-item>
       <el-form-item label="权限" prop="permissions">
         <el-checkbox-group v-model="form.permissions">
-          <el-checkbox label="admin"></el-checkbox>
-          <el-checkbox label="editor"></el-checkbox>
+          <el-checkbox label="admin" />
+          <el-checkbox label="editor" />
         </el-checkbox-group>
       </el-form-item>
     </el-form>

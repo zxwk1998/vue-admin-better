@@ -45,50 +45,34 @@
             文档
           </a>
         </el-divider>
-        <el-progress :percentage="50"></el-progress>
-        <el-progress :percentage="100" status="success"></el-progress>
-        <el-progress :percentage="100" status="warning"></el-progress>
-        <el-progress :percentage="50" status="exception"></el-progress>
-        <el-progress
-          :percentage="70"
-          :stroke-width="26"
-          :text-inside="true"
-        ></el-progress>
+        <el-progress :percentage="50" />
+        <el-progress :percentage="100" status="success" />
+        <el-progress :percentage="100" status="warning" />
+        <el-progress :percentage="50" status="exception" />
+        <el-progress :percentage="70" :stroke-width="26" :text-inside="true" />
         <el-progress
           :percentage="100"
           status="success"
           :stroke-width="24"
           :text-inside="true"
-        ></el-progress>
+        />
         <el-progress
           :percentage="80"
           status="warning"
           :stroke-width="22"
           :text-inside="true"
-        ></el-progress>
+        />
         <el-progress
           :percentage="50"
           status="exception"
           :stroke-width="20"
           :text-inside="true"
-        ></el-progress>
-        <el-progress :percentage="0" type="circle"></el-progress>
-        <el-progress :percentage="25" type="circle"></el-progress>
-        <el-progress
-          :percentage="100"
-          status="success"
-          type="circle"
-        ></el-progress>
-        <el-progress
-          :percentage="70"
-          status="warning"
-          type="circle"
-        ></el-progress>
-        <el-progress
-          :percentage="50"
-          status="exception"
-          type="circle"
-        ></el-progress>
+        />
+        <el-progress :percentage="0" type="circle" />
+        <el-progress :percentage="25" type="circle" />
+        <el-progress :percentage="100" status="success" type="circle" />
+        <el-progress :percentage="70" status="warning" type="circle" />
+        <el-progress :percentage="50" status="exception" type="circle" />
 
         <el-divider content-position="left">
           按钮
@@ -117,21 +101,21 @@
         <el-button round type="info">信息按钮</el-button>
         <el-button round type="warning">警告按钮</el-button>
         <el-button round type="danger">危险按钮</el-button>
-        <el-button circle icon="el-icon-search"></el-button>
-        <el-button circle icon="el-icon-edit" type="primary"></el-button>
-        <el-button circle icon="el-icon-check" type="success"></el-button>
-        <el-button circle icon="el-icon-message" type="info"></el-button>
-        <el-button circle icon="el-icon-star-off" type="warning"></el-button>
-        <el-button circle icon="el-icon-delete" type="danger"></el-button>
+        <el-button circle icon="el-icon-search" />
+        <el-button circle icon="el-icon-edit" type="primary" />
+        <el-button circle icon="el-icon-check" type="success" />
+        <el-button circle icon="el-icon-message" type="info" />
+        <el-button circle icon="el-icon-star-off" type="warning" />
+        <el-button circle icon="el-icon-delete" type="danger" />
         <el-button disabled>默认按钮</el-button>
         <el-button disabled type="primary">主要按钮</el-button>
         <el-button disabled type="success">成功按钮</el-button>
         <el-button disabled type="info">信息按钮</el-button>
         <el-button disabled type="warning">警告按钮</el-button>
         <el-button disabled type="danger">危险按钮</el-button>
-        <el-button icon="el-icon-edit" type="primary"></el-button>
-        <el-button icon="el-icon-share" type="primary"></el-button>
-        <el-button icon="el-icon-delete" type="primary"></el-button>
+        <el-button icon="el-icon-edit" type="primary" />
+        <el-button icon="el-icon-share" type="primary" />
+        <el-button icon="el-icon-delete" type="primary" />
         <el-button icon="el-icon-search" type="primary">搜索</el-button>
         <el-button type="primary">
           上传
@@ -173,7 +157,7 @@
             文档
           </a>
         </el-divider>
-        <el-avatar icon="el-icon-user-solid"></el-avatar>
+        <el-avatar icon="el-icon-user-solid" />
         <el-divider content-position="left">
           页头
           <a
@@ -183,7 +167,7 @@
             文档
           </a>
         </el-divider>
-        <el-page-header content="详情页面"></el-page-header>
+        <el-page-header content="详情页面" />
         <el-divider content-position="left">
           面包屑
           <a

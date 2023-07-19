@@ -5,16 +5,16 @@
         <el-alert show-icon>请务必仔细填写并核对</el-alert>
       </el-form-item>
       <el-form-item label="付款账户" prop="payAccount">
-        <el-input v-model="form.payAccount"></el-input>
+        <el-input v-model="form.payAccount" />
       </el-form-item>
       <el-form-item label="收款账户" prop="gatheringAccount">
-        <el-input v-model="form.gatheringAccount"></el-input>
+        <el-input v-model="form.gatheringAccount" />
       </el-form-item>
       <el-form-item label="收款人姓名" prop="gatheringName">
-        <el-input v-model="form.gatheringName"></el-input>
+        <el-input v-model="form.gatheringName" />
       </el-form-item>
       <el-form-item label="转账金额" prop="price">
-        <el-input v-model="form.price"></el-input>
+        <el-input v-model="form.price" />
       </el-form-item>
     </el-form>
     <div class="pay-button-group">

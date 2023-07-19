@@ -9,7 +9,7 @@
       <el-col :span="24">
         <el-form :inline="true" label-width="80px" @submit.native.prevent>
           <el-form-item label="图标名称">
-            <el-input v-model="queryForm.title"></el-input>
+            <el-input v-model="queryForm.title" />
           </el-form-item>
           <el-form-item label-width="0">
             <el-button native-type="submit" type="primary" @click="queryData">
@@ -41,7 +41,9 @@
             :icon-class="`https://fastly.jsdelivr.net/gh/chuzhixin/zx-colorful-icon@master/${item}.svg`"
           />
         </el-card>
-        <div class="icon-text">{{ item }}</div>
+        <div class="icon-text">
+          {{ item }}
+        </div>
       </el-col>
       <el-col :span="24">
         <el-pagination
@@ -53,7 +55,7 @@
           :total="total"
           @current-change="handleCurrentChange"
           @size-change="handleSizeChange"
-        ></el-pagination>
+        />
       </el-col>
     </el-row>
   </div>

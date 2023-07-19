@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-better",
-  "version": "2.4.0",
+  "version": "2.5.5",
   "author": "vue-admin-better",
   "participants": [],
   "homepage": "https://chu1204505056.gitee.io/vue-admin-better",
@@ -12,7 +12,7 @@
     "lint": "vue-cli-service lint --fix",
     "clear": "rimraf node_modules&&npm install  --registry=--registry=https://registry.npmmirror.com",
     "image-webpack-loader": "cnpm i image-webpack-loader -D",
-    "update": "ncu -u --reject prettier,layouts,sass-loader,sass,screenfull,eslint,chalk,vue,vue-template-compiler,vue-router,vuex,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,eslint-plugin-vue --registry=https://registry.npmmirror.com&&cnpm i",
+    "update": "ncu -u --reject eslint-plugin-prettier,@vue/eslint-config-prettier,prettier,layouts,sass-loader,sass,screenfull,eslint,chalk,vue,vue-template-compiler,vue-router,vuex,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,eslint-plugin-vue --registry=https://registry.npmmirror.com&&cnpm i",
     "push": "start ./push.sh"
   },
   "repository": {
@@ -58,13 +58,13 @@
     "@vue/cli-plugin-eslint": "^4.5.15",
     "@vue/cli-service": "^4.5.15",
     "@vue/composition-api": "^1.7.1",
-    "@vue/eslint-config-prettier": "^7.1.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
     "body-parser": "^1.20.2",
     "chalk": "^4.1.2",
     "chokidar": "^3.5.3",
     "eslint": "^7.32.0",
-    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-vue": "^9.1.1",
     "filemanager-webpack-plugin": "^8.0.0",
     "image-webpack-loader": "^8.1.0",
