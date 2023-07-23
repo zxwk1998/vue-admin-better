@@ -3,7 +3,6 @@ import Antd from 'ant-design-vue'
 import App from './App'
 import router from './router'
 import store from './store'
-import 'ant-design-vue/dist/antd.css'
 import '@/vab'
 /**
  * @author chuzhixin 1204505056@qq.com
