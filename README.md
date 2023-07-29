@@ -1,10 +1,7 @@
 <div>
-
 简体中文 | [English](./README.en.md)
-
 <div align="center"><img width="200" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/logo/vab.png"/>
 <h1> vue-admin-better</h1>
-
 <p>众志成城，攻坚克难，愿所有美好纷沓而来！</p>
 </div>
 
@@ -57,19 +54,19 @@
 - 请我们喝杯咖啡，打赏后联系 QQ 783963206 邀请您进入讨论群（由于用户数较多，如果您打赏后未通过好友请求，请联系商家），不管您请还是不请，您都可以享受到开源的代码，感谢您的支持和信任，群内提供
   vue-admin-better 基础版本、开发工具自动配置教程及项目开发文档。
 
-  <table>
-  <tr>
-  <td>
-  <img width="200px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/zfb_kf.jpg">
-  </td>
-  <td>
-  <img width="200px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-2.jpg">
-  </td>
-  <td>
-  <img width="200px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-3.jpg">
-  </td>
-  </tr>
-  </table>
+<table>
+<tr>
+<td>
+<img width="200px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/zfb_kf.jpg">
+</td>
+<td>
+<img width="200px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-2.jpg">
+</td>
+<td>
+<img width="200px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-3.jpg">
+</td>
+</tr>
+</table>
 
 ## 📦️ 桌面应用程序
 
@@ -91,7 +88,7 @@ npm run serve
 
 ```bash
 # 克隆项目
-git clone  https://github.com/chuzhixin/vue-admin-arco.git
+git clonehttps://github.com/chuzhixin/vue-admin-arco.git
 # 安装依赖
 npm i --registry=http://mirrors.cloud.tencent.com/npm/
 # 本地开发 启动项目
@@ -123,36 +120,36 @@ npm run serve
 
 - 如果您觉得 vue admin better 帮到了您 ，如果情况允许，您可以选择赞助以下项目
 
-  <a title="vue" href="https://opencollective.com/vuejs" target="_blank">
-  <img width="64px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/vue.png"/>
-  </a>
-  <a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
-  <img width="64px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/element-plus.png"/>
-  </a>
-  <a title="ant-design-vue" href="https://opencollective.com/ant-design-vue" target="_blank">
-  <img width="64px" src="https://images.opencollective.com/ant-design-vue/2ec179b/logo/256.png"/>
-  </a>
+<a title="vue" href="https://opencollective.com/vuejs" target="_blank">
+<img width="64px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/vue.png"/>
+</a>
+<a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
+<img width="64px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/element-plus.png"/>
+</a>
+<a title="ant-design-vue" href="https://opencollective.com/ant-design-vue" target="_blank">
+<img width="64px" src="https://images.opencollective.com/ant-design-vue/2ec179b/logo/256.png"/>
+</a>
 
 ## 👷 框架杰出贡献者
 
-  <a href="https://github.com/fwfmiao" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/29328241?s=50"/>
-  </a>
-  <a href="https://github.com/buuing" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/36689704?s=50"/>
-  </a>
-  <a href="https://github.com/hipi" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/22478003?s=50"/>
-  </a>
-  <a href="https://github.com/hdtopku" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/14859466?s=50"/>
-  </a>
-  <a href="https://github.com/shaonialife" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/16135960?s=50"/>
-  </a>
-  <a href="https://github.com/1511578084" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/24790218?s=50"/>
-  </a>
+<a href="https://github.com/fwfmiao" target="_blank">
+<img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/29328241?s=50"/>
+</a>
+<a href="https://github.com/buuing" target="_blank">
+<img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/36689704?s=50"/>
+</a>
+<a href="https://github.com/hipi" target="_blank">
+<img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/22478003?s=50"/>
+</a>
+<a href="https://github.com/hdtopku" target="_blank">
+<img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/14859466?s=50"/>
+</a>
+<a href="https://github.com/shaonialife" target="_blank">
+<img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/16135960?s=50"/>
+</a>
+<a href="https://github.com/1511578084" target="_blank">
+<img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/24790218?s=50"/>
+</a>
 
 ## 📌 优势及注意事项
 
@@ -197,61 +194,61 @@ npm run serve
 
 以下是截取的是 pro 版的效果图展示：
 
-  <table>
-  <tr>
-  <td>
-  <img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/2.png">
-  </td>
-  <td>
-  <img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/6.png">
-  </td>
-  </tr>
-  <tr>
-  <td>
-  <img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/8.png">
-  </td>
-  <td>
-  <img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/9.png">
-  </td>
-  </tr>
-  <tr>
-  <td>
-  <img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/3.png">
-  </td>
-  <td>
-  <img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/5.png">
-  </td>
-  </tr>
-  </table>
+<table>
+<tr>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/2.png">
+</td>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/6.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/8.png">
+</td>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/9.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/3.png">
+</td>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/5.png">
+</td>
+</tr>
+</table>
 
 以下是截取的是 shop 版的效果图展示：
 
-  <table>
-  <tr>
-  <td>
-  <img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/16.png">
-  </td>
-  <td>
-  <img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/17.png">
-  </td>
-  </tr>
-  <tr>
-  <td>
-  <img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/18.png">
-  </td>
-  <td>
-  <img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/19.png">
-  </td>
-  </tr>
-  <tr>
-  <td>
-  <img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/20.png">
-  </td>
-  <td>
-  <img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/21.png">
-  </td>
-  </tr>
-  </table>
+<table>
+<tr>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/16.png">
+</td>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/17.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/18.png">
+</td>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/19.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/20.png">
+</td>
+<td>
+<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/21.png">
+</td>
+</tr>
+</table>
 
 ## 📄 商用注意事项
 
