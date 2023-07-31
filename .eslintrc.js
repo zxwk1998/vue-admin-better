@@ -37,6 +37,14 @@ module.exports = {
         math: 'always',
       },
     ],
+    'vue/component-name-in-template-casing': [
+      'error',
+      'kebab-case',
+      {
+        registeredComponentsOnly: false,
+        ignores: [],
+      },
+    ],
     // 多字组件名称
     'vue/multi-word-component-names': 'off',
     // Vue组件排序

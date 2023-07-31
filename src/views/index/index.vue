@@ -575,18 +575,18 @@
         const res = await getNoticeList()
         this.noticeList = res.data
         /* getRepos({
+    token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+  }).then((res) => {
+    const per_page = Math.ceil(res.data.stargazers_count / 100);
+    alert(per_page);
+    getStargazers({
       token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
+      page: 1,
+      per_page: res.per_page,
     }).then((res) => {
-      const per_page = Math.ceil(res.data.stargazers_count / 100);
-      alert(per_page);
-      getStargazers({
-        token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
-        page: 1,
-        per_page: res.per_page,
-      }).then((res) => {
-        alert(JSON.stringify(res));
-      });
-    }); */
+      alert(JSON.stringify(res));
+    });
+  }); */
       },
     },
   }

@@ -57,7 +57,7 @@ $base-menu-item-height: 50px;
 //app-main的高度
 $base-app-main-height: calc(
   100vh - #{$base-nav-bar-height} - #{$base-tabs-bar-height} - #{$base-padding} -
-    #{$base-padding} - 55px - 55px
+  #{$base-padding} - 55px - 55px
 );
 //纵向布局时左侧导航未折叠时的宽度
 $base-left-menu-width: 256px;
@@ -69,7 +69,7 @@ $base-left-menu-width-min: 65px;
 $base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
 //默认动画
 $base-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), border 0s,
-  background 0s, color 0s, font-size 0s;
+background 0s, color 0s, font-size 0s;
 //默认动画长
 $base-transition-time: 0.3s;
 
