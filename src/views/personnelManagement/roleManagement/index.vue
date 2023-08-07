@@ -5,26 +5,16 @@
     </el-divider>
     <vab-query-form>
       <vab-query-form-left-panel :span="12">
-        <el-button icon="el-icon-plus" type="primary" @click="handleEdit">
-          添加
-        </el-button>
-        <el-button icon="el-icon-delete" type="danger" @click="handleDelete">
-          批量删除
-        </el-button>
+        <el-button icon="el-icon-plus" type="primary" @click="handleEdit">添加</el-button>
+        <el-button icon="el-icon-delete" type="danger" @click="handleDelete">批量删除</el-button>
       </vab-query-form-left-panel>
       <vab-query-form-right-panel :span="12">
         <el-form :inline="true" :model="queryForm" @submit.native.prevent>
           <el-form-item>
-            <el-input
-              v-model.trim="queryForm.permission"
-              clearable
-              placeholder="请输入查询条件"
-            />
+            <el-input v-model.trim="queryForm.permission" clearable placeholder="请输入查询条件" />
           </el-form-item>
           <el-form-item>
-            <el-button icon="el-icon-search" type="primary" @click="queryData">
-              查询
-            </el-button>
+            <el-button icon="el-icon-search" type="primary" @click="queryData">查询</el-button>
           </el-form-item>
         </el-form>
       </vab-query-form-right-panel>

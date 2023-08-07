@@ -36,11 +36,7 @@
         :on-success="handleSuccess"
       >
         <i slot="trigger" class="el-icon-plus"></i>
-        <el-dialog
-          append-to-body
-          title="查看大图"
-          :visible.sync="dialogVisible"
-        >
+        <el-dialog append-to-body title="查看大图" :visible.sync="dialogVisible">
           <div>
             <img alt="" :src="dialogImageUrl" width="100%" />
           </div>
@@ -52,13 +48,8 @@
       class="dialog-footer"
       style="position: relative; padding-right: 15px; text-align: right"
     >
-      <div
-        v-if="show"
-        style="position: absolute; top: 10px; left: 15px; color: #999"
-      >
-        正在上传中... 当前上传成功数:{{ imgSuccessNum }}张 当前上传失败数:{{
-          imgErrorNum
-        }}张
+      <div v-if="show" style="position: absolute; top: 10px; left: 15px; color: #999">
+        正在上传中... 当前上传成功数:{{ imgSuccessNum }}张 当前上传失败数:{{ imgErrorNum }}张
       </div>
       <el-button type="primary" @click="handleClose">关闭</el-button>
       <el-button
@@ -149,10 +140,7 @@
         this.imgSuccessNum = this.imgSuccessNum + 1
         if (fileList.length === this.imgNum) {
           setTimeout(() => {
-            this.$baseMessage(
-              `上传完成! 共上传${fileList.length}张图片`,
-              'success'
-            )
+            this.$baseMessage(`上传完成! 共上传${fileList.length}张图片`, 'success')
           }, 1000)
         }
 

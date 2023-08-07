@@ -16,9 +16,7 @@
       <el-col :lg="20" :md="16" :sm="24" :xl="20" :xs="24">
         <vab-query-form>
           <vab-query-form-top-panel :span="12">
-            <el-button icon="el-icon-plus" type="primary" @click="handleEdit">
-              添加
-            </el-button>
+            <el-button icon="el-icon-plus" type="primary" @click="handleEdit">添加</el-button>
           </vab-query-form-top-panel>
         </vab-query-form>
         <el-table
@@ -46,21 +44,9 @@
               </span>
             </template>
           </el-table-column>
-          <el-table-column
-            label="vue文件路径"
-            prop="component"
-            show-overflow-tooltip
-          />
-          <el-table-column
-            label="重定向"
-            prop="redirect"
-            show-overflow-tooltip
-          />
-          <el-table-column
-            label="标题"
-            prop="meta.title"
-            show-overflow-tooltip
-          />
+          <el-table-column label="vue文件路径" prop="component" show-overflow-tooltip />
+          <el-table-column label="重定向" prop="redirect" show-overflow-tooltip />
+          <el-table-column label="标题" prop="meta.title" show-overflow-tooltip />
           <el-table-column label="图标" show-overflow-tooltip>
             <template #default="{ row }">
               <span v-if="row.meta">

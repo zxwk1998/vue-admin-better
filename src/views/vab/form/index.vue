@@ -39,9 +39,7 @@
             <el-input v-model="ruleForm.desc" type="textarea" />
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" @click="submitForm('ruleForm')">
-              立即创建
-            </el-button>
+            <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
             <el-button @click="resetForm('ruleForm')">重置</el-button>
           </el-form-item>
         </el-form>
@@ -73,9 +71,7 @@
               trigger: 'blur',
             },
           ],
-          region: [
-            { required: true, message: '请选择活动区域', trigger: 'change' },
-          ],
+          region: [{ required: true, message: '请选择活动区域', trigger: 'change' }],
           type: [
             {
               type: 'array',
@@ -84,12 +80,8 @@
               trigger: 'change',
             },
           ],
-          resource: [
-            { required: true, message: '请选择活动资源', trigger: 'change' },
-          ],
-          desc: [
-            { required: true, message: '请填写活动形式', trigger: 'blur' },
-          ],
+          resource: [{ required: true, message: '请选择活动资源', trigger: 'change' }],
+          desc: [{ required: true, message: '请填写活动形式', trigger: 'blur' }],
         },
       }
     },

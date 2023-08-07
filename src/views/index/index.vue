@@ -3,13 +3,8 @@
     <el-row :gutter="20">
       <el-col :lg="24" :md="24" :sm="24" :xl="24" :xs="24">
         <el-alert v-if="noticeList[0]" :closable="noticeList[0].closable">
-          <div
-            style="display: flex; align-items: center; justify-content: center"
-          >
-            <a
-              href="https://github.com/chuzhixin/vue-admin-better"
-              target="_blank"
-            >
+          <div style="display: flex; align-items: center; justify-content: center">
+            <a href="https://github.com/chuzhixin/vue-admin-better" target="_blank">
               <img
                 src="https://img.shields.io/github/stars/chuzhixin/vue-admin-better?style=flat-square&label=Stars&logo=github"
                 style="margin-right: 10px"
@@ -60,10 +55,7 @@
       >
         <router-link target="_blank" :to="item.link">
           <el-card class="icon-panel" shadow="never">
-            <vab-icon
-              :icon="['fas', item.icon]"
-              :style="{ color: item.color }"
-            />
+            <vab-icon :icon="['fas', item.icon]" :style="{ color: item.color }" />
             <p>{{ item.title }}</p>
           </el-card>
         </router-link>
@@ -86,16 +78,10 @@
                 <el-button type="primary">QQ讨论群、基础版、文档</el-button>
               </a>
             </el-popover>
-            <a
-              href="https://github.com/chuzhixin/vue-admin-better"
-              target="_blank"
-            >
+            <a href="https://github.com/chuzhixin/vue-admin-better" target="_blank">
               <el-button type="warning">github下载源码点star</el-button>
             </a>
-            <a
-              href="https://gitee.com/chu1204505056/vue-admin-beautiful"
-              target="_blank"
-            >
+            <a href="https://gitee.com/chu1204505056/vue-admin-beautiful" target="_blank">
               <el-button type="warning">码云下载源码点star</el-button>
             </a>
             <a @click="handleChangeTheme">
@@ -239,14 +225,7 @@
 
         //访问量
         fwl: {
-          color: [
-            '#1890FF',
-            '#36CBCB',
-            '#4ECB73',
-            '#FBD437',
-            '#F2637B',
-            '#975FE5',
-          ],
+          color: ['#1890FF', '#36CBCB', '#4ECB73', '#FBD437', '#F2637B', '#975FE5'],
           backgroundColor: 'rgba(252,252,252,0)',
           grid: {
             top: '4%',
@@ -282,14 +261,7 @@
         },
         //授权数
         sqs: {
-          color: [
-            '#1890FF',
-            '#36CBCB',
-            '#4ECB73',
-            '#FBD437',
-            '#F2637B',
-            '#975FE5',
-          ],
+          color: ['#1890FF', '#36CBCB', '#4ECB73', '#FBD437', '#F2637B', '#975FE5'],
           backgroundColor: 'rgba(252,252,252,0)',
           grid: {
             top: '4%',
@@ -341,14 +313,7 @@
               textStyle: {
                 normal: {
                   color() {
-                    const arr = [
-                      '#5470c6',
-                      '#91cc75',
-                      '#fac858',
-                      '#ee6666',
-                      '#73c0de',
-                      '#975FE5',
-                    ]
+                    const arr = ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#975FE5']
                     let index = Math.floor(Math.random() * arr.length)
                     return arr[index]
                   },

@@ -144,12 +144,7 @@
         width: $width;
         height: $width;
         transform: translate(-50%, -50%);
-        animation: moveToTop
-          #{random(6) +
-          3}s
-          ease-in-out -#{random(5000) /
-          1000}s
-          infinite;
+        animation: moveToTop #{random(6) + 3}s ease-in-out -#{random(5000) / 1000}s infinite;
       }
     }
 

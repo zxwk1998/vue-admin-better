@@ -11,13 +11,7 @@
         <div style="color: transparent">占位符</div>
       </el-col>
       <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
-        <el-form
-          ref="form"
-          class="login-form"
-          label-position="left"
-          :model="form"
-          :rules="rules"
-        >
+        <el-form ref="form" class="login-form" label-position="left" :model="form" :rules="rules">
           <div class="title">hello !</div>
           <div class="title-tips">欢迎来到{{ title }}！</div>
           <el-form-item prop="username" style="margin-top: 40px">
@@ -45,23 +39,14 @@
               :type="passwordType"
               @keyup.enter.native="handleLogin"
             />
-            <span
-              v-if="passwordType === 'password'"
-              class="show-password"
-              @click="handlePassword"
-            >
+            <span v-if="passwordType === 'password'" class="show-password" @click="handlePassword">
               <vab-icon :icon="['fas', 'eye-slash']" />
             </span>
             <span v-else class="show-password" @click="handlePassword">
               <vab-icon :icon="['fas', 'eye']" />
             </span>
           </el-form-item>
-          <el-button
-            class="login-btn"
-            :loading="loading"
-            type="primary"
-            @click="handleLogin"
-          >
+          <el-button class="login-btn" :loading="loading" type="primary" @click="handleLogin">
             登录
           </el-button>
           <router-link to="/register">
@@ -166,9 +151,7 @@
               .dispatch('user/login', this.form)
               .then(() => {
                 const routerPath =
-                  this.redirect === '/404' || this.redirect === '/401'
-                    ? '/'
-                    : this.redirect
+                  this.redirect === '/404' || this.redirect === '/401' ? '/' : this.redirect
                 this.$router.push(routerPath).catch(() => {})
                 this.loading = false
               })
@@ -187,8 +170,7 @@
 <style lang="scss" scoped>
   .login-container {
     height: 100vh;
-    background: url('~@/assets/login_images/background.jpg') center center fixed
-      no-repeat;
+    background: url('~@/assets/login_images/background.jpg') center center fixed no-repeat;
     background-size: cover;
 
     .title {

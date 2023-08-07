@@ -4,13 +4,7 @@
       <vab-icon class="pay-success" :icon="['fas', 'check-circle']" />
       <p>支付成功</p>
     </div>
-    <el-form
-      ref="form"
-      class="pay-bottom"
-      label-width="120px"
-      :model="form"
-      :rules="rules"
-    >
+    <el-form ref="form" class="pay-bottom" label-width="120px" :model="form" :rules="rules">
       <el-form-item label="付款账户：">
         {{ infoData.payAccount }}
       </el-form-item>
@@ -47,9 +41,7 @@
           password: '123456',
         },
         rules: {
-          password: [
-            { required: true, message: '请输入支付密码', trigger: 'blur' },
-          ],
+          password: [{ required: true, message: '请输入支付密码', trigger: 'blur' }],
         },
         loading: false,
       }

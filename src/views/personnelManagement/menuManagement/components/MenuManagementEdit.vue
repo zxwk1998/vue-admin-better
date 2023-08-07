@@ -1,13 +1,6 @@
 <template>
-  <el-dialog
-    :title="title"
-    :visible.sync="dialogFormVisible"
-    width="500px"
-    @close="close"
-  >
-    <el-divider content-position="left">
-      这里就不具体写了，请自行完善
-    </el-divider>
+  <el-dialog :title="title" :visible.sync="dialogFormVisible" width="500px" @close="close">
+    <el-divider content-position="left">这里就不具体写了，请自行完善</el-divider>
     <el-form ref="form" label-width="80px" :model="form" :rules="rules">
       <el-form-item label="name" prop="name">
         <el-input v-model="form.name" autocomplete="off" />

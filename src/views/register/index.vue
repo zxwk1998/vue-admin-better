@@ -44,11 +44,7 @@
             </el-input>
           </el-form-item>
           <el-form-item prop="phoneCode" style="position: relative">
-            <el-input
-              v-model.trim="form.phoneCode"
-              placeholder="手机验证码"
-              type="text"
-            >
+            <el-input v-model.trim="form.phoneCode" placeholder="手机验证码" type="text">
               <vab-icon slot="prefix" :icon="['fas', 'envelope-open']" />
             </el-input>
             <el-button
@@ -71,11 +67,7 @@
             </el-input>
           </el-form-item>
           <el-form-item>
-            <el-button
-              class="register-btn"
-              type="primary"
-              @click.native.prevent="handleReister"
-            >
+            <el-button class="register-btn" type="primary" @click.native.prevent="handleReister">
               注册
             </el-button>
             <router-link to="/login">
@@ -144,9 +136,7 @@
             { required: true, trigger: 'blur', message: '请输入密码' },
             { validator: validatePassword, trigger: 'blur' },
           ],
-          phoneCode: [
-            { required: true, trigger: 'blur', message: '请输入手机验证码' },
-          ],
+          phoneCode: [{ required: true, trigger: 'blur', message: '请输入手机验证码' }],
         },
         loading: false,
         passwordType: 'password',
@@ -201,8 +191,7 @@
 <style lang="scss" scoped>
   .register-container {
     height: 100vh;
-    background: url('~@/assets/login_images/background.jpg') center center fixed
-      no-repeat;
+    background: url('~@/assets/login_images/background.jpg') center center fixed no-repeat;
     background-size: cover;
 
     .title {

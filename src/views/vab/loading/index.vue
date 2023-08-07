@@ -15,18 +15,10 @@
     <br />
     <br />
     <el-divider content-position="left">多彩loading</el-divider>
-    <el-button type="primary" @click="handleColorfullLoading(1)">
-      效果1
-    </el-button>
-    <el-button type="primary" @click="handleColorfullLoading(2)">
-      效果2
-    </el-button>
-    <el-button type="primary" @click="handleColorfullLoading(3)">
-      效果3
-    </el-button>
-    <el-button type="primary" @click="handleColorfullLoading(4)">
-      效果4
-    </el-button>
+    <el-button type="primary" @click="handleColorfullLoading(1)">效果1</el-button>
+    <el-button type="primary" @click="handleColorfullLoading(2)">效果2</el-button>
+    <el-button type="primary" @click="handleColorfullLoading(3)">效果3</el-button>
+    <el-button type="primary" @click="handleColorfullLoading(4)">效果4</el-button>
   </div>
 </template>
 

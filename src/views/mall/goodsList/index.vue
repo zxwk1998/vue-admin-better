@@ -2,12 +2,7 @@
   <div class="goods-list-container">
     <vab-query-form>
       <vab-query-form-right-panel :span="24">
-        <el-form
-          ref="form"
-          :inline="true"
-          :model="queryForm"
-          @submit.native.prevent
-        >
+        <el-form ref="form" :inline="true" :model="queryForm" @submit.native.prevent>
           <el-form-item>
             <el-input v-model="queryForm.title" placeholder="商品名称" />
           </el-form-item>
@@ -25,15 +20,7 @@
       </vab-query-form-right-panel>
     </vab-query-form>
     <el-row :gutter="20">
-      <el-col
-        v-for="(item, index) in list"
-        :key="index"
-        :lg="8"
-        :md="8"
-        :sm="8"
-        :xl="6"
-        :xs="24"
-      >
+      <el-col v-for="(item, index) in list" :key="index" :lg="8" :md="8" :sm="8" :xl="6" :xs="24">
         <el-card :body-style="{ padding: '0px' }" shadow="hover">
           <div class="goods-list-card-body">
             <div class="goods-list-tag-group">

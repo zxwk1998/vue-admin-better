@@ -28,10 +28,7 @@ const mutations = {
 const actions = {
   async setRoutes({ commit }, permissions) {
     //开源版只过滤动态路由permissions，admin不再默认拥有全部权限
-    const finallyAsyncRoutes = await filterAsyncRoutes(
-      [...asyncRoutes],
-      permissions
-    )
+    const finallyAsyncRoutes = await filterAsyncRoutes([...asyncRoutes], permissions)
     commit('setRoutes', finallyAsyncRoutes)
     return finallyAsyncRoutes
   },

@@ -47,7 +47,7 @@
     "sortablejs": "^1.15.0",
     "vab-icon": "file:vab-icon",
     "vue": "~2.7.14",
-    "vue-echarts": "6.6.0",
+    "vue-echarts": "6.6.1",
     "vue-router": "^3.6.5",
     "vue-template-compiler": "~2.7.14",
     "vuex": "^3.6.2",

@@ -177,8 +177,7 @@ export const asyncRoutes = [
                 path: 'menu1-1-1',
                 name: 'Menu1-1-1',
                 meta: { title: '嵌套路由 1-1-1' },
-                component: () =>
-                  import('@/views/vab/nested/menu1/menu1-1/menu1-1-1/index'),
+                component: () => import('@/views/vab/nested/menu1/menu1-1/menu1-1-1/index'),
               },
             ],
           },
@@ -249,22 +248,19 @@ export const asyncRoutes = [
       {
         path: 'userManagement',
         name: 'UserManagement',
-        component: () =>
-          import('@/views/personnelManagement/userManagement/index'),
+        component: () => import('@/views/personnelManagement/userManagement/index'),
         meta: { title: '用户管理' },
       },
       {
         path: 'roleManagement',
         name: 'RoleManagement',
-        component: () =>
-          import('@/views/personnelManagement/roleManagement/index'),
+        component: () => import('@/views/personnelManagement/roleManagement/index'),
         meta: { title: '角色管理' },
       },
       {
         path: 'menuManagement',
         name: 'MenuManagement',
-        component: () =>
-          import('@/views/personnelManagement/menuManagement/index'),
+        component: () => import('@/views/personnelManagement/menuManagement/index'),
         meta: { title: '菜单管理', badge: 'New' },
       },
     ],

@@ -69,8 +69,7 @@
 
       @keyframes fall-#{$i} {
         #{percentage($random-yoyo-time)} {
-          transform: translate($random-x-end, $random-yoyo-y)
-            scale($random-scale);
+          transform: translate($random-x-end, $random-yoyo-y) scale($random-scale);
         }
 
         to {

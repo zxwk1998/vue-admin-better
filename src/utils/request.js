@@ -63,8 +63,7 @@ instance.interceptors.request.use(
       )
     if (
       config.data &&
-      config.headers['Content-Type'] ===
-        'application/x-www-form-urlencoded;charset=UTF-8'
+      config.headers['Content-Type'] === 'application/x-www-form-urlencoded;charset=UTF-8'
     )
       config.data = qs.stringify(config.data)
     if (debounce.some((item) => config.url.includes(item)))
@@ -83,9 +82,7 @@ instance.interceptors.response.use(
     const { data, config } = response
     const { code, msg } = data
     // 操作正常Code数组
-    const codeVerificationArray = isArray(successCode)
-      ? [...successCode]
-      : [...[successCode]]
+    const codeVerificationArray = isArray(successCode) ? [...successCode] : [...[successCode]]
     // 是否操作正常
     if (codeVerificationArray.includes(code)) {
       return data

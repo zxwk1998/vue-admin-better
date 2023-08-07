@@ -1,10 +1,5 @@
 <template>
-  <el-dialog
-    :title="title"
-    :visible.sync="dialogFormVisible"
-    width="500px"
-    @close="close"
-  >
+  <el-dialog :title="title" :visible.sync="dialogFormVisible" width="500px" @close="close">
     <el-form ref="form" label-width="80px" :model="form" :rules="rules">
       <el-form-item label="标题" prop="title">
         <el-input v-model.trim="form.title" autocomplete="off" />

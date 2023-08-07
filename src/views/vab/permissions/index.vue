@@ -14,24 +14,16 @@
       </el-form-item>
 
       <el-form-item>
-        <el-button type="primary" @click="handleChangePermission">
-          切换权限
-        </el-button>
+        <el-button type="primary" @click="handleChangePermission">切换权限</el-button>
       </el-form-item>
       <el-form-item label="当前账号拥有的权限">
         {{ JSON.stringify(permissions) }}
       </el-form-item>
     </el-form>
     <el-divider content-position="left">按钮级权限演示</el-divider>
-    <el-button v-permissions="['admin']" type="primary">
-      我是拥有["admin"]权限的按钮
-    </el-button>
-    <el-button v-permissions="['editor']" type="primary">
-      我是拥有["editor"]权限的按钮
-    </el-button>
-    <el-button v-permissions="['test']" type="primary">
-      我是拥有["test"]权限的按钮
-    </el-button>
+    <el-button v-permissions="['admin']" type="primary">我是拥有["admin"]权限的按钮</el-button>
+    <el-button v-permissions="['editor']" type="primary">我是拥有["editor"]权限的按钮</el-button>
+    <el-button v-permissions="['test']" type="primary">我是拥有["test"]权限的按钮</el-button>
     <br />
     <br />
     <el-divider content-position="left">
@@ -53,21 +45,9 @@
         >
           <el-table-column label="name" prop="name" show-overflow-tooltip />
           <el-table-column label="path" prop="path" show-overflow-tooltip />
-          <el-table-column
-            label="component"
-            prop="component"
-            show-overflow-tooltip
-          />
-          <el-table-column
-            label="redirect"
-            prop="redirect"
-            show-overflow-tooltip
-          />
-          <el-table-column
-            label="标题"
-            prop="meta.title"
-            show-overflow-tooltip
-          />
+          <el-table-column label="component" prop="component" show-overflow-tooltip />
+          <el-table-column label="redirect" prop="redirect" show-overflow-tooltip />
+          <el-table-column label="标题" prop="meta.title" show-overflow-tooltip />
           <el-table-column label="图标" show-overflow-tooltip>
             <template #default="{ row }">
               <span v-if="row.meta">

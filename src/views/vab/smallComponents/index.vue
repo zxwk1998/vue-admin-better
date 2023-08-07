@@ -16,11 +16,7 @@
         <el-card shadow="hover">
           <div slot="header">
             <span>profile</span>
-            <el-button
-              style="float: right; padding: 3px 0"
-              type="text"
-              @click="handleProfile"
-            >
+            <el-button style="float: right; padding: 3px 0" type="text" @click="handleProfile">
               重载
             </el-button>
           </div>

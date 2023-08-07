@@ -184,9 +184,7 @@ module.exports = {
         additionalData(content, loaderContext) {
           const { resourcePath, rootContext } = loaderContext
           const relativePath = path.relative(rootContext, resourcePath)
-          if (
-            relativePath.replace(/\\/g, '/') !== 'src/styles/variables.scss'
-          ) {
+          if (relativePath.replace(/\\/g, '/') !== 'src/styles/variables.scss') {
             return `@import "~@/styles/variables.scss";${content}`
           }
           return content

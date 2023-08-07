@@ -2,9 +2,7 @@
   <div class="webSocket-container">
     <el-row :gutter="20">
       <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
-        <el-alert :closable="false" type="success">
-          webSocket连接{{ status }}！
-        </el-alert>
+        <el-alert :closable="false" type="success">webSocket连接{{ status }}！</el-alert>
         <br />
         <el-form ref="form" label-width="100px" :model="form" :rules="rules">
           <el-form-item label="地址">

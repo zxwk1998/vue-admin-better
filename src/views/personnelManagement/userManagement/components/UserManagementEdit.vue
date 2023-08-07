@@ -1,20 +1,11 @@
 <template>
-  <el-dialog
-    :title="title"
-    :visible.sync="dialogFormVisible"
-    width="500px"
-    @close="close"
-  >
+  <el-dialog :title="title" :visible.sync="dialogFormVisible" width="500px" @close="close">
     <el-form ref="form" label-width="80px" :model="form" :rules="rules">
       <el-form-item label="用户名" prop="username">
         <el-input v-model.trim="form.username" autocomplete="off" />
       </el-form-item>
       <el-form-item label="密码" prop="password">
-        <el-input
-          v-model.trim="form.password"
-          autocomplete="off"
-          type="password"
-        />
+        <el-input v-model.trim="form.password" autocomplete="off" type="password" />
       </el-form-item>
       <el-form-item label="邮箱" prop="email">
         <el-input v-model.trim="form.email" autocomplete="off" />
@@ -47,16 +38,10 @@
           permissions: [],
         },
         rules: {
-          username: [
-            { required: true, trigger: 'blur', message: '请输入用户名' },
-          ],
-          password: [
-            { required: true, trigger: 'blur', message: '请输入密码' },
-          ],
+          username: [{ required: true, trigger: 'blur', message: '请输入用户名' }],
+          password: [{ required: true, trigger: 'blur', message: '请输入密码' }],
           email: [{ required: true, trigger: 'blur', message: '请输入邮箱' }],
-          permissions: [
-            { required: true, trigger: 'blur', message: '请选择权限' },
-          ],
+          permissions: [{ required: true, trigger: 'blur', message: '请选择权限' }],
         },
         title: '',
         dialogFormVisible: false,

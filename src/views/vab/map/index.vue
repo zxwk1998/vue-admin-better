@@ -19,9 +19,7 @@
       this.$nextTick(() => {
         const map = this.$baseMap()
         axios
-          .get(
-            'https://fastly.jsdelivr.net/npm/mapv@2.0.12/examples/data/od-xierqi.txt'
-          )
+          .get('https://fastly.jsdelivr.net/npm/mapv@2.0.12/examples/data/od-xierqi.txt')
           .then((rs) => {
             let data = []
             let timeData = []
@@ -37,9 +35,7 @@
               for (let j = 0; j < item.length; j += 2) {
                 let x = (Number(item[j]) / 20037508.34) * 180
                 let y = (Number(item[j + 1]) / 20037508.34) * 180
-                y =
-                  (180 / Math.PI) *
-                  (2 * Math.atan(Math.exp((y * Math.PI) / 180)) - Math.PI / 2)
+                y = (180 / Math.PI) * (2 * Math.atan(Math.exp((y * Math.PI) / 180)) - Math.PI / 2)
                 if (x == 0 || y == NaN) {
                   continue
                 }
@@ -72,11 +68,7 @@
               draw: 'simple',
             }
 
-            let mapvLayer = new mapv.MaptalksLayer(
-              'mapv1',
-              dataSet,
-              options
-            ).addTo(map)
+            let mapvLayer = new mapv.MaptalksLayer('mapv1', dataSet, options).addTo(map)
 
             let dataSet2 = new mapv.DataSet(timeData)
 
@@ -95,11 +87,7 @@
               draw: 'simple',
             }
 
-            let mapvLayer2 = new mapv.MaptalksLayer(
-              'mapv2',
-              dataSet2,
-              options2
-            ).addTo(map)
+            let mapvLayer2 = new mapv.MaptalksLayer('mapv2', dataSet2, options2).addTo(map)
           })
       })
     },

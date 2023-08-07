@@ -15,5 +15,4 @@ if (!!window.ActiveXObject || 'ActiveXObject' in window) {
     dangerouslyUseHTMLString: true,
   })
 }
-if (!dependencies['vab-icon'] || !dependencies['layouts'])
-  document.body.innerHTML = ''
+if (!dependencies['vab-icon'] || !dependencies['layouts']) document.body.innerHTML = ''

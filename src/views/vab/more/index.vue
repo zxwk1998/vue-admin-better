@@ -17,10 +17,7 @@
               </li>
               <li>
                 开源地址
-                <a
-                  href="https://github.com/chuzhixin/vue-admin-beautiful"
-                  target="_blank"
-                >
+                <a href="https://github.com/chuzhixin/vue-admin-beautiful" target="_blank">
                   如果有幸帮到了你，麻烦给个star
                 </a>
               </li>

@@ -1,10 +1,5 @@
 <template>
-  <el-dialog
-    :title="title"
-    :visible.sync="dialogFormVisible"
-    width="500px"
-    @close="close"
-  >
+  <el-dialog :title="title" :visible.sync="dialogFormVisible" width="500px" @close="close">
     <el-form ref="form" label-width="80px" :model="form" :rules="rules">
       <el-form-item label="权限码" prop="permission">
         <el-input v-model="form.permission" autocomplete="off" />
@@ -28,9 +23,7 @@
           id: '',
         },
         rules: {
-          permission: [
-            { required: true, trigger: 'blur', message: '请输入权限码' },
-          ],
+          permission: [{ required: true, trigger: 'blur', message: '请输入权限码' }],
         },
         title: '',
         dialogFormVisible: false,

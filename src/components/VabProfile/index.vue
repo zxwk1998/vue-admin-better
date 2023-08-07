@@ -88,8 +88,7 @@
         height: 2px;
         background: var(--card-bg-color);
         transform: translateX(-100%);
-        animation: slide-in-horizontal 0.8s cubic-bezier(0.645, 0.045, 0.355, 1)
-          forwards;
+        animation: slide-in-horizontal 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
       }
 
       .border-right {
@@ -99,8 +98,7 @@
         height: 100%;
         background: var(--card-bg-color);
         transform: translateY(100%);
-        animation: slide-in-vertical 0.8s cubic-bezier(0.645, 0.045, 0.355, 1)
-          forwards;
+        animation: slide-in-vertical 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
       }
 
       .border-bottom {
@@ -110,8 +108,7 @@
         height: 2px;
         background: var(--card-bg-color);
         transform: translateX(100%);
-        animation: slide-in-horizontal-reverse 0.8s
-          cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+        animation: slide-in-horizontal-reverse 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
       }
 
       .border-left {
@@ -121,8 +118,7 @@
         height: 100%;
         background: var(--card-bg-color);
         transform: translateY(-100%);
-        animation: slide-in-vertical-reverse 0.8s
-          cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+        animation: slide-in-vertical-reverse 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
       }
     }
 
