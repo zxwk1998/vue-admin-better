@@ -37,6 +37,7 @@
     "echarts": "5.4.3",
     "element-ui": "^2.15.13",
     "jsencrypt": "^3.3.2",
+    "layouts": "file:layouts",
     "lodash": "^4.17.21",
     "maptalks": "^0.49.5",
     "mapv": "^2.0.62",
@@ -50,8 +51,7 @@
     "vue-echarts": "6.6.1",
     "vue-router": "^3.6.5",
     "vue-template-compiler": "~2.7.14",
-    "vuex": "^3.6.2",
-    "layouts": "file:layouts"
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.15",

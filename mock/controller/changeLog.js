@@ -29,8 +29,7 @@ const data = [
     timestamp: '2020-04-18',
   },
   {
-    content:
-      '删除babel-polyfill 提高打包速度 减少压缩体积（放弃ie是这个项目做出的最伟大的决定）',
+    content: '删除babel-polyfill 提高打包速度 减少压缩体积（放弃ie是这个项目做出的最伟大的决定）',
     timestamp: '2020-04-18',
   },
   {
@@ -150,8 +149,7 @@ const data = [
     timestamp: '2020-07-15',
   },
   {
-    content:
-      '记录这一天vue-admin-beautiful在插件市场、百度已花费超过1万元广告费用，希望一切都值得',
+    content: '记录这一天vue-admin-beautiful在插件市场、百度已花费超过1万元广告费用，希望一切都值得',
     timestamp: '2020-07-18',
   },
   {

@@ -54,8 +54,7 @@ module.exports = [
         return !(title && item.title.indexOf(title) < 0)
       })
       const pageList = mockList.filter(
-        (item, index) =>
-          index < pageSize * pageNo && index >= pageSize * (pageNo - 1)
+        (item, index) => index < pageSize * pageNo && index >= pageSize * (pageNo - 1)
       )
       return {
         code: 200,
