@@ -18,13 +18,7 @@
             <span class="svg-container svg-container-admin">
               <vab-icon :icon="['fas', 'user']" />
             </span>
-            <el-input
-              v-model.trim="form.username"
-              v-focus
-              placeholder="请输入用户名"
-              tabindex="1"
-              type="text"
-            />
+            <el-input v-model.trim="form.username" v-focus placeholder="请输入用户名" tabindex="1" type="text" />
           </el-form-item>
           <el-form-item prop="password">
             <span class="svg-container">
@@ -46,9 +40,7 @@
               <vab-icon :icon="['fas', 'eye']" />
             </span>
           </el-form-item>
-          <el-button class="login-btn" :loading="loading" type="primary" @click="handleLogin">
-            登录
-          </el-button>
+          <el-button class="login-btn" :loading="loading" type="primary" @click="handleLogin">登录</el-button>
           <router-link to="/register">
             <div style="margin-top: 20px">注册</div>
           </router-link>
@@ -136,9 +128,7 @@
     },
     methods: {
       handlePassword() {
-        this.passwordType === 'password'
-          ? (this.passwordType = '')
-          : (this.passwordType = 'password')
+        this.passwordType === 'password' ? (this.passwordType = '') : (this.passwordType = 'password')
         this.$nextTick(() => {
           this.$refs.password.focus()
         })
@@ -150,8 +140,7 @@
             this.$store
               .dispatch('user/login', this.form)
               .then(() => {
-                const routerPath =
-                  this.redirect === '/404' || this.redirect === '/401' ? '/' : this.redirect
+                const routerPath = this.redirect === '/404' || this.redirect === '/401' ? '/' : this.redirect
                 this.$router.push(routerPath).catch(() => {})
                 this.loading = false
               })

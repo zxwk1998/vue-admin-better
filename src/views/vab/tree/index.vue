@@ -27,23 +27,13 @@
               {{ node.label }}
             </span>
             <span class="vab-tree-options">
-              <a
-                v-if="node.data.rank !== 4"
-                class="vab-tree-btn"
-                title="添加"
-                @click="() => append(node, data, 0)"
-              >
+              <a v-if="node.data.rank !== 4" class="vab-tree-btn" title="添加" @click="() => append(node, data, 0)">
                 <i class="el-icon-plus"></i>
               </a>
               <a class="vab-tree-btn" title="编辑" @click="() => edit(node, data, 1)">
                 <i class="el-icon-edit"></i>
               </a>
-              <a
-                v-if="node.data.rank !== 1"
-                class="vab-tree-btn"
-                title="刪除"
-                @click="() => remove(node, data)"
-              >
+              <a v-if="node.data.rank !== 1" class="vab-tree-btn" title="刪除" @click="() => remove(node, data)">
                 <i class="el-icon-delete"></i>
               </a>
             </span>

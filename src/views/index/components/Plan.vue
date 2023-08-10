@@ -3,9 +3,7 @@
     <template #header>
       <vab-icon icon="send-plane-2-line" />
       <!-- 计划 -->
-      <el-tag class="card-header-tag" type="success">
-        祝用框架的小伙伴都能住上别墅，开上保时捷
-      </el-tag>
+      <el-tag class="card-header-tag" type="success">祝用框架的小伙伴都能住上别墅，开上保时捷</el-tag>
     </template>
     <el-table :data="tableData" height="283px" row-key="title">
       <el-table-column align="center" label="拖拽" width="50px">

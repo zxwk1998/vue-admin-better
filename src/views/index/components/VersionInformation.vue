@@ -27,14 +27,10 @@
           <td>授权渠道</td>
           <td colspan="3">
             <a href="https://vue-admin-beautiful.com/authorization" target="_blank">
-              <el-button style="margin-left: 10px" type="primary">
-                PRO付费版本 购买源码 ￥699
-              </el-button>
+              <el-button style="margin-left: 10px" type="primary">PRO付费版本 购买源码 ￥699</el-button>
             </a>
             <a href="https://vue-admin-beautiful.com/authorization" target="_blank">
-              <el-button style="margin-left: 10px" type="primary">
-                Plus付费版本 购买源码 ￥799
-              </el-button>
+              <el-button style="margin-left: 10px" type="primary">Plus付费版本 购买源码 ￥799</el-button>
             </a>
             <a href="https://github.com/chuzhixin/vue-admin-beautiful/" target="_blank">
               <el-button style="margin-left: 10px" type="warning">开源免费版</el-button>

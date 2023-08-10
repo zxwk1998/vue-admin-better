@@ -85,8 +85,7 @@
         },
         defaultSelectedKeys: [], //初始选中值数组
         currentNodeKey: this.selectedKey,
-        selectValue:
-          this.selectType == 'multiple' ? this.selectedValue.split(',') : this.selectedValue, //下拉框选中值label
+        selectValue: this.selectType == 'multiple' ? this.selectedValue.split(',') : this.selectedValue, //下拉框选中值label
         selectKey: this.selectType == 'multiple' ? this.selectedKey.split(',') : this.selectedKey, //下拉框选中值value
       }
     },

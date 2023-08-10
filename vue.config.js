@@ -75,11 +75,7 @@ module.exports = {
   chainWebpack(config) {
     config.plugins.delete('preload')
     config.plugins.delete('prefetch')
-    config.module
-      .rule('svg')
-      .exclude.add(resolve('src/remixIcon'))
-      .add(resolve('src/colorfulIcon'))
-      .end()
+    config.module.rule('svg').exclude.add(resolve('src/remixIcon')).add(resolve('src/colorfulIcon')).end()
 
     config.module
       .rule('remixIcon')

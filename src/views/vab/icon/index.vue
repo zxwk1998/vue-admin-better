@@ -15,20 +15,8 @@
         </el-form>
       </el-col>
 
-      <el-col
-        v-for="(item, index) in queryIcon"
-        :key="index"
-        :lg="2"
-        :md="3"
-        :sm="8"
-        :xl="2"
-        :xs="6"
-      >
-        <el-card
-          shadow="hover"
-          style="cursor: pointer"
-          @click.native="handleCopyIcon(index, $event)"
-        >
+      <el-col v-for="(item, index) in queryIcon" :key="index" :lg="2" :md="3" :sm="8" :xl="2" :xs="6">
+        <el-card shadow="hover" style="cursor: pointer" @click.native="handleCopyIcon(index, $event)">
           <vab-icon :icon="['fas', item]" />
         </el-card>
         <div class="icon-text">

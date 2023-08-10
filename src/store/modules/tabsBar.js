@@ -24,9 +24,7 @@ const mutations = {
     })
   },
   delOthersVisitedRoute(state, route) {
-    state.visitedRoutes = state.visitedRoutes.filter(
-      (item) => item.meta.affix || item.path === route.path
-    )
+    state.visitedRoutes = state.visitedRoutes.filter((item) => item.meta.affix || item.path === route.path)
   },
   delLeftVisitedRoute(state, route) {
     let index = state.visitedRoutes.length

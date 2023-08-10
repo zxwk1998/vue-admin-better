@@ -17,12 +17,7 @@
       </vab-query-form-right-panel>
     </vab-query-form>
 
-    <el-table
-      v-loading="listLoading"
-      :data="list"
-      :element-loading-text="elementLoadingText"
-      @selection-change="setSelectRows"
-    >
+    <el-table v-loading="listLoading" :data="list" :element-loading-text="elementLoadingText" @selection-change="setSelectRows">
       <el-table-column show-overflow-tooltip type="selection" />
       <el-table-column label="id" prop="id" show-overflow-tooltip />
       <el-table-column label="用户名" prop="username" show-overflow-tooltip />

@@ -44,15 +44,7 @@
         </el-card>
       </el-col>
 
-      <el-col
-        v-for="(item, index) in iconList"
-        :key="index"
-        :lg="3"
-        :md="3"
-        :sm="6"
-        :xl="3"
-        :xs="12"
-      >
+      <el-col v-for="(item, index) in iconList" :key="index" :lg="3" :md="3" :sm="6" :xl="3" :xs="12">
         <router-link target="_blank" :to="item.link">
           <el-card class="icon-panel" shadow="never">
             <vab-icon :icon="['fas', item.icon]" :style="{ color: item.color }" />
@@ -137,12 +129,7 @@
             <h1 style="font-size: 30px">vue-admin-better</h1>
           </div>
           <div v-for="(item, index) in noticeList" :key="index">
-            <el-alert
-              v-if="index !== 0"
-              :closable="item.closable"
-              :title="item.title"
-              :type="item.type"
-            />
+            <el-alert v-if="index !== 0" :closable="item.closable" :title="item.title" :type="item.type" />
             <br />
           </div>
           <el-alert :closable="false" :title="userAgent" type="info" />

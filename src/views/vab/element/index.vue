@@ -2,15 +2,9 @@
   <div class="element-container">
     <el-row :gutter="20">
       <el-col :lg="18" :md="18" :sm="24" :xl="16" :xs="24">
-        <el-button type="primary" @click="dialogVisible = !dialogVisible">
-          element全部文档点这里
-        </el-button>
+        <el-button type="primary" @click="dialogVisible = !dialogVisible">element全部文档点这里</el-button>
         <el-dialog :fullscreen="true" title="element文档" :visible.sync="dialogVisible">
-          <iframe
-            class="element-iframe"
-            frameborder="0"
-            src="https://element.eleme.cn/#/zh-CN/component/installation"
-          ></iframe>
+          <iframe class="element-iframe" frameborder="0" src="https://element.eleme.cn/#/zh-CN/component/installation"></iframe>
         </el-dialog>
         <el-divider content-position="left">
           Tag 标签

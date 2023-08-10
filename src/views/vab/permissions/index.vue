@@ -1,8 +1,6 @@
 <template>
   <div class="permissions-container">
-    <el-divider content-position="left">
-      intelligence模式,前端根据permissions拦截路由(演示环境,默认使用此方案)
-    </el-divider>
+    <el-divider content-position="left">intelligence模式,前端根据permissions拦截路由(演示环境,默认使用此方案)</el-divider>
 
     <el-form ref="form" :inline="true" :model="form">
       <el-form-item label="切换账号">
@@ -26,9 +24,7 @@
     <el-button v-permissions="['test']" type="primary">我是拥有["test"]权限的按钮</el-button>
     <br />
     <br />
-    <el-divider content-position="left">
-      all模式,路由以及view文件引入全部交给后端(权限复杂,且随时变更,建议使用此方案)
-    </el-divider>
+    <el-divider content-position="left">all模式,路由以及view文件引入全部交给后端(权限复杂,且随时变更,建议使用此方案)</el-divider>
     <p>
       settings.js配置authentication为all即可完全交由后端控制,mock中有后端接口示例,权限繁琐,有几十种权限的项目直接用这种,
       由于演示环境是mock数据模拟,可能无法展现此功能的配置,只做如下展示,便于您的理解

@@ -5,9 +5,7 @@
         <el-card>
           <div slot="header">
             开源版本
-            <el-button style="float: right; padding: 3px 0" type="text">
-              永久免费 个人/商业使用
-            </el-button>
+            <el-button style="float: right; padding: 3px 0" type="text">永久免费 个人/商业使用</el-button>
           </div>
           <div>
             <ul>
@@ -17,9 +15,7 @@
               </li>
               <li>
                 开源地址
-                <a href="https://github.com/chuzhixin/vue-admin-beautiful" target="_blank">
-                  如果有幸帮到了你，麻烦给个star
-                </a>
+                <a href="https://github.com/chuzhixin/vue-admin-beautiful" target="_blank">如果有幸帮到了你，麻烦给个star</a>
               </li>
               <li>提供讨论群专属文档，QQ群 972435319、1139183756</li>
             </ul>
@@ -30,9 +26,7 @@
         <el-card>
           <div slot="header">
             VIP群
-            <el-button style="float: right; padding: 3px 0" type="text">
-              ￥100（2021年1月起不再提供此服务）
-            </el-button>
+            <el-button style="float: right; padding: 3px 0" type="text">￥100（2021年1月起不再提供此服务）</el-button>
           </div>
           <div>
             <ul>

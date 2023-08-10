@@ -15,14 +15,7 @@
             <el-input v-model="queryForm.title" placeholder="标题" />
           </el-form-item>
           <el-form-item>
-            <el-button
-              icon="el-icon-search"
-              native-type="submit"
-              type="primary"
-              @click="handleQuery"
-            >
-              查询
-            </el-button>
+            <el-button icon="el-icon-search" native-type="submit" type="primary" @click="handleQuery">查询</el-button>
           </el-form-item>
         </el-form>
       </vab-query-form-right-panel>

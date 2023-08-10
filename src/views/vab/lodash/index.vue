@@ -3,9 +3,7 @@
     <el-row :gutter="20">
       <el-col :span="24">
         <el-card shadow="hover">
-          <el-link href="https://www.lodashjs.com/" target="_blank" type="primary">
-            lodashjs官网
-          </el-link>
+          <el-link href="https://www.lodashjs.com/" target="_blank" type="primary">lodashjs官网</el-link>
         </el-card>
       </el-col>
 

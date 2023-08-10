@@ -12,13 +12,7 @@
         <div style="color: transparent">占位符</div>
       </el-col>
       <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
-        <el-form
-          ref="registerForm"
-          class="register-form"
-          :model="form"
-          :rules="registerRules"
-          size="mini"
-        >
+        <el-form ref="registerForm" class="register-form" :model="form" :rules="registerRules" size="mini">
           <el-form-item prop="username">
             <el-input
               v-model.trim="form.username"
@@ -47,29 +41,17 @@
             <el-input v-model.trim="form.phoneCode" placeholder="手机验证码" type="text">
               <vab-icon slot="prefix" :icon="['fas', 'envelope-open']" />
             </el-input>
-            <el-button
-              class="show-pwd phone-code"
-              :disabled="isGetphone"
-              type="primary"
-              @click="getPhoneCode"
-            >
+            <el-button class="show-pwd phone-code" :disabled="isGetphone" type="primary" @click="getPhoneCode">
               {{ phoneCode }}
             </el-button>
           </el-form-item>
           <el-form-item prop="password">
-            <el-input
-              v-model.trim="form.password"
-              autocomplete="new-password"
-              placeholder="设置密码"
-              type="password"
-            >
+            <el-input v-model.trim="form.password" autocomplete="new-password" placeholder="设置密码" type="password">
               <vab-icon slot="prefix" :icon="['fas', 'unlock']" />
             </el-input>
           </el-form-item>
           <el-form-item>
-            <el-button class="register-btn" type="primary" @click.native.prevent="handleReister">
-              注册
-            </el-button>
+            <el-button class="register-btn" type="primary" @click.native.prevent="handleReister">注册</el-button>
             <router-link to="/login">
               <div style="margin-top: 20px">登录</div>
             </router-link>

@@ -7,13 +7,7 @@ import store from '@/store'
 import VabProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import getPageTitle from '@/utils/pageTitle'
-import {
-  authentication,
-  loginInterception,
-  progressBar,
-  recordRoute,
-  routesWhiteList,
-} from '@/config'
+import { authentication, loginInterception, progressBar, recordRoute, routesWhiteList } from '@/config'
 
 VabProgress.configure({
   easing: 'ease',
@@ -32,8 +26,7 @@ router.beforeResolve(async (to, from, next) => {
       next({ path: '/' })
       if (progressBar) VabProgress.done()
     } else {
-      const hasPermissions =
-        store.getters['user/permissions'] && store.getters['user/permissions'].length > 0
+      const hasPermissions = store.getters['user/permissions'] && store.getters['user/permissions'].length > 0
       if (hasPermissions) {
         next()
       } else {

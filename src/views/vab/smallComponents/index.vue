@@ -16,15 +16,9 @@
         <el-card shadow="hover">
           <div slot="header">
             <span>profile</span>
-            <el-button style="float: right; padding: 3px 0" type="text" @click="handleProfile">
-              重载
-            </el-button>
+            <el-button style="float: right; padding: 3px 0" type="text" @click="handleProfile">重载</el-button>
           </div>
-          <vab-profile
-            v-if="profileShow"
-            avatar="https://picsum.photos/80/80?random=2"
-            user-name="chuzhixin"
-          />
+          <vab-profile v-if="profileShow" avatar="https://picsum.photos/80/80?random=2" user-name="chuzhixin" />
         </el-card>
       </el-col>
       <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">

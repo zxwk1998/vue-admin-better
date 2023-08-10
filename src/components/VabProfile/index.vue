@@ -12,13 +12,7 @@
         {{ username }}
       </div>
       <div class="social-icons">
-        <a
-          v-for="(item, index) in iconArray"
-          :key="index"
-          class="social-icon"
-          :href="item.url"
-          target="_blank"
-        >
+        <a v-for="(item, index) in iconArray" :key="index" class="social-icon" :href="item.url" target="_blank">
           <vab-icon :icon="['fas', item.icon]" />
         </a>
       </div>

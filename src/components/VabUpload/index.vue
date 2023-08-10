@@ -43,22 +43,12 @@
         </el-dialog>
       </el-upload>
     </div>
-    <div
-      slot="footer"
-      class="dialog-footer"
-      style="position: relative; padding-right: 15px; text-align: right"
-    >
+    <div slot="footer" class="dialog-footer" style="position: relative; padding-right: 15px; text-align: right">
       <div v-if="show" style="position: absolute; top: 10px; left: 15px; color: #999">
         正在上传中... 当前上传成功数:{{ imgSuccessNum }}张 当前上传失败数:{{ imgErrorNum }}张
       </div>
       <el-button type="primary" @click="handleClose">关闭</el-button>
-      <el-button
-        :loading="loading"
-        size="small"
-        style="margin-left: 10px"
-        type="success"
-        @click="submitUpload"
-      >
+      <el-button :loading="loading" size="small" style="margin-left: 10px" type="success" @click="submitUpload">
         开始上传
       </el-button>
     </div>
@@ -153,10 +143,7 @@
         this.imgNum = this.imgNum + 1
         this.imgErrorNum = this.imgErrorNum + 1
         this.$baseMessage(
-          `文件[${file.raw.name}]上传失败,文件大小为${this.$baseLodash.round(
-            file.raw.size / 1024,
-            0
-          )}KB`,
+          `文件[${file.raw.name}]上传失败,文件大小为${this.$baseLodash.round(file.raw.size / 1024, 0)}KB`,
           'error'
         )
         setTimeout(() => {
