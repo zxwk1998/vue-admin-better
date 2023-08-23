@@ -5,13 +5,7 @@
     </el-divider>
     <el-row>
       <el-col :lg="4" :md="8" :sm="24" :xl="4" :xs="24">
-        <el-tree
-          :data="data"
-          :default-expanded-keys="['root']"
-          node-key="id"
-          :props="defaultProps"
-          @node-click="handleNodeClick"
-        />
+        <el-tree :data="data" :default-expanded-keys="['root']" node-key="id" :props="defaultProps" @node-click="handleNodeClick" />
       </el-col>
       <el-col :lg="20" :md="16" :sm="24" :xl="20" :xs="24">
         <vab-query-form>

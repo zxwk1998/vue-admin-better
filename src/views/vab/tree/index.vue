@@ -42,13 +42,7 @@
       </el-col>
       <el-col :lg="6" :md="24" :sm="24" :xl="6" :xs="24">
         <el-divider content-position="left">懒加载树</el-divider>
-        <el-input
-          v-model.lazy="keyW"
-          class="input-with-select"
-          placeholder="请输入内容"
-          :value="keyW"
-          @keyup.enter.native="showTreeList"
-        />
+        <el-input v-model.lazy="keyW" class="input-with-select" placeholder="请输入内容" :value="keyW" @keyup.enter.native="showTreeList" />
         <div v-show="isShow" class="blur-tree">
           <el-tree
             ref="treeFilter"

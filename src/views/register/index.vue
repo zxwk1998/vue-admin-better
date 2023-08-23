@@ -26,14 +26,7 @@
             </el-input>
           </el-form-item>
           <el-form-item prop="phone">
-            <el-input
-              v-model.trim="form.phone"
-              autocomplete="off"
-              maxlength="11"
-              placeholder="请输入手机号"
-              show-word-limit
-              type="text"
-            >
+            <el-input v-model.trim="form.phone" autocomplete="off" maxlength="11" placeholder="请输入手机号" show-word-limit type="text">
               <vab-icon slot="prefix" :icon="['fas', 'mobile-alt']" />
             </el-input>
           </el-form-item>

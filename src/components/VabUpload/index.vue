@@ -1,11 +1,5 @@
 <template>
-  <el-dialog
-    :before-close="handleClose"
-    :close-on-click-modal="false"
-    :title="title"
-    :visible.sync="dialogFormVisible"
-    width="909px"
-  >
+  <el-dialog :before-close="handleClose" :close-on-click-modal="false" :title="title" :visible.sync="dialogFormVisible" width="909px">
     <div class="upload">
       <el-alert
         :closable="false"
@@ -48,9 +42,7 @@
         正在上传中... 当前上传成功数:{{ imgSuccessNum }}张 当前上传失败数:{{ imgErrorNum }}张
       </div>
       <el-button type="primary" @click="handleClose">关闭</el-button>
-      <el-button :loading="loading" size="small" style="margin-left: 10px" type="success" @click="submitUpload">
-        开始上传
-      </el-button>
+      <el-button :loading="loading" size="small" style="margin-left: 10px" type="success" @click="submitUpload">开始上传</el-button>
     </div>
   </el-dialog>
 </template>
@@ -142,10 +134,7 @@
       handleError() {
         this.imgNum = this.imgNum + 1
         this.imgErrorNum = this.imgErrorNum + 1
-        this.$baseMessage(
-          `文件[${file.raw.name}]上传失败,文件大小为${this.$baseLodash.round(file.raw.size / 1024, 0)}KB`,
-          'error'
-        )
+        this.$baseMessage(`文件[${file.raw.name}]上传失败,文件大小为${this.$baseLodash.round(file.raw.size / 1024, 0)}KB`, 'error')
         setTimeout(() => {
           this.loading = false
           this.show = false

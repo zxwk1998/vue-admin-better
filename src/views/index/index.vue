@@ -143,12 +143,7 @@
             <span>更新日志</span>
           </div>
           <el-timeline :reverse="reverse">
-            <el-timeline-item
-              v-for="(activity, index) in activities"
-              :key="index"
-              :color="activity.color"
-              :timestamp="activity.timestamp"
-            >
+            <el-timeline-item v-for="(activity, index) in activities" :key="index" :color="activity.color" :timestamp="activity.timestamp">
               {{ activity.content }}
             </el-timeline-item>
           </el-timeline>
