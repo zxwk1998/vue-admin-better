@@ -12,7 +12,7 @@
     "lint": "vue-cli-service lint --fix",
     "clear": "rimraf node_modules&&npm install  --registry=--registry=https://registry.npmmirror.com",
     "image-webpack-loader": "cnpm i image-webpack-loader -D",
-    "update": "ncu -u --reject eslint-plugin-prettier,@vue/eslint-config-prettier,prettier,layouts,sass-loader,sass,screenfull,eslint,chalk,vue,vue-template-compiler,vue-router,vuex,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,eslint-plugin-vue --registry=https://registry.npmmirror.com&&cnpm i",
+    "update": "ncu -u --reject webpack,eslint-plugin-prettier,@vue/eslint-config-prettier,prettier,layouts,sass-loader,sass,screenfull,eslint,chalk,vue,vue-template-compiler,vue-router,vuex,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,eslint-plugin-vue --registry=https://registry.npmmirror.com&&cnpm i",
     "push": "start ./push.sh"
   },
   "repository": {
@@ -76,6 +76,7 @@
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recess-order": "^4.3.0",
     "svg-sprite-loader": "^6.0.11",
+    "webpack": "4.46.0",
     "webpackbar": "^5.0.2"
   },
   "keywords": [
