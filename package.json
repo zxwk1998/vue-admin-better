@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-better",
-  "version": "2.3.5",
+  "version": "2.4.0",
   "author": "vue-admin-better",
   "participants": [],
   "homepage": "https://chu1204505056.gitee.io/vue-admin-better",
@@ -35,7 +35,7 @@
     "core-js": "^3.32.1",
     "dayjs": "^1.11.9",
     "echarts": "5.4.3",
-    "element-ui": "^2.15.13",
+    "element-ui": "^2.15.14",
     "jsencrypt": "^3.3.2",
     "layouts": "file:layouts",
     "lodash": "^4.17.21",

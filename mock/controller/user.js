@@ -74,10 +74,7 @@ module.exports = [
         data: {
           permissions,
           username,
-          'avatar|1': [
-            'https://i.gtimg.cn/club/item/face/img/2/15922_100.gif',
-            'https://i.gtimg.cn/club/item/face/img/8/15918_100.gif',
-          ],
+          'avatar|1': ['https://i.gtimg.cn/club/item/face/img/2/15922_100.gif', 'https://i.gtimg.cn/club/item/face/img/8/15918_100.gif'],
         },
       }
     },
