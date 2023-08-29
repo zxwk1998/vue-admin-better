@@ -4,7 +4,7 @@
 
 <div align="center"><img width="200" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/logo/vab.png"/>
 <h1> vue-admin-better</h1>
-<p>暴雨无情人有情，众志成城，攻坚克难，愿所有美好纷沓而来！</p>
+<p>众志成城，攻坚克难，愿所有美好纷沓而来！</p>
 </div>
 
 [![stars](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&logo=GitHub)](https://github.com/chuzhixin/vue-admin-beautiful)
