@@ -10,10 +10,7 @@
     >
       <div :class="header === 'fixed' ? 'fixed-header' : ''">
         <vab-top-bar />
-        <div
-          v-if="tabsBar === 'true' || tabsBar === true"
-          :class="{ 'tag-view-show': tabsBar }"
-        >
+        <div v-if="tabsBar === 'true' || tabsBar === true" :class="{ 'tag-view-show': tabsBar }">
           <div class="vab-main">
             <vab-tabs-bar />
           </div>
@@ -32,11 +29,7 @@
       }"
       class="layout-container-vertical"
     >
-      <div
-        v-if="device === 'mobile' && collapse === false"
-        class="mask"
-        @click="handleFoldSideBar"
-      />
+      <div v-if="device === 'mobile' && collapse === false" class="mask" @click="handleFoldSideBar" />
       <vab-side-bar />
       <div :class="collapse ? 'is-collapse-main' : ''" class="vab-main">
         <div :class="header === 'fixed' ? 'fixed-header' : ''">
@@ -108,8 +101,7 @@
           'storage',
           (e) => {
             if (e.key === tokenName || e.key === null) window.location.reload()
-            if (e.key === tokenName && e.value === null)
-              window.location.reload()
+            if (e.key === tokenName && e.value === null) window.location.reload()
           },
           false
         )
@@ -132,10 +124,7 @@
             this.$store.dispatch('settings/changeLayout', this.oldLayout)
           }
 
-          this.$store.dispatch(
-            'settings/toggleDevice',
-            isMobile ? 'mobile' : 'desktop'
-          )
+          this.$store.dispatch('settings/toggleDevice', isMobile ? 'mobile' : 'desktop')
         }
       },
     },

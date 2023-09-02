@@ -1,10 +1,6 @@
 <template>
   <span v-if="themeBar">
-    <vab-icon
-      :icon="['fas', 'palette']"
-      title="主题配置"
-      @click="handleOpenThemeBar"
-    />
+    <vab-icon :icon="['fas', 'palette']" title="主题配置" @click="handleOpenThemeBar" />
     <div class="theme-bar-setting">
       <div @click="handleOpenThemeBar">
         <vab-icon :icon="['fas', 'palette']" />
@@ -16,13 +12,7 @@
       </div>
     </div>
 
-    <el-drawer
-      :visible.sync="drawerVisible"
-      append-to-body
-      direction="rtl"
-      size="300px"
-      title="主题配置"
-    >
+    <el-drawer :visible.sync="drawerVisible" append-to-body direction="rtl" size="300px" title="主题配置">
       <el-scrollbar style="height: 80vh; overflow: hidden">
         <div class="el-drawer__body">
           <el-form ref="form" :model="theme" label-position="top">
@@ -128,9 +118,7 @@
         if (!this.handleIsMobile()) this.changeLayout(layout)
         this.changeHeader(header)
         this.changeTabsBar(tabsBar)
-        document.getElementsByTagName(
-          'body'
-        )[0].className = `vue-admin-beautiful-theme-${name}`
+        document.getElementsByTagName('body')[0].className = `vue-admin-beautiful-theme-${name}`
         this.drawerVisible = false
       },
       handleSaveTheme() {
@@ -138,9 +126,7 @@
       },
       handleSetDfaultTheme() {
         let { name } = this.theme
-        document
-          .getElementsByTagName('body')[0]
-          .classList.remove(`vue-admin-beautiful-theme-${name}`)
+        document.getElementsByTagName('body')[0].classList.remove(`vue-admin-beautiful-theme-${name}`)
         localStorage.removeItem('vue-admin-beautiful-theme')
         this.$refs['form'].resetFields()
         Object.assign(this.$data, this.$options.data())
@@ -153,8 +139,7 @@
         location.reload()
       },
       handleGetCode() {
-        const url =
-          'https://github.com/chuzhixin/vue-admin-beautiful/tree/master/src/views'
+        const url = 'https://github.com/chuzhixin/vue-admin-beautiful/tree/master/src/views'
         let path = this.$route.path + '/index.vue'
         if (path === '/vab/menu1/menu1-1/menu1-1-1/index.vue') {
           path = '/vab/nested/menu1/menu1-1/menu1-1-1/index.vue'

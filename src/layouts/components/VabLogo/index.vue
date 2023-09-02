@@ -3,11 +3,7 @@
     <router-link to="/">
       <!-- 这里是logo变更的位置 -->
       <vab-remix-icon v-if="logo" :icon-class="logo" class="logo" />
-      <span
-        :class="{ 'hidden-xs-only': layout === 'horizontal' }"
-        :title="title"
-        class="title"
-      >
+      <span :class="{ 'hidden-xs-only': layout === 'horizontal' }" :title="title" class="title">
         {{ title }}
       </span>
     </router-link>

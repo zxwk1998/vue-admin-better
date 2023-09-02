@@ -10,6 +10,8 @@
     "build": "vue-cli-service build",
     "build:node18": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
+    "lint:eslint": "eslint {src,mock,library}/**/*.{vue,js,ts} --fix",
+    "lint:prettier": "prettier {src,mock,library}/**/*.{html,vue,css,sass,scss,js,ts,md} --write",
     "clear": "rimraf node_modules&&npm install  --registry=--registry=https://registry.npmmirror.com",
     "image-webpack-loader": "cnpm i image-webpack-loader -D",
     "update": "ncu -u --reject webpack,eslint-plugin-prettier,@vue/eslint-config-prettier,prettier,layouts,sass-loader,sass,screenfull,eslint,chalk,vue,vue-template-compiler,vue-router,vuex,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,eslint-plugin-vue --registry=https://registry.npmmirror.com&&cnpm i",

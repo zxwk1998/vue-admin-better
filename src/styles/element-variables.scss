@@ -5,8 +5,7 @@
 $--all-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 $--fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
 $--fade-linear-transition: opacity 200ms linear;
-$--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1),
-opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
+$--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
 $--border-transition-base: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 $--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 

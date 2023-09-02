@@ -21,9 +21,7 @@
     },
     methods: {
       getBreadcrumb() {
-        return this.$route.matched.filter(
-          (item) => item.name && item.meta.title
-        )
+        return this.$route.matched.filter((item) => item.name && item.meta.title)
       },
     },
   }

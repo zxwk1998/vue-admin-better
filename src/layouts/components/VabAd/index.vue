@@ -1,13 +1,6 @@
 <template>
   <div class="vab-ad">
-    <el-carousel
-      v-if="adList"
-      :autoplay="true"
-      :interval="3000"
-      direction="vertical"
-      height="30px"
-      indicator-position="none"
-    >
+    <el-carousel v-if="adList" :autoplay="true" :interval="3000" direction="vertical" height="30px" indicator-position="none">
       <el-carousel-item v-for="(item, index) in adList" :key="index">
         <el-tag type="warning">Ad</el-tag>
         <a :href="item.url" target="_blank">{{ item.title }}</a>
