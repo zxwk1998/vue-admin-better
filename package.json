@@ -70,7 +70,7 @@
     "eslint-plugin-vue": "^9.1.1",
     "filemanager-webpack-plugin": "^8.0.0",
     "image-webpack-loader": "^8.1.0",
-    "lint-staged": "^15.0.2",
+    "lint-staged": "^15.1.0",
     "prettier": "^2.8.8",
     "sass": "~1.32.13",
     "sass-loader": "^10.1.1",
