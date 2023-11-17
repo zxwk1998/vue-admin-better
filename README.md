@@ -47,9 +47,11 @@
 
 ## 🌐 仓库地址
 
-- [🌐 github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension)
+- [🌐 vue2.x github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension)
 
-- [🌐 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
+- [🌐 vue3.x github 仓库地址](https://github.com/chuzhixin/vue-admin-arco?utm_source=gold_browser_extension)
+
+- [🌐 vue2.x 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
 
 ## 🍻 前端讨论 QQ 群
 
