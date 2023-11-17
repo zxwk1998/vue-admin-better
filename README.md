@@ -43,7 +43,7 @@
 
 - [⚡️ vue3.x + ant-design-vue（beta 版本，免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-antdv/)
 
-- [⚡️ vue3.x + vite + arco](https://vue-admin-beautiful.com/vue-admin-arco/)
+- [⚡️ vue3.x + vite4.x + arco2.x（免费商用，支持 PC）](https://vue-admin-beautiful.com/vue-admin-arco/)
 
 ## 🌐 仓库地址
 
