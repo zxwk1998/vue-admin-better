@@ -71,10 +71,13 @@
               </a>
             </el-popover>
             <a href="https://github.com/chuzhixin/vue-admin-better" target="_blank">
-              <el-button type="warning">github下载源码点star</el-button>
+              <el-button type="warning">vue2.x版本 github下载源码点star</el-button>
             </a>
             <a href="https://gitee.com/chu1204505056/vue-admin-beautiful" target="_blank">
-              <el-button type="warning">码云下载源码点star</el-button>
+              <el-button type="warning">vue2.x版本 码云下载源码点star</el-button>
+            </a>
+            <a href="https://github.com/chuzhixin/vue-admin-arco" target="_blank">
+              <el-button type="warning">vue3.x版本 github下载源码点star</el-button>
             </a>
             <a @click="handleChangeTheme">
               <el-button type="danger">修改主题和布局</el-button>
