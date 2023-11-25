@@ -15,7 +15,7 @@
 
 ## 🎉 全新版本
 
-基于 vite4.x + vue3.x + arco-design2.x 全新的前端框架 vue-admin-arco， 欢迎点击查看或试用 👏🏻👏🏻👏🏻
+基于 vite5.x + vue3.x + arco-design2.x 全新的前端框架 vue-admin-arco， 欢迎点击查看或试用 👏🏻👏🏻👏🏻
 
 [开源地址](https://github.com/chuzhixin/vue-admin-arco) | [演示地址](https://vue-admin-beautiful.com/vue-admin-arco)
 
@@ -49,7 +49,7 @@
 
 - [⚡️ vue3.x + ant-design-vue（beta 版本，免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-antdv/)
 
-- [⚡️ vue3.x + vite4.x + arco2.x（免费商用，支持 PC）](https://vue-admin-beautiful.com/vue-admin-arco/)
+- [⚡️ vue3.x + vite5.x + arco2.x（免费商用，支持 PC）](https://vue-admin-beautiful.com/vue-admin-arco/)
 
 ## 🌐 仓库地址
 
