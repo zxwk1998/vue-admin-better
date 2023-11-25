@@ -43,13 +43,13 @@
 
 ## 🌐 免费版演示地址
 
-- [🎉 vue2.x + element-ui（免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-element/)
+- [🎉 Vue Admin Better （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-element/)
 
 - [⚡️ vue3.x + element-plus（alpha 版本，免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-element-plus/)
 
-- [⚡️ vue3.x + ant-design-vue（beta 版本，免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-antdv/)
+- [⚡️ Vue Admin Ant （vue3.x + ant-design-vue 免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-antdv/)
 
-- [⚡️ vue3.x + vite5.x + arco2.x（免费商用，支持 PC）](https://vue-admin-beautiful.com/vue-admin-arco/)
+- [⚡️ Vue Admin Arco （vue3.x + vite5.x + arco2.x 免费商用，支持 PC）](https://vue-admin-beautiful.com/vue-admin-arco/)
 
 ## 🌐 仓库地址
 
@@ -58,6 +58,8 @@
 - [🌐 vue3.x github 仓库地址](https://github.com/chuzhixin/vue-admin-arco?utm_source=gold_browser_extension)
 
 - [🌐 vue2.x 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
+
+- [🌐 vue3.x 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-arco?_from=gitee_search)
 
 ## 🍻 前端讨论 QQ 群
 
