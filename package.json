@@ -31,7 +31,7 @@
     "axios": "^1.6.2",
     "caniuse-lite": "^1.0.30001566",
     "clipboard": "^2.0.11",
-    "core-js": "^3.33.3",
+    "core-js": "^3.34.0",
     "dayjs": "^1.11.10",
     "echarts": "5.4.3",
     "element-ui": "^2.15.14",
