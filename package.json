@@ -76,7 +76,7 @@
     "stylelint-config-recess-order": "^4.4.0",
     "svg-sprite-loader": "^6.0.11",
     "webpack": "4.46.0",
-    "webpackbar": "^5.0.2"
+    "webpackbar": "^6.0.0"
   },
   "keywords": [
     "vue",
