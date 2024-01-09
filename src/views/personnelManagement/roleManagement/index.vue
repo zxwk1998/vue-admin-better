@@ -64,10 +64,15 @@
           pageSize: 10,
           permission: '',
         },
+        timeOutID: null,
       }
     },
     created() {
       this.fetchData()
+    },
+
+    beforeDestroy() {
+      clearTimeout(this.timeOutID)
     },
     methods: {
       setSelectRows(val) {
@@ -118,7 +123,7 @@
         const { data, totalCount } = await getList(this.queryForm)
         this.list = data
         this.total = totalCount
-        setTimeout(() => {
+        this.timeOutID = setTimeout(() => {
           this.listLoading = false
         }, 300)
       },

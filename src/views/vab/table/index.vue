@@ -109,6 +109,7 @@
           pageSize: 20,
           title: '',
         },
+        timeOutID: null,
       }
     },
     computed: {
@@ -119,7 +120,9 @@
     created() {
       this.fetchData()
     },
-    beforeDestroy() {},
+    beforeDestroy() {
+      clearTimeout(this.timeOutID)
+    },
     mounted() {},
     methods: {
       tableSortChange() {
@@ -181,7 +184,7 @@
         })
         this.imageList = imageList
         this.total = totalCount
-        setTimeout(() => {
+        this.timeOutID = setTimeout(() => {
           this.listLoading = false
         }, 500)
       },

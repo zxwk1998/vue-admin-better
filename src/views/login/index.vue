@@ -103,6 +103,7 @@
         loading: false,
         passwordType: 'password',
         redirect: undefined,
+        timeOutID: null,
       }
     },
     watch: {
@@ -118,11 +119,12 @@
     },
     beforeDestroy() {
       document.body.style.overflow = 'auto'
+      clearTimeout(this.timeOutID)
     },
     mounted() {
       this.form.username = 'admin'
       this.form.password = '123456'
-      setTimeout(() => {
+      this.timeOutID = setTimeout(() => {
         this.handleLogin()
       }, 3000)
     },

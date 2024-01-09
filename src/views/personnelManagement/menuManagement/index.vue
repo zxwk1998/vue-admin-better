@@ -101,12 +101,17 @@
         list: [],
         listLoading: true,
         elementLoadingText: '正在加载...',
+        timeOutID: null,
       }
     },
     async created() {
       const roleData = await getTree()
       this.data = roleData.data
       this.fetchData()
+    },
+
+    beforeDestroy() {
+      clearTimeout(this.timeOutID)
     },
     methods: {
       handleEdit(row) {
@@ -130,7 +135,7 @@
 
         const { data } = await getList()
         this.list = data
-        setTimeout(() => {
+        this.timeOutID = setTimeout(() => {
           this.listLoading = false
         }, 300)
       },
