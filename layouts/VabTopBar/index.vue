@@ -76,12 +76,16 @@
       async refreshRoute() {
         this.$baseEventBus.$emit('reload-router-view')
         this.pulse = true
-        setTimeout(() => {
+        this.timeOutID = setTimeout(() => {
           this.pulse = false
         }, 1000)
       },
     },
-  }
+
+    beforeDestroy() {
+      clearTimeout(this.timeOutID);
+    }
+  };
 </script>
 <style lang="scss" scoped>
   .top-bar-container {

@@ -79,9 +79,11 @@
       }),
     },
     created() {
-      this.$baseEventBus.$on('theme', () => {
+      const handleTheme = () => {
         this.handleOpenThemeBar()
-      })
+      };
+
+      this.$baseEventBus.$on('theme', handleTheme)
       const theme = localStorage.getItem('vue-admin-beautiful-theme')
       if (null !== theme) {
         this.theme = JSON.parse(theme)
@@ -91,6 +93,10 @@
         this.theme.header = this.header
         this.theme.tabsBar = this.tabsBar
       }
+
+      this.$once('hook:beforeDestroy', () => {
+        this.$baseEventBus.$off('theme', handleTheme);
+      });
     },
     methods: {
       ...mapActions({

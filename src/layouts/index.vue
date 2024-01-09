@@ -51,7 +51,11 @@
   export default {
     name: 'Layout',
     data() {
-      return { oldLayout: '' }
+      return {
+        oldLayout: '',
+        controller: new window.AbortController(),
+        timeOutID: null
+      };
     },
     computed: {
       ...mapGetters({
@@ -72,6 +76,8 @@
     },
     beforeDestroy() {
       window.removeEventListener('resize', this.handleResize)
+      this.controller.abort();
+      clearTimeout(this.timeOutID);
     },
     mounted() {
       this.oldLayout = this.layout
@@ -90,7 +96,7 @@
           this.$store.dispatch('settings/changeLayout', this.oldLayout)
         }
         this.$store.dispatch('settings/toggleDevice', 'mobile')
-        setTimeout(() => {
+        this.timeOutID = setTimeout(() => {
           this.$store.dispatch('settings/foldSideBar')
         }, 2000)
       } else {
@@ -103,7 +109,10 @@
             if (e.key === tokenName || e.key === null) window.location.reload()
             if (e.key === tokenName && e.value === null) window.location.reload()
           },
-          false
+          {
+            capture: false,
+            signal: this.controller?.signal
+          }
         )
       })
     },

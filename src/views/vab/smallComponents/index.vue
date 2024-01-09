@@ -53,6 +53,8 @@
         startVal: 0,
         endVal: 20,
         timeInterval: null,
+        timeOutID: null,
+        timeOutID2: null,
       }
     },
     mounted() {
@@ -69,17 +71,19 @@
       if (this.clearInterval) {
         clearInterval(this.timeInterval)
       }
+      clearTimeout(this.timeOutID)
+      clearTimeout(this.timeOutID2)
     },
     methods: {
       handleProfile() {
         this.profileShow = false
-        setTimeout(() => {
+        this.timeOutID = setTimeout(() => {
           this.profileShow = true
         })
       },
       handleSolidText() {
         this.solidTextShow = false
-        setTimeout(() => {
+        this.timeOutID2 = setTimeout(() => {
           this.solidTextShow = true
         })
       },
