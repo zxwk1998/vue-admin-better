@@ -7,6 +7,8 @@
   "scripts": {
     "serve": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
+    "serve:mac": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "build:mac": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
     "lint:eslint": "eslint {src,mock,library}/**/*.{vue,js,ts} --fix",
     "lint:prettier": "prettier {src,mock,library}/**/*.{html,vue,css,sass,scss,js,ts,md} --write",
@@ -44,7 +46,7 @@
     "nprogress": "^0.2.0",
     "qs": "^6.11.2",
     "screenfull": "^5.2.0",
-    "sortablejs": "^1.15.1",
+    "sortablejs": "^1.15.2",
     "vab-icon": "file:vab-icon",
     "vue": "~2.7.14",
     "vue-echarts": "6.6.8",
