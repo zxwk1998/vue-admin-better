@@ -162,6 +162,9 @@ npm run serve
 <a href="https://github.com/1511578084" target="_blank">
 <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/24790218?s=50"/>
 </a>
+<a href="https://github.com/Arooba-git" target="_blank">
+<img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/56495631?s=50"/>
+</a>
 
 ## 📌 优势及注意事项
 
