@@ -9,14 +9,14 @@ dependencies:
     specifier: ^1.6.8
     version: 1.6.8
   caniuse-lite:
-    specifier: ^1.0.30001598
-    version: 1.0.30001598
+    specifier: ^1.0.30001599
+    version: 1.0.30001599
   clipboard:
     specifier: ^2.0.11
     version: 2.0.11
   core-js:
-    specifier: ^3.36.0
-    version: 3.36.0
+    specifier: ^3.36.1
+    version: 3.36.1
   dayjs:
     specifier: ^1.11.10
     version: 1.11.10
@@ -78,7 +78,7 @@ dependencies:
 devDependencies:
   '@vue/cli-plugin-babel':
     specifier: ^4.5.15
-    version: 4.5.19(@vue/cli-service@4.5.19)(core-js@3.36.0)(vue@2.7.15)
+    version: 4.5.19(@vue/cli-service@4.5.19)(core-js@3.36.1)(vue@2.7.15)
   '@vue/cli-plugin-eslint':
     specifier: ^4.5.15
     version: 4.5.19(@vue/cli-service@4.5.19)(eslint@7.32.0)
@@ -1879,7 +1879,7 @@ packages:
       svg-tags: 1.0.0
     dev: true
 
-  /@vue/babel-preset-app@4.5.19(@babel/core@7.23.3)(core-js@3.36.0)(vue@2.7.15):
+  /@vue/babel-preset-app@4.5.19(@babel/core@7.23.3)(core-js@3.36.1)(vue@2.7.15):
     resolution: {integrity: sha512-VCNRiAt2P/bLo09rYt3DLe6xXUMlhJwrvU18Ddd/lYJgC7s8+wvhgYs+MTx4OiAXdu58drGwSBO9SPx7C6J82Q==}
     peerDependencies:
       '@babel/core': '*'
@@ -1904,7 +1904,7 @@ packages:
       '@vue/babel-plugin-jsx': 1.1.5(@babel/core@7.23.3)
       '@vue/babel-preset-jsx': 1.4.0(@babel/core@7.23.3)(vue@2.7.15)
       babel-plugin-dynamic-import-node: 2.3.3
-      core-js: 3.36.0
+      core-js: 3.36.1
       core-js-compat: 3.33.3
       semver: 6.3.1
       vue: 2.7.15
@@ -1998,13 +1998,13 @@ packages:
     resolution: {integrity: sha512-GdxvNSmOw7NHIazCO8gTK+xZbaOmScTtxj6eHVeMbYpDYVPJ+th3VMLWNpw/b6uOjwzzcyKlA5dRQ1DAb+gF/g==}
     dev: true
 
-  /@vue/cli-plugin-babel@4.5.19(@vue/cli-service@4.5.19)(core-js@3.36.0)(vue@2.7.15):
+  /@vue/cli-plugin-babel@4.5.19(@vue/cli-service@4.5.19)(core-js@3.36.1)(vue@2.7.15):
     resolution: {integrity: sha512-8ebXzaMW9KNTMAN6+DzkhFsjty1ieqT7hIW5Lbk4v30Qhfjkms7lBWyXPGkoq+wAikXFa1Gnam2xmWOBqDDvWg==}
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0-0
     dependencies:
       '@babel/core': 7.23.3
-      '@vue/babel-preset-app': 4.5.19(@babel/core@7.23.3)(core-js@3.36.0)(vue@2.7.15)
+      '@vue/babel-preset-app': 4.5.19(@babel/core@7.23.3)(core-js@3.36.1)(vue@2.7.15)
       '@vue/cli-service': 4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1)(vue-template-compiler@2.7.15)(vue@2.7.15)
       '@vue/cli-shared-utils': 4.5.19
       babel-loader: 8.3.0(@babel/core@7.23.3)(webpack@4.46.0)
@@ -2906,7 +2906,7 @@ packages:
     hasBin: true
     dependencies:
       browserslist: 4.22.1
-      caniuse-lite: 1.0.30001598
+      caniuse-lite: 1.0.30001599
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       picocolors: 0.2.1
@@ -3345,7 +3345,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001598
+      caniuse-lite: 1.0.30001599
       electron-to-chromium: 1.4.594
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
@@ -3552,13 +3552,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.22.1
-      caniuse-lite: 1.0.30001598
+      caniuse-lite: 1.0.30001599
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite@1.0.30001598:
-    resolution: {integrity: sha512-j8mQRDziG94uoBfeFuqsJUNECW37DXpnvhcMJMdlH2u3MRkq1sAI0LJcXP1i/Py0KbSIC4UDj8YHPrTn5YsL+Q==}
+  /caniuse-lite@1.0.30001599:
+    resolution: {integrity: sha512-LRAQHZ4yT1+f9LemSMeqdMpMxZcc4RMWdj4tiFe3G8tNkWK+E58g+/tzotb5cU6TbcVJLr4fySiAW7XmxQvZQA==}
 
   /case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
@@ -4237,8 +4237,8 @@ packages:
     requiresBuild: true
     dev: false
 
-  /core-js@3.36.0:
-    resolution: {integrity: sha512-mt7+TUBbTFg5+GngsAxeKBTl5/VS0guFeJacYge9OmHb+m058UwwIm41SE9T4Den7ClatV57B6TYTuJ0CX1MAw==}
+  /core-js@3.36.1:
+    resolution: {integrity: sha512-BTvUrwxVBezj5SZ3f10ImnX2oRByMxql3EimVqMysepbC9EeMUOpLwdy6Eoili2x6E4kf+ZUB5k/+Jv55alPfA==}
     requiresBuild: true
 
   /core-util-is@1.0.2:
