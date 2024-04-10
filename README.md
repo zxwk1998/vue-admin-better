@@ -13,11 +13,11 @@
 
 ---
 
-## 🎉 全新版本
+<!-- ## 🎉 全新版本
 
 基于 vite5.x + vue3.x + arco-design2.x 全新的前端框架 vue-admin-arco， 欢迎点击查看或试用 👏🏻👏🏻👏🏻
 
-[开源地址](https://github.com/chuzhixin/vue-admin-arco) | [演示地址](https://vue-admin-beautiful.com/vue-admin-arco)
+[开源地址](https://github.com/chuzhixin/vue-admin-arco) | [演示地址](https://vue-admin-beautiful.com/vue-admin-arco) -->
 
 ## 🎉 特性
 
