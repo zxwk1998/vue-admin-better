@@ -24,7 +24,7 @@
 
 ## 🌐 Address
 
-- [🎉 Vue2. X + element UI (free commercial, PC, tablet and mobile phone supported)](https://vue-admin-beautiful.com/vue-admin-beautiful-element/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🎉 Vue2. X + element UI (free commercial, PC, tablet and mobile phone supported)](https://chu1204505056.gitee.io/page-demo/#/index/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 - [⚡️ Vue3. X + element plus (alpha version, free commercial, supporting PC, tablet and mobile phone)](https://vue-admin-beautiful.com/vue-admin-beautiful-element-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
@@ -112,7 +112,7 @@ npm run serve
 ## 🎨 Acknowledge
 
 | Project                                                          |
-|------------------------------------------------------------------|
+| ---------------------------------------------------------------- |
 | [vue](https://github.com/vuejs/vue)                              |
 | [element-ui](https://github.com/ElemeFE/element)                 |
 | [element-plus](https://github.com/element-plus/element-plus)     |
@@ -202,8 +202,7 @@ The following is a screenshot of the pro version:
 ## 📄 Commercial considerations
 
 This project can be used for commercial purposes free of charge. Please abide by the MIT agreement and keep the author's
-technical support statement. For customized source code copyright information, please contact customer service QQ
-783963206.
+technical support statement. For customized source code copyright information, please contact customer service QQ 783963206.
 
 <!-- ## 严正声明
 
