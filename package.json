@@ -33,10 +33,10 @@
   },
   "dependencies": {
     "axios": "^1.6.8",
-    "caniuse-lite": "^1.0.30001610",
+    "caniuse-lite": "^1.0.30001615",
     "clipboard": "^2.0.11",
-    "core-js": "^3.36.1",
-    "dayjs": "^1.11.10",
+    "core-js": "^3.37.0",
+    "dayjs": "^1.11.11",
     "echarts": "5.5.0",
     "element-ui": "^2.15.14",
     "jsencrypt": "^3.3.2",
@@ -51,7 +51,7 @@
     "sortablejs": "^1.15.2",
     "vab-icon": "file:vab-icon",
     "vue": "~2.7.14",
-    "vue-echarts": "6.6.9",
+    "vue-echarts": "6.7.1",
     "vue-router": "^3.6.5",
     "vue-template-compiler": "~2.7.14",
     "vuex": "^3.6.2"
@@ -75,7 +75,7 @@
     "prettier": "^2.8.8",
     "sass": "~1.32.13",
     "sass-loader": "^10.1.1",
-    "stylelint": "^16.3.1",
+    "stylelint": "^16.5.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recess-order": "^5.0.1",
     "svg-sprite-loader": "^6.0.11",
@@ -96,6 +96,5 @@
   "engines": {
     "node": ">=8.9",
     "npm": ">= 3.0.0"
-  },
-  "packageManager": "pnpm@8.14.0+sha1.bb42032ff80dba5f9245bc1b03470d2fa0b7fb2f"
+  }
 }
