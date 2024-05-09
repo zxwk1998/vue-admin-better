@@ -43,7 +43,7 @@
 
 ## 🌐 免费版演示地址
 
-- [🎉 Vue Admin Better （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://chu1204505056.gitee.io/page-demo/#/index)
+- [🎉 Vue Admin Better （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-element)
 
 - [⚡️ vue3.x + element-plus（alpha 版本，免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-element-plus/)
 

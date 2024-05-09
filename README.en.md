@@ -24,7 +24,7 @@
 
 ## 🌐 Address
 
-- [🎉 Vue2. X + element UI (free commercial, PC, tablet and mobile phone supported)](https://chu1204505056.gitee.io/page-demo/#/index/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🎉 Vue2. X + element UI (free commercial, PC, tablet and mobile phone supported)](https://vue-admin-beautiful.com/vue-admin-beautiful-element/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 - [⚡️ Vue3. X + element plus (alpha version, free commercial, supporting PC, tablet and mobile phone)](https://vue-admin-beautiful.com/vue-admin-beautiful-element-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
