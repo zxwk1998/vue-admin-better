@@ -18,7 +18,7 @@
     mounted() {
       this.$nextTick(() => {
         const map = this.$baseMap()
-        axios.get('https://fastly.jsdelivr.net/npm/mapv@2.0.12/examples/data/od-xierqi.txt').then((rs) => {
+        axios.get('https://gcore.jsdelivr.net/npm/mapv@2.0.12/examples/data/od-xierqi.txt').then((rs) => {
           let data = []
           let timeData = []
 

@@ -21,7 +21,7 @@
 
       <el-col v-for="(item, index) in queryIcon" :key="index" :lg="2" :md="3" :sm="8" :xl="2" :xs="6">
         <el-card shadow="hover" style="cursor: pointer" @click.native="handleCopyIcon(index, $event)">
-          <vab-colorful-icon :icon-class="`https://fastly.jsdelivr.net/gh/chuzhixin/zx-colorful-icon@master/${item}.svg`" />
+          <vab-colorful-icon :icon-class="`https://gcore.jsdelivr.net/gh/chuzhixin/zx-colorful-icon@master/${item}.svg`" />
         </el-card>
         <div class="icon-text">
           {{ item }}
@@ -89,7 +89,7 @@
         this.total = totalCount
       },
       handleCopyIcon(index, event) {
-        //const copyText = `<vab-colorful-icon icon-class="https://fastly.jsdelivr.net/gh/chuzhixin/zx-colorful-icon@master/${this.queryIcon[index]}.svg" />`;
+        //const copyText = `<vab-colorful-icon icon-class="https://gcore.jsdelivr.net/gh/chuzhixin/zx-colorful-icon@master/${this.queryIcon[index]}.svg" />`;
         const copyText = `<vab-colorful-icon icon-class="${this.queryIcon[index]}" />`
         this.copyText = copyText
         clip(copyText, event)

@@ -2,7 +2,7 @@
 
 简体中文 | [English](./README.en.md)
 
-<div align="center"><img width="200" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/logo/vab.png"/>
+<div align="center"><img width="200" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/logo/vab.png"/>
 <h1> vue-admin-better</h1>
 <p>瑞雪兆丰年，红梅报新春，愿您新的一年平安喜乐，万事顺意，所得皆所愿！</p>
 </div>
@@ -69,13 +69,13 @@
 <table>
 <tr>
 <td>
-<img width="200px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/zfb_kf.jpg">
+<img width="200px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/zfb_kf.jpg">
 </td>
 <td>
-<img width="200px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-2.jpg">
+<img width="200px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-2.jpg">
 </td>
 <td>
-<img width="200px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-3.jpg">
+<img width="200px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-3.jpg">
 </td>
 </tr>
 </table>
@@ -133,10 +133,10 @@ npm run serve
 - 如果您觉得 vue admin better 帮到了您 ，如果情况允许，您可以选择赞助以下项目
 
 <a title="vue" href="https://opencollective.com/vuejs" target="_blank">
-<img width="64px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/vue.png"/>
+<img width="64px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/vue.png"/>
 </a>
 <a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
-<img width="64px" src="https://fastly.jsdelivr.net/gh/chuzhixin/image/element-plus.png"/>
+<img width="64px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/element-plus.png"/>
 </a>
 <a title="ant-design-vue" href="https://opencollective.com/ant-design-vue" target="_blank">
 <img width="64px" src="https://images.opencollective.com/ant-design-vue/2ec179b/logo/256.png"/>
@@ -203,7 +203,7 @@ npm run serve
 
 ## 🎉 功能地图
 
-![img](https://fastly.jsdelivr.net/gh/chuzhixin/image/vip/flow.drawio.png)
+![img](https://gcore.jsdelivr.net/gh/chuzhixin/image/vip/flow.drawio.png)
 
 ## 🗃️ 效果图
 
@@ -212,26 +212,26 @@ npm run serve
 <table>
 <tr>
 <td>
-<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/2.png">
+<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/2.png">
 </td>
 <td>
-<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/6.png">
-</td>
-</tr>
-<tr>
-<td>
-<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/8.png">
-</td>
-<td>
-<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/9.png">
+<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/6.png">
 </td>
 </tr>
 <tr>
 <td>
-<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/3.png">
+<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/8.png">
 </td>
 <td>
-<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/5.png">
+<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/9.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/3.png">
+</td>
+<td>
+<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/5.png">
 </td>
 </tr>
 </table>
@@ -241,26 +241,26 @@ npm run serve
 <table>
 <tr>
 <td>
-<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/16.png">
+<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/16.png">
 </td>
 <td>
-<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/17.png">
-</td>
-</tr>
-<tr>
-<td>
-<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/18.png">
-</td>
-<td>
-<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/19.png">
+<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/17.png">
 </td>
 </tr>
 <tr>
 <td>
-<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/20.png">
+<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/18.png">
 </td>
 <td>
-<img src="https://fastly.jsdelivr.net/gh/chuzhixin/image/21.png">
+<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/19.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/20.png">
+</td>
+<td>
+<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/21.png">
 </td>
 </tr>
 </table>
