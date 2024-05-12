@@ -54,8 +54,8 @@
       return {
         oldLayout: '',
         controller: new window.AbortController(),
-        timeOutID: null
-      };
+        timeOutID: null,
+      }
     },
     computed: {
       ...mapGetters({
@@ -76,8 +76,8 @@
     },
     beforeDestroy() {
       window.removeEventListener('resize', this.handleResize)
-      this.controller.abort();
-      clearTimeout(this.timeOutID);
+      this.controller.abort()
+      clearTimeout(this.timeOutID)
     },
     mounted() {
       this.oldLayout = this.layout
@@ -111,7 +111,7 @@
           },
           {
             capture: false,
-            signal: this.controller?.signal
+            signal: this.controller?.signal,
           }
         )
       })
