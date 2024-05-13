@@ -60,8 +60,6 @@ const setting = {
   debounce: ['doEdit'],
   //需要自动注入并加载的模块
   providePlugin: { maptalks: 'maptalks', 'window.maptalks': 'maptalks' },
-  //npm run build时是否自动生成7z压缩包
-  build7z: false,
   //代码生成机生成在view下的文件夹名称
   templateFolder: 'project',
   //是否显示终端donation打印
