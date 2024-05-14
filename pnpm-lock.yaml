@@ -12,14 +12,14 @@ importers:
         specifier: ^1.6.8
         version: 1.6.8
       caniuse-lite:
-        specifier: ^1.0.30001617
-        version: 1.0.30001617
+        specifier: ^1.0.30001618
+        version: 1.0.30001618
       clipboard:
         specifier: ^2.0.11
         version: 2.0.11
       core-js:
-        specifier: ^3.37.0
-        version: 3.37.0
+        specifier: ^3.37.1
+        version: 3.37.1
       dayjs:
         specifier: ^1.11.11
         version: 1.11.11
@@ -80,7 +80,7 @@ importers:
     devDependencies:
       '@vue/cli-plugin-babel':
         specifier: ^4.5.15
-        version: 4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(core-js@3.37.0)(vue@2.7.15)
+        version: 4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(core-js@3.37.1)(vue@2.7.15)
       '@vue/cli-plugin-eslint':
         specifier: ^4.5.15
         version: 4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(eslint@6.8.0)
@@ -1681,8 +1681,8 @@ packages:
   caniuse-api@3.0.0:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
 
-  caniuse-lite@1.0.30001617:
-    resolution: {integrity: sha512-mLyjzNI9I+Pix8zwcrpxEbGlfqOkF9kM3ptzmKNw5tizSyYwMe+nGLTqMK9cO+0E+Bh6TsBxNAaHWEM8xwSsmA==}
+  caniuse-lite@1.0.30001618:
+    resolution: {integrity: sha512-p407+D1tIkDvsEAPS22lJxLQQaG8OTBEqo0KhzfABGk0TU4juBNDSfH0hyAp/HRyx+M8L17z/ltyhxh27FTfQg==}
 
   case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
@@ -2105,8 +2105,8 @@ packages:
     resolution: {integrity: sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==}
     deprecated: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
 
-  core-js@3.37.0:
-    resolution: {integrity: sha512-fu5vHevQ8ZG4og+LXug8ulUtVxjOcEYvifJr7L5Bfq9GOztVqsKd9/59hUk2ZSbCrS3BqUr3EpaYGIYzq7g3Ug==}
+  core-js@3.37.1:
+    resolution: {integrity: sha512-Xn6qmxrQZyB0FFY8E3bgRXei3lWDJHhvI+u0q9TKIYM49G8pAr0FgnnrFRAmsbptZL1yxRADVXn+x5AGsbBfyw==}
 
   core-util-is@1.0.2:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
@@ -7407,7 +7407,7 @@ snapshots:
       lodash.kebabcase: 4.1.1
       svg-tags: 1.0.0
 
-  '@vue/babel-preset-app@4.5.19(@babel/core@7.23.3)(core-js@3.37.0)(vue@2.7.15)':
+  '@vue/babel-preset-app@4.5.19(@babel/core@7.23.3)(core-js@3.37.1)(vue@2.7.15)':
     dependencies:
       '@babel/core': 7.23.3
       '@babel/helper-compilation-targets': 7.22.15
@@ -7425,7 +7425,7 @@ snapshots:
       core-js-compat: 3.33.3
       semver: 6.3.1
     optionalDependencies:
-      core-js: 3.37.0
+      core-js: 3.37.1
       vue: 2.7.15
     transitivePeerDependencies:
       - supports-color
@@ -7483,10 +7483,10 @@ snapshots:
 
   '@vue/cli-overlay@4.5.19': {}
 
-  '@vue/cli-plugin-babel@4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(core-js@3.37.0)(vue@2.7.15)':
+  '@vue/cli-plugin-babel@4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(core-js@3.37.1)(vue@2.7.15)':
     dependencies:
       '@babel/core': 7.23.3
-      '@vue/babel-preset-app': 4.5.19(@babel/core@7.23.3)(core-js@3.37.0)(vue@2.7.15)
+      '@vue/babel-preset-app': 4.5.19(@babel/core@7.23.3)(core-js@3.37.1)(vue@2.7.15)
       '@vue/cli-service': 4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15)
       '@vue/cli-shared-utils': 4.5.19
       babel-loader: 8.3.0(@babel/core@7.23.3)(webpack@4.46.0)
@@ -8043,7 +8043,7 @@ snapshots:
   autoprefixer@9.8.8:
     dependencies:
       browserslist: 4.22.1
-      caniuse-lite: 1.0.30001617
+      caniuse-lite: 1.0.30001618
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       picocolors: 0.2.1
@@ -8336,7 +8336,7 @@ snapshots:
 
   browserslist@4.22.1:
     dependencies:
-      caniuse-lite: 1.0.30001617
+      caniuse-lite: 1.0.30001618
       electron-to-chromium: 1.4.594
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
@@ -8473,11 +8473,11 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.22.1
-      caniuse-lite: 1.0.30001617
+      caniuse-lite: 1.0.30001618
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
-  caniuse-lite@1.0.30001617: {}
+  caniuse-lite@1.0.30001618: {}
 
   case-sensitive-paths-webpack-plugin@2.4.0: {}
 
@@ -8790,7 +8790,7 @@ snapshots:
 
   core-js@2.6.12: {}
 
-  core-js@3.37.0: {}
+  core-js@3.37.1: {}
 
   core-util-is@1.0.2: {}
 
