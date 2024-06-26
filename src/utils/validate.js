@@ -9,7 +9,7 @@ export function isExternal(path) {
 }
 
 /**
- * @author https://vue-admin-beautiful.com （不想保留author可删除）
+ * @author https://github.com/zxwk1998/vue-admin-better （不想保留author可删除）
  * @description 校验密码是否小于6位
  * @param str
  * @returns {boolean}

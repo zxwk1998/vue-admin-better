@@ -1,7 +1,7 @@
 import { title } from '@/config'
 
 /**
- * @author https://vue-admin-beautiful.com （不想保留author可删除）
+ * @author https://github.com/zxwk1998/vue-admin-better （不想保留author可删除）
  * @description 设置标题
  * @param pageTitle
  * @returns {string}
