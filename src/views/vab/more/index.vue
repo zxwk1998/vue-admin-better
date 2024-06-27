@@ -15,7 +15,7 @@
               </li>
               <li>
                 开源地址
-                <a href="https://github.com/chuzhixin/vue-admin-beautiful" target="_blank">如果有幸帮到了你，麻烦给个star</a>
+                <a href="https://github.com/zxwk1998/vue-admin-better" target="_blank">如果有幸帮到了你，麻烦给个star</a>
               </li>
               <li>提供讨论群专属文档，QQ群 972435319、1139183756</li>
             </ul>

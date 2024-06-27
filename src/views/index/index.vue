@@ -4,9 +4,9 @@
       <el-col :lg="24" :md="24" :sm="24" :xl="24" :xs="24">
         <el-alert v-if="noticeList[0]" :closable="noticeList[0].closable">
           <div style="display: flex; align-items: center; justify-content: center">
-            <a href="https://github.com/chuzhixin/vue-admin-better" target="_blank">
+            <a href="https://github.com/zxwk1998/vue-admin-better" target="_blank">
               <img
-                src="https://img.shields.io/github/stars/chuzhixin/vue-admin-better?style=flat-square&label=Stars&logo=github"
+                src="https://img.shields.io/github/stars/zxwk1998/vue-admin-better?style=flat-square&label=Stars&logo=github"
                 style="margin-right: 10px"
               />
             </a>
@@ -70,13 +70,13 @@
                 <el-button type="primary">QQ讨论群、基础版、文档</el-button>
               </a>
             </el-popover>
-            <a href="https://github.com/chuzhixin/vue-admin-better" target="_blank">
+            <a href="https://github.com/zxwk1998/vue-admin-better" target="_blank">
               <el-button type="warning">vue2.x版本 github下载源码点star</el-button>
             </a>
-            <a href="https://gitee.com/chu1204505056/vue-admin-beautiful" target="_blank">
+            <a href="https://gitee.com/chu1204505056/vue-admin-better" target="_blank">
               <el-button type="warning">vue2.x版本 码云下载源码点star</el-button>
             </a>
-            <a href="https://github.com/chuzhixin/vue-admin-arco" target="_blank">
+            <a href="https://github.com/zxwk1998/vue-admin-arco" target="_blank">
               <el-button type="warning">vue3.x版本 github下载源码点star</el-button>
             </a>
             <a @click="handleChangeTheme">
@@ -323,7 +323,7 @@
                   value: 6500,
                 },
                 {
-                  name: 'chuzhixin',
+                  name: 'zxwk1998',
                   value: 6000,
                 },
                 {
@@ -430,7 +430,7 @@
           {
             icon: 'laptop-code',
             title: '源码',
-            link: 'https://github.com/chuzhixin/vue-admin-better',
+            link: 'https://github.com/zxwk1998/vue-admin-better',
             color: '#b37feb',
           },
           {

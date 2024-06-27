@@ -221,7 +221,7 @@ export const asyncRoutes = [
         meta: { title: '错误日志模拟', permissions: ['admin'] },
       },
       {
-        path: 'https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension',
+        path: 'https://github.com/zxwk1998/vue-admin-better?utm_source=gold_browser_extension',
         name: 'ExternalLink',
         meta: {
           title: '外链',

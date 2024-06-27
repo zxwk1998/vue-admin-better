@@ -1,14 +1,14 @@
 [简体中文](./README.md) | English
 
-<div align="center"><img width="200" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/logo/vab.png"/>
+<div align="center"><img width="200" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/logo/vab.png"/>
 <h1> vue-admin-better（element-ui） </h1>
 <p>The flying snow all over the sky is a flying note, playing out expectations with blessings. May the epidemic dissipate as soon as possible, may you no longer have regrets next year, may you be warm in winter, may you not be cold in spring, and may you have lights in the dark and an umbrella in the rain.
 </p>
 </div>
 
-[![stars](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&logo=GitHub)](https://github.com/chuzhixin/vue-admin-beautiful)
+[![stars](https://img.shields.io/github/stars/zxwk1998/vue-admin-better?style=flat-square&logo=GitHub)](https://github.com/zxwk1998/vue-admin-better)
 [![star](https://gitee.com/chu1204505056/vue-admin-better/badge/star.svg?theme=gray)](https://gitee.com/chu1204505056/vue-admin-better)
-[![license](https://img.shields.io/github/license/chuzhixin/vue-admin-beautiful?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
+[![license](https://img.shields.io/github/license/zxwk1998/vue-admin-better?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
 
 ---
 
@@ -38,7 +38,7 @@
 
 - [📌 Pro and plus purchase address authorization](https://vue-admin-beautiful.com/authorization/)
 
-- [🌐 Github Warehouse address](https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension)
+- [🌐 Github Warehouse address](https://github.com/zxwk1998/vue-admin-better?utm_source=gold_browser_extension)
 
 - [🌐 Gitee Warehouse address](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
 
@@ -56,18 +56,18 @@
 - [Admin Pro](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
 - [Admin Plus](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
 
-## 🌱 Vue3.x vue3.0-antdv [Click switch branch](https://github.com/chuzhixin/vue-admin-better/tree/vue3.0-antdv)
+## 🌱 Vue3.x vue3.0-antdv [Click switch branch](https://github.com/zxwk1998/vue-admin-better/tree/vue3.0-antdv)
 
 ```bash
-git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-better.git
+git clone -b vue3.0-antdv https://github.com/zxwk1998/vue-admin-better.git
 npm i --registry=http://mirrors.cloud.tencent.com/npm/
 npm run serve
 ```
 
-## 🌱 Vue2.xmain [Click switch branch](https://github.com/chuzhixin/vue-admin-better/tree/master)
+## 🌱 Vue2.xmain [Click switch branch](https://github.com/zxwk1998/vue-admin-better/tree/master)
 
 ```bash
-git clone -b master https://github.com/chuzhixin/vue-admin-better.git
+git clone -b master https://github.com/zxwk1998/vue-admin-better.git
 npm i --registry=http://mirrors.cloud.tencent.com/npm/
 npm run serve
 ```
@@ -83,16 +83,16 @@ npm run serve
 <table>
 <tr>
 <!-- <td>
-<img width="200px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/qq_group/hbm.jpg">
+<img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/qq_group/hbm.jpg">
 </td> -->
 <td>
-<img width="200px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/zfb_kf.jpg">
+<img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/zfb_kf.jpg">
 </td>
 <td>
-<img width="200px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-2.jpg">
+<img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/qq_group/vab-2.jpg">
 </td>
 <td>
-<img width="200px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-3.jpg">
+<img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/qq_group/vab-3.jpg">
 </td>
 </tr>
 </table>
@@ -100,10 +100,10 @@ npm run serve
 ## 🙈 We promise to sponsor open source projects regularly (thank giant)
 
 <a title="vue" href="https://opencollective.com/vuejs" target="_blank">
-<img width="64px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/vue.png"/>
+<img width="64px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/vue.png"/>
 </a>
 <a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
-<img width="64px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/element-plus.png"/>
+<img width="64px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/element-plus.png"/>
 </a>
 <a title="ant-design-vue" href="https://opencollective.com/ant-design-vue" target="_blank">
 <img width="64px" src="https://images.opencollective.com/ant-design-vue/2ec179b/logo/256.png"/>
@@ -166,7 +166,7 @@ Precautions for use:
 
 ## 🎉 Function map
 
-![img](https://gcore.jsdelivr.net/gh/chuzhixin/image/vip/flow.drawio.png)
+![img](https://gcore.jsdelivr.net/gh/zxwk1998/image/vip/flow.drawio.png)
 
 ## 🗃️ design sketch
 
@@ -175,26 +175,26 @@ The following is a screenshot of the pro version:
 <table>
 <tr>
 <td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/2.png">
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/2.png">
 </td>
 <td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/6.png">
-</td>
-</tr>
-<tr>
-<td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/8.png">
-</td>
-<td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/9.png">
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/6.png">
 </td>
 </tr>
 <tr>
 <td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/3.png">
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/8.png">
 </td>
 <td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/5.png">
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/9.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/3.png">
+</td>
+<td>
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/5.png">
 </td>
 </tr>
 </table>

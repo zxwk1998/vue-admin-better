@@ -1,5 +1,5 @@
 /**
- * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
+ * @author zxwk1998  （不想保留author可删除）
  * @description 判读是否为外链
  * @param path
  * @returns {boolean}
@@ -19,7 +19,7 @@ export function isPassword(str) {
 }
 
 /**
- * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
+ * @author zxwk1998  （不想保留author可删除）
  * @description 判断是否是字符串
  * @param str
  * @returns {boolean}
@@ -29,7 +29,7 @@ export function isString(str) {
 }
 
 /**
- * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
+ * @author zxwk1998  （不想保留author可删除）
  * @description 判断是否是数组
  * @param arg
  * @returns {arg is any[]|boolean}
@@ -42,7 +42,7 @@ export function isArray(arg) {
 }
 
 /**
- * @author chuzhixin 1204505056@qq.com （不想保留author可删除）
+ * @author zxwk1998  （不想保留author可删除）
  * @description 判断是否是手机号
  * @param str
  * @returns {boolean}

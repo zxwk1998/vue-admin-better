@@ -28,8 +28,8 @@
       return {
         form: {
           payAccount: 'XXXXXXXXXXXXXXXX',
-          gatheringAccount: '1204505056@qq.com',
-          gatheringName: 'chuzhixin',
+          gatheringAccount: '',
+          gatheringName: 'zxwk1998',
           price: '100',
         },
         rules: {

@@ -2,14 +2,14 @@
 
 简体中文 | [English](./README.en.md)
 
-<div align="center"><img width="200" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/logo/vab.png"/>
+<div align="center"><img width="200" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/logo/vab.png"/>
 <h1> vue-admin-better</h1>
 <p>瑞雪兆丰年，红梅报新春，愿您新的一年平安喜乐，万事顺意，所得皆所愿！</p>
 </div>
 
-[![stars](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=flat-square&logo=GitHub)](https://github.com/chuzhixin/vue-admin-beautiful)
+[![stars](https://img.shields.io/github/stars/zxwk1998/vue-admin-better?style=flat-square&logo=GitHub)](https://github.com/zxwk1998/vue-admin-better)
 [![star](https://gitee.com/chu1204505056/vue-admin-better/badge/star.svg?theme=gray)](https://gitee.com/chu1204505056/vue-admin-better)
-[![license](https://img.shields.io/github/license/chuzhixin/vue-admin-beautiful?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
+[![license](https://img.shields.io/github/license/zxwk1998/vue-admin-better?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
 
 ---
 
@@ -17,7 +17,7 @@
 
 基于 vite5.x + vue3.x + arco-design2.x 全新的前端框架 vue-admin-arco， 欢迎点击查看或试用 👏🏻👏🏻👏🏻
 
-[开源地址](https://github.com/chuzhixin/vue-admin-arco) | [演示地址](https://vue-admin-beautiful.com/vue-admin-arco) -->
+[开源地址](https://github.com/zxwk1998/vue-admin-arco) | [演示地址](https://vue-admin-beautiful.com/vue-admin-arco) -->
 
 ## 🎉 特性
 
@@ -53,9 +53,9 @@
 
 ## 🌐 仓库地址
 
-- [🌐 vue2.x github 仓库地址](https://github.com/chuzhixin/vue-admin-beautiful?utm_source=gold_browser_extension)
+- [🌐 vue2.x github 仓库地址](https://github.com/zxwk1998/vue-admin-better?utm_source=gold_browser_extension)
 
-- [🌐 vue3.x github 仓库地址](https://github.com/chuzhixin/vue-admin-arco?utm_source=gold_browser_extension)
+- [🌐 vue3.x github 仓库地址](https://github.com/zxwk1998/vue-admin-arco?utm_source=gold_browser_extension)
 
 - [🌐 vue2.x 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
 
@@ -69,13 +69,13 @@
 <table>
 <tr>
 <td>
-<img width="200px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/zfb_kf.jpg">
+<img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/zfb_kf.jpg">
 </td>
 <td>
-<img width="200px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-2.jpg">
+<img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/qq_group/vab-2.jpg">
 </td>
 <td>
-<img width="200px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/qq_group/vab-3.jpg">
+<img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/qq_group/vab-3.jpg">
 </td>
 </tr>
 </table>
@@ -85,33 +85,33 @@
 - [Admin Pro](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
 - [Admin Plus](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
 
-## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）[点击切换分支](https://github.com/chuzhixin/vue-admin-better/tree/vue3.0-antdv)
+## 🌱 vue3.x vue3.0-antdv 分支（ant-design-vue）[点击切换分支](https://github.com/zxwk1998/vue-admin-better/tree/vue3.0-antdv)
 
 ```bash
 # 克隆项目
-git clone -b vue3.0-antdv https://github.com/chuzhixin/vue-admin-better.git
+git clone -b vue3.0-antdv https://github.com/zxwk1998/vue-admin-better.git
 # 安装依赖
 npm i --registry=http://mirrors.cloud.tencent.com/npm/
 # 本地开发 启动项目
 npm run serve
 ```
 
-## 🌱 vue3.x arco-design [点击切换仓库](https://github.com/chuzhixin/vue-admin-arco)
+## 🌱 vue3.x arco-design [点击切换仓库](https://github.com/zxwk1998/vue-admin-arco)
 
 ```bash
 # 克隆项目
-git clonehttps://github.com/chuzhixin/vue-admin-arco.git
+git clonehttps://github.com/zxwk1998/vue-admin-arco.git
 # 安装依赖
 npm i --registry=http://mirrors.cloud.tencent.com/npm/
 # 本地开发 启动项目
 npm run dev
 ```
 
-## 🌱vue2.x master 分支（element-ui）[点击切换分支](https://github.com/chuzhixin/vue-admin-better/tree/master)
+## 🌱vue2.x master 分支（element-ui）[点击切换分支](https://github.com/zxwk1998/vue-admin-better/tree/master)
 
 ```bash
 # 克隆项目
-git clone -b master https://github.com/chuzhixin/vue-admin-better.git
+git clone -b master https://github.com/zxwk1998/vue-admin-better.git
 # 安装依赖
 npm i --registry=http://mirrors.cloud.tencent.com/npm/
 # 本地开发 启动项目
@@ -133,10 +133,10 @@ npm run serve
 - 如果您觉得 vue admin better 帮到了您 ，如果情况允许，您可以选择赞助以下项目
 
 <a title="vue" href="https://opencollective.com/vuejs" target="_blank">
-<img width="64px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/vue.png"/>
+<img width="64px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/vue.png"/>
 </a>
 <a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
-<img width="64px" src="https://gcore.jsdelivr.net/gh/chuzhixin/image/element-plus.png"/>
+<img width="64px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/element-plus.png"/>
 </a>
 <a title="ant-design-vue" href="https://opencollective.com/ant-design-vue" target="_blank">
 <img width="64px" src="https://images.opencollective.com/ant-design-vue/2ec179b/logo/256.png"/>
@@ -195,15 +195,15 @@ npm run serve
 
 ## 🎨 Star
 
-[![Stargazers for vue-admin-better](https://reporoster.com/stars/chuzhixin/vue-admin-better)](https://github.com/chuzhixin/vue-admin-better/stargazers)
+[![Stargazers for vue-admin-better](https://reporoster.com/stars/zxwk1998/vue-admin-better)](https://github.com/zxwk1998/vue-admin-better/stargazers)
 
 ## ✨ Fork
 
-[![Forkers repo roster for vue-admin-better](https://reporoster.com/forks/chuzhixin/vue-admin-better)](https://github.com/chuzhixin/vue-admin-better/network/members)
+[![Forkers repo roster for vue-admin-better](https://reporoster.com/forks/zxwk1998/vue-admin-better)](https://github.com/zxwk1998/vue-admin-better/network/members)
 
 ## 🎉 功能地图
 
-![img](https://gcore.jsdelivr.net/gh/chuzhixin/image/vip/flow.drawio.png)
+![img](https://gcore.jsdelivr.net/gh/zxwk1998/image/vip/flow.drawio.png)
 
 ## 🗃️ 效果图
 
@@ -212,26 +212,26 @@ npm run serve
 <table>
 <tr>
 <td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/2.png">
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/2.png">
 </td>
 <td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/6.png">
-</td>
-</tr>
-<tr>
-<td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/8.png">
-</td>
-<td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/9.png">
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/6.png">
 </td>
 </tr>
 <tr>
 <td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/3.png">
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/8.png">
 </td>
 <td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/5.png">
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/9.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/3.png">
+</td>
+<td>
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/5.png">
 </td>
 </tr>
 </table>
@@ -241,26 +241,26 @@ npm run serve
 <table>
 <tr>
 <td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/16.png">
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/16.png">
 </td>
 <td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/17.png">
-</td>
-</tr>
-<tr>
-<td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/18.png">
-</td>
-<td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/19.png">
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/17.png">
 </td>
 </tr>
 <tr>
 <td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/20.png">
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/18.png">
 </td>
 <td>
-<img src="https://gcore.jsdelivr.net/gh/chuzhixin/image/21.png">
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/19.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/20.png">
+</td>
+<td>
+<img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/21.png">
 </td>
 </tr>
 </table>

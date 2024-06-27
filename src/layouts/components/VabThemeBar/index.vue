@@ -81,7 +81,7 @@
     created() {
       const handleTheme = () => {
         this.handleOpenThemeBar()
-      };
+      }
 
       this.$baseEventBus.$on('theme', handleTheme)
       const theme = localStorage.getItem('vue-admin-beautiful-theme')
@@ -95,8 +95,8 @@
       }
 
       this.$once('hook:beforeDestroy', () => {
-        this.$baseEventBus.$off('theme', handleTheme);
-      });
+        this.$baseEventBus.$off('theme', handleTheme)
+      })
     },
     methods: {
       ...mapActions({
@@ -145,7 +145,7 @@
         location.reload()
       },
       handleGetCode() {
-        const url = 'https://github.com/chuzhixin/vue-admin-beautiful/tree/master/src/views'
+        const url = 'https://github.com/zxwk1998/vue-admin-better/tree/master/src/views'
         let path = this.$route.path + '/index.vue'
         if (path === '/vab/menu1/menu1-1/menu1-1-1/index.vue') {
           path = '/vab/nested/menu1/menu1-1/menu1-1-1/index.vue'

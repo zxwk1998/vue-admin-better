@@ -49,7 +49,7 @@
             color: '#1890FF',
           },
           {
-            title: 'vue-admin-beautiful标星过1K',
+            title: 'vue-admin-better标星过1K',
             endTIme: '2020-03-31',
             percentage: 100,
             color: '#ffc069',
