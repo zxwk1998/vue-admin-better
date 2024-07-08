@@ -27,7 +27,7 @@ const dayjs = require('dayjs')
 const date = dayjs().format('YYYY_M_D')
 const time = dayjs().format('YYYY-M-D HH:mm:ss')
 process.env.VUE_APP_TITLE = title || 'vue-admin-better'
-process.env.VUE_APP_AUTHOR = author || 'https://vue-admin-beautiful.com'
+process.env.VUE_APP_AUTHOR = author || 'https://vuejs-core.cn'
 process.env.VUE_APP_UPDATE_TIME = time
 process.env.VUE_APP_VERSION = version
 

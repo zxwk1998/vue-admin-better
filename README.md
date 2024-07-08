@@ -17,7 +17,7 @@
 
 基于 vite5.x + vue3.x + arco-design2.x 全新的前端框架 vue-admin-arco， 欢迎点击查看或试用 👏🏻👏🏻👏🏻
 
-[开源地址](https://github.com/zxwk1998/vue-admin-arco) | [演示地址](https://vue-admin-beautiful.com/vue-admin-arco) -->
+[开源地址](https://github.com/zxwk1998/vue-admin-arco) | [演示地址](https://vuejs-core.cn/vue-admin-arco) -->
 
 ## 🎉 特性
 
@@ -31,25 +31,25 @@
 
 ## 🌐 付费版演示地址
 
-- [🚀 Vue Admin Pro 演示地址（vue2.x + element-ui 2.x 付费版本，支持 PC、平板、手机）](https://vue-admin-beautiful.com/admin-pro/)
+- [🚀 Vue Admin Pro 演示地址（vue2.x + element-ui 2.x 付费版本，支持 PC、平板、手机）](https://vuejs-core.cn/admin-pro/)
 
-- [🚀 Vue Admin Plus 演示地址（vue3.x + element-plus 2.x 付费版本，支持 PC、平板、手机）](https://vue-admin-beautiful.com/admin-plus/)
+- [🚀 Vue Admin Plus 演示地址（vue3.x + element-plus 2.x 付费版本，支持 PC、平板、手机）](https://vuejs-core.cn/admin-plus/)
 
-- [🚀 Vue Shop Vite 演示地址（vue3.x + vite 5.x + element-plus 2.x 付费版本，支持 PC、平板、手机）](https://vue-admin-beautiful.com/shop-vite/)
+- [🚀 Vue Shop Vite 演示地址（vue3.x + vite 5.x + element-plus 2.x 付费版本，支持 PC、平板、手机）](https://vuejs-core.cn/shop-vite/)
 
-- [📌 Vue Admin Pro 及 Vue Admin Plus 购买地址](https://vue-admin-beautiful.com/authorization/)
+- [📌 Vue Admin Pro 及 Vue Admin Plus 购买地址](https://vuejs-core.cn/authorization/)
 
-- [📌 Vue Shop Vite 购买地址](https://vue-admin-beautiful.com/authorization/shop-vite.html)
+- [📌 Vue Shop Vite 购买地址](https://vuejs-core.cn/authorization/shop-vite.html)
 
 ## 🌐 免费版演示地址
 
-- [🎉 Vue Admin Better （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-element)
+- [🎉 Vue Admin Better （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-beautiful-element)
 
-- [⚡️ vue3.x + element-plus（alpha 版本，免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-element-plus/)
+- [⚡️ vue3.x + element-plus（alpha 版本，免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-beautiful-element-plus/)
 
-- [⚡️ Vue Admin Ant （vue3.x + ant-design-vue 免费商用，支持 PC、平板、手机）](https://vue-admin-beautiful.com/vue-admin-beautiful-antdv/)
+- [⚡️ Vue Admin Ant （vue3.x + ant-design-vue 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-beautiful-antdv/)
 
-- [⚡️ Vue Admin Arco （vue3.x + vite5.x + arco2.x 免费商用，支持 PC）](https://vue-admin-beautiful.com/vue-admin-arco/)
+- [⚡️ Vue Admin Arco （vue3.x + vite5.x + arco2.x 免费商用，支持 PC）](https://vuejs-core.cn/vue-admin-arco/)
 
 ## 🌐 仓库地址
 
@@ -269,7 +269,7 @@ npm run serve
 
 开源版本可免费用于商业用途，如果方便就留个 Star 吧
 
-<!-- ，请遵守 MIT 协议并保留作者技术支持声明，当然如果不愿意保留可以删掉，毕竟我也拿您没办法，能帮到您也当是给自己积德了，至于[Admin](https://vue-admin-beautiful.com/admin-plus/)、[Shop](https://vue-admin-beautiful.com/shop-vite/) 的付费版本的相关说明如下：
+<!-- ，请遵守 MIT 协议并保留作者技术支持声明，当然如果不愿意保留可以删掉，毕竟我也拿您没办法，能帮到您也当是给自己积德了，至于[Admin](https://vuejs-core.cn/admin-plus/)、[Shop](https://vuejs-core.cn/shop-vite/) 的付费版本的相关说明如下：
 本人只参与了前期小部分的开发，所以不必跟开源版做对比，同事的代码功底比我好太多，我自愧不如，关于买这件事，没有强买强卖，您愿意买就买，不愿意买就忽略。我们不高尚，写代码就是为了养家糊口，不是为了用爱发电。这几年看到那么多开源项目借鉴了我们付费版本的布局、主题配置的灵感和创意，一开始我是鄙视的，现在还好状态调整过来了，能够被借鉴，被讨论恰好说明了我们的产品有价值，为了产品卖的更好我们也必须更加用心的去维护付费版本以保持我们产品的竞争力。
 当然，最后还有几句话不得不说，身处互联网由盛转衰的大变革的洪流中，能活下来就已经是千难万难了，希望所有的程序员哥哥姐姐们，早日实现自己的梦想，完成自己的心愿，也想对刚要毕业准备做一名程序员的学弟学妹们说几句，互联网行业没有你们想象的那么高大上，如果想成为一名程序员那就做好加班的准备，如果有更好的选择那就别选这个行业了。 -->
 

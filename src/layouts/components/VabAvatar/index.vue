@@ -48,12 +48,12 @@
             window.open('https://gitee.com/chu1204505056/vue-admin-better')
             break
           case 'pro':
-            window.open('https://vue-admin-beautiful.com/admin-pro/?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=')
+            window.open('https://vuejs-core.cn/admin-pro/?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=')
             break
           case 'plus':
-            window.open('https://vue-admin-beautiful.com/admin-plus/?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=')
+            window.open('https://vuejs-core.cn/admin-plus/?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=')
           case 'shop':
-            window.open('https://vue-admin-beautiful.com/shop-vite/?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=')
+            window.open('https://vuejs-core.cn/shop-vite/?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci=')
         }
       },
       personalCenter() {

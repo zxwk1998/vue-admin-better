@@ -40,7 +40,7 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "prettier.htmlWhitespaceSensitivity": "ignore",
   "prettier.vueIndentScriptAndStyle": true,
-  "docthis.authorName": "https://vue-admin-beautiful.com",
+  "docthis.authorName": "https://vuejs-core.cn",
   "docthis.includeAuthorTag": true,
   "docthis.includeDescriptionTag": true,
   "docthis.enableHungarianNotationEvaluation": true,
