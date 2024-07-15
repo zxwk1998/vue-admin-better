@@ -15,17 +15,13 @@ module.exports = {
       )
     )
 
-    console.log(
-      chalk.green(`> pro版演示地址：http://vue-admin-beautiful.com/admin-pro`)
-    )
+    console.log(chalk.green(`> pro版演示地址：http://vuejs-core.cn/admin-pro`))
 
     console.log(
-      chalk.green(`> plus版演示地址：http://vue-admin-beautiful.com/admin-plus`)
+      chalk.green(`> plus版演示地址：http://vuejs-core.cn/admin-plus`)
     )
 
-    console.log(
-      chalk.green(`> shop版演示地址：http://vue-admin-beautiful.com/shop-vite`)
-    )
+    console.log(chalk.green(`> shop版演示地址：http://vuejs-core.cn/shop-vite`))
 
     console.log(
       chalk.green(

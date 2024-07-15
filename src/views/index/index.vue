@@ -2,7 +2,7 @@
   <div class="index-container">
     <el-row :gutter="20">
       <el-col :lg="24" :md="24" :sm="24" :xl="24" :xs="24">
-        <el-alert v-if="noticeList[0]" :closable="noticeList[0].closable">
+        <el-alert v-if="noticeList">
           <div style="display: flex; align-items: center; justify-content: center">
             <a href="https://github.com/zxwk1998/vue-admin-better" target="_blank">
               <img
@@ -10,7 +10,7 @@
                 style="margin-right: 10px"
               />
             </a>
-            <p v-html="noticeList[0].title"></p>
+            <p v-html="noticeList.notice"></p>
           </div>
         </el-alert>
       </el-col>
@@ -57,32 +57,9 @@
         <el-card class="card" shadow="never">
           <div slot="header">
             <span>依赖信息</span>
-            <div style="float: right">部署时间:{{ updateTime }}</div>
+            <!-- <div style="float: right">部署时间:{{ updateTime }}</div> -->
           </div>
-          <div class="bottom-btn">
-            <el-popover placement="top" trigger="hover" width="250">
-              <p>
-                请我们喝杯咖啡，付款后联系qq
-                783963206，我们将邀请您加入我们的讨论群，谢谢您愿意支持开源，加群获取文档、及基础模板，群内大佬众多，希望能帮到大家（如情况不允许，请勿勉强）。
-              </p>
-              <el-image :src="require('@/assets/zfb_kf.jpg')" />
-              <a slot="reference" target="_blank">
-                <el-button type="primary">QQ讨论群、基础版、文档</el-button>
-              </a>
-            </el-popover>
-            <a href="https://github.com/zxwk1998/vue-admin-better" target="_blank">
-              <el-button type="warning">vue2.x版本 github下载源码点star</el-button>
-            </a>
-            <a href="https://gitee.com/chu1204505056/vue-admin-better" target="_blank">
-              <el-button type="warning">vue2.x版本 码云下载源码点star</el-button>
-            </a>
-            <a href="https://github.com/zxwk1998/vue-admin-arco" target="_blank">
-              <el-button type="warning">vue3.x版本 github下载源码点star</el-button>
-            </a>
-            <a @click="handleChangeTheme">
-              <el-button type="danger">修改主题和布局</el-button>
-            </a>
-          </div>
+
           <table class="table">
             <tr>
               <td>@vue/cli版本</td>
@@ -121,8 +98,12 @@
               <td>{{ dependencies['lodash'] }}</td>
             </tr>
           </table>
+          <br />
+          <el-alert :closable="false" :title="userAgent" type="info" />
+          <br />
         </el-card>
-
+      </el-col>
+      <el-col :lg="13" :md="13" :sm="24" :xl="13" :xs="24">
         <el-card shadow="never">
           <div slot="header">
             <span>其他信息</span>
@@ -131,28 +112,40 @@
             <vab-colorful-icon icon-class="vab" style="font-size: 140px" />
             <h1 style="font-size: 30px">vue-admin-better</h1>
           </div>
-          <div v-for="(item, index) in noticeList" :key="index">
-            <el-alert v-if="index !== 0" :closable="item.closable" :title="item.title" :type="item.type" />
-            <br />
+          <div class="bottom-btn">
+            <el-popover placement="top" trigger="hover" width="250">
+              <p>
+                请我们喝杯咖啡，付款后联系qq
+                783963206，我们将邀请您加入我们的讨论群，谢谢您愿意支持开源，加群获取文档、及基础模板，群内大佬众多，希望能帮到大家（如情况不允许，请勿勉强）。
+              </p>
+              <el-image :src="require('@/assets/zfb_kf.jpg')" />
+              <a slot="reference" target="_blank">
+                <el-button type="primary">QQ讨论群、基础版、文档</el-button>
+              </a>
+            </el-popover>
+            <a href="https://github.com/zxwk1998/vue-admin-better" target="_blank">
+              <el-button type="plain">vue2.x版本 github下载源码点star</el-button>
+            </a>
+            <a href="https://gitee.com/chu1204505056/vue-admin-better" target="_blank">
+              <el-button type="plain">vue2.x版本 码云下载源码点star</el-button>
+            </a>
+            <a href="https://github.com/zxwk1998/vue-admin-arco" target="_blank">
+              <el-button type="plain">vue3.x版本 github下载源码点star</el-button>
+            </a>
+            <a href="https://vuejs-core.cn/admin-pro" target="_blank">
+              <el-button type="primary">Admin Pro ￥699</el-button>
+            </a>
+            <a href="https://vuejs-core.cn/admin-plus" target="_blank">
+              <el-button type="primary">Admin Plus ￥799</el-button>
+            </a>
+            <a href="https://vuejs-core.cn/shop-vite" target="_blank">
+              <el-button type="success">Shop Vite ￥1899</el-button>
+            </a>
+            <a @click="handleChangeTheme">
+              <el-button type="danger">修改主题和布局</el-button>
+            </a>
           </div>
-          <el-alert :closable="false" :title="userAgent" type="info" />
-          <br />
         </el-card>
-      </el-col>
-
-      <el-col :lg="13" :md="13" :sm="24" :xl="13" :xs="24">
-        <el-card class="card" shadow="never">
-          <div slot="header">
-            <span>更新日志</span>
-          </div>
-          <el-timeline :reverse="reverse">
-            <el-timeline-item v-for="(activity, index) in activities" :key="index" :color="activity.color" :timestamp="activity.timestamp">
-              {{ activity.content }}
-            </el-timeline-item>
-          </el-timeline>
-        </el-card>
-        <plan />
-        <version-information />
       </el-col>
     </el-row>
   </div>
@@ -161,17 +154,12 @@
 <script>
   import VabChart from '@/plugins/echarts'
   import { dependencies, devDependencies } from '../../../package.json'
-  import { getList } from '@/api/changeLog'
   import { getNoticeList } from '@/api/notice'
-  import Plan from './components/Plan'
-  import VersionInformation from './components/VersionInformation'
 
   export default {
     name: 'Index',
     components: {
       VabChart,
-      Plan,
-      VersionInformation,
     },
     data() {
       return {
@@ -515,28 +503,8 @@
         this.$baseEventBus.$emit('theme')
       },
       async fetchData() {
-        const { data } = await getList()
-        data.map((item, index) => {
-          if (index === data.length - 1) {
-            item.color = '#0bbd87'
-          }
-        })
-        this.activities = data
         const res = await getNoticeList()
         this.noticeList = res.data
-        /* getRepos({
-    token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
-  }).then((res) => {
-    const per_page = Math.ceil(res.data.stargazers_count / 100);
-    alert(per_page);
-    getStargazers({
-      token: "1061286824f978ea3cf98b7b8ea26fe27ba7cea1",
-      page: 1,
-      per_page: res.per_page,
-    }).then((res) => {
-      alert(JSON.stringify(res));
-    });
-  }); */
       },
     },
   }
