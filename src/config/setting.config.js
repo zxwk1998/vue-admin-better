@@ -59,7 +59,7 @@ const setting = {
   //需要加loading层的请求，防止重复提交
   debounce: ['doEdit'],
   //需要自动注入并加载的模块
-  providePlugin: { maptalks: 'maptalks', 'window.maptalks': 'maptalks' },
+  providePlugin: {},
   //代码生成机生成在view下的文件夹名称
   templateFolder: 'project',
   //是否显示终端donation打印

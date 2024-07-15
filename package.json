@@ -42,8 +42,6 @@
     "jsencrypt": "^3.3.2",
     "layouts": "file:layouts",
     "lodash": "^4.17.21",
-    "maptalks": "^0.49.5",
-    "mapv": "^2.0.62",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "qs": "^6.12.1",

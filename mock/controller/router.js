@@ -95,12 +95,6 @@ const data = [
         },
       },
       {
-        path: 'map',
-        name: 'Map',
-        component: '@/views/vab/map/index',
-        meta: { title: '地图', permissions: ['admin'], badge: 'Pro' },
-      },
-      {
         path: 'webSocket',
         name: 'WebSocket',
         component: '@/views/vab/webSocket/index',
@@ -175,12 +169,6 @@ const data = [
         name: 'Lodash',
         component: '@/views/vab/lodash/index',
         meta: { title: 'lodash', permissions: ['admin'] },
-      },
-      {
-        path: 'smallComponents',
-        name: 'SmallComponents',
-        component: '@/views/vab/smallComponents/index',
-        meta: { title: '小组件', permissions: ['admin'] },
       },
 
       {

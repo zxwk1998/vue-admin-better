@@ -121,15 +121,6 @@ export const asyncRoutes = [
           permissions: ['admin'],
         },
       },
-      {
-        path: 'map',
-        component: () => import('@/views/vab/map/index'),
-        name: 'Map',
-        meta: {
-          title: '地图',
-          permissions: ['admin'],
-        },
-      },
 
       {
         path: 'webSocket',
@@ -200,12 +191,6 @@ export const asyncRoutes = [
         name: 'Lodash',
         component: () => import('@/views/vab/lodash/index'),
         meta: { title: 'lodash', permissions: ['admin'] },
-      },
-      {
-        path: 'smallComponents',
-        name: 'SmallComponents',
-        component: () => import('@/views/vab/smallComponents/index'),
-        meta: { title: '小组件', permissions: ['admin'] },
       },
 
       {
