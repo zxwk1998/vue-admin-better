@@ -24,32 +24,26 @@
 
 ## 🌐 Address
 
-- [🎉 Vue2. X + element UI (free commercial, PC, tablet and mobile phone supported)](https://vuejs-core.cn/vue-admin-better/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🎉 Vue2. X + element UI (free commercial, PC, tablet and mobile phone supported)](https://vuejs-core.cn/vue-admin-better/)
 
-- [⚡️ Vue3. X + element plus (alpha version, free commercial, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/vue-admin-better-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [⚡️ Vue3. X + element plus (alpha version, free commercial, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/vue-admin-better-plus/)
 
-- [⚡️ Vue3. X + ant design Vue (beta version, free commercial, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/vue-admin-beautiful-antdv/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [⚡️ Vue3. X + ant design Vue (beta version, free commercial, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/vue-admin-beautiful-antdv/)
 
-- [⚡️ vue3.x + vite + vue-admin-arco](https://vuejs-core.cn/vue-admin-arco/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [⚡️ vue3.x + vite + vue-admin-arco](https://vuejs-core.cn/vue-admin-arco/)
 
-- [🚀 Admin Pro demo address (vue2.x paid version, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🚀 Admin Pro demo address (vue2.x paid version, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/admin-pro/)
 
-- [🚀 Admin plus demo address (vue3.x paid version, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
+- [🚀 Admin plus demo address (vue3.x paid version, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/admin-plus/)
 
 - [📌 Pro and plus purchase address authorization](https://vuejs-core.cn/authorization/)
 
-- [🌐 Github Warehouse address](https://github.com/zxwk1998/vue-admin-better?utm_source=gold_browser_extension)
+- [🌐 Github Warehouse address](https://github.com/zxwk1998/vue-admin-better/)
 
-- [🌐 Gitee Warehouse address](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
+- [🌐 Gitee Warehouse address](https://gitee.com/chu1204505056/vue-admin-better/)
 
 - Recently, the VAB official website has been frequently attacked by DDoS. We have taken relevant preventive measures.
   If the website cannot be accessed, please visit the backup address
-
-## 🌐 Backup address (support automatic update of HTTPS website)
-
-- [🚀 Admin Pro demo address (paid version, supporting PC, tablet and mobile phone)](https://chu1204505056.gitee.io/admin-pro/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
-
-- [🚀 Admin plus demo address (vue3. X paid version, supporting PC, tablet and mobile phone)](https://chu1204505056.gitee.io/admin-plus/?hmsr=github&hmpl=&hmcu=&hmkw=&hmci=)
 
 ## 📦️ Desktop applications
 
@@ -77,7 +71,7 @@ npm run serve
 - Let's have a cup of coffee, and then contact QQ 783963206 to invite you to the discussion group. Because of the large
   number of users, if you haven't passed a friend's request, please contact Alipay on the Alipay payment page, whether
   you invite or not, you can enjoy the open source code, thank you for your support and trust, and provide the
-  vue-admin-beautifu basic version in the group. Automatic configuration tutorial of development tools and project
+  vue-admin-better basic version in the group. Automatic configuration tutorial of development tools and project
   development documents.
 
 <table>

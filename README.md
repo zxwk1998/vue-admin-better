@@ -64,13 +64,13 @@
 
 ## 🌐 仓库地址
 
-- [🌐 vue2.x github 仓库地址](https://github.com/zxwk1998/vue-admin-better?utm_source=gold_browser_extension)
+- [🌐 vue2.x github 仓库地址](https://github.com/zxwk1998/vue-admin-better/)
 
-- [🌐 vue3.x github 仓库地址](https://github.com/zxwk1998/vue-admin-arco?utm_source=gold_browser_extension)
+- [🌐 vue3.x github 仓库地址](https://github.com/zxwk1998/vue-admin-arco/)
 
-- [🌐 vue2.x 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better?_from=gitee_search)
+- [🌐 vue2.x 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better/)
 
-- [🌐 vue3.x 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-arco?_from=gitee_search)
+- [🌐 vue3.x 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-arco/)
 
 ## 🍻 前端讨论 QQ 群
 
