@@ -26,7 +26,7 @@ jobs:
       - name: deploy
         run: |
           pnpm install 
-          export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build
+          npm run build:mac
           cd dist
           touch README.md .nojekyll
 
