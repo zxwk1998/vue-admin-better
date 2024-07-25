@@ -1,9 +1,9 @@
 {
   "name": "vue-admin-better",
-  "version": "2.5.5",
+  "version": "2.5.6",
   "author": "zxwk1998",
   "participants": [],
-  "homepage": "https://chu1204505056.gitee.io/vue-admin-better",
+  "homepage": "https://vuejs-core.cn",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
