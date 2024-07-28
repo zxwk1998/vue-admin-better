@@ -26,9 +26,9 @@
 
 - [🎉 Vue2. X + element UI (free commercial, PC, tablet and mobile phone supported)](https://vuejs-core.cn/vue-admin-better/)
 
-- [⚡️ Vue3. X + element plus (alpha version, free commercial, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/vue-admin-better-plus/)
+<!-- - [⚡️ Vue3. X + element plus (alpha version, free commercial, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/vue-admin-better-plus/) -->
 
-- [⚡️ Vue3. X + ant design Vue (beta version, free commercial, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/vue-admin-beautiful-antdv/)
+<!-- - [⚡️ Vue3. X + ant design Vue (beta version, free commercial, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/vue-admin-beautiful-antdv/) -->
 
 - [⚡️ vue3.x + vite + vue-admin-arco](https://vuejs-core.cn/vue-admin-arco/)
 
@@ -50,13 +50,13 @@
 - [Admin Pro](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
 - [Admin Plus](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
 
-## 🌱 Vue3.x vue3.0-antdv [Click switch branch](https://github.com/zxwk1998/vue-admin-better/tree/vue3.0-antdv)
+<!-- ## 🌱 Vue3.x vue3.0-antdv [Click switch branch](https://github.com/zxwk1998/vue-admin-better/tree/vue3.0-antdv)
 
 ```bash
 git clone -b vue3.0-antdv https://github.com/zxwk1998/vue-admin-better.git
 npm i --registry=http://mirrors.cloud.tencent.com/npm/
 npm run serve
-```
+``` -->
 
 ## 🌱 Vue2.xmain [Click switch branch](https://github.com/zxwk1998/vue-admin-better/tree/master)
 
