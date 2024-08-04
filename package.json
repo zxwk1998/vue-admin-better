@@ -15,7 +15,7 @@
     "lint:eslint": "eslint {src,mock,library}/**/*.{vue,js} --fix",
     "lint:prettier": "prettier {src,mock,library}/**/*.{html,vue,css,sass,scss,js,ts,md} --write",
     "clear": "rimraf node_modules&&npm install  --registry=--registry=https://registry.npmmirror.com",
-    "update": "ncu -u --reject webpack,eslint-plugin-prettier,@vue/eslint-config-prettier,prettier,layouts,sass-loader,sass,screenfull,eslint,chalk,vue,vue-template-compiler,vue-router,vuex,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,eslint-plugin-vue --registry=https://registry.npmmirror.com&&pnpm i",
+    "update": "ncu -u --reject vue-echarts,webpack,eslint-plugin-prettier,@vue/eslint-config-prettier,prettier,layouts,sass-loader,sass,screenfull,eslint,chalk,vue,vue-template-compiler,vue-router,vuex,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,eslint-plugin-vue --registry=https://registry.npmmirror.com&&pnpm i",
     "push": "start ./push.sh"
   },
   "repository": {
@@ -49,7 +49,7 @@
     "sortablejs": "^1.15.2",
     "vab-icon": "file:vab-icon",
     "vue": "~2.7.14",
-    "vue-echarts": "7.0.1",
+    "vue-echarts": "6.7.3",
     "vue-router": "^3.6.5",
     "vue-template-compiler": "~2.7.14",
     "vuex": "^3.6.2"

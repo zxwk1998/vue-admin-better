@@ -60,8 +60,8 @@ importers:
         specifier: ~2.7.14
         version: 2.7.15
       vue-echarts:
-        specifier: 7.0.1
-        version: 7.0.1(@vue/composition-api@1.7.2(vue@2.7.15))(echarts@5.5.1)(vue@2.7.15)
+        specifier: 6.7.3
+        version: 6.7.3(@vue/composition-api@1.7.2(vue@2.7.15))(echarts@5.5.1)(vue@2.7.15)
       vue-router:
         specifier: ^3.6.5
         version: 3.6.5(vue@2.7.15)
@@ -5124,6 +5124,9 @@ packages:
   requires-port@1.0.0:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
 
+  resize-detector@0.3.0:
+    resolution: {integrity: sha512-R/tCuvuOHQ8o2boRP6vgx8hXCCy87H1eY9V5imBYeVNyNVpuL9ciReSccLj2gDcax9+2weXy3bc8Vv+NRXeEvQ==}
+
   resize-observer-polyfill@1.5.1:
     resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==}
 
@@ -6095,13 +6098,16 @@ packages:
       '@vue/composition-api':
         optional: true
 
-  vue-echarts@7.0.1:
-    resolution: {integrity: sha512-P+u6mwAtHuPKC3uDQ+sqIhwBBTvrvEFvgHYzV2Ba1/7+rSzRd6o3Dv/A8PuLP24hB1zPPNfu6BvNyD139X1qbg==}
+  vue-echarts@6.7.3:
+    resolution: {integrity: sha512-vXLKpALFjbPphW9IfQPOVfb1KjGZ/f8qa/FZHi9lZIWzAnQC1DgnmEK3pJgEkyo6EP7UnX6Bv/V3Ke7p+qCNXA==}
     peerDependencies:
+      '@vue/composition-api': ^1.0.5
       '@vue/runtime-core': ^3.0.0
-      echarts: ^5.5.1
-      vue: ^2.7.0 || ^3.1.1
+      echarts: ^5.4.1
+      vue: ^2.6.12 || ^3.1.1
     peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
       '@vue/runtime-core':
         optional: true
 
@@ -12342,6 +12348,8 @@ snapshots:
 
   requires-port@1.0.0: {}
 
+  resize-detector@0.3.0: {}
+
   resize-observer-polyfill@1.5.1: {}
 
   resolve-cwd@2.0.0:
@@ -13462,13 +13470,14 @@ snapshots:
     optionalDependencies:
       '@vue/composition-api': 1.7.2(vue@2.7.15)
 
-  vue-echarts@7.0.1(@vue/composition-api@1.7.2(vue@2.7.15))(echarts@5.5.1)(vue@2.7.15):
+  vue-echarts@6.7.3(@vue/composition-api@1.7.2(vue@2.7.15))(echarts@5.5.1)(vue@2.7.15):
     dependencies:
       echarts: 5.5.1
+      resize-detector: 0.3.0
       vue: 2.7.15
       vue-demi: 0.13.11(@vue/composition-api@1.7.2(vue@2.7.15))(vue@2.7.15)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
+    optionalDependencies:
+      '@vue/composition-api': 1.7.2(vue@2.7.15)
 
   vue-eslint-parser@9.3.2(eslint@6.8.0):
     dependencies:
