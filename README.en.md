@@ -28,7 +28,7 @@
 
 <!-- - [⚡️ Vue3. X + element plus (alpha version, free commercial, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/vue-admin-better-plus/) -->
 
-<!-- - [⚡️ Vue3. X + ant design Vue (beta version, free commercial, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/vue-admin-beautiful-antdv/) -->
+<!-- - [⚡️ Vue3. X + ant design Vue (beta version, free commercial, supporting PC, tablet and mobile phone)](https://vuejs-core.cn/vue-admin-better-antdv/) -->
 
 - [⚡️ vue3.x + vite + vue-admin-arco](https://vuejs-core.cn/vue-admin-arco/)
 

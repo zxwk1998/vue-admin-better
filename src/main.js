@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'production') {
 Vue.config.productionTip = false
 
 new Vue({
-  el: '#vue-admin-beautiful',
+  el: '#vue-admin-better',
   router,
   store,
   render: (h) => h(App),

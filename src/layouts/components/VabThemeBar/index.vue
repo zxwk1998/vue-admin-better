@@ -84,7 +84,7 @@
       }
 
       this.$baseEventBus.$on('theme', handleTheme)
-      const theme = localStorage.getItem('vue-admin-beautiful-theme')
+      const theme = localStorage.getItem('vue-admin-better-theme')
       if (null !== theme) {
         this.theme = JSON.parse(theme)
         this.handleSetTheme()
@@ -113,7 +113,7 @@
       handleSetTheme() {
         let { name, layout, header, tabsBar } = this.theme
         localStorage.setItem(
-          'vue-admin-beautiful-theme',
+          'vue-admin-better-theme',
           `{
             "name":"${name}",
             "layout":"${layout}",
@@ -124,7 +124,7 @@
         if (!this.handleIsMobile()) this.changeLayout(layout)
         this.changeHeader(header)
         this.changeTabsBar(tabsBar)
-        document.getElementsByTagName('body')[0].className = `vue-admin-beautiful-theme-${name}`
+        document.getElementsByTagName('body')[0].className = `vue-admin-better-theme-${name}`
         this.drawerVisible = false
       },
       handleSaveTheme() {
@@ -132,8 +132,8 @@
       },
       handleSetDfaultTheme() {
         let { name } = this.theme
-        document.getElementsByTagName('body')[0].classList.remove(`vue-admin-beautiful-theme-${name}`)
-        localStorage.removeItem('vue-admin-beautiful-theme')
+        document.getElementsByTagName('body')[0].classList.remove(`vue-admin-better-theme-${name}`)
+        localStorage.removeItem('vue-admin-better-theme')
         this.$refs['form'].resetFields()
         Object.assign(this.$data, this.$options.data())
         this.changeHeader(defaultLayout)

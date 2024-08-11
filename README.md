@@ -58,7 +58,7 @@
 
 <!-- - [⚡️ vue3.x + element-plus（alpha 版本，免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-better-plus/) -->
 
-<!-- - [⚡️ Vue Admin Ant （vue3.x + ant-design-vue 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-beautiful-antdv/) -->
+<!-- - [⚡️ Vue Admin Ant （vue3.x + ant-design-vue 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-better-antdv/) -->
 
 - [⚡️ Vue Admin Arco （vue3.x + vite5.x + arco2.x 免费商用，支持 PC）](https://vuejs-core.cn/vue-admin-arco/)
 
