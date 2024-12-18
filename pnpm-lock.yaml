@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.9
         version: 1.7.9
       caniuse-lite:
-        specifier: ^1.0.30001687
-        version: 1.0.30001687
+        specifier: ^1.0.30001689
+        version: 1.0.30001689
       clipboard:
         specifier: ^2.0.11
         version: 2.0.11
@@ -94,8 +94,8 @@ importers:
         specifier: ^4.1.2
         version: 4.1.2
       chokidar:
-        specifier: ^4.0.1
-        version: 4.0.1
+        specifier: ^4.0.2
+        version: 4.0.2
       eslint:
         specifier: ^6.8.0
         version: 6.8.0
@@ -121,14 +121,14 @@ importers:
         specifier: ^10.1.1
         version: 10.4.1(sass@1.32.13)(webpack@4.46.0)
       stylelint:
-        specifier: ^16.11.0
-        version: 16.11.0
+        specifier: ^16.12.0
+        version: 16.12.0
       stylelint-config-prettier:
         specifier: ^9.0.5
-        version: 9.0.5(stylelint@16.11.0)
+        version: 9.0.5(stylelint@16.12.0)
       stylelint-config-recess-order:
         specifier: ^5.1.1
-        version: 5.1.1(stylelint@16.11.0)
+        version: 5.1.1(stylelint@16.12.0)
       svg-sprite-loader:
         specifier: ^6.0.11
         version: 6.0.11
@@ -1669,8 +1669,8 @@ packages:
   caniuse-api@3.0.0:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
 
-  caniuse-lite@1.0.30001687:
-    resolution: {integrity: sha512-0S/FDhf4ZiqrTUiQ39dKeUjYRjkv7lOZU1Dgif2rIqrTzX/1wV2hfKu9TOm1IHkdSijfLswxTFzl/cvir+SLSQ==}
+  caniuse-lite@1.0.30001689:
+    resolution: {integrity: sha512-CmeR2VBycfa+5/jOfnp/NpWPGd06nf1XYiefUvhXFfZE4GkRc9jv+eGPS4nT558WS/8lYCzV8SlANCIPvbWP1g==}
 
   case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
@@ -1717,8 +1717,8 @@ packages:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
 
-  chokidar@4.0.1:
-    resolution: {integrity: sha512-n8enUVCED/KVRQlab1hr3MVpcVMvxtZjmEa956u+4YijlmQED223XMSYj2tLuKvr4jcCTzNNMpQDUer72MMmzA==}
+  chokidar@4.0.2:
+    resolution: {integrity: sha512-/b57FK+bblSU+dfewfFe0rT1YjVDfOmeLQwCAuC+vwvgLkXboATqqmy+Ipux6JrF6L5joe5CBnFOw+gLWH6yKg==}
     engines: {node: '>= 14.16.0'}
 
   chownr@1.1.4:
@@ -2282,15 +2282,6 @@ packages:
 
   debug@4.3.6:
     resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-
-  debug@4.3.7:
-    resolution: {integrity: sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -4646,9 +4637,6 @@ packages:
   picocolors@1.0.1:
     resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
 
-  picocolors@1.1.0:
-    resolution: {integrity: sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==}
-
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
@@ -5692,8 +5680,8 @@ packages:
     peerDependencies:
       stylelint: ^14.0.0 || ^15.0.0 || ^16.0.1
 
-  stylelint@16.11.0:
-    resolution: {integrity: sha512-zrl4IrKmjJQ+h9FoMp69UMCq5SxeHk0URhxUBj4d3ISzo/DplOFBJZc7t7Dr6otB+1bfbbKNLOmCDpzKSlW+Nw==}
+  stylelint@16.12.0:
+    resolution: {integrity: sha512-F8zZ3L/rBpuoBZRvI4JVT20ZanPLXfQLzMOZg1tzPflRVh9mKpOZ8qcSIhh1my3FjAjZWG4T2POwGnmn6a6hbg==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -5753,8 +5741,8 @@ packages:
     resolution: {integrity: sha512-wmEc8m4fjnob4gt5riFRtTu/6+4rSe12TpAELNSqHMfF3IqnA+CH37USM6/YR3qRZv7e56kAEAtd6nKZaxe0Ug==}
     engines: {node: '>=6.0.0'}
 
-  table@6.8.2:
-    resolution: {integrity: sha512-w2sfv80nrAh2VCbqR5AK27wswXhqcck2AhfnNW76beQXskGZ1V12GwS//yYVa3d3fcvAip2OUnbDAjW2k3v9fA==}
+  table@6.9.0:
+    resolution: {integrity: sha512-9kY+CygyYM6j02t5YFHbNz2FN5QmYGv9zAjVp4lCDjlCw7amdckXlEt/bjMhUIfj4ThGRE4gCUH5+yGnNuPo5A==}
     engines: {node: '>=10.0.0'}
 
   tapable@1.1.3:
@@ -6492,7 +6480,7 @@ snapshots:
       '@babel/core': 7.23.3
       '@babel/helper-compilation-targets': 7.22.15
       '@babel/helper-plugin-utils': 7.22.5
-      debug: 4.3.6
+      debug: 4.4.0(supports-color@6.1.0)
       lodash.debounce: 4.0.8
       resolve: 1.22.8
     transitivePeerDependencies:
@@ -8057,7 +8045,7 @@ snapshots:
   autoprefixer@9.8.8:
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001687
+      caniuse-lite: 1.0.30001689
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       picocolors: 0.2.1
@@ -8074,7 +8062,7 @@ snapshots:
 
   axios@1.7.9:
     dependencies:
-      follow-redirects: 1.15.6(debug@4.3.7(supports-color@6.1.0))
+      follow-redirects: 1.15.6(debug@4.4.0(supports-color@6.1.0))
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -8348,7 +8336,7 @@ snapshots:
 
   browserslist@4.23.1:
     dependencies:
-      caniuse-lite: 1.0.30001687
+      caniuse-lite: 1.0.30001689
       electron-to-chromium: 1.4.796
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.1)
@@ -8479,11 +8467,11 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001687
+      caniuse-lite: 1.0.30001689
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
-  caniuse-lite@1.0.30001687: {}
+  caniuse-lite@1.0.30001689: {}
 
   case-sensitive-paths-webpack-plugin@2.4.0: {}
 
@@ -8557,7 +8545,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  chokidar@4.0.1:
+  chokidar@4.0.2:
     dependencies:
       readdirp: 4.0.1
 
@@ -9050,15 +9038,11 @@ snapshots:
     dependencies:
       ms: 2.1.2
 
-  debug@4.3.7(supports-color@6.1.0):
+  debug@4.4.0(supports-color@6.1.0):
     dependencies:
       ms: 2.1.3
     optionalDependencies:
       supports-color: 6.1.0
-
-  debug@4.4.0:
-    dependencies:
-      ms: 2.1.3
 
   decamelize@1.2.0: {}
 
@@ -9994,9 +9978,9 @@ snapshots:
     optionalDependencies:
       debug: 4.3.4
 
-  follow-redirects@1.15.6(debug@4.3.7(supports-color@6.1.0)):
+  follow-redirects@1.15.6(debug@4.4.0(supports-color@6.1.0)):
     optionalDependencies:
-      debug: 4.3.7(supports-color@6.1.0)
+      debug: 4.4.0(supports-color@6.1.0)
 
   for-each@0.3.3:
     dependencies:
@@ -10460,9 +10444,9 @@ snapshots:
 
   http-parser-js@0.5.8: {}
 
-  http-proxy-middleware@0.19.1(debug@4.3.7(supports-color@6.1.0))(supports-color@6.1.0):
+  http-proxy-middleware@0.19.1(debug@4.4.0(supports-color@6.1.0))(supports-color@6.1.0):
     dependencies:
-      http-proxy: 1.18.1(debug@4.3.7(supports-color@6.1.0))
+      http-proxy: 1.18.1(debug@4.4.0(supports-color@6.1.0))
       is-glob: 4.0.3
       lodash: 4.17.21
       micromatch: 3.1.10(supports-color@6.1.0)
@@ -10488,10 +10472,10 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  http-proxy@1.18.1(debug@4.3.7(supports-color@6.1.0)):
+  http-proxy@1.18.1(debug@4.4.0(supports-color@6.1.0)):
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.6(debug@4.3.7(supports-color@6.1.0))
+      follow-redirects: 1.15.6(debug@4.4.0(supports-color@6.1.0))
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -11039,7 +11023,7 @@ snapshots:
     dependencies:
       chalk: 5.3.0
       commander: 12.1.0
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@6.1.0)
       execa: 8.0.1
       lilconfig: 3.1.3
       listr2: 8.2.5
@@ -11789,8 +11773,6 @@ snapshots:
     optional: true
 
   picocolors@1.0.1: {}
-
-  picocolors@1.1.0: {}
 
   picocolors@1.1.1: {}
 
@@ -12796,7 +12778,7 @@ snapshots:
 
   spdy-transport@3.0.0(supports-color@6.1.0):
     dependencies:
-      debug: 4.3.7(supports-color@6.1.0)
+      debug: 4.4.0(supports-color@6.1.0)
       detect-node: 2.1.0
       hpack.js: 2.1.6
       obuf: 1.1.2
@@ -12807,7 +12789,7 @@ snapshots:
 
   spdy@4.0.2(supports-color@6.1.0):
     dependencies:
-      debug: 4.3.7(supports-color@6.1.0)
+      debug: 4.4.0(supports-color@6.1.0)
       handle-thing: 2.0.1
       http-deceiver: 1.2.7
       select-hose: 2.0.0
@@ -12970,22 +12952,22 @@ snapshots:
       postcss: 7.0.39
       postcss-selector-parser: 3.1.2
 
-  stylelint-config-prettier@9.0.5(stylelint@16.11.0):
+  stylelint-config-prettier@9.0.5(stylelint@16.12.0):
     dependencies:
-      stylelint: 16.11.0
+      stylelint: 16.12.0
 
-  stylelint-config-recess-order@5.1.1(stylelint@16.11.0):
+  stylelint-config-recess-order@5.1.1(stylelint@16.12.0):
     dependencies:
-      stylelint: 16.11.0
-      stylelint-order: 6.0.4(stylelint@16.11.0)
+      stylelint: 16.12.0
+      stylelint-order: 6.0.4(stylelint@16.12.0)
 
-  stylelint-order@6.0.4(stylelint@16.11.0):
+  stylelint-order@6.0.4(stylelint@16.12.0):
     dependencies:
       postcss: 8.4.41
       postcss-sorting: 8.0.2(postcss@8.4.41)
-      stylelint: 16.11.0
+      stylelint: 16.12.0
 
-  stylelint@16.11.0:
+  stylelint@16.12.0:
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer': 3.0.3
@@ -12997,7 +12979,7 @@ snapshots:
       cosmiconfig: 9.0.0
       css-functions-list: 3.2.3
       css-tree: 3.1.0
-      debug: 4.3.7(supports-color@6.1.0)
+      debug: 4.4.0(supports-color@6.1.0)
       fast-glob: 3.3.2
       fastest-levenshtein: 1.0.16
       file-entry-cache: 9.1.0
@@ -13023,7 +13005,7 @@ snapshots:
       string-width: 4.2.3
       supports-hyperlinks: 3.1.0
       svg-tags: 1.0.0
-      table: 6.8.2
+      table: 6.9.0
       write-file-atomic: 5.0.1
     transitivePeerDependencies:
       - supports-color
@@ -13129,7 +13111,7 @@ snapshots:
       slice-ansi: 2.1.0
       string-width: 3.1.0
 
-  table@6.8.2:
+  table@6.9.0:
     dependencies:
       ajv: 8.12.0
       lodash.truncate: 4.4.2
@@ -13402,7 +13384,7 @@ snapshots:
     dependencies:
       browserslist: 4.23.1
       escalade: 3.1.2
-      picocolors: 1.1.0
+      picocolors: 1.1.1
 
   upper-case@1.1.3: {}
 
@@ -13700,11 +13682,11 @@ snapshots:
       chokidar: 2.1.8(supports-color@6.1.0)
       compression: 1.7.4(supports-color@6.1.0)
       connect-history-api-fallback: 1.6.0
-      debug: 4.3.7(supports-color@6.1.0)
+      debug: 4.4.0(supports-color@6.1.0)
       del: 4.1.1
       express: 4.18.2(supports-color@6.1.0)
       html-entities: 1.4.0
-      http-proxy-middleware: 0.19.1(debug@4.3.7(supports-color@6.1.0))(supports-color@6.1.0)
+      http-proxy-middleware: 0.19.1(debug@4.4.0(supports-color@6.1.0))(supports-color@6.1.0)
       import-local: 2.0.0
       internal-ip: 4.3.0
       ip: 1.1.9
