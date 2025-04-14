@@ -12,8 +12,8 @@ importers:
         specifier: ^1.8.4
         version: 1.8.4
       caniuse-lite:
-        specifier: ^1.0.30001709
-        version: 1.0.30001709
+        specifier: ^1.0.30001713
+        version: 1.0.30001713
       clipboard:
         specifier: ^2.0.11
         version: 2.0.11
@@ -109,8 +109,8 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0
       lint-staged:
-        specifier: ^15.5.0
-        version: 15.5.0
+        specifier: ^15.5.1
+        version: 15.5.1
       prettier:
         specifier: ^2.8.8
         version: 2.8.8
@@ -121,14 +121,14 @@ importers:
         specifier: ^10.1.1
         version: 10.4.1(sass@1.32.13)(webpack@4.46.0)
       stylelint:
-        specifier: ^16.17.0
-        version: 16.17.0
+        specifier: ^16.18.0
+        version: 16.18.0
       stylelint-config-prettier:
         specifier: ^9.0.5
-        version: 9.0.5(stylelint@16.17.0)
+        version: 9.0.5(stylelint@16.18.0)
       stylelint-config-recess-order:
         specifier: ^6.0.0
-        version: 6.0.0(stylelint@16.17.0)
+        version: 6.0.0(stylelint@16.18.0)
       svg-sprite-loader:
         specifier: ^6.0.11
         version: 6.0.11
@@ -1686,8 +1686,8 @@ packages:
   caniuse-api@3.0.0:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
 
-  caniuse-lite@1.0.30001709:
-    resolution: {integrity: sha512-NgL3vUTnDrPCZ3zTahp4fsugQ4dc7EKTSzwQDPEel6DMoMnfH2jhry9n2Zm8onbSR+f/QtKHFOA+iAQu4kbtWA==}
+  caniuse-lite@1.0.30001713:
+    resolution: {integrity: sha512-wCIWIg+A4Xr7NfhTuHdX+/FKh3+Op3LBbSp2N5Pfx6T/LhdQy3GTyoTg48BReaW/MyMNZAkTadsBtai3ldWK0Q==}
 
   case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
@@ -3977,8 +3977,8 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lint-staged@15.5.0:
-    resolution: {integrity: sha512-WyCzSbfYGhK7cU+UuDDkzUiytbfbi0ZdPy2orwtM75P3WTtQBzmG40cCxIa8Ii2+XjfxzLH6Be46tUfWS85Xfg==}
+  lint-staged@15.5.1:
+    resolution: {integrity: sha512-6m7u8mue4Xn6wK6gZvSCQwBvMBR36xfY24nF5bMTf2MHDYG6S3yhJuOgdYVw99hsjyDt2d4z168b3naI8+NWtQ==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -5755,8 +5755,8 @@ packages:
     peerDependencies:
       stylelint: ^14.0.0 || ^15.0.0 || ^16.0.1
 
-  stylelint@16.17.0:
-    resolution: {integrity: sha512-I9OwVIWRMqVm2Br5iTbrfSqGRPWQUlvm6oXO1xZuYYu0Gpduy67N8wXOZv15p6E/JdlZiAtQaIoLKZEWk5hrjw==}
+  stylelint@16.18.0:
+    resolution: {integrity: sha512-OXb68qzesv7J70BSbFwfK3yTVLEVXiQ/ro6wUE4UrSbKCMjLLA02S8Qq3LC01DxKyVjk7z8xh35aB4JzO3/sNA==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -8128,7 +8128,7 @@ snapshots:
   autoprefixer@9.8.8:
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001709
+      caniuse-lite: 1.0.30001713
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       picocolors: 0.2.1
@@ -8416,7 +8416,7 @@ snapshots:
 
   browserslist@4.23.1:
     dependencies:
-      caniuse-lite: 1.0.30001709
+      caniuse-lite: 1.0.30001713
       electron-to-chromium: 1.4.796
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.1)
@@ -8567,11 +8567,11 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001709
+      caniuse-lite: 1.0.30001713
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
-  caniuse-lite@1.0.30001709: {}
+  caniuse-lite@1.0.30001713: {}
 
   case-sensitive-paths-webpack-plugin@2.4.0: {}
 
@@ -11154,7 +11154,7 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@15.5.0:
+  lint-staged@15.5.1:
     dependencies:
       chalk: 5.4.1
       commander: 13.1.0
@@ -13131,22 +13131,22 @@ snapshots:
       postcss: 7.0.39
       postcss-selector-parser: 3.1.2
 
-  stylelint-config-prettier@9.0.5(stylelint@16.17.0):
+  stylelint-config-prettier@9.0.5(stylelint@16.18.0):
     dependencies:
-      stylelint: 16.17.0
+      stylelint: 16.18.0
 
-  stylelint-config-recess-order@6.0.0(stylelint@16.17.0):
+  stylelint-config-recess-order@6.0.0(stylelint@16.18.0):
     dependencies:
-      stylelint: 16.17.0
-      stylelint-order: 6.0.4(stylelint@16.17.0)
+      stylelint: 16.18.0
+      stylelint-order: 6.0.4(stylelint@16.18.0)
 
-  stylelint-order@6.0.4(stylelint@16.17.0):
+  stylelint-order@6.0.4(stylelint@16.18.0):
     dependencies:
       postcss: 8.4.49
       postcss-sorting: 8.0.2(postcss@8.4.49)
-      stylelint: 16.17.0
+      stylelint: 16.18.0
 
-  stylelint@16.17.0:
+  stylelint@16.18.0:
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer': 3.0.3
