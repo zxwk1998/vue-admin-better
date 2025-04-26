@@ -32,8 +32,8 @@
     ]
   },
   "dependencies": {
-    "axios": "^1.8.4",
-    "caniuse-lite": "^1.0.30001713",
+    "axios": "^1.9.0",
+    "caniuse-lite": "^1.0.30001715",
     "clipboard": "^2.0.11",
     "core-js": "^3.41.0",
     "dayjs": "^1.11.13",
@@ -71,7 +71,7 @@
     "prettier": "^2.8.8",
     "sass": "~1.32.13",
     "sass-loader": "^10.1.1",
-    "stylelint": "^16.18.0",
+    "stylelint": "^16.19.1",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recess-order": "^6.0.0",
     "svg-sprite-loader": "^6.0.11",
