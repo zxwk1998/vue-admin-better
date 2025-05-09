@@ -12,14 +12,14 @@ importers:
         specifier: ^1.9.0
         version: 1.9.0
       caniuse-lite:
-        specifier: ^1.0.30001715
-        version: 1.0.30001715
+        specifier: ^1.0.30001717
+        version: 1.0.30001717
       clipboard:
         specifier: ^2.0.11
         version: 2.0.11
       core-js:
-        specifier: ^3.41.0
-        version: 3.41.0
+        specifier: ^3.42.0
+        version: 3.42.0
       dayjs:
         specifier: ^1.11.13
         version: 1.11.13
@@ -74,7 +74,7 @@ importers:
     devDependencies:
       '@vue/cli-plugin-babel':
         specifier: ^4.5.19
-        version: 4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(core-js@3.41.0)(vue@2.7.15)
+        version: 4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(core-js@3.42.0)(vue@2.7.15)
       '@vue/cli-plugin-eslint':
         specifier: ^4.5.19
         version: 4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(eslint@6.8.0)
@@ -109,8 +109,8 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0
       lint-staged:
-        specifier: ^15.5.1
-        version: 15.5.1
+        specifier: ^15.5.2
+        version: 15.5.2
       prettier:
         specifier: ^2.8.8
         version: 2.8.8
@@ -1686,8 +1686,8 @@ packages:
   caniuse-api@3.0.0:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
 
-  caniuse-lite@1.0.30001715:
-    resolution: {integrity: sha512-7ptkFGMm2OAOgvZpwgA4yjQ5SQbrNVGdRjzH0pBdy1Fasvcr+KAeECmbCAECzTuDuoX0FCY8KzUxjf9+9kfZEw==}
+  caniuse-lite@1.0.30001717:
+    resolution: {integrity: sha512-auPpttCq6BDEG8ZAuHJIplGw6GODhjw+/11e7IjpnYCxZcW/ONgPs0KVBJ0d1bY3e2+7PRe5RCLyP+PfwVgkYw==}
 
   case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
@@ -2115,8 +2115,8 @@ packages:
     resolution: {integrity: sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==}
     deprecated: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
 
-  core-js@3.41.0:
-    resolution: {integrity: sha512-SJ4/EHwS36QMJd6h/Rg+GyR4A5xE0FSI3eZ+iBVpfqf1x0eTSg1smWLHrA+2jQThZSh97fmSgFSU8B61nxosxA==}
+  core-js@3.42.0:
+    resolution: {integrity: sha512-Sz4PP4ZA+Rq4II21qkNqOEDTDrCvcANId3xpIgB34NDkWc3UduWj2dqEtN9yZIq8Dk3HyPI33x9sqqU5C8sr0g==}
 
   core-util-is@1.0.2:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
@@ -3977,8 +3977,8 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lint-staged@15.5.1:
-    resolution: {integrity: sha512-6m7u8mue4Xn6wK6gZvSCQwBvMBR36xfY24nF5bMTf2MHDYG6S3yhJuOgdYVw99hsjyDt2d4z168b3naI8+NWtQ==}
+  lint-staged@15.5.2:
+    resolution: {integrity: sha512-YUSOLq9VeRNAo/CTaVmhGDKG+LBtA8KF1X4K5+ykMSwWST1vDxJRB2kv2COgLb1fvpCo+A/y9A0G0znNVmdx4w==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -7486,7 +7486,7 @@ snapshots:
       lodash.kebabcase: 4.1.1
       svg-tags: 1.0.0
 
-  '@vue/babel-preset-app@4.5.19(@babel/core@7.23.3)(core-js@3.41.0)(vue@2.7.15)':
+  '@vue/babel-preset-app@4.5.19(@babel/core@7.23.3)(core-js@3.42.0)(vue@2.7.15)':
     dependencies:
       '@babel/core': 7.23.3
       '@babel/helper-compilation-targets': 7.22.15
@@ -7504,7 +7504,7 @@ snapshots:
       core-js-compat: 3.33.3
       semver: 6.3.1
     optionalDependencies:
-      core-js: 3.41.0
+      core-js: 3.42.0
       vue: 2.7.15
     transitivePeerDependencies:
       - supports-color
@@ -7562,10 +7562,10 @@ snapshots:
 
   '@vue/cli-overlay@4.5.19': {}
 
-  '@vue/cli-plugin-babel@4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(core-js@3.41.0)(vue@2.7.15)':
+  '@vue/cli-plugin-babel@4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(core-js@3.42.0)(vue@2.7.15)':
     dependencies:
       '@babel/core': 7.23.3
-      '@vue/babel-preset-app': 4.5.19(@babel/core@7.23.3)(core-js@3.41.0)(vue@2.7.15)
+      '@vue/babel-preset-app': 4.5.19(@babel/core@7.23.3)(core-js@3.42.0)(vue@2.7.15)
       '@vue/cli-service': 4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15)
       '@vue/cli-shared-utils': 4.5.19
       babel-loader: 8.3.0(@babel/core@7.23.3)(webpack@4.46.0)
@@ -8128,7 +8128,7 @@ snapshots:
   autoprefixer@9.8.8:
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001715
+      caniuse-lite: 1.0.30001717
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       picocolors: 0.2.1
@@ -8416,7 +8416,7 @@ snapshots:
 
   browserslist@4.23.1:
     dependencies:
-      caniuse-lite: 1.0.30001715
+      caniuse-lite: 1.0.30001717
       electron-to-chromium: 1.4.796
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.1)
@@ -8567,11 +8567,11 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001715
+      caniuse-lite: 1.0.30001717
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
-  caniuse-lite@1.0.30001715: {}
+  caniuse-lite@1.0.30001717: {}
 
   case-sensitive-paths-webpack-plugin@2.4.0: {}
 
@@ -8888,7 +8888,7 @@ snapshots:
 
   core-js@2.6.12: {}
 
-  core-js@3.41.0: {}
+  core-js@3.42.0: {}
 
   core-util-is@1.0.2: {}
 
@@ -11154,7 +11154,7 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@15.5.1:
+  lint-staged@15.5.2:
     dependencies:
       chalk: 5.4.1
       commander: 13.1.0
