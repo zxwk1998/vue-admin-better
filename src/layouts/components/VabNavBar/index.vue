@@ -38,7 +38,7 @@
     data() {
       return {
         pulse: false,
-        timeOutID: null
+        timeOutID: null,
       }
     },
     computed: {
@@ -66,9 +66,9 @@
     },
 
     beforeDestroy() {
-      clearTimeout(this.timeOutID);
-    }
-  };
+      clearTimeout(this.timeOutID)
+    },
+  }
 </script>
 
 <style lang="scss" scoped>

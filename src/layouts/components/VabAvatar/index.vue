@@ -12,9 +12,9 @@
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item command="github">github地址</el-dropdown-item>
       <el-dropdown-item command="gitee" divided>码云地址</el-dropdown-item>
-      <el-dropdown-item command="pro" divided>pro付费版地址</el-dropdown-item>
-      <el-dropdown-item command="plus" divided>plus付费版地址</el-dropdown-item>
-      <el-dropdown-item command="shop" divided>shop-vite付费版地址</el-dropdown-item>
+      <el-dropdown-item command="pro" divided>admin pro 地址</el-dropdown-item>
+      <el-dropdown-item command="plus" divided>admin plus 地址</el-dropdown-item>
+      <el-dropdown-item command="shop" divided>shop vite 地址</el-dropdown-item>
       <el-dropdown-item command="logout" divided>退出登录</el-dropdown-item>
     </el-dropdown-menu>
   </el-dropdown>
@@ -84,10 +84,10 @@
     padding: 0;
 
     .user-avatar {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       cursor: pointer;
-      border-radius: 50%;
+      border-radius: 5px;
     }
 
     .user-name {

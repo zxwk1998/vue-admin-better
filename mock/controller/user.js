@@ -79,7 +79,6 @@ module.exports = [
             'https://gcore.jsdelivr.net/gh/zxwk1998/image/avatar/avatar_2.png',
             'https://gcore.jsdelivr.net/gh/zxwk1998/image/avatar/avatar_3.png',
             'https://gcore.jsdelivr.net/gh/zxwk1998/image/avatar/avatar_4.png',
-            'https://gcore.jsdelivr.net/gh/zxwk1998/image/avatar/avatar_5.png',
           ],
         },
       }

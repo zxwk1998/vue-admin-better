@@ -17,26 +17,26 @@
         <div class="el-drawer__body">
           <el-form ref="form" :model="theme" label-position="top">
             <el-form-item label="主题">
-              <el-radio-group v-model="theme.name">
+              <el-radio-group v-model="theme.name" @change="handleSaveTheme">
                 <el-radio-button label="default">默认</el-radio-button>
                 <el-radio-button label="green">绿荫草场</el-radio-button>
                 <el-radio-button label="glory">荣耀典藏</el-radio-button>
               </el-radio-group>
             </el-form-item>
             <el-form-item label="布局">
-              <el-radio-group v-model="theme.layout">
+              <el-radio-group v-model="theme.layout" @change="handleSaveTheme">
                 <el-radio-button label="vertical">纵向布局</el-radio-button>
                 <el-radio-button label="horizontal">横向布局</el-radio-button>
               </el-radio-group>
             </el-form-item>
             <el-form-item label="头部">
-              <el-radio-group v-model="theme.header">
+              <el-radio-group v-model="theme.header" @change="handleSaveTheme">
                 <el-radio-button label="fixed">固定头部</el-radio-button>
                 <el-radio-button label="noFixed">不固定头部</el-radio-button>
               </el-radio-group>
             </el-form-item>
             <el-form-item label="多标签">
-              <el-radio-group v-model="theme.tabsBar">
+              <el-radio-group v-model="theme.tabsBar" @change="handleSaveTheme">
                 <el-radio-button label="true">开启</el-radio-button>
                 <el-radio-button label="false">不开启</el-radio-button>
               </el-radio-group>
@@ -87,7 +87,7 @@
       const theme = localStorage.getItem('vue-admin-better-theme')
       if (null !== theme) {
         this.theme = JSON.parse(theme)
-        this.handleSetTheme()
+        this.handleSaveTheme()
       } else {
         this.theme.layout = this.layout
         this.theme.header = this.header
@@ -110,7 +110,7 @@
       handleOpenThemeBar() {
         this.drawerVisible = true
       },
-      handleSetTheme() {
+      handleSaveTheme() {
         let { name, layout, header, tabsBar } = this.theme
         localStorage.setItem(
           'vue-admin-better-theme',
@@ -126,9 +126,6 @@
         this.changeTabsBar(tabsBar)
         document.getElementsByTagName('body')[0].className = `vue-admin-better-theme-${name}`
         this.drawerVisible = false
-      },
-      handleSaveTheme() {
-        this.handleSetTheme()
       },
       handleSetDfaultTheme() {
         let { name } = this.theme

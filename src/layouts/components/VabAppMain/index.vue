@@ -63,14 +63,14 @@
         this.$nextTick(() => {
           this.routerView = true
         })
-      };
+      }
 
       //重载所有路由
       this.$baseEventBus.$on('reload-router-view', handleReloadRouterView)
 
       this.$once('hook:beforeDestroy', () => {
-        this.$baseEventBus.$off('reload-router-view', handleReloadRouterView);
-      });
+        this.$baseEventBus.$off('reload-router-view', handleReloadRouterView)
+      })
     },
     mounted() {},
     methods: {
