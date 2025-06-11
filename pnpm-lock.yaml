@@ -18,8 +18,8 @@ importers:
         specifier: ^2.0.11
         version: 2.0.11
       core-js:
-        specifier: ^3.42.0
-        version: 3.42.0
+        specifier: ^3.43.0
+        version: 3.43.0
       dayjs:
         specifier: ^1.11.13
         version: 1.11.13
@@ -74,7 +74,7 @@ importers:
     devDependencies:
       '@vue/cli-plugin-babel':
         specifier: ^4.5.19
-        version: 4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(core-js@3.42.0)(vue@2.7.15)
+        version: 4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(core-js@3.43.0)(vue@2.7.15)
       '@vue/cli-plugin-eslint':
         specifier: ^4.5.19
         version: 4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(eslint@6.8.0)
@@ -2115,8 +2115,8 @@ packages:
     resolution: {integrity: sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==}
     deprecated: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
 
-  core-js@3.42.0:
-    resolution: {integrity: sha512-Sz4PP4ZA+Rq4II21qkNqOEDTDrCvcANId3xpIgB34NDkWc3UduWj2dqEtN9yZIq8Dk3HyPI33x9sqqU5C8sr0g==}
+  core-js@3.43.0:
+    resolution: {integrity: sha512-N6wEbTTZSYOY2rYAn85CuvWWkCK6QweMn7/4Nr3w+gDBeBhk/x4EJeY6FPo4QzDoJZxVTv8U7CMvgWk6pOHHqA==}
 
   core-util-is@1.0.2:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
@@ -7463,7 +7463,7 @@ snapshots:
       lodash.kebabcase: 4.1.1
       svg-tags: 1.0.0
 
-  '@vue/babel-preset-app@4.5.19(@babel/core@7.23.3)(core-js@3.42.0)(vue@2.7.15)':
+  '@vue/babel-preset-app@4.5.19(@babel/core@7.23.3)(core-js@3.43.0)(vue@2.7.15)':
     dependencies:
       '@babel/core': 7.23.3
       '@babel/helper-compilation-targets': 7.22.15
@@ -7481,7 +7481,7 @@ snapshots:
       core-js-compat: 3.33.3
       semver: 6.3.1
     optionalDependencies:
-      core-js: 3.42.0
+      core-js: 3.43.0
       vue: 2.7.15
     transitivePeerDependencies:
       - supports-color
@@ -7539,10 +7539,10 @@ snapshots:
 
   '@vue/cli-overlay@4.5.19': {}
 
-  '@vue/cli-plugin-babel@4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(core-js@3.42.0)(vue@2.7.15)':
+  '@vue/cli-plugin-babel@4.5.19(@vue/cli-service@4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15))(core-js@3.43.0)(vue@2.7.15)':
     dependencies:
       '@babel/core': 7.23.3
-      '@vue/babel-preset-app': 4.5.19(@babel/core@7.23.3)(core-js@3.42.0)(vue@2.7.15)
+      '@vue/babel-preset-app': 4.5.19(@babel/core@7.23.3)(core-js@3.43.0)(vue@2.7.15)
       '@vue/cli-service': 4.5.19(lodash@4.17.21)(prettier@2.8.8)(sass-loader@10.4.1(sass@1.32.13)(webpack@4.46.0))(vue-template-compiler@2.7.15)(vue@2.7.15)
       '@vue/cli-shared-utils': 4.5.19
       babel-loader: 8.3.0(@babel/core@7.23.3)(webpack@4.46.0)
@@ -8865,7 +8865,7 @@ snapshots:
 
   core-js@2.6.12: {}
 
-  core-js@3.42.0: {}
+  core-js@3.43.0: {}
 
   core-util-is@1.0.2: {}
 
