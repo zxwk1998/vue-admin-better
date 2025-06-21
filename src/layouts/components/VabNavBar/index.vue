@@ -130,19 +130,6 @@
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
         }
       }
-
-      ::v-deep {
-        .breadcrumb-container {
-          margin-left: 15px;
-          padding: 8px 16px;
-          background: rgba(255, 255, 255, 0.5);
-          border: 1px solid rgba(255, 255, 255, 0.6);
-          border-radius: 12px;
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-        }
-      }
     }
 
     .right-panel {
