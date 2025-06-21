@@ -1,12 +1,6 @@
 <template>
   <div id="tabs-bar-container" class="tabs-bar-container">
-    <el-tabs
-      v-model="tabActive"
-      class="tabs-content"
-      type="card"
-      @tab-click="handleTabClick"
-      @tab-remove="handleTabRemove"
-    >
+    <el-tabs v-model="tabActive" class="tabs-content" type="card" @tab-click="handleTabClick" @tab-remove="handleTabRemove">
       <el-tab-pane
         v-for="item in visitedRoutes"
         :key="item.path"
@@ -89,10 +83,7 @@
             view = item
           }
         })
-        const { visitedRoutes } = await this.$store.dispatch(
-          'tabsBar/delRoute',
-          view
-        )
+        const { visitedRoutes } = await this.$store.dispatch('tabsBar/delRoute', view)
         if (this.isActive(view)) {
           this.toLastTag(visitedRoutes, view)
         }
@@ -176,10 +167,7 @@
         this.$baseEventBus.$emit('reloadrouter-view')
       },
       async closeSelectedTag(view) {
-        const { visitedRoutes } = await this.$store.dispatch(
-          'tabsBar/delRoute',
-          view
-        )
+        const { visitedRoutes } = await this.$store.dispatch('tabsBar/delRoute', view)
         if (this.isActive(view)) {
           this.toLastTag(visitedRoutes, view)
         }
@@ -198,9 +186,7 @@
       },
       async closeAlltabs() {
         const view = await this.toThisTag()
-        const { visitedRoutes } = await this.$store.dispatch(
-          'tabsBar/delAllRoutes'
-        )
+        const { visitedRoutes } = await this.$store.dispatch('tabsBar/delAllRoutes')
         if (this.affixtabs.some((tag) => tag.path === view.path)) {
           return
         }
