@@ -15,12 +15,7 @@
             mode="horizontal"
           >
             <template v-for="route in routes">
-              <vab-side-bar-item
-                v-if="!route.hidden"
-                :key="route.path"
-                :full-path="route.path"
-                :item="route"
-              />
+              <vab-side-bar-item v-if="!route.hidden" :key="route.path" :full-path="route.path" :item="route" />
             </template>
           </el-menu>
         </el-col>
@@ -29,12 +24,7 @@
             <vab-error-log />
             <vab-full-screen-bar @refresh="refreshRoute" />
             <vab-theme-bar class="hidden-md-and-down" />
-            <vab-icon
-              :icon="['fas', 'redo']"
-              :pulse="pulse"
-              title="重载路由"
-              @click="refreshRoute"
-            />
+            <vab-icon :icon="['fas', 'redo']" :pulse="pulse" title="重载路由" @click="refreshRoute" />
             <vab-avatar />
           </div>
         </el-col>
@@ -83,9 +73,9 @@
     },
 
     beforeDestroy() {
-      clearTimeout(this.timeOutID);
-    }
-  };
+      clearTimeout(this.timeOutID)
+    },
+  }
 </script>
 <style lang="scss" scoped>
   .top-bar-container {
@@ -192,11 +182,12 @@
       height: $base-top-bar-height;
 
       ::v-deep {
-        .user-name {
+        .username,
+        .user-role {
           color: rgba($base-color-white, 0.9);
         }
 
-        .user-name + i {
+        .username + i {
           color: rgba($base-color-white, 0.9);
         }
 
