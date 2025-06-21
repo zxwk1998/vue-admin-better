@@ -1,13 +1,12 @@
 <template>
   <div id="tabs-bar-container" class="tabs-bar-container">
     <el-tabs v-model="tabActive" class="tabs-content" type="card" @tab-click="handleTabClick" @tab-remove="handleTabRemove">
-      <el-tab-pane
-        v-for="item in visitedRoutes"
-        :key="item.path"
-        :closable="!isAffix(item)"
-        :label="item.meta.title"
-        :name="item.path"
-      ></el-tab-pane>
+      <el-tab-pane v-for="item in visitedRoutes" :key="item.path" :closable="!isAffix(item)" :name="item.path">
+        <template slot="label">
+          <vab-icon v-if="getTabIcon(item)" :icon="['fas', getTabIcon(item)]" class="tab-icon" />
+          <span>{{ item.meta.title }}</span>
+        </template>
+      </el-tab-pane>
     </el-tabs>
 
     <el-dropdown @command="handleCommand">
@@ -209,6 +208,53 @@
         if (this.$route.path !== view.path) this.$router.push(view)
         return view
       },
+      getTabIcon(item) {
+        // 如果当前路由有图标，直接返回
+        if (item.meta && item.meta.icon) {
+          return item.meta.icon
+        }
+
+        // 查找父级路由的图标
+        const parentIcon = this.findParentIcon(item.path)
+        if (parentIcon) {
+          return parentIcon
+        }
+
+        return null
+      },
+
+      findParentIcon(path) {
+        // 从路径中提取父级路径
+        const pathParts = path.split('/').filter((part) => part)
+        if (pathParts.length <= 1) {
+          return null
+        }
+
+        // 查找父级路由
+        const findRouteByPath = (routes, targetPath) => {
+          for (const route of routes) {
+            if (route.path === targetPath) {
+              return route
+            }
+            if (route.children) {
+              const found = findRouteByPath(route.children, targetPath)
+              if (found) return found
+            }
+          }
+          return null
+        }
+
+        // 尝试查找父级路径
+        for (let i = pathParts.length - 1; i > 0; i--) {
+          const parentPath = '/' + pathParts.slice(0, i).join('/')
+          const parentRoute = findRouteByPath(this.routes, parentPath)
+          if (parentRoute && parentRoute.meta && parentRoute.meta.icon) {
+            return parentRoute.meta.icon
+          }
+        }
+
+        return null
+      },
     },
   }
 </script>
@@ -221,12 +267,26 @@
     align-content: center;
     align-items: center;
     justify-content: space-between;
-    height: $base-tabs-bar-height;
+    height: 54px;
     padding-right: $base-padding;
     padding-left: $base-padding;
     user-select: none;
-    background: $base-color-white;
-    border-top: 1px solid #f6f6f6;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.2) 100%);
+      pointer-events: none;
+    }
 
     ::v-deep {
       .fold-unfold {
@@ -235,6 +295,7 @@
     }
 
     .tabs-content {
+      position: relative;
       width: calc(100% - 90px);
       height: $base-tag-item-height;
 
@@ -243,6 +304,21 @@
         .el-tabs__nav-prev {
           height: $base-tag-item-height;
           line-height: $base-tag-item-height;
+          color: rgba(0, 0, 0, 0.6);
+          background: rgba(255, 255, 255, 0.6);
+          border: 1px solid rgba(255, 255, 255, 0.8);
+          border-radius: 12px;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+
+          &:hover {
+            color: rgba(0, 0, 0, 0.8);
+            background: rgba(255, 255, 255, 0.8);
+            border-color: rgba(255, 255, 255, 1);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+          }
         }
 
         .el-tabs__header {
@@ -253,16 +329,67 @@
           }
 
           .el-tabs__item {
+            position: relative;
             box-sizing: border-box;
             height: $base-tag-item-height;
-            margin-right: 5px;
+            margin-right: 8px;
+            margin-top: 3px;
+            padding: 0 20px;
             line-height: $base-tag-item-height;
-            border: 1px solid $base-border-color;
-            border-radius: $base-border-radius;
-            transition: padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+            border: 1px solid rgba(64, 158, 255, 0.9);
+            color: rgba(64, 158, 255, 0.9);
+            border-radius: 5px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            overflow: hidden;
+
+            .tab-icon {
+              margin-right: 6px;
+              font-size: 12px;
+            }
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+              transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            &:hover {
+              color: rgba(255, 255, 255, 0.95);
+              background: rgba(64, 158, 255, 0.9);
+              border-color: rgba(64, 158, 255, 1);
+
+              &::before {
+                left: 100%;
+              }
+            }
 
             &.is-active {
-              border: 1px solid $base-color-blue;
+              color: rgba(255, 255, 255, 0.95);
+              background: rgba(64, 158, 255, 1);
+              border-color: rgba(64, 158, 255, 1);
+            }
+
+            .el-icon-close {
+              position: relative;
+              margin-left: 8px;
+              font-size: 12px;
+              color: rgba(255, 255, 255, 0.7);
+              transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+              border-radius: 5px;
+              padding: 2px;
+
+              &:hover {
+                color: rgba(255, 255, 255, 0.9);
+                background: rgba(255, 255, 255, 0.2);
+                transform: scale(1.2);
+              }
             }
           }
         }
@@ -270,10 +397,57 @@
     }
 
     .more {
+      position: relative;
       display: flex;
       align-content: center;
       align-items: center;
+      padding: 8px 16px;
+      color: rgba(0, 0, 0, 0.7);
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
       cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.9);
+        background: rgba(255, 255, 255, 0.8);
+        border-color: rgba(255, 255, 255, 1);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: 768px) {
+    .tabs-bar-container {
+      padding: 0 12px;
+
+      .tabs-content {
+        width: calc(100% - 80px);
+
+        ::v-deep {
+          .el-tabs__item {
+            padding: 0 12px;
+            margin-right: 6px;
+            font-size: 12px;
+            border-radius: 12px;
+          }
+        }
+      }
+
+      .more {
+        padding: 6px 12px;
+        font-size: 12px;
+      }
     }
   }
 </style>
