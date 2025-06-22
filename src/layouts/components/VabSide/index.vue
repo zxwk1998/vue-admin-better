@@ -1,5 +1,5 @@
 <template>
-  <el-scrollbar :class="{ 'is-collapse': collapse }" class="side-bar-container">
+  <el-scrollbar :class="{ 'is-collapse': collapse }" class="side-container">
     <vab-logo />
     <el-menu
       :active-text-color="variables['menu-color-active']"
@@ -13,11 +13,7 @@
       mode="vertical"
     >
       <template v-for="route in routes">
-        <vab-side-bar-item
-          :key="route.path"
-          :full-path="route.path"
-          :item="route"
-        />
+        <vab-side-item :key="route.path" :full-path="route.path" :item="route" />
       </template>
     </el-menu>
   </el-scrollbar>
@@ -28,7 +24,7 @@
   import { defaultOopeneds, uniqueOpened } from '@/config'
 
   export default {
-    name: 'VabSideBar',
+    name: 'VabSide',
     data() {
       return {
         uniqueOpened,
@@ -71,7 +67,7 @@
     }
   }
 
-  .side-bar-container {
+  .side-container {
     position: fixed;
     top: 0;
     bottom: 0;

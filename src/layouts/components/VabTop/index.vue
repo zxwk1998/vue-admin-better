@@ -1,5 +1,5 @@
 <template>
-  <div class="top-bar-container">
+  <div class="top-container">
     <div class="vab-main">
       <el-row>
         <el-col :lg="7" :md="7" :sm="7" :xl="7" :xs="7">
@@ -15,15 +15,17 @@
             mode="horizontal"
           >
             <template v-for="route in routes">
-              <vab-side-bar-item v-if="!route.hidden" :key="route.path" :full-path="route.path" :item="route" />
+              <vab-side-item v-if="!route.hidden" :key="route.path" :full-path="route.path" :item="route" />
             </template>
           </el-menu>
         </el-col>
         <el-col :lg="5" :md="5" :sm="5" :xl="5" :xs="5">
           <div class="right-panel">
             <vab-error-log />
-            <vab-full-screen-bar @refresh="refreshRoute" />
-            <vab-theme-bar class="hidden-md-and-down" />
+            <div class="right-menu">
+              <vab-full-screen @refresh="refreshRoute" />
+              <vab-theme class="hidden-md-and-down" />
+            </div>
             <vab-icon :icon="['fas', 'redo']" :pulse="pulse" title="重载路由" @click="refreshRoute" />
             <vab-avatar />
           </div>
@@ -38,7 +40,7 @@
   import { mapGetters } from 'vuex'
 
   export default {
-    name: 'VabTopBar',
+    name: 'VabTop',
     data() {
       return {
         pulse: false,
@@ -78,7 +80,7 @@
   }
 </script>
 <style lang="scss" scoped>
-  .top-bar-container {
+  .top-container {
     display: flex;
     align-items: center;
     justify-items: flex-end;

@@ -1,5 +1,5 @@
 <template>
-  <div id="tabs-bar-container" class="tabs-bar-container">
+  <div id="tabs-container" class="tabs-container">
     <el-tabs v-model="tabActive" class="tabs-content" type="card" @tab-click="handleTabClick" @tab-remove="handleTabRemove">
       <el-tab-pane v-for="item in visitedRoutes" :key="item.path" :closable="!isAffix(item)" :name="item.path">
         <template slot="label">
@@ -41,7 +41,7 @@
   import { mapGetters } from 'vuex'
 
   export default {
-    name: 'VabTabsBar',
+    name: 'VabTabs',
     data() {
       return {
         affixtabs: [],
@@ -260,7 +260,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .tabs-bar-container {
+  .tabs-container {
     position: relative;
     box-sizing: border-box;
     display: flex;
@@ -336,8 +336,8 @@
             margin-top: 3px;
             padding: 0 20px;
             line-height: $base-tag-item-height;
-            border: 1px solid rgba(64, 158, 255, 0.9);
-            color: rgba(64, 158, 255, 0.9);
+            border: 1px solid $base-color-default;
+            color: $base-color-default;
             border-radius: 5px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             backdrop-filter: blur(10px);
@@ -362,8 +362,8 @@
 
             &:hover {
               color: rgba(255, 255, 255, 0.95);
-              background: rgba(64, 158, 255, 0.9);
-              border-color: rgba(64, 158, 255, 1);
+              background: $base-color-default;
+              border-color: $base-color-default;
 
               &::before {
                 left: 100%;
@@ -372,8 +372,8 @@
 
             &.is-active {
               color: rgba(255, 255, 255, 0.95);
-              background: rgba(64, 158, 255, 1);
-              border-color: rgba(64, 158, 255, 1);
+              background: $base-color-default;
+              border-color: $base-color-default;
             }
 
             .el-icon-close {
@@ -428,7 +428,7 @@
 
   // 响应式设计
   @media (max-width: 768px) {
-    .tabs-bar-container {
+    .tabs-container {
       padding: 0 12px;
 
       .tabs-content {

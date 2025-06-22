@@ -9,11 +9,11 @@
       class="layout-container-horizontal"
     >
       <div :class="header === 'fixed' ? 'fixed-header' : ''">
-        <vab-top-bar />
+        <vab-top />
         <div v-if="tabsBar === 'true' || tabsBar === true" :class="{ 'tag-view-show': tabsBar }">
-          <div class="vab-main">
-            <vab-tabs-bar />
-          </div>
+          <el-scrollbar>
+            <vab-tabs />
+          </el-scrollbar>
         </div>
       </div>
       <div class="vab-main main-padding">
@@ -30,11 +30,11 @@
       class="layout-container-vertical"
     >
       <div v-if="device === 'mobile' && collapse === false" class="mask" @click="handleFoldSideBar" />
-      <vab-side-bar />
+      <vab-side />
       <div :class="collapse ? 'is-collapse-main' : ''" class="vab-main">
         <div :class="header === 'fixed' ? 'fixed-header' : ''">
-          <vab-nav-bar />
-          <vab-tabs-bar v-if="tabsBar === 'true' || tabsBar === true" />
+          <vab-nav />
+          <vab-tabs v-if="tabsBar === 'true' || tabsBar === true" />
         </div>
         <vab-ad />
         <vab-app-main />
@@ -177,7 +177,7 @@
           box-shadow: $base-box-shadow;
         }
 
-        .nav-bar-container {
+        .nav-container {
           .fold-unfold {
             display: none;
           }
@@ -235,12 +235,12 @@
             transition: $base-transition;
           }
 
-          .nav-bar-container {
+          .nav-container {
             position: relative;
             box-sizing: border-box;
           }
 
-          .tabs-bar-container {
+          .tabs-container {
             box-sizing: border-box;
           }
 
@@ -274,7 +274,7 @@
         }
 
         .layout-container-vertical {
-          .el-scrollbar.side-bar-container.is-collapse {
+          .el-scrollbar.side-container.is-collapse {
             width: 0;
           }
 

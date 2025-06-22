@@ -1,18 +1,7 @@
 <template>
-  <component
-    :is="menuComponent"
-    v-if="!item.hidden"
-    :full-path="fullPath"
-    :item="item"
-    :route-children="routeChildren"
-  >
+  <component :is="menuComponent" v-if="!item.hidden" :full-path="fullPath" :item="item" :route-children="routeChildren">
     <template v-if="item.children && item.children.length">
-      <vab-side-bar-item
-        v-for="route in item.children"
-        :key="route.path"
-        :full-path="handlePath(route.path)"
-        :item="route"
-      />
+      <vab-side-item v-for="route in item.children" :key="route.path" :full-path="handlePath(route.path)" :item="route" />
     </template>
   </component>
 </template>
@@ -22,7 +11,7 @@
   import path from 'path'
 
   export default {
-    name: 'VabSideBarItem',
+    name: 'VabSideItem',
     props: {
       item: {
         type: Object,
@@ -41,8 +30,7 @@
       menuComponent() {
         if (
           this.handleChildren(this.item.children, this.item) &&
-          (!this.routeChildren.children ||
-            this.routeChildren.notShowChildren) &&
+          (!this.routeChildren.children || this.routeChildren.notShowChildren) &&
           !this.item.alwaysShow
         ) {
           return 'VabMenuItem'

@@ -1,8 +1,8 @@
 <template>
   <span v-if="themeBar">
-    <vab-icon :icon="['fas', 'palette']" title="主题配置" @click="handleOpenThemeBar" />
-    <div class="theme-bar-setting">
-      <div @click="handleOpenThemeBar">
+    <vab-icon :icon="['fas', 'palette']" title="主题配置" @click="handleOpenTheme" />
+    <div class="theme-setting">
+      <div @click="handleOpenTheme">
         <vab-icon :icon="['fas', 'palette']" />
         <p>主题配置</p>
       </div>
@@ -150,7 +150,7 @@
   import { layout as defaultLayout } from '@/config'
 
   export default {
-    name: 'VabThemeBar',
+    name: 'VabTheme',
     data() {
       return {
         drawerVisible: false,
@@ -172,7 +172,7 @@
     },
     created() {
       const handleTheme = () => {
-        this.handleOpenThemeBar()
+        this.handleOpenTheme()
       }
 
       this.$baseEventBus.$on('theme', handleTheme)
@@ -199,7 +199,7 @@
       handleIsMobile() {
         return document.body.getBoundingClientRect().width - 1 < 992
       },
-      handleOpenThemeBar() {
+      handleOpenTheme() {
         this.drawerVisible = true
       },
       handleSaveTheme() {
@@ -280,7 +280,7 @@
     }
   }
 
-  .theme-bar-setting {
+  .theme-setting {
     @include right-bar;
 
     top: calc((100vh - 110px) / 2);
@@ -400,7 +400,7 @@
 
             &.default-theme {
               .preview-header {
-                background: #677ae4;
+                background: $base-color-default;
               }
               .preview-sidebar {
                 background: #2c3e50;

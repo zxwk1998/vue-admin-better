@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-bar-container">
+  <div class="nav-container">
     <el-row :gutter="15">
       <el-col :lg="12" :md="12" :sm="12" :xl="12" :xs="4">
         <div class="left-panel">
@@ -15,8 +15,8 @@
       <el-col :lg="12" :md="12" :sm="12" :xl="12" :xs="20">
         <div class="right-panel">
           <vab-error-log />
-          <vab-full-screen-bar @refresh="refreshRoute" />
-          <vab-theme-bar class="hidden-xs-only" />
+          <vab-full-screen @refresh="refreshRoute" />
+          <vab-theme class="hidden-xs-only" />
           <vab-icon :icon="['fas', 'redo']" :pulse="pulse" title="重载所有路由" @click="refreshRoute" />
           <vab-avatar />
           <!--  <vab-icon
@@ -34,7 +34,7 @@
   import { mapActions, mapGetters } from 'vuex'
 
   export default {
-    name: 'VabNavBar',
+    name: 'VabNav',
     data() {
       return {
         pulse: false,
@@ -72,7 +72,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .nav-bar-container {
+  .nav-container {
     position: relative;
     height: $base-nav-bar-height;
     padding-right: $base-padding;
@@ -210,7 +210,7 @@
 
   // 响应式设计
   @media (max-width: 768px) {
-    .nav-bar-container {
+    .nav-container {
       padding: 0 12px;
 
       .left-panel {
