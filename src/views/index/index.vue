@@ -491,7 +491,7 @@
 
         //访问量
         fwl: {
-          color: ['#409EFF', '#67C23A', '#E6A23C', '#F56C6C', '#909399'],
+          color: ['#677AE4', '#8B5CF6', '#A855F7', '#C084FC', '#E879F9'],
           backgroundColor: 'transparent',
           grid: {
             top: '15%',
@@ -557,13 +557,13 @@
                   x2: 0,
                   y2: 1,
                   colorStops: [
-                    { offset: 0, color: '#409EFF' },
-                    { offset: 1, color: '#67C23A' },
+                    { offset: 0, color: '#677AE4' },
+                    { offset: 1, color: '#8B5CF6' },
                   ],
                 },
               },
               itemStyle: {
-                color: '#409EFF',
+                color: '#677AE4',
                 borderWidth: 2,
                 borderColor: '#fff',
               },
@@ -575,8 +575,8 @@
                   x2: 0,
                   y2: 1,
                   colorStops: [
-                    { offset: 0, color: 'rgba(64, 158, 255, 0.3)' },
-                    { offset: 1, color: 'rgba(103, 194, 58, 0.1)' },
+                    { offset: 0, color: 'rgba(103, 122, 228, 0.3)' },
+                    { offset: 1, color: 'rgba(139, 92, 246, 0.1)' },
                   ],
                 },
               },
@@ -585,7 +585,7 @@
         },
         //授权数
         sqs: {
-          color: ['#409EFF', '#67C23A', '#E6A23C', '#F56C6C', '#909399'],
+          color: ['#677AE4', '#8B5CF6', '#A855F7', '#C084FC', '#E879F9'],
           backgroundColor: 'transparent',
           grid: {
             top: '15%',
@@ -647,12 +647,12 @@
                   x2: 0,
                   y2: 1,
                   colorStops: [
-                    { offset: 0, color: '#409EFF' },
-                    { offset: 1, color: '#67C23A' },
+                    { offset: 0, color: '#677AE4' },
+                    { offset: 1, color: '#8B5CF6' },
                   ],
                 },
                 borderRadius: [6, 6, 0, 0],
-                shadowColor: 'rgba(64, 158, 255, 0.3)',
+                shadowColor: 'rgba(103, 122, 228, 0.3)',
                 shadowBlur: 10,
                 shadowOffsetX: 0,
                 shadowOffsetY: 5,
@@ -666,12 +666,12 @@
                     x2: 0,
                     y2: 1,
                     colorStops: [
-                      { offset: 0, color: '#337ecc' },
-                      { offset: 1, color: '#5aad47' },
+                      { offset: 0, color: '#5A67D8' },
+                      { offset: 1, color: '#7C3AED' },
                     ],
                   },
                   shadowBlur: 15,
-                  shadowColor: 'rgba(64, 158, 255, 0.5)',
+                  shadowColor: 'rgba(103, 122, 228, 0.5)',
                 },
               },
             },
@@ -680,7 +680,7 @@
 
         //用户活跃度
         userActivity: {
-          color: ['#409EFF', '#67C23A', '#E6A23C', '#F56C6C', '#909399'],
+          color: ['#677AE4', '#8B5CF6', '#A855F7', '#C084FC', '#E879F9'],
           backgroundColor: 'transparent',
           grid: {
             top: '15%',
@@ -738,10 +738,10 @@
               symbolSize: 6,
               lineStyle: {
                 width: 3,
-                color: '#409EFF',
+                color: '#677AE4',
               },
               itemStyle: {
-                color: '#409EFF',
+                color: '#677AE4',
                 borderWidth: 2,
                 borderColor: '#fff',
               },
@@ -753,8 +753,8 @@
                   x2: 0,
                   y2: 1,
                   colorStops: [
-                    { offset: 0, color: 'rgba(64, 158, 255, 0.3)' },
-                    { offset: 1, color: 'rgba(64, 158, 255, 0.1)' },
+                    { offset: 0, color: 'rgba(103, 122, 228, 0.3)' },
+                    { offset: 1, color: 'rgba(103, 122, 228, 0.1)' },
                   ],
                 },
               },
@@ -764,7 +764,7 @@
 
         //系统性能
         systemPerformance: {
-          color: ['#67C23A', '#E6A23C', '#F56C6C', '#409EFF'],
+          color: ['#677AE4', '#8B5CF6', '#A855F7', '#C084FC'],
           backgroundColor: 'transparent',
           grid: {
             top: '15%',
@@ -822,7 +822,7 @@
               barWidth: '50%',
               itemStyle: {
                 color: function (params) {
-                  const colors = ['#67C23A', '#E6A23C', '#F56C6C', '#409EFF']
+                  const colors = ['#677AE4', '#8B5CF6', '#A855F7', '#C084FC']
                   return colors[params.dataIndex]
                 },
                 borderRadius: [4, 4, 0, 0],
@@ -1135,7 +1135,7 @@
             .stat-icon {
               width: 50px;
               height: 50px;
-              background: linear-gradient(45deg, #409eff, #67c23a);
+              background: linear-gradient(45deg, #677ae4, #8b5cf6);
               border-radius: 12px;
               display: flex;
               align-items: center;
@@ -1201,12 +1201,12 @@
                 }
 
                 &.primary-btn {
-                  background: #409eff;
+                  background: #677ae4;
                   border: none;
                   color: white;
 
                   &:hover {
-                    background: #337ecc;
+                    background: #5a67d8;
                   }
                 }
 
@@ -1224,7 +1224,7 @@
               .premium-card {
                 flex: 1;
                 min-width: 180px;
-                background: linear-gradient(135deg, #409eff 0%, #67c23a 100%);
+                background: linear-gradient(135deg, #677ae4 0%, #8b5cf6 100%);
                 border-radius: 15px;
                 padding: 20px;
                 cursor: pointer;
@@ -1236,7 +1236,7 @@
 
                 &:hover {
                   transform: translateY(-5px);
-                  box-shadow: 0 10px 25px rgba(64, 158, 255, 0.3);
+                  box-shadow: 0 10px 25px rgba(103, 122, 228, 0.3);
                 }
 
                 &.featured {
@@ -1353,7 +1353,7 @@
           border-bottom: 2px solid #dee2e6;
 
           .vab-icon {
-            color: #409eff;
+            color: #677ae4;
             margin-right: 3px;
             font-size: 1.1rem;
           }
@@ -1414,8 +1414,8 @@
           color: #2c3e50;
 
           .vab-icon {
+            color: #677ae4;
             margin-right: 3px;
-            color: #409eff;
             font-size: 1.1rem;
           }
         }
@@ -1460,13 +1460,13 @@
             font-size: 0.85rem;
 
             .trend-up {
-              color: #67c23a;
+              color: #8b5cf6;
               margin-right: 3px;
               font-size: 0.8rem;
             }
 
             .trend-icon {
-              color: #409eff;
+              color: #677ae4;
               margin-right: 3px;
               font-size: 0.8rem;
             }
