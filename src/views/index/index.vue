@@ -14,7 +14,7 @@
           </div>
         </el-alert>
       </el-col>
-      <el-col v-for="(item, index) in iconList" :key="index" :lg="3" :md="3" :sm="6" :xl="3" :xs="12">
+      <el-col v-for="(item, index) in iconList" :key="index" :lg="6" :md="6" :sm="6" :xl="3" :xs="12">
         <el-card class="icon-card" shadow="never">
           <div class="icon-container" @click="handleIconClick(item)">
             <div class="icon-header">
@@ -43,7 +43,7 @@
           </div>
         </el-card>
       </el-col>
-      <el-col :lg="12" :md="12" :sm="24" :xl="6" :xs="24">
+      <el-col :lg="6" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="never">
           <div slot="header">
             <span>访问量</span>
@@ -1009,11 +1009,126 @@
     }
 
     .card {
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+
       ::v-deep {
         .el-card__body {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+
           .echarts {
             width: 100%;
             height: 305px;
+          }
+        }
+      }
+
+      .dependency-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+
+        .dependency-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 15px;
+          margin-bottom: 25px;
+          flex-shrink: 0;
+
+          .dependency-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+
+            &:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+              background: #ffffff;
+            }
+
+            .dependency-info {
+              flex: 1;
+              text-align: center;
+
+              .dependency-name {
+                font-size: 0.9rem;
+                color: #6c757d;
+                margin-bottom: 6px;
+                font-weight: 500;
+              }
+
+              .dependency-version {
+                font-size: 1.1rem;
+                color: #2c3e50;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+
+        .system-info {
+          background: #f8f9fa;
+          border: 1px solid #e9ecef;
+          border-radius: 8px;
+          padding: 20px;
+          flex-shrink: 0;
+
+          .info-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #dee2e6;
+
+            .vab-icon {
+              color: #677ae4;
+              margin-right: 3px;
+              font-size: 1.1rem;
+            }
+
+            span {
+              font-size: 1.1rem;
+              font-weight: 600;
+              color: #2c3e50;
+            }
+          }
+
+          .info-content {
+            .info-item {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 8px 0;
+              border-bottom: 1px solid #f1f3f4;
+
+              &:last-child {
+                border-bottom: none;
+              }
+
+              .info-label {
+                color: #6c757d;
+                font-weight: 500;
+                font-size: 0.9rem;
+              }
+
+              .info-value {
+                color: #2c3e50;
+                font-weight: 600;
+                font-size: 0.9rem;
+                max-width: 60%;
+                text-align: right;
+                word-break: break-all;
+              }
+            }
           }
         }
       }
@@ -1071,16 +1186,21 @@
 
     // 高级信息卡片样式
     .advanced-info-card {
-      background: #ffffff;
+      height: 600px;
       overflow: hidden;
 
       .advanced-content {
+        height: 100%;
         padding: 30px 25px;
         background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
 
         .logo-section {
           text-align: center;
           margin-bottom: 30px;
+          flex-shrink: 0;
 
           .logo-container {
             position: relative;
@@ -1126,6 +1246,7 @@
           margin-bottom: 30px;
           padding: 20px;
           background: #f8f9fa;
+          flex-shrink: 0;
 
           .stat-card {
             text-align: center;
@@ -1162,6 +1283,9 @@
         }
 
         .action-section {
+          flex: 1;
+          overflow-y: auto;
+
           .action-group {
             margin-bottom: 25px;
 
@@ -1296,108 +1420,12 @@
       }
     }
 
-    // 依赖信息高级样式
-    .dependency-content {
-      .dependency-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-        margin-bottom: 25px;
-
-        .dependency-item {
-          display: flex;
-          align-items: center;
-          padding: 15px;
-          background: #f8f9fa;
-          border: 1px solid #e9ecef;
-          border-radius: 8px;
-          transition: all 0.3s ease;
-
-          &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            background: #ffffff;
-          }
-
-          .dependency-info {
-            flex: 1;
-            text-align: center;
-
-            .dependency-name {
-              font-size: 0.9rem;
-              color: #6c757d;
-              margin-bottom: 6px;
-              font-weight: 500;
-            }
-
-            .dependency-version {
-              font-size: 1.1rem;
-              color: #2c3e50;
-              font-weight: 600;
-            }
-          }
-        }
-      }
-
-      .system-info {
-        background: #f8f9fa;
-        border: 1px solid #e9ecef;
-        border-radius: 8px;
-        padding: 20px;
-
-        .info-header {
-          display: flex;
-          align-items: center;
-          margin-bottom: 15px;
-          padding-bottom: 10px;
-          border-bottom: 2px solid #dee2e6;
-
-          .vab-icon {
-            color: #677ae4;
-            margin-right: 3px;
-            font-size: 1.1rem;
-          }
-
-          span {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #2c3e50;
-          }
-        }
-
-        .info-content {
-          .info-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 0;
-            border-bottom: 1px solid #f1f3f4;
-
-            &:last-child {
-              border-bottom: none;
-            }
-
-            .info-label {
-              color: #6c757d;
-              font-weight: 500;
-              font-size: 0.9rem;
-            }
-
-            .info-value {
-              color: #2c3e50;
-              font-weight: 600;
-              font-size: 0.9rem;
-              max-width: 60%;
-              text-align: right;
-              word-break: break-all;
-            }
-          }
-        }
-      }
-    }
-
     // 图表容器高级样式
     .chart-container {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+
       .chart-header {
         display: flex;
         justify-content: space-between;
@@ -1405,6 +1433,7 @@
         margin-bottom: 15px;
         padding-bottom: 10px;
         border-bottom: 1px solid #f0f0f0;
+        flex-shrink: 0;
 
         .chart-title {
           display: flex;
@@ -1441,14 +1470,19 @@
       }
 
       .chart-content {
+        flex: 1;
         margin-bottom: 15px;
+        min-height: 0;
 
         .echarts {
-          height: 120px;
+          height: 100% !important;
+          min-height: 120px;
         }
       }
 
       .chart-footer {
+        flex-shrink: 0;
+
         .trend-info {
           display: flex;
           justify-content: space-between;
@@ -1479,9 +1513,33 @@
       }
     }
 
+    // 图表卡片固定高度
+    .el-card {
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+
+      ::v-deep {
+        .el-card__body {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+      }
+    }
+
+    // 高级信息卡片和依赖信息卡片不受影响
+    .advanced-info-card,
+    .card {
+      height: auto !important;
+    }
+
     // 图标卡片高级样式
     .icon-card {
-      height: 100%;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
 
       .icon-container {
         height: 100%;
@@ -1497,6 +1555,7 @@
         .icon-header {
           text-align: center;
           margin-bottom: 15px;
+          flex-shrink: 0;
 
           .icon-wrapper {
             width: 60px;
@@ -1527,6 +1586,7 @@
         .icon-content {
           flex: 1;
           margin-bottom: 15px;
+          min-height: 0;
 
           .icon-description {
             font-size: 0.85rem;
@@ -1534,10 +1594,16 @@
             text-align: center;
             line-height: 1.4;
             padding: 0 10px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           }
         }
 
         .icon-footer {
+          flex-shrink: 0;
+
           .icon-stats {
             display: flex;
             justify-content: space-around;
