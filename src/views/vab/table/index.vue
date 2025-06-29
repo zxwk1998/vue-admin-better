@@ -1,5 +1,6 @@
 <template>
   <div class="table-container">
+    <vab-page-header description="功能强大的数据表格组件，支持排序、分页、搜索等功能" :icon="['fas', 'table']" title="表格管理" />
     <vab-query-form>
       <vab-query-form-left-panel>
         <el-button icon="el-icon-plus" type="primary" @click="handleAdd">添加</el-button>
@@ -77,11 +78,13 @@
 <script>
   import { doDelete, getList } from '@/api/table'
   import TableEdit from './components/TableEdit'
+  import VabPageHeader from '@/components/VabPageHeader'
 
   export default {
     name: 'ComprehensiveTable',
     components: {
       TableEdit,
+      VabPageHeader,
     },
     filters: {
       statusFilter(status) {

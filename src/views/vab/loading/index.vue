@@ -1,5 +1,6 @@
 <template>
   <div class="loading-container">
+    <vab-page-header description="多种加载效果展示，包含传统loading和多彩loading" :icon="['fas', 'spinner']" title="加载组件" />
     <el-divider content-position="left">传统loading</el-divider>
     <el-button type="primary" @click="handleLoading()">默认效果</el-button>
     <el-button type="primary" @click="handleLoading(1)">效果1</el-button>
@@ -23,8 +24,13 @@
 </template>
 
 <script>
+  import VabPageHeader from '@/components/VabPageHeader'
+
   export default {
     name: 'Loading',
+    components: {
+      VabPageHeader,
+    },
     data() {
       return {}
     },

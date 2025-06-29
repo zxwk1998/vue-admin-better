@@ -1,5 +1,6 @@
 <template>
   <div class="goods-list-container">
+    <vab-page-header description="商品展示页面，支持搜索、分页等功能" :icon="['fas', 'shopping-bag']" title="商品列表" />
     <vab-query-form>
       <vab-query-form-right-panel :span="24">
         <el-form ref="form" :inline="true" :model="queryForm" @submit.native.prevent>
@@ -50,10 +51,13 @@
 
 <script>
   import { getList } from '@/api/goodsList'
+  import VabPageHeader from '@/components/VabPageHeader'
 
   export default {
     name: 'Goods',
-    components: {},
+    components: {
+      VabPageHeader,
+    },
     data() {
       return {
         queryForm: {

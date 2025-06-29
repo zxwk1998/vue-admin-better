@@ -1,5 +1,7 @@
 <template>
   <div class="webSocket-container">
+    <vab-page-header description="WebSocket 实时通信功能演示，支持消息发送和接收" :icon="['fas', 'comments']" title="WebSocket" />
+
     <el-row :gutter="20">
       <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
         <el-alert :closable="false" type="success">webSocket连接{{ status }}！</el-alert>
@@ -24,9 +26,13 @@
 </template>
 
 <script>
+  import VabPageHeader from '@/components/VabPageHeader'
+
   export default {
     name: 'WebSocket',
-    components: {},
+    components: {
+      VabPageHeader,
+    },
     data() {
       return {
         url: 'ws://123.207.136.134:9010/ajaxchattest',

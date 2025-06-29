@@ -1,5 +1,6 @@
 <template>
   <div class="roleManagement-container">
+    <vab-page-header description="系统角色权限管理，支持角色的增删改查操作" :icon="['fas', 'user-shield']" title="角色管理" />
     <el-divider content-position="left">
       演示环境仅做基础功能展示，若想实现不同角色的真实菜单配置，需将settings.js路由加载模式改为all模式，由后端全面接管路由渲染与权限控制
     </el-divider>
@@ -47,10 +48,14 @@
 <script>
   import { doDelete, getList } from '@/api/roleManagement'
   import Edit from './components/RoleManagementEdit'
+  import VabPageHeader from '@/components/VabPageHeader'
 
   export default {
     name: 'RoleManagement',
-    components: { Edit },
+    components: {
+      Edit,
+      VabPageHeader,
+    },
     data() {
       return {
         list: null,

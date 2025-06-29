@@ -1,5 +1,11 @@
 <template>
   <div class="lodash-container">
+    <vab-page-header
+      description="Lodash 是一个一致性、模块化、高性能的 JavaScript 实用工具库"
+      :icon="['fas', 'code']"
+      title="Lodash 工具库"
+    />
+
     <el-row :gutter="20">
       <el-col :span="24">
         <el-card shadow="hover">
@@ -206,8 +212,13 @@
 </template>
 
 <script>
+  import VabPageHeader from '@/components/VabPageHeader'
+
   export default {
     name: 'Lodash',
+    components: {
+      VabPageHeader,
+    },
     data() {
       return {}
     },

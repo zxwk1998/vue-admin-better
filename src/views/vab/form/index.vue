@@ -1,5 +1,7 @@
 <template>
   <div class="form-container">
+    <vab-page-header description="Element UI 表单组件的使用示例，包含验证、重置等功能" :icon="['fas', 'edit']" title="表单组件" />
+
     <el-row :gutter="20">
       <el-col :lg="8" :md="12" :sm="24" :xl="8" :xs="24">
         <el-form ref="ruleForm" class="demo-ruleForm" label-width="100px" :model="ruleForm" :rules="rules">
@@ -43,8 +45,13 @@
 </template>
 
 <script>
+  import VabPageHeader from '@/components/VabPageHeader'
+
   export default {
     name: 'Form',
+    components: {
+      VabPageHeader,
+    },
     data() {
       return {
         ruleForm: {

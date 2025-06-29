@@ -1,5 +1,7 @@
 <template>
   <div class="colorful-icon-container">
+    <vab-page-header description="多彩图标库，点击图标即可复制源码" :icon="['fas', 'palette']" title="彩色图标" />
+
     <el-row :gutter="20">
       <el-col :span="24">
         <el-divider content-position="left">多彩图标在演示环境中使用的是cdn加速服务，开发时需存储到本地，点击图标即可复制源码</el-divider>
@@ -46,9 +48,13 @@
 <script>
   import { getIconList } from '@/api/colorfulIcon'
   import clip from '@/utils/clipboard'
+  import VabPageHeader from '@/components/VabPageHeader'
 
   export default {
     name: 'ColorfulIcon',
+    components: {
+      VabPageHeader,
+    },
     data() {
       return {
         copyText: '',

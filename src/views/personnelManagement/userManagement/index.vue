@@ -1,5 +1,7 @@
 <template>
   <div class="userManagement-container">
+    <vab-page-header description="系统用户管理，支持添加、编辑、删除用户信息" :icon="['fas', 'users']" title="用户管理" />
+
     <vab-query-form>
       <vab-query-form-left-panel :span="12">
         <el-button icon="el-icon-plus" type="primary" @click="handleEdit">添加</el-button>
@@ -55,10 +57,14 @@
 <script>
   import { doDelete, getList } from '@/api/userManagement'
   import Edit from './components/UserManagementEdit'
+  import VabPageHeader from '@/components/VabPageHeader'
 
   export default {
     name: 'UserManagement',
-    components: { Edit },
+    components: {
+      Edit,
+      VabPageHeader,
+    },
     data() {
       return {
         list: null,

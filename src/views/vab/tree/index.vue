@@ -1,5 +1,10 @@
 <template>
   <div class="tree-container">
+    <vab-page-header
+      description="Element UI 树形组件的使用示例，包含常规树、懒加载树、单选树、多选树"
+      :icon="['fas', 'tree']"
+      title="树形组件"
+    />
     <el-row :gutter="20">
       <el-col :lg="6" :md="24" :sm="24" :xl="6" :xs="24">
         <el-divider content-position="left">常规树</el-divider>
@@ -190,9 +195,13 @@
 
 <script>
   import { getTreeList } from '@/api/tree'
+  import VabPageHeader from '@/components/VabPageHeader'
 
   export default {
     name: 'Tree',
+    components: {
+      VabPageHeader,
+    },
     data() {
       return {
         dialogTitle: '添加节点',

@@ -1,5 +1,7 @@
 <template>
   <div class="icon-container">
+    <vab-page-header description="丰富的图标库，点击图标即可复制源码" :icon="['fas', 'icons']" title="图标库" />
+
     <el-row :gutter="20">
       <el-col :span="24">
         <el-divider content-position="left">点击图标即可复制源码</el-divider>
@@ -42,9 +44,13 @@
 <script>
   import clip from '@/utils/clipboard'
   import { getIconList } from '@/api/icon'
+  import VabPageHeader from '@/components/VabPageHeader'
 
   export default {
     name: 'AwesomeIcon',
+    components: {
+      VabPageHeader,
+    },
     data() {
       return {
         copyText: '',

@@ -1,5 +1,10 @@
 <template>
   <div class="element-container">
+    <vab-page-header
+      description="Element UI 组件的使用示例，包含标签、进度条、按钮、链接等"
+      :icon="['fas', 'cubes']"
+      title="Element UI 组件"
+    />
     <el-row :gutter="20">
       <el-col :lg="18" :md="18" :sm="24" :xl="16" :xs="24">
         <el-button type="primary" @click="dialogVisible = !dialogVisible">element全部文档点这里</el-button>
@@ -127,9 +132,13 @@
 </template>
 
 <script>
+  import VabPageHeader from '@/components/VabPageHeader'
+
   export default {
     name: 'Element',
-    components: {},
+    components: {
+      VabPageHeader,
+    },
     data() {
       return {
         dialogVisible: false,

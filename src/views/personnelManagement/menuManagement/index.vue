@@ -1,5 +1,6 @@
 <template>
   <div class="menuManagement-container">
+    <vab-page-header description="系统菜单配置管理，支持菜单的增删改查操作" :icon="['fas', 'bars']" title="菜单管理" />
     <el-divider content-position="left">
       演示环境仅做基础功能展示，若想实现不同角色的真实菜单配置，需将settings.js路由加载模式改为all模式，由后端全面接管路由渲染与权限控制
     </el-divider>
@@ -87,10 +88,14 @@
   import { getRouterList as getList } from '@/api/router'
   import { doDelete, getTree } from '@/api/menuManagement'
   import Edit from './components/MenuManagementEdit'
+  import VabPageHeader from '@/components/VabPageHeader'
 
   export default {
     name: 'MenuManagement',
-    components: { Edit },
+    components: {
+      Edit,
+      VabPageHeader,
+    },
     data() {
       return {
         data: [],

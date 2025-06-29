@@ -1,5 +1,7 @@
 <template>
   <div class="pay-container">
+    <vab-page-header description="安全便捷的支付流程，支持多种支付方式" :icon="['fas', 'credit-card']" title="支付中心" />
+
     <el-row :gutter="20">
       <el-col
         :lg="{ span: 14, offset: 5 }"
@@ -25,10 +27,16 @@
   import Step1 from './components/Step1'
   import Step2 from './components/Step2'
   import Step3 from './components/Step3'
+  import VabPageHeader from '@/components/VabPageHeader'
 
   export default {
     name: 'Pay',
-    components: { Step1, Step2, Step3 },
+    components: {
+      Step1,
+      Step2,
+      Step3,
+      VabPageHeader,
+    },
     data() {
       return {
         active: 1,

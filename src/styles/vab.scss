@@ -242,9 +242,86 @@ html {
 
     .el-card {
       margin-bottom: 15px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 
       &__body {
         padding: $base-padding;
+      }
+    }
+
+    /* VabPageHeader 全局样式 - 高优先级 */
+    .page-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      border-radius: 12px !important;
+      padding: 30px !important;
+      margin-bottom: 24px !important;
+      color: white !important;
+      box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3) !important;
+      border: none !important;
+
+      .header-content {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+
+        .header-left {
+          .page-title {
+            font-size: 2rem !important;
+            font-weight: 700 !important;
+            margin: 0 0 8px 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 12px !important;
+            color: white !important;
+
+            .vab-icon {
+              font-size: 1.8rem !important;
+              color: white !important;
+            }
+          }
+
+          .page-description {
+            font-size: 1rem !important;
+            opacity: 0.9 !important;
+            margin: 0 !important;
+            color: white !important;
+          }
+        }
+
+        .header-right {
+          display: flex !important;
+          align-items: center !important;
+          gap: 8px !important;
+          font-size: 1.1rem !important;
+          font-weight: 600 !important;
+          color: white !important;
+
+          .vab-icon {
+            font-size: 1.3rem !important;
+            color: white !important;
+          }
+        }
+      }
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      .page-header {
+        padding: 20px !important;
+
+        .header-content {
+          flex-direction: column !important;
+          gap: 16px !important;
+          text-align: center !important;
+
+          .header-left {
+            .page-title {
+              font-size: 1.5rem !important;
+            }
+          }
+        }
       }
     }
 
@@ -259,6 +336,112 @@ html {
             line-height: 26px;
           }
         }
+      }
+    }
+
+    /* 扩展 el-divider 样式 */
+    .el-divider {
+      position: relative;
+      border: none;
+      background: linear-gradient(90deg, transparent, #e4e7ed, transparent);
+
+      &--horizontal {
+        height: 1px;
+        margin: 20px 0 30px 0;
+
+        .el-divider__text {
+          position: relative;
+          padding: 0 16px;
+          font-size: 14px;
+          font-weight: 500;
+          color: #606266;
+          background: #fff;
+          border-radius: 4px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -8px;
+            width: 4px;
+            height: 4px;
+            margin-top: -2px;
+            background: #409eff;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      &--vertical {
+        width: 1px;
+        height: 1em;
+        margin: 0 16px;
+        background: #e4e7ed;
+      }
+
+      /* 主题变体 */
+      &--primary {
+        background: linear-gradient(90deg, transparent, #409eff, transparent);
+
+        .el-divider__text {
+          color: #409eff;
+
+          &::before {
+            background: #409eff;
+          }
+        }
+      }
+
+      &--success {
+        background: linear-gradient(90deg, transparent, #67c23a, transparent);
+
+        .el-divider__text {
+          color: #67c23a;
+
+          &::before {
+            background: #67c23a;
+          }
+        }
+      }
+
+      &--warning {
+        background: linear-gradient(90deg, transparent, #e6a23c, transparent);
+
+        .el-divider__text {
+          color: #e6a23c;
+
+          &::before {
+            background: #e6a23c;
+          }
+        }
+      }
+
+      &--danger {
+        background: linear-gradient(90deg, transparent, #f56c6c, transparent);
+
+        .el-divider__text {
+          color: #f56c6c;
+
+          &::before {
+            background: #f56c6c;
+          }
+        }
+      }
+
+      /* 虚线样式 */
+      &--dashed {
+        background: none;
+        border-top: 1px dashed #e4e7ed;
+
+        .el-divider__text {
+          background: #fff;
+        }
+      }
+
+      /* 粗线样式 */
+      &--thick {
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #409eff, transparent);
       }
     }
   }
