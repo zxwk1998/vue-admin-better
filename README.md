@@ -29,6 +29,10 @@
 - 🚀 跨平台 PC、手机端、平板
 - 📦️ 后端路由动态渲染
 
+## 💪 找工作
+
+- [🎉 找好工作就到好工作网查看就业避坑指南](https://job.vuejs-core.cn/)
+
 ## 🌐 付费版演示地址
 
 - [🚀 Vue Admin Pro 演示地址（vue2.x + element-ui 2.x 付费版本，支持 PC、平板、手机）](https://vuejs-core.cn/admin-pro/)
