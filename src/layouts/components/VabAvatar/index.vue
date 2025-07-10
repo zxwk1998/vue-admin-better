@@ -57,6 +57,11 @@
         <span>Shop Vite 地址</span>
       </el-dropdown-item>
 
+      <el-dropdown-item command="job" class="dropdown-item">
+        <i class="el-icon-link"></i>
+        <span>好工作就业参考网</span>
+      </el-dropdown-item>
+
       <el-divider></el-divider>
 
       <el-dropdown-item command="logout" class="dropdown-item logout-item">
@@ -105,6 +110,9 @@
             break
           case 'shop':
             window.open('https://vuejs-core.cn/shop-vite/')
+            break
+          case 'job':
+            window.open('https://job.vuejs-core.cn/')
             break
         }
       },

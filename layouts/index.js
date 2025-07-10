@@ -25,6 +25,12 @@ module.exports = {
 
     console.log(
       chalk.green(
+        `> 找好工作就到【好工作就业参考网】查看就业避坑指南：https://job.vuejs-core.cn/`
+      )
+    )
+
+    console.log(
+      chalk.green(
         `> 使用中出现任何问题可加QQ群反馈，获取基础版、文档，请我们喝杯咖啡（如若情况不允许，请勿勉强）：https://gitee.com/chu1204505056/vue-admin-better#-%E5%89%8D%E7%AB%AF%E8%AE%A8%E8%AE%BA-qq-%E7%BE%A4`
       )
     )
