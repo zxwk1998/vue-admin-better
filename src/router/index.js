@@ -53,6 +53,15 @@ export const asyncRoutes = [
       },
     ],
   },
+  {
+    path: 'https://job.vuejs-core.cn/posts',
+    meta: {
+      title: '找工作',
+      target: '_blank',
+      icon: 'horse-head',
+      badge: 'New',
+    },
+  },
   /* {
     path: "/test",
     component: Layout,
