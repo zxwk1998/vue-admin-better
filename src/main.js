@@ -19,6 +19,15 @@ if (process.env.VUE_APP_MOCK_ENABLE === 'true' && process.env.NODE_ENV !== 'prod
   })
 }
 
+// 处理Chrome扩展错误
+const originalConsoleError = console.error
+console.error = function (...args) {
+  if (args[0] && typeof args[0] === 'string' && (args[0].includes('runtime.lastError') || args[0].includes('The message port closed'))) {
+    return // 忽略这个特定错误
+  }
+  originalConsoleError.apply(console, args)
+}
+
 // 打印layouts/index.js中的信息到控制台
 printLayoutsInfo()
 

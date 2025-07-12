@@ -42,6 +42,13 @@ const handleCode = (code, msg) => {
   }
 }
 
+// 请求重试配置
+const retryConfig = {
+  retry: 3, // 重试次数
+  retryDelay: 1000, // 重试间隔时间
+}
+
+// 创建axios实例
 const instance = axios.create({
   baseURL,
   timeout: requestTimeout,
@@ -50,6 +57,11 @@ const instance = axios.create({
   },
 })
 
+// 请求重试方法
+instance.defaults.retry = retryConfig.retry
+instance.defaults.retryDelay = retryConfig.retryDelay
+
+// 请求拦截器
 instance.interceptors.request.use(
   (config) => {
     if (store.getters['user/accessToken']) {
@@ -67,6 +79,7 @@ instance.interceptors.request.use(
   }
 )
 
+// 响应拦截器
 instance.interceptors.response.use(
   (response) => {
     if (loadingInstance) loadingInstance.close()
@@ -91,6 +104,31 @@ instance.interceptors.response.use(
   },
   (error) => {
     if (loadingInstance) loadingInstance.close()
+
+    // 处理请求重试
+    const { config } = error
+    if (config && config.retry) {
+      // 设置当前重试次数
+      config.__retryCount = config.__retryCount || 0
+
+      // 检查是否可以重试
+      if (config.__retryCount < config.retry) {
+        // 增加重试次数
+        config.__retryCount += 1
+
+        // 创建新的Promise进行重试
+        const backoff = new Promise((resolve) => {
+          setTimeout(() => {
+            console.log(`重试请求: ${config.url}, 尝试次数: ${config.__retryCount}`)
+            resolve()
+          }, config.retryDelay || 1000)
+        })
+
+        // 重新发起请求
+        return backoff.then(() => instance(config))
+      }
+    }
+
     const { response, message } = error
     if (error.response && error.response.data) {
       const { status, data } = response
@@ -107,6 +145,7 @@ instance.interceptors.response.use(
       if (message.includes('Request failed with status code')) {
         const code = message.substr(message.length - 3)
         message = `后端接口${code}异常`
+        location.reload()
       }
       Vue.prototype.$baseMessage(message || `后端接口未知异常`, 'error')
       return Promise.reject(error)
