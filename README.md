@@ -19,7 +19,7 @@
 
 [开源地址](https://github.com/zxwk1998/vue-admin-arco) | [演示地址](https://vuejs-core.cn/vue-admin-arco) -->
 
-# 📦️ 2025 全新启程
+## 📦️ 2025 全新启程
 
 - 🚀 项目运行速度提升 10-15 倍，打包速度提示 20-30 倍，运行打包最多不超过 10 秒，带你体验飞一般的感觉。
 
