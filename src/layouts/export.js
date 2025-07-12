@@ -12,7 +12,9 @@ requireComponents.keys().forEach((fileName) => {
   Vue.component(componentName, componentConfig.default || componentConfig)
 })
 
+// 使用 require.context 安全地导入主题文件
 const requireThemes = require.context('@/styles/themes', true, /\.scss$/)
 requireThemes.keys().forEach((fileName) => {
-  require(`@/styles/themes/${fileName.slice(2)}`)
+  // 使用 require.context 直接引入，避免动态字符串拼接
+  requireThemes(fileName)
 })

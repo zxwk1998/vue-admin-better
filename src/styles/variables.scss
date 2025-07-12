@@ -5,7 +5,7 @@
 /* stylelint-disable */
 @charset "utf-8";
 //框架默认主题色
-$base-color-default: #677AE4;
+$base-color-default: #677ae4;
 //默认层级
 $base-z-index: 999;
 //横向布局纵向布局时菜单背景色
@@ -68,12 +68,3 @@ $base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
 $base-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), border 0s, background 0s, color 0s, font-size 0s;
 //默认动画长
 $base-transition-time: 0.3s;
-
-:export {
-  //菜单文字颜色变量导出
-  menu-color: $base-menu-color;
-  //菜单选中文字颜色变量导出
-  menu-color-active: $base-menu-color-active;
-  //菜单背景色变量导出
-  menu-background: $base-menu-background;
-}

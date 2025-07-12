@@ -6,6 +6,7 @@ import Mock from 'mockjs'
 import { paramObj } from '@/utils'
 
 const mocks = []
+// 使用兼容 rspack 的方式导入 mock 控制器
 const files = require.context('../../mock/controller', false, /\.js$/)
 
 files.keys().forEach((key) => {

@@ -17,9 +17,7 @@ const setting = {
   //简写
   abbreviation: 'vab',
   //开发环境端口号
-  devPort: '81',
-  //版本号
-  version: process.env.VUE_APP_VERSION,
+  devPort: '8090',
   //copyright
   copyright: 'zxwk1998',
   //是否显示页面底部自定义版权信息
@@ -64,7 +62,5 @@ const setting = {
   templateFolder: 'project',
   //是否显示终端donation打印
   donation: true,
-  //是否开启图片压缩
-  imageCompression: true,
 }
 module.exports = setting

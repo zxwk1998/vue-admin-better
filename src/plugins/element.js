@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/display.css'
+// 使用我们自定义的CSS文件
+// import 'element-ui/lib/theme-chalk/display.css'
 
 import '@/styles/element-variables.scss'
 

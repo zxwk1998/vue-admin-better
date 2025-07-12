@@ -74,7 +74,7 @@
       },
       onerror() {
         this.status = '失败'
-        this.initWebSocket()
+        this.init()
       },
       onmessage({ data }) {
         //截掉测试webSocket地址广告

@@ -7,10 +7,13 @@
         </el-col>
         <el-col :lg="12" :md="12" :sm="12" :xl="12" :xs="12">
           <el-menu
-            :active-text-color="variables['menu-color-active']"
-            :background-color="variables['menu-background']"
+            active-text-color=" hsla(0, 0%, 100%, 0.95)"
+            background-color="#21252b"
+            :collapse="collapse"
+            :collapse-transition="false"
             :default-active="activeMenu"
-            :text-color="variables['menu-color']"
+            :default-openeds="defaultOpens"
+            text-color=" hsla(0, 0%, 100%, 0.95)"
             menu-trigger="hover"
             mode="horizontal"
           >

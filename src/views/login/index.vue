@@ -571,46 +571,299 @@
   // 响应式设计
   @media (max-width: 768px) {
     .login-container {
+      padding: 15px;
+
       .login-content {
         flex-direction: column;
         height: auto;
-        margin: 20px;
+        max-height: 90vh;
+        overflow-y: auto;
+        margin: 10px;
         border-radius: 16px;
+        max-width: 100%;
 
         .login-left {
-          padding: 40px 20px;
+          padding: 25px 20px;
           text-align: center;
+          // 不完全隐藏，而是简化显示
 
           .welcome-section {
             .logo-container {
               justify-content: center;
-              margin-bottom: 30px;
+              margin-bottom: 15px;
+
+              .logo-icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+
+                i {
+                  font-size: 20px;
+                }
+              }
+
+              .logo-text {
+                font-size: 22px;
+              }
             }
 
             .welcome-title {
-              font-size: 28px;
+              font-size: 24px;
+              margin-bottom: 10px;
             }
 
             .welcome-subtitle {
-              font-size: 16px;
+              font-size: 14px;
+              margin-bottom: 20px;
             }
 
+            // 在手机端隐藏功能列表
             .feature-list {
-              .feature-item {
-                justify-content: center;
-                font-size: 14px;
-              }
+              display: none;
             }
           }
         }
 
         .login-right {
-          padding: 40px 20px;
+          padding: 25px 20px;
 
           .login-card {
             .card-header {
+              margin-bottom: 25px;
+
               .login-title {
-                font-size: 24px;
+                font-size: 22px;
+              }
+
+              .login-subtitle {
+                font-size: 14px;
+              }
+            }
+
+            .login-form {
+              .form-item {
+                margin-bottom: 20px;
+
+                .input-wrapper {
+                  .custom-input {
+                    ::v-deep .el-input__inner {
+                      height: 45px;
+                      font-size: 14px;
+                    }
+                  }
+                }
+              }
+
+              .form-options {
+                margin-bottom: 25px;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .forgot-link {
+                  font-size: 13px;
+                }
+              }
+
+              .login-btn {
+                height: 45px;
+                font-size: 15px;
+                margin-bottom: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      // 调整浮动形状在手机端的位置和大小
+      .login-background {
+        .floating-shapes {
+          .shape {
+            &.shape-1 {
+              width: 50px;
+              height: 50px;
+            }
+
+            &.shape-2 {
+              width: 70px;
+              height: 70px;
+            }
+
+            &.shape-3 {
+              width: 40px;
+              height: 40px;
+            }
+
+            &.shape-4 {
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 添加更小屏幕的适配
+  @media (max-width: 480px) {
+    .login-container {
+      .login-content {
+        margin: 5px;
+        border-radius: 12px;
+
+        // 在非常小的屏幕上隐藏左侧内容
+        .login-left {
+          display: none;
+        }
+
+        .login-right {
+          padding: 25px 15px;
+
+          .login-card {
+            .login-form {
+              .form-item {
+                .input-wrapper {
+                  .input-icon {
+                    left: 12px;
+                  }
+
+                  .custom-input {
+                    ::v-deep .el-input__inner {
+                      padding-left: 40px;
+                      border-radius: 10px;
+                    }
+                  }
+                }
+              }
+
+              .login-btn {
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 添加横屏模式的适配
+  @media (max-height: 600px) and (orientation: landscape) {
+    .login-container {
+      .login-content {
+        flex-direction: row;
+        height: auto;
+        max-height: 90vh;
+
+        .login-left {
+          padding: 20px;
+
+          .welcome-section {
+            .logo-container {
+              margin-bottom: 10px;
+
+              .logo-icon {
+                width: 35px;
+                height: 35px;
+
+                i {
+                  font-size: 18px;
+                }
+              }
+
+              .logo-text {
+                font-size: 18px;
+              }
+            }
+
+            .welcome-title {
+              font-size: 20px;
+              margin-bottom: 5px;
+            }
+
+            .welcome-subtitle {
+              font-size: 12px;
+              margin-bottom: 10px;
+            }
+
+            .feature-list {
+              display: none;
+            }
+          }
+        }
+
+        .login-right {
+          padding: 20px;
+
+          .login-card {
+            .card-header {
+              margin-bottom: 15px;
+
+              .login-title {
+                font-size: 20px;
+              }
+
+              .login-subtitle {
+                font-size: 12px;
+              }
+            }
+
+            .login-form {
+              .form-item {
+                margin-bottom: 12px;
+
+                .input-wrapper {
+                  .custom-input {
+                    ::v-deep .el-input__inner {
+                      height: 40px;
+                    }
+                  }
+                }
+              }
+
+              .form-options {
+                margin-bottom: 15px;
+              }
+
+              .login-btn {
+                height: 40px;
+                margin-bottom: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 针对iPhone SE等超小屏幕设备的特殊适配
+  @media (max-width: 375px) {
+    .login-container {
+      padding: 10px;
+
+      .login-content {
+        margin: 0;
+        border-radius: 10px;
+
+        .login-right {
+          padding: 20px 15px;
+
+          .login-card {
+            .card-header {
+              margin-bottom: 20px;
+
+              .login-title {
+                font-size: 20px;
+              }
+            }
+
+            .login-form {
+              .form-item {
+                margin-bottom: 15px;
+              }
+
+              .form-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
               }
             }
           }

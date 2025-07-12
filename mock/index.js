@@ -42,8 +42,11 @@ const registerRoutes = (app) => {
  * @returns {{response(*=, *=): void, type: (*|string), url: RegExp}}
  */
 const responseFake = (url, type, respond) => {
+  // 处理baseURL和url，确保不会出现双斜杠
+  const base = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL
+  const apiUrl = url.startsWith('/') ? url : `/${url}`
   return {
-    url: new RegExp(`${baseURL}${url}`),
+    url: new RegExp(`${base}${apiUrl}`),
     type: type || 'get',
     response(req, res) {
       res.status(200)

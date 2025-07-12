@@ -8,13 +8,13 @@ export function convertRouter(asyncRoutes) {
   return asyncRoutes.map((route) => {
     if (route.component) {
       if (route.component === 'Layout') {
-        route.component = (resolve) => require(['@/layouts'], resolve)
+        route.component = () => import('@/layouts')
       } else if (route.component === 'EmptyLayout') {
-        route.component = (resolve) => require(['@/layouts/EmptyLayout'], resolve)
+        route.component = () => import('@/layouts/EmptyLayout')
       } else {
         const index = route.component.indexOf('views')
         const path = index > 0 ? route.component.slice(index) : `views/${route.component}`
-        route.component = (resolve) => require([`@/${path}`], resolve)
+        route.component = () => import(`@/${path}`)
       }
     }
     if (route.children && route.children.length) route.children = convertRouter(route.children)

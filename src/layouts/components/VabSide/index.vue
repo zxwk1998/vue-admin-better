@@ -2,18 +2,18 @@
   <el-scrollbar :class="{ 'is-collapse': collapse }" class="side-container">
     <vab-logo />
     <el-menu
-      :active-text-color="variables['menu-color-active']"
-      :background-color="variables['menu-background']"
+      active-text-color=" hsla(0, 0%, 100%, 0.95)"
+      background-color="#21252b"
       :collapse="collapse"
       :collapse-transition="false"
       :default-active="activeMenu"
       :default-openeds="defaultOpens"
-      :text-color="variables['menu-color']"
+      text-color=" hsla(0, 0%, 100%, 0.95)"
       :unique-opened="uniqueOpened"
       mode="vertical"
     >
       <template v-for="route in routes">
-        <vab-side-item :key="route.path" :full-path="route.path" :item="route" />
+        <vab-side-item :full-path="route.path" :item="route" />
       </template>
     </el-menu>
   </el-scrollbar>
