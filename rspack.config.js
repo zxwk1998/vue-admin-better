@@ -9,7 +9,7 @@ const time = dayjs().format('YYYY-M-D HH:mm:ss')
 // 设置环境变量
 process.env.VUE_APP_TITLE = title || 'vue-admin-better'
 process.env.VUE_APP_UPDATE_TIME = time
-process.env.BASE_URL = publicPath || '/'
+process.env.BASE_URL = publicPath
 // 删除这一行，避免覆盖rspack.js中设置的值
 // process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 process.env.VUE_APP_MOCK_ENABLE = 'true' // 启用mock
@@ -153,7 +153,7 @@ module.exports = {
       title: title || 'vue-admin-better',
       inject: 'body',
       templateParameters: {
-        BASE_URL: publicPath || '/',
+        BASE_URL: publicPath,
         VUE_APP_TITLE: process.env.VUE_APP_TITLE,
         VUE_APP_AUTHOR: process.env.VUE_APP_AUTHOR,
       },
