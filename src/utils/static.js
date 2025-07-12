@@ -14,6 +14,12 @@ files.keys().forEach((key) => {
 })
 
 export function mockXHR() {
+  // 设置Mock响应延迟
+  Mock.setup({
+    timeout: '200-600',
+  })
+
+  // 保存原始的XHR send方法
   Mock.XHR.prototype.proxy_send = Mock.XHR.prototype.send
   Mock.XHR.prototype.send = function () {
     if (this.custom.xhr) {
@@ -29,21 +35,47 @@ export function mockXHR() {
   function XHRHttpRequst(respond) {
     return function (options) {
       let result
-      if (respond instanceof Function) {
-        const { body, type, url } = options
-        result = respond({
-          method: type,
-          body: JSON.parse(body),
-          query: paramObj(url),
-        })
-      } else {
-        result = respond
+      try {
+        if (respond instanceof Function) {
+          const { body, type, url } = options
+          // 安全解析body
+          let parsedBody = {}
+          if (body) {
+            try {
+              parsedBody = JSON.parse(body)
+            } catch (e) {
+              console.warn('无法解析请求体:', e)
+            }
+          }
+
+          result = respond({
+            method: type,
+            body: parsedBody,
+            query: paramObj(url),
+          })
+        } else {
+          result = respond
+        }
+      } catch (error) {
+        console.error('Mock处理请求时发生错误:', error)
+        // 返回默认错误响应
+        result = {
+          code: 500,
+          message: '服务器内部错误',
+        }
       }
       return Mock.mock(result)
     }
   }
 
+  // 注册所有的mock服务
   mocks.forEach((item) => {
     Mock.mock(new RegExp(item.url), item.type || 'get', XHRHttpRequst(item.response))
   })
+
+  // 记录mock设置完成
+  console.info(`[Mock] 成功设置 ${mocks.length} 个模拟接口`)
 }
+
+// 导出mocks列表，便于调试
+export const mockList = mocks

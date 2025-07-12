@@ -54,13 +54,23 @@ export const asyncRoutes = [
     ],
   },
   {
-    path: 'https://job.vuejs-core.cn/posts',
+    path: '/external-job',
+    component: Layout,
     meta: {
-      title: '找工作',
-      target: '_blank',
-      icon: 'horse-head',
-      badge: 'New',
+      title: '',
+      icon: '',
     },
+    children: [
+      {
+        path: 'https://job.vuejs-core.cn/posts',
+        meta: {
+          title: '找工作',
+          target: '_blank',
+          icon: 'horse-head',
+          badge: 'New',
+        },
+      },
+    ],
   },
   /* {
     path: "/test",
@@ -215,14 +225,24 @@ export const asyncRoutes = [
         meta: { title: '错误日志模拟', permissions: ['admin'] },
       },
       {
-        path: 'https://github.com/zxwk1998/vue-admin-better/',
-        name: 'ExternalLink',
+        path: 'external-link',
+        component: EmptyLayout,
+        redirect: 'noRedirect',
         meta: {
           title: '外链',
-          target: '_blank',
-          permissions: ['admin', 'editor'],
-          badge: 'New',
         },
+        children: [
+          {
+            path: 'https://github.com/zxwk1998/vue-admin-better/',
+            name: 'ExternalLink',
+            meta: {
+              title: '外链',
+              target: '_blank',
+              permissions: ['admin', 'editor'],
+              badge: 'New',
+            },
+          },
+        ],
       },
       {
         path: 'more',

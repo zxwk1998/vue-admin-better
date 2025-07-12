@@ -85,16 +85,27 @@ instance.interceptors.response.use(
     if (loadingInstance) loadingInstance.close()
 
     const { data, config } = response
-    const { code, msg } = data
+
+    // 判断data是否为undefined或null
+    if (data === undefined || data === null) {
+      Vue.prototype.$baseMessage('后端接口返回数据为空', 'error')
+      return Promise.reject('后端接口返回数据为空')
+    }
+
+    // 安全地解构code和msg，避免undefined异常
+    const code = data.code !== undefined ? data.code : null
+    const msg = data.msg !== undefined ? data.msg : '未知错误'
+
     // 操作正常Code数组
     const codeVerificationArray = isArray(successCode) ? [...successCode] : [...[successCode]]
+
     // 是否操作正常
-    if (codeVerificationArray.includes(code)) {
+    if (code !== null && codeVerificationArray.includes(code)) {
       return data
     } else {
       handleCode(code, msg)
       return Promise.reject(
-        `vue-admin-beautiful请求异常拦截:${JSON.stringify({
+        `vue-admin-better请求异常拦截:${JSON.stringify({
           url: config.url,
           code,
           msg,
@@ -129,25 +140,32 @@ instance.interceptors.response.use(
       }
     }
 
+    // 处理undefined或无法解析的错误情况
+    if (!error) {
+      Vue.prototype.$baseMessage('发生未知错误', 'error')
+      return Promise.reject('发生未知错误')
+    }
+
     const { response, message } = error
-    if (error.response && error.response.data) {
+    if (response && response.data) {
       const { status, data } = response
-      handleCode(status, data.msg || message)
+      handleCode(status, data.msg || message || '未知错误')
       return Promise.reject(error)
     } else {
-      let { message } = error
-      if (message === 'Network Error') {
-        message = '后端接口连接异常'
+      let errorMsg = '后端接口未知异常'
+
+      if (message) {
+        if (message === 'Network Error') {
+          errorMsg = '后端接口连接异常'
+        } else if (message.includes('timeout')) {
+          errorMsg = '后端接口请求超时'
+        } else if (message.includes('Request failed with status code')) {
+          const code = message.substr(message.length - 3)
+          errorMsg = `后端接口${code}异常`
+        }
       }
-      if (message.includes('timeout')) {
-        message = '后端接口请求超时'
-      }
-      if (message.includes('Request failed with status code')) {
-        const code = message.substr(message.length - 3)
-        message = `后端接口${code}异常`
-        location.reload()
-      }
-      Vue.prototype.$baseMessage(message || `后端接口未知异常`, 'error')
+
+      Vue.prototype.$baseMessage(errorMsg, 'error')
       return Promise.reject(error)
     }
   }
