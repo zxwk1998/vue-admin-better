@@ -64,6 +64,8 @@
 
 - [🎉 Vue Admin Better （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-better)
 
+- [🎉 Vue3 Admin Better （vue3.x + element-plus 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue3-admin-better)
+
 <!-- - [⚡️ vue3.x + element-plus（alpha 版本，免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-better-plus/) -->
 
 <!-- - [⚡️ Vue Admin Ant （vue3.x + ant-design-vue 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-better-antdv/) -->
@@ -74,7 +76,9 @@
 
 - [🌐 vue2.x github 仓库地址](https://github.com/zxwk1998/vue-admin-better/)
 
-- [🌐 vue3.x github 仓库地址](https://github.com/zxwk1998/vue-admin-arco/)
+- [🌐 vue3.x github 仓库地址 1](https://github.com/zxwk1998/vue3-admin-better/)
+
+- [🌐 vue3.x github 仓库地址 2](https://github.com/zxwk1998/vue-admin-arco/)
 
 - [🌐 vue2.x 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better/)
 
