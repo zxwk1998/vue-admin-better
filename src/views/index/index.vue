@@ -329,6 +329,13 @@
             <span>依赖信息</span>
             <!-- <div style="float: right">部署时间:{{ updateTime }}</div> -->
           </div>
+          <!-- rspack -->
+          <div class="rspack-info">
+            <div class="rspack-item">
+              <div class="rspack-name">Rspack版本</div>
+              <div class="rspack-version">{{ devDependencies['rspack'] }}</div>
+            </div>
+          </div>
 
           <div class="dependency-content">
             <div class="dependency-grid">
@@ -369,13 +376,6 @@
 
               <div class="dependency-item">
                 <div class="dependency-info">
-                  <div class="dependency-name">@vue/cli版本</div>
-                  <div class="dependency-version">{{ devDependencies['@vue/cli-service'] }}</div>
-                </div>
-              </div>
-
-              <div class="dependency-item">
-                <div class="dependency-info">
                   <div class="dependency-name">ESLint版本</div>
                   <div class="dependency-version">{{ devDependencies['eslint'] }}</div>
                 </div>
@@ -392,20 +392,6 @@
                 <div class="dependency-info">
                   <div class="dependency-name">Sass版本</div>
                   <div class="dependency-version">{{ devDependencies['sass'] }}</div>
-                </div>
-              </div>
-
-              <div class="dependency-item">
-                <div class="dependency-info">
-                  <div class="dependency-name">MockJS版本</div>
-                  <div class="dependency-version">{{ dependencies['mockjs'] }}</div>
-                </div>
-              </div>
-
-              <div class="dependency-item">
-                <div class="dependency-info">
-                  <div class="dependency-name">Layouts版本</div>
-                  <div class="dependency-version">{{ dependencies['layouts'] }}</div>
                 </div>
               </div>
 
