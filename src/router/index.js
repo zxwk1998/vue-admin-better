@@ -53,25 +53,7 @@ export const asyncRoutes = [
       },
     ],
   },
-  {
-    path: '/external-job',
-    component: Layout,
-    meta: {
-      title: '',
-      icon: '',
-    },
-    children: [
-      {
-        path: 'https://job.vuejs-core.cn/posts',
-        meta: {
-          title: '找工作',
-          target: '_blank',
-          icon: 'horse-head',
-          badge: 'New',
-        },
-      },
-    ],
-  },
+
   /* {
     path: "/test",
     component: Layout,
@@ -329,6 +311,25 @@ export const asyncRoutes = [
         name: 'Error404',
         component: () => import('@/views/404'),
         meta: { title: '404' },
+      },
+    ],
+  },
+  {
+    path: '/external-job',
+    component: Layout,
+    meta: {
+      title: '',
+      icon: '',
+    },
+    children: [
+      {
+        path: 'https://job.vuejs-core.cn/posts',
+        meta: {
+          title: '找工作',
+          target: '_blank',
+          icon: 'horse-head',
+          badge: 'New',
+        },
       },
     ],
   },
