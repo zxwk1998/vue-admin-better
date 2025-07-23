@@ -119,13 +119,24 @@ npm i --registry=http://mirrors.cloud.tencent.com/npm/
 npm run serve
 ``` -->
 
+## 🌱 vue3.x element-plus [点击切换仓库](https://github.com/zxwk1998/vue3-admin-better)
+
+```bash
+# 克隆项目
+git clonehttps://github.com/zxwk1998/vue3-admin-better.git
+# 安装依赖
+pnpm i --registry=http://mirrors.cloud.tencent.com/npm/
+# 本地开发 启动项目
+npm run dev
+```
+
 ## 🌱 vue3.x arco-design [点击切换仓库](https://github.com/zxwk1998/vue-admin-arco)
 
 ```bash
 # 克隆项目
 git clonehttps://github.com/zxwk1998/vue-admin-arco.git
 # 安装依赖
-npm i --registry=http://mirrors.cloud.tencent.com/npm/
+pnpm i --registry=http://mirrors.cloud.tencent.com/npm/
 # 本地开发 启动项目
 npm run dev
 ```
@@ -136,7 +147,7 @@ npm run dev
 # 克隆项目
 git clone -b master https://github.com/zxwk1998/vue-admin-better.git
 # 安装依赖
-npm i --registry=http://mirrors.cloud.tencent.com/npm/
+pnpm i --registry=http://mirrors.cloud.tencent.com/npm/
 # 本地开发 启动项目
 npm run serve
 ```
