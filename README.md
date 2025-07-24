@@ -17,7 +17,7 @@
 
 <!-- ## 🎉 全新版本
 
-基于 vite5.x + vue3.x + arco-design2.x 全新的前端框架 vue-admin-arco， 欢迎点击查看或试用 👏🏻👏🏻👏🏻
+基于 vite7.x + vue3.x + arco-design2.x 全新的前端框架 vue-admin-arco， 欢迎点击查看或试用 👏🏻👏🏻👏🏻
 
 [开源地址](https://github.com/zxwk1998/vue-admin-arco) | [演示地址](https://vuejs-core.cn/vue-admin-arco) -->
 
@@ -45,7 +45,7 @@
 
 - [🚀 Vue Admin Plus 演示地址（vue3.x + element-plus 2.x 付费版本，支持 PC、平板、手机）](https://vuejs-core.cn/admin-plus/)
 
-- [🚀 Vue Shop Vite 演示地址（vue3.x + vite 5.x + element-plus 2.x 付费版本，支持 PC、平板、手机）](https://vuejs-core.cn/shop-vite/)
+- [🚀 Vue Shop Vite 演示地址（vue3.x + vite7.x + element-plus 2.x 付费版本，支持 PC、平板、手机）](https://vuejs-core.cn/shop-vite/)
 
 - [📌 Vue Admin Pro 及 Vue Admin Plus 购买地址](https://vuejs-core.cn/authorization/)
 
@@ -72,7 +72,7 @@
 
 <!-- - [⚡️ Vue Admin Ant （vue3.x + ant-design-vue 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-better-antdv/) -->
 
-- [⚡️ Vue Admin Arco （vue3.x + vite5.x + arco2.x 免费商用，支持 PC）](https://vuejs-core.cn/vue-admin-arco/)
+- [⚡️ Vue Admin Arco （vue3.x + vite7.x + arco2.x 免费商用，支持 PC）](https://vuejs-core.cn/vue-admin-arco/)
 
 ## 🌐 仓库地址
 
