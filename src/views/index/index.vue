@@ -477,7 +477,7 @@
 
         //访问量
         fwl: {
-          color: ['#677AE4', '#8B5CF6', '#A855F7', '#C084FC', '#E879F9'],
+          color: ['#4d8af0', '#8B5CF6', '#A855F7', '#C084FC', '#E879F9'],
           backgroundColor: 'transparent',
           grid: {
             top: '15%',
@@ -543,13 +543,13 @@
                   x2: 0,
                   y2: 1,
                   colorStops: [
-                    { offset: 0, color: '#677AE4' },
-                    { offset: 1, color: '#8B5CF6' },
+                    { offset: 0, color: '#4d8af0' },
+                    { offset: 1, color: '#4d8af0' },
                   ],
                 },
               },
               itemStyle: {
-                color: '#677AE4',
+                color: '#4d8af0',
                 borderWidth: 2,
                 borderColor: '#fff',
               },
@@ -561,8 +561,8 @@
                   x2: 0,
                   y2: 1,
                   colorStops: [
-                    { offset: 0, color: 'rgba(103, 122, 228, 0.3)' },
-                    { offset: 1, color: 'rgba(139, 92, 246, 0.1)' },
+                    { offset: 0, color: '#4d8af0' },
+                    { offset: 1, color: '#4d8af0' },
                   ],
                 },
               },
@@ -571,7 +571,7 @@
         },
         //授权数
         sqs: {
-          color: ['#677AE4', '#8B5CF6', '#A855F7', '#C084FC', '#E879F9'],
+          color: ['#4d8af0', '#8B5CF6', '#A855F7', '#C084FC', '#E879F9'],
           backgroundColor: 'transparent',
           grid: {
             top: '15%',
@@ -633,12 +633,12 @@
                   x2: 0,
                   y2: 1,
                   colorStops: [
-                    { offset: 0, color: '#677AE4' },
-                    { offset: 1, color: '#8B5CF6' },
+                    { offset: 0, color: '#4d8af0' },
+                    { offset: 1, color: '#4d8af0' },
                   ],
                 },
                 borderRadius: [6, 6, 0, 0],
-                shadowColor: 'rgba(103, 122, 228, 0.3)',
+                shadowColor: '#4d8af0',
                 shadowBlur: 10,
                 shadowOffsetX: 0,
                 shadowOffsetY: 5,
@@ -653,11 +653,11 @@
                     y2: 1,
                     colorStops: [
                       { offset: 0, color: '#5A67D8' },
-                      { offset: 1, color: '#7C3AED' },
+                      { offset: 1, color: '#4d8af0' },
                     ],
                   },
                   shadowBlur: 15,
-                  shadowColor: 'rgba(103, 122, 228, 0.5)',
+                  shadowColor: '#4d8af0',
                 },
               },
             },
@@ -666,7 +666,7 @@
 
         //用户活跃度
         userActivity: {
-          color: ['#677AE4', '#8B5CF6', '#A855F7', '#C084FC', '#E879F9'],
+          color: ['#4d8af0', '#8B5CF6', '#A855F7', '#C084FC', '#E879F9'],
           backgroundColor: 'transparent',
           grid: {
             top: '15%',
@@ -724,10 +724,10 @@
               symbolSize: 6,
               lineStyle: {
                 width: 3,
-                color: '#677AE4',
+                color: '#4d8af0',
               },
               itemStyle: {
-                color: '#677AE4',
+                color: '#4d8af0',
                 borderWidth: 2,
                 borderColor: '#fff',
               },
@@ -739,8 +739,8 @@
                   x2: 0,
                   y2: 1,
                   colorStops: [
-                    { offset: 0, color: 'rgba(103, 122, 228, 0.3)' },
-                    { offset: 1, color: 'rgba(103, 122, 228, 0.1)' },
+                    { offset: 0, color: 'rgba(77, 138, 240, 0.3)' },
+                    { offset: 1, color: 'rgba(77, 138, 240, 0.1)' },
                   ],
                 },
               },
@@ -750,7 +750,7 @@
 
         //系统性能
         systemPerformance: {
-          color: ['#677AE4', '#8B5CF6', '#A855F7', '#C084FC'],
+          color: ['#4d8af0'],
           backgroundColor: 'transparent',
           grid: {
             top: '15%',
@@ -808,7 +808,7 @@
               barWidth: '50%',
               itemStyle: {
                 color: function (params) {
-                  const colors = ['#677AE4', '#8B5CF6', '#A855F7', '#C084FC']
+                  const colors = ['#4d8af0', '#4d8af0', '#4d8af0', '#4d8af0']
                   return colors[params.dataIndex]
                 },
                 borderRadius: [4, 4, 0, 0],
@@ -959,6 +959,13 @@
       getRandomLikes() {
         return `${this.$baseLodash.random(10, 99)}K`
       },
+      hexToRgb(hex) {
+        // 将十六进制颜色转换为RGB值
+        const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+        return result
+          ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`
+          : null
+      },
     },
   }
 </script>
@@ -1076,7 +1083,7 @@
             border-bottom: 2px solid #dee2e6;
 
             .vab-icon {
-              color: #677ae4;
+              color: $base-color-default;
               margin-right: 3px;
               font-size: 1.1rem;
             }
@@ -1206,7 +1213,7 @@
               transform: translate(-50%, -50%);
               width: 140px;
               height: 140px;
-              background: radial-gradient(circle, rgba(64, 158, 255, 0.1) 0%, transparent 70%);
+              background: radial-gradient(circle, rgba($base-color-default, 0.1) 0%, transparent 70%);
               border-radius: 50%;
               animation: pulse 2s ease-in-out infinite;
             }
@@ -1242,7 +1249,7 @@
             .stat-icon {
               width: 50px;
               height: 50px;
-              background: linear-gradient(135deg, #4d8af0 0%, #1a56db 100%);
+              background: linear-gradient(135deg, $base-color-default 0%, darken($base-color-default, 10%) 100%);
               border-radius: 12px;
               display: flex;
               align-items: center;
@@ -1311,12 +1318,12 @@
                 }
 
                 &.primary-btn {
-                  background: #677ae4;
+                  background: $base-color-default;
                   border: none;
                   color: white;
 
                   &:hover {
-                    background: #5a67d8;
+                    background: darken($base-color-default, 5%);
                   }
                 }
 
@@ -1334,7 +1341,7 @@
               .premium-card {
                 flex: 1;
                 min-width: 180px;
-                background: linear-gradient(135deg, #4d8af0 0%, #1a56db 100%);
+                background: linear-gradient(135deg, $base-color-default 0%, darken($base-color-default, 10%) 100%);
                 border-radius: 15px;
                 padding: 20px;
                 cursor: pointer;
@@ -1346,7 +1353,7 @@
 
                 &:hover {
                   transform: translateY(-5px);
-                  box-shadow: 0 10px 25px rgba(103, 122, 228, 0.3);
+                  box-shadow: 0 10px 25px rgba($base-color-default, 0.3);
                 }
 
                 &.featured {
@@ -1429,7 +1436,7 @@
           color: #2c3e50;
 
           .vab-icon {
-            color: #677ae4;
+            color: $base-color-default;
             margin-right: 3px;
             font-size: 1.1rem;
           }
@@ -1486,7 +1493,7 @@
             }
 
             .trend-icon {
-              color: #677ae4;
+              color: $base-color-default;
               margin-right: 3px;
               font-size: 0.8rem;
             }
@@ -1631,3 +1638,7 @@
     }
   }
 </style>
+```
+</file>
+<parameter=language>
+vue
