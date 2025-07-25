@@ -200,7 +200,7 @@
       align-items: center;
       padding: 16px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #4d8af0 0%, #1a56db 100%);
       border-radius: 12px 12px 0 0;
       color: white;
 

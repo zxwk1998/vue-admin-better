@@ -211,7 +211,7 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4d8af0 0%, #1a56db 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -298,7 +298,7 @@
 
       .login-left {
         flex: 1;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #4d8af0 0%, #1a56db 100%);
         color: white;
         padding: 60px 40px;
         display: flex;
@@ -427,7 +427,7 @@
 
           .login-form {
             .form-item {
-              margin-bottom: 24px;
+              margin-bottom: 16px;
 
               .input-wrapper {
                 position: relative;
@@ -449,7 +449,7 @@
 
                 .custom-input {
                   ::v-deep .el-input__inner {
-                    height: 50px;
+                    height: 46px;
                     padding-left: 50px;
                     padding-right: 50px;
                     border: 2px solid #f0f0f0;
@@ -459,9 +459,9 @@
                     transition: all 0.3s ease;
 
                     &:focus {
-                      border-color: #667eea;
+                      border-color: #4d8af0;
                       background: white;
-                      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+                      box-shadow: 0 0 0 3px rgba(77, 138, 240, 0.1);
                     }
 
                     &::placeholder {
@@ -484,7 +484,7 @@
                   transition: color 0.3s ease;
 
                   &:hover {
-                    color: #667eea;
+                    color: #4d8af0;
                   }
 
                   i {
@@ -498,7 +498,7 @@
               display: flex;
               justify-content: space-between;
               align-items: center;
-              margin-bottom: 30px;
+              margin-bottom: 20px;
 
               .forgot-link {
                 color: #667eea;
@@ -507,7 +507,7 @@
                 transition: color 0.3s ease;
 
                 &:hover {
-                  color: #764ba2;
+                  color: #1a56db;
                 }
               }
             }
@@ -515,7 +515,7 @@
             .login-btn {
               width: 100%;
               height: 50px;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              background: linear-gradient(135deg, #4d8af0 0%, #1a56db 100%);
               border: none;
               border-radius: 12px;
               font-size: 16px;
@@ -527,7 +527,7 @@
 
               &:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+                box-shadow: 0 8px 20px rgba(77, 138, 240, 0.3);
               }
 
               &:active {
@@ -541,14 +541,14 @@
               color: #666;
 
               .link {
-                color: #667eea;
+                color: #4d8af0;
                 text-decoration: none;
                 font-weight: 600;
                 margin-left: 4px;
                 transition: color 0.3s ease;
 
                 &:hover {
-                  color: #764ba2;
+                  color: #1a56db;
                 }
               }
             }

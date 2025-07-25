@@ -451,3 +451,29 @@
     }
   }
 </style>
+
+<style lang="scss">
+  .tabs-more {
+    .el-dropdown-menu__item {
+      padding: 8px 20px;
+      font-size: 14px;
+      line-height: 1.5;
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+
+      .vab-icon {
+        margin-right: 8px;
+        width: 16px;
+        text-align: center;
+      }
+
+      &:hover {
+        background: rgba(77, 138, 240, 0.1);
+        color: #4d8af0;
+        border-radius: 6px;
+      }
+    }
+  }
+</style>

@@ -322,7 +322,7 @@
     // 开源版本样式
     .open-source {
       .icon-wrapper {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #4d8af0 0%, #1a56db 100%);
       }
 
       .status-badge {
@@ -353,7 +353,7 @@
             width: 32px;
             height: 32px;
             border-radius: 8px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4d8af0 0%, #1a56db 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -374,7 +374,7 @@
         align-items: center;
         gap: 8px;
         padding: 12px 24px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #4d8af0 0%, #1a56db 100%);
         color: white;
         text-decoration: none;
         border-radius: 12px;
@@ -418,7 +418,7 @@
           align-items: center;
           padding: 16px;
           border-radius: 16px;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background: linear-gradient(135deg, #4d8af0 0%, #1a56db 100%);
           color: white;
           text-decoration: none;
           transition: all 0.3s ease;
