@@ -1242,7 +1242,7 @@
             .stat-icon {
               width: 50px;
               height: 50px;
-              background: linear-gradient(45deg, #677ae4, #8b5cf6);
+              background: linear-gradient(135deg, #4d8af0 0%, #1a56db 100%);
               border-radius: 12px;
               display: flex;
               align-items: center;
@@ -1334,7 +1334,7 @@
               .premium-card {
                 flex: 1;
                 min-width: 180px;
-                background: linear-gradient(135deg, #677ae4 0%, #8b5cf6 100%);
+                background: linear-gradient(135deg, #4d8af0 0%, #1a56db 100%);
                 border-radius: 15px;
                 padding: 20px;
                 cursor: pointer;

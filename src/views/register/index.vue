@@ -9,7 +9,7 @@
         <div class="shape shape-4"></div>
       </div>
     </div>
-    
+
     <div class="register-content">
       <div class="register-left">
         <div class="welcome-section">
@@ -58,72 +58,56 @@
                   placeholder="请输入用户名"
                   class="custom-input"
                   type="text"
-                >
-                </el-input>
+                ></el-input>
               </div>
             </el-form-item>
-            
+
             <el-form-item prop="phone">
               <div class="input-wrapper">
                 <div class="input-icon">
                   <i class="el-icon-mobile-phone"></i>
                 </div>
-                <el-input 
-                  v-model.trim="form.phone" 
-                  autocomplete="off" 
-                  maxlength="11" 
-                  placeholder="请输入手机号" 
-                  show-word-limit 
+                <el-input
+                  v-model.trim="form.phone"
+                  autocomplete="off"
+                  maxlength="11"
+                  placeholder="请输入手机号"
+                  show-word-limit
                   type="text"
                   class="custom-input"
-                >
-                </el-input>
+                ></el-input>
               </div>
             </el-form-item>
-            
+
             <el-form-item prop="phoneCode" style="position: relative">
               <div class="input-wrapper">
                 <div class="input-icon">
                   <i class="el-icon-message"></i>
                 </div>
-                <el-input 
-                  v-model.trim="form.phoneCode" 
-                  placeholder="手机验证码" 
-                  type="text"
-                  class="custom-input"
-                >
-                </el-input>
+                <el-input v-model.trim="form.phoneCode" placeholder="手机验证码" type="text" class="custom-input"></el-input>
               </div>
-              <el-button 
-                class="phone-code" 
-                :disabled="isGetphone" 
-                type="primary" 
-                @click="getPhoneCode"
-              >
+              <el-button class="phone-code" :disabled="isGetphone" type="primary" @click="getPhoneCode">
                 {{ phoneCode }}
               </el-button>
             </el-form-item>
-            
+
             <el-form-item prop="password">
               <div class="input-wrapper">
                 <div class="input-icon">
                   <i class="el-icon-lock"></i>
                 </div>
-                <el-input 
-                  v-model.trim="form.password" 
-                  autocomplete="new-password" 
-                  placeholder="设置密码" 
+                <el-input
+                  v-model.trim="form.password"
+                  autocomplete="new-password"
+                  placeholder="设置密码"
                   type="password"
                   class="custom-input"
-                >
-                </el-input>
+                ></el-input>
               </div>
             </el-form-item>
-            
-            <el-button class="register-btn" type="primary" @click.native.prevent="handleReister">
-              注册
-            </el-button>
-            
+
+            <el-button class="register-btn" type="primary" @click.native.prevent="handleReister">注册</el-button>
+
             <div class="login-link">
               <span>已有账户？</span>
               <router-link to="/login" class="link">立即登录</router-link>
@@ -694,7 +678,7 @@
   ::v-deep {
     .el-form-item {
       margin-bottom: 16px;
-      
+
       &__error {
         position: absolute;
         top: 100%;
