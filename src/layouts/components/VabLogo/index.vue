@@ -45,6 +45,7 @@
     height: 34px;
     margin-right: 3px;
     color: $base-title-color;
+    fill: $base-title-color;
     vertical-align: middle;
   }
 

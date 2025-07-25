@@ -50,22 +50,29 @@ $base: '.vab';
   }
 
   &::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
   }
 
   &::-webkit-scrollbar-track:hover {
-    background-color: #f8fafc;
+    background-color: rgba(0, 0, 0, 0.08);
   }
 }
 
 img {
   object-fit: cover;
+  border-radius: 6px;
 }
 
 a {
   color: $base-color-blue;
   text-decoration: none;
   cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($base-color-blue, 10%);
+  }
 }
 
 * {
@@ -86,10 +93,10 @@ html {
     height: 100vh;
     padding: 0;
     margin: 0;
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: $base-font-size-default;
     color: #2c3e50;
-    background: #f6f8f9;
+    background: #f0f2f5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -122,7 +129,7 @@ html {
     }
 
     .el-divider--horizontal {
-      margin: 10px 0 25px 0;
+      margin: 15px 0 25px 0;
 
       .el-divider__text {
         display: -webkit-box;
@@ -152,6 +159,9 @@ html {
 
           padding: $base-padding;
           background: $base-color-white;
+          border-radius: 12px;
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+          border: 1px solid rgba(0, 0, 0, 0.02);
         }
       }
     }
@@ -162,11 +172,12 @@ html {
       z-index: $base-z-index;
 
       .bar {
-        background: $base-color-blue !important;
+        background: linear-gradient(90deg, $base-color-blue, lighten($base-color-blue, 20%)) !important;
+        height: 3px !important;
       }
 
       .peg {
-        box-shadow: 0 0 10px $base-color-blue, 0 0 5px $base-color-blue !important;
+        box-shadow: 0 0 14px $base-color-blue, 0 0 8px $base-color-blue !important;
       }
     }
 
@@ -176,32 +187,46 @@ html {
       }
 
       th {
-        background: #f5f7fa;
+        background: #f8fafc;
       }
 
       td,
       th {
         position: relative;
         box-sizing: border-box;
-        padding: 7.5px 0;
+        padding: 10px 0;
 
         .cell {
           font-size: $base-font-size-default;
           font-weight: normal;
-          color: #606266;
+          color: #555;
 
           .el-image {
             width: 50px;
             height: 50px;
-            border-radius: $base-border-radius;
+            border-radius: 8px;
           }
         }
+      }
+
+      &::before {
+        height: 0;
+      }
+
+      .el-table__fixed-right {
+        height: 100% !important;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .el-table__fixed {
+        height: 100% !important;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
       }
     }
 
     .el-pagination {
       padding: 2px 5px;
-      margin: 15px 0 0 0;
+      margin: 20px 0 0 0;
       font-weight: normal;
       color: $base-color-black;
       text-align: center;
@@ -209,10 +234,16 @@ html {
 
     .el-menu.el-menu--popup.el-menu--popup-right-start {
       @include scrollbar;
+      border-radius: 6px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     .el-menu.el-menu--popup.el-menu--popup-bottom-start {
       @include scrollbar;
+      border-radius: 6px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     .el-submenu__title i {
@@ -221,6 +252,9 @@ html {
 
     .el-dialog,
     .el-message-box {
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
       &__body {
         border-top: 1px solid $base-border-color;
 
@@ -241,10 +275,16 @@ html {
     }
 
     .el-card {
-      margin-bottom: 15px;
+      margin-bottom: 16px;
       border-radius: 12px;
       border: none;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+        transform: translateY(-2px);
+      }
 
       &__body {
         padding: $base-padding;
@@ -253,53 +293,75 @@ html {
 
     /* VabPageHeader 全局样式 - 高优先级 */
     .page-header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-      border-radius: 12px !important;
-      padding: 30px !important;
+      background: linear-gradient(135deg, #518df1 0%, #667eea 100%) !important;
+      border-radius: 16px !important;
+      padding: 32px !important;
       margin-bottom: 24px !important;
       color: white !important;
       box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3) !important;
       border: none !important;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        bottom: -50%;
+        left: -50%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+        transform: rotate(30deg);
+      }
 
       .header-content {
+        position: relative;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
 
         .header-left {
           .page-title {
-            font-size: 2rem !important;
+            font-size: 2.2rem !important;
             font-weight: 700 !important;
-            margin: 0 0 8px 0 !important;
+            margin: 0 0 10px 0 !important;
             display: flex !important;
             align-items: center !important;
-            gap: 12px !important;
+            gap: 14px !important;
             color: white !important;
 
             .vab-icon {
-              font-size: 1.8rem !important;
+              font-size: 2rem !important;
               color: white !important;
+              background: rgba(255, 255, 255, 0.2);
+              border-radius: 12px;
+              padding: 8px;
             }
           }
 
           .page-description {
-            font-size: 1rem !important;
-            opacity: 0.9 !important;
+            font-size: 1.1rem !important;
+            opacity: 0.95 !important;
             margin: 0 !important;
             color: white !important;
+            font-weight: 300;
           }
         }
 
         .header-right {
           display: flex !important;
           align-items: center !important;
-          gap: 8px !important;
-          font-size: 1.1rem !important;
-          font-weight: 600 !important;
+          gap: 10px !important;
+          font-size: 1.2rem !important;
+          font-weight: 500 !important;
           color: white !important;
+          background: rgba(255, 255, 255, 0.2);
+          padding: 12px 20px;
+          border-radius: 12px;
+          backdrop-filter: blur(10px);
 
           .vab-icon {
-            font-size: 1.3rem !important;
+            font-size: 1.4rem !important;
             color: white !important;
           }
         }
@@ -309,17 +371,23 @@ html {
     /* 响应式设计 */
     @media (max-width: 768px) {
       .page-header {
-        padding: 20px !important;
+        padding: 22px !important;
+        border-radius: 12px !important;
 
         .header-content {
           flex-direction: column !important;
-          gap: 16px !important;
+          gap: 18px !important;
           text-align: center !important;
 
           .header-left {
             .page-title {
-              font-size: 1.5rem !important;
+              font-size: 1.7rem !important;
             }
+          }
+
+          .header-right {
+            width: 100%;
+            justify-content: center;
           }
         }
       }
@@ -347,16 +415,16 @@ html {
 
       &--horizontal {
         height: 1px;
-        margin: 20px 0 30px 0;
+        margin: 24px 0 32px 0;
 
         .el-divider__text {
           position: relative;
-          padding: 0 16px;
+          padding: 0 18px;
           font-size: 14px;
           font-weight: 500;
           color: #606266;
           background: #fff;
-          border-radius: 4px;
+          border-radius: 6px;
 
           &::before {
             content: '';
@@ -451,13 +519,14 @@ html {
     .el-submenu {
       margin: 7px !important;
       border-radius: 5px !important;
+      transition: all 0.3s ease;
 
       &:hover {
         border-radius: 5px !important;
       }
 
       &.is-active {
-        background: $base-color-default !important;
+        background: linear-gradient(90deg, $base-color-default, lighten($base-color-default, 10%)) !important;
       }
     }
   }

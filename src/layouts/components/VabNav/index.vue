@@ -17,7 +17,7 @@
           <vab-error-log />
           <vab-full-screen @refresh="refreshRoute" />
           <vab-theme class="hidden-xs-only" />
-          <vab-icon :icon="['fas', 'redo']" :pulse="pulse" title="重载所有路由" @click="refreshRoute" />
+          <vab-icon :icon="['fas', 'sync-alt']" :pulse="pulse" title="重载所有路由" @click="refreshRoute" />
           <vab-avatar />
           <!--  <vab-icon
             title="退出系统"
@@ -112,7 +112,7 @@
         color: rgba(0, 0, 0, 0.7);
         background: rgba(255, 255, 255, 0.6);
         border: 1px solid rgba(255, 255, 255, 0.8);
-        border-radius: 12px;
+        border-radius: 50%;
         cursor: pointer;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         backdrop-filter: blur(10px);
@@ -149,7 +149,7 @@
           color: rgba(0, 0, 0, 0.7);
           background: rgba(255, 255, 255, 0.6);
           border: 1px solid rgba(255, 255, 255, 0.8);
-          border-radius: 12px;
+          border-radius: 50%;
           cursor: pointer;
           fill: rgba(0, 0, 0, 0.7);
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

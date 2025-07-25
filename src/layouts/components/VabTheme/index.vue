@@ -1,9 +1,9 @@
 <template>
   <span v-if="themeBar">
-    <vab-icon :icon="['fas', 'palette']" title="主题配置" @click="handleOpenTheme" />
+    <vab-icon :icon="['fas', 'crown']" title="主题配置" @click="handleOpenTheme" />
     <div class="theme-setting">
       <div @click="handleOpenTheme">
-        <vab-icon :icon="['fas', 'palette']" />
+        <vab-icon :icon="['fas', 'crown']" />
         <p>主题配置</p>
       </div>
       <div @click="handleGetCode">

@@ -1,6 +1,6 @@
 <template>
   <span :title="isFullscreen ? '退出全屏' : '进入全屏'">
-    <vab-icon :icon="['fas', isFullscreen ? 'compress-arrows-alt' : 'expand-arrows-alt']" @click="click"></vab-icon>
+    <vab-icon :icon="['fas', isFullscreen ? 'compress' : 'expand']" @click="click"></vab-icon>
   </span>
 </template>
 

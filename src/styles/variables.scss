@@ -5,11 +5,11 @@
 /* stylelint-disable */
 @charset "utf-8";
 //框架默认主题色
-$base-color-default: #677ae4;
+$base-color-default: #4d8af0;
 //默认层级
-$base-z-index: 999;
+$base-z-index: 1000;
 //横向布局纵向布局时菜单背景色
-$base-menu-background: #21252b;
+$base-menu-background: #191a23;
 //菜单文字颜色
 $base-menu-color: hsla(0, 0%, 100%, 0.95);
 //菜单选中文字颜色
@@ -26,42 +26,42 @@ $base-font-size-bigger: 18px;
 $base-font-size-max: 22px;
 $base-font-color: #606266;
 $base-color-blue: $base-color-default;
-$base-color-green: #41b882;
+$base-color-green: #52c41a;
 $base-color-white: #fff;
 $base-color-black: #000;
-$base-color-yellow: #ffa91b;
-$base-color-orange: #ff6700;
-$base-color-red: #f34d37;
+$base-color-yellow: #faad14;
+$base-color-orange: #fa8c16;
+$base-color-red: #f5222d;
 $base-color-gray: rgba(0, 0, 0, 0.65);
 $base-main-width: 1279px;
-$base-border-radius: 4px;
-$base-border-color: #dcdfe6;
+$base-border-radius: 6px;
+$base-border-color: #ebeef5;
 //输入框高度
-$base-input-height: 32px;
+$base-input-height: 36px;
 //默认paddiing
-$base-padding: 20px;
+$base-padding: 22px;
 //默认阴影
-$base-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+$base-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 //横向布局时top-bar、logo、一级菜单的高度
-$base-top-bar-height: 65px;
+$base-top-bar-height: 64px;
 //纵向布局时logo的高度
-$base-logo-height: 75px;
+$base-logo-height: 70px;
 //顶部nav-bar的高度
 $base-nav-bar-height: 60px;
 //顶部多标签页tabs-bar的高度
-$base-tabs-bar-height: 55px;
+$base-tabs-bar-height: 50px;
 //顶部多标签页tabs-bar中每一个item的高度
-$base-tag-item-height: 34px;
+$base-tag-item-height: 32px;
 //菜单li标签的高度
 $base-menu-item-height: 50px;
 //app-main的高度
 $base-app-main-height: calc(100vh - #{$base-nav-bar-height} - #{$base-tabs-bar-height} - #{$base-padding} - #{$base-padding} - 55px - 55px);
 //纵向布局时左侧导航未折叠时的宽度
-$base-left-menu-width: 256px;
+$base-left-menu-width: 240px;
 //纵向布局时左侧导航未折叠时右侧内容的宽度
 $base-right-content-width: calc(100% - #{$base-left-menu-width});
 //纵向布局时左侧导航已折叠时的宽度
-$base-left-menu-width-min: 65px;
+$base-left-menu-width-min: 64px;
 //纵向布局时左侧导航已折叠时右侧内容的宽度
 $base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
 //默认动画

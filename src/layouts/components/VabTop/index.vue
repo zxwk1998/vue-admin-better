@@ -8,7 +8,7 @@
         <el-col :lg="12" :md="12" :sm="12" :xl="12" :xs="12">
           <el-menu
             active-text-color=" hsla(0, 0%, 100%, 0.95)"
-            background-color="#21252b"
+            background-color="#191a23"
             :collapse="collapse"
             :collapse-transition="false"
             :default-active="activeMenu"
@@ -29,7 +29,7 @@
               <vab-full-screen @refresh="refreshRoute" />
               <vab-theme class="hidden-md-and-down" />
             </div>
-            <vab-icon :icon="['fas', 'redo']" :pulse="pulse" title="重载路由" @click="refreshRoute" />
+            <vab-icon :icon="['fas', 'sync-alt']" :pulse="pulse" title="重载路由" @click="refreshRoute" />
             <vab-avatar />
           </div>
         </el-col>
