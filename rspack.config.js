@@ -5,6 +5,7 @@ const { VueLoaderPlugin } = require('vue-loader')
 const { publicPath, assetsDir, outputDir, title, devPort } = require('./src/config')
 const dayjs = require('dayjs')
 const time = dayjs().format('YYYY-M-D HH:mm:ss')
+const fs = require('fs-extra')
 
 // 设置环境变量
 process.env.VUE_APP_TITLE = title || 'vue-admin-better'
@@ -139,8 +140,7 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new DefinePlugin({
-      // 直接赋值方式，避免嵌套对象
-      'process.env.NODE_ENV': JSON.stringify(mode),
+      // 完全移除可能引起冲突的NODE_ENV定义，让rspack.js来处理
       'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
       'process.env.VUE_APP_TITLE': JSON.stringify(process.env.VUE_APP_TITLE),
       'process.env.VUE_APP_MOCK_ENABLE': JSON.stringify(process.env.VUE_APP_MOCK_ENABLE),
@@ -168,6 +168,28 @@ module.exports = {
             }
           : false,
     }),
+    // 添加CopyPlugin功能，将public目录下除index.html外的文件复制到dist目录
+    {
+      apply(compiler) {
+        compiler.hooks.afterEmit.tap('CopyPublicFolderPlugin', (compilation) => {
+          // 确保目标目录存在
+          const targetPath = path.resolve(__dirname, 'dist');
+          fs.ensureDirSync(targetPath);
+          
+          // 复制public目录下的所有文件（除了index.html）
+          fs.copySync(
+            path.resolve(__dirname, 'public'),
+            targetPath,
+            {
+              filter: (src) => {
+                // 不复制index.html文件，因为HtmlRspackPlugin会处理它
+                return !src.endsWith('index.html');
+              }
+            }
+          );
+        });
+      }
+    }
   ],
   optimization: {
     splitChunks: {
