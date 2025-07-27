@@ -190,10 +190,6 @@
           </div>
           <div class="advanced-content">
             <div class="logo-section">
-              <div class="logo-container">
-                <vab-colorful-icon class="advanced-logo" icon-class="vab" />
-                <div class="logo-glow"></div>
-              </div>
               <h1 class="project-title">vue-admin-better</h1>
               <p class="project-description">基于 Vue2 + Element UI 的企业级管理系统</p>
             </div>
@@ -1184,7 +1180,6 @@
 
       .advanced-content {
         height: 100%;
-        padding: 30px 25px;
         background: #ffffff;
         display: flex;
         flex-direction: column;
@@ -1200,11 +1195,6 @@
             display: inline-block;
             margin-bottom: 20px;
 
-            .advanced-logo {
-              font-size: 120px;
-              position: relative;
-              z-index: 2;
-            }
 
             .logo-glow {
               position: absolute;
