@@ -5,8 +5,9 @@
 <div align="center"><!-- <img width="200" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/logo/vab.png"/> -->
 <img width="200" src="https://assets.rspack.rs/rspack/rspack-logo.svg"/>
 
-<h1> vue-admin-better</h1>
-<p>瑞雪兆丰年，红梅报新春，愿您新的一年平安喜乐，万事顺意，所得皆所愿！</p>
+<h1> Admin-Better</h1>
+<p>拒绝过渡封装，去除等待时间，让项目回归纯粹，让开发编的简单。</p>
+<p>立志做开源社区中，运行速度最快，打包等待时间最短，上手难度最低的开源中后台前端框架。</p>
 </div>
 
 [![stars](https://img.shields.io/github/stars/zxwk1998/vue-admin-better?style=flat-square&logo=GitHub)](https://github.com/zxwk1998/vue-admin-better)
