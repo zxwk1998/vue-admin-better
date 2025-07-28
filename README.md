@@ -99,7 +99,7 @@
 
 - [🌐 vue-admin-better 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better/)
 
-- [🌐 vue3-admin-arco 码云仓库地址](https://gitee.com/chu1204505056/vue3-admin-better/)
+- [🌐 vue3-admin-better 码云仓库地址](https://gitee.com/chu1204505056/vue3-admin-better/)
 
 - [🌐 vue-admin-arco 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-arco/)
 
