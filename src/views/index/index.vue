@@ -200,7 +200,7 @@
                   <vab-icon :icon="['fas', 'download']" />
                 </div>
                 <div class="stat-info">
-                  <div class="stat-number">100K+</div>
+                  <div class="stat-number">300K+</div>
                   <div class="stat-label">下载量</div>
                 </div>
               </div>
@@ -218,7 +218,7 @@
                   <vab-icon :icon="['fas', 'users']" />
                 </div>
                 <div class="stat-info">
-                  <div class="stat-number">10K+</div>
+                  <div class="stat-number">100K+</div>
                   <div class="stat-label">用户数</div>
                 </div>
               </div>
