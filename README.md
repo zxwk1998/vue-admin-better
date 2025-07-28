@@ -6,7 +6,7 @@
 <img width="200" src="https://assets.rspack.rs/rspack/rspack-logo.svg"/>
 
 <h1> Admin-Better</h1>
-<p>拒绝过渡封装，去除等待时间，让项目回归纯粹，让开发编的简单。</p>
+<p>拒绝过度封装，去除等待时间，让项目回归纯粹，让开发编的简单。</p>
 <p>立志做开源社区中，运行速度最快，打包等待时间最短，上手难度最低的开源中后台前端框架。</p>
 </div>
 
