@@ -473,7 +473,7 @@
 
         //访问量
         fwl: {
-          color: ['#4d8af0', '#8B5CF6', '#A855F7', '#C084FC', '#E879F9'],
+          color: ['#4d8af0', '#5cdbd3', '#8B5CF6', '#F59E0B', '#EC4899'],
           backgroundColor: 'transparent',
           grid: {
             top: '15%',
@@ -567,7 +567,7 @@
         },
         //授权数
         sqs: {
-          color: ['#4d8af0', '#8B5CF6', '#A855F7', '#C084FC', '#E879F9'],
+          color: ['#4d8af0', '#5cdbd3', '#8B5CF6', '#F59E0B', '#EC4899'],
           backgroundColor: 'transparent',
           grid: {
             top: '15%',
@@ -662,7 +662,7 @@
 
         //用户活跃度
         userActivity: {
-          color: ['#4d8af0', '#8B5CF6', '#A855F7', '#C084FC', '#E879F9'],
+          color: ['#4d8af0', '#5cdbd3', '#8B5CF6', '#F59E0B', '#EC4899'],
           backgroundColor: 'transparent',
           grid: {
             top: '15%',
@@ -746,7 +746,7 @@
 
         //系统性能
         systemPerformance: {
-          color: ['#4d8af0'],
+          color: ['#4d8af0', '#5cdbd3', '#8B5CF6', '#F59E0B'],
           backgroundColor: 'transparent',
           grid: {
             top: '15%',
@@ -832,50 +832,49 @@
             icon: 'video',
             title: '视频播放器',
             link: 'https://vuejs-core.cn/shop-vite',
-            color: '#ffc069',
+            color: '#4d8af0', // 蓝色 - 与主题色一致
           },
           {
             icon: 'table',
             title: '表格',
             link: 'https://vuejs-core.cn/shop-vite',
-            color: '#5cdbd3',
+            color: '#5cdbd3', // 青色 - 清爽感
           },
           {
             icon: 'laptop-code',
             title: '源码',
             link: 'https://github.com/zxwk1998/vue-admin-better',
-            color: '#b37feb',
+            color: '#8B5CF6', // 紫色 - 技术感
           },
           {
             icon: 'book',
             title: '书籍',
             link: 'https://vuejs-core.cn/shop-vite',
-            color: '#69c0ff',
+            color: '#F59E0B', // 琥珀色 - 知识感
           },
           {
             icon: 'bullhorn',
             title: '公告',
             link: 'https://vuejs-core.cn/shop-vite',
-            color: '#ff85c0',
+            color: '#EC4899', // 粉色 - 引人注意
           },
           {
             icon: 'gift',
             title: '礼物',
             link: 'https://vuejs-core.cn/shop-vite',
-            color: '#ffd666',
+            color: '#10B981', // 绿色 - 礼物/积极
           },
-
           {
             icon: 'balance-scale-left',
             title: '公平的世界',
             link: 'https://vuejs-core.cn/shop-vite',
-            color: '#ff9c6e',
+            color: '#6366F1', // 靛蓝色 - 平衡公正
           },
           {
             icon: 'coffee',
             title: '休息一下',
             link: 'https://vuejs-core.cn/shop-vite',
-            color: '#95de64',
+            color: '#F97316', // 橙色 - 温暖放松
           },
         ],
       }

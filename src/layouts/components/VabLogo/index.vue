@@ -88,6 +88,7 @@
       @include title;
 
       max-width: calc(#{$base-left-menu-width} - 60px);
+      line-height: $base-logo-height; // 修复：使line-height与容器高度一致
     }
   }
 </style>
