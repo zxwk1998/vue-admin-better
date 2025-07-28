@@ -937,14 +937,14 @@
       },
       getIconDescription(title) {
         const descriptions = {
-          视频播放器: '支持多种格式的视频播放',
-          表格: '功能强大的数据表格组件',
-          源码: '开源项目源码下载',
+          视频播放器: '多格式视频播放',
+          表格: '强大的表格组件',
+          源码: '项目源码下载',
           书籍: '技术文档和教程',
           公告: '系统公告和通知',
           礼物: '免费资源和福利',
           公平的世界: '开源社区贡献',
-          休息一下: '放松心情，享受生活',
+          休息一下: '享受生活',
         }
         return descriptions[title] || '功能模块'
       },
@@ -957,9 +957,7 @@
       hexToRgb(hex) {
         // 将十六进制颜色转换为RGB值
         const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
-        return result
-          ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`
-          : null
+        return result ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : null
       },
     },
   }
@@ -1193,7 +1191,6 @@
             position: relative;
             display: inline-block;
             margin-bottom: 20px;
-
 
             .logo-glow {
               position: absolute;
@@ -1464,6 +1461,8 @@
 
       .chart-footer {
         flex-shrink: 0;
+        padding-top: 15px;
+        padding-bottom: 5px;
 
         .trend-info {
           display: flex;
@@ -1522,6 +1521,17 @@
       height: 200px;
       display: flex;
       flex-direction: column;
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s ease;
+      background: #ffffff;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      }
 
       .icon-container {
         height: 100%;
@@ -1529,10 +1539,7 @@
         flex-direction: column;
         cursor: pointer;
         transition: all 0.3s ease;
-
-        &:hover {
-          transform: translateY(-3px);
-        }
+        padding: 20px 15px;
 
         .icon-header {
           text-align: center;
@@ -1540,28 +1547,25 @@
           flex-shrink: 0;
 
           .icon-wrapper {
-            width: 60px;
-            height: 60px;
-            border-radius: 15px;
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 12px;
             color: white;
-            font-size: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            font-size: 1.8rem;
             transition: all 0.3s ease;
-
-            &:hover {
-              transform: scale(1.1);
-            }
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
           }
 
           .icon-title {
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             color: #2c3e50;
             margin: 0;
+            letter-spacing: 0.3px;
           }
         }
 
@@ -1571,11 +1575,11 @@
           min-height: 0;
 
           .icon-description {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: #7f8c8d;
             text-align: center;
-            line-height: 1.4;
-            padding: 0 10px;
+            line-height: 1.5;
+            padding: 0 5px;
             height: 100%;
             display: flex;
             align-items: center;
@@ -1596,12 +1600,12 @@
             .stat-item {
               display: flex;
               align-items: center;
-              font-size: 0.8rem;
+              font-size: 0.85rem;
               color: #7f8c8d;
 
               .vab-icon {
-                margin-right: 3px;
-                font-size: 0.7rem;
+                margin-right: 4px;
+                font-size: 0.8rem;
               }
 
               span {
@@ -1627,7 +1631,3 @@
     }
   }
 </style>
-```
-</file>
-<parameter=language>
-vue
