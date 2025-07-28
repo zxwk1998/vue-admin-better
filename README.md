@@ -93,9 +93,9 @@
 
 - [🌐 vue-admin-better github 仓库地址](https://github.com/zxwk1998/vue-admin-better/)
 
-- [🌐 vue3-admin-better github 仓库地址 1](https://github.com/zxwk1998/vue3-admin-better/)
+- [🌐 vue3-admin-better github 仓库地址](https://github.com/zxwk1998/vue3-admin-better/)
 
-- [🌐 vue-admin-arco github 仓库地址 2](https://github.com/zxwk1998/vue-admin-arco/)
+- [🌐 vue-admin-arco github 仓库地址](https://github.com/zxwk1998/vue-admin-arco/)
 
 - [🌐 vue-admin-better 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better/)
 
