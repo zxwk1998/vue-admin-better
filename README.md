@@ -41,14 +41,11 @@
 - 🚀 跨平台 PC、手机端、平板
 - 📦️ 后端路由动态渲染
 
-## 💪 找工作
-
-- [🎉 找好工作就到【好工作就业参考网】查看就业避坑指南](https://job.vuejs-core.cn/)
-
 ## 🌐 演示地址
 
 ### 💡 免费版演示
 
+- [🎉 Vue Admin Better - github 实时部署 （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://zxwk1998.github.io/vue-admin-better/)
 - [🎉 Vue Admin Better （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-better)
 - [🎉 Vue3 Admin Better （vue3.x + element-plus 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue3-admin-better)
 - [⚡️ Vue Admin Arco （vue3.x + vite7.x + arco2.x 免费商用，支持 PC）](https://vuejs-core.cn/vue-admin-arco/)
@@ -88,6 +85,10 @@
 </td>
 </tr>
 </table>
+
+## 💪 找工作
+
+- [🎉 找好工作就到【好工作就业参考网】查看就业避坑指南](https://job.vuejs-core.cn/)
 
 ## 🌐 仓库地址
 
