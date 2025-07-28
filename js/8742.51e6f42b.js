@@ -83,7 +83,7 @@ var package_0 = __webpack_require__(15589);
 /* ESM default export */ var VersionInformationvue_type_script_lang_js_ = ({
   data() {
     return {
-      updateTime: "2025-7-28 20:08:56",
+      updateTime: "2025-7-28 20:12:03",
       dependencies: package_0.dependencies,
       devDependencies: package_0.devDependencies
     };
