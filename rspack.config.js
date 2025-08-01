@@ -172,7 +172,8 @@ module.exports = {
     // 添加版权信息到打包文件头部
     new BannerPlugin({
       banner: webpackBanner(time),
-      entryOnly: true,
+      entryOnly: false,
+      include: /\.(js|css)$/,
     }),
     // 添加CopyPlugin功能，将public目录下除index.html外的文件复制到dist目录
     {
