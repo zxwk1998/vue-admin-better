@@ -690,6 +690,38 @@ const asyncRoutes = [{
       title: '关于',
       permissions: ['admin']
     }
+  }, {
+    path: 'chart',
+    name: 'Chart',
+    component: () => Promise.all(/* import() */ [__webpack_require__.e("3274"), __webpack_require__.e("3067"), __webpack_require__.e("7947"), __webpack_require__.e("3036"), __webpack_require__.e("305"), __webpack_require__.e("4414"), __webpack_require__.e("803"), __webpack_require__.e("3462"), __webpack_require__.e("1145"), __webpack_require__.e("4942"), __webpack_require__.e("2612"), __webpack_require__.e("2609"), __webpack_require__.e("5379"), __webpack_require__.e("2995"), __webpack_require__.e("5061")]).then(__webpack_require__.bind(__webpack_require__, 27991)),
+    meta: {
+      title: '图表',
+      permissions: ['admin']
+    }
+  }, {
+    path: 'tab',
+    name: 'Tab',
+    component: () => __webpack_require__.e(/* import() */ "6901").then(__webpack_require__.bind(__webpack_require__, 9761)),
+    meta: {
+      title: '选项卡',
+      permissions: ['admin']
+    }
+  }, {
+    path: 'editor',
+    name: 'Editor',
+    component: () => Promise.all(/* import() */ [__webpack_require__.e("3654"), __webpack_require__.e("8007")]).then(__webpack_require__.bind(__webpack_require__, 15360)),
+    meta: {
+      title: '编辑器',
+      permissions: ['admin']
+    }
+  }, {
+    path: 'qrCode',
+    name: 'QrCode',
+    component: () => Promise.all(/* import() */ [__webpack_require__.e("374"), __webpack_require__.e("535")]).then(__webpack_require__.bind(__webpack_require__, 22377)),
+    meta: {
+      title: '二维码',
+      permissions: ['admin']
+    }
   }]
 }, {
   path: '/personnelManagement',
@@ -2399,15 +2431,39 @@ var map = {
     9,
     "6198"
   ],
-  "./views/vab/nested/menu1": [
-    "57707",
+  "./views/vab/chart/": [
+    "27991",
     9,
-    "9880"
+    "3274",
+    "3067",
+    "7947",
+    "3036",
+    "305",
+    "4414",
+    "803",
+    "3462",
+    "1145",
+    "4942",
+    "2612",
+    "2609",
+    "5379",
+    "2995",
+    "5061"
   ],
   "./views/mall/goodsList": [
     "93300",
     9,
     "8140"
+  ],
+  "./views/vab/nested/menu1": [
+    "57707",
+    9,
+    "9880"
+  ],
+  "./views/vab/tab": [
+    "9761",
+    9,
+    "6901"
   ],
   "./views/register/index": [
     "59548",
@@ -2454,6 +2510,11 @@ var map = {
   "./layouts/components/VabAppMain/": [
     "76333",
     9
+  ],
+  "./views/vab/tab/index": [
+    "9761",
+    9,
+    "6901"
   ],
   "./utils/validate.js": [
     "36010",
@@ -2530,6 +2591,25 @@ var map = {
     "78135",
     9
   ],
+  "./views/vab/chart": [
+    "27991",
+    9,
+    "3274",
+    "3067",
+    "7947",
+    "3036",
+    "305",
+    "4414",
+    "803",
+    "3462",
+    "1145",
+    "4942",
+    "2612",
+    "2609",
+    "5379",
+    "2995",
+    "5061"
+  ],
   "./utils/encrypt.js": [
     "10142",
     9
@@ -2603,6 +2683,36 @@ var map = {
     "33380",
     9,
     "4854"
+  ],
+  "./views/vab/chart/index": [
+    "27991",
+    9,
+    "3274",
+    "3067",
+    "7947",
+    "3036",
+    "305",
+    "4414",
+    "803",
+    "3462",
+    "1145",
+    "4942",
+    "2612",
+    "2609",
+    "5379",
+    "2995",
+    "5061"
+  ],
+  "./views/vab/qrCode": [
+    "22377",
+    9,
+    "374",
+    "535"
+  ],
+  "./views/vab/tab/": [
+    "9761",
+    9,
+    "6901"
   ],
   "./views/mall/pay/components/Step2.vue": [
     "30436",
@@ -3190,6 +3300,25 @@ var map = {
     9,
     "6900"
   ],
+  "./views/vab/chart/index.vue": [
+    "27991",
+    9,
+    "3274",
+    "3067",
+    "7947",
+    "3036",
+    "305",
+    "4414",
+    "803",
+    "3462",
+    "1145",
+    "4942",
+    "2612",
+    "2609",
+    "5379",
+    "2995",
+    "5061"
+  ],
   "./api/markdown.js": [
     "43761",
     9,
@@ -3304,6 +3433,11 @@ var map = {
     "56013",
     9,
     "9170"
+  ],
+  "./views/vab/tab/index.vue": [
+    "9761",
+    9,
+    "6901"
   ],
   "./views/personnelManagement/userManagement/components/UserManagementEdit": [
     "80806",
@@ -3463,10 +3597,11 @@ var map = {
     9,
     "5092"
   ],
-  "./views/vab/errorLog/": [
-    "15802",
+  "./views/vab/editor": [
+    "15360",
     9,
-    "8950"
+    "3654",
+    "8007"
   ],
   "./utils/static.js": [
     "67308",
@@ -3479,24 +3614,10 @@ var map = {
     9,
     "6645"
   ],
-  "./views/vab/icon/colorfulIcon.vue": [
-    "8611",
+  "./views/vab/errorLog/": [
+    "15802",
     9,
-    "3274",
-    "3067",
-    "7947",
-    "3036",
-    "305",
-    "4414",
-    "803",
-    "3462",
-    "1145",
-    "4942",
-    "2612",
-    "2609",
-    "5379",
-    "2995",
-    "6866"
+    "8950"
   ],
   "./views/vab/icon": [
     "13125",
@@ -3516,6 +3637,25 @@ var map = {
     "5379",
     "2995",
     "5315"
+  ],
+  "./views/vab/icon/colorfulIcon.vue": [
+    "8611",
+    9,
+    "3274",
+    "3067",
+    "7947",
+    "3036",
+    "305",
+    "4414",
+    "803",
+    "3462",
+    "1145",
+    "4942",
+    "2612",
+    "2609",
+    "5379",
+    "2995",
+    "6866"
   ],
   "./views/vab/nested/menu1/menu1-1/index": [
     "56013",
@@ -3554,6 +3694,12 @@ var map = {
   "./utils/errorLog.js": [
     "73196",
     9
+  ],
+  "./views/vab/editor/index.vue": [
+    "15360",
+    9,
+    "3654",
+    "8007"
   ],
   "./utils": [
     "94621",
@@ -3670,6 +3816,12 @@ var map = {
     "79446",
     9,
     "745"
+  ],
+  "./views/vab/qrCode/index.vue": [
+    "22377",
+    9,
+    "374",
+    "535"
   ],
   "./utils/printInfo": [
     "99837",
@@ -3860,6 +4012,12 @@ var map = {
     "34839",
     9
   ],
+  "./views/vab/qrCode/index": [
+    "22377",
+    9,
+    "374",
+    "535"
+  ],
   "./router/index": [
     "25004",
     9
@@ -4032,6 +4190,12 @@ var map = {
     9,
     "846"
   ],
+  "./views/vab/editor/": [
+    "15360",
+    9,
+    "3654",
+    "8007"
+  ],
   "./api/tree.js": [
     "57492",
     9,
@@ -4151,6 +4315,18 @@ var map = {
     "8618",
     9,
     "9622"
+  ],
+  "./views/vab/editor/index": [
+    "15360",
+    9,
+    "3654",
+    "8007"
+  ],
+  "./views/vab/qrCode/": [
+    "22377",
+    9,
+    "374",
+    "535"
   ],
   "./views/vab/errorLog/components/ErrorTest": [
     "10263",
@@ -4318,7 +4494,7 @@ __webpack_require__.u = function(chunkId) {
   // return url for filenames not based on template
   
   // return url for filenames based on template
-  return "js/" + ({"1145": "vab-chunk-8","2609": "vab-chunk-11","2612": "vab-chunk-10","2995": "vab-chunk-13","3036": "vab-chunk-3","305": "vab-chunk-4","3067": "vab-chunk-1","3274": "vab-chunk-0","3462": "vab-chunk-7","4414": "vab-chunk-5","4942": "vab-chunk-9","5379": "vab-chunk-12","7947": "vab-chunk-2","803": "vab-chunk-6",}[chunkId] || chunkId) + "." + {"1145": "9dafa3cc","1167": "dbf806c6","1298": "7705681e","1341": "26a18590","1424": "a479564c","1514": "5006966a","1527": "304c462c","1662": "052b3167","1923": "bee1e453","2036": "b8e7991c","211": "bb7ed892","2245": "c8182125","2344": "4c90f007","2380": "1f0d176b","2452": "f3e9a792","2505": "b619b10b","2609": "010047ee","2612": "d41f52ad","2704": "ea31b58c","2825": "196e3b00","2995": "1c5ddeaa","3": "65c72dec","3036": "10dabdb7","305": "dc24446a","3067": "fe2e6d92","3079": "b949dd7e","3106": "ee43a21a","3172": "4c2e84f6","3274": "ff04dee2","3462": "1611dccf","3906": "7cfa7c33","4414": "1890eab8","4565": "642a9dc6","4594": "21899bf9","4854": "a9ad88a9","4942": "a4efbbe1","5092": "bb33e90a","5179": "0b2f0116","5252": "cb3ca338","5315": "5d72bfc1","5379": "77bfeebb","5485": "85830c73","5519": "f849cd33","5662": "94ad219f","5731": "986fff56","6082": "967fed72","6198": "4fc9d0b9","6440": "7e796c94","6645": "6af2df69","6665": "4d97987a","6814": "4e488841","6866": "caba68b0","6900": "2a940bb0","6951": "5e3d3570","7235": "25e90e77","7261": "ea349537","7264": "cacf1ca4","7305": "64716d9f","7418": "ecf2f001","745": "c239f1f6","7470": "68cbd3f4","757": "a440efde","7639": "59887f9e","7874": "0a8c76ed","7947": "6a4499ea","7972": "bb0ca758","7979": "2f8499ac","803": "ec558191","8140": "97090d60","8217": "f4e35e13","8258": "7ae65415","8292": "246a7a2e","846": "6a748f80","8572": "f94d438f","8648": "b1d47046","8735": "ff477abf","8818": "eadf88df","8950": "c1af67b8","9025": "ca4aabd2","9170": "705fb34f","9305": "20e33ba5","9326": "3e9dd272","9461": "7ce47156","9622": "4e30d611","9626": "05f69d8f","9683": "dc2f15a6","9880": "106359ec","9980": "1035d93d",}[chunkId] + ".js"
+  return "js/" + ({"1145": "vab-chunk-8","2609": "vab-chunk-11","2612": "vab-chunk-10","2995": "vab-chunk-13","3036": "vab-chunk-3","305": "vab-chunk-4","3067": "vab-chunk-1","3274": "vab-chunk-0","3462": "vab-chunk-7","4414": "vab-chunk-5","4942": "vab-chunk-9","5379": "vab-chunk-12","7947": "vab-chunk-2","803": "vab-chunk-6",}[chunkId] || chunkId) + "." + {"1145": "9dafa3cc","1167": "dbf806c6","1298": "7705681e","1341": "26a18590","1424": "543beda3","1514": "5006966a","1527": "9502e91f","1662": "052b3167","1923": "bee1e453","2036": "b8e7991c","211": "bb7ed892","2245": "c8182125","2344": "cc0ccdb1","2380": "1f0d176b","2452": "f3e9a792","2505": "b619b10b","2609": "010047ee","2612": "d41f52ad","2704": "ea31b58c","2825": "196e3b00","2995": "1c5ddeaa","3": "65c72dec","3036": "10dabdb7","305": "dc24446a","3067": "fe2e6d92","3079": "b949dd7e","3106": "ee43a21a","3172": "4c2e84f6","3274": "ff04dee2","3462": "1611dccf","3654": "5da6d6f0","374": "c743a671","3906": "7cfa7c33","4414": "1890eab8","4565": "642a9dc6","4594": "21899bf9","4854": "a9ad88a9","4942": "a4efbbe1","5061": "8ed23156","5092": "bb33e90a","5179": "0b2f0116","5252": "cb3ca338","5315": "5d72bfc1","535": "fce97a64","5379": "77bfeebb","5485": "85830c73","5519": "f849cd33","5662": "94ad219f","5731": "986fff56","6082": "967fed72","6198": "4fc9d0b9","6440": "7e796c94","6645": "6af2df69","6665": "4d97987a","6814": "4e488841","6866": "caba68b0","6900": "2a940bb0","6901": "812f18f6","6951": "5e3d3570","7235": "25e90e77","7261": "ea349537","7264": "cacf1ca4","7305": "64716d9f","7418": "ecf2f001","745": "c239f1f6","7470": "68cbd3f4","757": "a440efde","7639": "59887f9e","7874": "0a8c76ed","7947": "6a4499ea","7972": "bb0ca758","7979": "2f8499ac","8007": "0cd96177","803": "ec558191","8140": "97090d60","8217": "f4e35e13","8258": "7ae65415","8292": "246a7a2e","846": "6a748f80","8572": "f94d438f","8648": "b1d47046","8735": "dea2d2a5","8818": "eadf88df","8950": "c1af67b8","9025": "ca4aabd2","9170": "705fb34f","9305": "20e33ba5","9326": "3e9dd272","9461": "7ce47156","9622": "4e30d611","9626": "05f69d8f","9683": "dc2f15a6","9880": "106359ec","9980": "1035d93d",}[chunkId] + ".js"
 }
 }();
 // webpack/runtime/global
