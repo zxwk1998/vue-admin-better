@@ -507,7 +507,7 @@ var notice = __webpack_require__(47795);
   data() {
     return {
       timer: 0,
-      updateTime: "2025-8-1 11:41:44",
+      updateTime: "2025-8-1 11:46:29",
       nodeEnv: "production",
       dependencies: package_0.dependencies,
       devDependencies: package_0.devDependencies,
