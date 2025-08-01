@@ -232,6 +232,30 @@ export const asyncRoutes = [
         component: () => import('@/views/vab/more/index'),
         meta: { title: '关于', permissions: ['admin'] },
       },
+      {
+        path: 'chart',
+        name: 'Chart',
+        component: () => import('@/views/vab/chart/index'),
+        meta: { title: '图表', permissions: ['admin'] },
+      },
+      {
+        path: 'tab',
+        name: 'Tab',
+        component: () => import('@/views/vab/tab/index'),
+        meta: { title: '选项卡', permissions: ['admin'] },
+      },
+      {
+        path: 'editor',
+        name: 'Editor',
+        component: () => import('@/views/vab/editor/index'),
+        meta: { title: '编辑器', permissions: ['admin'] },
+      },
+      {
+        path: 'qrCode',
+        name: 'QrCode',
+        component: () => import('@/views/vab/qrCode/index'),
+        meta: { title: '二维码', permissions: ['admin'] },
+      },
     ],
   },
   {
