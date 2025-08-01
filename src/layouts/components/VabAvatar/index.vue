@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <el-dropdown-item command="personalCenter" class="dropdown-item">
+      <!-- <el-dropdown-item command="personalCenter" class="dropdown-item">
         <i class="el-icon-user-solid"></i>
         <span>个人中心</span>
       </el-dropdown-item>
@@ -28,9 +28,9 @@
       <el-dropdown-item command="settings" class="dropdown-item">
         <i class="el-icon-setting"></i>
         <span>系统设置</span>
-      </el-dropdown-item>
+      </el-dropdown-item> -->
 
-      <el-divider></el-divider>
+      <!-- <el-divider></el-divider> -->
 
       <el-dropdown-item command="github" class="dropdown-item">
         <i class="el-icon-link"></i>
