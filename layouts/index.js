@@ -4,15 +4,13 @@
 
 const webpackBarName = 'vue-admin-better'
 const webpackBanner = (time) => 
-`/*!
- * vue-admin-better
- * GitHub: https://github.com/zxwk1998/vue-admin-better
- * Gitee: https://gitee.com/chu1204505056/vue-admin-better
- *
- * 版权所有 (c) 2025 vue-admin-better
- * 本项目使用 MIT 许可证
- * 构建时间: ${time}
- */`
+`vue-admin-better
+GitHub: https://github.com/zxwk1998/vue-admin-better
+Gitee: https://gitee.com/chu1204505056/vue-admin-better
+
+版权所有 (c) 2025 vue-admin-better
+本项目使用 MIT 许可证
+构建时间: ${time}`
 
 /**
  * @description 在控制台打印项目信息
