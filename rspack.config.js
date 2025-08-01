@@ -1,11 +1,12 @@
 const path = require('path')
-const { Configuration, DefinePlugin } = require('@rspack/core')
+const { Configuration, DefinePlugin, BannerPlugin } = require('@rspack/core')
 const HtmlRspackPlugin = require('html-rspack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const { publicPath, assetsDir, outputDir, title, devPort } = require('./src/config')
 const dayjs = require('dayjs')
 const time = dayjs().format('YYYY-M-D HH:mm:ss')
 const fs = require('fs-extra')
+const { webpackBanner } = require('./layouts')
 
 // 设置环境变量
 process.env.VUE_APP_TITLE = title || 'vue-admin-better'
@@ -167,6 +168,11 @@ module.exports = {
               removeScriptTypeAttributes: true,
             }
           : false,
+    }),
+    // 添加版权信息到打包文件头部
+    new BannerPlugin({
+      banner: webpackBanner + time,
+      entryOnly: true,
     }),
     // 添加CopyPlugin功能，将public目录下除index.html外的文件复制到dist目录
     {
