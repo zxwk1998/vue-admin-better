@@ -98,23 +98,4 @@
       }
     }
   }
-
-  // 响应式设计
-  @media (max-width: 768px) {
-    .page-header {
-      padding: 20px;
-
-      .header-content {
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
-
-        .header-left {
-          .page-title {
-            font-size: 1.5rem;
-          }
-        }
-      }
-    }
-  }
 </style>

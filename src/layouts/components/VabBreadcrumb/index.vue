@@ -1,5 +1,5 @@
 <template>
-  <el-breadcrumb class="breadcrumb-container" separator=">">
+  <el-breadcrumb class="breadcrumb-container hidden-sm-and-down" separator=">">
     <el-breadcrumb-item v-for="item in list" :key="item.path">
       {{ item.meta.title }}
     </el-breadcrumb-item>

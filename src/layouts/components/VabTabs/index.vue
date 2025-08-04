@@ -425,31 +425,6 @@
       }
     }
   }
-
-  // 响应式设计
-  @media (max-width: 768px) {
-    .tabs-container {
-      padding: 0 12px;
-
-      .tabs-content {
-        width: calc(100% - 80px);
-
-        ::v-deep {
-          .el-tabs__item {
-            padding: 0 12px;
-            margin-right: 6px;
-            font-size: 12px;
-            border-radius: 12px;
-          }
-        }
-      }
-
-      .more {
-        padding: 6px 12px;
-        font-size: 12px;
-      }
-    }
-  }
 </style>
 
 <style lang="scss">

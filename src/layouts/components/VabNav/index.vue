@@ -3,12 +3,7 @@
     <el-row :gutter="15">
       <el-col :lg="12" :md="12" :sm="12" :xl="12" :xs="4">
         <div class="left-panel">
-          <vab-icon
-            :icon="['fas', collapse ? 'indent' : 'outdent']"
-            :title="collapse ? '展开' : '收起'"
-            class="fold-unfold"
-            @click="handleCollapse"
-          />
+          <vab-icon :icon="['fas', collapse ? 'indent' : 'outdent']" class="fold-unfold" @click="handleCollapse" />
           <vab-breadcrumb class="hidden-xs-only" />
         </div>
       </el-col>
@@ -117,7 +112,6 @@
         border: 1px solid rgba(0, 0, 0, 0.08);
         border-radius: 50%;
         cursor: pointer;
-        fill: rgba(0, 0, 0, 0.7);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);

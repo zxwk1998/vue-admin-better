@@ -12,7 +12,7 @@
         <vab-top />
         <div v-if="tabsBar === 'true' || tabsBar === true" :class="{ 'tag-view-show': tabsBar }">
           <el-scrollbar>
-            <vab-tabs />
+            <div class="vab-main main-padding"><vab-tabs /></div>
           </el-scrollbar>
         </div>
       </div>

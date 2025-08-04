@@ -251,28 +251,4 @@
       margin: 8px 0;
     }
   }
-
-  // 响应式设计
-  @media (max-width: 768px) {
-    .avatar-container {
-      padding: 6px 8px;
-
-      .user-info {
-        display: none;
-      }
-
-      .dropdown-icon {
-        display: none;
-      }
-    }
-
-    .custom-dropdown {
-      min-width: 200px;
-    }
-  }
-
-  // 隐藏下拉菜单箭头
-  ::v-deep .popper__arrow {
-    display: none !important;
-  }
 </style>

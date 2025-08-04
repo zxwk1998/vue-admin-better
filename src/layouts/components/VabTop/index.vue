@@ -9,10 +9,7 @@
           <el-menu
             active-text-color=" hsla(0, 0%, 100%, 0.95)"
             background-color="#191a23"
-            :collapse="collapse"
-            :collapse-transition="false"
             :default-active="activeMenu"
-            :default-openeds="defaultOpens"
             text-color=" hsla(0, 0%, 100%, 0.95)"
             menu-trigger="hover"
             mode="horizontal"

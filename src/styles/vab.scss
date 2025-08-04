@@ -8,8 +8,7 @@
 @import './normalize.scss';
 @import './transition.scss';
 @import './loading.scss';
-
-$base: '.vab';
+@import 'element-ui/lib/theme-chalk/display.css';
 
 @mixin scrollbar {
   max-height: 88vh;

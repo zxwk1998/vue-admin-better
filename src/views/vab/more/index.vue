@@ -600,48 +600,4 @@
       }
     }
   }
-
-  // 响应式设计
-  @media (max-width: 768px) {
-    .more-container {
-      .modern-card {
-        .card-content {
-          padding: 24px;
-        }
-
-        .card-header {
-          .icon-wrapper {
-            width: 56px;
-            height: 56px;
-            font-size: 24px;
-          }
-
-          .header-text {
-            .card-title {
-              font-size: 20px;
-            }
-          }
-        }
-
-        .open-source .features-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .custom-service {
-          .service-header {
-            flex-direction: column;
-            text-align: center;
-
-            .service-price {
-              text-align: center;
-            }
-          }
-
-          .service-features {
-            grid-template-columns: 1fr;
-          }
-        }
-      }
-    }
-  }
 </style>
