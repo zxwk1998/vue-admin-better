@@ -4,11 +4,9 @@
       <div class="avatar-wrapper">
         <img :src="avatar" alt="用户头像" class="user-avatar" />
       </div>
-      <div class="user-info">
+      <!-- <div class="user-info">
         <div class="username">{{ username }}</div>
-        <div class="user-role">管理员</div>
-      </div>
-      <i class="el-icon-arrow-down dropdown-icon"></i>
+      </div> -->
     </div>
 
     <el-dropdown-menu slot="dropdown" class="custom-dropdown">
@@ -141,17 +139,15 @@
   .avatar-container {
     display: flex;
     align-items: center;
-    padding: 8px 12px;
     border-radius: 8px;
     cursor: pointer;
 
     .avatar-wrapper {
       position: relative;
-      margin-right: 12px;
 
       .user-avatar {
-        width: 40px;
-        height: 40px;
+        width: 37.5px;
+        height: 37.5px;
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid rgba(255, 255, 255, 0.3);

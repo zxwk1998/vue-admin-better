@@ -3,12 +3,12 @@
     <el-row :gutter="15">
       <el-col :lg="12" :md="12" :sm="12" :xl="12" :xs="4">
         <div class="left-panel">
-          <i
-            :class="collapse ? 'el-icon-s-unfold' : 'el-icon-s-fold'"
+          <vab-icon
+            :icon="['fas', collapse ? 'indent' : 'outdent']"
             :title="collapse ? '展开' : '收起'"
             class="fold-unfold"
             @click="handleCollapse"
-          ></i>
+          />
           <vab-breadcrumb class="hidden-xs-only" />
         </div>
       </el-col>
@@ -102,22 +102,25 @@
       align-items: center;
       justify-items: center;
       height: $base-nav-bar-height;
+    }
 
+    ::v-deep {
       .fold-unfold {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 38px;
-        height: 38px;
+        margin-right: 12px;
+      }
+      svg {
+        width: 1em;
+        height: 1em;
+        padding: 9px;
         color: rgba(0, 0, 0, 0.7);
         background: rgba(255, 255, 255, 0.7);
         border: 1px solid rgba(0, 0, 0, 0.08);
         border-radius: 50%;
         cursor: pointer;
+        fill: rgba(0, 0, 0, 0.7);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        margin-right: $base-padding;
 
         &:hover {
           color: rgba(0, 0, 0, 0.9);
@@ -132,6 +135,58 @@
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
         }
       }
+
+      button {
+        svg {
+          margin-right: 0;
+          color: rgba(255, 255, 255, 0.95);
+          background: linear-gradient(135deg, rgba(77, 138, 240, 0.9) 0%, rgba(52, 120, 246, 0.95) 100%);
+          border-color: rgba(77, 138, 240, 0.8);
+          cursor: pointer;
+          fill: rgba(255, 255, 255, 0.95);
+
+          &:hover {
+            background: linear-gradient(135deg, rgba(77, 138, 240, 1) 0%, rgba(52, 120, 246, 1) 100%);
+            border-color: rgba(77, 138, 240, 1);
+            box-shadow: 0 4px 12px rgba(77, 138, 240, 0.3), 0 2px 4px rgba(77, 138, 240, 0.2);
+          }
+        }
+      }
+
+      .el-badge {
+        margin-right: 0;
+
+        .el-button {
+          background: rgba(255, 255, 255, 0.7);
+          border: 1px solid rgba(0, 0, 0, 0.08);
+          border-radius: 12px;
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.9);
+            border-color: rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+          }
+        }
+      }
+
+      .user-name {
+        color: rgba(0, 0, 0, 0.8);
+        font-weight: 500;
+      }
+
+      .user-avatar {
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+          transform: translateY(-1px);
+        }
+      }
     }
 
     .right-panel {
@@ -142,88 +197,6 @@
       justify-content: flex-end;
       height: $base-nav-bar-height;
       gap: 12px;
-
-      ::v-deep {
-        svg {
-          width: 1.25em;
-          height: 1.25em;
-          padding: 9px;
-          color: rgba(0, 0, 0, 0.7);
-          background: rgba(255, 255, 255, 0.7);
-          border: 1px solid rgba(0, 0, 0, 0.08);
-          border-radius: 50%;
-          cursor: pointer;
-          fill: rgba(0, 0, 0, 0.7);
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-
-          &:hover {
-            color: rgba(0, 0, 0, 0.9);
-            background: rgba(255, 255, 255, 0.9);
-            border-color: rgba(0, 0, 0, 0.15);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
-          }
-
-          &:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
-          }
-        }
-
-        button {
-          svg {
-            margin-right: 0;
-            color: rgba(255, 255, 255, 0.95);
-            background: linear-gradient(135deg, rgba(77, 138, 240, 0.9) 0%, rgba(52, 120, 246, 0.95) 100%);
-            border-color: rgba(77, 138, 240, 0.8);
-            cursor: pointer;
-            fill: rgba(255, 255, 255, 0.95);
-
-            &:hover {
-              background: linear-gradient(135deg, rgba(77, 138, 240, 1) 0%, rgba(52, 120, 246, 1) 100%);
-              border-color: rgba(77, 138, 240, 1);
-              box-shadow: 0 4px 12px rgba(77, 138, 240, 0.3), 0 2px 4px rgba(77, 138, 240, 0.2);
-            }
-          }
-        }
-
-        .el-badge {
-          margin-right: 0;
-
-          .el-button {
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-            &:hover {
-              background: rgba(255, 255, 255, 0.9);
-              border-color: rgba(0, 0, 0, 0.15);
-              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
-            }
-          }
-        }
-
-        .user-name {
-          color: rgba(0, 0, 0, 0.8);
-          font-weight: 500;
-        }
-
-        .user-avatar {
-          border: 2px solid rgba(255, 255, 255, 0.8);
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-          &:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
-            transform: translateY(-1px);
-          }
-        }
-      }
     }
   }
 </style>
