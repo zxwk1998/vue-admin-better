@@ -76,6 +76,10 @@
 </tr>
 </table>
 
+## 💖 物料市场
+
+- [🎉 物料市场](https://vuejs-core.cn/store)
+
 ## 💪 找工作
 
 - [🎉 找好工作就到【好工作就业参考网】查看就业避坑指南](https://job.vuejs-core.cn/)
