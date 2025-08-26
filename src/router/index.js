@@ -349,7 +349,7 @@ export const asyncRoutes = [
       {
         path: 'https://vuejs-core.cn/store',
         meta: {
-          title: '物料市场',
+          title: '模板市场',
           target: '_blank',
           icon: 'mortar-pestle',
           badge: 'Hot',
