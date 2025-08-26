@@ -301,6 +301,18 @@
                       </div>
                     </div>
                   </a>
+                  <a href="https://vuejs-core.cn/store" target="_blank">
+                    <div class="premium-card featured">
+                      <div class="premium-header">
+                        <vab-icon class="premium-icon" :icon="['fas', 'shopping-cart']" />
+                        <div class="premium-badge">模板市场</div>
+                      </div>
+                      <div class="premium-content">
+                        <div class="premium-title">模板市场</div>
+                        <div class="premium-price">￥0-1899</div>
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
 
