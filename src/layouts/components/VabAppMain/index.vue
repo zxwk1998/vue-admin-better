@@ -9,7 +9,11 @@
     <footer v-show="footerCopyright" class="footer-copyright">
       Copyright
       <vab-icon :icon="['fas', 'copyright']"></vab-icon>
-      vue-admin-better 开源免费版 {{ fullYear }}
+      vue-admin-better {{ fullYear }}
+      <p>
+        Powered by
+        <a href="https://vuejs-core.cn/store" target="_blank" style="color: #4d8af0; text-decoration: none">Shop Vite 模板市场</a>
+      </p>
     </footer>
   </div>
 </template>
@@ -96,11 +100,11 @@
     }
 
     .footer-copyright {
-      min-height: 55px;
-      line-height: 55px;
+      background: #f6f8f9;
+      padding-top: 15px;
+      min-height: 65px;
       color: rgba(0, 0, 0, 0.45);
       text-align: center;
-      border-top: 1px dashed $base-border-color;
     }
   }
 </style>
