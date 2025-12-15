@@ -11,7 +11,7 @@
     "lint": "eslint {src,mock,library}/**/*.{vue,js} --fix",
     "lint:prettier": "prettier {src,mock,library}/**/*.{html,vue,css,sass,scss,js,ts,md} --write",
     "clear": "rimraf node_modules&&npm install  --registry=--registry=https://registry.npmmirror.com",
-    "update": "ncu -u --reject vue-loader,vue-echarts,webpack,eslint-plugin-prettier,@vue/eslint-config-prettier,prettier,layouts,sass-loader,sass,screenfull,eslint,chalk,vue,vue-template-compiler,vue-router,vuex,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,eslint-plugin-vue --registry=https://registry.npmmirror.com&&pnpm i",
+    "module:update": "ncu -u --reject vue-loader,vue-echarts,webpack,eslint-plugin-prettier,@vue/eslint-config-prettier,prettier,layouts,sass-loader,sass,screenfull,eslint,chalk,vue,vue-template-compiler,vue-router,vuex,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,eslint-plugin-vue --registry=https://registry.npmmirror.com&&pnpm i --no-frozen-lockfile",
     "push": "start ./push.sh"
   },
   "repository": {
