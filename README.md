@@ -45,14 +45,6 @@
 
 - 请我们喝杯咖啡，后联系 QQ 783963206 邀请您进入讨论群（不管您请还是不请，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-better 基础版本、开发工具自动配置教程及项目开发文档。
 
-<table>
-  <tr>
-    <td>
-      <img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/zfb_kf.jpg">
-    </td>
-  </tr>
-</table>
-
 ## 🌱 Vue 2.x (Element UI) - 当前仓库
 
 ```
@@ -113,20 +105,6 @@ npm run dev
 - [uView uni-app 生态最优秀的 UI 框架](https://github.com/YanxinNet/uView/)
 - [form-generator Element 表单设计代码生成器](https://github.com/JakHuang/form-generator/)
 - [wangEditor 国产最强开源富文本编辑](https://github.com/wangeditor-team/wangEditor)
-
-## 💸 赞助支持
-
-如果您觉得 vue-admin-better 对您有帮助，欢迎赞助支持开源项目发展：
-
-<a title="vue" href="https://opencollective.com/vuejs" target="_blank">
-  <img width="64px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/vue.png"/>
-</a>
-<a title="element-plus" href="https://opencollective.com/element-plus" target="_blank">
-  <img width="64px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/element-plus.png"/>
-</a>
-<a title="ant-design-vue" href="https://opencollective.com/ant-design-vue" target="_blank">
-  <img width="64px" src="https://images.opencollective.com/ant-design-vue/2ec179b/logo/256.png"/>
-</a>
 
 ## 🏆 框架杰出贡献者
 
