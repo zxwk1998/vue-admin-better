@@ -28,7 +28,7 @@
 
 ## 🌐 演示地址
 
-### 💡 MF 版演示
+### 💡 社区版演示
 
 - [🎉 Vue Admin Better - github 实时部署 （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://zxwk1998.github.io/vue-admin-better/)
 - [🎉 Vue Admin Better （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-better)
@@ -37,9 +37,9 @@
 
 ### 💰 FF 版演示
 
-- [🚀 Vue Admin Pro （vue2.x + element-ui 2.x 付费版本，支持 PC、平板、手机）](https://vuejs-core.cn/admin-pro/)
-- [🚀 Vue Admin Plus （vue3.x + element-plus 2.x 付费版本，支持 PC、平板、手机）](https://vuejs-core.cn/admin-plus/)
-- [🚀 Vue Shop Vite （vue3.x + vite7.x + element-plus 2.x 付费版本，支持 PC、平板、手机）](https://vuejs-core.cn/shop-vite/)
+- [🚀 Vue Admin Pro （vue2.x + element-ui 2.x 支持 PC、平板、手机）](https://vuejs-core.cn/admin-pro/)
+- [🚀 Vue Admin Plus （vue3.x + element-plus 2.x 支持 PC、平板、手机）](https://vuejs-core.cn/admin-plus/)
+- [🚀 Vue Shop Vite （vue3.x + vite7.x + element-plus 2.x 支持 PC、平板、手机）](https://vuejs-core.cn/shop-vite/)
 
 ## 🍻 前端讨论 QQ 群
 
