@@ -45,6 +45,14 @@
 
 - 请我们喝杯咖啡，后联系 QQ 783963206 邀请您进入讨论群（不管您请还是不请，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-better 基础版本、开发工具自动配置教程及项目开发文档。
 
+<table>
+<tr>
+<td>
+<img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/mynb.jpg">
+</td>
+</tr>
+</table>
+
 ## 🌱 Vue 2.x (Element UI) - 当前仓库
 
 ```
