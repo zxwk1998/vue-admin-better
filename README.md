@@ -50,18 +50,14 @@
     <td>
       <img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/zfb_kf.jpg">
     </td>
-    <td>
+    <!-- <td>
       <img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/qq_group/vab-2.jpg">
     </td>
     <td>
       <img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/qq_group/vab-3.jpg">
-    </td>
+    </td> -->
   </tr>
 </table>
-
-## 💖 模板市场
-
-- [🎉 模板市场](https://vuejs-core.cn/store)
 
 ## 🌐 仓库地址
 
@@ -71,11 +67,6 @@
 - [🌐 vue-admin-better 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better/)
 - [🌐 vue3-admin-better 码云仓库地址](https://gitee.com/chu1204505056/vue3-admin-better/)
 - [🌐 vue-admin-arco 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-arco/)
-
-## 📦️ 桌面应用程序
-
-- [Admin Pro](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
-- [Admin Plus](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
 
 ## 🌱 Vue 2.x (Element UI) - 当前仓库
 
@@ -241,35 +232,6 @@ npm run dev
     </td>
     <td>
       <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/5.png">
-    </td>
-  </tr>
-</table>
-
-以下是截取的是 shop 版的效果图展示：
-
-<table>
-  <tr>
-    <td>
-      <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/16.png">
-    </td>
-    <td>
-      <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/17.png">
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/18.png">
-    </td>
-    <td>
-      <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/19.png">
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/20.png">
-    </td>
-    <td>
-      <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/21.png">
     </td>
   </tr>
 </table>
