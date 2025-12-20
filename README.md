@@ -28,14 +28,14 @@
 
 ## 🌐 演示地址
 
-### 💡 免费版演示
+### 💡 MF 版演示
 
 - [🎉 Vue Admin Better - github 实时部署 （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://zxwk1998.github.io/vue-admin-better/)
 - [🎉 Vue Admin Better （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-better)
 - [🎉 Vue3 Admin Better （vue3.x + element-plus 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue3-admin-better)
 - [⚡️ Vue Admin Arco （vue3.x + vite7.x + arco2.x 免费商用，支持 PC）](https://vuejs-core.cn/vue-admin-arco/)
 
-### 💰 付费版演示
+### 💰 FF 版演示
 
 - [🚀 Vue Admin Pro （vue2.x + element-ui 2.x 付费版本，支持 PC、平板、手机）](https://vuejs-core.cn/admin-pro/)
 - [🚀 Vue Admin Plus （vue3.x + element-plus 2.x 付费版本，支持 PC、平板、手机）](https://vuejs-core.cn/admin-plus/)
@@ -43,30 +43,15 @@
 
 ## 🍻 前端讨论 QQ 群
 
-- 请我们喝杯咖啡，打赏后联系 QQ 783963206 邀请您进入讨论群（由于用户数较多，如果您打赏后未通过好友请求，可以尝试多加几次），不管您请还是不请，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-better 基础版本、开发工具自动配置教程及项目开发文档。
+- 请我们喝杯咖啡，后联系 QQ 783963206 邀请您进入讨论群（不管您请还是不请，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-better 基础版本、开发工具自动配置教程及项目开发文档。
 
 <table>
   <tr>
     <td>
       <img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/zfb_kf.jpg">
     </td>
-    <!-- <td>
-      <img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/qq_group/vab-2.jpg">
-    </td>
-    <td>
-      <img width="200px" src="https://gcore.jsdelivr.net/gh/zxwk1998/image/qq_group/vab-3.jpg">
-    </td> -->
   </tr>
 </table>
-
-## 🌐 仓库地址
-
-- [🌐 vue-admin-better github 仓库地址](https://github.com/zxwk1998/vue-admin-better/)
-- [🌐 vue3-admin-better github 仓库地址](https://github.com/zxwk1998/vue3-admin-better/)
-- [🌐 vue-admin-arco github 仓库地址](https://github.com/zxwk1998/vue-admin-arco/)
-- [🌐 vue-admin-better 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-better/)
-- [🌐 vue3-admin-better 码云仓库地址](https://gitee.com/chu1204505056/vue3-admin-better/)
-- [🌐 vue-admin-arco 码云仓库地址](https://gitee.com/chu1204505056/vue-admin-arco/)
 
 ## 🌱 Vue 2.x (Element UI) - 当前仓库
 
