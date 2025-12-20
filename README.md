@@ -1,6 +1,3 @@
-根据您提供的原始 README 内容，以下是整理后的 README.md 文件内容：
-
-```markdown
 <div align="center">
   <img width="200" src="https://assets.rspack.rs/rspack/rspack-logo.svg"/>
   <h1>Vue Admin Better</h1>
@@ -81,6 +78,7 @@
 - [Admin Plus](https://gitee.com/chu1204505056/microsoft-store/raw/master/AdminPlus.zip)
 
 ## 🌱 Vue 2.x (Element UI) - 当前仓库
+
 ```
 
 # 克隆项目
@@ -279,5 +277,3 @@ npm run dev
 ## 📄 商用注意事项
 
 开源版本可免费用于商业用途，如果方便就留个 Star 吧
-</div>
-```
