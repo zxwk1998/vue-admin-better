@@ -377,6 +377,25 @@ export const asyncRoutes = [
     ],
   },
   {
+    path: '/donate-menu',
+    component: Layout,
+    meta: {
+      title: '支持我们',
+      icon: 'heart',
+    },
+    children: [
+      {
+        path: '/donate',
+        component: () => import('@/views/donate/index'),
+        meta: {
+          title: '支持我们',
+          icon: 'heart',
+          badge: 'Donate',
+        },
+      },
+    ],
+  },
+  {
     path: '*',
     redirect: '/404',
     hidden: true,
