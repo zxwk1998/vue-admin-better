@@ -2,7 +2,6 @@
   <img width="200" src="https://assets.rspack.rs/rspack/rspack-logo.svg"/>
   <h1>Vue Admin Better</h1>
   <p>拒绝过度封装，去除等待时间，让项目回归纯粹，让开发变得简单</p>
-  <p>致力于成为开源社区中运行速度Zui快、打包等待时间Zui短、上手难度Zui低的中后台前端框架</p>
 </div>
 
 [![stars](https://img.shields.io/github/stars/zxwk1998/vue-admin-better?style=flat-square&logo=GitHub)](https://github.com/zxwk1998/vue-admin-better)
@@ -30,16 +29,16 @@
 
 ### 💡 社区版演示
 
-- [🎉 Vue Admin Better - github 实时部署 （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://zxwk1998.github.io/vue-admin-better/)
-- [🎉 Vue Admin Better （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-better)
-- [🎉 Vue3 Admin Better （vue3.x + element-plus 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue3-admin-better)
-- [⚡️ Vue Admin Arco （vue3.x + vite7.x + arco2.x 免费商用，支持 PC）](https://vuejs-core.cn/vue-admin-arco/)
+- [🎉 Admin Better - github 实时部署 （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://zxwk1998.github.io/vue-admin-better/)
+- [🎉 Admin Better （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-better)
+- [🎉 Admin Better （vue3.x + element-plus 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue3-admin-better)
+- [⚡️ Admin Arco （vue3.x + vite7.x + arco2.x 免费商用，支持 PC）](https://vuejs-core.cn/vue-admin-arco/)
 
 ### 💰 FF 版演示
 
-- [🚀 Vue Admin Pro （vue2.x + element-ui 2.x 支持 PC、平板、手机）](https://vuejs-core.cn/admin-pro/)
-- [🚀 Vue Admin Plus （vue3.x + element-plus 2.x 支持 PC、平板、手机）](https://vuejs-core.cn/admin-plus/)
-- [🚀 Vue Shop Vite （vue3.x + vite7.x + element-plus 2.x 支持 PC、平板、手机）](https://vuejs-core.cn/shop-vite/)
+- [🚀 Admin Pro （vue2.x + element-ui 2.x 支持 PC、平板、手机）](https://vuejs-core.cn/admin-pro/)
+- [🚀 Admin Plus （vue3.x + element-plus 2.x 支持 PC、平板、手机）](https://vuejs-core.cn/admin-plus/)
+- [🚀 Shop Vite （vue3.x + vite7.x + element-plus 2.x 支持 PC、平板、手机）](https://vuejs-core.cn/shop-vite/)
 
 ## 🌱 Vue 2.x (Element UI) - 当前仓库
 
@@ -95,37 +94,6 @@ npm run dev
 
 ```
 
-## 🤝 友情链接
-
-- [OPSLI 基于 vue-admin-better 开源版的最佳实践](https://github.com/hiparker/opsli-boot)
-- [uView uni-app 生态最优秀的 UI 框架](https://github.com/YanxinNet/uView/)
-- [form-generator Element 表单设计代码生成器](https://github.com/JakHuang/form-generator/)
-- [wangEditor 国产最强开源富文本编辑](https://github.com/wangeditor-team/wangEditor)
-
-## 🏆 框架杰出贡献者
-
-<a href="https://github.com/fwfmiao" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/29328241?s=50"/>
-</a>
-<a href="https://github.com/buuing" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/36689704?s=50"/>
-</a>
-<a href="https://github.com/hipi" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/22478003?s=50"/>
-</a>
-<a href="https://github.com/hdtopku" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/14859466?s=50"/>
-</a>
-<a href="https://github.com/shaonialife" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/16135960?s=50"/>
-</a>
-<a href="https://github.com/1511578084" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/24790218?s=50"/>
-</a>
-<a href="https://github.com/Arooba-git" target="_blank">
-  <img width="50px" style="border-radius:999px" src="https://avatars.githubusercontent.com/u/56495631?s=50"/>
-</a>
-
 ## 🌟 优势亮点
 
 ### 主要优势:
@@ -164,37 +132,6 @@ npm run dev
 
 ![img](https://gcore.jsdelivr.net/gh/zxwk1998/image/vip/flow.drawio.png)
 
-## 🗃️ 效果图
-
-以下是截取的是 pro 版的效果图展示：
-
-<table>
-  <tr>
-    <td>
-      <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/2.png">
-    </td>
-    <td>
-      <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/6.png">
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/8.png">
-    </td>
-    <td>
-      <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/9.png">
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/3.png">
-    </td>
-    <td>
-      <img src="https://gcore.jsdelivr.net/gh/zxwk1998/image/5.png">
-    </td>
-  </tr>
-</table>
-
-## 📄 商用注意事项
+## 📄 vue-admin-better 开源版商用注意事项
 
 开源版本可免费用于商业用途，如果方便就留个 Star 吧
