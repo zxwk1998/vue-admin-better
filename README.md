@@ -97,7 +97,7 @@ npm run dev
 
 ## 🍻 前端讨论 QQ 群
 
-- [点击加入](https://zxwk1998.github.io/vue3-admin-better/#/donate)
+- [点击加入](https://vuejs-core.cn/vue-admin-better/#/donate)
 
 ## 🌟 优势亮点
 
