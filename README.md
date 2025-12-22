@@ -31,7 +31,7 @@
 
 - [🎉 Admin Better - github 实时部署 （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://zxwk1998.github.io/vue-admin-better/)
 - [🎉 Admin Better （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue-admin-better)
-- [🎉 Admin Better Vue3 - github 实时部署 （vue2.x + element-ui 免费商用，支持 PC、平板、手机）](https://zxwk1998.github.io/vue3-admin-better/)
+- [🎉 Admin Better Vue3 - github 实时部署 （vue3.x + element-plus 免费商用，支持 PC、平板、手机）](https://zxwk1998.github.io/vue3-admin-better/)
 - [🎉 Admin Better Vue3 （vue3.x + element-plus 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue3-admin-better)
 - [⚡️ Admin Arco （vue3.x + vite7.x + arco2.x 免费商用，支持 PC）](https://vuejs-core.cn/vue-admin-arco/)
 
