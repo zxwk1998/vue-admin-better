@@ -2,7 +2,7 @@
   <img width="200" src="https://assets.rspack.rs/rspack/rspack-logo.svg"/>
   <h1>Vue Admin Better</h1>
   <p>拒绝过度封装，去除等待时间，让项目回归纯粹，让开发变得简单</p>
-  <p>致力于成为开源社区中运行速度最快、打包等待时间最短、上手难度最低的中后台前端框架</p>
+  <p>致力于成为开源社区中运行速度Zui快、打包等待时间Zui短、上手难度Zui低的中后台前端框架</p>
 </div>
 
 [![stars](https://img.shields.io/github/stars/zxwk1998/vue-admin-better?style=flat-square&logo=GitHub)](https://github.com/zxwk1998/vue-admin-better)
@@ -40,18 +40,6 @@
 - [🚀 Vue Admin Pro （vue2.x + element-ui 2.x 支持 PC、平板、手机）](https://vuejs-core.cn/admin-pro/)
 - [🚀 Vue Admin Plus （vue3.x + element-plus 2.x 支持 PC、平板、手机）](https://vuejs-core.cn/admin-plus/)
 - [🚀 Vue Shop Vite （vue3.x + vite7.x + element-plus 2.x 支持 PC、平板、手机）](https://vuejs-core.cn/shop-vite/)
-
-## 🍻 前端讨论 QQ 群
-
-- 请我们喝杯咖啡，后联系 QQ 783963206 邀请您进入讨论群（不管您请还是不请，您都可以享受到开源的代码，感谢您的支持和信任，群内提供 vue-admin-better 基础版本、开发工具自动配置教程及项目开发文档。
-
-<table>
-<tr>
-<td>
-<img width="200px" src="src/assets/mynb.jpg">
-</td>
-</tr>
-</table>
 
 ## 🌱 Vue 2.x (Element UI) - 当前仓库
 
