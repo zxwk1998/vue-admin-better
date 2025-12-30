@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "axios": "^1.13.2",
-    "caniuse-lite": "^1.0.30001761",
+    "caniuse-lite": "^1.0.30001762",
     "clipboard": "^2.0.11",
     "core-js": "^3.47.0",
     "dayjs": "^1.11.19",
@@ -42,7 +42,7 @@
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "qrcode": "^1.5.4",
-    "qs": "^6.14.0",
+    "qs": "^6.14.1",
     "screenfull": "^5.2.0",
     "sortablejs": "^1.15.6",
     "vab-icon": "file:vab-icon",
