@@ -52,9 +52,9 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@rspack/cli": "^1.6.8",
-    "@rspack/core": "^1.6.8",
-    "@rspack/dev-server": "^1.1.4",
+    "@rspack/cli": "^1.7.0",
+    "@rspack/core": "^1.7.0",
+    "@rspack/dev-server": "^1.1.5",
     "@vue/cli-plugin-babel": "^5.0.8",
     "archiver": "^7.0.1",
     "babel-eslint": "^10.1.0",
