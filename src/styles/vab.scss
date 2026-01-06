@@ -116,11 +116,12 @@ html {
       backdrop-filter: blur(10px);
     }
 
-    .el-tag + .el-tag {
+    .el-tag+.el-tag {
       margin-left: 10px;
     }
 
     .editor-toolbar {
+
       .no-mobile,
       .fa-question-circle {
         display: none;
@@ -151,7 +152,7 @@ html {
       .app-main-container {
         @include base-scrollbar;
 
-        > [class*='-container'] {
+        >[class*='-container'] {
           * {
             transition: none;
           }
@@ -280,10 +281,10 @@ html {
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
       transition: all 0.3s ease;
 
-      &:hover {
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
-        transform: translateY(-2px);
-      }
+      // &:hover {
+      //   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+      //   transform: translateY(-2px);
+      // }
 
       &__body {
         padding: $base-padding;
@@ -514,6 +515,7 @@ html {
   }
 
   .side-container {
+
     .el-menu-item,
     .el-submenu {
       margin: 7px !important;

@@ -53,6 +53,25 @@ export const asyncRoutes = [
       },
     ],
   },
+  {
+    path: '/stock',
+    component: Layout,
+    redirect: 'noRedirect',
+    name: 'Stock',
+    meta: {
+      title: '雪球模拟',
+      icon: 'chart-line',
+      permissions: ['admin'],
+    },
+    children: [
+      {
+        path: 'xueqiu',
+        name: 'Xueqiu',
+        component: () => import('@/views/stock/index'),
+        meta: { title: '雪球模拟', icon: 'chart-line', noKeepAlive: false },
+      },
+    ],
+  },
 
   /* {
     path: "/test",
@@ -395,6 +414,7 @@ export const asyncRoutes = [
       },
     ],
   },
+
   {
     path: '*',
     redirect: '/404',
