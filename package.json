@@ -59,7 +59,7 @@
     "archiver": "^7.0.1",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^10.0.0",
-    "body-parser": "^2.2.1",
+    "body-parser": "^2.2.2",
     "chalk": "^4.1.2",
     "chokidar": "^5.0.0",
     "css-loader": "^7.1.2",
