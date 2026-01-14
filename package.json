@@ -52,8 +52,8 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@rspack/cli": "^1.7.1",
-    "@rspack/core": "^1.7.1",
+    "@rspack/cli": "^1.7.2",
+    "@rspack/core": "^1.7.2",
     "@rspack/dev-server": "^1.1.5",
     "@vue/cli-plugin-babel": "^5.0.8",
     "archiver": "^7.0.1",
