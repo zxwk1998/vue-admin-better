@@ -2,7 +2,7 @@
   <div class="stock-container">
     <el-card class="stock-card" shadow="never">
       <div slot="header" class="clearfix">
-        <span>国晟科技 - 模拟市值</span>
+        <span>国晟科技 - 模拟市值（史上最垃圾的股票，用以警醒世人）</span>
         <a href="https://data.10jqka.com.cn/market/longhu/" target="_blank">
           <el-button type="warning" size="mini" style="margin-left: 10px; padding: 3px 10px">龙虎榜</el-button>
         </a>
