@@ -119,8 +119,8 @@ devDependencies:
     specifier: ^11.3.3
     version: 11.3.3
   html-rspack-plugin:
-    specifier: ^6.1.4
-    version: 6.1.4(@rspack/core@1.7.2)
+    specifier: ^6.1.5
+    version: 6.1.5(@rspack/core@1.7.2)
   lint-staged:
     specifier: ^16.2.7
     version: 16.2.7
@@ -146,8 +146,8 @@ devDependencies:
     specifier: ^9.0.5
     version: 9.0.5(stylelint@17.0.0)
   stylelint-config-recess-order:
-    specifier: ^7.4.0
-    version: 7.4.0(stylelint-order@7.0.0)(stylelint@17.0.0)
+    specifier: ^7.5.0
+    version: 7.5.0(stylelint-order@7.0.0)(stylelint@17.0.0)
   vue-loader:
     specifier: 15.9.8
     version: 15.9.8(css-loader@7.1.2)(lodash@4.17.21)(vue-template-compiler@2.7.16)(webpack@5.103.0)
@@ -5207,11 +5207,11 @@ packages:
       terser: 5.44.1
     dev: true
 
-  /html-rspack-plugin@6.1.4(@rspack/core@1.7.2):
-    resolution: {integrity: sha512-cZWxDluPZXJurJ7vcVA+jlyz/qvp5Q3B6oQg+Y00FM5un5Ou7tpUo7mJ796zVO4WhVNmLs+OfjYo0g1ix5sW+A==}
+  /html-rspack-plugin@6.1.5(@rspack/core@1.7.2):
+    resolution: {integrity: sha512-JRygNlPHicqlaSVc4Uttuo+mhDxQ+j6WP3cVNzlmethW+vXcC4DXJ15pOalnoP+axym3DidH7jX9D9+Rozdwfg==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
-      '@rspack/core': 0.x || 1.x
+      '@rspack/core': ^1.0.0 || ^2.0.0-0
     peerDependenciesMeta:
       '@rspack/core':
         optional: true
@@ -7964,11 +7964,11 @@ packages:
       stylelint: 17.0.0
     dev: true
 
-  /stylelint-config-recess-order@7.4.0(stylelint-order@7.0.0)(stylelint@17.0.0):
-    resolution: {integrity: sha512-W3G517cBaMDYRX5Fzhro4fhRkkLafLgVSPfQnhxbiLyMnbLq47RMF/NRaOJ4OQsKWYhsIHOIc2Q3VL0X3Q7oPg==}
+  /stylelint-config-recess-order@7.5.0(stylelint-order@7.0.0)(stylelint@17.0.0):
+    resolution: {integrity: sha512-b9ognlz6WvEJeJSpElV4msr3FTfDUYD5Br7S9btdhCND7kSyUTAN1JdiPABc++8bYR4gHlW/DpkTkWQDCcZqAw==}
     peerDependencies:
-      stylelint: '>=16.18'
-      stylelint-order: '>=7'
+      stylelint: ^16.18.0 || ^17.0.0
+      stylelint-order: ^7.0.0
     dependencies:
       stylelint: 17.0.0
       stylelint-order: 7.0.0(stylelint@17.0.0)
