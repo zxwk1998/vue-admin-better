@@ -119,8 +119,8 @@ devDependencies:
     specifier: ^11.3.3
     version: 11.3.3
   html-rspack-plugin:
-    specifier: ^6.1.5
-    version: 6.1.5(@rspack/core@1.7.3)
+    specifier: ^6.1.6
+    version: 6.1.6(@rspack/core@1.7.3)
   lint-staged:
     specifier: ^16.2.7
     version: 16.2.7
@@ -5207,8 +5207,8 @@ packages:
       terser: 5.44.1
     dev: true
 
-  /html-rspack-plugin@6.1.5(@rspack/core@1.7.3):
-    resolution: {integrity: sha512-JRygNlPHicqlaSVc4Uttuo+mhDxQ+j6WP3cVNzlmethW+vXcC4DXJ15pOalnoP+axym3DidH7jX9D9+Rozdwfg==}
+  /html-rspack-plugin@6.1.6(@rspack/core@1.7.3):
+    resolution: {integrity: sha512-7lz7xj2uqignH/kVcb2IN26FqRzeSf/Wlkn+T5b1xOMBq2fpnLeYiNhmIm51Izoh4bbuNqbUTvahRVdB0feVmg==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       '@rspack/core': ^1.0.0 || ^2.0.0-0
