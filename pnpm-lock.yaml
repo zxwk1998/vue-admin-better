@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.13.2
     version: 1.13.2
   caniuse-lite:
-    specifier: ^1.0.30001765
-    version: 1.0.30001765
+    specifier: ^1.0.30001766
+    version: 1.0.30001766
   clipboard:
     specifier: ^2.0.11
     version: 2.0.11
@@ -80,8 +80,8 @@ devDependencies:
     specifier: ^1.7.3
     version: 1.7.3
   '@rspack/dev-server':
-    specifier: ^1.1.5
-    version: 1.1.5(@rspack/core@1.7.3)(webpack@5.103.0)
+    specifier: ^1.2.1
+    version: 1.2.1(@rspack/core@1.7.3)(webpack@5.103.0)
   '@vue/cli-plugin-babel':
     specifier: ^5.0.8
     version: 5.0.9(@vue/cli-service@5.0.9)(core-js@3.48.0)(vue@2.7.16)
@@ -1782,6 +1782,49 @@ packages:
       - webpack-cli
     dev: true
 
+  /@rspack/dev-server@1.2.1(@rspack/core@1.7.3)(webpack@5.103.0):
+    resolution: {integrity: sha512-e/ARvskYn2Qdd02qLvc0i6H9BnOmzP0xGHS2XCr7GZ3t2k5uC5ZlLkeN1iEebU0FkAW+6ot89NahFo3nupKuww==}
+    engines: {node: '>= 18.12.0'}
+    peerDependencies:
+      '@rspack/core': '*'
+    dependencies:
+      '@rspack/core': 1.7.3
+      '@types/bonjour': 3.5.13
+      '@types/connect-history-api-fallback': 1.5.4
+      '@types/express': 4.17.25
+      '@types/express-serve-static-core': 4.19.7
+      '@types/serve-index': 1.9.4
+      '@types/serve-static': 1.15.10
+      '@types/sockjs': 0.3.36
+      '@types/ws': 8.18.1
+      ansi-html-community: 0.0.8
+      bonjour-service: 1.3.0
+      chokidar: 3.6.0
+      colorette: 2.0.20
+      compression: 1.8.1
+      connect-history-api-fallback: 2.0.0
+      express: 4.22.1
+      graceful-fs: 4.2.11
+      http-proxy-middleware: 2.0.9(@types/express@4.17.25)
+      ipaddr.js: 2.3.0
+      launch-editor: 2.12.0
+      open: 10.2.0
+      p-retry: 6.2.1
+      schema-utils: 4.3.3
+      selfsigned: 2.4.1
+      serve-index: 1.9.1
+      sockjs: 0.3.24
+      spdy: 4.0.2
+      webpack-dev-middleware: 7.4.5(webpack@5.103.0)
+      ws: 8.18.3
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
+      - webpack
+    dev: true
+
   /@rspack/lite-tapable@1.1.0:
     resolution: {integrity: sha512-E2B0JhYFmVAwdDiG14+DW0Di4Ze4Jg10Pc4/lILUrd5DRCaklduz2OvJ5HYQ6G+hd+WTzqQb3QnDNfK4yvAFYw==}
     dev: true
@@ -2914,7 +2957,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.28.1
-      caniuse-lite: 1.0.30001765
+      caniuse-lite: 1.0.30001766
       fraction.js: 5.3.4
       picocolors: 1.1.1
       postcss: 8.5.6
@@ -3164,7 +3207,7 @@ packages:
     hasBin: true
     dependencies:
       baseline-browser-mapping: 2.9.7
-      caniuse-lite: 1.0.30001765
+      caniuse-lite: 1.0.30001766
       electron-to-chromium: 1.5.267
       node-releases: 2.0.27
       update-browserslist-db: 1.2.2(browserslist@4.28.1)
@@ -3259,13 +3302,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.28.1
-      caniuse-lite: 1.0.30001765
+      caniuse-lite: 1.0.30001766
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite@1.0.30001765:
-    resolution: {integrity: sha512-LWcNtSyZrakjECqmpP4qdg0MMGdN368D7X8XvvAqOcqMv0RxnlqVKZl2V6/mBR68oYMxOZPLw/gO7DuisMHUvQ==}
+  /caniuse-lite@1.0.30001766:
+    resolution: {integrity: sha512-4C0lfJ0/YPjJQHagaE9x2Elb69CIqEPZeG0anQt9SIvIoOH4a4uaRl73IavyO+0qZh6MDLH//DrXThEYKHkmYA==}
 
   /case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
