@@ -140,14 +140,14 @@ devDependencies:
     specifier: ^4.0.0
     version: 4.0.0(webpack@5.103.0)
   stylelint:
-    specifier: ^17.0.0
-    version: 17.0.0
+    specifier: ^17.1.0
+    version: 17.1.0
   stylelint-config-prettier:
     specifier: ^9.0.5
-    version: 9.0.5(stylelint@17.0.0)
+    version: 9.0.5(stylelint@17.1.0)
   stylelint-config-recess-order:
     specifier: ^7.6.0
-    version: 7.6.0(stylelint-order@7.0.0)(stylelint@17.0.0)
+    version: 7.6.0(stylelint-order@7.0.0)(stylelint@17.1.0)
   vue-loader:
     specifier: 15.9.8
     version: 15.9.8(css-loader@7.1.3)(lodash@4.17.23)(vue-template-compiler@2.7.16)(webpack@5.103.0)
@@ -1295,17 +1295,17 @@ packages:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  /@cacheable/memory@2.0.6:
-    resolution: {integrity: sha512-7e8SScMocHxcAb8YhtkbMhGG+EKLRIficb1F5sjvhSYsWTZGxvg4KIDp8kgxnV2PUJ3ddPe6J9QESjKvBWRDkg==}
+  /@cacheable/memory@2.0.7:
+    resolution: {integrity: sha512-RbxnxAMf89Tp1dLhXMS7ceft/PGsDl1Ip7T20z5nZ+pwIAsQ1p2izPjVG69oCLv/jfQ7HDPHTWK0c9rcAWXN3A==}
     dependencies:
-      '@cacheable/utils': 2.3.2
+      '@cacheable/utils': 2.3.3
       '@keyv/bigmap': 1.3.0(keyv@5.5.5)
-      hookified: 1.14.0
+      hookified: 1.15.0
       keyv: 5.5.5
     dev: true
 
-  /@cacheable/utils@2.3.2:
-    resolution: {integrity: sha512-8kGE2P+HjfY8FglaOiW+y8qxcaQAfAhVML+i66XJR3YX5FtyDqn6Txctr3K2FrbxLKixRRYYBWMbuGciOhYNDg==}
+  /@cacheable/utils@2.3.3:
+    resolution: {integrity: sha512-JsXDL70gQ+1Vc2W/KUFfkAJzgb4puKwwKehNLuB+HrNKWf91O736kGfxn4KujXCCSuh6mRRL4XEB0PkAFjWS0A==}
     dependencies:
       hashery: 1.3.0
       keyv: 5.5.5
@@ -1531,7 +1531,7 @@ packages:
       keyv: ^5.5.4
     dependencies:
       hashery: 1.3.0
-      hookified: 1.14.0
+      hookified: 1.15.0
       keyv: 5.5.5
     dev: true
 
@@ -3248,14 +3248,14 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /cacheable@2.3.0:
-    resolution: {integrity: sha512-HHiAvOBmlcR2f3SQ7kdlYD8+AUJG+wlFZ/Ze8tl1Vzvz0MdOh8IYA/EFU4ve8t1/sZ0j4MGi7ST5MoTwHessQA==}
+  /cacheable@2.3.2:
+    resolution: {integrity: sha512-w+ZuRNmex9c1TR9RcsxbfTKCjSL0rh1WA5SABbrWprIHeNBdmyQLSYonlDy9gpD+63XT8DgZ/wNh1Smvc9WnJA==}
     dependencies:
-      '@cacheable/memory': 2.0.6
-      '@cacheable/utils': 2.3.2
-      hookified: 1.14.0
+      '@cacheable/memory': 2.0.7
+      '@cacheable/utils': 2.3.3
+      hookified: 1.15.0
       keyv: 5.5.5
-      qified: 0.5.3
+      qified: 0.6.0
     dev: true
 
   /call-bind-apply-helpers@1.0.2:
@@ -4792,10 +4792,10 @@ packages:
       escape-string-regexp: 1.0.5
     dev: true
 
-  /file-entry-cache@11.1.1:
-    resolution: {integrity: sha512-TPVFSDE7q91Dlk1xpFLvFllf8r0HyOMOlnWy7Z2HBku5H3KhIeOGInexrIeg2D64DosVB/JXkrrk6N/7Wriq4A==}
+  /file-entry-cache@11.1.2:
+    resolution: {integrity: sha512-N2WFfK12gmrK1c1GXOqiAJ1tc5YE+R53zvQ+t5P8S5XhnmKYVB5eZEiLNZKDSmoG8wqqbF9EXYBBW/nef19log==}
     dependencies:
-      flat-cache: 6.1.19
+      flat-cache: 6.1.20
     dev: true
 
   /file-entry-cache@5.0.1:
@@ -4860,12 +4860,12 @@ packages:
       write: 1.0.3
     dev: true
 
-  /flat-cache@6.1.19:
-    resolution: {integrity: sha512-l/K33newPTZMTGAnnzaiqSl6NnH7Namh8jBNjrgjprWxGmZUuxx/sJNIRaijOh3n7q7ESbhNZC+pvVZMFdeU4A==}
+  /flat-cache@6.1.20:
+    resolution: {integrity: sha512-AhHYqwvN62NVLp4lObVXGVluiABTHapoB57EyegZVmazN+hhGhLTn3uZbOofoTw4DSDvVCadzzyChXhOAvy8uQ==}
     dependencies:
-      cacheable: 2.3.0
+      cacheable: 2.3.2
       flatted: 3.3.3
-      hookified: 1.14.0
+      hookified: 1.15.0
     dev: true
 
   /flat@5.0.2:
@@ -5193,7 +5193,7 @@ packages:
     resolution: {integrity: sha512-fWltioiy5zsSAs9ouEnvhsVJeAXRybGCNNv0lvzpzNOSDbULXRy7ivFWwCCv4I5Am6kSo75hmbsCduOoc2/K4w==}
     engines: {node: '>=20'}
     dependencies:
-      hookified: 1.14.0
+      hookified: 1.15.0
     dev: true
 
   /hasown@2.0.2:
@@ -5211,8 +5211,8 @@ packages:
     resolution: {integrity: sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==}
     dev: true
 
-  /hookified@1.14.0:
-    resolution: {integrity: sha512-pi1ynXIMFx/uIIwpWJ/5CEtOHLGtnUB0WhGeeYT+fKcQ+WCQbm3/rrkAXnpfph++PgepNqPdTC2WTj8A6k6zoQ==}
+  /hookified@1.15.0:
+    resolution: {integrity: sha512-51w+ZZGt7Zw5q7rM3nC4t3aLn/xvKDETsXqMczndvwyVQhAHfUmUuFBRFcos8Iyebtk7OAE9dL26wFNzZVVOkw==}
     dev: true
 
   /hosted-git-info@2.8.9:
@@ -7109,11 +7109,11 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /qified@0.5.3:
-    resolution: {integrity: sha512-kXuQdQTB6oN3KhI6V4acnBSZx8D2I4xzZvn9+wFLLFCoBNQY/sFnCW6c43OL7pOQ2HvGV4lnWIXNmgfp7cTWhQ==}
+  /qified@0.6.0:
+    resolution: {integrity: sha512-tsSGN1x3h569ZSU1u6diwhltLyfUWDp3YbFHedapTmpBl0B3P6U3+Qptg7xu+v+1io1EwhdPyyRHYbEw0KN2FA==}
     engines: {node: '>=20'}
     dependencies:
-      hookified: 1.14.0
+      hookified: 1.15.0
     dev: true
 
   /qrcode@1.5.4:
@@ -7997,27 +7997,27 @@ packages:
       postcss-selector-parser: 6.1.2
     dev: true
 
-  /stylelint-config-prettier@9.0.5(stylelint@17.0.0):
+  /stylelint-config-prettier@9.0.5(stylelint@17.1.0):
     resolution: {integrity: sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==}
     engines: {node: '>= 12'}
     hasBin: true
     peerDependencies:
       stylelint: '>= 11.x < 15'
     dependencies:
-      stylelint: 17.0.0
+      stylelint: 17.1.0
     dev: true
 
-  /stylelint-config-recess-order@7.6.0(stylelint-order@7.0.0)(stylelint@17.0.0):
+  /stylelint-config-recess-order@7.6.0(stylelint-order@7.0.0)(stylelint@17.1.0):
     resolution: {integrity: sha512-c3LXX4a8UEtrMD/KigK4I7LFexbM2p/eSTqnix5dmmvydEqX3dzrRt981h8giSEhA51vxdCEefQc3umH60i2bA==}
     peerDependencies:
       stylelint: ^16.18.0 || ^17.0.0
       stylelint-order: ^7.0.0
     dependencies:
-      stylelint: 17.0.0
-      stylelint-order: 7.0.0(stylelint@17.0.0)
+      stylelint: 17.1.0
+      stylelint-order: 7.0.0(stylelint@17.1.0)
     dev: true
 
-  /stylelint-order@7.0.0(stylelint@17.0.0):
+  /stylelint-order@7.0.0(stylelint@17.1.0):
     resolution: {integrity: sha512-rSWxx0KscYfxU02wEskKXES9lkRzuuONMMNkZ7SUc6uiF3tDKm7e+sE0Ax/SBlG4TUf1sp1R6f3/SlsPGmzthg==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
@@ -8025,11 +8025,11 @@ packages:
     dependencies:
       postcss: 8.5.6
       postcss-sorting: 9.1.0(postcss@8.5.6)
-      stylelint: 17.0.0
+      stylelint: 17.1.0
     dev: true
 
-  /stylelint@17.0.0:
-    resolution: {integrity: sha512-saMZ2mqdQre4AfouxcbTdpVglDRcROb4MIucKHvgsDb/0IX7ODhcaz+EOIyfxAsm8Zjl/7j4hJj6MgIYYM8Xwg==}
+  /stylelint@17.1.0:
+    resolution: {integrity: sha512-+cUX1FxkkbLX5qJRAPapUv/+v+YU3pGbWu+pHVqTXpiY0mYh3Dxfxa0bLBtVtYgOC8hIWIyX2H/3Y3LWlAevDg==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     dependencies:
@@ -8047,7 +8047,7 @@ packages:
       debug: 4.4.3
       fast-glob: 3.3.3
       fastest-levenshtein: 1.0.16
-      file-entry-cache: 11.1.1
+      file-entry-cache: 11.1.2
       global-modules: 2.0.0
       globby: 16.1.0
       globjoin: 0.1.4
