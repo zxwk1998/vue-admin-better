@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.13.4
     version: 1.13.4
   caniuse-lite:
-    specifier: ^1.0.30001766
-    version: 1.0.30001766
+    specifier: ^1.0.30001767
+    version: 1.0.30001767
   clipboard:
     specifier: ^2.0.11
     version: 2.0.11
@@ -119,8 +119,8 @@ devDependencies:
     specifier: ^11.3.3
     version: 11.3.3
   html-rspack-plugin:
-    specifier: ^6.1.6
-    version: 6.1.6(@rspack/core@1.7.4)
+    specifier: ^6.1.7
+    version: 6.1.7(@rspack/core@1.7.4)
   lint-staged:
     specifier: ^16.2.7
     version: 16.2.7
@@ -2957,7 +2957,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.28.1
-      caniuse-lite: 1.0.30001766
+      caniuse-lite: 1.0.30001767
       fraction.js: 5.3.4
       picocolors: 1.1.1
       postcss: 8.5.6
@@ -3207,7 +3207,7 @@ packages:
     hasBin: true
     dependencies:
       baseline-browser-mapping: 2.9.7
-      caniuse-lite: 1.0.30001766
+      caniuse-lite: 1.0.30001767
       electron-to-chromium: 1.5.267
       node-releases: 2.0.27
       update-browserslist-db: 1.2.2(browserslist@4.28.1)
@@ -3302,13 +3302,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.28.1
-      caniuse-lite: 1.0.30001766
+      caniuse-lite: 1.0.30001767
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite@1.0.30001766:
-    resolution: {integrity: sha512-4C0lfJ0/YPjJQHagaE9x2Elb69CIqEPZeG0anQt9SIvIoOH4a4uaRl73IavyO+0qZh6MDLH//DrXThEYKHkmYA==}
+  /caniuse-lite@1.0.30001767:
+    resolution: {integrity: sha512-34+zUAMhSH+r+9eKmYG+k2Rpt8XttfE4yXAjoZvkAPs15xcYQhyBYdalJ65BzivAvGRMViEjy6oKr/S91loekQ==}
 
   /case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
@@ -5250,8 +5250,8 @@ packages:
       terser: 5.44.1
     dev: true
 
-  /html-rspack-plugin@6.1.6(@rspack/core@1.7.4):
-    resolution: {integrity: sha512-7lz7xj2uqignH/kVcb2IN26FqRzeSf/Wlkn+T5b1xOMBq2fpnLeYiNhmIm51Izoh4bbuNqbUTvahRVdB0feVmg==}
+  /html-rspack-plugin@6.1.7(@rspack/core@1.7.4):
+    resolution: {integrity: sha512-T7vDfK/DChMvgy4ACyY26q2nKRjKlq7leysYu2Bq58/FXFbTsFDfWwKn+zd+0Yyf+wCaBj+umveUO+1MvHBRdQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       '@rspack/core': ^1.0.0 || ^2.0.0-0
