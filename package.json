@@ -52,8 +52,8 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@rspack/cli": "^1.7.5",
-    "@rspack/core": "^1.7.5",
+    "@rspack/cli": "^1.7.6",
+    "@rspack/core": "^1.7.6",
     "@rspack/dev-server": "^1.2.1",
     "@vue/cli-plugin-babel": "^5.0.8",
     "archiver": "^7.0.1",
@@ -74,7 +74,7 @@
     "sass": "~1.32.13",
     "sass-loader": "^10.1.1",
     "style-loader": "^4.0.0",
-    "stylelint": "^17.1.1",
+    "stylelint": "^17.2.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recess-order": "^7.6.1",
     "vue-loader": "15.9.8",
