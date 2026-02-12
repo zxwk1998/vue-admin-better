@@ -36,8 +36,8 @@ dependencies:
     specifier: ^4.17.23
     version: 4.17.23
   marked:
-    specifier: ^17.0.1
-    version: 17.0.1
+    specifier: ^17.0.2
+    version: 17.0.2
   mockjs:
     specifier: ^1.1.0
     version: 1.1.0
@@ -48,14 +48,14 @@ dependencies:
     specifier: ^1.5.4
     version: 1.5.4
   qs:
-    specifier: ^6.14.1
-    version: 6.14.1
+    specifier: ^6.14.2
+    version: 6.14.2
   screenfull:
     specifier: ^5.2.0
     version: 5.2.0
   sortablejs:
-    specifier: ^1.15.6
-    version: 1.15.6
+    specifier: ^1.15.7
+    version: 1.15.7
   vab-icon:
     specifier: file:vab-icon
     version: file:vab-icon
@@ -3155,7 +3155,7 @@ packages:
       http-errors: 2.0.1
       iconv-lite: 0.4.24
       on-finished: 2.4.1
-      qs: 6.14.1
+      qs: 6.14.2
       raw-body: 2.5.3
       type-is: 1.6.18
       unpipe: 1.0.0
@@ -3173,7 +3173,7 @@ packages:
       http-errors: 2.0.1
       iconv-lite: 0.7.1
       on-finished: 2.4.1
-      qs: 6.14.1
+      qs: 6.14.2
       raw-body: 3.0.2
       type-is: 2.0.1
     transitivePeerDependencies:
@@ -4712,7 +4712,7 @@ packages:
       parseurl: 1.3.3
       path-to-regexp: 0.1.12
       proxy-addr: 2.0.7
-      qs: 6.14.1
+      qs: 6.14.2
       range-parser: 1.2.1
       safe-buffer: 5.2.1
       send: 0.19.1
@@ -5998,8 +5998,8 @@ packages:
       semver: 6.3.1
     dev: true
 
-  /marked@17.0.1:
-    resolution: {integrity: sha512-boeBdiS0ghpWcSwoNm/jJBwdpFaMnZWRzjA6SkUMYb40SVaN1x7mmfGKp0jvexGcx+7y2La5zRZsYFZI6Qpypg==}
+  /marked@17.0.2:
+    resolution: {integrity: sha512-s5HZGFQea7Huv5zZcAGhJLT3qLpAfnY7v7GWkICUr0+Wd5TFEtdlRR2XUL5Gg+RH7u2Df595ifrxR03mBaw7gA==}
     engines: {node: '>= 20'}
     hasBin: true
     dev: false
@@ -7136,8 +7136,8 @@ packages:
       yargs: 15.4.1
     dev: false
 
-  /qs@6.14.1:
-    resolution: {integrity: sha512-4EK3+xJl8Ts67nLYNwqw/dsFVnCf+qR7RgXSK9jEEm9unao3njwMDdmsdvoKBKHzxd7tCYz5e5M+SnMjdtXGQQ==}
+  /qs@6.14.2:
+    resolution: {integrity: sha512-V/yCWTTF7VJ9hIh18Ugr2zhJMP01MY7c5kh4J870L7imm6/DIzBsNLTXzMwUA3yZ5b/KBqLx8Kp3uRvd7xSe3Q==}
     engines: {node: '>=0.6'}
     dependencies:
       side-channel: 1.1.0
@@ -7764,8 +7764,8 @@ packages:
       websocket-driver: 0.7.4
     dev: true
 
-  /sortablejs@1.15.6:
-    resolution: {integrity: sha512-aNfiuwMEpfBM/CN6LY0ibyhxPfPbyFeBTYJKCvzkJ2GkUpazIt3H+QIPAMHwqQ7tMKaHz1Qj+rJJCqljnf4p3A==}
+  /sortablejs@1.15.7:
+    resolution: {integrity: sha512-Kk8wLQPlS+yi1ZEf48a4+fzHa4yxjC30M/Sr2AnQu+f/MPwvvX9XjZ6OWejiz8crBsLwSq8GHqaxaET7u6ux0A==}
     dev: false
 
   /source-map-js@1.2.1:
