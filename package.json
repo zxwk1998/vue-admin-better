@@ -74,7 +74,7 @@
     "sass": "~1.32.13",
     "sass-loader": "^10.1.1",
     "style-loader": "^4.0.0",
-    "stylelint": "^17.2.0",
+    "stylelint": "^17.3.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recess-order": "^7.6.1",
     "vue-loader": "15.9.8",

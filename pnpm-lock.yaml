@@ -140,14 +140,14 @@ devDependencies:
     specifier: ^4.0.0
     version: 4.0.0(webpack@5.103.0)
   stylelint:
-    specifier: ^17.2.0
-    version: 17.2.0
+    specifier: ^17.3.0
+    version: 17.3.0
   stylelint-config-prettier:
     specifier: ^9.0.5
-    version: 9.0.5(stylelint@17.2.0)
+    version: 9.0.5(stylelint@17.3.0)
   stylelint-config-recess-order:
     specifier: ^7.6.1
-    version: 7.6.1(stylelint-order@7.0.0)(stylelint@17.2.0)
+    version: 7.6.1(stylelint-order@7.0.0)(stylelint@17.3.0)
   vue-loader:
     specifier: 15.9.8
     version: 15.9.8(css-loader@7.1.3)(lodash@4.17.23)(vue-template-compiler@2.7.16)(webpack@5.103.0)
@@ -1311,8 +1311,8 @@ packages:
       keyv: 5.5.5
     dev: true
 
-  /@csstools/css-calc@3.0.1(@csstools/css-parser-algorithms@4.0.0)(@csstools/css-tokenizer@4.0.0):
-    resolution: {integrity: sha512-bsDKIP6f4ta2DO9t+rAbSSwv4EMESXy5ZIvzQl1afmD6Z1XHkVu9ijcG9QR/qSgQS1dVa+RaQ/MfQ7FIB/Dn1Q==}
+  /@csstools/css-calc@3.1.1(@csstools/css-parser-algorithms@4.0.0)(@csstools/css-tokenizer@4.0.0):
+    resolution: {integrity: sha512-HJ26Z/vmsZQqs/o3a6bgKslXGFAungXGbinULZO3eMsOyNJHeBBZfup5FiZInOghgoM4Hwnmw+OgbJCNg1wwUQ==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       '@csstools/css-parser-algorithms': ^4.0.0
@@ -7933,6 +7933,14 @@ packages:
       strip-ansi: 7.1.2
     dev: true
 
+  /string-width@8.1.1:
+    resolution: {integrity: sha512-KpqHIdDL9KwYk22wEOg/VIqYbrnLeSApsKT/bSj6Ez7pn3CftUiLAv2Lccpq1ALcpLV9UX1Ppn92npZWu2w/aw==}
+    engines: {node: '>=20'}
+    dependencies:
+      get-east-asian-width: 1.4.0
+      strip-ansi: 7.1.2
+    dev: true
+
   /string_decoder@1.1.1:
     resolution: {integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==}
     dependencies:
@@ -8007,27 +8015,27 @@ packages:
       postcss-selector-parser: 6.1.2
     dev: true
 
-  /stylelint-config-prettier@9.0.5(stylelint@17.2.0):
+  /stylelint-config-prettier@9.0.5(stylelint@17.3.0):
     resolution: {integrity: sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==}
     engines: {node: '>= 12'}
     hasBin: true
     peerDependencies:
       stylelint: '>= 11.x < 15'
     dependencies:
-      stylelint: 17.2.0
+      stylelint: 17.3.0
     dev: true
 
-  /stylelint-config-recess-order@7.6.1(stylelint-order@7.0.0)(stylelint@17.2.0):
+  /stylelint-config-recess-order@7.6.1(stylelint-order@7.0.0)(stylelint@17.3.0):
     resolution: {integrity: sha512-ac0H/Iy2chh1YBADrua87G+nJCmG/SdG7gjnoLvtfpN0D+RuNfuADawfbCKvm0LMp5hvuRFNkJsu6xNoLM5ToA==}
     peerDependencies:
       stylelint: ^16.18.0 || ^17.0.0
       stylelint-order: ^7.0.0
     dependencies:
-      stylelint: 17.2.0
-      stylelint-order: 7.0.0(stylelint@17.2.0)
+      stylelint: 17.3.0
+      stylelint-order: 7.0.0(stylelint@17.3.0)
     dev: true
 
-  /stylelint-order@7.0.0(stylelint@17.2.0):
+  /stylelint-order@7.0.0(stylelint@17.3.0):
     resolution: {integrity: sha512-rSWxx0KscYfxU02wEskKXES9lkRzuuONMMNkZ7SUc6uiF3tDKm7e+sE0Ax/SBlG4TUf1sp1R6f3/SlsPGmzthg==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
@@ -8035,15 +8043,15 @@ packages:
     dependencies:
       postcss: 8.5.6
       postcss-sorting: 9.1.0(postcss@8.5.6)
-      stylelint: 17.2.0
+      stylelint: 17.3.0
     dev: true
 
-  /stylelint@17.2.0:
-    resolution: {integrity: sha512-602jhMkRt6P1dSh9kEzbFIaOKY//h4D0E7u/w2WHKxmi5VAjjMqe6P8rQPJuCWdbB3apOkjOFN5kcg6qWPIZWQ==}
+  /stylelint@17.3.0:
+    resolution: {integrity: sha512-1POV91lcEMhj6SLVaOeA0KlS9yattS+qq+cyWqP/nYzWco7K5jznpGH1ExngvPlTM9QF1Kjd2bmuzJu9TH2OcA==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     dependencies:
-      '@csstools/css-calc': 3.0.1(@csstools/css-parser-algorithms@4.0.0)(@csstools/css-tokenizer@4.0.0)
+      '@csstools/css-calc': 3.1.1(@csstools/css-parser-algorithms@4.0.0)(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-parser-algorithms': 4.0.0(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-syntax-patches-for-csstree': 1.0.27
       '@csstools/css-tokenizer': 4.0.0
@@ -8077,7 +8085,7 @@ packages:
       postcss-safe-parser: 7.0.1(postcss@8.5.6)
       postcss-selector-parser: 7.1.1
       postcss-value-parser: 4.2.0
-      string-width: 8.1.0
+      string-width: 8.1.1
       supports-hyperlinks: 4.4.0
       svg-tags: 1.0.0
       table: 6.9.0
