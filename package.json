@@ -38,7 +38,7 @@
     "jsencrypt": "^3.5.4",
     "layouts": "file:layouts",
     "lodash": "^4.17.23",
-    "marked": "^17.0.2",
+    "marked": "^17.0.3",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "qrcode": "^1.5.4",
