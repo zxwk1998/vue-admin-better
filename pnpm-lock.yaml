@@ -36,8 +36,8 @@ dependencies:
     specifier: ^4.17.23
     version: 4.17.23
   marked:
-    specifier: ^17.0.3
-    version: 17.0.3
+    specifier: ^17.0.4
+    version: 17.0.4
   mockjs:
     specifier: ^1.1.0
     version: 1.1.0
@@ -5994,8 +5994,8 @@ packages:
       semver: 6.3.1
     dev: true
 
-  /marked@17.0.3:
-    resolution: {integrity: sha512-jt1v2ObpyOKR8p4XaUJVk3YWRJ5n+i4+rjQopxvV32rSndTJXvIzuUdWWIy/1pFQMkQmvTXawzDNqOH/CUmx6A==}
+  /marked@17.0.4:
+    resolution: {integrity: sha512-NOmVMM+KAokHMvjWmC5N/ZOvgmSWuqJB8FoYI019j4ogb/PeRMKoKIjReZ2w3376kkA8dSJIP8uD993Kxc0iRQ==}
     engines: {node: '>= 20'}
     hasBin: true
     dev: false
