@@ -92,8 +92,8 @@ devDependencies:
     specifier: ^10.1.0
     version: 10.1.0(eslint@6.8.0)
   babel-loader:
-    specifier: ^10.1.0
-    version: 10.1.0(@babel/core@7.28.5)(@rspack/core@1.7.7)(webpack@5.103.0)
+    specifier: ^10.1.1
+    version: 10.1.1(@babel/core@7.28.5)(@rspack/core@1.7.7)(webpack@5.103.0)
   body-parser:
     specifier: ^2.2.2
     version: 2.2.2
@@ -3015,8 +3015,8 @@ packages:
     resolution: {integrity: sha512-gsLiKK7Qrb7zYJNgiXKpXblxbV5ffSwR0f5whkPAaBAR4fhi6bwRZxX9wBlIc5M/v8CCkXUbXZL4N/nSE97cqg==}
     dev: false
 
-  /babel-loader@10.1.0(@babel/core@7.28.5)(@rspack/core@1.7.7)(webpack@5.103.0):
-    resolution: {integrity: sha512-5HTUZa013O4SWEYlJDHexrqSIYkWatfA9w/ZZQa7V2nMc0dRWkfu/0pmioC7XMYm8M7Z/3+q42NWj6e+fAT0MQ==}
+  /babel-loader@10.1.1(@babel/core@7.28.5)(@rspack/core@1.7.7)(webpack@5.103.0):
+    resolution: {integrity: sha512-JwKSzk2kjIe7mgPK+/lyZ2QAaJcpahNAdM+hgR2HI8D0OJVkdj8Rl6J3kaLYki9pwF7P2iWnD8qVv80Lq1ABtg==}
     engines: {node: ^18.20.0 || ^20.10.0 || >=22.0.0}
     peerDependencies:
       '@babel/core': ^7.12.0 || ^8.0.0-beta.1
