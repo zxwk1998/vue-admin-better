@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "axios": "^1.13.6",
-    "caniuse-lite": "^1.0.30001779",
+    "caniuse-lite": "^1.0.30001780",
     "clipboard": "^2.0.11",
     "core-js": "^3.49.0",
     "dayjs": "^1.11.20",
@@ -52,8 +52,8 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@rspack/cli": "^1.7.8",
-    "@rspack/core": "^1.7.8",
+    "@rspack/cli": "^1.7.9",
+    "@rspack/core": "^1.7.9",
     "@rspack/dev-server": "^1.2.1",
     "@vue/cli-plugin-babel": "^5.0.8",
     "archiver": "^7.0.1",
@@ -76,7 +76,7 @@
     "style-loader": "^4.0.0",
     "stylelint": "^17.4.0",
     "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-recess-order": "^7.6.1",
+    "stylelint-config-recess-order": "^7.7.0",
     "vue-loader": "15.9.8",
     "vue-template-compiler": "~2.7.14"
   },
