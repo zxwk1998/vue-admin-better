@@ -119,8 +119,8 @@ devDependencies:
     specifier: ^11.3.4
     version: 11.3.4
   html-rspack-plugin:
-    specifier: ^6.1.7
-    version: 6.1.7(@rspack/core@1.7.10)
+    specifier: ^6.1.8
+    version: 6.1.8(@rspack/core@1.7.10)
   lint-staged:
     specifier: ^16.4.0
     version: 16.4.0
@@ -140,14 +140,14 @@ devDependencies:
     specifier: ^4.0.0
     version: 4.0.0(webpack@5.103.0)
   stylelint:
-    specifier: ^17.5.0
-    version: 17.5.0
+    specifier: ^17.6.0
+    version: 17.6.0
   stylelint-config-prettier:
     specifier: ^9.0.5
-    version: 9.0.5(stylelint@17.5.0)
+    version: 9.0.5(stylelint@17.6.0)
   stylelint-config-recess-order:
     specifier: ^7.7.0
-    version: 7.7.0(stylelint-order@7.0.0)(stylelint@17.5.0)
+    version: 7.7.0(stylelint-order@7.0.0)(stylelint@17.6.0)
   vue-loader:
     specifier: 15.9.8
     version: 15.9.8(css-loader@7.1.4)(lodash@4.17.23)(vue-template-compiler@2.7.16)(webpack@5.103.0)
@@ -2499,7 +2499,7 @@ packages:
       '@vue/shared': 3.5.25
       estree-walker: 2.0.2
       magic-string: 0.30.21
-      postcss: 8.5.6
+      postcss: 8.5.8
       source-map-js: 1.2.1
     dev: true
 
@@ -5280,9 +5280,9 @@ packages:
       terser: 5.44.1
     dev: true
 
-  /html-rspack-plugin@6.1.7(@rspack/core@1.7.10):
-    resolution: {integrity: sha512-T7vDfK/DChMvgy4ACyY26q2nKRjKlq7leysYu2Bq58/FXFbTsFDfWwKn+zd+0Yyf+wCaBj+umveUO+1MvHBRdQ==}
-    engines: {node: '>=16.0.0'}
+  /html-rspack-plugin@6.1.8(@rspack/core@1.7.10):
+    resolution: {integrity: sha512-lvcM0D7Bx0V4KI3Ixi5TDoAejtaj0/cGm2NczwsCTvk76rZt2DDIJwAkwfBQkK0j1PNeNTdvvUc1Zekamc8gpQ==}
+    engines: {node: '>=16.20.2'}
     peerDependencies:
       '@rspack/core': ^1.0.0 || ^2.0.0-0
     peerDependenciesMeta:
@@ -8090,27 +8090,27 @@ packages:
       postcss-selector-parser: 6.1.2
     dev: true
 
-  /stylelint-config-prettier@9.0.5(stylelint@17.5.0):
+  /stylelint-config-prettier@9.0.5(stylelint@17.6.0):
     resolution: {integrity: sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==}
     engines: {node: '>= 12'}
     hasBin: true
     peerDependencies:
       stylelint: '>= 11.x < 15'
     dependencies:
-      stylelint: 17.5.0
+      stylelint: 17.6.0
     dev: true
 
-  /stylelint-config-recess-order@7.7.0(stylelint-order@7.0.0)(stylelint@17.5.0):
+  /stylelint-config-recess-order@7.7.0(stylelint-order@7.0.0)(stylelint@17.6.0):
     resolution: {integrity: sha512-TWRkg+BrwHOki4pi9y1emWgx6pFwZXOYZhNsbEObke/mzYUJVJvDEzJJQXhH7ajslQJGcrExy8ZvJqDiUbhFpA==}
     peerDependencies:
       stylelint: ^16.18.0 || ^17.0.0
       stylelint-order: ^7.0.0 || ^8.0.0
     dependencies:
-      stylelint: 17.5.0
-      stylelint-order: 7.0.0(stylelint@17.5.0)
+      stylelint: 17.6.0
+      stylelint-order: 7.0.0(stylelint@17.6.0)
     dev: true
 
-  /stylelint-order@7.0.0(stylelint@17.5.0):
+  /stylelint-order@7.0.0(stylelint@17.6.0):
     resolution: {integrity: sha512-rSWxx0KscYfxU02wEskKXES9lkRzuuONMMNkZ7SUc6uiF3tDKm7e+sE0Ax/SBlG4TUf1sp1R6f3/SlsPGmzthg==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
@@ -8118,11 +8118,11 @@ packages:
     dependencies:
       postcss: 8.5.8
       postcss-sorting: 9.1.0(postcss@8.5.8)
-      stylelint: 17.5.0
+      stylelint: 17.6.0
     dev: true
 
-  /stylelint@17.5.0:
-    resolution: {integrity: sha512-o/NS6zhsPZFmgUm5tXX4pVNg1XDOZSlucLdf2qow/lVn4JIyzZIQ5b3kad1ugqUj3GSIgr2u5lQw7X8rjqw33g==}
+  /stylelint@17.6.0:
+    resolution: {integrity: sha512-tokrsMIVAR9vAQ/q3UVEr7S0dGXCi7zkCezPRnS2kqPUulvUh5Vgfwngrk4EoAoW7wnrThqTdnTFN5Ra7CaxIg==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     dependencies:
@@ -8147,7 +8147,6 @@ packages:
       html-tags: 5.1.0
       ignore: 7.0.5
       import-meta-resolve: 4.2.0
-      imurmurhash: 0.1.4
       is-plain-object: 5.0.0
       mathml-tag-names: 4.0.0
       meow: 14.1.0
@@ -8162,7 +8161,7 @@ packages:
       supports-hyperlinks: 4.4.0
       svg-tags: 1.0.0
       table: 6.9.0
-      write-file-atomic: 7.0.0
+      write-file-atomic: 7.0.1
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -9177,11 +9176,10 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
 
-  /write-file-atomic@7.0.0:
-    resolution: {integrity: sha512-YnlPC6JqnZl6aO4uRc+dx5PHguiR9S6WeoLtpxNT9wIG+BDya7ZNE1q7KOjVgaA73hKhKLpVPgJ5QA9THQ5BRg==}
+  /write-file-atomic@7.0.1:
+    resolution: {integrity: sha512-OTIk8iR8/aCRWBqvxrzxR0hgxWpnYBblY1S5hDWBQfk/VFmJwzmJgQFN3WsoUKHISv2eAwe+PpbUzyL1CKTLXg==}
     engines: {node: ^20.17.0 || >=22.9.0}
     dependencies:
-      imurmurhash: 0.1.4
       signal-exit: 4.1.0
     dev: true
 
