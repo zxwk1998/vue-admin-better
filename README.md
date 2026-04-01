@@ -1,3 +1,8 @@
+# This repo has potentially been compromised during the Axios compromise on March 31, 2026.
+### Please see https://github.com/6mile/vue-admin-better/blob/master/pnpm-lock.yaml
+
+### Read more at https://opensourcemalware.com/blog/axios-compromised
+
 <div align="center">
   <img width="200" src="https://assets.rspack.rs/rspack/rspack-logo.svg"/>
   <h1>Vue Admin Better</h1>
