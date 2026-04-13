@@ -140,14 +140,14 @@ devDependencies:
     specifier: ^4.0.0
     version: 4.0.0(webpack@5.105.4)
   stylelint:
-    specifier: ^17.6.0
-    version: 17.6.0
+    specifier: ^17.7.0
+    version: 17.7.0
   stylelint-config-prettier:
     specifier: ^9.0.5
-    version: 9.0.5(stylelint@17.6.0)
+    version: 9.0.5(stylelint@17.7.0)
   stylelint-config-recess-order:
     specifier: ^7.7.0
-    version: 7.7.0(stylelint-order@8.1.1)(stylelint@17.6.0)
+    version: 7.7.0(stylelint-order@8.1.1)(stylelint@17.7.0)
   vue-loader:
     specifier: 15.9.8
     version: 15.9.8(css-loader@7.1.4)(lodash@4.18.1)(vue-template-compiler@2.7.16)(webpack@5.105.4)
@@ -8222,27 +8222,27 @@ packages:
       postcss-selector-parser: 6.1.2
     dev: true
 
-  /stylelint-config-prettier@9.0.5(stylelint@17.6.0):
+  /stylelint-config-prettier@9.0.5(stylelint@17.7.0):
     resolution: {integrity: sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==}
     engines: {node: '>= 12'}
     hasBin: true
     peerDependencies:
       stylelint: '>= 11.x < 15'
     dependencies:
-      stylelint: 17.6.0
+      stylelint: 17.7.0
     dev: true
 
-  /stylelint-config-recess-order@7.7.0(stylelint-order@8.1.1)(stylelint@17.6.0):
+  /stylelint-config-recess-order@7.7.0(stylelint-order@8.1.1)(stylelint@17.7.0):
     resolution: {integrity: sha512-TWRkg+BrwHOki4pi9y1emWgx6pFwZXOYZhNsbEObke/mzYUJVJvDEzJJQXhH7ajslQJGcrExy8ZvJqDiUbhFpA==}
     peerDependencies:
       stylelint: ^16.18.0 || ^17.0.0
       stylelint-order: ^7.0.0 || ^8.0.0
     dependencies:
-      stylelint: 17.6.0
-      stylelint-order: 8.1.1(stylelint@17.6.0)
+      stylelint: 17.7.0
+      stylelint-order: 8.1.1(stylelint@17.7.0)
     dev: true
 
-  /stylelint-order@8.1.1(stylelint@17.6.0):
+  /stylelint-order@8.1.1(stylelint@17.7.0):
     resolution: {integrity: sha512-LqsEB6VggJuu5v10RtkrQsBObcdwBE7GuAOlwfc/LR3VL/w8UqKX2BOLIjhyGt0Gne/njo7gRNGiJAKhfmPMNw==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
@@ -8250,11 +8250,11 @@ packages:
     dependencies:
       postcss: 8.5.8
       postcss-sorting: 10.0.0(postcss@8.5.8)
-      stylelint: 17.6.0
+      stylelint: 17.7.0
     dev: true
 
-  /stylelint@17.6.0:
-    resolution: {integrity: sha512-tokrsMIVAR9vAQ/q3UVEr7S0dGXCi7zkCezPRnS2kqPUulvUh5Vgfwngrk4EoAoW7wnrThqTdnTFN5Ra7CaxIg==}
+  /stylelint@17.7.0:
+    resolution: {integrity: sha512-n/+4RheCRl+cecGnF+S/Adz59iCRaK9BVznJYB+a7GOksfwNzjiOPnYv17pTO0HgRse9IiqbMtekGNhOb2tVYQ==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     dependencies:
