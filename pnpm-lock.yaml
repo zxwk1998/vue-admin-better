@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   axios:
-    specifier: ^1.15.1
-    version: 1.15.1
+    specifier: ^1.15.2
+    version: 1.15.2
   caniuse-lite:
     specifier: ^1.0.30001788
     version: 1.0.30001788
@@ -3123,8 +3123,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /axios@1.15.1:
-    resolution: {integrity: sha512-WOG+Jj8ZOvR0a3rAn+Tuf1UQJRxw5venr6DgdbJzngJE3qG7X0kL83CZGpdHMxEm+ZK3seAbvFsw4FfOfP9vxg==}
+  /axios@1.15.2:
+    resolution: {integrity: sha512-wLrXxPtcrPTsNlJmKjkPnNPK2Ihe0hn0wGSaTEiHRPxwjvJwT3hKmXF4dpqxmPO9SoNb2FsYXj/xEo0gHN+D5A==}
     dependencies:
       follow-redirects: 1.15.11(debug@4.4.3)
       form-data: 4.0.5
