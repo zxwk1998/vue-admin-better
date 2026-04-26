@@ -75,13 +75,13 @@ dependencies:
 devDependencies:
   '@rspack/cli':
     specifier: ^2.0.0
-    version: 2.0.0(@rspack/core@2.0.0)(@rspack/dev-server@2.0.0)
+    version: 2.0.0(@rspack/core@2.0.0)(@rspack/dev-server@2.0.1)
   '@rspack/core':
     specifier: ^2.0.0
     version: 2.0.0
   '@rspack/dev-server':
-    specifier: ^2.0.0
-    version: 2.0.0(@rspack/core@2.0.0)
+    specifier: ^2.0.1
+    version: 2.0.1(@rspack/core@2.0.0)
   '@vue/cli-plugin-babel':
     specifier: ^5.0.8
     version: 5.0.9(@vue/cli-service@5.0.9)(core-js@3.49.0)(vue@2.7.16)
@@ -1644,7 +1644,7 @@ packages:
       '@rspack/binding-win32-x64-msvc': 2.0.0
     dev: true
 
-  /@rspack/cli@2.0.0(@rspack/core@2.0.0)(@rspack/dev-server@2.0.0):
+  /@rspack/cli@2.0.0(@rspack/core@2.0.0)(@rspack/dev-server@2.0.1):
     resolution: {integrity: sha512-drBB/biz6NHvjEqKLRzJmdPTn/6rg1TLLOY1o7lOySA1nLYoao5h+33TFRCKwpioEigpdAldw35crCLlQ/GHbQ==}
     hasBin: true
     peerDependencies:
@@ -1655,7 +1655,7 @@ packages:
         optional: true
     dependencies:
       '@rspack/core': 2.0.0
-      '@rspack/dev-server': 2.0.0(@rspack/core@2.0.0)
+      '@rspack/dev-server': 2.0.1(@rspack/core@2.0.0)
     dev: true
 
   /@rspack/core@2.0.0:
@@ -1685,8 +1685,8 @@ packages:
       '@rspack/core': 2.0.0
     dev: true
 
-  /@rspack/dev-server@2.0.0(@rspack/core@2.0.0):
-    resolution: {integrity: sha512-bSdIlt8Nq1Q2K0Gv+AMmETMKsLjEgTtL8DNlDtSe14cdtBrF0Z8kfpKUpgUKb5i0O7CZ5pmPzVwHZIEqMrCJNQ==}
+  /@rspack/dev-server@2.0.1(@rspack/core@2.0.0):
+    resolution: {integrity: sha512-N5sIdU9v6WhwPH6Ek8QCj4IMvGd8jA3ZW1NMAyHP1ezzKIr2/idcNV2zX5vbC6FJvOLRLww0rFjfKA+z4tshDA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       '@rspack/core': ^2.0.0-0
