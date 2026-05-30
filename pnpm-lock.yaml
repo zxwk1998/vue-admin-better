@@ -75,13 +75,13 @@ dependencies:
 devDependencies:
   '@rspack/cli':
     specifier: ^2.0.5
-    version: 2.0.5(@rspack/core@2.0.5)(@rspack/dev-server@2.0.2)
+    version: 2.0.5(@rspack/core@2.0.5)(@rspack/dev-server@2.0.3)
   '@rspack/core':
     specifier: ^2.0.5
     version: 2.0.5
   '@rspack/dev-server':
-    specifier: ^2.0.2
-    version: 2.0.2(@rspack/core@2.0.5)
+    specifier: ^2.0.3
+    version: 2.0.3(@rspack/core@2.0.5)
   '@vue/cli-plugin-babel':
     specifier: ^5.0.8
     version: 5.0.9(@vue/cli-service@5.0.9)(core-js@3.49.0)(vue@2.7.16)
@@ -119,8 +119,8 @@ devDependencies:
     specifier: ^11.3.5
     version: 11.3.5
   html-rspack-plugin:
-    specifier: ^6.1.8
-    version: 6.1.8(@rspack/core@2.0.5)
+    specifier: ^6.1.9
+    version: 6.1.9(@rspack/core@2.0.5)
   lint-staged:
     specifier: ^17.0.5
     version: 17.0.5
@@ -1625,7 +1625,7 @@ packages:
       '@rspack/binding-win32-x64-msvc': 2.0.5
     dev: true
 
-  /@rspack/cli@2.0.5(@rspack/core@2.0.5)(@rspack/dev-server@2.0.2):
+  /@rspack/cli@2.0.5(@rspack/core@2.0.5)(@rspack/dev-server@2.0.3):
     resolution: {integrity: sha512-AAyuY/8sfegb0IcsFEhn5gLOTxy1uDmwjP49RY81PENz2pCk/7NU0zDdt0ke5wmpOH5s6IxS+Kw4aWdvl8FGpQ==}
     hasBin: true
     peerDependencies:
@@ -1636,7 +1636,7 @@ packages:
         optional: true
     dependencies:
       '@rspack/core': 2.0.5
-      '@rspack/dev-server': 2.0.2(@rspack/core@2.0.5)
+      '@rspack/dev-server': 2.0.3(@rspack/core@2.0.5)
     dev: true
 
   /@rspack/core@2.0.5:
@@ -1666,8 +1666,8 @@ packages:
       '@rspack/core': 2.0.5
     dev: true
 
-  /@rspack/dev-server@2.0.2(@rspack/core@2.0.5):
-    resolution: {integrity: sha512-gE1FdeXtTX92t/5TIzOUxKV90UuyNfMT3PlSqrkGz7E0I3SbvnmLB0ewIJUEBA/up22m55rRxEG6jK9yajYCAw==}
+  /@rspack/dev-server@2.0.3(@rspack/core@2.0.5):
+    resolution: {integrity: sha512-S29nOxXQS9o+0uGNe7SgND2dAKnte5ZTD5tiT3/B4lKbviqpXD4tbH7NZWA3hGwlSkmOIbFlysYPL1bVHuBcSg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       '@rspack/core': ^2.0.0-0
@@ -5108,8 +5108,8 @@ packages:
       terser: 5.46.1
     dev: true
 
-  /html-rspack-plugin@6.1.8(@rspack/core@2.0.5):
-    resolution: {integrity: sha512-lvcM0D7Bx0V4KI3Ixi5TDoAejtaj0/cGm2NczwsCTvk76rZt2DDIJwAkwfBQkK0j1PNeNTdvvUc1Zekamc8gpQ==}
+  /html-rspack-plugin@6.1.9(@rspack/core@2.0.5):
+    resolution: {integrity: sha512-GWdHEsyXrP4b2SSCzJfYKO/+r6DkNBeJytk2VKQwlrFuKCeCneIXpY1Cty3uYgH7jsAuPKkR1I1Cr2sOeX5KBg==}
     engines: {node: '>=16.20.2'}
     peerDependencies:
       '@rspack/core': ^1.0.0 || ^2.0.0-0
