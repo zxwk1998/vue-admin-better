@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   axios:
-    specifier: ^1.18.0
-    version: 1.18.0
+    specifier: ^1.18.1
+    version: 1.18.1
   caniuse-lite:
     specifier: ^1.0.30001799
     version: 1.0.30001799
@@ -75,13 +75,13 @@ dependencies:
 devDependencies:
   '@rspack/cli':
     specifier: ^2.0.8
-    version: 2.0.8(@rspack/core@2.0.8)(@rspack/dev-server@2.0.3)
+    version: 2.0.8(@rspack/core@2.0.8)(@rspack/dev-server@2.1.0)
   '@rspack/core':
     specifier: ^2.0.8
     version: 2.0.8
   '@rspack/dev-server':
-    specifier: ^2.0.3
-    version: 2.0.3(@rspack/core@2.0.8)
+    specifier: ^2.1.0
+    version: 2.1.0(@rspack/core@2.0.8)
   '@vue/cli-plugin-babel':
     specifier: ^5.0.8
     version: 5.0.9(@vue/cli-service@5.0.9)(core-js@3.49.0)(vue@2.7.16)
@@ -1625,7 +1625,7 @@ packages:
       '@rspack/binding-win32-x64-msvc': 2.0.8
     dev: true
 
-  /@rspack/cli@2.0.8(@rspack/core@2.0.8)(@rspack/dev-server@2.0.3):
+  /@rspack/cli@2.0.8(@rspack/core@2.0.8)(@rspack/dev-server@2.1.0):
     resolution: {integrity: sha512-b7MrVE9kvCs8L7hhPdHR6AvQ5wyD3KeBYD+DZMynt+545rvJYnT11LVNjqQJqAYHrgBTmf+9CNPYmeJvEZesWw==}
     hasBin: true
     peerDependencies:
@@ -1636,7 +1636,7 @@ packages:
         optional: true
     dependencies:
       '@rspack/core': 2.0.8
-      '@rspack/dev-server': 2.0.3(@rspack/core@2.0.8)
+      '@rspack/dev-server': 2.1.0(@rspack/core@2.0.8)
     dev: true
 
   /@rspack/core@2.0.8:
@@ -1654,11 +1654,11 @@ packages:
       '@rspack/binding': 2.0.8
     dev: true
 
-  /@rspack/dev-middleware@2.0.1(@rspack/core@2.0.8):
-    resolution: {integrity: sha512-cXSubf5/C+dvkWV2/+rGTtiZ93wSLd3OlTQhwMvsmsmGDdPlkYqIvQ+BTkOk9UCXxKIaF0DDYYmCpBeRRYJfJw==}
+  /@rspack/dev-middleware@2.0.3(@rspack/core@2.0.8):
+    resolution: {integrity: sha512-GxnGj9jy76G3eCPyZei81fwKLAMLZaPEEqFz1/QDYquhwi/qYZX5fekFJ1XVpuwxGEK9KSX3hxZylfwrs4cmLA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
-      '@rspack/core': ^2.0.0-0
+      '@rspack/core': ^2.0.0
     peerDependenciesMeta:
       '@rspack/core':
         optional: true
@@ -1666,18 +1666,18 @@ packages:
       '@rspack/core': 2.0.8
     dev: true
 
-  /@rspack/dev-server@2.0.3(@rspack/core@2.0.8):
-    resolution: {integrity: sha512-S29nOxXQS9o+0uGNe7SgND2dAKnte5ZTD5tiT3/B4lKbviqpXD4tbH7NZWA3hGwlSkmOIbFlysYPL1bVHuBcSg==}
+  /@rspack/dev-server@2.1.0(@rspack/core@2.0.8):
+    resolution: {integrity: sha512-WkCi6bWThVX5Ziv04srPaRoCoUY5FJolO4gqzE7xPO0XbXShsGnwn0vGD0DFfnYFcw9VSsxlmeCDV799lNYclA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
-      '@rspack/core': ^2.0.0-0
+      '@rspack/core': ^2.0.0
       selfsigned: ^5.0.0
     peerDependenciesMeta:
       selfsigned:
         optional: true
     dependencies:
       '@rspack/core': 2.0.8
-      '@rspack/dev-middleware': 2.0.1(@rspack/core@2.0.8)
+      '@rspack/dev-middleware': 2.0.3(@rspack/core@2.0.8)
     dev: true
 
   /@rspack/lite-tapable@1.1.0:
@@ -2809,8 +2809,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /axios@1.18.0:
-    resolution: {integrity: sha512-E32NzpYKp++W7XRe52rHiXV2ehxmh3wbdgO7MHeFM+vqxLBYHzt0ElkiImtOBxtOmyp0yoC8C6uESVV84Y2/hw==}
+  /axios@1.18.1:
+    resolution: {integrity: sha512-3nTvFlvpn9Zu/RkHUqtc7/+al4UpRW5az71ap5zccp6e8RAYEzhMTecX8Dz1wWDYrPpUoB1HAQEGEAEvUr7S9g==}
     dependencies:
       follow-redirects: 1.16.0(debug@4.4.3)
       form-data: 4.0.5
