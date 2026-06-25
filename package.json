@@ -42,7 +42,7 @@
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "qrcode": "^1.5.4",
-    "qs": "^6.15.2",
+    "qs": "^6.15.3",
     "screenfull": "^5.2.0",
     "sortablejs": "^1.15.7",
     "vab-icon": "file:vab-icon",
