@@ -116,8 +116,8 @@ devDependencies:
     specifier: ^9.1.1
     version: 9.33.0(eslint@6.8.0)
   fs-extra:
-    specifier: ^11.3.6
-    version: 11.3.6
+    specifier: ^11.4.0
+    version: 11.4.0
   html-rspack-plugin:
     specifier: ^6.1.9
     version: 6.1.9(@rspack/core@2.1.5)
@@ -4783,8 +4783,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
-  /fs-extra@11.3.6:
-    resolution: {integrity: sha512-w8ZNZr2mKIc7qeNaQ9AVPT1+iFaI+Avd4xudVOvdDJ8VytREi1Ft5Ih7hd9jjehod8vAM5GMsfQ/TpPf4EyoEA==}
+  /fs-extra@11.4.0:
+    resolution: {integrity: sha512-EQsFzMUJkCKGr1ePqlYADkIUmHW1s3ZXr5Yqy6wbGrfUCphpl2maM/kyOIRA2HpP3AaFQTZXD4ldjek+nccddA==}
     engines: {node: '>=14.14'}
     dependencies:
       graceful-fs: 4.2.11
