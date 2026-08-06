@@ -15,8 +15,8 @@ dependencies:
     specifier: ^2.0.11
     version: 2.0.11
   core-js:
-    specifier: ^3.49.0
-    version: 3.49.0
+    specifier: ^3.50.0
+    version: 3.50.0
   dayjs:
     specifier: ^1.11.21
     version: 1.11.21
@@ -84,7 +84,7 @@ devDependencies:
     version: 2.2.0(@rspack/core@2.1.8)
   '@vue/cli-plugin-babel':
     specifier: ^5.0.8
-    version: 5.0.9(@vue/cli-service@5.0.9)(core-js@3.49.0)(vue@2.7.16)
+    version: 5.0.9(@vue/cli-service@5.0.9)(core-js@3.50.0)(vue@2.7.16)
   archiver:
     specifier: ^8.0.0
     version: 8.0.0
@@ -1966,7 +1966,7 @@ packages:
       - supports-color
     dev: true
 
-  /@vue/babel-preset-app@5.0.9(@babel/core@7.29.0)(core-js@3.49.0)(vue@2.7.16):
+  /@vue/babel-preset-app@5.0.9(@babel/core@7.29.0)(core-js@3.50.0)(vue@2.7.16):
     resolution: {integrity: sha512-0rKOF4s/AhaRMJLybxOCgXfwtYhO3pwDSL/q/W8wRs1LzmHAc77FyTXWlun6VyKiSKwSdtH7CvOiWqq+DfofdA==}
     peerDependencies:
       '@babel/core': '*'
@@ -1991,7 +1991,7 @@ packages:
       '@vue/babel-plugin-jsx': 1.5.0(@babel/core@7.29.0)
       '@vue/babel-preset-jsx': 1.4.0(@babel/core@7.29.0)(vue@2.7.16)
       babel-plugin-dynamic-import-node: 2.3.3
-      core-js: 3.49.0
+      core-js: 3.50.0
       core-js-compat: 3.49.0
       semver: 7.7.4
       vue: 2.7.16
@@ -2091,13 +2091,13 @@ packages:
     resolution: {integrity: sha512-aBdZWrYKxLuFz1FDsk/muFD7GycrsW73Gi11yRc7R2W7Bm8mDRc9HKAI790gdg4NV+chkDFmfkegjg5iMDEpAA==}
     dev: true
 
-  /@vue/cli-plugin-babel@5.0.9(@vue/cli-service@5.0.9)(core-js@3.49.0)(vue@2.7.16):
+  /@vue/cli-plugin-babel@5.0.9(@vue/cli-service@5.0.9)(core-js@3.50.0)(vue@2.7.16):
     resolution: {integrity: sha512-oDZt1Kfe4KGNtig3/3zFo2pIeDJij2uS0M6S+tAqQno4Zpla2D8Hk/AR5PrstUd/HmhHZYJoGyF78MOfj3SbWg==}
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
       '@babel/core': 7.29.0
-      '@vue/babel-preset-app': 5.0.9(@babel/core@7.29.0)(core-js@3.49.0)(vue@2.7.16)
+      '@vue/babel-preset-app': 5.0.9(@babel/core@7.29.0)(core-js@3.50.0)(vue@2.7.16)
       '@vue/cli-service': 5.0.9(@rspack/core@2.1.8)(lodash@4.18.1)(sass-loader@10.5.2)(vue-template-compiler@2.7.16)(vue@2.7.16)
       '@vue/cli-shared-utils': 5.0.9
       babel-loader: 8.4.1(@babel/core@7.29.0)(webpack@5.105.4)
@@ -3712,8 +3712,8 @@ packages:
     requiresBuild: true
     dev: false
 
-  /core-js@3.49.0:
-    resolution: {integrity: sha512-es1U2+YTtzpwkxVLwAFdSpaIMyQaq0PBgm3YD1W3Qpsn1NAmO3KSgZfu+oGSWVu6NvLHoHCV/aYcsE5wiB7ALg==}
+  /core-js@3.50.0:
+    resolution: {integrity: sha512-BRWgOLKkFeCgRudR6zrs8p9XJZcE14grzKMMssoYrk6krtuEZ7MTKPIY5RzOnqsEKIR9kst7wNzphttraT+Yqw==}
     requiresBuild: true
 
   /core-util-is@1.0.3:
