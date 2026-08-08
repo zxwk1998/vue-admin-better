@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.19.0
     version: 1.19.0
   caniuse-lite:
-    specifier: ^1.0.30001807
-    version: 1.0.30001807
+    specifier: ^1.0.30001809
+    version: 1.0.30001809
   clipboard:
     specifier: ^2.0.11
     version: 2.0.11
@@ -2808,7 +2808,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.28.2
-      caniuse-lite: 1.0.30001807
+      caniuse-lite: 1.0.30001809
       fraction.js: 5.3.4
       picocolors: 1.1.1
       postcss: 8.5.20
@@ -3138,7 +3138,7 @@ packages:
     hasBin: true
     dependencies:
       baseline-browser-mapping: 2.10.13
-      caniuse-lite: 1.0.30001807
+      caniuse-lite: 1.0.30001809
       electron-to-chromium: 1.5.331
       node-releases: 2.0.37
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
@@ -3226,13 +3226,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.28.2
-      caniuse-lite: 1.0.30001807
+      caniuse-lite: 1.0.30001809
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite@1.0.30001807:
-    resolution: {integrity: sha512-daRXJ9EB/rdRgu7kV+TTl1YUKtlsMWblPl2sLnpg9DZae16QCegol6A1SmCE31Lm9mXC1sRWGt/krouH+/dl7Q==}
+  /caniuse-lite@1.0.30001809:
+    resolution: {integrity: sha512-xxWVywk6a6Arlk+hymeycyn/VgqEfLDxupvhH/xiY5SJ/18kmi9o6MiO320DCUzypORHLtvh0I4i04tUhCNHNQ==}
 
   /case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
