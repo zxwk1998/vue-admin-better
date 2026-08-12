@@ -10,6 +10,11 @@
 
 ---
 
+## 🎉 **Qoder 一周年福利大放送，速领！**
+
+为庆祝 Qoder 一周年及 Qwen3.8-Max 模型上线，官方推出限时福利活动！
+👉 [点击此处，领取福利](https://qoder.com.cn/referral?referral_code=tfIKTRrrs8BtxyGtFf5ddRHo5AJIaWer)
+
 ## 🚀 2026 全新启程
 
 - ⚡️ 项目运行速度提升 10-15 倍，打包速度提升 20-30 倍
@@ -34,6 +39,8 @@
 - [🎉 Admin Better Vue3 - github 实时部署 （vue3.x + element-plus 免费商用，支持 PC、平板、手机）](https://zxwk1998.github.io/vue3-admin-better/)
 - [🎉 Admin Better Vue3 （vue3.x + element-plus 免费商用，支持 PC、平板、手机）](https://vuejs-core.cn/vue3-admin-better)
 - [⚡️ Admin Arco （vue3.x + vite7.x + arco2.x 免费商用，支持 PC）](https://vuejs-core.cn/vue-admin-arco/)
+
+- [⚡️ 天天养基（第三方优秀项目）](https://qdii.vuejs-core.cn)
 
 ### 💰 商业版演示
 
