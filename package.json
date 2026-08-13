@@ -76,7 +76,7 @@
     "style-loader": "^4.0.0",
     "stylelint": "^17.14.1",
     "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-recess-order": "^7.7.0",
+    "stylelint-config-recess-order": "^7.8.0",
     "vue-loader": "15.9.8",
     "vue-template-compiler": "~2.7.14"
   },

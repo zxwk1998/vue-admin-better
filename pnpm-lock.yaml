@@ -146,8 +146,8 @@ devDependencies:
     specifier: ^9.0.5
     version: 9.0.5(stylelint@17.14.1)
   stylelint-config-recess-order:
-    specifier: ^7.7.0
-    version: 7.7.0(stylelint-order@8.1.1)(stylelint@17.14.1)
+    specifier: ^7.8.0
+    version: 7.8.0(stylelint-order@8.1.1)(stylelint@17.14.1)
   vue-loader:
     specifier: 15.9.8
     version: 15.9.8(css-loader@7.1.4)(lodash@4.18.1)(vue-template-compiler@2.7.16)(webpack@5.105.4)
@@ -7729,8 +7729,8 @@ packages:
       stylelint: 17.14.1
     dev: true
 
-  /stylelint-config-recess-order@7.7.0(stylelint-order@8.1.1)(stylelint@17.14.1):
-    resolution: {integrity: sha512-TWRkg+BrwHOki4pi9y1emWgx6pFwZXOYZhNsbEObke/mzYUJVJvDEzJJQXhH7ajslQJGcrExy8ZvJqDiUbhFpA==}
+  /stylelint-config-recess-order@7.8.0(stylelint-order@8.1.1)(stylelint@17.14.1):
+    resolution: {integrity: sha512-ObYusdkXavm8ulgb5xvmU1l8wgCdveNYG12hOTUEdjS8bNhSRggl4or0mE0JaOnQz+Ve2xZemVpwqERCgJbntg==}
     peerDependencies:
       stylelint: ^16.18.0 || ^17.0.0
       stylelint-order: ^7.0.0 || ^8.0.0
