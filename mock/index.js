@@ -9,11 +9,9 @@ const { handleMockArray } = require('./utils')
 
 /**
  *
- * @param app
  * @returns {{mockStartIndex: number, mockRoutesLength: number}}
  */
-const registerRoutes = (app) => {
-  let mockLastIndex
+const registerRoutes = () => {
   const mocks = []
   const mockArray = handleMockArray()
   mockArray.forEach((item) => {
@@ -23,14 +21,9 @@ const registerRoutes = (app) => {
   const mocksForServer = mocks.map((route) => {
     return responseFake(route.url, route.type, route.response)
   })
-  for (const mock of mocksForServer) {
-    app[mock.type](mock.url, mock.response)
-    mockLastIndex = app._router.stack.length
-  }
-  const mockRoutesLength = Object.keys(mocksForServer).length
   return {
-    mockRoutesLength: mockRoutesLength,
-    mockStartIndex: mockLastIndex - mockRoutesLength,
+    mockRoutesLength: mocksForServer.length,
+    mocksForServer,
   }
 }
 
@@ -47,16 +40,20 @@ const responseFake = (url, type, respond) => {
   const apiUrl = url.startsWith('/') ? url : `/${url}`
   return {
     url: new RegExp(`${base}${apiUrl}`),
-    type: type || 'get',
+    type: (type || 'get').toLowerCase(),
     response(req, res) {
-      res.status(200)
-      if (JSON.stringify(req.body) !== '{}') {
-        console.log(chalk.green(`> 请求地址：${req.path}`))
+      res.setHeader('Content-Type', 'application/json; charset=utf-8')
+      if (JSON.stringify(req.body) !== '{}' && req.body !== undefined) {
+        console.log(chalk.green(`> 请求地址：${req.url}`))
         console.log(chalk.green(`> 请求参数：${JSON.stringify(req.body)}\n`))
       } else {
-        console.log(chalk.green(`> 请求地址：${req.path}\n`))
+        console.log(chalk.green(`> 请求地址：${req.url}\n`))
       }
-      res.json(mock(respond instanceof Function ? respond(req, res) : respond))
+      res.end(
+        JSON.stringify(
+          mock(respond instanceof Function ? respond(req, res) : respond)
+        )
+      )
     },
   }
 }
@@ -72,9 +69,23 @@ module.exports = (app) => {
     })
   )
 
-  const mockRoutes = registerRoutes(app)
-  let mockRoutesLength = mockRoutes.mockRoutesLength
-  let mockStartIndex = mockRoutes.mockStartIndex
+  // connect 风格的 dev-server 没有 app.get()/app.post()，统一通过 app.use() 注册中间件
+  let mockRoutes = registerRoutes()
+  const mockMiddleware = (req, res, next) => {
+    const method = (req.method || 'get').toLowerCase()
+    // 去掉query部分再匹配
+    const reqUrl = (req.url || '').split('?')[0]
+    const matched = mockRoutes.mocksForServer.find(
+      (route) => route.type === method && route.url.test(reqUrl)
+    )
+    if (matched) {
+      matched.response(req, res)
+    } else {
+      next()
+    }
+  }
+  app.use(mockMiddleware)
+
   chokidar
     .watch(mockDir, {
       ignored: /mock-server/,
@@ -83,16 +94,12 @@ module.exports = (app) => {
     .on('all', (event) => {
       if (event === 'change' || event === 'add') {
         try {
-          app._router.stack.splice(mockStartIndex, mockRoutesLength)
-
           Object.keys(require.cache).forEach((item) => {
             if (item.includes(mockDir)) {
               delete require.cache[require.resolve(item)]
             }
           })
-          const mockRoutes = registerRoutes(app)
-          mockRoutesLength = mockRoutes.mockRoutesLength
-          mockStartIndex = mockRoutes.mockStartIndex
+          mockRoutes = registerRoutes()
         } catch (error) {
           console.log(chalk.red(error))
         }

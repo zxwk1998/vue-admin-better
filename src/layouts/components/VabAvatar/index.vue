@@ -57,7 +57,7 @@
 
       <el-dropdown-item command="job" class="dropdown-item">
         <i class="el-icon-link"></i>
-        <span>好工作就业参考网</span>
+        <span>天天养基</span>
       </el-dropdown-item>
 
       <el-divider></el-divider>
@@ -110,7 +110,7 @@
             window.open('https://vuejs-core.cn/shop-vite/')
             break
           case 'job':
-            window.open('https://job.vuejs-core.cn/')
+            window.open('https://qdii.vuejs-core.cn/')
             break
         }
       },

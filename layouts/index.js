@@ -36,7 +36,7 @@ function donationConsole() {
 
   console.log(
     chalk.green(
-      `> 找好工作就到【好工作就业参考网】查看就业避坑指南：https://job.vuejs-core.cn/`
+      `> 天天养基：https://qdii.vuejs-core.cn/`
     )
   )
 

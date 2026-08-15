@@ -59,16 +59,15 @@ export const asyncRoutes = [
     redirect: 'noRedirect',
     name: 'Stock',
     meta: {
-      title: '雪球模拟',
+      title: '天天养基',
       icon: 'chart-line',
       permissions: ['admin'],
     },
     children: [
       {
-        path: 'xueqiu',
-        name: 'Xueqiu',
-        component: () => import('@/views/stock/index'),
-        meta: { title: '雪球模拟', icon: 'chart-line', noKeepAlive: false },
+        path: 'https://qdii.vuejs-core.cn',
+        name: 'Qdii',
+        meta: { title: '天天养基', icon: 'chart-line', target: '_blank' },
       },
     ],
   },
@@ -385,9 +384,9 @@ export const asyncRoutes = [
     },
     children: [
       {
-        path: 'https://job.vuejs-core.cn/posts',
+        path: 'https://qdii.vuejs-core.cn',
         meta: {
-          title: '找工作',
+          title: '天天养基',
           target: '_blank',
           icon: 'horse-head',
           badge: 'New',
