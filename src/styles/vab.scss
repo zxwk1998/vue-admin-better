@@ -33,28 +33,28 @@
 
 @mixin base-scrollbar {
   &::-webkit-scrollbar {
-    width: 13px;
-    height: 13px;
+    width: 8px;
+    height: 8px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.25);
     background-clip: padding-box;
-    border: 3px solid transparent;
-    border-radius: 7px;
+    border: 1px solid transparent;
+    border-radius: 4px;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.35);
   }
 
   &::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.03);
     border-radius: 4px;
   }
 
   &::-webkit-scrollbar-track:hover {
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(0, 0, 0, 0.06);
   }
 }
 
@@ -75,7 +75,7 @@ a {
 }
 
 * {
-  transition: $base-transition;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 svg {
@@ -231,6 +231,77 @@ html {
       color: $base-color-black;
       text-align: center;
     }
+
+    /* Element UI 全局精修开始 */
+    .el-button {
+      border-radius: $base-radius-small;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(77, 138, 240, 0.18);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: none;
+      }
+    }
+
+    .el-input__inner,
+    .el-textarea__inner {
+      border-color: #e4e7ed;
+      transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:focus {
+        border-color: $base-color-default;
+        box-shadow: 0 0 0 2px rgba(77, 138, 240, 0.15);
+      }
+    }
+
+    .el-select .el-input.is-focus .el-input__inner {
+      border-color: $base-color-default;
+      box-shadow: 0 0 0 2px rgba(77, 138, 240, 0.15);
+    }
+
+    .el-dropdown-menu,
+    .el-popover,
+    .el-picker-panel,
+    .el-select-dropdown {
+      border: none;
+      border-radius: 8px;
+      box-shadow: $base-shadow-lg;
+    }
+
+    .el-message,
+    .el-notification {
+      border: none;
+      border-radius: 10px;
+      box-shadow: $base-shadow-lg;
+    }
+
+    .el-table {
+      th {
+        color: #303133;
+      }
+
+      .el-table__body tr:hover>td {
+        background-color: #f5f8fc;
+      }
+    }
+
+    .el-dialog__title {
+      font-size: $base-font-size-bigger;
+      font-weight: 600;
+      color: #303133;
+    }
+
+    .el-dialog__header {
+      padding: 18px 20px 16px;
+    }
+
+    /* Element UI 全局精修结束 */
 
     .el-menu.el-menu--popup.el-menu--popup-right-start {
       @include scrollbar;
@@ -519,11 +590,11 @@ html {
     .el-menu-item,
     .el-submenu {
       margin: 7px !important;
-      border-radius: 5px !important;
+      border-radius: 8px !important;
       transition: all 0.3s ease;
 
       &:hover {
-        border-radius: 5px !important;
+        border-radius: 8px !important;
       }
 
       &.is-active {

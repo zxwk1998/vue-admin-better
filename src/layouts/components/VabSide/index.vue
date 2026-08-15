@@ -58,7 +58,7 @@
   @mixin active {
     &:hover {
       color: $base-color-white;
-      background-color: $base-menu-background-active !important;
+      background-color: rgba(255, 255, 255, 0.06) !important;
     }
 
     &.is-active {
@@ -77,7 +77,7 @@
     height: 100vh;
     overflow: hidden;
     background: $base-menu-background;
-    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
     transition: width $base-transition-time;
 
     &.is-collapse {
@@ -135,6 +135,12 @@
 
       .el-menu-item {
         @include active;
+      }
+
+      .el-submenu__title {
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.06) !important;
+        }
       }
     }
   }

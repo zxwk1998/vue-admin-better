@@ -88,6 +88,9 @@
       @include title;
 
       max-width: calc(#{$base-left-menu-width} - 60px);
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
       line-height: $base-logo-height; // 修复：使line-height与容器高度一致
     }
   }

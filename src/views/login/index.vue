@@ -292,7 +292,7 @@
       height: 600px;
       background: rgba(255, 255, 255, 0.95);
       border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      box-shadow: $base-shadow-lg;
       backdrop-filter: blur(20px);
       overflow: hidden;
 
@@ -526,7 +526,7 @@
               margin-bottom: 24px;
 
               &:hover {
-                transform: translateY(-2px);
+                transform: translateY(-1px);
                 box-shadow: 0 8px 20px rgba(77, 138, 240, 0.3);
               }
 

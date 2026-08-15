@@ -35,13 +35,20 @@ $base-color-red: #f5222d;
 $base-color-gray: rgba(0, 0, 0, 0.65);
 $base-main-width: 1279px;
 $base-border-radius: 6px;
+//圆角规范：小控件/卡片弹层
+$base-radius-small: 6px;
+$base-radius-card: 12px;
 $base-border-color: #ebeef5;
 //输入框高度
 $base-input-height: 36px;
 //默认paddiing
 $base-padding: 22px;
+//阴影令牌：三级层次
+$base-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+$base-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+$base-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
 //默认阴影
-$base-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+$base-box-shadow: $base-shadow;
 //横向布局时top-bar、logo、一级菜单的高度
 $base-top-bar-height: 64px;
 //纵向布局时logo的高度
