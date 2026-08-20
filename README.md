@@ -17,6 +17,8 @@
 
 👉 [点击此处，领取 Trae 福利](https://www.trae.cn/work-fission/2JW8BSJXYUVV?utm_source=copy_link&utm_medium=friends_invite)
 
+👉 [点击此处，领取 Workbuddy 福利](https://www.workbuddy.cn/events/invite?inviteCode=rh4fy6pfwnx67ogs)
+
 ## 🚀 2026 全新启程
 
 - ⚡️ 项目运行速度提升 10-15 倍，打包速度提升 20-30 倍
