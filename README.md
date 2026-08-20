@@ -13,7 +13,9 @@
 ## 🎉 **Qoder 一周年福利大放送，速领！**
 
 为庆祝 Qoder 一周年及 Qwen3.8-Max 模型上线，官方推出限时福利活动！
-👉 [点击此处，领取福利](https://qoder.com.cn/referral?referral_code=tfIKTRrrs8BtxyGtFf5ddRHo5AJIaWer)
+👉 [点击此处，领取 Qoder 福利](https://qoder.com.cn/referral?referral_code=tfIKTRrrs8BtxyGtFf5ddRHo5AJIaWer)
+
+👉 [点击此处，领取 Trae 福利](https://www.trae.cn/work-fission/2JW8BSJXYUVV?utm_source=copy_link&utm_medium=friends_invite)
 
 ## 🚀 2026 全新启程
 
