@@ -104,8 +104,8 @@ devDependencies:
     specifier: ^5.0.0
     version: 5.0.0
   css-loader:
-    specifier: ^7.1.4
-    version: 7.1.4(@rspack/core@2.2.1)(webpack@5.109.2)
+    specifier: ^7.1.5
+    version: 7.1.5(@rspack/core@2.2.1)(webpack@5.109.2)
   eslint:
     specifier: ^6.8.0
     version: 6.8.0
@@ -150,7 +150,7 @@ devDependencies:
     version: 7.8.0(stylelint-order@8.1.1)(stylelint@17.14.1)
   vue-loader:
     specifier: 15.9.8
-    version: 15.9.8(css-loader@7.1.4)(lodash@4.18.1)(vue-template-compiler@2.7.16)(webpack@5.109.2)
+    version: 15.9.8(css-loader@7.1.5)(lodash@4.18.1)(vue-template-compiler@2.7.16)(webpack@5.109.2)
   vue-template-compiler:
     specifier: ~2.7.14
     version: 2.7.16
@@ -3977,8 +3977,8 @@ packages:
       webpack: 5.109.2(cssnano@5.1.15)(postcss@8.5.26)
     dev: true
 
-  /css-loader@7.1.4(@rspack/core@2.2.1)(webpack@5.109.2):
-    resolution: {integrity: sha512-vv3J9tlOl04WjiMvHQI/9tmIrCxVrj6PFbHemBB1iihpeRbi/I4h033eoFIhwxBBqLhI0KYFS7yvynBFhIZfTw==}
+  /css-loader@7.1.5(@rspack/core@2.2.1)(webpack@5.109.2):
+    resolution: {integrity: sha512-Q7iAfQkU2twNBryKX/vGAlE+GAmkF7quhSzAGNK8fBimxk3+tqg245rH52UPb9dioBolBc8rP0ihmHBaDTJQBA==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || ^1.0.0 || ^2.0.0-0
@@ -8503,7 +8503,7 @@ packages:
       - whiskers
     dev: true
 
-  /vue-loader@15.9.8(css-loader@7.1.4)(lodash@4.18.1)(vue-template-compiler@2.7.16)(webpack@5.109.2):
+  /vue-loader@15.9.8(css-loader@7.1.5)(lodash@4.18.1)(vue-template-compiler@2.7.16)(webpack@5.109.2):
     resolution: {integrity: sha512-GwSkxPrihfLR69/dSV3+5CdMQ0D+jXg8Ma1S4nQXKJAznYFX14vHdc/NetQc34Dw+rBbIJyP7JOuVb9Fhprvog==}
     peerDependencies:
       '@vue/compiler-sfc': ^3.0.8
@@ -8520,7 +8520,7 @@ packages:
         optional: true
     dependencies:
       '@vue/component-compiler-utils': 3.3.0(lodash@4.18.1)
-      css-loader: 7.1.4(@rspack/core@2.2.1)(webpack@5.109.2)
+      css-loader: 7.1.5(@rspack/core@2.2.1)(webpack@5.109.2)
       hash-sum: 1.0.2
       loader-utils: 1.4.2
       vue-hot-reload-api: 2.3.4
