@@ -48,8 +48,8 @@ dependencies:
     specifier: ^1.5.4
     version: 1.5.4
   qs:
-    specifier: ^6.15.3
-    version: 6.15.3
+    specifier: ^6.16.0
+    version: 6.16.0
   screenfull:
     specifier: ^5.2.0
     version: 5.2.0
@@ -3251,7 +3251,7 @@ packages:
       http-errors: 2.0.1
       iconv-lite: 0.7.3
       on-finished: 2.4.1
-      qs: 6.15.3
+      qs: 6.16.0
       raw-body: 3.0.2
       type-is: 2.1.0
     transitivePeerDependencies:
@@ -7074,6 +7074,14 @@ packages:
 
   /qs@6.15.3:
     resolution: {integrity: sha512-O9gl3zCl5h5blw1KGUzQKhA5oUXSl8rwUIM5o0S3nCXMliSvy5Dzx7/DJcI+SwgICv+IneSZwhBh1oSyEHA71A==}
+    engines: {node: '>=0.6'}
+    dependencies:
+      es-define-property: 1.0.1
+      side-channel: 1.1.1
+    dev: true
+
+  /qs@6.16.0:
+    resolution: {integrity: sha512-h6fhOIaRrID2CbEY2fqs+7t+UXZo+MLAnU5gRIq85uFtdiUPCdsApMlHhXogKVM4HM2DVbIjGNTTYH2OcmP1vA==}
     engines: {node: '>=0.6'}
     dependencies:
       es-define-property: 1.0.1
