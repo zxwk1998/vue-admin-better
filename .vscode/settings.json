@@ -5,7 +5,7 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "workbench.colorTheme": "Default Light Modern",
+  "workbench.colorTheme": "Light Modern",
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "emmet.triggerExpansionOnTab": true,
