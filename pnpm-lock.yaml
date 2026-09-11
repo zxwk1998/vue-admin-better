@@ -122,8 +122,8 @@ devDependencies:
     specifier: ^6.1.9
     version: 6.1.9(@rspack/core@2.2.3)
   lint-staged:
-    specifier: ^17.5.0
-    version: 17.5.0
+    specifier: ^17.5.1
+    version: 17.5.1
   path-browserify:
     specifier: ^1.0.1
     version: 1.0.1
@@ -5757,8 +5757,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged@17.5.0:
-    resolution: {integrity: sha512-ah2qsNtvKP1+Ak4rAvEEIvcXDLjjbr/xmxCvlequxqEOFYk0qINcZcRxD3Ic8wRn7/oQ8+wC9s0DfDrdMVCRFg==}
+  /lint-staged@17.5.1:
+    resolution: {integrity: sha512-7EDuco1xnBMeVpvAbeMq1U5KXwJGLmY8q6l+Ye78r36C4mPc+Vg1Z2SK8gHyRTyvPro90A0q5/FAZ+Au23d6QQ==}
     engines: {node: '>=22.22.1'}
     hasBin: true
     dependencies:
