@@ -74,14 +74,14 @@ dependencies:
 
 devDependencies:
   '@rspack/cli':
-    specifier: ^2.2.5
-    version: 2.2.5(@rspack/core@2.2.5)(@rspack/dev-server@2.2.1)
+    specifier: ^2.2.6
+    version: 2.2.6(@rspack/core@2.2.6)(@rspack/dev-server@2.2.1)
   '@rspack/core':
-    specifier: ^2.2.5
-    version: 2.2.5
+    specifier: ^2.2.6
+    version: 2.2.6
   '@rspack/dev-server':
     specifier: ^2.2.1
-    version: 2.2.1(@rspack/core@2.2.5)
+    version: 2.2.1(@rspack/core@2.2.6)
   '@vue/cli-plugin-babel':
     specifier: ^5.0.8
     version: 5.0.9(@vue/cli-service@5.0.9)(core-js@3.50.0)(postcss@8.5.26)(vue@2.7.16)
@@ -93,7 +93,7 @@ devDependencies:
     version: 10.1.0(eslint@6.8.0)
   babel-loader:
     specifier: ^10.1.1
-    version: 10.1.1(@babel/core@8.0.1)(@rspack/core@2.2.5)(webpack@5.109.2)
+    version: 10.1.1(@babel/core@8.0.1)(@rspack/core@2.2.6)(webpack@5.109.2)
   body-parser:
     specifier: ^2.3.0
     version: 2.3.0
@@ -105,7 +105,7 @@ devDependencies:
     version: 5.0.0
   css-loader:
     specifier: ^7.1.5
-    version: 7.1.5(@rspack/core@2.2.5)(webpack@5.109.2)
+    version: 7.1.5(@rspack/core@2.2.6)(webpack@5.109.2)
   eslint:
     specifier: ^6.8.0
     version: 6.8.0
@@ -120,7 +120,7 @@ devDependencies:
     version: 11.4.0
   html-rspack-plugin:
     specifier: ^6.1.9
-    version: 6.1.9(@rspack/core@2.2.5)
+    version: 6.1.9(@rspack/core@2.2.6)
   lint-staged:
     specifier: ^17.5.1
     version: 17.5.1
@@ -1665,88 +1665,88 @@ packages:
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
     dev: true
 
-  /@rspack/binding-darwin-arm64@2.2.5:
-    resolution: {integrity: sha512-JMLrdZose2ZZs8jP4P+QLTHFHoTFKKrOY6AQIzIbvKdUMCrc6djlhkZQ6vSXQ7oYSiHLFxS8QqUqxr1P3pfvxg==}
+  /@rspack/binding-darwin-arm64@2.2.6:
+    resolution: {integrity: sha512-y8I8MAeKAOYuLqEKYQSmNFcW4dI1u5O+xYQcjT1L3Gby02KEt0YxlmSPvzElSQJUjsJ8PkKqU3U1suDjA6xvkg==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rspack/binding-darwin-x64@2.2.5:
-    resolution: {integrity: sha512-ndUQ174Q5QdAbetBc9D6OveW2YAqB97d+jMBMGTBG1y/ry2e46zpJNt1ndBboXXp2QQD5DzdmHXw+zCh8lNLDg==}
+  /@rspack/binding-darwin-x64@2.2.6:
+    resolution: {integrity: sha512-+zhtUAP+nZON1lSlqOFJWW2VpIXRZ4/NQskYe0xohELI4Fr6xun/Oh8dIMt+Nviamvo7lbO9XURrFio1+Fziog==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rspack/binding-linux-arm64-gnu@2.2.5:
-    resolution: {integrity: sha512-Kr7c2QYO2REmeG4//6gn/5HPitqRhXq4iWJDzadTJLGOUBVz3eLyEnr96t6/CScjB9XTEtvzH41ZFSwXpxopsA==}
+  /@rspack/binding-linux-arm64-gnu@2.2.6:
+    resolution: {integrity: sha512-7GI9xlkzVMAp9dbNvynvAreMjQQNw01b+khYYfmoQOgWXTUwrtzR7/JhJ3tijVQTXkyiYAKJ0RPvz57yD+p1vQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rspack/binding-linux-arm64-musl@2.2.5:
-    resolution: {integrity: sha512-q3Vftsbvl1Q72PEJ+1JYOLf8nukfr47M960ikD7Kd7iD2mA/vZ98sJRlslISpcDdQsBR6lFK4S8NOBHYMYA2Hw==}
+  /@rspack/binding-linux-arm64-musl@2.2.6:
+    resolution: {integrity: sha512-klkjpGdeROzRiGSk2amfeZBAh0vWu0GjX5xKKQfRR4IqKQxURGCQafbvl3VX5XrHEUnKFzag89Lyv+ZVx5eTCw==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rspack/binding-linux-ppc64-gnu@2.2.5:
-    resolution: {integrity: sha512-FkDQvXw0ghmJwCB4ryuzSbNetKgJt6A4Xfy7Ua2zvp9sJpoMBGIF/QHWGsV7WcBEdXUDpCPui23E+DsRDCR1DQ==}
+  /@rspack/binding-linux-ppc64-gnu@2.2.6:
+    resolution: {integrity: sha512-TpLZr49oU31EuEqVDczpbfLZ6c976zu8HspBuUWYj1Ra4SNeOHhINKE1i42OVw2DCEMpsz8Tv3tYyLVACGC8JA==}
     cpu: [ppc64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rspack/binding-linux-riscv64-gnu@2.2.5:
-    resolution: {integrity: sha512-T+9K2zrb7GWYafbdJMy3cUlh0yPI5pINHbD63G1FHvklP/LNTrlAP5V53L144g7s4/Ygj89S0MZPpr4o3oBFAA==}
+  /@rspack/binding-linux-riscv64-gnu@2.2.6:
+    resolution: {integrity: sha512-gU3Ki8Lt6cE4qRM62959/28GG3XQUZsnvstgDULJpkHR5QFGYXUhOoPe2fpyWYrLw6+t9lWXBuI/gUez1zc8Sg==}
     cpu: [riscv64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rspack/binding-linux-riscv64-musl@2.2.5:
-    resolution: {integrity: sha512-XyOIs/afntFO8rXcgbJ+oR5pMC0srX5jTe7LC3GcR3EvHAMfknboixjdchZebl5YDhqaDXvknhu7+yTUhy6cKg==}
+  /@rspack/binding-linux-riscv64-musl@2.2.6:
+    resolution: {integrity: sha512-OQRvU8HT9rGmtgdpieO722IrGViDlR0D6yjqbt7S51b+saBPwJ8Nf3fwMtpZnBo1djV2BGXK00L34jYypeChrw==}
     cpu: [riscv64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rspack/binding-linux-s390x-gnu@2.2.5:
-    resolution: {integrity: sha512-K/HH0f0MA5AhT/6cYQtXD6pKagzkzxntSrRCi/IoMd98FGQOV+Dh+902ytUBxBIeypBKbCHWu+LOvbAQOtkkbQ==}
+  /@rspack/binding-linux-s390x-gnu@2.2.6:
+    resolution: {integrity: sha512-pus4Z76+J1iRO5Gutc6pq1LkyVhXqi0Sw6o5Dxwtl3sSbVy+F5PJkxtAT+DEg07pQy5m3dCymz2CIpiFlwYLTQ==}
     cpu: [s390x]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rspack/binding-linux-x64-gnu@2.2.5:
-    resolution: {integrity: sha512-S5JReQsQjixPhbBcuHamLw0CQglvbyT4YnBWrt5ds+sraemX42U1Q5tKpICfU92oDqZz6yICC3uH1fGyLEW9Qg==}
+  /@rspack/binding-linux-x64-gnu@2.2.6:
+    resolution: {integrity: sha512-M0Efi9ny2cJ6VdhHxsZbcwdRCQ0HqBAsnPxPB8Ulknj+VtRlWnTlX/DlqMaHFuCb0MOWS6DXGGEAZ8veEil0BA==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rspack/binding-linux-x64-musl@2.2.5:
-    resolution: {integrity: sha512-5HC8rumh+QIGMjAwGyB5W0DFon9IBSdHDco10CXdUDTbnw71a7VwpiaQGoRTmxocdxU8sGHKN1isp4T3ABnbyg==}
+  /@rspack/binding-linux-x64-musl@2.2.6:
+    resolution: {integrity: sha512-614vRMr6VAqUXQm9TY7FCamcB08XJOv51WAwIlfEpoKTYxzNiQvrTYBYPgStUH20ywLwVoN6EJ++WCmHaebGWw==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rspack/binding-wasm32-wasi@2.2.5:
-    resolution: {integrity: sha512-JLxx6dBm8nmTjYvq+HxHBPh3e+otmK9zrlzvYcyy612LV1Ixw78qdiQvMLjI7nM9aWsCqbix0FDaxPJ8VsT4GA==}
+  /@rspack/binding-wasm32-wasi@2.2.6:
+    resolution: {integrity: sha512-p995VmOEcHWPKw/Eek0CYUjmXWhfyWOPoKtE51Dy0/jqHcs7uRy53igDd277yHTuKCHibmwU+cjSKUe6b/aBZg==}
     cpu: [wasm32]
     requiresBuild: true
     dependencies:
@@ -1756,42 +1756,51 @@ packages:
     dev: true
     optional: true
 
-  /@rspack/binding-win32-ia32-msvc@2.2.5:
-    resolution: {integrity: sha512-27pgkQ7LTTlL8Xcs0gLQtjqgQmX5NV+6RzVC9YJ4ivSFCS94RG6UFX7lPSnWmmIRP6N4qxBOKL3Chkc8mNpqcg==}
+  /@rspack/binding-win32-arm64-msvc@2.2.6:
+    resolution: {integrity: sha512-xC8nHMqVzQWqVW95HOcf9qTsM445ui7QNfUTDui6oTiHcBtsyfK1CEdXsc50bdi/FrJ2ueOps3M5gxbM8Ttl/A==}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rspack/binding-win32-ia32-msvc@2.2.6:
+    resolution: {integrity: sha512-sfqP/LSnMwAHpTA+Cfbkhvx/IvUr23Z7S+miOkaMT/j2XJYCBrPZK0ZYm8+LUNDQ2ij8/XCJT4pVpQbtc/SMPw==}
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rspack/binding-win32-x64-msvc@2.2.5:
-    resolution: {integrity: sha512-TNi/O6ujzy6CszH6629wILSj0cPBqCEAjTrayBGWafM5+2FctML8ovz/8GqxSxmzD1KsOsXwOlNMuUY5PfDHyg==}
+  /@rspack/binding-win32-x64-msvc@2.2.6:
+    resolution: {integrity: sha512-b1ERY5QydZWJKA13AYsoMPZycG5AGoUc3sOMqLszO0gs84aMnLbK7lBiyeZCvEcHEa7gSFQlLQr9p+Xk7HPO4Q==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@rspack/binding@2.2.5:
-    resolution: {integrity: sha512-cR1vRgl4hIEB7j654y3PHs3IVB+x/Mj4jJYWobUmwp62kP3JkP7OPyqY0VaRSbwcrQzOXQ77I09/Z3x3lsilVw==}
+  /@rspack/binding@2.2.6:
+    resolution: {integrity: sha512-bCB4a7KKaQpPNlkExf27AmLJabeGjpjXlhnCdvmSIHHlT3YfpYz2CSKOLLLI/BcBez8zUBNDVmvswm3ggCCRqA==}
     optionalDependencies:
-      '@rspack/binding-darwin-arm64': 2.2.5
-      '@rspack/binding-darwin-x64': 2.2.5
-      '@rspack/binding-linux-arm64-gnu': 2.2.5
-      '@rspack/binding-linux-arm64-musl': 2.2.5
-      '@rspack/binding-linux-ppc64-gnu': 2.2.5
-      '@rspack/binding-linux-riscv64-gnu': 2.2.5
-      '@rspack/binding-linux-riscv64-musl': 2.2.5
-      '@rspack/binding-linux-s390x-gnu': 2.2.5
-      '@rspack/binding-linux-x64-gnu': 2.2.5
-      '@rspack/binding-linux-x64-musl': 2.2.5
-      '@rspack/binding-wasm32-wasi': 2.2.5
-      '@rspack/binding-win32-ia32-msvc': 2.2.5
-      '@rspack/binding-win32-x64-msvc': 2.2.5
+      '@rspack/binding-darwin-arm64': 2.2.6
+      '@rspack/binding-darwin-x64': 2.2.6
+      '@rspack/binding-linux-arm64-gnu': 2.2.6
+      '@rspack/binding-linux-arm64-musl': 2.2.6
+      '@rspack/binding-linux-ppc64-gnu': 2.2.6
+      '@rspack/binding-linux-riscv64-gnu': 2.2.6
+      '@rspack/binding-linux-riscv64-musl': 2.2.6
+      '@rspack/binding-linux-s390x-gnu': 2.2.6
+      '@rspack/binding-linux-x64-gnu': 2.2.6
+      '@rspack/binding-linux-x64-musl': 2.2.6
+      '@rspack/binding-wasm32-wasi': 2.2.6
+      '@rspack/binding-win32-arm64-msvc': 2.2.6
+      '@rspack/binding-win32-ia32-msvc': 2.2.6
+      '@rspack/binding-win32-x64-msvc': 2.2.6
     dev: true
 
-  /@rspack/cli@2.2.5(@rspack/core@2.2.5)(@rspack/dev-server@2.2.1):
-    resolution: {integrity: sha512-1ZUT+MeDkoGM8wBC1y0UYUK/H3Qj54828pypHKmrB1hmLcz6r04PpwNV8EECZz2A8+NMN1MSwV+zMoJ5CaSs0w==}
+  /@rspack/cli@2.2.6(@rspack/core@2.2.6)(@rspack/dev-server@2.2.1):
+    resolution: {integrity: sha512-A2Bb+5iGMrAp+YKgm3cN/3XfJfXed4GnoPlPRsjybyxrR+FyQmYMhxhKUfcQbD9JDHwXpQTOetwEBfzHSGJf+Q==}
     hasBin: true
     peerDependencies:
       '@rspack/core': ^2.0.0-0
@@ -1800,12 +1809,12 @@ packages:
       '@rspack/dev-server':
         optional: true
     dependencies:
-      '@rspack/core': 2.2.5
-      '@rspack/dev-server': 2.2.1(@rspack/core@2.2.5)
+      '@rspack/core': 2.2.6
+      '@rspack/dev-server': 2.2.1(@rspack/core@2.2.6)
     dev: true
 
-  /@rspack/core@2.2.5:
-    resolution: {integrity: sha512-V5yqXFyGB8k2UiOh2VGc9q0z+GfKQzBQOrbo9wnk+IV+SsHZD/Z0SVjy9p7q+hG/ULVdOwsAhmltn1pXxLywSA==}
+  /@rspack/core@2.2.6:
+    resolution: {integrity: sha512-sqN75Fgf6v3tCmt8GAG/rdcYHOUDv/YZbQf24YCGDoMLmdNlXCosCHkBYWI8qdLs9IqSnGt7XgbcA39Zilg6UQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       '@module-federation/runtime-tools': ^0.24.1 || ^2.0.0
@@ -1816,10 +1825,10 @@ packages:
       '@swc/helpers':
         optional: true
     dependencies:
-      '@rspack/binding': 2.2.5
+      '@rspack/binding': 2.2.6
     dev: true
 
-  /@rspack/dev-middleware@2.0.3(@rspack/core@2.2.5):
+  /@rspack/dev-middleware@2.0.3(@rspack/core@2.2.6):
     resolution: {integrity: sha512-GxnGj9jy76G3eCPyZei81fwKLAMLZaPEEqFz1/QDYquhwi/qYZX5fekFJ1XVpuwxGEK9KSX3hxZylfwrs4cmLA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
@@ -1828,10 +1837,10 @@ packages:
       '@rspack/core':
         optional: true
     dependencies:
-      '@rspack/core': 2.2.5
+      '@rspack/core': 2.2.6
     dev: true
 
-  /@rspack/dev-server@2.2.1(@rspack/core@2.2.5):
+  /@rspack/dev-server@2.2.1(@rspack/core@2.2.6):
     resolution: {integrity: sha512-Il8HbYGK3rH5rM0XmUOsOGZVw69BKRpBZ61P28Fy8ry35CtfniDBWtbo/rvJtIT/sK0qwijmNrhF498ltsV+uA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
@@ -1841,8 +1850,8 @@ packages:
       selfsigned:
         optional: true
     dependencies:
-      '@rspack/core': 2.2.5
-      '@rspack/dev-middleware': 2.0.3(@rspack/core@2.2.5)
+      '@rspack/core': 2.2.6
+      '@rspack/dev-middleware': 2.0.3(@rspack/core@2.2.6)
     dev: true
 
   /@rspack/lite-tapable@1.1.5:
@@ -2248,7 +2257,7 @@ packages:
     dependencies:
       '@babel/core': 7.29.7
       '@vue/babel-preset-app': 5.0.9(@babel/core@7.29.7)(core-js@3.50.0)(vue@2.7.16)
-      '@vue/cli-service': 5.0.9(@rspack/core@2.2.5)(lodash@4.18.1)(sass-loader@10.5.2)(vue-template-compiler@2.7.16)(vue@2.7.16)
+      '@vue/cli-service': 5.0.9(@rspack/core@2.2.6)(lodash@4.18.1)(sass-loader@10.5.2)(vue-template-compiler@2.7.16)(vue@2.7.16)
       '@vue/cli-shared-utils': 5.0.9
       babel-loader: 8.4.1(@babel/core@7.29.7)(webpack@5.109.2)
       thread-loader: 3.0.4(webpack@5.109.2)
@@ -2278,7 +2287,7 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      '@vue/cli-service': 5.0.9(@rspack/core@2.2.5)(lodash@4.18.1)(sass-loader@10.5.2)(vue-template-compiler@2.7.16)(vue@2.7.16)
+      '@vue/cli-service': 5.0.9(@rspack/core@2.2.6)(lodash@4.18.1)(sass-loader@10.5.2)(vue-template-compiler@2.7.16)(vue@2.7.16)
       '@vue/cli-shared-utils': 5.0.9
     transitivePeerDependencies:
       - encoding
@@ -2289,10 +2298,10 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      '@vue/cli-service': 5.0.9(@rspack/core@2.2.5)(lodash@4.18.1)(sass-loader@10.5.2)(vue-template-compiler@2.7.16)(vue@2.7.16)
+      '@vue/cli-service': 5.0.9(@rspack/core@2.2.6)(lodash@4.18.1)(sass-loader@10.5.2)(vue-template-compiler@2.7.16)(vue@2.7.16)
     dev: true
 
-  /@vue/cli-service@5.0.9(@rspack/core@2.2.5)(lodash@4.18.1)(sass-loader@10.5.2)(vue-template-compiler@2.7.16)(vue@2.7.16):
+  /@vue/cli-service@5.0.9(@rspack/core@2.2.6)(lodash@4.18.1)(sass-loader@10.5.2)(vue-template-compiler@2.7.16)(vue@2.7.16):
     resolution: {integrity: sha512-yTX7GVyM19tEbd+y5/gA6MkVKA6K61nVYHYAivD61Hx6odVFmQsaC3/R3cWAHM1P5oVKCevBbumPljbT+tFG2w==}
     engines: {node: ^12.0.0 || >= 14.0.0}
     hasBin: true
@@ -2344,7 +2353,7 @@ packages:
       clipboardy: 2.3.0
       cliui: 7.0.4
       copy-webpack-plugin: 9.1.0(webpack@5.109.2)
-      css-loader: 6.11.0(@rspack/core@2.2.5)(webpack@5.109.2)
+      css-loader: 6.11.0(@rspack/core@2.2.6)(webpack@5.109.2)
       css-minimizer-webpack-plugin: 3.4.1(webpack@5.109.2)
       cssnano: 5.1.15(postcss@8.5.26)
       debug: 4.4.3
@@ -2354,7 +2363,7 @@ packages:
       fs-extra: 9.1.0
       globby: 11.1.0
       hash-sum: 2.0.0
-      html-webpack-plugin: 5.6.8(@rspack/core@2.2.5)(webpack@5.109.2)
+      html-webpack-plugin: 5.6.8(@rspack/core@2.2.6)(webpack@5.109.2)
       is-file-esm: 1.0.0
       launch-editor-middleware: 2.14.1
       lodash.defaultsdeep: 4.6.1
@@ -3013,7 +3022,7 @@ packages:
     resolution: {integrity: sha512-gsLiKK7Qrb7zYJNgiXKpXblxbV5ffSwR0f5whkPAaBAR4fhi6bwRZxX9wBlIc5M/v8CCkXUbXZL4N/nSE97cqg==}
     dev: false
 
-  /babel-loader@10.1.1(@babel/core@8.0.1)(@rspack/core@2.2.5)(webpack@5.109.2):
+  /babel-loader@10.1.1(@babel/core@8.0.1)(@rspack/core@2.2.6)(webpack@5.109.2):
     resolution: {integrity: sha512-JwKSzk2kjIe7mgPK+/lyZ2QAaJcpahNAdM+hgR2HI8D0OJVkdj8Rl6J3kaLYki9pwF7P2iWnD8qVv80Lq1ABtg==}
     engines: {node: ^18.20.0 || ^20.10.0 || >=22.0.0}
     peerDependencies:
@@ -3027,7 +3036,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 8.0.1
-      '@rspack/core': 2.2.5
+      '@rspack/core': 2.2.6
       find-up: 5.0.0
       webpack: 5.109.2(postcss@8.5.26)
     dev: true
@@ -3944,7 +3953,7 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /css-loader@6.11.0(@rspack/core@2.2.5)(webpack@5.109.2):
+  /css-loader@6.11.0(@rspack/core@2.2.6)(webpack@5.109.2):
     resolution: {integrity: sha512-CTJ+AEQJjq5NzLga5pE39qdiSV56F8ywCIsqNIRF0r7BDgWsN25aazToqAFg7ZrtA/U016xudB3ffgweORxX7g==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
@@ -3956,7 +3965,7 @@ packages:
       webpack:
         optional: true
     dependencies:
-      '@rspack/core': 2.2.5
+      '@rspack/core': 2.2.6
       icss-utils: 5.1.0(postcss@8.5.26)
       postcss: 8.5.26
       postcss-modules-extract-imports: 3.1.0(postcss@8.5.26)
@@ -3968,7 +3977,7 @@ packages:
       webpack: 5.109.2(cssnano@5.1.15)(postcss@8.5.26)
     dev: true
 
-  /css-loader@7.1.5(@rspack/core@2.2.5)(webpack@5.109.2):
+  /css-loader@7.1.5(@rspack/core@2.2.6)(webpack@5.109.2):
     resolution: {integrity: sha512-Q7iAfQkU2twNBryKX/vGAlE+GAmkF7quhSzAGNK8fBimxk3+tqg245rH52UPb9dioBolBc8rP0ihmHBaDTJQBA==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
@@ -3980,7 +3989,7 @@ packages:
       webpack:
         optional: true
     dependencies:
-      '@rspack/core': 2.2.5
+      '@rspack/core': 2.2.6
       icss-utils: 5.1.0(postcss@8.5.26)
       postcss: 8.5.26
       postcss-modules-extract-imports: 3.1.0(postcss@8.5.26)
@@ -5243,7 +5252,7 @@ packages:
       terser: 5.50.0
     dev: true
 
-  /html-rspack-plugin@6.1.9(@rspack/core@2.2.5):
+  /html-rspack-plugin@6.1.9(@rspack/core@2.2.6):
     resolution: {integrity: sha512-GWdHEsyXrP4b2SSCzJfYKO/+r6DkNBeJytk2VKQwlrFuKCeCneIXpY1Cty3uYgH7jsAuPKkR1I1Cr2sOeX5KBg==}
     engines: {node: '>=16.20.2'}
     peerDependencies:
@@ -5252,7 +5261,7 @@ packages:
       '@rspack/core':
         optional: true
     dependencies:
-      '@rspack/core': 2.2.5
+      '@rspack/core': 2.2.6
       '@rspack/lite-tapable': 1.1.5
     dev: true
 
@@ -5266,7 +5275,7 @@ packages:
     engines: {node: '>=20.10'}
     dev: true
 
-  /html-webpack-plugin@5.6.8(@rspack/core@2.2.5)(webpack@5.109.2):
+  /html-webpack-plugin@5.6.8(@rspack/core@2.2.6)(webpack@5.109.2):
     resolution: {integrity: sha512-MZmKQcTnhEh1SPSyMiEytIeDZDUoBZVorNHivQGXMASHf/BSGGOrKa2xQ5bGx3TCe1n109ecCt+cpww7wwWhKA==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
@@ -5278,7 +5287,7 @@ packages:
       webpack:
         optional: true
     dependencies:
-      '@rspack/core': 2.2.5
+      '@rspack/core': 2.2.6
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
       lodash: 4.18.1
@@ -8440,7 +8449,7 @@ packages:
         optional: true
     dependencies:
       '@vue/component-compiler-utils': 3.3.0(lodash@4.18.1)
-      css-loader: 6.11.0(@rspack/core@2.2.5)(webpack@5.109.2)
+      css-loader: 6.11.0(@rspack/core@2.2.6)(webpack@5.109.2)
       hash-sum: 1.0.2
       loader-utils: 1.4.2
       vue-hot-reload-api: 2.3.4
@@ -8520,7 +8529,7 @@ packages:
         optional: true
     dependencies:
       '@vue/component-compiler-utils': 3.3.0(lodash@4.18.1)
-      css-loader: 7.1.5(@rspack/core@2.2.5)(webpack@5.109.2)
+      css-loader: 7.1.5(@rspack/core@2.2.6)(webpack@5.109.2)
       hash-sum: 1.0.2
       loader-utils: 1.4.2
       vue-hot-reload-api: 2.3.4
