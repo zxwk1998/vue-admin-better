@@ -1,0 +1,8 @@
+allowBuilds:
+  core-js: set this to true or false
+  vue-demi: set this to true or false
+  vue-echarts: set this to true or false
+minimumReleaseAgeExclude:
+  - caniuse-lite@1.0.30001817
+  - chokidar@6.0.0
+  - stylelint-config-recess-order@7.8.2
