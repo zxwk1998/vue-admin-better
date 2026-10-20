@@ -12,7 +12,7 @@
 
 ## 🎉 **Workbuddy 福利大放送，速领！**
 
-👉 [点击此处，领取 Workbuddy 福利](https://www.workbuddy.cn/events/invite?inviteCode=rh4fy6pfwnx67ogs)
+👉 [点击此处，领取 Workbuddy 福利](https://www.workbuddy.cn/events/invite?inviteCode=ryi04e9gt)
 
 ## 🚀 2026 全新启程
 
