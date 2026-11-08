@@ -10,9 +10,9 @@
 
 ---
 
-## 🎉 **Workbuddy 福利大放送，速领！**
+## 🎉 **deepseek harness 插件市场**
 
-👉 [点击此处，领取 Workbuddy 福利](https://www.workbuddy.cn/events/invite?inviteCode=ryi04e9gt)
+👉 [deepseek harness 插件市场](https://dsh.vuejs-core.cn)
 
 ## 🚀 2026 全新启程
 
@@ -40,6 +40,7 @@
 - [⚡️ Admin Arco （vue3.x + vite7.x + arco2.x 免费商用，支持 PC）](https://vuejs-core.cn/vue-admin-arco/)
 
 - [⚡️ 天天养基（第三方优秀项目）](https://qdii.vuejs-core.cn)
+
 
 ### 💰 商业版演示
 
