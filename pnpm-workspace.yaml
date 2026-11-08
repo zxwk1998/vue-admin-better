@@ -1,7 +1,7 @@
 allowBuilds:
-  core-js: set this to true or false
-  vue-demi: set this to true or false
-  vue-echarts: set this to true or false
+  core-js: false
+  vue-demi: false
+  vue-echarts: false
 minimumReleaseAgeExclude:
   - caniuse-lite@1.0.30001817
   - chokidar@6.0.0
