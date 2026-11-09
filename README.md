@@ -1,3 +1,10 @@
+# This repo has potentially been compromised during the Axios compromise on March 31, 2026.
+### Please see https://github.com/zxwk1998/vue-admin-better/vue-admin-better/blob/master/pnpm-lock.yaml
+
+Your lock file includes a reference to plain-crypto-js version 4.2.1. This is evidence that you have pulled the malicious axios package, which then installs the plain-crypto-js package.  This package is malware and has been linked to North Korean DPRK UNC1069 threat actors.
+
+### Read more at https://opensourcemalware.com/blog/axios-compromised
+
 <div align="center">
   <img width="200" src="https://assets.rspack.rs/rspack/rspack-logo.svg"/>
   <h1>Vue Admin Better</h1>
